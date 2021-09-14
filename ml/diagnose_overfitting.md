@@ -1,3 +1,7 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
 # How to Diagnose Overfitting and Underfitting?
 
 Here are some notes on analyzing overfitting and underfitting.
@@ -166,7 +170,9 @@ A good fit is a case where the performance of the model is good on both the trai
 
 This can be diagnosed from a plot where the train and validation loss decrease and stabilize around the same point.
 
+<span class="image-preview">
 ![Plot showing good fit](https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-a-Good-Fit-for-a-Model.png)
+</span>
 
 ![Plot of Train and Validation Learning Curves Showing a Good Fit](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-A-Good-Fit.png)
 
@@ -235,5 +241,4 @@ This may also be identified by a validation loss that is lower than the training
 [How to use Learning Curves to Diagnose Machine Learning Model Performance](https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
 
 [Why is my validation loss lower than my training loss?](https://www.pyimagesearch.com/2019/10/14/why-is-my-validation-loss-lower-than-my-training-loss/)
-
 
