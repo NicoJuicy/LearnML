@@ -1,6 +1,9 @@
-<head>
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
+<style>
+.image-preview {
+    width: 500;
+    height: 400;
+}
+</style>
 
 # How to Diagnose Overfitting and Underfitting?
 
