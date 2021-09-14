@@ -1,9 +1,8 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
 # How to Diagnose Overfitting and Underfitting?
-
-<div align="center">
-    <img src="../css/style.svg" width="400" height="200" alt="css-in-readme">
-</div>
-
 
 Here are <mark>some notes</mark> on analyzing overfitting and underfitting.
 
