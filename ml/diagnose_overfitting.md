@@ -1,5 +1,5 @@
 <style>
-.image-preview {
+img {
     max-width: 200;
     height: auto;
 }
