@@ -12,6 +12,12 @@ img {
 
 Here are <mark>some notes</mark> on analyzing overfitting and underfitting.
 
+
+<div align="center">
+    <img src="../css/style.svg" width="400" height="400" alt="css-in-readme">
+</div>
+
+
 ## Why is my validation loss lower than my training loss?
 
 In this tutorial, you will learn the three primary reasons your validation loss may be lower than your training loss when training your own custom deep neural networks.
