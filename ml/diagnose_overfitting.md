@@ -173,9 +173,9 @@ A good fit is a case where the performance of the model is good on both the trai
 
 This can be diagnosed from a plot where the train and validation loss decrease and stabilize around the same point.
 
-<span class="image-preview">
+<div class="image-preview">
     <img alt="Plot showing good fit" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-a-Good-Fit-for-a-Model.png"></a>
-</span>
+</div>
 
 ![Plot of Train and Validation Learning Curves Showing a Good Fit](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-A-Good-Fit.png)
 
