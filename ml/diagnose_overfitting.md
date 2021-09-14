@@ -1,7 +1,7 @@
 <style>
 .image-preview {
-    width: 200;
-    height: 200;
+    max-width: 200;
+    height: auto;
 }
 </style>
 
