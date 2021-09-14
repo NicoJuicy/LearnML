@@ -1,6 +1,6 @@
 <style>
 img {
-    max-width: 200;
+    max-width: 25%;
     height: auto;
 }
 </style>
