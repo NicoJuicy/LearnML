@@ -1,4 +1,7 @@
 <style>
+mark {
+    color: red;
+}
 img {
     max-width: 25%;
     height: auto;
@@ -7,7 +10,7 @@ img {
 
 # How to Diagnose Overfitting and Underfitting?
 
-Here are some notes on analyzing overfitting and underfitting.
+Here are <mark>some notes</mark> on analyzing overfitting and underfitting.
 
 ## Why is my validation loss lower than my training loss?
 
