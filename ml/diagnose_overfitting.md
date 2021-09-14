@@ -1,22 +1,11 @@
-<style>
-mark {
-    color: red;
-}
-img {
-    max-width: 25%;
-    height: auto;
-}
-</style>
-
 # How to Diagnose Overfitting and Underfitting?
 
-Here are <mark>some notes</mark> on analyzing overfitting and underfitting.
-
-
 <div align="center">
-    <img src="../css/style.svg" width="400" height="400" alt="css-in-readme">
+    <img src="../css/style.svg" width="400" height="200" alt="css-in-readme">
 </div>
 
+
+Here are <mark>some notes</mark> on analyzing overfitting and underfitting.
 
 ## Why is my validation loss lower than my training loss?
 

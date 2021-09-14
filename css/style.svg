@@ -6,6 +6,11 @@
                 width: 50%;
                 height: 400;
             }
+
+            mark {
+                color : red;
+            }
+            
             h1 {
                 color: red;
                 animation: mymove 2s infinite;
