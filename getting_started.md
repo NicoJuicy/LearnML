@@ -62,17 +62,54 @@ When your MLR models get complicated as you take steps to improve their efficacy
 Create predictions while varying a sole predictor and observe how the prediction changes, and use the nature of these changes to form your conclusions.
 
 
+## Understand Machine Learning Algorithms
+
+You need to know what algorithms are available for a given problem, how they work, and how to get the most out of them. However, this does not mean you need to hand-code the algorithms from scratch.
+
+In fact, there are many other concepts that are much more important when implmenting ML models:
+
+- How to properly define an ML problem?
+- How to select a dataset?
+- How to perform data preparation?
+- How to design an ML solution?
+- How to properly train an ML model?
+- How to deploy and ML solution?
+
+- Parametric vs Nonparametric Algorithms
+- Supervised vs Unsupervised Algorithms
+- The Bias-Variance Trade-Off
+- Data Preparation Techniques
+- Feature Engineering Techniques
+
+- How to Diagnose/Fix Overfitting and Underfitting?
+- How to create a data pipeline?
+
+- How to deal with small data?
+- How to deal with imbalanced dataset?
+- How to choose a Performance/Error Metric?
+- How to debug ML models?
+
+- Anomaly Detection
+- AutoML
+
+Even if you are an experienced data scientist, you should still know the performance of simpler models on your dataset/problem since they are so effortless to implement and test. In fact, it is considered a best practice to run test datasets to see if your chosen machine learning model outperforms a recognised benchmark.
+
+### Feature Engineering Tools
+
+Feature engineering techniques for machine learning are a fundamental topic in machine learning but one that is often overlooked or deceptively simple.
+
+There are many tools that will help you in automating the entire feature engineering process and producing a large pool of features in a short period of time for both classification and regression tasks.
+
+### AutoML Tools
+
+Automated Machine Learning (AutoML) is an emerging field in which the process of building machine learning models to model data is automated.
+
 ## References
 
 [How to Select an ML Model?](https://www.kdnuggets.com/2021/08/select-initial-model-data-science-problem.html)
-
 [Gettting Started with Machine Learning](https://machinelearningmastery.com/start-here/)
-
 [Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
-
 [Multinomial Logistic Regression With Python](https://machinelearningmastery.com/multinomial-logistic-regression-with-python/)
-
 [Multinomial Logistic Regression In a Nutshell](https://medium.com/ds3ucsd/multinomial-logistic-regression-in-a-nutshell-53c94b30448f)
-
 [One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
 
