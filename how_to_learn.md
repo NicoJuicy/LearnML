@@ -45,16 +45,14 @@ In general, Fortune 500 and other companies are not going to implement and deplo
 
 Once you have mastered using ML algorithms, you can go back later and try to understand how they work internally by coding them by hand (if needed). However, there are far too many ML algorithms for the average software developer to ever code and understand all the details needed to properly implement them. Just concentrating on the "more interesting" or latest algorithm is a recipe for disaster and a common beginner mistake. 
 
+In addition, a shift in mindset is required to be effective at machine learning from trying to find the “best” model/approach to “good enough”. 
 
 
 ## References
 
 [Applied Machine Learning Process](https://machinelearningmastery.com/start-here/#process)
-
 [Stop Coding Machine Learning Algorithms From Scratch](https://machinelearningmastery.com/dont-implement-machine-learning-algorithms/)
-
 [5 Mistakes Programmers Make when Starting in Machine Learning](httpsp://machinelearningmastery.com/mistakes-programmers-make-when-starting-in-machine-learning/)
-
 [Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
 
 [1] S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 3rd ed. Upper Saddle River, NJ, USA: Prentice Hall, 2010.
