@@ -47,7 +47,7 @@ The following sections discuss several important CV concepts:
 
 - Object Recognition
 - Object Classification
-- Object detection and tracking
+- Object Detection and Tracking
 
 
 ## Image Data Loading
@@ -83,52 +83,40 @@ In the example, we will implement the learnable image resizing module as propose
 
 
 [How to Manually Scale Image Pixel Data for Deep Learning](https://machinelearningmastery.com/how-to-manually-scale-image-pixel-data-for-deep-learning/)
-
-[How to Normalize, Center, and Standardize Images in Keras](https://machinelearningmastery.com/how-to-normalize-center-and-standardize-images-with-the-imagedatagenerator-in-keras/)
-
+[How to Normalize, Center, and Standardize Images in Keras](https://machinelearningmastery.com/how-to-normalize-center-and-standardize-images-with-the-imagedatagenerator-in-keras/)\
 [How to Evaluate Pixel Scaling Methods for Image Classification](https://machinelearningmastery.com/how-to-evaluate-pixel-scaling-methods-for-image-classification/)
-
 
 
 ## Image Data Augmentation
 
 [How to Load Large Datasets From Directories](https://machinelearningmastery.com/how-to-load-large-datasets-from-directories-for-deep-learning-with-keras/)
-
 [How to Configure and Use Image Data Augmentation](https://machinelearningmastery.com/how-to-configure-image-data-augmentation-when-training-deep-learning-neural-networks/)
-
 [Introduction to Test-Time Data Augmentation](https://machinelearningmastery.com/how-to-use-test-time-augmentation-to-improve-model-performance-for-image-classification/)
 
 
 ## Object Recognition
 
 [A Gentle Introduction to Object Recognition](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
-
 [How to Perform Object Detection with Mask R-CNN](https://machinelearningmastery.com/how-to-perform-object-detection-in-photographs-with-mask-r-cnn-in-keras/)
-
 [How to Perform Object Detection With YOLOv3 in Keras](https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/)
 
 
 ## Object Classification
 
 [How to Develop a CNN for CIFAR-10 Photo Classification](https://machinelearningmastery.com/how-to-develop-a-cnn-from-scratch-for-cifar-10-photo-classification/)
-
 [How to Develop a CNN to Classify Photos of Dogs and Cats](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/)
-
 [How to Develop a CNN to Classify Satellite Photos](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-satellite-photos-of-the-amazon-rainforest/)
 
 
 ## Basics of Convolutional Neural Networks
 
 [Gentle Introduction to Convolutional Layers in CNNS](https://machinelearningmastery.com/convolutional-layers-for-deep-learning-neural-networks/)
-
 [Gentle Introduction to Padding and Stride in CNNs](https://machinelearningmastery.com/padding-and-stride-for-convolutional-neural-networks/)
-
 [Gentle Introduction to Pooling Layers in CNNs](https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/)
 
 
 
-
-## Object detection and tracking
+## Object Detection and Tracking
 
 The approach will depend on your goal/project. I have mostly seen classification (object detection) apps which try to determine the counts of types of objects (pedestrian/vehicle). 
 
@@ -176,7 +164,7 @@ plt.show()
 ---------
 
 
-## VGG 
+## VGG
 
 Given a photograph of an object, derrmine which of 1,000 specific objects the photograph shows.
 
