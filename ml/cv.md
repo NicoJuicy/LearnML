@@ -36,7 +36,21 @@ Image recognition can perform different tasks including:
 
 - Segmentation: This falls under the detection task, and it is responsible for locating an element in an image to the nearest pixel. In some instances, it is necessary to maintain a higher degree of accuracy, just like in the development of autonomous cars.
 
-## Image Data Handling
+
+## Overview
+
+The following sections discuss several important CV concepts:
+
+- Image Data Loading
+- Image Data Preparation
+- Image Data Augmentation
+
+- Object Recognition
+- Object Classification
+- Object detection and tracking
+
+
+## Image Data Loading
 
 [How to Load and Manipulate Images for Deep Learning in Python With PIL/Pillow](https://machinelearningmastery.com/how-to-load-and-manipulate-images-for-deep-learning-in-python-with-pil-pillow/)
 
@@ -84,6 +98,7 @@ In the example, we will implement the learnable image resizing module as propose
 
 [Introduction to Test-Time Data Augmentation](https://machinelearningmastery.com/how-to-use-test-time-augmentation-to-improve-model-performance-for-image-classification/)
 
+
 ## Object Recognition
 
 [A Gentle Introduction to Object Recognition](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
@@ -92,13 +107,15 @@ In the example, we will implement the learnable image resizing module as propose
 
 [How to Perform Object Detection With YOLOv3 in Keras](https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/)
 
-## Image Classification
+
+## Object Classification
 
 [How to Develop a CNN for CIFAR-10 Photo Classification](https://machinelearningmastery.com/how-to-develop-a-cnn-from-scratch-for-cifar-10-photo-classification/)
 
 [How to Develop a CNN to Classify Photos of Dogs and Cats](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/)
 
 [How to Develop a CNN to Classify Satellite Photos](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-satellite-photos-of-the-amazon-rainforest/)
+
 
 ## Basics of Convolutional Neural Networks
 
@@ -110,7 +127,26 @@ In the example, we will implement the learnable image resizing module as propose
 
 
 
-## Reading an image
+
+## Object detection and tracking
+
+The approach will depend on your goal/project. I have mostly seen classification (object detection) apps which try to determine the counts of types of objects (pedestrian/vehicle). 
+
+**NOTE:** Be sure to open the articles in “private” tab/window. 
+
+[Making Road Traffic Counting App based on Computer Vision and OpenCV](https://medium.com/machine-learning-world/tutorial-making-road-traffic-counting-app-based-on-computer-vision-and-opencv-166937911660)
+
+[Vehicle Detection and Tracking using Machine Learning and HOG](https://towardsdatascience.com/vehicle-detection-and-tracking-using-machine-learning-and-hog-f4a8995fc30a?gi=b793ee27f135)
+
+Yolo is the latest approach to object detection and there is a version that can run on raspi. Yolo is supposed to be easier to setup/use and faster performance.  
+
+[Object tracking using YOLOv4 and TensorFlow](https://pythonawesome.com/object-tracking-implemented-with-yolov4-and-tensorflow/)
+
+
+
+## Code Snippets
+
+### Reading an image
 
 ```py
 def read_image(path):
@@ -118,7 +154,7 @@ def read_image(path):
     return cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
 ```
 
-## Showing multiple images in a grid
+### Showing multiple images in a grid
 
 ```py
 image_paths = list(Path('./dogs').iterdir()) 
@@ -136,20 +172,8 @@ for i in range(columns*rows):
 plt.show()
 ```
 
-## Object detection and tracking
 
-The approach will depend on your goal/project. I have mostly seen classification (object detection) apps which try to determine the counts of types of objects (pedestrian/vehicle). 
-
-**NOTE:** Be sure to open the articles in “private” tab/window. 
-
-[Making Road Traffic Counting App based on Computer Vision and OpenCV](https://medium.com/machine-learning-world/tutorial-making-road-traffic-counting-app-based-on-computer-vision-and-opencv-166937911660)
-
-[Vehicle Detection and Tracking using Machine Learning and HOG](https://towardsdatascience.com/vehicle-detection-and-tracking-using-machine-learning-and-hog-f4a8995fc30a?gi=b793ee27f135)
-
-Yolo is the latest approach to object detection and there is a version that can run on raspi. Yolo is supposed to be easier to setup/use and faster performance.  
-
-[Object tracking using YOLOv4 and TensorFlow](https://pythonawesome.com/object-tracking-implemented-with-yolov4-and-tensorflow/)
-
+---------
 
 
 ## VGG 
