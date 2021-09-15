@@ -22,6 +22,19 @@ Many popular computer vision applications involve trying to recognize things in 
 
 - Object Recognition: What objects are in this photograph and where are they?
 
+## What is Image Recognition?
+
+Image recognition or image classification is the task of recognizing images and classifying them in one of the several predefined individual classes.
+
+Image recognition can perform different tasks including:
+
+- Classification: It is the recognition of the “class” of an image. An image can only have a single class.
+
+- Tagging: It also falls under the classification task but with a higher level of precision. It can identify the presence of numerous concepts or entities within an image. One or more tags can thus be allotted to a specific image.
+
+- Detection: This is important when you want to find an entity in an image . Once the object is found, a bounding box is placed around the object in question.
+
+- Segmentation: This falls under the detection task, and it is responsible for locating an element in an image to the nearest pixel. In some instances, it is necessary to maintain a higher degree of accuracy, just like in the development of autonomous cars.
 
 ## Image Data Handling
 
@@ -97,8 +110,6 @@ In the example, we will implement the learnable image resizing module as propose
 
 
 
-
-
 ## Reading an image
 
 ```py
@@ -140,79 +151,6 @@ Yolo is the latest approach to object detection and there is a version that can 
 [Object tracking using YOLOv4 and TensorFlow](https://pythonawesome.com/object-tracking-implemented-with-yolov4-and-tensorflow/)
 
 
-—————————-
-
-
-## [Machine Learning: Improving Classification accuracy on MNIST using Data Augmentation](https://towardsdatascience.com/improving-accuracy-on-mnist-using-data-augmentation-b5c38eb5a903?gi=916228e35c66)
-
-We can write a method to shift the images in all four directions by the given order.
-
-We will shift the images to each of the four directions by one pixel and generate four more images from a single image.
-
-
-
-## [How To Augment the MNIST Dataset Using Tensorflow](https://medium.com/the-data-science-publication/how-to-augment-the-mnist-dataset-using-tensorflow-4fbf113e99a0)
-
-### Step 2. Identify and Plot Baseline Digits Using Matplotlib
-
-We plot a subset of the MNIST images to help us understand the augmentation effects on the MNIST dataset. 
-
-To plot a subset of MNIST images, use the following code:
-
-### Step 3. Understand Image Augmentation and Techniques Relevant To MNIST
-
-The original MNIST dataset contains centered, upright, and size normalized digits. 
-
-Realistically, hand-written digits will seldom meet these criteria in real-world applications. Some digits will be larger, smaller, rotated, or skewed more than others. 
-
-To create a robust digit recognition model, it is in your interest to augment the MNIST dataset and capture these types of behavior. 
-
-We discuss the various types of augmentation techniques we can use to enhance the MNIST digit dataset. 
-
-In this tutorial, we will use the ImageDataGenerator class available in the Tensorflow.Keras python library. 
-
-- Rotate
-- Shift
-- Shear
-- Zoom
-
-- Crop (center and random)
-- Resize
-- Flip (horiz/vert)
-- ColorJitter
-- Blur
-- Greyscale
-
-- Adding Noise
-- Saturation
-- Cutout
-- Filter
-
-_Cutout_ is a simple regularization technique of randomly masking out square regions of input during training which can be used to improve the robustness and overall performance of convolutional neural networks. 
-
-This method can also be used in conjunction with existing forms of data augmentation and other regularizers to further improve model performance.
-
-
-_ColorJitter_ is another simple type of image data augmentation where we randomly change the brightness, contrast, and saturation of the image. 
-
-### Overlay Images
-
-Sometimes, we need to add a background to an existing image for formatting purposes. For instance, by padding a solid color as margins, we can make many images of different sizes become the same shape. Several techniques are relevant here.
-
-
-### Augment The MNIST Dataset
-
-Finally, we can combine all of the previously mentioned transformations to obtain unique digit representations that can now be used to improve digit recognition model performance.
-
-
-[Image Processing and Data Augmentation Techniques for Computer Vision](https://towardsdatascience.com/image-processing-techniques-for-computer-vision-11f92f511e21)
-
-[Data Augmentation Compilation with Python and OpenCV](https://towardsdatascience.com/data-augmentation-compilation-with-python-and-opencv-b76b1cd500e0)
-
-[5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
-
-[5 Useful Image Manipulation Techniques Using Python OpenCV](https://betterprogramming.pub/5-useful-image-manipulation-techniques-using-python-opencv-505492d077ef)
-
 
 ## VGG 
 
@@ -248,12 +186,3 @@ When we increase the number of layers, there is a common problem in deep learnin
 In order to solve the problem of the vanishing/exploding gradient, ResNet introduced the concept called Residual Network which uses a technique called _skip connections_. 
 
 The skip connection skips training from a few layers and connects directly to the output.
-
-
-
-## References
-
-[Achieving 95.42% Accuracy on Fashion-Mnist Dataset](https://secantzhang.github.io/blog/deep-learning-fashion-mnist)
-
-
-

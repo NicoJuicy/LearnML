@@ -1,6 +1,6 @@
 # Machine Learning Algorithms
 
-[Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#statistical_methods)
+[Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
 
 Machine learning is about machine learning algorithms.
 
@@ -9,8 +9,6 @@ You need to know what algorithms are available for a given problem, how they wor
 Here is how to get started with machine learning algorithms:
 
 **Step 1:** Discover the different types of machine learning algorithms.
-
-- A Tour of Machine Learning Algorithms
 
 **Step 2:** Discover the foundations of machine learning algorithms.
 
@@ -25,79 +23,84 @@ Here is how to get started with machine learning algorithms:
 - Machine Learning Algorithms Mini-Course
 - Master Machine Learning Algorithms (my book)
 
+
+
+----------
+
+
 # Categories of ML Algorithms
 
 [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
+There are two common approaches of categorizing ML algorithms which you will come across.
 
-two ways to think about and categorize the algorithms you may come across in the field.
+- Grouping of algorithms by learning style
 
-- Grouping of algorithms by their learning style
-
-- Grouping of algorithms by their similarity in form or function
+- Grouping of algorithms by similarity in form or function
 
 
 ## Algorithms Grouped by Learning Style
 
-There are different ways an algorithm can model a problem based on its interaction with the experience or environment or whatever we want to call the input data.
+There are different ways an algorithm can model a problem based on its interaction with the experience, environment, or whatever we want to call the input data.
 
-It is popular in machine learning and artificial intelligence textbooks to first consider the learning styles that an algorithm can adopt.
+It is popular in machine learning and AI textbooks to consider the learning styles that an algorithm can adopt.
 
-This _taxonomy_ or way of organizing machine learning algorithms is useful because it forces you to think about the roles of the input data and the model preparation process and select one that is the most appropriate for your problem in order to get the best result.
+This _taxonomy_ or way of organizing machine learning algorithms is useful because it forces you to think about the roles of the input data and model preparation process so that you can select one that is the most appropriate for your problem.
 
 
 ### Supervised Learning
 
-Input data is called training data and has a known label or result. 
+In supervised learning, the input data is called training data and has a known label or result. 
 
-A model is prepared through a training process in which it is required to make predictions and is corrected when those predictions are wrong. The training process continues until the model achieves a desired level of accuracy on the training data.
+The model is prepared through a training process in which it is required to make predictions and is corrected when those predictions are wrong. The training process continues until the model achieves a desired level of accuracy on the training data.
 
-Example problems are classification and regression.
+Examples problems: classification and regression.
 
-Example algorithms: Logistic Regression and the Back Propagation Neural Network.
+Example algorithms: Logistic Regression and Back-Propagation Neural Network.
 
 ### Unsupervised Learning
 
-Input data is not labeled and does not have a known result.
+In unsupervised learning, the input data is not labeled, so the data does not have a known result.
 
-A model is prepared by deducing structures present in the input data which may be to extract general rules, through a mathematical process to systematically reduce redundancy, or to organize data by similarity.
+The model is prepared by deducing structures present in the input data which may be to extract general rules through a mathematical process to systematically reduce redundancy or to organize data by similarity.
 
-Example problems are clustering, dimensionality reduction and association rule learning.
+Example problems: clustering, dimensionality reduction and association rule learning.
 
 Example algorithms: the Apriori algorithm and K-Means.
 
 ### Semi-Supervised Learning
 
-Input data is a mixture of labeled and unlabelled examples.
+In semi-supervised learning, the input data is a mixture of labeled and unlabelled examples.
 
 There is a desired prediction problem but the model must learn the structures to organize the data as well as make predictions.
 
-Example problems are classification and regression.
+Example problems: classification and regression.
 
 Example algorithms are extensions to other flexible methods that make assumptions about how to model the unlabeled data.
 
-### Overview of Machine Learning Algorithms
 
-When crunching data to model business decisions, you are most typically using supervised and unsupervised learning methods.
+## Overview of Machine Learning Algorithms
+
+When crunching data to model business decisions, you are most usually using supervised and unsupervised learning methods.
 
 A hot topic at the moment is semi-supervised learning methods in areas such as image classification where there are large datasets with very few labeled examples.
 
 
 ## Algorithms Grouped By Similarity
 
-Algorithms are often grouped by similarity in terms of their function (how they work). For example, tree-based methods, and neural network inspired methods.
+Algorithms are often grouped by similarity in terms of their function (how they work). For example, tree-based methods and neural network inspired methods.
 
-This is perhaps the most useful way to group algorithms and it is the approach we will use here.
+This is perhaps the most useful way to group algorithms and it is the approach we will use in [1].
 
-This is a useful grouping method, but it is not perfect. There are still algorithms that could just as easily fit into multiple categories.
+This is a useful grouping method but it is not perfect. However, there are algorithms that could just as easily fit into multiple categories.
 
 ### Regression Algorithms
 
-Regression is concerned with modeling the relationship between variables that is iteratively refined using a measure of error in the predictions made by the model.
+**Regression** is concerned with modeling the relationship between variables that is iteratively refined using a measure of error in the predictions made by the model.
 
-Regression methods are a workhorse of statistics and have been co-opted into statistical machine learning. This may be confusing because we can use regression to refer to the class of problem and the class of algorithm. Really, regression is a process.
+Regression methods are a workhorse of statistics and have been applied to statistical machine learning. 
 
-The most popular regression algorithms are:
+The most common regression algorithms are:
 
 - Ordinary Least Squares Regression (OLSR)
 - Linear Regression
@@ -106,13 +109,13 @@ The most popular regression algorithms are:
 - Multivariate Adaptive Regression Splines (MARS)
 - Locally Estimated Scatterplot Smoothing (LOESS)
 
-The primary assumptions of a linear regression, multiple and singular, are:
+The primary assumptions of linear regression are:
 
-1. Linearity: There is a linear relationship between the outcome and predictor variable(s).
+1. **Linearity:** There is a linear relationship between the outcome and predictor variable(s).
 
-2. Normality: The residuals, or errors, calculated by subtracting the predicted value from the actual value, follow a normal distribution.
+2. **Normality:** The residuals or errors follow a normal distribution. The error is calculated by subtracting the predicted value from the actual value.
 
-3. Homoscedasticity: The variability in the dependent variable is equal for all values of the independent variable(s).
+3. **Homoscedasticity:** The variability in the dependent variable is equal for all values of the independent variable(s).
 
 ### Instance-based Algorithms
 
@@ -271,7 +274,6 @@ How to Study Machine Learning Algorithms
 How to Run Machine Learning Algorithms
 
 
-
 ### Decision Trees
 
 [Classification And Regression Trees for Machine Learning](https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/)
@@ -285,6 +287,12 @@ The classical decision tree algorithms have been around for decades and modern v
 Gradient boosting involves the creation and addition of decision trees sequentially, each attempting to correct the mistakes of the learners that came before it.
 
 This raises the question as to how many trees (weak learners or estimators) to configure in your gradient boosting model and how big each tree should be
+
+
+
+## References
+
+[1] [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
 
 —————————-

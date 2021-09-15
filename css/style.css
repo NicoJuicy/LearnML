@@ -3,6 +3,8 @@ mark {
 }
 
 .image-preview {
+    display: block;
+    margin: 2em auto;
     width: 50%;
-    height: 400;
+    height: auto;
 }

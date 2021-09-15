@@ -28,6 +28,101 @@ The ggthemes package provides a function called bank_slopes() to calculate the a
 **Time-series:** It is best to calculate the aspect ratio since some hidden information can be more pronounced when using the correct aspect ratio for the plot.
 
 
+
+## Hyperparameter Tuning 
+
+[Hyperparameter Tuning Methods](Hyperparameter Tuning Methods)
+
+A practical guide to hyperparameter optimization using three methods: grid, random and bayesian search (with skopt)
+
+1. Introduction to hyperparameter tuning.
+2. Explanation about hyperparameter search methods.
+3. Code examples for each method.
+4. Comparison and conclusions.
+
+### Simple pipeline used in all the examples
+
+```py
+    from sklearn.pipeline import Pipeline #sklearn==0.23.2
+    from sklearn.preprocessing import StandardScaler, OneHotEncoder
+    from sklearn.compose import make_column_transformer
+    from lightgbm import LGBMClassifier
+    
+    tuples = list()
+    
+    tuples.append((Pipeline([
+            ('scaler', StandardScaler()),
+        ]), numeric_var))
+    
+    tuples.append((Pipeline([
+            ('onehot', OneHotEncoder()),
+        ]), categorical_var))
+    
+    preprocess = make_column_transformer(*tuples)
+    
+    pipe = Pipeline([
+        ('preprocess', preprocess),
+        ('classifier', LGBMClassifier())
+        ])
+```
+
+
+### Grid Search
+
+The basic method to perform hyperparameter tuning is to try all the possible combinations of parameters.
+
+### Random Search
+
+in randomized search, only part of the parameter values are evaluated. 
+
+The parameter values are sampled from a given list or specified distribution. 
+
+The number of parameter settings that are sampled is given by `n_iter`. 
+
+Sampling without replacement is performed when the parameters are presented as a list (similar to grid search), but if the parameter is given as a distribution then sampling with replacement is used (recommended).
+
+The advantage of randomized search is that you can extend your search limits without increasing the number of iterations. You can also use random search to find narrow limits to continue a thorough search in a smaller area.
+
+### Bayesian Search
+
+The main difference with Bayesian search is that the algorithm optimizes its parameter selection in each round according to the previous round score. Thus, the algorithm optimizes the choice and theoretically reaches the best parameter set faster than the other methods which means that this method will choose only the relevant search space and discard the range of values that will most likely not deliver the best solution. 
+
+Thus, Bayesian search can be beneficial when you have a large amount of data and/or the learning processis slow and you want to minimize the tuning time.
+
+```py
+    from skopt import BayesSearchCV
+    
+    # Bayesian
+    n_iter = 70
+    
+    param_grid = {
+        "classifier__learning_rate": (0.0001, 0.1, "log-uniform"),
+        "classifier__n_estimators": (100,  1000) ,
+        "classifier__max_depth": (4, 400) 
+    }
+    
+    reg_bay = BayesSearchCV(estimator=pipe,
+                        search_spaces=param_grid,
+                        n_iter=n_iter,
+                        cv=5,
+                        n_jobs=8,
+                        scoring='roc_auc',
+                        random_state=123)
+    
+    model_bay = reg_bay.fit(X, y)
+```
+
+
+### Visualization of parameter search (learning rate)
+
+### Visualization of the mean score for each iteration
+
+
+
 ## References
+
+[A Practical Introduction to Grid Search, Random Search, and Bayes Search](A Practical Introduction to Grid Search, Random Search, and Bayes Search)
+
+[Hyperparameter Tuning Methods](https://towardsdatascience.com/bayesian-optimization-for-hyperparameter-tuning-how-and-why-655b0ee0b399)
 
 
