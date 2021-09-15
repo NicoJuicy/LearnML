@@ -2,13 +2,9 @@
 
 [A Gentle Introduction to Imbalanced Classification](https://machinelearningmastery.com/what-is-imbalanced-classification/) 
 
-[Standard Machine Learning Datasets for Imbalanced Classification](https://machinelearningmastery.com/standard-machine-learning-datasets-for-imbalanced-classification/)
-
-
 An imbalanced classification problem is a problem that involves predicting a class label where the distribution of class labels in the training dataset is skewed (there are many more examples for one class than another class). 
 
 Many real-world classification problems have an imbalanced class distribution, therefore it is important for machine learning practitioners to get familiar with working with these types of problems.
-
 
 Imbalanced classifications pose a challenge for predictive modeling sincr most of the machine learning algorithms used for classification were designed around the assumption of an equal number of examples for each class which results in models that have poor predictive performance, specifically for the minority class. 
 
@@ -37,6 +33,7 @@ The training dataset is used to better understand the input data to help best pr
 - to tune the hyperparameters of a chosen model. 
 
 - to train a final model on all available data that we can use to make predictions for new samples from the problem domain.
+
 
 ## Imbalanced Classification Problems
 
@@ -107,7 +104,81 @@ Most machine learning algorithms for classification predictive models are design
 
 Imbalanced classification remains an open problem generally and practically must be identified and addressed specifically for each training dataset.
 
+
+## How to Handle Imbalanced Classes?
+
+[8 Tactics to Combat Imbalanced Classes in Your Machine Learning Dataset](https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/)
+
+Imbalanced data typically refers to a problem with classification problems where the classes are not represented equally.
+
+- Can You Collect More Data?
+- Try Changing Your Performance Metric
+- Try Different Algorithms
+- Try Penalized Models
+- Try a Different Perspective
+
+- Try Resampling Your Dataset
+- Try Generating Synthetic Samples
+- Try Getting Creative
+
+### Try Changing Your Performance Metric
+
+Accuracy is not the metric to use when working with an imbalanced dataset. We have seen that it is misleading.
+
+There are metrics that have been designed to tell you a more truthful story when working with imbalanced classes.
+
+Consider the following performance measures that can give more insight into the accuracy of the model than traditional classification accuracy:
+
+- Confusion Matrix: A breakdown of predictions into a table showing correct predictions (the diagonal) and the types of incorrect predictions made (what classes incorrect predictions were assigned).
+
+- Precision: A measure of a classifiers exactness.
+
+- Recall: A measure of a classifiers completeness
+
+- F1 Score (or F-score): A weighted average of precision and recall.
+
+- ROC Curves: Like precision and recall, accuracy is divided into sensitivity and specificity and models can be chosen based on the balance thresholds of these values.
+
+Also take a look at the following:
+
+- Kappa (or Cohen’s kappa): Classification accuracy normalized by the imbalance of the classes in the data.
+
+### Try Different Algorithms
+
+Be sure to spot-check a variety of different types of algorithms on a given problem.
+
+Decision trees often perform well on imbalanced datasets since the splitting rules that look at the class variable used in the creation of the trees can force both classes to be addressed.
+
+You can also try a few popular decision tree algorithms: C4.5, C5.0, CART, and Random Forest.
+
+In fact, I have had good success using an ensemble of Gradient Boosting, XGBoost, and Random Forest with imbalanced datasets. 
+
+### Try a Different Perspective
+
+There are fields of study dedicated to imbalanced datasets that have their own algorithms, measures, and terminology.
+
+Thinking about your problem from these perspectives can sometimes provide some insight into your problem: anomaly detection and change detection.
+
+**Anomaly detection** is the detection of rare events such as a machine malfunction indicated by its vibrations or malicious activity by a program indicated by a sequence of system calls. 
+
+The events are rare and when compared to normal operation.
+
+This shift in thinking considers the minor class as the outliers class which might help you think of new ways to separate and classify samples.
+
+**Change detection** is similar to anomaly detection but rather than looking for an anomaly it is looking for a change or difference which might be a change in behavior of a user as observed by usage patterns or bank transactions.
+
+### Accuracy Paradox
+
+The _accuracy paradox_ is is used to describe the situation where your accuracy measures tell the story that you have excellent accuracy (such as 90%) but the accuracy is only reflecting the underlying class distribution (majority class).
+
+The accuracy paradox is very common because classification accuracy is often the first measure we use when evaluating models on our classification problems.
+
+
 ## Examples of Imbalanced Classification
+
+[Imbalanced Classification with the Fraudulent Credit Card Transactions Dataset](https://machinelearningmastery.com/imbalanced-classification-with-the-fraudulent-credit-card-transactions-dataset/)
+
+[Multi-Class Imbalanced Classification](https://machinelearningmastery.com/multi-class-imbalanced-classification/)
 
 Many of the classification predictive modeling problems that we are interested in solving in practice are imbalanced.
 
@@ -116,17 +187,28 @@ Notice that most of the examples are likely binary classification problems and t
 Also notice that many of the domains are described as “detection,” highlighting the desire to discover the minority class amongst the abundant examples of the majority class.
 
 
+## Naive Classifier
+
+[How to Develop and Evaluate Naive Classifier Strategies Using Probability](https://machinelearningmastery.com/how-to-develop-and-evaluate-naive-classifier-strategies-using-probability/)
+
+The performance of naive classification models provides a baseline fir conparison with other models.
+
+The majority class classifier achieves better accuracy than other naive classifier models such as random guessing and predicting a randomly selected observed class label.
+
+Naive classifier strategies can be used on predictive modeling projects via the `DummyClassifier` class in the scikit-learn library.
+
+
 ## References
 
 [Step-By-Step Framework for Imbalanced Classification Projects](https://machinelearningmastery.com/framework-for-imbalanced-classification-projects/)
+
+[Standard Machine Learning Datasets for Imbalanced Classification](https://machinelearningmastery.com/standard-machine-learning-datasets-for-imbalanced-classification/)
 
 [Fitting Linear Regression Models on Counts Based Data](https://towardsdatascience.com/fitting-linear-regression-models-on-counts-based-data-ba1f6c11b6e1)
 
 [Discrete Probability Distributions for Machine Learning](https://machinelearningmastery.com/discrete-probability-distributions-for-machine-learning/)
 
 [SMOTE for Imbalanced Classification with Python](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
-
-[Multi-Class Imbalanced Classification](https://machinelearningmastery.com/multi-class-imbalanced-classification/)
 
 [How to handle Multiclass Imbalanced Data? Not SMOTE](https://towardsdatascience.com/how-to-handle-multiclass-imbalanced-data-say-no-to-smote-e9a7f393c310)
 
