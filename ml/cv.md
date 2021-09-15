@@ -10,7 +10,7 @@ Many popular computer vision applications involve trying to recognize things in 
 
 - Object Classification: What broad category of object is in this photograph?
 
-— Object Identification: Which type of a given object is in this photograph?
+- Object Identification: Which type of a given object is in this photograph?
 
 - Object Verification: Is the object in the photograph?
 
