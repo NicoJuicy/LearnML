@@ -28,58 +28,6 @@ When values can be zero, accuracy (MPE/MAPE) does not make sense. If you exclude
 
 
 
-## Importance of Data Scaling
-
-It is common to have data where the scale of values differs from variable to variable.
-
-For example, one variable may be in feet, another in meters, etc.
-
-Some machine learning algorithms perform much better if all of the variables are scaled to the same range, such as scaling all variables to values between 0 and 1 called normalization.
-
-This effects algorithms that use a weighted sum of the input such as linear models and neural networks as well as models that use distance measures such as support vector machines and k-nearest neighbors.
-
-Therefore, it is a good practice to scale input data, and perhaps even try other data transforms such as making the data more normal (better fit a Gaussian probability distribution) using a power transform.
-
-This also applies to output variables called target variables such as numerical values that are predicted when modeling regression predictive modeling problems.
-
-For regression problems, it is often desirable to scale or transform both the input and the target variables.
-
-Scaling input variables is straightforward. In scikit-learn, you can use the scale objects manually or the more convenient Pipeline that allows you to chain a series of data transform objects together before using your model.
-
-The Pipeline will fit the scale objects on the training data for you and apply the transform to new data, such as when using a model to make a prediction.
-
-```py
-  # prepare the model with input scaling
-  pipeline = Pipeline(steps=[
-      ('normalize', MinMaxScaler()), 
-      ('model', LinearRegression())])
-  
-  # fit pipeline
-  pipeline.fit(train_x, train_y)
-
-  # make predictions
-  yhat = pipeline.predict(test_x)
-```
-
-
-## How to Scale Target Variables
-
-Performing data preparation operations such as scaling is relatively straightforward for input variables and has been made routine in Python via the Pipeline scikit-learn class.
-
-On regression predictive modeling problems where a numerical value must be predicted, it can also be critical to scale and perform other data transformations on the target variable. 
-
-This can be achieved in Python using the TransformedTargetRegressor class.
-
-There are two ways that you can scale target variables:
-
-1. Manually transform the target variable.
-2. Automatically transform the target variable.
-
-An alternate approach is to automatically manage the transform and inverse transform by using the TransformedTargetRegressor object that wraps a given model and a scaling object.
-
-It will prepare the transform of the target variable using the same training data used to fit the model, then apply that inverse transform on any new data provided when calling predict(), returning predictions in the correct scale.
-
-
 ## Confidence Intervals
 
 [How to Calculate Bootstrap Confidence Intervals For Machine Learning Results in Python](https://machinelearningmastery.com/calculate-bootstrap-confidence-intervals-machine-learning-results-python/)
@@ -210,22 +158,14 @@ There is a 95% likelihood that the range 0.741 to 0.757 covers the true statisti
 ## References
 
 [Evaluation Metrics for Machine Learning](https://towardsdatascience.com/evaluation-metrics-for-machine-learning-2167fca1a291?gi=2512e2b9b1c0)
-
 [Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
-
 [Error Metrics used in Time Series Forecasting Modeling](https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca)
-
 [Tutorial: Understanding Regression Error Metrics in Python](https://www.dataquest.io/blog/understanding-regression-error-metrics/)
-
-[How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
-
 [An Overview of Performance Evaluation Metrics of Machine Learning(Classification) Algorithms](https://towardsdatascience.com/an-overview-of-performance-evaluation-metrics-of-machine-learning-classification-algorithms-7a95783a762f?gi=884943f12b27)
 
-[PSI and CSI: Top 2 model monitoring metrics](https://towardsdatascience.com/psi-and-csi-top-2-model-monitoring-metrics-924a2540bed8?gi=7d4c901abece)
-
-
-
 [Importance of Loss functions in Deep Learning and Python Implementation](https://towardsdatascience.com/importance-of-loss-functions-in-deep-learning-and-python-implementation-4307bfa92810?gi=6295a1b1892)
+
+[PSI and CSI: Top 2 model monitoring metrics](https://towardsdatascience.com/psi-and-csi-top-2-model-monitoring-metrics-924a2540bed8?gi=7d4c901abece)
 
 
 

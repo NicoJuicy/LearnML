@@ -126,6 +126,42 @@ Notice that the shape of our data has changed.
 Before normalizing it was almost L-shaped but after normalizing it looks more like the outline of a bell (hence "bell curve").
 
 
+## Data Pipelines
+
+### Importance of Data Scaling
+
+It is common to have data where the scale of values differs from variable to variable.
+
+For example, one variable may be in feet, another in meters, etc.
+
+Some machine learning algorithms perform much better if all of the variables are scaled to the same range, such as scaling all variables to values between 0 and 1 called normalization.
+
+This effects algorithms that use a weighted sum of the input such as linear models and neural networks as well as models that use distance measures such as support vector machines and k-nearest neighbors.
+
+Therefore, it is a good practice to scale input data and perhaps even try other data transforms such as making the data more normal (Gaussian probability distribution) using a power transform.
+
+This also applies to output variables called _target_ variables such as numerical values that are predicted when modeling regression predictive modeling problems.
+
+For regression problems, it is often desirable to scale or transform both the input and the target variables.
+
+Scaling input variables is straightforward. In scikit-learn, you can use the scale objects manually or the more convenient `Pipeline` that allows you to chain a series of data transform objects together before using your model.
+
+The `Pipeline` will fit the scale objects on the training data for you and apply the transform to new data, such as when using a model to make a prediction.
+
+```py
+  # prepare the model with input scaling
+  pipeline = Pipeline(steps=[
+      ('normalize', MinMaxScaler()), 
+      ('model', LinearRegression())])
+  
+  # fit pipeline
+  pipeline.fit(train_x, train_y)
+
+  # make predictions
+  yhat = pipeline.predict(test_x)
+```
+
+
 
 ## References
 
