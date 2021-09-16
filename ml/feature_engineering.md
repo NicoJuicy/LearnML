@@ -13,6 +13,7 @@
     - Using min-max scaling
     - Using z-score scaling
 - Transform Target Variables for Regression
+    - Importance of Data Scaling
     - How to Scale Target Variables?
     - Automatic Transform of the Target Variable
     - Complete Regression Example
@@ -214,6 +215,41 @@ On regression predictive modeling problems where a numerical value must be predi
 
 For regression problems, it is often desirable to scale or transform both the input and the target variables.
 
+### Importance of Data Scaling
+
+It is common to have data where the scale of values differs from variable to variable.
+
+For example, one variable may be in feet, another in meters, etc.
+
+Some machine learning algorithms perform much better if all of the variables are scaled to the same range, such as scaling all variables to values between 0 and 1 called normalization.
+
+This effects algorithms that use a weighted sum of the input such as linear models and neural networks as well as models that use distance measures such as support vector machines and k-nearest neighbors.
+
+Therefore, it is a good practice to scale input data and perhaps even try other data transforms such as making the data more normal (Gaussian probability distribution) using a power transform.
+
+This also applies to output variables called _target_ variables such as numerical values that are predicted when modeling regression predictive modeling problems.
+
+For regression problems, it is often desirable to scale or transform both the input and the target variables.
+
+Scaling input variables is straightforward. In scikit-learn, you can use the scale objects manually or the more convenient `Pipeline` that allows you to chain a series of data transform objects together before using your model.
+
+The `Pipeline` will fit the scale objects on the training data for you and apply the transform to new data, such as when using a model to make a prediction.
+
+```py
+    from sklearn.pipeline import Pipeline
+    
+    # prepare the model with input scaling
+    pipeline = Pipeline(steps=[
+        ('normalize', MinMaxScaler()), 
+        ('model', LinearRegression())])
+    
+    # fit pipeline
+    pipeline.fit(train_x, train_y)
+    
+    # make predictions
+    yhat = pipeline.predict(test_x)
+```
+
 ### How to Scale Target Variables?
 
 There are two ways that you can scale target variables:
@@ -366,58 +402,58 @@ The scikit-learn library provides the OneHotEncoder class to automatically one h
 By default the `OneHotEncoder` class will output data with a sparse representation which is efficient because most values are 0 in the encoded representation. However, we can disable this feature by setting the `sparse=False` so that we can review the effect of the encoding.
 
 ```py
-import numpy as np
-import pandas as pd
+    import numpy as np
+    import pandas as pd
 
-from numpy import mean
-from numpy import std
-from pandas import read_csv
+    from numpy import mean
+    from numpy import std
+    from pandas import read_csv
 
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder
-from sklearn.metrics import accuracy_score
+    from sklearn.model_selection import train_test_split
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+    from sklearn.metrics import accuracy_score
 
-# define the location of the dataset
-url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/breast-cancer.csv"
+    # define the location of the dataset
+    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/breast-cancer.csv"
 
-# load the dataset
-dataset = read_csv(url, header=None)
+    # load the dataset
+    dataset = read_csv(url, header=None)
 
-# retrieve the array of data
-data = dataset.values
+    # retrieve the array of data
+    data = dataset.values
 
-# separate into input and output columns
-X = data[:, :-1].astype(str)
-y = data[:, -1].astype(str)
+    # separate into input and output columns
+    X = data[:, :-1].astype(str)
+    y = data[:, -1].astype(str)
 
-# split the dataset into train and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=1)
+    # split the dataset into train and test sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=1)
 
-# one-hot encode input variables
-onehot_encoder = OneHotEncoder()
-onehot_encoder.fit(X_train)
-X_train = onehot_encoder.transform(X_train)
-X_test = onehot_encoder.transform(X_test)
+    # one-hot encode input variables
+    onehot_encoder = OneHotEncoder()
+    onehot_encoder.fit(X_train)
+    X_train = onehot_encoder.transform(X_train)
+    X_test = onehot_encoder.transform(X_test)
 
-# ordinal encode target variable
-label_encoder = LabelEncoder()
-label_encoder.fit(y_train)
-y_train = label_encoder.transform(y_train)
-y_test = label_encoder.transform(y_test)
+    # ordinal encode target variable
+    label_encoder = LabelEncoder()
+    label_encoder.fit(y_train)
+    y_train = label_encoder.transform(y_train)
+    y_test = label_encoder.transform(y_test)
 
-# define the model
-model = LogisticRegression()
+    # define the model
+    model = LogisticRegression()
 
-# fit on the training set
-model.fit(X_train, y_train)
+    # fit on the training set
+    model.fit(X_train, y_train)
 
-# predict on test set
-yhat = model.predict(X_test)
+    # predict on test set
+    yhat = model.predict(X_test)
 
-# evaluate predictions
-accuracy = accuracy_score(y_test, yhat)
-print('Accuracy: %.2f' % (accuracy * 100))
+    # evaluate predictions
+    accuracy = accuracy_score(y_test, yhat)
+    print('Accuracy: %.2f' % (accuracy * 100))
 ```
 
 #### Dummy Variable Encoding

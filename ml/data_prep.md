@@ -128,38 +128,7 @@ Before normalizing it was almost L-shaped but after normalizing it looks more li
 
 ## Data Pipelines
 
-### Importance of Data Scaling
 
-It is common to have data where the scale of values differs from variable to variable.
-
-For example, one variable may be in feet, another in meters, etc.
-
-Some machine learning algorithms perform much better if all of the variables are scaled to the same range, such as scaling all variables to values between 0 and 1 called normalization.
-
-This effects algorithms that use a weighted sum of the input such as linear models and neural networks as well as models that use distance measures such as support vector machines and k-nearest neighbors.
-
-Therefore, it is a good practice to scale input data and perhaps even try other data transforms such as making the data more normal (Gaussian probability distribution) using a power transform.
-
-This also applies to output variables called _target_ variables such as numerical values that are predicted when modeling regression predictive modeling problems.
-
-For regression problems, it is often desirable to scale or transform both the input and the target variables.
-
-Scaling input variables is straightforward. In scikit-learn, you can use the scale objects manually or the more convenient `Pipeline` that allows you to chain a series of data transform objects together before using your model.
-
-The `Pipeline` will fit the scale objects on the training data for you and apply the transform to new data, such as when using a model to make a prediction.
-
-```py
-  # prepare the model with input scaling
-  pipeline = Pipeline(steps=[
-      ('normalize', MinMaxScaler()), 
-      ('model', LinearRegression())])
-  
-  # fit pipeline
-  pipeline.fit(train_x, train_y)
-
-  # make predictions
-  yhat = pipeline.predict(test_x)
-```
 
 
 
@@ -168,24 +137,19 @@ The `Pipeline` will fit the scale objects on the training data for you and apply
 ### Glossary
 
 [ML Cheatsheet](https://github.com/shuaiw/ml-cheatsheet)
-
 [ML Glossary](https://ml-cheatsheet.readthedocs.io/en/latest/index.html)
-
 [Analytics Vidhya Glossary of Machine Learning Terms](https://www.analyticsvidhya.com/glossary-of-common-statistics-and-machine-learning-terms/#five)
 
 
 ### Data Preprocessing
 
 [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
-
 [How to Select a Data Splitting Method](https://towardsdatascience.com/how-to-select-a-data-splitting-method-4cf6bc6991da)
 
 
 ### Exploratory Data Analysis (EDA)
 
 [Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
-
 [11 Essential Code Blocks for Complete EDA (Exploratory Data Analysis)-Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
-
 [Python Cheat Sheet for Data Science](https://chipnetics.com/tutorials/python-cheat-sheet-for-data-science/)
 
