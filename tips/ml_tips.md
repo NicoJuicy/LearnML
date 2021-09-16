@@ -31,7 +31,14 @@ The ggthemes package provides a function called bank_slopes() to calculate the a
 
 ## Hyperparameter Tuning 
 
-[Hyperparameter Tuning Methods](Hyperparameter Tuning Methods)
+The process of searching for optimal hyperparameters is called hyperparameter tuning or hypertuning, and is essential in any machine learning project. Hypertuning helps boost performance and reduces model complexity by removing unnecessary parameters (e.g., number of units in a dense layer).
+
+There are two types of hyperparameters:
+
+- Model hyperparameters: influence model architecture (such as number and width of hidden layers in a DNN)
+
+- Algorithm hyperparameters: influence the speed and quality of training (such as learning rate and activation function).
+
 
 A practical guide to hyperparameter optimization using three methods: grid, random and bayesian search (with skopt)
 
@@ -124,5 +131,7 @@ Thus, Bayesian search can be beneficial when you have a large amount of data and
 [A Practical Introduction to Grid Search, Random Search, and Bayes Search](A Practical Introduction to Grid Search, Random Search, and Bayes Search)
 
 [Hyperparameter Tuning Methods](https://towardsdatascience.com/bayesian-optimization-for-hyperparameter-tuning-how-and-why-655b0ee0b399)
+
+[Hyperparameter Tuning with KerasTuner and TensorFlow](https://towardsdatascience.com/hyperparameter-tuning-with-kerastuner-and-tensorflow-c4a4d690b31a)
 
 
