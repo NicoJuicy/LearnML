@@ -1,7 +1,43 @@
 # Feature Engineering
 
-[What is Feature Engineering?](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10?source=rss----7f60cf5620c9---4)
+<!-- MarkdownTOC -->
 
+- Feature Engineering Techniques
+    - 1. Imputation \(missing values\)
+    - 2. Handling Outliers
+    - 3. Log Transform
+    - 4. One-hot encoding
+    - 5. Scaling
+- Normalization Techniques
+    - Using maximum absolute scaling
+    - Using min-max scaling
+    - Using z-score scaling
+- Transform Target Variables for Regression
+    - How to Scale Target Variables?
+    - Automatic Transform of the Target Variable
+    - Complete Regression Example
+- Encoding Categorical Features
+        - Complete One-Hot Encoding Example
+        - Dummy Variable Encoding
+- Common Questions on Normalization
+    - Should I Normalize or Standardize?
+    - Should I Standardize then Normalize?
+    - Which Scaling Technique is Best?
+    - How Do I Handle Out-of-Bounds Values?
+- Common Questions on Encoding?
+    - What if I have a mixture of numeric and categorical data?
+    - What if I have hundreds of categories?
+    - What encoding technique is the best?
+- References
+    - Categorical Data
+    - Dimensionality Reduction
+    - Feature Engineering
+    - Scaling
+
+<!-- /MarkdownTOC -->
+
+
+[What is Feature Engineering?](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10?source=rss----7f60cf5620c9---4)
 [Data Preparation: Tips and Tricks](https://gist.github.com/codecypher/b8c85752acf287de28f816d9b9d75d08)
 
 Feature engineering techniques for machine learning are a fundamental topic in machine learning, yet one that is often overlooked or deceptively simple.
@@ -208,16 +244,11 @@ Manually managing the scaling of the target variable involves creating and apply
 
 However, if you use this approach then you cannot use convenience functions in scikit-learn such as `cross_val_score()` to quickly evaluate a model.
 
-Automatic Transform of the Target Variable
-An alternate approach is to automatically manage the transform and inverse transform.
+### Automatic Transform of the Target Variable
 
-This can be achieved by using the TransformedTargetRegressor object that wraps a given model and a scaling object.
+An alternate approach is to automatically manage the transform and inverse transform by using the `TransformedTargetRegressor` object that wraps a given model and a scaling object.
 
 It will prepare the transform of the target variable using the same training data used to fit the model, then apply that inverse transform on any new data provided when calling predict(), returning predictions in the correct scale.
-
-To use the `TransformedTargetRegressor`, it is defined by specifying the model and the transform object to use on the target.
-
-Later, the `TransformedTargetRegressor` instance can be fit like any other model by calling the `fit()` function and used to make predictions by calling the `predict()` function.
 
 ```py
     # define the target transform wrapper
@@ -474,41 +505,33 @@ This is impossible to answer. The best approach would be to test each technique 
 
 
 
-
 ## References
 
 ### Categorical Data
 
 [Ordinal and One-Hot Encodings for Categorical Data](https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/)
-
 [Smarter Ways to Encode Categorical Data for Machine Learning](https://towardsdatascience.com/smarter-ways-to-encode-categorical-data-for-machine-learning-part-1-of-3-6dca2f71b159)
-
 [Stop One-Hot Encoding Your Categorical Variables](https://towardsdatascience.com/stop-one-hot-encoding-your-categorical-variables-bbb0fba89809)
-
 
 ### Dimensionality Reduction
 
 [Techniques for Dimensionality Reduction](https://towardsdatascience.com/techniques-for-dimensionality-reduction-927a10135356)
 
-
 ### Feature Engineering
 
 [Representation: Feature Engineering](https://developers.google.com/machine-learning/crash-course/representation/feature-engineering)
-
 [Basic Feature Discovering for Machine Learning](https://medium.com/diko-hary-adhanto-portfolio/basic-feature-discovering-for-machine-learning-cbd47bf4b651)
-
 [3 Essential Ways to Calculate Feature Importance in Python](https://towardsdatascience.com/3-essential-ways-to-calculate-feature-importance-in-python-2f9149592155)
-
 
 ### Scaling
 
 [How to Selectively Scale Numerical Input Variables for Machine Learning](https://machinelearningmastery.com/selectively-scale-numerical-input-variables-for-machine-learning/)
-
 [How to use Data Scaling Improve Deep Learning Model Stability and Performance](https://machinelearningmastery.com/how-to-improve-neural-network-stability-and-modeling-performance-with-data-scaling/)
+[How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
+
+----------
 
 [How to Normalize and Standardize Time Series Data in Python](https://machinelearningmastery.com/how-to-scale-data-for-long-short-term-memory-networks-in-python/)
-
 [4 Common Machine Learning Data Transforms for Time Series Forecasting](https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/)
-
 [How to Scale Data for Long Short-Term Memory Networks in Python](https://machinelearningmastery.com/how-to-scale-data-for-long-short-term-memory-networks-in-python/)
 
