@@ -7,6 +7,15 @@ We can write a method to shift the images in all four directions by the given or
 We will shift the images to each of the four directions by one pixel and generate four more images from a single image.
 
 
+## Image Data Pipeline
+
+[Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
+
+We can build better and faster image pipelines using `tf.data`. 
+
+While training a neural network, it is quite common to use `ImageDataGenerator` class to generate batches of tensor image data with real-time data augmentation, but the `tf.data` API can be used to build a faster input data pipeline with reusable pieces.
+
+
 ----------
 
 
