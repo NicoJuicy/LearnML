@@ -34,6 +34,7 @@
     - Dimensionality Reduction
     - Feature Engineering
     - Scaling
+    - Time Series Data Preparation
 
 <!-- /MarkdownTOC -->
 
@@ -546,7 +547,9 @@ This is impossible to answer. The best approach would be to test each technique 
 ### Categorical Data
 
 [Ordinal and One-Hot Encodings for Categorical Data](https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/)
+
 [Smarter Ways to Encode Categorical Data for Machine Learning](https://towardsdatascience.com/smarter-ways-to-encode-categorical-data-for-machine-learning-part-1-of-3-6dca2f71b159)
+
 [Stop One-Hot Encoding Your Categorical Variables](https://towardsdatascience.com/stop-one-hot-encoding-your-categorical-variables-bbb0fba89809)
 
 ### Dimensionality Reduction
@@ -556,18 +559,25 @@ This is impossible to answer. The best approach would be to test each technique 
 ### Feature Engineering
 
 [Representation: Feature Engineering](https://developers.google.com/machine-learning/crash-course/representation/feature-engineering)
+
 [Basic Feature Discovering for Machine Learning](https://medium.com/diko-hary-adhanto-portfolio/basic-feature-discovering-for-machine-learning-cbd47bf4b651)
+
 [3 Essential Ways to Calculate Feature Importance in Python](https://towardsdatascience.com/3-essential-ways-to-calculate-feature-importance-in-python-2f9149592155)
 
 ### Scaling
 
 [How to Selectively Scale Numerical Input Variables for Machine Learning](https://machinelearningmastery.com/selectively-scale-numerical-input-variables-for-machine-learning/)
+
 [How to use Data Scaling Improve Deep Learning Model Stability and Performance](https://machinelearningmastery.com/how-to-improve-neural-network-stability-and-modeling-performance-with-data-scaling/)
+
 [How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
 
-----------
+
+### Time Series Data Preparation
 
 [How to Normalize and Standardize Time Series Data in Python](https://machinelearningmastery.com/how-to-scale-data-for-long-short-term-memory-networks-in-python/)
+
 [4 Common Machine Learning Data Transforms for Time Series Forecasting](https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/)
+
 [How to Scale Data for Long Short-Term Memory Networks in Python](https://machinelearningmastery.com/how-to-scale-data-for-long-short-term-memory-networks-in-python/)
 

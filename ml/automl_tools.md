@@ -9,6 +9,27 @@ Be willing to settle for “good enough” rather than trying to find the “bes
 Automated Machine Learning (AutoML) is an emerging field in which the process of building machine learning models to model data is automated.
 
 
+## How to choose ML framework?
+
+[Keras vs PyTorch for Deep Learning](https://towardsdatascience.com/keras-vs-pytorch-for-deep-learning-a013cb63870d)
+
+
+## Keras Tutorials
+
+[Introduction to Keras for Engineers](https://keras.io/getting_started/intro_to_keras_for_engineers/)
+
+[3 ways to create a Machine Learning model with Keras and TensorFlow 2.0 (Sequential, Functional, and Model Subclassing)](https://towardsdatascience.com/3-ways-to-create-a-machine-learning-model-with-keras-and-tensorflow-2-0-de09323af4d3)
+
+[Introducing TensorFlow Datasets](https://medium.com/tensorflow/introducing-tensorflow-datasets-c7f01f7e19f3)
+
+[Getting started with TensorFlow 2.0](https://medium.com/@himanshurawlani/getting-started-with-tensorflow-2-0-faf5428febae)
+
+[Introducing TensorFlow Datasets](https://medium.com/tensorflow/introducing-tensorflow-datasets-c7f01f7e19f3)
+
+[How to (quickly) Build a Tensorflow Training Pipeline](https://towardsdatascience.com/how-to-quickly-build-a-tensorflow-training-pipeline-15e9ae4d78a0?gi=f2df1cc3455f)
+
+
+
 ### [Orange](https://github.com/biolab/orange3)
 
 [Orange Docs](https://orangedatamining.com/docs/)
@@ -236,10 +257,6 @@ Hydra provides a configuration file for the entire experiment. We can have diffe
 
 Pipreqs proves quite useful when we want to port our code to a different machine and install all the dependencies. It helps us in creating a list of python dependencies along with the versions that our current working code is using and save them in a file that can be easily installed anywhere else.
 
-### [Tqdm](https://tqdm.github.io/) 
-
-Tqdm can be used with a loop (here we use with a loop over a torch.utils.data.DataLoader object) gives a good picture of time per gradient step or epoch which can help us to set our logging frequency of different results or saving the model or get an idea to set the validation intervals.
-
 ### [Loguru](https://loguru.readthedocs.io/en/stable/api/logger.html)
 
 Loguru provides the functionality of a logger to log configuration, experiment name, and other training-related data. This proves to be quite helpful when we do multiple experiments and want to distinguish the results of different experiments. Thus, if we log the actual configuration as well as the results, then it’s easier to map the appropriate setting to the outputs that we got. provides the functionality of a logger to log configuration, experiment name, and other training-related data. 
@@ -254,13 +271,20 @@ H5py can be used to store all the intermediate loss values in a dictionary mappe
 
 Picklecan be used to save and load the python classes or PyTorch models for reuse.
 
+### [Tqdm](https://tqdm.github.io/) 
+
+Tqdm can be used with a loop (here we use with a loop over a torch.utils.data.DataLoader object) gives a good picture of time per gradient step or epoch which can help us to set our logging frequency of different results or saving the model or get an idea to set the validation intervals.
 
 
 ## Feature Engineering Tools
 
-There are many tools that will help you in automating the entire feature engineering process and producing a large pool of features in a short period of time for both classification and regression tasks. 
+There are many tools that will help you in automating the entire feature engineering process and producing a large pool of features in a short period of time for both classification and regression tasks.
 
-### FeatureTools
+### [Feature-engine](https://github.com/feature-engine/feature_engine)
+
+Feature-engine is a Python library with multiple transformers to engineer and select features for use in machine learning models. Feature-engine's transformers follow scikit-learn's functionality with fit() and transform() methods to first learn the transforming parameters from data and then transform the data.
+
+### [Featuretools](https://github.com/alteryx/featuretools)
 
 Featuretools is a framework to perform automated feature engineering that excels at transforming temporal and relational datasets into feature matrices for machine learning. 
 
@@ -294,5 +318,5 @@ User-generated content on the Web and in social media is often dirty. Preprocess
 
 [Colaboratory FAQ](https://research.google.com/colaboratory/faq.html#resource-limits)
 
-[Tools for Efficient Deep Learning (towardsdatascience)](https://towardsdatascience.com/tools-for-efficient-deep-learning-c9585122ded0)
+[Tools for Efficient Deep Learning](https://towardsdatascience.com/tools-for-efficient-deep-learning-c9585122ded0)
 
