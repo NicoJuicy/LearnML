@@ -1,25 +1,53 @@
 # Data Preparation
 
 [Tour of Data Preparation Techniques for Machine Learning](https://machinelearningmastery.com/data-preparation-techniques-for-machine-learning/)
-
 [Feature Engineering](https://gist.github.com/codecypher/dd4c7e8794982570288c2cfe95665c9c)
+
+<!-- MarkdownTOC -->
+
+- Data Preparation
+    - Import data
+    - Format adjustments
+    - Correct inconsistencies
+    - Handle errors in variables
+- Data Cleaning
+    - Add Dummy Variables
+    - Highly Imbalanced Data
+    - Order of Data Transforms for Time Series
+- Data Cleaning Challenge
+- Scaling vs. Normalization
+    - Scaling
+    - Normalization
+- Data Pipelines
+    - Create a simple Pipeline
+    - Best Scaler
+    - Best Estimator
+    - Pipeline with With PCA
+    - Joblib
+    - Pandas pipe
+- References
+    - Glossary
+    - Data Preprocessing
+    - Categorical Data
+    - Exploratory Data Analysis \(EDA\)
+
+<!-- /MarkdownTOC -->
+
+
+## Data Preparation
 
 ### Import data
 
 [Read datasets with URL](https://towardsdatascience.com/dont-download-read-datasets-with-url-in-python-8245a5eaa919)
 
 - Split data along delimiters (CSV)
-
 - Extract parts from data entries (Do you only need a part of a certain attribute?)
-
 - Remove leading and trailing spaces
 
 ### Format adjustments
 
 - Standardize types (decimal separators, date formats, or measurement units)
-
 - Replace unrecognizable or corrupted characters
-
 - Check for truncated entries (data entries are cut off at a certain position)
 
 ### Correct inconsistencies
@@ -34,8 +62,7 @@
 
 - Handle/Remove duplicates
 
-
-## Handle errors in variables
+### Handle errors in variables
 
 - Missing Data:  can happen due to forgotten to store, inappropriate data handling, inefficient data entry at the ground level, etc. 
 
@@ -48,14 +75,48 @@
 
 [How to Perform Data Cleaning for Machine Learning with Python?](https://machinelearningmastery.com/basic-data-cleaning-for-machine-learning/)
 
+Data cleaning refers to identifying and correcting errors in the dataset that may negatively impact a predictive model.
+
+- Identify Columns That Contain a Single Value
+- Delete Columns That Contain a Single Value
+- Consider Columns That Have Very Few Values
+- Remove Columns That Have A Low Variance
+- Identify Rows that Contain Duplicate Data
+- Delete Rows that Contain Duplicate Data
+
 1. Handling missing values
 2. Scaling and normalization
 3. Parsing dates
-4. Character encodings
-5. Inconsistent Data Entry
+4. Inconsistent Data Entry
+
+### Add Dummy Variables
+
+[Ordinal and One-Hot Encodings for Categorical Data](https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/)
+
+Most machine learning algorithms cannot directly handle categorical features. Specifically, they cannot handle _text values_.
+
+Therefore, we need to create dummy variables for our categorical features which is called _one-hot encoding_.
+
+A **dummy variable** is a binary (0 or 1) variable that represents a single class from a categorical feature.
+
+The information you represent is exactly the same but the numeric representation allows you to pass the values to be process by ML algorithms.
+
+The one-hot encoding creates one binary variable for each category which includes redundancy. 
+
+In contrast, a dummy variable encoding represents C categories with C-1 binary variables.
+
+```py
+    pd.get_dummies(df, columns=['Color'], prefix=['Color'])
+```
+
+### Highly Imbalanced Data
+
+Need to upsample, but categories with only 1 entry when oversampled will give a 100% accuracy and artificially inflate the total accuracy/precision.
+
+- We can use `UpSample` in Keras/PyTorch and `pd.resample()`
 
 
-## Order of Data Transforms
+### Order of Data Transforms for Time Series
 
 You may want to experiment with applying multiple data transforms to a time series prior to modeling.
 
@@ -68,14 +129,20 @@ It is quite common to;
 The order that the transform operations are applied is important.
 
 
-
 ----------
 
-## Data Cleaning Challenge
 
-[Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
+
+## Data Cleaning
 
 The [Data Science Primer](https://elitedatascience.com/primer) covers exploratory analysis, data cleaning, feature engineering, algorithm selection, and model training.
+
+1. Handling missing values
+2. Scaling and normalization
+3. Parsing dates
+4. Character encodings
+5. Inconsistent Data Entry
+
 
 ## Scaling vs. Normalization
 
@@ -128,7 +195,165 @@ Before normalizing it was almost L-shaped but after normalizing it looks more li
 
 ## Data Pipelines
 
+[Build Machine Learning Pipelines](https://medium.datadriveninvestor.com/build-machine-learning-pipelines-with-code-part-1-bd3ed7152124?gi=c419327a3c8c)
 
+Pipeline is a technique used to create a linear sequence of data preparation and modeling steps to automate machine learning workflows.
+
+Pipelines also help in parallelization which means different jobs can be run in parallel as well as help to inspect and debug the data flow in the model.
+
+
+### Create a simple Pipeline
+
+```py
+    # Create a pipeline
+    pipeline_lr = Pipeline([
+        ('mms', MinMaxScaler()),
+        ('lr', LogisticRegression())
+    ])
+    
+    # Fit pipeline
+    pipeline_lr.fit(trainX, trainY)
+    
+    # Evaluate pipeline
+    y_predict = pipeline_lr.predict(testX)
+    print('Test Accuracy Score: {:.4f}'.format(accuracy_score(testY, y_predict)))
+```
+
+### Best Scaler
+
+```py
+# Create a pipeline
+pipeline_lr_mm = Pipeline([
+    ('mms', MinMaxScaler()),
+    ('lr', LogisticRegression())
+    ])
+pipeline_lr_r = Pipeline([
+    ('rs', RobustScaler()),
+    ('lr', LogisticRegression())
+    ])
+pipeline_lr_w = Pipeline([
+    ('lr', LogisticRegression())
+    ])
+pipeline_lr_s = Pipeline([
+    ('ss', StandardScaler()),
+    ('lr', LogisticRegression())
+    ])
+    
+# Create a pipeline dictionary
+pipeline_dict = {
+0: 'Logistic Regression without scaler',
+    1: 'Logistic Regression with MinMaxScaler',
+    2: 'Logistic Regression with RobustScaler',
+    3: 'Logistic Regression with StandardScaler',
+}
+
+# Create a pipeline list
+pipelines = [pipeline_lr_w, pipeline_lr_mm, 
+    pipeline_lr_r, 
+    pipeline_lr_s]
+
+# Fit the pipeline
+for p in pipelines:
+    p.fit(trainX, trainY)
+
+# Evaluate the pipeline
+for i, val in enumerate(pipelines):
+print('%s pipeline Test Accuracy Score: %.4f' % (pipeline_dict[i], accuracy_score(testY, val.predict(testX))))
+```
+
+Convert it to dataFrame and show the best model:
+
+```py
+l = []
+for i, val in enumerate(pipelines):
+    l.append(accuracy_score(testY, val.predict(testX)))
+result_df = pd.DataFrame(list(pipeline_dict.items()),columns = ['Index','Estimator'])
+
+result_df['Test_Accuracy'] = l
+
+best_model_df = result_df.sort_values(by='Test_Accuracy', ascending=False)
+print(best_model_df)
+```
+
+### Best Estimator
+
+```py
+# Create a pipeline
+pipeline_knn = Pipeline([
+    ('ss1', StandardScaler()),
+    ('knn', KNeighborsClassifier(n_neighbors=4))
+    ])
+pipeline_dt = Pipeline([
+    ('ss2', StandardScaler()),
+    ('dt', DecisionTreeClassifier())
+    ])
+pipeline_rf = Pipeline([
+    ('ss3', StandardScaler()),
+    ('rf', RandomForestClassifier(n_estimators=80))
+    ])
+pipeline_lr = Pipeline([
+    ('ss4', StandardScaler()),
+    ('lr', LogisticRegression())
+    ])
+pipeline_svm_lin = Pipeline([
+    ('ss5', StandardScaler()),
+    ('svm_lin', SVC(kernel='linear'))
+    ])
+pipeline_svm_sig = Pipeline([
+    ('ss6', StandardScaler()),
+    ('svm_sig', SVC(kernel='sigmoid'))
+    ])
+    
+# Create a pipeline dictionary
+pipeline_dict = {
+    0: 'knn',
+    1: 'dt',
+    2: 'rf',
+    3: 'lr',
+    4: 'svm_lin',
+    5: 'svm_sig',
+    
+    }
+
+# Create a List
+pipelines = [pipeline_lr, pipeline_svm_lin, pipeline_svm_sig, pipeline_knn, pipeline_dt, pipeline_rf]
+
+# Fit the pipeline
+for p in pipelines:
+    pipe.fit(trainX, trainY)
+
+# Evaluate the pipeline
+l = []
+for i, val in enumerate(pipelines):
+    l.append(accuracy_score(testY, val.predict(testX)))
+    
+result_df = pd.DataFrame(list(pipeline_dict.items()),columns = ['Idx','Estimator'])
+
+result_df['Test_Accuracy'] = l
+
+b_model = result_df.sort_values(by='Test_Accuracy', ascending=False)
+
+print(b_model)
+```
+
+### Pipeline with With PCA
+
+Pipeline example with Principal Component Analysis (PCA)
+
+
+### Joblib
+
+[Lightweight Pipelining In Python using Joblib](https://towardsdatascience.com/lightweight-pipelining-in-python-1c7a874794f4)
+
+Joblib is an open-source Python library that helps in saving pipelines to a file which can be used later.
+
+### Pandas pipe
+
+The pandas `pipe` function offers a structured and organized way for combining several functions into a single operation.
+
+As the number of steps increase, the syntax becomes cleaner with the pipe function compared to executing functions separately.
+
+[A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
 
 
@@ -137,19 +362,32 @@ Before normalizing it was almost L-shaped but after normalizing it looks more li
 ### Glossary
 
 [ML Cheatsheet](https://github.com/shuaiw/ml-cheatsheet)
+
 [ML Glossary](https://ml-cheatsheet.readthedocs.io/en/latest/index.html)
+
 [Analytics Vidhya Glossary of Machine Learning Terms](https://www.analyticsvidhya.com/glossary-of-common-statistics-and-machine-learning-terms/#five)
 
 
 ### Data Preprocessing
 
 [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
+
 [How to Select a Data Splitting Method](https://towardsdatascience.com/how-to-select-a-data-splitting-method-4cf6bc6991da)
 
+[Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
+
+
+### Categorical Data
+
+[Smarter Ways to Encode Categorical Data for Machine Learning](https://towardsdatascience.com/smarter-ways-to-encode-categorical-data-for-machine-learning-part-1-of-3-6dca2f71b159)
+
+[Stop One-Hot Encoding Your Categorical Variables](https://towardsdatascience.com/stop-one-hot-encoding-your-categorical-variables-bbb0fba89809)
 
 ### Exploratory Data Analysis (EDA)
 
 [Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
+
 [11 Essential Code Blocks for Complete EDA (Exploratory Data Analysis)-Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
+
 [Python Cheat Sheet for Data Science](https://chipnetics.com/tutorials/python-cheat-sheet-for-data-science/)
 
