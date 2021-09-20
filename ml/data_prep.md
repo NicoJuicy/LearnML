@@ -1,6 +1,7 @@
 # Data Preparation
 
 [Tour of Data Preparation Techniques for Machine Learning](https://machinelearningmastery.com/data-preparation-techniques-for-machine-learning/)
+
 [Feature Engineering](https://gist.github.com/codecypher/dd4c7e8794982570288c2cfe95665c9c)
 
 <!-- MarkdownTOC -->
@@ -34,6 +35,17 @@
 <!-- /MarkdownTOC -->
 
 
+## Exploratory Data Analysis (EDA)
+
+[11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
+
+### Summary Statistics
+
+[Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
+
+It is important to know how to extract information from descriptive statistics. 
+
+
 ## Data Preparation
 
 ### Import data
@@ -41,13 +53,17 @@
 [Read datasets with URL](https://towardsdatascience.com/dont-download-read-datasets-with-url-in-python-8245a5eaa919)
 
 - Split data along delimiters (CSV)
+
 - Extract parts from data entries (Do you only need a part of a certain attribute?)
+
 - Remove leading and trailing spaces
 
 ### Format adjustments
 
 - Standardize types (decimal separators, date formats, or measurement units)
+
 - Replace unrecognizable or corrupted characters
+
 - Check for truncated entries (data entries are cut off at a certain position)
 
 ### Correct inconsistencies
@@ -64,7 +80,7 @@
 
 ### Handle errors in variables
 
-- Missing Data:  can happen due to forgotten to store, inappropriate data handling, inefficient data entry at the ground level, etc. 
+- Missing Data: can happen due to forgotten to store, inappropriate data handling, inefficient data entry at the ground level, etc. 
 
 - High Cardinality: the number of different labels in categorical data is very high, which causes problems to model to learn.
 
@@ -78,10 +94,15 @@
 Data cleaning refers to identifying and correcting errors in the dataset that may negatively impact a predictive model.
 
 - Identify Columns That Contain a Single Value
+
 - Delete Columns That Contain a Single Value
+
 - Consider Columns That Have Very Few Values
+
 - Remove Columns That Have A Low Variance
+
 - Identify Rows that Contain Duplicate Data
+
 - Delete Rows that Contain Duplicate Data
 
 1. Handling missing values
@@ -123,7 +144,9 @@ You may want to experiment with applying multiple data transforms to a time seri
 It is quite common to;
 
 - apply a power transform to remove an increasing variance
+
 - apply seasonal differencing to remove seasonality
+
 - apply one-step differencing to remove a trend.
 
 The order that the transform operations are applied is important.
@@ -387,7 +410,7 @@ As the number of steps increase, the syntax becomes cleaner with the pipe functi
 
 [Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
 
-[11 Essential Code Blocks for Complete EDA (Exploratory Data Analysis)-Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
+[11 Essential Code Blocks for Complete EDA (Exploratory Data Analysis) Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
 
 [Python Cheat Sheet for Data Science](https://chipnetics.com/tutorials/python-cheat-sheet-for-data-science/)
 
