@@ -38,23 +38,15 @@ Orange is a data mining and visualization toolbox for novice and expert alike
 
 A great tool for exploratory data analysis (EDA) and to evaluate many models as you narrow the choices for particular dataset.
 
+### [FLAML](https://github.com/microsoft/FLAML)
 
-### [KerasTuner](https://keras.io/keras_tuner/)
+FLAML is a fast, lightweight Python library that finds accurate machine learning models automatically which frees users from selecting learners and hyperparameters for each learner.
 
-KerasTuner is an easy-to-use, scalable hyperparameter optimization framework that solves the pain points of hyperparameter search. 
+The simple and lightweight design makes it easy to extend such as adding customized learners or metrics. 
 
-The process of selecting the right set of hyperparameters for your machine learning (ML) application is called _hyperparameter tuning_ or _hypertuning_.
+FLAML is powered by a new, cost-effective hyperparameter optimization and learner selection method invented by Microsoft Research. 
 
-Hyperparameters are the variables that govern the training process and the topology of an ML model. These variables remain constant over the training process and directly impact the performance of your ML program. Hyperparameters are of two types:
-
-- **Model hyperparameters** which influence model selection such as the number and width of hidden layers
-
-- **Algorithm hyperparameters** which influence the speed and quality of the learning algorithm such as the learning rate for Stochastic Gradient Descent (SGD) and the number of nearest neighbors for a k Nearest Neighbors (KNN) classifier
-
-[Introduction to the Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner)
-
-[Hyperparameter Tuning with KerasTuner and TensorFlow](https://towardsdatascience.com/hyperparameter-tuning-with-kerastuner-and-tensorflow-c4a4d690b31a)
-
+FLAML leverages the structure of the search space to choose a search order optimized for both cost and error.
 
 
 ### [PyCaret](https://github.com/pycaret/pycaret)
@@ -113,7 +105,8 @@ auto-sklearn is an automated machine learning toolkit and a drop-in replacement 
 
 AutoGluon automates machine learning tasks enabling you to easily achieve strong predictive performance in your applications. With just a few lines of code, you can train and deploy high-accuracy machine learning and deep learning models on text, image, and tabular data.
 
-## [AutoKeras](https://github.com/keras-team/autokeras)
+
+### [AutoKeras](https://github.com/keras-team/autokeras)
 
 AutoKeras is an AutoML system based on Keras developed by DATA Lab at Texas A&M University. 
 
@@ -132,6 +125,7 @@ Auto_ViML is every Data Scientist's model assistant that:
 4. Produces model performance results as graphs automatically
 5. Handles text, date-time, structs (lists, dictionaries), numeric, boolean, factor and categorical variables all in one model using one straight process.
 6. Allows you to use the featuretools library to do Feature Engineering.
+
 
 ### [AutoViz](https://github.com/AutoViML/AutoViz)
 
@@ -176,7 +170,6 @@ OpenCV supports a wide variety of programming languages like Python, C++, Java, 
 OpenCV can process images and videos to identify objects, faces, or eve handwriting.
 
 
-
 ## Time Series Libraries
 
 ### [statsmodels](https://github.com/statsmodels/statsmodels/)
@@ -196,6 +189,13 @@ darts is a Python library for easy manipulation and forecasting of time series. 
 Forecasting Model Selection for Multiple Time Series
 
 AutoML for forecasting with open-source time series implementations.
+
+### [TsFresh](https://github.com/blue-yonder/tsfresh)
+
+tsfresh is a python package that calculates a huge number of time series characteristics or features automatically. 
+
+In addition, the package includes methods for assessing the explanatory power and significance of such traits in regression and classification tasks.
+
 
 
 
@@ -297,12 +297,6 @@ In a fraction of the time it would take to do it manually, you can load in panda
 AutoFeat helps to perform Linear Prediction Models with Automated Feature Engineering and Selection. 
 
 AutoFeat allows you to select the units of the input variables in order to avoid the construction of physically nonsensical features.
-
-### TsFresh
-
-tsfresh is a python package that calculates a huge number of time series characteristics or features automatically. 
-
-In addition, the package includes methods for assessing the explanatory power and significance of such traits in regression and classification tasks.
 
 
 
