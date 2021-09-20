@@ -158,12 +158,16 @@ There is a 95% likelihood that the range 0.741 to 0.757 covers the true statisti
 ## References
 
 [Evaluation Metrics for Machine Learning](https://towardsdatascience.com/evaluation-metrics-for-machine-learning-2167fca1a291?gi=2512e2b9b1c0)
-[Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
-[Error Metrics used in Time Series Forecasting Modeling](https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca)
-[Tutorial: Understanding Regression Error Metrics in Python](https://www.dataquest.io/blog/understanding-regression-error-metrics/)
-[An Overview of Performance Evaluation Metrics of Machine Learning(Classification) Algorithms](https://towardsdatascience.com/an-overview-of-performance-evaluation-metrics-of-machine-learning-classification-algorithms-7a95783a762f?gi=884943f12b27)
 
-[Importance of Loss functions in Deep Learning and Python Implementation](https://towardsdatascience.com/importance-of-loss-functions-in-deep-learning-and-python-implementation-4307bfa92810?gi=6295a1b1892)
+[Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
+
+[Error Metrics used in Time Series Forecasting Modeling](https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca)
+
+[Tutorial: Understanding Regression Error Metrics in Python](https://www.dataquest.io/blog/understanding-regression-error-metrics/)
+
+[An Overview of Performance Evaluation Metrics of Machine Learning (Classification) Algorithms](https://towardsdatascience.com/an-overview-of-performance-evaluation-metrics-of-machine-learning-classification-algorithms-7a95783a762f?gi=884943f12b27)
+
+[Importance of Loss functions in Deep Learning](https://towardsdatascience.com/importance-of-loss-functions-in-deep-learning-and-python-implementation-4307bfa92810?gi=6295a1b1892)
 
 [PSI and CSI: Top 2 model monitoring metrics](https://towardsdatascience.com/psi-and-csi-top-2-model-monitoring-metrics-924a2540bed8?gi=7d4c901abece)
 
