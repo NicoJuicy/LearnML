@@ -29,6 +29,11 @@
     - What if I have a mixture of numeric and categorical data?
     - What if I have hundreds of categories?
     - What encoding technique is the best?
+- Feature Importance
+    - Dataset loading and preparation
+    - Method 1: Obtain importances from correlation coefficients
+    - Method 2: Obtain importances from a tree-based model
+    - Method 3: Obtain importances from PCA loading scores
 - References
     - Categorical Data
     - Dimensionality Reduction
@@ -541,6 +546,22 @@ You can use a one-hot encoding up to thousands and tens of thousands of categori
 This is impossible to answer. The best approach would be to test each technique on your dataset with your chosen model and discover what works best.
 
 
+----------
+
+
+## Feature Importance
+
+[3 Essential Ways to Calculate Feature Importance in Python](https://towardsdatascience.com/3-essential-ways-to-calculate-feature-importance-in-python-2f9149592155)
+
+### Dataset loading and preparation
+
+### Method 1: Obtain importances from correlation coefficients
+
+### Method 2: Obtain importances from a tree-based model
+
+### Method 3: Obtain importances from PCA loading scores
+
+
 
 ## References
 
@@ -562,7 +583,6 @@ This is impossible to answer. The best approach would be to test each technique 
 
 [Basic Feature Discovering for Machine Learning](https://medium.com/diko-hary-adhanto-portfolio/basic-feature-discovering-for-machine-learning-cbd47bf4b651)
 
-[3 Essential Ways to Calculate Feature Importance in Python](https://towardsdatascience.com/3-essential-ways-to-calculate-feature-importance-in-python-2f9149592155)
 
 ### Scaling
 

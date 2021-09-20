@@ -60,7 +60,7 @@ Other problems can also point to algorithms and data transformations that could 
 
 Think deeply about why you want or need the problem solved.
 
-### Step 1-3: How would I solve the problem? 
+### Step 1-3: How would I solve the problem?
 
 Describe how the problem would be solved manually to flush domain knowledge.
 
@@ -128,12 +128,11 @@ Work through a stepped process from extreme value analysis, proximity methods, a
 
 An alternative strategy is to move to models that are robust to outliers. 
 
-There are robust forms of regression that minimize the median least square errors rather than mean (so-called robust regression), but are more computationally intensive. 
+There are robust forms of regression that minimize the median least square errors rather than mean (so-called robust regression) but are more computationally intensive. 
 
 There are also methods like decision trees that are robust to outliers.
 
 You could spot check some methods that are robust to outliers. If there are significant model accuracy benefits then there may be an opportunity to model and filter out outliers from your training data.
-
 
 
 - Improve Model Accuracy with Data Pre-Processing
@@ -141,8 +140,6 @@ You could spot check some methods that are robust to outliers. If there are sign
 - An Introduction to Feature Selection
 - Tactics to Combat Imbalanced Classes in Your Machine Learning Dataset
 - Data Leakage in Machine Learning
-
-
 
 
 ## Step 3: Spot-check algorithms.
@@ -153,13 +150,11 @@ You could spot check some methods that are robust to outliers. If there are sign
 - A Data-Driven Approach to Choosing Machine Learning Algorithms
 
 
-
 ## Step 4: Improve results.
 
 - How to Improve Machine Learning Results
 - Machine Learning Performance Improvement Cheat Sheet
 - How To Improve Deep Learning Performance
-
 
 
 ## Step 5: Present results.
