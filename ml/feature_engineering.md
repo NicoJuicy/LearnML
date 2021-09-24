@@ -81,7 +81,7 @@ Feature engineering consists of various processes:
 
 ### 1. Imputation (missing values)
 
-  Also see **Data Preparation**
+Also see **Data Preparation**
 
 - Numerical Imputation
 - Categorical Imputation
