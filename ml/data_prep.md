@@ -147,7 +147,7 @@ Check for null values
                 
     for column in df.columns:
         if column in num_cols:
-            df[column] = df[column].astype(float)
+            df[column] = pd.to_numeric(df[column])
 ```
 
 
