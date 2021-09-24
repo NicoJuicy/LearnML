@@ -3,11 +3,11 @@
 <!-- MarkdownTOC -->
 
 - Feature Engineering Techniques
-    - 1. Imputation \(missing values\)
-    - 2. Handling Outliers
-    - 3. Log Transform
-    - 4. One-hot encoding
-    - 5. Scaling
+    1. Imputation \(missing values\)
+    2. Handling Outliers
+    3. Log Transform
+    4. One-hot encoding
+    5. Scaling
 - Normalization Techniques
     - Using maximum absolute scaling
     - Using min-max scaling
