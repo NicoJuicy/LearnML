@@ -11,7 +11,13 @@ Check the summary statistics and create histograms for the numeric variables of 
 
     df[numeric_variables].describe().apply(lambda x:round(x,2)).T #apply describe method
 
-    histograms = df[numeric_variables].hist(bins =10, xlabelsize=10, ylabelsize=10, grid=False, sharey= True, figsize = (15,15)) #create the histograms
+    # create the histograms
+    histograms = df[numeric_variables].hist(bins =10, 
+                                            xlabelsize=10, 
+                                            ylabelsize=10, 
+                                            grid=False, 
+                                            sharey= True, 
+                                            figsize = (15,15)) 
 ```
 
 Study the relationship between satisfaction and class category.
