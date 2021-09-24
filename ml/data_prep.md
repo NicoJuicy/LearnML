@@ -50,19 +50,19 @@ It is important to know how to extract information from descriptive statistics.
 
 ```py
     # inspect the data 
-    Airlines.head()
+    df.head()
 
     # get the data info
-    Airlines.info()
+    df.info()
 
     # check the shape of the data-frame
-    Airlines.shape
+    df.shape
 
     # check for missing values
-    Airlines.isna()
+    df.isna()
 
     # check for duplicate values
-    Airlines.duplicated() 
+    df.duplicated() 
 ```
 
 
