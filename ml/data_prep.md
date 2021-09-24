@@ -12,6 +12,11 @@
     - Correct inconsistencies
     - Handle errors in variables
 - Data Cleaning
+    - Handling missing values
+    - Check the data types
+    - Scaling and normalization
+    - Parsing dates
+    - Inconsistent Data Entry
     - Add Dummy Variables
     - Highly Imbalanced Data
     - Order of Data Transforms for Time Series
