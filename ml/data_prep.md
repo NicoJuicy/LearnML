@@ -158,6 +158,37 @@ See "Normalization Techniques" in Feature Engineering.
 
 ### Parsing dates
 
+Method 1: Parse date columns using `read_csv`
+
+```py
+    def parser(x):
+        return dt.datetime.strptime(x, "%Y-%m-%d")
+
+    def load_data(name):
+        df_data = pd.read_csv(
+            file_path,
+            header=0,
+            index_col=0,
+            parse_dates=["day"],
+            date_parser=parser    # optional
+        )
+        
+        return df_data
+```
+
+Method 2: Parse dates using `to_datetime`
+
+```py
+    def load_data(name):
+        df_data = pd.read_csv(name, header=3, index_col=0)
+
+        # Replace index with DateTime
+        df_data.index = pd.to_datetime(df_data.index)
+        
+        return df_data
+```
+
+
 ### Inconsistent Data Entry
 
 
