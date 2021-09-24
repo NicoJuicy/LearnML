@@ -4,6 +4,10 @@
 
 [Feature Engineering](https://gist.github.com/codecypher/dd4c7e8794982570288c2cfe95665c9c)
 
+[Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#)
+
+[Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
+
 <!-- MarkdownTOC -->
 
 - Data Preparation
