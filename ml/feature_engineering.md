@@ -170,7 +170,7 @@ We can use `MinMaxScaler` class from sklearn.
     scaled = scaler.fit_transform(data)
 ```
 
-We can apply the min-max scaling in Pandas using the `.min()` and `.max()` methods.
+We can apply the min-max scaling in Pandas using the `.min()` and `.max()` methods which preserves the column headers/names.
 
 ```py
     # copy the data
@@ -198,7 +198,7 @@ We can apply standardization using `StandardScaler` class from sklearn.
     scaled = scaler.fit_transform(data)
 ```
 
-We can apply the standardization in Pandas using the `.min()` and `.max()` methods.
+We can apply the standardization in Pandas using the `.min()` and `.max()` methods which preserves the column headers/names.
 
 ```py
     # copy the data
