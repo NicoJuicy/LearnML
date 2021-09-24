@@ -266,118 +266,118 @@ Pipelines also help in parallelization which means different jobs can be run in 
 ### Best Scaler
 
 ```py
-# Create a pipeline
-pipeline_lr_mm = Pipeline([
-    ('mms', MinMaxScaler()),
-    ('lr', LogisticRegression())
-    ])
-pipeline_lr_r = Pipeline([
-    ('rs', RobustScaler()),
-    ('lr', LogisticRegression())
-    ])
-pipeline_lr_w = Pipeline([
-    ('lr', LogisticRegression())
-    ])
-pipeline_lr_s = Pipeline([
-    ('ss', StandardScaler()),
-    ('lr', LogisticRegression())
-    ])
-    
-# Create a pipeline dictionary
-pipeline_dict = {
-0: 'Logistic Regression without scaler',
-    1: 'Logistic Regression with MinMaxScaler',
-    2: 'Logistic Regression with RobustScaler',
-    3: 'Logistic Regression with StandardScaler',
-}
+    # Create a pipeline
+    pipeline_lr_mm = Pipeline([
+        ('mms', MinMaxScaler()),
+        ('lr', LogisticRegression())
+        ])
+    pipeline_lr_r = Pipeline([
+        ('rs', RobustScaler()),
+        ('lr', LogisticRegression())
+        ])
+    pipeline_lr_w = Pipeline([
+        ('lr', LogisticRegression())
+        ])
+    pipeline_lr_s = Pipeline([
+        ('ss', StandardScaler()),
+        ('lr', LogisticRegression())
+        ])
 
-# Create a pipeline list
-pipelines = [pipeline_lr_w, pipeline_lr_mm, 
-    pipeline_lr_r, 
-    pipeline_lr_s]
+    # Create a pipeline dictionary
+    pipeline_dict = {
+    0: 'Logistic Regression without scaler',
+        1: 'Logistic Regression with MinMaxScaler',
+        2: 'Logistic Regression with RobustScaler',
+        3: 'Logistic Regression with StandardScaler',
+    }
 
-# Fit the pipeline
-for p in pipelines:
-    p.fit(trainX, trainY)
+    # Create a pipeline list
+    pipelines = [pipeline_lr_w, pipeline_lr_mm, 
+        pipeline_lr_r, 
+        pipeline_lr_s]
 
-# Evaluate the pipeline
-for i, val in enumerate(pipelines):
-print('%s pipeline Test Accuracy Score: %.4f' % (pipeline_dict[i], accuracy_score(testY, val.predict(testX))))
+    # Fit the pipeline
+    for p in pipelines:
+        p.fit(trainX, trainY)
+
+    # Evaluate the pipeline
+    for i, val in enumerate(pipelines):
+    print('%s pipeline Test Accuracy Score: %.4f' % (pipeline_dict[i], accuracy_score(testY, val.predict(testX))))
 ```
 
 Convert it to dataFrame and show the best model:
 
 ```py
-l = []
-for i, val in enumerate(pipelines):
-    l.append(accuracy_score(testY, val.predict(testX)))
-result_df = pd.DataFrame(list(pipeline_dict.items()),columns = ['Index','Estimator'])
+    l = []
+    for i, val in enumerate(pipelines):
+        l.append(accuracy_score(testY, val.predict(testX)))
+    result_df = pd.DataFrame(list(pipeline_dict.items()),columns = ['Index','Estimator'])
 
-result_df['Test_Accuracy'] = l
+    result_df['Test_Accuracy'] = l
 
-best_model_df = result_df.sort_values(by='Test_Accuracy', ascending=False)
-print(best_model_df)
+    best_model_df = result_df.sort_values(by='Test_Accuracy', ascending=False)
+    print(best_model_df)
 ```
 
 ### Best Estimator
 
 ```py
-# Create a pipeline
-pipeline_knn = Pipeline([
-    ('ss1', StandardScaler()),
-    ('knn', KNeighborsClassifier(n_neighbors=4))
-    ])
-pipeline_dt = Pipeline([
-    ('ss2', StandardScaler()),
-    ('dt', DecisionTreeClassifier())
-    ])
-pipeline_rf = Pipeline([
-    ('ss3', StandardScaler()),
-    ('rf', RandomForestClassifier(n_estimators=80))
-    ])
-pipeline_lr = Pipeline([
-    ('ss4', StandardScaler()),
-    ('lr', LogisticRegression())
-    ])
-pipeline_svm_lin = Pipeline([
-    ('ss5', StandardScaler()),
-    ('svm_lin', SVC(kernel='linear'))
-    ])
-pipeline_svm_sig = Pipeline([
-    ('ss6', StandardScaler()),
-    ('svm_sig', SVC(kernel='sigmoid'))
-    ])
-    
-# Create a pipeline dictionary
-pipeline_dict = {
-    0: 'knn',
-    1: 'dt',
-    2: 'rf',
-    3: 'lr',
-    4: 'svm_lin',
-    5: 'svm_sig',
-    
-    }
+    # Create a pipeline
+    pipeline_knn = Pipeline([
+        ('ss1', StandardScaler()),
+        ('knn', KNeighborsClassifier(n_neighbors=4))
+        ])
+    pipeline_dt = Pipeline([
+        ('ss2', StandardScaler()),
+        ('dt', DecisionTreeClassifier())
+        ])
+    pipeline_rf = Pipeline([
+        ('ss3', StandardScaler()),
+        ('rf', RandomForestClassifier(n_estimators=80))
+        ])
+    pipeline_lr = Pipeline([
+        ('ss4', StandardScaler()),
+        ('lr', LogisticRegression())
+        ])
+    pipeline_svm_lin = Pipeline([
+        ('ss5', StandardScaler()),
+        ('svm_lin', SVC(kernel='linear'))
+        ])
+    pipeline_svm_sig = Pipeline([
+        ('ss6', StandardScaler()),
+        ('svm_sig', SVC(kernel='sigmoid'))
+        ])
 
-# Create a List
-pipelines = [pipeline_lr, pipeline_svm_lin, pipeline_svm_sig, pipeline_knn, pipeline_dt, pipeline_rf]
+    # Create a pipeline dictionary
+    pipeline_dict = {
+        0: 'knn',
+        1: 'dt',
+        2: 'rf',
+        3: 'lr',
+        4: 'svm_lin',
+        5: 'svm_sig',
 
-# Fit the pipeline
-for p in pipelines:
-    pipe.fit(trainX, trainY)
+        }
 
-# Evaluate the pipeline
-l = []
-for i, val in enumerate(pipelines):
-    l.append(accuracy_score(testY, val.predict(testX)))
-    
-result_df = pd.DataFrame(list(pipeline_dict.items()),columns = ['Idx','Estimator'])
+    # Create a List
+    pipelines = [pipeline_lr, pipeline_svm_lin, pipeline_svm_sig, pipeline_knn, pipeline_dt, pipeline_rf]
 
-result_df['Test_Accuracy'] = l
+    # Fit the pipeline
+    for p in pipelines:
+        pipe.fit(trainX, trainY)
 
-b_model = result_df.sort_values(by='Test_Accuracy', ascending=False)
+    # Evaluate the pipeline
+    l = []
+    for i, val in enumerate(pipelines):
+        l.append(accuracy_score(testY, val.predict(testX)))
 
-print(b_model)
+    result_df = pd.DataFrame(list(pipeline_dict.items()),columns = ['Idx','Estimator'])
+
+    result_df['Test_Accuracy'] = l
+
+    b_model = result_df.sort_values(by='Test_Accuracy', ascending=False)
+
+    print(b_model)
 ```
 
 ### Pipeline with With PCA
