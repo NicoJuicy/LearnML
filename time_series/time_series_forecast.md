@@ -1,4 +1,6 @@
-# 5-Step Forecasting Task
+# Time Series Forecasting
+
+## 5-Step Forecasting Task
 
 The 5 basic steps in a forecasting task are summarized by Hyndman and Athana­sopou­los in their book Forecasting: principles and practice. These steps are:
 
@@ -30,7 +32,7 @@ The focus of the process is on understanding the problem and fitting a good mode
 
 
 
-# Time Series Forecasting
+## Time Series Forecasting Explained
 
 [Time Series From Scratch](https://towardsdatascience.com/time-series-analysis-from-scratch-seeing-the-big-picture-2d0f9d837329)
 

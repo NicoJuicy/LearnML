@@ -1,4 +1,4 @@
-# Computer Vision Notes
+# Computer Vision
 
 [A Gentle Introduction to Computer Vision](https://machinelearningmastery.com/what-is-computer-vision/)
 

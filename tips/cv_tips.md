@@ -1,4 +1,7 @@
-# Data Augmentation
+# Computer Visiok Tips
+
+
+## Data Augmentation
 
 [Improving Classification accuracy on MNIST using Data Augmentation](https://towardsdatascience.com/improving-accuracy-on-mnist-using-data-augmentation-b5c38eb5a903?gi=916228e35c66)
 

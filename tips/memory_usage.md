@@ -1,4 +1,6 @@
-# How to Profile Memory Usage?
+# Memory Usage Tips
+
+## How to Profile Memory Usage?
 
 Here are some resources to evaluate Python memory usage.
 
