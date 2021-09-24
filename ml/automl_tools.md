@@ -246,6 +246,40 @@ ONNX achieves this goal by specific a common set of operators, basically, the ma
 ONNX is backed by pretty much all the big AI players and surely will have a huge impact on the future of ML development. Apart from Google all of the tech giants are partners in this project.
 
 
+### [wandb](https://docs.wandb.ai/)
+
+Weights and biases (W&B/wandb) lets you track, compare, visualize and optimize machine learning experiments with just a few lines of code. 
+
+wandb also lets you track your datasets. 
+
+Use W&B's lightweight, interoperable tools to quickly track experiments, version and iterate on datasets, evaluate model performance, reproduce models, visualize results and spot regressions, and share findings with colleagues. 
+
+### [MLFlow](https://github.com/mlflow/mlflow)
+
+[Tutorial](https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html)
+
+Similar to W&B, MLFlow provides functionality for logging code, models and datasets on which your model has been trained. 
+
+MLflow is a platform to streamline machine learning development, including tracking experiments, packaging code into reproducible runs, and sharing and deploying models. 
+
+MLflow offers a set of lightweight APIs that can be used with any existing machine learning application or library (TensorFlow, PyTorch, XGBoost, etc), wherever you currently run ML code (such as notebooks, standalone applications, or the cloud). 
+
+
+### [Screen](https://linuxize.com/post/how-to-use-linux-screen/)
+
+Screen is a GNU linux utility that lets you launch and use multiple shell sessions from a single ssh session. The process started with screen can be detached from session and then reattached at a later time. So your experiments can be run in the background, without the need to worry about session closing, or terminal crashing.
+
+### Lucidchart
+
+Lucidchart is a diagraning too that also has shared space for collaboration and the ability to make notes next to diagrams. 
+
+### Streamlit
+
+Streamlit turns data scripts into shareable web apps in minutes. 
+
+Streamlit is one of the fastest way to build and share data apps. 
+
+All in Python. All for free. No front‑end experience required.
 
 ## Deep Learning Tools
 
