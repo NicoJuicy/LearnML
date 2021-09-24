@@ -206,8 +206,7 @@ We can apply the standardization in Pandas using the `.min()` and `.max()` metho
       
     # apply normalization techniques from scratch
     for column in df_z_scaled.columns:
-        df_z_scaled[column] = (df_z_scaled[column] -
-                               df_z_scaled[column].mean()) / df_z_scaled[column].std()    
+        df_z_scaled[column] = (df_z_scaled[column] - df_z_scaled[column].mean()) / df_z_scaled[column].std()    
 ```
 
 
