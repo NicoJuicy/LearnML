@@ -127,10 +127,15 @@ Data cleaning refers to identifying and correcting errors in the dataset that ma
 
 ### Handling missing values
 
-Check for null values
+Check for null values. We can drop or fill the `NaN` values.
 
 ```py
-    df.isnull().sum()
+    df.isnull().sum()  # if count > 0 then some values are NaN
+
+    # Drop the NaN
+    df['col_name'] = df['col_name'].dropna(axis=0, how="any")
+
+     df['col_name'].isnull().sum() # check NaN again
 ```
 
 ### Check the data types
