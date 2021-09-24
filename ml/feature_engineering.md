@@ -34,6 +34,7 @@
     - Method 1: Obtain importances from correlation coefficients
     - Method 2: Obtain importances from a tree-based model
     - Method 3: Obtain importances from PCA loading scores
+- When standardization or normalization should be used
 - References
     - Categorical Data
     - Dimensionality Reduction
@@ -45,7 +46,8 @@
 
 
 [What is Feature Engineering?](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10?source=rss----7f60cf5620c9---4)
-[Data Preparation: Tips and Tricks](https://gist.github.com/codecypher/b8c85752acf287de28f816d9b9d75d08)
+
+[Data Preparation](https://gist.github.com/codecypher/b8c85752acf287de28f816d9b9d75d08)
 
 Feature engineering techniques for machine learning are a fundamental topic in machine learning, yet one that is often overlooked or deceptively simple.
 
@@ -72,6 +74,25 @@ Feature engineering consists of various processes:
 - **Benchmark:** A Benchmark Model is the most user-friendly, dependable, transparent, and interpretable model against which you can measure your own. 
 
   It is a good idea to run test datasets to see if your new machine learning model outperforms a recognised benchmark. These benchmarks are often used as measures for comparing the performance between different machine learning models
+
+----------
+
+
+Dimensionality reduction refers to the process of reducing the number of attributes in a dataset while keeping as much of the variation in the original dataset as possible. 
+
+Dimensionality reduction is a data preprocessing step which means that it is done before training the model.
+
+There are two main methods for reducing dimensionality:
+
+- In **feature selection**, we only keep the most important features in the dataset and remove the redundant features. There are no transformations applied to the set of features.
+
+  Thus, feature selection selects a minimal subset of the variables that contain all predictive information necessary to produce a predictive model for the target variable (outcome).
+
+  Examples: Backward elimination, Forward selection, and Random forests. 
+
+- In **feature extraction**, we find a combination of new features and an appropriate transformation is applied to the set of features. The new set of features contains different values rather than the original values. 
+
+Feature extraction can be further divided into _linear_ methods and _non-linear_ methods.
 
 
 ----------
