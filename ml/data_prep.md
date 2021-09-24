@@ -191,6 +191,8 @@ Method 2: Parse dates using `to_datetime`
 
 ### Inconsistent Data Entry
 
+TODO: This will most likely vary 
+
 
 ### Add Dummy Variables
 
