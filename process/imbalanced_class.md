@@ -1,4 +1,4 @@
-# Step-By-Step Framework for Imbalanced Classification Projects
+# Imbalanced Classification Framework
 
 [Step-By-Step Framework for Imbalanced Classification Projects](https://machinelearningmastery.com/framework-for-imbalanced-classification-projects/)
 
