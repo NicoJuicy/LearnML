@@ -1,4 +1,4 @@
-# GAN Tips
+# Generative Adversarial Network (GAN)
 
 [Getting Started with Generative Adversarial Networks (GANs)](https://machinelearningmastery.com/start-here/#gans)
 
