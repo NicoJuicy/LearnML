@@ -258,3 +258,5 @@ This may also be identified by a validation loss that is lower than the training
 
 [Why is my validation loss lower than my training loss?](https://www.pyimagesearch.com/2019/10/14/why-is-my-validation-loss-lower-than-my-training-loss/)
 
+[How to Mitigate Overfitting with K-Fold Cross-Validation using sklearn](https://towardsdatascience.com/how-to-mitigate-overfitting-with-k-fold-cross-validation-518947ed7428)
+

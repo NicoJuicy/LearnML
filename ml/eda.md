@@ -1,4 +1,24 @@
-# Exploratory Data Analysis
+# Exploratory Data Analysis (EDA)
+
+## Exploratory Data Analysis Example
+
+[How to build a Machine Learning (ML) based Predictive System](https://towardsdatascience.com/machine-learning-ml-based-predictive-system-to-predict-the-satisfaction-level-of-airlines-f0780dbdbc87?source=rss----7f60cf5620c9---4)
+
+Check the summary statistics and create histograms for the numeric variables of the dataset as presented in the code below.
+
+```py
+numeric_variables = list(Airlines.select_dtypes(include=['int64', 'float64'])) #select the numeric variables
+
+Airlines[numeric_variables].describe().apply(lambda x:round(x,2)).T #apply describe method
+
+histograms = Airlines[numeric_variables].hist(bins =10, xlabelsize=10, ylabelsize=10, grid=False, sharey= True, figsize = (15,15)) #create the histograms
+```
+
+Study the relationship between satisfaction and class category.
+
+Investigate the relationship between total delay time, overall rating, and satisfaction. 
+
+Check if age is affecting the satisfaction of customers. 
 
 ## Summary Statistics
 
@@ -67,14 +87,13 @@ So far we have investigated descriptive statistics for numeric variables. Python
 ```
 
 
-
 ## Essential Code Blocks
 
 [11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
 
 Exploratory Data Analysis (EDA) is one of the first steps of the data science process which involves learning as much as possible about the data without spending too much time. 
 
-We get an instinctive as well as a high-level practical understanding of the data including a general idea of the structure of the data set, some cleaning ideas, the target variable and possible modeling techniques.
+We can get an instinctive as well as a high-level practical understanding of the data including a general idea of the structure of the data set, some cleaning ideas, the target variable and possible modeling techniques.
 
 ## Basic Dataset Exploration
 
@@ -455,5 +474,9 @@ This might not mean much now, so let us plot a heatmap to visualize the correlat
 
 What to look out for:
 
-- Strongly correlated features; either dark red (positive) or dark blue(negative).
+- Strongly correlated features -- either dark red (positive) or dark blue(negative).
+
 - Target variable: if it has strong positive or negative relationships with other features.
+
+
+

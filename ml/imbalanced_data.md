@@ -198,6 +198,50 @@ The majority class classifier achieves better accuracy than other naive classifi
 Naive classifier strategies can be used on predictive modeling projects via the `DummyClassifier` class in the scikit-learn library.
 
 
+
+## [How To Deal With Imbalanced Classification Without Rebalancing the Data](https://www.kdnuggets.com/2021/09/imbalanced-classification-without-re-balancing-data.html)
+
+When building a ML classification model with data having far more instances of one class than another, the initial default classifier is often unsatisfactory because it classifies almost every case as the majority class. 
+
+Many articles show you how you could use oversampling (SMOTE) or undersampling or simply class-based sample weighting to retrain the model on “rebalanced” data, but this is not always necessary. 
+
+Here we show how much you can do _without_ balancing the data or retraining the model.
+
+We do this by simply adjusting the the threshold for which we say “Class 1” when the model’s predicted probability of Class 1 is above it in two-class classification rather than naïvely using the default classification rule which chooses which ever class is predicted to be most probable (probability threshold of 0.5). 
+
+We will see how this gives us the flexibility to make any desired trade-off between false positive and false negative classifications while avoiding problems created by rebalancing the data.
+
+We will use the credit card fraud identification data set from Kaggle to illustrate. 
+
+- Each row of the data set represents a credit card transaction, with the target variable Class==0 indicating a legitimate transaction and Class==1 indicating that the transaction turned out to be a fraud. 
+
+- There are 284,807 transactions, of which only 492 (0.173%) are frauds — very imbalanced.
+
+We will use a gradient boosting classifier because these often give good results. 
+
+Specifically Scikit-Learn’s new `HistGradientBoostingClassifier` which is much faster than the original `GradientBoostingClassifier` when the data set is relatively large like this one.
+
+### Reasons not to balance your imbalanced data
+
+One reason to avoid “balancing” your imbalanced training data is that such methods bias/distort the resulting trained model’s probability predictions so that these become miscalibrated (by systematically increasing the model’s predicted probabilities of the original minority class) and are therefore reduced to being merely relative ordinal discriminant scores or decision functions or confidence scores rather than being potentially accurate predicted class probabilities in the original (“imbalanced”) train and test set and future data that the classifier may make predictions on. 
+
+In the event that such rebalancing for training is truly needed (but numerically-accurate probability predictions are still desired), we would have to recalibrate the predicted probabilities to a data set having the original/imbalanced class proportions. 
+
+Alternatively, we could apply a correction to the predicted probabilities from the balanced model — see "Balancing is Unbalancing".
+
+Another problem with balancing your data by oversampling (as opposed to class-dependent instance weighting which does not have this problem) is that it biases naïve cross-validation, potentially leading to excessive overfitting that is not detected in the cross-validation. 
+
+In cross-validation, each time the data gets split into a “fold” subset, there may be instances in one fold that are duplicates of (or were generated from) instances in another fold. Thus, the folds are not truly independent as cross-validation assumes — there is data “bleed” or “leakage”. 
+
+For example see "Cross-Validation for Imbalanced Datasets" which describes how you could re-implement cross-validation correctly for this situation. 
+
+In scikit-learn, at least for the case of oversampling by instance duplication (not necessarily SMOTE), this can be worked around by using `model_selection.GroupKFold` for cross-validation which groups the instances according to a selected group identifier that has the same value for all duplicates of a given instance.
+
+### Conclusion
+
+Instead of naïvely or implicitly applying a default threshold of 0.5, or immediately re-training using re-balanced training data, we can try using the original model (trained on the original “imbalanced” data set) and simply plot the trade-off between false positives and false negatives to choose a threshold that may produce a desirable business result.
+
+
 ## References
 
 [Step-By-Step Framework for Imbalanced Classification Projects](https://machinelearningmastery.com/framework-for-imbalanced-classification-projects/)

@@ -39,11 +39,32 @@
 
 [11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
 
+Exploratory Data Analysis (EDA) is one of the first steps of the data science process which involves learning as much as possible about the data without spending too much time. 
+
 ### Summary Statistics
 
 [Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
 
 It is important to know how to extract information from descriptive statistics. 
+
+
+```py
+
+# inspect the data 
+Airlines.head()
+
+# get the data info
+Airlines.info()
+
+# check the shape of the data-frame
+Airlines.shape
+
+# check for missing values
+Airlines.isna()
+
+# check for duplicate values
+Airlines.duplicated() 
+```
 
 
 ## Data Preparation
@@ -379,6 +400,17 @@ As the number of steps increase, the syntax becomes cleaner with the pipe functi
 [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
 
+## Bootstrapping
+
+The goal of bootstrap is to create an estimate (sample mean x̄) for a population parameter (population mean θ) based on multiple data samples obtained from the original sample.
+
+Bootstrapping is done by repeatedly sampling (with replacement) the sample dataset to create many simulated samples. 
+
+Each simulated bootstrap sample is used to calculate an estimate of the parameter and the estimates are then combined to form a sampling distribution.
+
+The bootstrap sampling distribution then allows us to draw statistical inferences such as estimating the standard error of the parameter.
+
+
 
 ## References
 
@@ -393,6 +425,8 @@ As the number of steps increase, the syntax becomes cleaner with the pipe functi
 
 ### Data Preprocessing
 
+[Data Science Primer](https://elitedatascience.com/primer)
+
 [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
 [How to Select a Data Splitting Method](https://towardsdatascience.com/how-to-select-a-data-splitting-method-4cf6bc6991da)
@@ -405,6 +439,7 @@ As the number of steps increase, the syntax becomes cleaner with the pipe functi
 [Smarter Ways to Encode Categorical Data for Machine Learning](https://towardsdatascience.com/smarter-ways-to-encode-categorical-data-for-machine-learning-part-1-of-3-6dca2f71b159)
 
 [Stop One-Hot Encoding Your Categorical Variables](https://towardsdatascience.com/stop-one-hot-encoding-your-categorical-variables-bbb0fba89809)
+
 
 ### Exploratory Data Analysis (EDA)
 

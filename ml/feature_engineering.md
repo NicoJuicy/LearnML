@@ -562,6 +562,24 @@ This is impossible to answer. The best approach would be to test each technique 
 ### Method 3: Obtain importances from PCA loading scores
 
 
+## When standardization or normalization should be used
+
+Data-centric heuristics include the following:
+
+1. If your data has outliers, use standardization or robust scaling.
+
+2. If your data has a gaussian distribution, use standardization.
+
+3. If your data has a non-normal distribution, use normalization.
+
+Model-centric rules include these:
+
+1. If your modeling algorithm assumes (but does not require) a normal distribution of the residuals (i.e., regularized linear regression, regularized logistic regression, or linear discriminant analysis), use standardization.
+
+2. If your modeling algorithm makes no assumptions about the distribution of the data (i.e., k-nearest neighbors, support vector machines, and artificial neural networks), then use normalization.
+
+In each use case, the rule proposes a mathematical fit with either the data or the learning model. 
+
 
 ## References
 
@@ -583,7 +601,6 @@ This is impossible to answer. The best approach would be to test each technique 
 
 [Basic Feature Discovering for Machine Learning](https://medium.com/diko-hary-adhanto-portfolio/basic-feature-discovering-for-machine-learning-cbd47bf4b651)
 
-
 ### Scaling
 
 [How to Selectively Scale Numerical Input Variables for Machine Learning](https://machinelearningmastery.com/selectively-scale-numerical-input-variables-for-machine-learning/)
@@ -592,6 +609,7 @@ This is impossible to answer. The best approach would be to test each technique 
 
 [How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
 
+[The Mystery of Feature Scaling is Finally Solved](https://towardsdatascience.com/the-mystery-of-feature-scaling-is-finally-solved-29a7bb58efc2?source=rss----7f60cf5620c9---4)
 
 ### Time Series Data Preparation
 
@@ -600,4 +618,8 @@ This is impossible to answer. The best approach would be to test each technique 
 [4 Common Machine Learning Data Transforms for Time Series Forecasting](https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/)
 
 [How to Scale Data for Long Short-Term Memory Networks in Python](https://machinelearningmastery.com/how-to-scale-data-for-long-short-term-memory-networks-in-python/)
+
+	
+
+
 
