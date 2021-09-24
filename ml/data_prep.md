@@ -114,21 +114,42 @@ It is important to know how to extract information from descriptive statistics.
 Data cleaning refers to identifying and correcting errors in the dataset that may negatively impact a predictive model.
 
 - Identify Columns That Contain a Single Value
-
 - Delete Columns That Contain a Single Value
-
 - Consider Columns That Have Very Few Values
-
 - Remove Columns That Have A Low Variance
-
 - Identify Rows that Contain Duplicate Data
-
 - Delete Rows that Contain Duplicate Data
 
-1. Handling missing values
-2. Scaling and normalization
-3. Parsing dates
-4. Inconsistent Data Entry
+### Handling missing values
+
+Check for null values
+
+```py
+    df.isnull().sum()
+```
+
+### Check the data types
+
+```py
+  df.info()
+```
+
+```py
+    # List of numeric columns
+    num_cols = ['age', 'bp', 'sg', 'al', 'su',
+                'bgr', 'bu', 'sc', 'sod', 'pot',
+                'hemo', 'pcv', 'wbcc', 'rbcc']
+                
+    for column in df.columns:
+        if column in num_cols:
+            df[column] = df[column].astype(float)
+```
+
+### Scaling and normalization
+
+### Parsing dates
+
+### Inconsistent Data Entry
 
 ### Add Dummy Variables
 
