@@ -258,7 +258,7 @@ The process of scaling and normalization are very similar. In both cases, you ar
 - In scaling, you are changing the _range_ of your data. 
 - In normalization, you are changing the _shape_ of the distribution of your data.
 
-Also see **Feature Engineering**
+See **Feature Engineering** for code examples.
 
 ### Scaling
 
