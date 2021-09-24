@@ -7,11 +7,17 @@
 Check the summary statistics and create histograms for the numeric variables of the dataset as presented in the code below.
 
 ```py
-numeric_variables = list(Airlines.select_dtypes(include=['int64', 'float64'])) #select the numeric variables
+    numeric_variables = list(df.select_dtypes(include=['int64', 'float64'])) #select the numeric variables
 
-Airlines[numeric_variables].describe().apply(lambda x:round(x,2)).T #apply describe method
+    df[numeric_variables].describe().apply(lambda x:round(x,2)).T #apply describe method
 
-histograms = Airlines[numeric_variables].hist(bins =10, xlabelsize=10, ylabelsize=10, grid=False, sharey= True, figsize = (15,15)) #create the histograms
+    # create the histograms
+    histograms = df[numeric_variables].hist(bins =10, 
+                                            xlabelsize=10, 
+                                            ylabelsize=10, 
+                                            grid=False, 
+                                            sharey= True, 
+                                            figsize = (15,15)) 
 ```
 
 Study the relationship between satisfaction and class category.

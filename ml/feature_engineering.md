@@ -3,11 +3,11 @@
 <!-- MarkdownTOC -->
 
 - Feature Engineering Techniques
-    - 1. Imputation \(missing values\)
-    - 2. Handling Outliers
-    - 3. Log Transform
-    - 4. One-hot encoding
-    - 5. Scaling
+    - Imputation \(missing values\)
+    - Handling Outliers
+    - Log Transform
+    - One-hot encoding
+    - Scaling
 - Normalization Techniques
     - Using maximum absolute scaling
     - Using min-max scaling
@@ -102,8 +102,11 @@ Feature extraction can be further divided into _linear_ methods and _non-linear_
 
 ### 1. Imputation (missing values)
 
+Also see **Data Preparation**
+
 - Numerical Imputation
 - Categorical Imputation
+
 
 ### 2. Handling Outliers
 
@@ -170,7 +173,7 @@ We can apply the maximum absolute scaling in Pandas using the `.max()` and `.abs
     # copy the data
     df_max_scaled = df.copy()
       
-    # apply normalization techniques from scratch
+    # apply normalization from scratch
     for column in df_max_scaled.columns:
         df_max_scaled[column] = df_max_scaled[column]  / df_max_scaled[column].abs().max()
 ```
@@ -191,13 +194,13 @@ We can use `MinMaxScaler` class from sklearn.
     scaled = scaler.fit_transform(data)
 ```
 
-We can apply the min-max scaling in Pandas using the `.min()` and `.max()` methods.
+We can apply the min-max scaling in Pandas using the `.min()` and `.max()` methods which preserves the column headers/names.
 
 ```py
     # copy the data
     df_min_max_scaled = df.copy()
       
-    # apply normalization techniques from scratch
+    # apply normalization from scratch
     for column in df_min_max_scaled.columns:
         df_min_max_scaled[column] = (df_min_max_scaled[column] - df_min_max_scaled[column].min()) / (df_min_max_scaled[column].max() - df_min_max_scaled[column].min())    
 ```
@@ -219,16 +222,15 @@ We can apply standardization using `StandardScaler` class from sklearn.
     scaled = scaler.fit_transform(data)
 ```
 
-We can apply the standardization in Pandas using the `.min()` and `.max()` methods.
+We can apply the standardization in Pandas using the `.min()` and `.max()` methods which preserves the column headers/names.
 
 ```py
     # copy the data
     df_z_scaled = df.copy()
       
-    # apply normalization techniques from scratch
+    # apply normalization from scratch
     for column in df_z_scaled.columns:
-        df_z_scaled[column] = (df_z_scaled[column] -
-                               df_z_scaled[column].mean()) / df_z_scaled[column].std()    
+        df_z_scaled[column] = (df_z_scaled[column] - df_z_scaled[column].mean()) / df_z_scaled[column].std()    
 ```
 
 

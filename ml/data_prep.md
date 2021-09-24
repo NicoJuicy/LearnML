@@ -12,6 +12,11 @@
     - Correct inconsistencies
     - Handle errors in variables
 - Data Cleaning
+    - Handling missing values
+    - Check the data types
+    - Scaling and normalization
+    - Parsing dates
+    - Inconsistent Data Entry
     - Add Dummy Variables
     - Highly Imbalanced Data
     - Order of Data Transforms for Time Series
@@ -49,21 +54,20 @@ It is important to know how to extract information from descriptive statistics.
 
 
 ```py
+    # inspect the data 
+    df.head()
 
-# inspect the data 
-Airlines.head()
+    # get the data info
+    df.info()
 
-# get the data info
-Airlines.info()
+    # check the shape of the data-frame
+    df.shape
 
-# check the shape of the data-frame
-Airlines.shape
+    # check for missing values
+    df.isna()
 
-# check for missing values
-Airlines.isna()
-
-# check for duplicate values
-Airlines.duplicated() 
+    # check for duplicate values
+    df.duplicated() 
 ```
 
 
@@ -112,24 +116,94 @@ Airlines.duplicated()
 
 [How to Perform Data Cleaning for Machine Learning with Python?](https://machinelearningmastery.com/basic-data-cleaning-for-machine-learning/)
 
+[Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
+
 Data cleaning refers to identifying and correcting errors in the dataset that may negatively impact a predictive model.
 
 - Identify Columns That Contain a Single Value
-
 - Delete Columns That Contain a Single Value
-
 - Consider Columns That Have Very Few Values
-
 - Remove Columns That Have A Low Variance
-
 - Identify Rows that Contain Duplicate Data
-
 - Delete Rows that Contain Duplicate Data
 
-1. Handling missing values
-2. Scaling and normalization
-3. Parsing dates
-4. Inconsistent Data Entry
+### Handling missing values
+
+Check for null values. We can drop or fill the `NaN` values.
+
+```py
+    df.isnull().sum()  # if count > 0 then some values are NaN
+
+    # Drop the NaN
+    df['col_name'] = df['col_name'].dropna(axis=0, how="any")
+
+     df['col_name'].isnull().sum() # check NaN again
+```
+
+### Check the data types
+
+```py
+  df.info()
+```
+
+```py
+    # List of numeric columns
+    num_cols = ['age', 'bp', 'sg', 'al', 'su',
+                'bgr', 'bu', 'sc', 'sod', 'pot',
+                'hemo', 'pcv', 'wbcc', 'rbcc']
+                
+    for column in df.columns:
+        if column in num_cols:
+            # Replace ‘?’ with ‘NaN’ 
+            # df[column] = df[column].replace('?', np.nan)
+            
+            # Convert to numeric type
+            df[column] = pd.to_numeric(df[column])
+```
+
+
+### Scaling and normalization
+
+See "Normalization Techniques" in Feature Engineering.
+
+
+### Parsing dates
+
+Method 1: Parse date columns using `read_csv`
+
+```py
+    def parser(x):
+        return dt.datetime.strptime(x, "%Y-%m-%d")
+
+    def load_data(name):
+        df_data = pd.read_csv(
+            file_path,
+            header=0,
+            index_col=0,
+            parse_dates=["day"],
+            date_parser=parser    # optional
+        )
+        
+        return df_data
+```
+
+Method 2: Parse dates using `to_datetime`
+
+```py
+    def load_data(name):
+        df_data = pd.read_csv(name, header=3, index_col=0)
+
+        # Replace index with DateTime
+        df_data.index = pd.to_datetime(df_data.index)
+        
+        return df_data
+```
+
+
+### Inconsistent Data Entry
+
+TODO: This will most likely vary 
+
 
 ### Add Dummy Variables
 
@@ -195,6 +269,7 @@ The process of scaling and normalization are very similar. In both cases, you ar
 - In scaling, you are changing the _range_ of your data. 
 - In normalization, you are changing the _shape_ of the distribution of your data.
 
+See **Feature Engineering** for code examples.
 
 ### Scaling
 
@@ -266,118 +341,118 @@ Pipelines also help in parallelization which means different jobs can be run in 
 ### Best Scaler
 
 ```py
-# Create a pipeline
-pipeline_lr_mm = Pipeline([
-    ('mms', MinMaxScaler()),
-    ('lr', LogisticRegression())
-    ])
-pipeline_lr_r = Pipeline([
-    ('rs', RobustScaler()),
-    ('lr', LogisticRegression())
-    ])
-pipeline_lr_w = Pipeline([
-    ('lr', LogisticRegression())
-    ])
-pipeline_lr_s = Pipeline([
-    ('ss', StandardScaler()),
-    ('lr', LogisticRegression())
-    ])
-    
-# Create a pipeline dictionary
-pipeline_dict = {
-0: 'Logistic Regression without scaler',
-    1: 'Logistic Regression with MinMaxScaler',
-    2: 'Logistic Regression with RobustScaler',
-    3: 'Logistic Regression with StandardScaler',
-}
+    # Create a pipeline
+    pipeline_lr_mm = Pipeline([
+        ('mms', MinMaxScaler()),
+        ('lr', LogisticRegression())
+        ])
+    pipeline_lr_r = Pipeline([
+        ('rs', RobustScaler()),
+        ('lr', LogisticRegression())
+        ])
+    pipeline_lr_w = Pipeline([
+        ('lr', LogisticRegression())
+        ])
+    pipeline_lr_s = Pipeline([
+        ('ss', StandardScaler()),
+        ('lr', LogisticRegression())
+        ])
 
-# Create a pipeline list
-pipelines = [pipeline_lr_w, pipeline_lr_mm, 
-    pipeline_lr_r, 
-    pipeline_lr_s]
+    # Create a pipeline dictionary
+    pipeline_dict = {
+    0: 'Logistic Regression without scaler',
+        1: 'Logistic Regression with MinMaxScaler',
+        2: 'Logistic Regression with RobustScaler',
+        3: 'Logistic Regression with StandardScaler',
+    }
 
-# Fit the pipeline
-for p in pipelines:
-    p.fit(trainX, trainY)
+    # Create a pipeline list
+    pipelines = [pipeline_lr_w, pipeline_lr_mm, 
+        pipeline_lr_r, 
+        pipeline_lr_s]
 
-# Evaluate the pipeline
-for i, val in enumerate(pipelines):
-print('%s pipeline Test Accuracy Score: %.4f' % (pipeline_dict[i], accuracy_score(testY, val.predict(testX))))
+    # Fit the pipeline
+    for p in pipelines:
+        p.fit(trainX, trainY)
+
+    # Evaluate the pipeline
+    for i, val in enumerate(pipelines):
+    print('%s pipeline Test Accuracy Score: %.4f' % (pipeline_dict[i], accuracy_score(testY, val.predict(testX))))
 ```
 
 Convert it to dataFrame and show the best model:
 
 ```py
-l = []
-for i, val in enumerate(pipelines):
-    l.append(accuracy_score(testY, val.predict(testX)))
-result_df = pd.DataFrame(list(pipeline_dict.items()),columns = ['Index','Estimator'])
+    l = []
+    for i, val in enumerate(pipelines):
+        l.append(accuracy_score(testY, val.predict(testX)))
+    result_df = pd.DataFrame(list(pipeline_dict.items()),columns = ['Index','Estimator'])
 
-result_df['Test_Accuracy'] = l
+    result_df['Test_Accuracy'] = l
 
-best_model_df = result_df.sort_values(by='Test_Accuracy', ascending=False)
-print(best_model_df)
+    best_model_df = result_df.sort_values(by='Test_Accuracy', ascending=False)
+    print(best_model_df)
 ```
 
 ### Best Estimator
 
 ```py
-# Create a pipeline
-pipeline_knn = Pipeline([
-    ('ss1', StandardScaler()),
-    ('knn', KNeighborsClassifier(n_neighbors=4))
-    ])
-pipeline_dt = Pipeline([
-    ('ss2', StandardScaler()),
-    ('dt', DecisionTreeClassifier())
-    ])
-pipeline_rf = Pipeline([
-    ('ss3', StandardScaler()),
-    ('rf', RandomForestClassifier(n_estimators=80))
-    ])
-pipeline_lr = Pipeline([
-    ('ss4', StandardScaler()),
-    ('lr', LogisticRegression())
-    ])
-pipeline_svm_lin = Pipeline([
-    ('ss5', StandardScaler()),
-    ('svm_lin', SVC(kernel='linear'))
-    ])
-pipeline_svm_sig = Pipeline([
-    ('ss6', StandardScaler()),
-    ('svm_sig', SVC(kernel='sigmoid'))
-    ])
-    
-# Create a pipeline dictionary
-pipeline_dict = {
-    0: 'knn',
-    1: 'dt',
-    2: 'rf',
-    3: 'lr',
-    4: 'svm_lin',
-    5: 'svm_sig',
-    
-    }
+    # Create a pipeline
+    pipeline_knn = Pipeline([
+        ('ss1', StandardScaler()),
+        ('knn', KNeighborsClassifier(n_neighbors=4))
+        ])
+    pipeline_dt = Pipeline([
+        ('ss2', StandardScaler()),
+        ('dt', DecisionTreeClassifier())
+        ])
+    pipeline_rf = Pipeline([
+        ('ss3', StandardScaler()),
+        ('rf', RandomForestClassifier(n_estimators=80))
+        ])
+    pipeline_lr = Pipeline([
+        ('ss4', StandardScaler()),
+        ('lr', LogisticRegression())
+        ])
+    pipeline_svm_lin = Pipeline([
+        ('ss5', StandardScaler()),
+        ('svm_lin', SVC(kernel='linear'))
+        ])
+    pipeline_svm_sig = Pipeline([
+        ('ss6', StandardScaler()),
+        ('svm_sig', SVC(kernel='sigmoid'))
+        ])
 
-# Create a List
-pipelines = [pipeline_lr, pipeline_svm_lin, pipeline_svm_sig, pipeline_knn, pipeline_dt, pipeline_rf]
+    # Create a pipeline dictionary
+    pipeline_dict = {
+        0: 'knn',
+        1: 'dt',
+        2: 'rf',
+        3: 'lr',
+        4: 'svm_lin',
+        5: 'svm_sig',
 
-# Fit the pipeline
-for p in pipelines:
-    pipe.fit(trainX, trainY)
+        }
 
-# Evaluate the pipeline
-l = []
-for i, val in enumerate(pipelines):
-    l.append(accuracy_score(testY, val.predict(testX)))
-    
-result_df = pd.DataFrame(list(pipeline_dict.items()),columns = ['Idx','Estimator'])
+    # Create a List
+    pipelines = [pipeline_lr, pipeline_svm_lin, pipeline_svm_sig, pipeline_knn, pipeline_dt, pipeline_rf]
 
-result_df['Test_Accuracy'] = l
+    # Fit the pipeline
+    for p in pipelines:
+        pipe.fit(trainX, trainY)
 
-b_model = result_df.sort_values(by='Test_Accuracy', ascending=False)
+    # Evaluate the pipeline
+    l = []
+    for i, val in enumerate(pipelines):
+        l.append(accuracy_score(testY, val.predict(testX)))
 
-print(b_model)
+    result_df = pd.DataFrame(list(pipeline_dict.items()),columns = ['Idx','Estimator'])
+
+    result_df['Test_Accuracy'] = l
+
+    b_model = result_df.sort_values(by='Test_Accuracy', ascending=False)
+
+    print(b_model)
 ```
 
 ### Pipeline with With PCA
@@ -426,6 +501,11 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 ### Data Preprocessing
 
 [Data Science Primer](https://elitedatascience.com/primer)
+
+[Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#)
+
+[Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
+
 
 [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
