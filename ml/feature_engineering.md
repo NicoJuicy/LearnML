@@ -3,11 +3,11 @@
 <!-- MarkdownTOC -->
 
 - Feature Engineering Techniques
-    - Imputation \(missing values\)
-    - Handling Outliers
-    - Log Transform
-    - One-hot encoding
-    - Scaling
+    - 1. Imputation \(missing values\)
+    - 2. Handling Outliers
+    - 3. Log Transform
+    - 4. One-hot encoding
+    - 5. Scaling
 - Normalization Techniques
     - Using maximum absolute scaling
     - Using min-max scaling
@@ -18,8 +18,8 @@
     - Automatic Transform of the Target Variable
     - Complete Regression Example
 - Encoding Categorical Features
-        - Complete One-Hot Encoding Example
-        - Dummy Variable Encoding
+    - Complete One-Hot Encoding Example
+    - Dummy Variable Encoding
 - Common Questions on Normalization
     - Should I Normalize or Standardize?
     - Should I Standardize then Normalize?
@@ -422,7 +422,7 @@ There are many ways to encode categorical variables for modeling, here are some 
   4. Learned Embedding: a distributed representation of the categories is learned.
 
 
-#### Complete One-Hot Encoding Example
+### Complete One-Hot Encoding Example
 
 A one-hot encoding is appropriate for categorical data where no relationship exists between categories.
 
@@ -485,7 +485,7 @@ By default the `OneHotEncoder` class will output data with a sparse representati
     print('Accuracy: %.2f' % (accuracy * 100))
 ```
 
-#### Dummy Variable Encoding
+### Dummy Variable Encoding
 
 The one-hot encoding creates one binary variable for each category.
 
