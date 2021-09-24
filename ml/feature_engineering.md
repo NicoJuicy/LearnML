@@ -149,7 +149,7 @@ We can apply the maximum absolute scaling in Pandas using the `.max()` and `.abs
     # copy the data
     df_max_scaled = df.copy()
       
-    # apply normalization techniques from scratch
+    # apply normalization from scratch
     for column in df_max_scaled.columns:
         df_max_scaled[column] = df_max_scaled[column]  / df_max_scaled[column].abs().max()
 ```
@@ -176,7 +176,7 @@ We can apply the min-max scaling in Pandas using the `.min()` and `.max()` metho
     # copy the data
     df_min_max_scaled = df.copy()
       
-    # apply normalization techniques from scratch
+    # apply normalization from scratch
     for column in df_min_max_scaled.columns:
         df_min_max_scaled[column] = (df_min_max_scaled[column] - df_min_max_scaled[column].min()) / (df_min_max_scaled[column].max() - df_min_max_scaled[column].min())    
 ```
@@ -204,7 +204,7 @@ We can apply the standardization in Pandas using the `.min()` and `.max()` metho
     # copy the data
     df_z_scaled = df.copy()
       
-    # apply normalization techniques from scratch
+    # apply normalization from scratch
     for column in df_z_scaled.columns:
         df_z_scaled[column] = (df_z_scaled[column] - df_z_scaled[column].mean()) / df_z_scaled[column].std()    
 ```
