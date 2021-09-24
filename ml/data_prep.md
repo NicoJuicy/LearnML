@@ -147,6 +147,10 @@ Check for null values
                 
     for column in df.columns:
         if column in num_cols:
+            # Replace ‘?’ with ‘NaN’ 
+            # df[column] = df[column].replace('?', np.nan)
+            
+            # Convert to numeric type
             df[column] = pd.to_numeric(df[column])
 ```
 
