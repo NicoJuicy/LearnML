@@ -145,11 +145,16 @@ Check for null values
             df[column] = df[column].astype(float)
 ```
 
+
 ### Scaling and normalization
+
+See "Normalization Techniques" in Feature Engineering.
+
 
 ### Parsing dates
 
 ### Inconsistent Data Entry
+
 
 ### Add Dummy Variables
 
