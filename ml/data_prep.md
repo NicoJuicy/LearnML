@@ -4,10 +4,6 @@
 
 [Feature Engineering](https://gist.github.com/codecypher/dd4c7e8794982570288c2cfe95665c9c)
 
-[Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#)
-
-[Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
-
 <!-- MarkdownTOC -->
 
 - Data Preparation
@@ -503,6 +499,11 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 ### Data Preprocessing
 
 [Data Science Primer](https://elitedatascience.com/primer)
+
+[Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#)
+
+[Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
+
 
 [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
