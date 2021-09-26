@@ -2,46 +2,47 @@
 
 [A Gentle Introduction to Imbalanced Classification](https://machinelearningmastery.com/what-is-imbalanced-classification/) 
 
-An imbalanced classification problem is a problem that involves predicting a class label where the distribution of class labels in the training dataset is skewed (there are many more examples for one class than another class). 
+An imbalanced classification problem is a problem that involves predicting a class label where the distribution of class labels in the training dataset is skewed (there are many more examples for one class than the other classes). 
 
-Many real-world classification problems have an imbalanced class distribution, therefore it is important for machine learning practitioners to get familiar with working with these types of problems.
+Many real-world classification problems have an imbalanced class distribution, so it is important for ML engineers to be familiar with working with these types of problems.
 
-Imbalanced classifications pose a challenge for predictive modeling sincr most of the machine learning algorithms used for classification were designed around the assumption of an equal number of examples for each class which results in models that have poor predictive performance, specifically for the minority class. 
+Imbalanced classification poses a challenge for predictive modeling since most of ML algorithms used for classification were designed with the assumption of an equal number of examples for each class which results in models that have poor predictive performance, specifically for the minority class. 
 
-This is a problem because the minority class is usually more important and therefore the problem is more sensitive to classification errors for the minority class than the majority class.
+This is a problem because the minority class is usually more important, so the problem is more sensitive to classification errors for the minority class than the majority class.
 
 These types of problems often require the use of specialized performance metrics and learning algorithms as the standard metrics and methods are unreliable or fail completely.
 
 Given measurements of a flower (observation), we may predict the likelihood (probability) of the flower being an example of each of twenty different species of flower.
 
-The number of classes for a predictive modeling problem is typically fixed when the problem is framed or described and the number of classes usually does not change.
+The number of classes for a predictive modeling problem is typically fixed when the problem is framed and the number of classes usually does not change.
 
-A classification predictive modeling problem may have two class labels called binary classification or the problem may have more than two classes such as three, 10, or even hundreds of classes called multi-class classification problems.
+A classification predictive modeling problem may have two class labels  caled _binary classification_ or the problem may have more than two classes such as three, 10, or even hundreds of classes called _multi-class classification_ problems.
 
 - Binary Classification Problem: A classification predictive modeling problem where all examples belong to one of two classes.
 
-- Multiclass Classification Problem: A classification predictive modeling problem where all examples belong to one of three classes.
+- Multiclass Classification Problem: A classification predictive modeling problem where all examples belong to one of three or more classes.
 
 A training dataset is a number of examples from the domain that include both the input data (measurements) and the output data (class label).
 
-Depending on the complexity of the problem and the types of models we may choose to use, we may need tens, hundreds, thousands, or even millions of examples from the domain to constitute a training dataset.
+Depending on the complexity of the problem and the types of models we choose, we may need tens, hundreds, thousands, or even millions of exampled from the domain to constitute a training dataset.
 
 The training dataset is used to better understand the input data to help best prepare it for modeling:
 
--  to evaluate a suite of different modeling algorithms
+- to evaluate a suite of different modeling algorithms
 
-- to tune the hyperparameters of a chosen model. 
+- to tune the hyperparameters of a chosen model
 
-- to train a final model on all available data that we can use to make predictions for new samples from the problem domain.
+- to train a final model on all available data that we can use to make predictions for new samples from the problem domain
+
 
 
 ## Imbalanced Classification Problems
 
 The number of examples that belong to each class may be referred to as the _class distribution_.
 
-Terminology: Unbalance refers to a class distribution that was balanced and is now no longer balanced, whereas imbalanced refers to a class distribution that is inherently not balanced.
+NOTE: The tern _unbalanced_ refers to a class distribution that was balanced and is now no longer balanced whereas _imbalanced_ refers to a class distribution that is inherently not balanced.
 
-There are other less general names that may be used to describe these types of classification problems, such as:
+There are other less general names that may be used to describe these types of classification problems:
 
 - Rare event prediction
 - Extreme event prediction
@@ -55,9 +56,10 @@ Another way to describe the imbalance of classes in a dataset is to summarize th
 
 For example, an imbalanced multiclass classification problem may have 80 percent examples in the first class, 18 percent in the second class, and 2 percent in a third class.
 
+
 ## Causes of Class Imbalance
 
-The imbalance to the class distribution in an imbalanced classification predictive modeling problem may have many causes.
+The imbalance of the class distribution in an imbalanced classification predictive modeling problem may have many causes.
 
 There are two main groups of causes for the imbalance we may want to consider: data sampling and properties of the domain.
 
@@ -66,33 +68,31 @@ It is possible that the imbalance in the examples across the classes is caused b
 - Biased Sampling
 - Measurement Error
 
-The imbalance might be a property of the problem domain.
+The imbalance may also be a property of the problem domain.
 
 For example, the natural occurrence or presence of one class may dominate other classes which may be because the process that generates observations in one class is more expensive in time, cost, computation, or other resources. 
 
-Thus, it is often infeasible or intractable to simply collect more samples from the domain in order to improve the class distribution. Instead, a model is required to learn the difference between the classes.
+Thus, it is often infeasible or intractable to simply collect more samples from the domain to improve the class distribution. Instead, a model is required to learn the difference between the classes.
+
+
 
 ## Challenge of Imbalanced Classification
 
 The imbalance of the class distribution will vary across problems.
 
-A classification problem may be a little skewed such as if there is a slight imbalance. 
+A classification problem may be a little skewed such as a slight imbalance. 
 
-Alternately, the classification problem may have a severe imbalance where there might be hundreds or thousands of examples in one class and tens of examples in another class for a given training dataset.
+- Slight Imbalance: An imbalanced classification problem where the distribution of examples is uneven by a small amount in the training dataset (4:6).
 
-- Slight Imbalance. An imbalanced classification problem where the distribution of examples is uneven by a small amount in the training dataset (4:6).
-
-- Severe Imbalance. An imbalanced classification problem where the distribution of examples is uneven by a large amount in the training dataset (1:100 or more).
+- Severe Imbalance: An imbalanced classification problem where the distribution of examples is uneven by a large amount in the training dataset (1:100 or more).
 
 Most of the contemporary works in class imbalance concentrate on imbalance ratios ranging from 1:4 up to 1:100. 
 
-In real-life applications such as fraud detection or cheminformatics, we may deal with problems with imbalance ratio ranging from 1:1000 up to 1:5000.
+In real-life applications such as fraud detection or cheminformatics, we may deal with problems with an imbalance ratio ranging from 1:1000 up to 1:5000.
 
-A slight imbalance is often not a concern and the problem can often be treated like a normal classification predictive modeling problem. 
+A slight imbalance is often not a concern and the problem can often be treated as a normal classification predictive modeling problem. 
 
 A severe imbalance of the classes can be challenging to model and may require the use of specialized techniques.
-
-The class or classes with abundant examples are called the **major** or **majority classes** whereas the class with few examples (and there is typically just one) is called the **minor** or **minority class**.
 
 - Majority Class: The class (or classes) in an imbalanced classification predictive modeling problem that has many examples.
 
@@ -100,7 +100,7 @@ The class or classes with abundant examples are called the **major** or **majori
 
 The abundance of examples from the majority class (or classes) can swamp the minority class. 
 
-Most machine learning algorithms for classification predictive models are designed and demonstrated on problems that assume an equal distribution of classes which means that a naive application of a model may focus on learning the characteristics of the abundant observations only while neglecting the examples from the minority class. 
+Most machine learning algorithms for classification models are designed and demonstrated on problems that assume an equal distribution of classes which means that a naive application of a model may focus on learning the characteristics of the majority class  while neglecting the examples from the minority class. 
 
 Imbalanced classification remains an open problem generally and practically must be identified and addressed specifically for each training dataset.
 
@@ -123,13 +123,13 @@ Imbalanced data typically refers to a problem with classification problems where
 
 ### Try Changing Your Performance Metric
 
-Accuracy is not the metric to use when working with an imbalanced dataset. We have seen that it is misleading.
+Accuracy is not the metric to use when working with an imbalanced dataset. since it can be misleading.
 
-There are metrics that have been designed to tell you a more truthful story when working with imbalanced classes.
+There are metrics that have been designed for imbalanced classes.
 
 Consider the following performance measures that can give more insight into the accuracy of the model than traditional classification accuracy:
 
-- Confusion Matrix: A breakdown of predictions into a table showing correct predictions (the diagonal) and the types of incorrect predictions made (what classes incorrect predictions were assigned).
+- Confusion Matrix: A breakdown of predictions into a table showing correct predictions (the diagonal) and the types of incorrect predictions made (what classes that incorrect predictions were assigned).
 
 - Precision: A measure of a classifiers exactness.
 
@@ -137,7 +137,7 @@ Consider the following performance measures that can give more insight into the 
 
 - F1 Score (or F-score): A weighted average of precision and recall.
 
-- ROC Curves: Like precision and recall, accuracy is divided into sensitivity and specificity and models can be chosen based on the balance thresholds of these values.
+- ROC Curves: Similar to precision and recall, accuracy is divided into sensitivity and specificity and models can be chosen based on the balance thresholds of these values.
 
 Also take a look at the following:
 
@@ -161,17 +161,17 @@ Thinking about your problem from these perspectives can sometimes provide some i
 
 **Anomaly detection** is the detection of rare events such as a machine malfunction indicated by its vibrations or malicious activity by a program indicated by a sequence of system calls. 
 
-The events are rare and when compared to normal operation.
+The events are rare compared to normal operation.
 
-This shift in thinking considers the minor class as the outliers class which might help you think of new ways to separate and classify samples.
+This shift in thinking considers the minor class as the outlier class which might help you think of new ways to separate and classify samples.
 
-**Change detection** is similar to anomaly detection but rather than looking for an anomaly it is looking for a change or difference which might be a change in behavior of a user as observed by usage patterns or bank transactions.
+**Change detection** is similar to anomaly detection but rather than looking for an anomaly we are looking for a change or difference that might be a change in behavior of a user based on usage patterns or bank transactions.
 
 ### Accuracy Paradox
 
-The _accuracy paradox_ is is used to describe the situation where your accuracy measures tell the story that you have excellent accuracy (such as 90%) but the accuracy is only reflecting the underlying class distribution (majority class).
+The _accuracy paradox_ is used to describe the situation in which your accuracy measure indicates that you have excellent accuracy (such as 90%) but the accuracy is only reflecting the underlying class distribution (majority class).
 
-The accuracy paradox is very common because classification accuracy is often the first measure we use when evaluating models on our classification problems.
+The accuracy paradox is very common because classification accuracy is often the first measure we use when evaluating models on classification problems.
 
 
 ## Examples of Imbalanced Classification
@@ -182,16 +182,16 @@ The accuracy paradox is very common because classification accuracy is often the
 
 Many of the classification predictive modeling problems that we are interested in solving in practice are imbalanced.
 
-Notice that most of the examples are likely binary classification problems and the examples from the minority class are rare, extreme, abnormal, or unusual in some way.
+Most of the examples are binary classification problems and the examples from the minority class are rare, extreme, abnormal, or unusual in some way.
 
-Also notice that many of the domains are described as “detection,” highlighting the desire to discover the minority class amongst the abundant examples of the majority class.
+Many of the domains are described as “detection" which highlights the desire to discover the minority class amongst the abundant examples of the majority class.
 
 
 ## Naive Classifier
 
 [How to Develop and Evaluate Naive Classifier Strategies Using Probability](https://machinelearningmastery.com/how-to-develop-and-evaluate-naive-classifier-strategies-using-probability/)
 
-The performance of naive classification models provides a baseline fir conparison with other models.
+The performance of naive classification models provides a baseline for comparison with other models.
 
 The majority class classifier achieves better accuracy than other naive classifier models such as random guessing and predicting a randomly selected observed class label.
 
@@ -201,35 +201,35 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 
 ## [How To Deal With Imbalanced Classification Without Rebalancing the Data](https://www.kdnuggets.com/2021/09/imbalanced-classification-without-re-balancing-data.html)
 
-When building a ML classification model with data having far more instances of one class than another, the initial default classifier is often unsatisfactory because it classifies almost every case as the majority class. 
+When building a ML classification model with data having far more instances of one class than another, the initial default classifier is often unsatisfactory because it classifies almost every sample as the majority class. 
 
 Many articles show you how you could use oversampling (SMOTE) or undersampling or simply class-based sample weighting to retrain the model on “rebalanced” data, but this is not always necessary. 
 
 Here we show how much you can do _without_ balancing the data or retraining the model.
 
-We do this by simply adjusting the the threshold for which we say “Class 1” when the model’s predicted probability of Class 1 is above it in two-class classification rather than naïvely using the default classification rule which chooses which ever class is predicted to be most probable (probability threshold of 0.5). 
+We can simply adjust the the _threshold_ for which we say “Class 1” when the model’s predicted probability of Class 1 is above it in two-class classification rather than naïvely using the default classification rule which chooses whichever class is predicted to be most probable (lthreshold of 0.5). 
 
 We will see how this gives us the flexibility to make any desired trade-off between false positive and false negative classifications while avoiding problems created by rebalancing the data.
 
 We will use the credit card fraud identification data set from Kaggle to illustrate. 
 
-- Each row of the data set represents a credit card transaction, with the target variable Class==0 indicating a legitimate transaction and Class==1 indicating that the transaction turned out to be a fraud. 
+- Each row of the data set represents a credit card transaction with the target variable Class==0 indicating a legitimate transaction and Class==1 indicating that the transaction turned out to be a fraud. 
 
 - There are 284,807 transactions, of which only 492 (0.173%) are frauds — very imbalanced.
 
-We will use a gradient boosting classifier because these often give good results. 
+We will use a gradient boosting classifier since these often provide good results. 
 
-Specifically Scikit-Learn’s new `HistGradientBoostingClassifier` which is much faster than the original `GradientBoostingClassifier` when the data set is relatively large like this one.
+In fact, the new scikit-learn’s `HistGradientBoostingClassifier` class is much faster than the original `GradientBoostingClassifier` when the data set is relatively large like this one.
 
 ### Reasons not to balance your imbalanced data
 
-One reason to avoid “balancing” your imbalanced training data is that such methods bias/distort the resulting trained model’s probability predictions so that these become miscalibrated (by systematically increasing the model’s predicted probabilities of the original minority class) and are therefore reduced to being merely relative ordinal discriminant scores or decision functions or confidence scores rather than being potentially accurate predicted class probabilities in the original (“imbalanced”) train and test set and future data that the classifier may make predictions on. 
+One reason to avoid “balancing” your imbalanced training data is that such methods bias/distort the resulting trained model’s probability predictions such that these become miscalibrated (by systematically increasing the model’s predicted probabilities of the original minority class) and are reduced to being merely relative ordinal discriminant scores rather than being accurate predicted class probabilities in the original (“imbalanced”) train and test set and future unseen data. 
 
-In the event that such rebalancing for training is truly needed (but numerically-accurate probability predictions are still desired), we would have to recalibrate the predicted probabilities to a data set having the original/imbalanced class proportions. 
+In the event that such rebalancing for training is truly needed, we would have to recalibrate the predicted probabilities to a dataset having the original/imbalanced class proportions. 
 
 Alternatively, we could apply a correction to the predicted probabilities from the balanced model — see "Balancing is Unbalancing".
 
-Another problem with balancing your data by oversampling (as opposed to class-dependent instance weighting which does not have this problem) is that it biases naïve cross-validation, potentially leading to excessive overfitting that is not detected in the cross-validation. 
+Another problem with balancing your data by oversampling (compared to class-dependent instance weighting which does not have this problem) is that it biases naïve cross-validation which can lead to excessive overfitting that is not detected in the cross-validation. 
 
 In cross-validation, each time the data gets split into a “fold” subset, there may be instances in one fold that are duplicates of (or were generated from) instances in another fold. Thus, the folds are not truly independent as cross-validation assumes — there is data “bleed” or “leakage”. 
 
@@ -239,7 +239,7 @@ In scikit-learn, at least for the case of oversampling by instance duplication (
 
 ### Conclusion
 
-Instead of naïvely or implicitly applying a default threshold of 0.5, or immediately re-training using re-balanced training data, we can try using the original model (trained on the original “imbalanced” data set) and simply plot the trade-off between false positives and false negatives to choose a threshold that may produce a desirable business result.
+Instead of naïvely or implicitly applying a default threshold of 0.5 or immediately re-training using re-balanced training data, we can try using the original model (trained on the original “imbalanced” data set) and simply plot the trade-off between false positives and false negatives to choose a threshold that may produce a desirable result.
 
 
 ## References
