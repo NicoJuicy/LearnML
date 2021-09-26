@@ -92,9 +92,25 @@ This results in the same updates for the model parameters as if we were to use t
 
 
 
+
+# Complete Neural Network Example using Keras
+
+This is a complete guide to multi-class classification problem using neural networks in which we will:
+
+1. Transform the data
+2. create the model
+3. Evaluate with k-fold cross validation 
+4. Compile and evaluate the model 
+5. Save the model for later use. 
+6. Load the model to make predictions without having to re-train
+
+
+
 ## References
 
 [Machine Learning Cheatsheet](https://ml-cheatsheet.readthedocs.io/en/latest/index.html)
+
+[The complete guide to Keras neural networks classification](https://shaun-enslin.medium.com/deep-dive-into-tensorflow-keras-with-a-real-life-neural-network-multi-class-problem-e50b1420432f)
 
 
 
