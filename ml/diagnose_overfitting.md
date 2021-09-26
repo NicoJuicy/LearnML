@@ -87,7 +87,7 @@ Every deep learning practitioner has made the above mistakes at least once in th
 
 
 
-## Overfitting and Underfitting of LSTM Models
+## Diagnose Overfitting and Underfitting of LSTM Models
 
 It can be difficult to determine whether your Long Short-Term Memory model is performing well on your sequence prediction problem.
 

@@ -3,7 +3,6 @@
 Parallelization is possible in two ways:
 
 - Multithreading: Using multiple threads of a process/worker
-
 - Multiprocessing: Using multiple processors
 
 Multithreading is useful for I/O bound applications. For example, when we have to download and upload multiple files.
