@@ -107,9 +107,25 @@ Automated Machine Learning (AutoML) is an emerging field in which the process of
 ## References
 
 [How to Select an ML Model?](https://www.kdnuggets.com/2021/08/select-initial-model-data-science-problem.html)
+
 [Gettting Started with Machine Learning](https://machinelearningmastery.com/start-here/)
+
 [Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
+
 [Multinomial Logistic Regression With Python](https://machinelearningmastery.com/multinomial-logistic-regression-with-python/)
+
 [Multinomial Logistic Regression In a Nutshell](https://medium.com/ds3ucsd/multinomial-logistic-regression-in-a-nutshell-53c94b30448f)
+
 [One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
+
+
+## Textbooks
+
+[Math Refresher for Scientists and Engineers](http://itc-books.weebly.com/uploads/1/4/1/0/14101304/ebooksclub.org__math_refresher_for_scientists_and_engineers.pdf)
+
+[Trigonometry Handbook](http://www.mathguy.us/Handbooks/TrigonometryHandbook.pdf)
+
+[Guide to the Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3)
+
+[Cheatsheets](https://github.com/Neklaustares-tPtwP/Resources/tree/main/Cheat%20Sheets)
 
