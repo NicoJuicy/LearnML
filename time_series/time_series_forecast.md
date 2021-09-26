@@ -1,5 +1,88 @@
 # Time Series Forecasting
 
+## Introduction
+
+[What Is Time Series Forecasting?](https://machinelearningmastery.com/time-series-forecasting/)
+
+[Taxonomy of Time Series Forecasting Problems](https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/)
+
+
+## Time Series Analysis vs Time Series Forecasting
+
+**Describing vs Predicting**
+
+Time series analysis is concerned with using methods such as decomposition of a time series into its systematic components in order to understand the underlying causes or the _why_ behind the time series dataset which is usually not helpful for prediction.
+
+Time series Forecasting is making predictionf about the future which is called _extrapolation_ in the classical statistical handling of time series data.
+
+Forecasting involves taking models fit on historical data and using them to predict future observations.
+
+Time series analysis can be used to remove trend and/or seasonality components which can help with forecasting.
+
+
+## Time Series Decomposition
+
+[How to Decompose Time Series Data into Trend and Seasonality](https://machinelearningmastery.com/decompose-time-series-data-trend-seasonality/)
+
+[How To Isolate Trend, Seasonality, and Noise From A Time Series](https://timeseriesreasoning.com/contents/time-series-decomposition/)
+
+[Time Series 101 Guide Python](https://datasciencebeginners.com/2020/11/25/time-series-forecast-and-decomposition-101-guide-python/)
+
+[Time Series Data Visualization with Python](https://machinelearningmastery.com/time-series-data-visualization-with-python/)
+
+
+## Data Preparation
+
+[How to Load and Explore Time Series Data in Python](https://machinelearningmastery.com/load-explore-time-series-data-python/)
+
+[Basic Feature Engineering With Time Series Data in Python](https://machinelearningmastery.com/basic-feature-engineering-time-series-data-python/)
+
+[How To Backtest Machine Learning Models for Time Series Forecasting](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
+
+NOTE: k-fold Cross Validation Does Not Work for Time Series Data.
+
+The goal of time series forecasting is to make accurate predictions about the future.
+
+The fast and powerful methods that we rely on in machine learning (such as using train-test splits and k-fold cross validation) do not work in the case of time series data since they ignore the temporal components inherent in the problem.
+
+
+## Forecast Performance Baseline
+
+[How to Make Baseline Predictions for Time Series Forecasting with Python](https://machinelearningmastery.com/persistence-time-series-forecasting-with-python/)
+
+[How to Create an ARIMA Model for Time Series Forecasting in Python](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/)
+
+A _baseline_ in forecast performance provides a point of comparison.
+
+- A baseline is a point of reference for all other modeling techniques on your problem. 
+
+- If a model achieves performance at or below the baseline, the technique should be fixed or abandoned.
+
+The technique used to generate a forecast to calculate the baseline performance must be easy to implement and naive of problem-specific details.
+
+Before you can establish a performance baseline on your forecast problem, you must develop a test harness which is comprised of:
+
+- The dataset you intend to use to train and evaluate models.
+
+- The resampling technique you intend to use to estimate the performance of the technique (e.g. train/test split).
+
+- The performance measure you intend to use to evaluate forecasts (e.g. mean squared error).
+
+Then you need to select a naive technique that you can use to make a forecast and calculate the baseline performance.
+
+The goal is to get a baseline performance on your time series forecast problem as quickly as possible so that you can get to work better understanding the dataset and developing more advanced models.
+
+Three properties of a good technique for making a baseline forecast are:
+
+- Simple: A method that requires little or no training or intelligence.
+
+- Fast: A method that is fast to implement and computationally trivial to make a prediction.
+
+- Repeatable: A method that is deterministic, meaning that it produces an expected output given the same input.
+
+A common algorithm used in establishing a baseline performance is the _persistence algorithm_.
+
+
 ## 5-Step Forecasting Task
 
 The 5 basic steps in a forecasting task are summarized by Hyndman and Athana­sopou­los in their book Forecasting: principles and practice. These steps are:
@@ -66,18 +149,6 @@ Some of the common error metrics used in particular with Time Series Forecasting
 - Mean Absolute Error
 - Mean Absolute Percentage Error
 - Mean Frequency Error
-
-
-
-## Time Series Decomposition
-
-[How to Decompose Time Series Data into Trend and Seasonality](https://machinelearningmastery.com/decompose-time-series-data-trend-seasonality/)
-
-[How To Isolate Trend, Seasonality, and Noise From A Time Series](https://timeseriesreasoning.com/contents/time-series-decomposition/)
-
-[Time Series 101 Guide Python](https://datasciencebeginners.com/2020/11/25/time-series-forecast-and-decomposition-101-guide-python/)
-
-[Time Series Data Visualization with Python](https://machinelearningmastery.com/time-series-data-visualization-with-python/)
 
 
 ## References
