@@ -165,7 +165,8 @@ Some of the common error metrics used in particular with Time Series Forecasting
 
 [Predicting stock prices using Deep Learning LSTM model in Python](https://thinkingneuron.com/predicting-stock-prices-using-deep-learning-lstm-model-in-python/)
 
-[Time Series Forecasting with Python 7-Day Mini-Course](https://machinelearningmastery.com/time-series-forecasting-python-mini-course/)
+[Time series forecasting](https://www.tensorflow.org/tutorials/structured_data/time_series)
+
 
 [Classical Time Series Forecasting Methods in Python (Cheat Sheet)](https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/)
 
