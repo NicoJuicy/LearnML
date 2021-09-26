@@ -1,4 +1,4 @@
-## Types of Parallelisation
+## Types of Parallelization
 
 Parallelization is possible in two ways:
 
