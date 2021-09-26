@@ -58,9 +58,6 @@ In addition, a shift in mindset is required to be effective at machine learning 
 
 [Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
 
-<<<<<<< HEAD
 
 [1] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge, v. 3, IEEE, 2014. 
 
-=======
->>>>>>> main
