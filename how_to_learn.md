@@ -8,7 +8,7 @@ Since this is an AI forum, I believe most users will have the following assumpti
 
 - You are interested in becoming an AI/ML engineer
 
-- You are interested in learning/following software engineering best practices [2]
+- You are interested in learning/following software engineering best practices [1]
 
 If not, it is best to let users know when you post that it is only your hobby, experimentation, etc.
 
@@ -57,9 +57,4 @@ In addition, a shift in mindset is required to be effective at machine learning 
 [5 Mistakes Programmers Make when Starting in Machine Learning](httpsp://machinelearningmastery.com/mistakes-programmers-make-when-starting-in-machine-learning/)
 
 [Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
-
-
-[1] S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 3rd ed. Upper Saddle River, NJ, USA: Prentice Hall, 2010.
-
-[2] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge, v. 3, IEEE, 2014. 
 
