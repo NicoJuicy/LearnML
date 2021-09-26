@@ -65,52 +65,6 @@ The following sections discuss several important CV concepts:
 In the past, I encountered obscure image format issues going between Linux and macOS (NHWC vs HCHW).
 
 
-## Image Data Preparation
-
-[Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
-
-When training vision models, it is common to resize images to a lower dimension ((224 x 224), (299 x 299), etc.) to allow mini-batch learning and also to keep up the compute limitations. 
-
-We generally make use of image resizing methods like bilinear interpolation for this step and the resized images do not lose much of their perceptual character to the human eyes.
-
-In “Learning to Resize Images for Computer Vision Tasks,” Talebi et al. show that if we try to optimize the perceptual quality of the images for the vision models rather than the human eyes, their performance can further be improved.
-
-**For a given image resolution and a model, how to best resize the given images?**
-
-As shown in the paper, this idea helps to consistently improve the performance of the common vision models (pre-trained on ImageNet-1k) such as DenseNet-121, ResNet-50, MobileNetV2, and EfficientNets. 
-
-In the example, we will implement the learnable image resizing module as proposed in the paper and demonstrate that on the Cats and Dogs dataset using the DenseNet-121 architecture.
-
-
-[How to Manually Scale Image Pixel Data for Deep Learning](https://machinelearningmastery.com/how-to-manually-scale-image-pixel-data-for-deep-learning/)
-
-[How to Normalize, Center, and Standardize Images in Keras](https://machinelearningmastery.com/how-to-normalize-center-and-standardize-images-with-the-imagedatagenerator-in-keras/)
-
-[How to Evaluate Pixel Scaling Methods for Image Classification](https://machinelearningmastery.com/how-to-evaluate-pixel-scaling-methods-for-image-classification/)
-
-
-## Image Data Augmentation
-
-[How to Configure and Use Image Data Augmentation](https://machinelearningmastery.com/how-to-configure-image-data-augmentation-when-training-deep-learning-neural-networks/)
-
-[Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
-
-[Image Processing and Data Augmentation Techniques for Computer Vision](https://towardsdatascience.com/image-processing-techniques-for-computer-vision-11f92f511e21)
-
-[Data Augmentation Compilation with Python and OpenCV](https://towardsdatascience.com/data-augmentation-compilation-with-python-and-opencv-b76b1cd500e0)
-
-[5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
-
-[5 Useful Image Manipulation Techniques Using Python OpenCV](https://betterprogramming.pub/5-useful-image-manipulation-techniques-using-python-opencv-505492d077ef)
-
-----------
-
-[How to Load Large Datasets From Directories](https://machinelearningmastery.com/how-to-load-large-datasets-from-directories-for-deep-learning-with-keras/)
-
-[Introduction to Test-Time Data Augmentation](https://machinelearningmastery.com/how-to-use-test-time-augmentation-to-improve-model-performance-for-image-classification/)
-
-
-
 ## Object Recognition
 
 [A Gentle Introduction to Object Recognition](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
