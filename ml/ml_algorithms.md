@@ -297,8 +297,6 @@ This raises the question as to how many trees (weak learners or estimators) to c
 
 —————————-
 
-
-
 ## Examples of Algorithm Lists To Create
 
 Below are 10 examples of machine learning algorithm lists that you could create.
@@ -320,5 +318,42 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 - Start with why you want the list and use that to define the type of list to create.
 
 - Only capture the algorithm properties you actually need, keep it as simple as possible.
+
+
+## Orange Algorithm List
+
+### Regression
+
+- SVM
+- Linear Regression
+
+### Classification
+
+- Logistic Regression
+- Naive Bayes
+- Correspondence Analysis (multivariate)
+
+
+### Classification and Regression
+
+- AdaBoost
+- kNN
+- Tree
+- Random Forest
+- Gradient Boosting
+- SGD
+
+### Dimensionality Refuction
+
+- t-SNE
+- Manifold Learning
+- PCA
+- MDS
+
+### Clustering
+
+- k-Means
+- DBSCAN
+
 
 
