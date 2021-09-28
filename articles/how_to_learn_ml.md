@@ -49,22 +49,6 @@ Once you have mastered using ML algorithms, you can go back later and try to und
 In addition, a shift in mindset is required to be effective at machine learning from trying to find the “best” model/approach to “good enough”. 
 
 
-## IEEE Code of Ethics
-
-I. To uphold the highest standards of integrity, responsible behavior, and ethical conduct in professional activities.
-
-1.  To hold paramount the safety, health, and welfare of the public, to strive to comply with ethical design and sustainable development practices, to protect the privacy of others, and to disclose promptly factors that might endanger the public or the environment;
-
-5. To seek, accept, and offer honest criticism of technical work, to acknowledge and correct errors, to be honest and realistic in stating claims or estimates based on available data, and to credit properly the contributions of others
-
-6. To maintain and improve our technical competence and to undertake technological tasks for others only if qualified by training or experience, or after full disclosure of pertinent limitations
-
-II. To treat all persons fairly and with respect, to not engage in harassment or discrimination, and to avoid injuring others.
-
-9. to avoid injuring others, their property, reputation, or employment by false or malicious actions, rumors or any other verbal or physical abuses
-
-III. To strive to ensure this code is upheld by colleagues and co-workers.
-
 
 ## References
 

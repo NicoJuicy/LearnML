@@ -48,9 +48,39 @@ Once you have mastered using ML algorithms, you can go back later and try to und
 In addition, a shift in mindset is required to be effective at machine learning from trying to find the “best” model/approach to “good enough”. 
 
 
+
+Just thought I woulf make a few observations based on yet another childish experience with @Awesome_Ruler. 
+
+I dont want to clutter this channel with the content, so if u are interested here is a link to my Gist [Comments on Internet Forum Etiquette](https://gist.github.com/codecypher/6c524457b8ffb6a179ebddb577177482)
+
+Also keep in mind that I mainly use a mobile device so my comments/replies may often seem terse (to save typing) but are not meant to be critical or derogatory. I feel that I have a lot to offer to forum users but I also dont have the time or patience for this childish behavior. 
+
+
+## IEEE Code of Ethics
+
+Here are a few very important concepts that all software developers should know and learn:
+
+I. To uphold the highest standards of integrity, responsible behavior, and ethical conduct in professional activities.
+
+1.  To hold paramount the safety, health, and welfare of the public, to strive to comply with ethical design and sustainable development practices, to protect the privacy of others, and to disclose promptly factors that might endanger the public or the environment;
+
+5. To seek, accept, and offer honest criticism of technical work, to acknowledge and correct errors, to be honest and realistic in stating claims or estimates based on available data, and to credit properly the contributions of others
+
+6. To maintain and improve our technical competence and to undertake technological tasks for others only if qualified by training or experience, or after full disclosure of pertinent limitations
+
+II. To treat all persons fairly and with respect, to not engage in harassment or discrimination, and to avoid injuring others.
+
+9. to avoid injuring others, their property, reputation, or employment by false or malicious actions, rumors or any other verbal or physical abuses
+
+III. To strive to ensure this code is upheld by colleagues and co-workers.
+
+
+
 ## References
 
 [Applied Machine Learning Process](https://machinelearningmastery.com/start-here/#process)
+
+[IEEE Code of Ethics](https://www.ieee.org/about/corporate/governance/p7-8.html)
 
 [Stop Coding Machine Learning Algorithms From Scratch](https://machinelearningmastery.com/dont-implement-machine-learning-algorithms/)
 
