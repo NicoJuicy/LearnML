@@ -161,8 +161,6 @@ There is a 95% likelihood that the range 0.741 to 0.757 covers the true statisti
 
 [Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
 
-[Error Metrics used in Time Series Forecasting Modeling](https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca)
-
 [Tutorial: Understanding Regression Error Metrics in Python](https://www.dataquest.io/blog/understanding-regression-error-metrics/)
 
 [An Overview of Performance Evaluation Metrics of Machine Learning (Classification) Algorithms](https://towardsdatascience.com/an-overview-of-performance-evaluation-metrics-of-machine-learning-classification-algorithms-7a95783a762f?gi=884943f12b27)
