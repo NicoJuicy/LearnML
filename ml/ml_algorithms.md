@@ -289,6 +289,25 @@ Gradient boosting involves the creation and addition of decision trees sequentia
 This raises the question as to how many trees (weak learners or estimators) to configure in your gradient boosting model and how big each tree should be
 
 
+## Pros and Cons
+
+[A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9?source=rss----7f60cf5620c9---4)
+
+There are many regression algorithms you should know and try when working on a real-world problem. 
+
+This article discusses some of the Pros and Cons of 9 common regression algorithms with code using Scikit-learn and XGBoost:
+
+1. Linear Regression
+2. Polynomial Regression
+3. Simple Vector Regression (SVR)
+4. Decision Tree Regression
+5. Random Forest Regression
+6. LASSO Regression
+7. Ridge Regression
+8. ElasticNet Regression
+9. XGBoost Regression
+
+
 
 ## References
 
@@ -296,6 +315,7 @@ This raises the question as to how many trees (weak learners or estimators) to c
 
 
 —————————-
+
 
 ## Examples of Algorithm Lists To Create
 

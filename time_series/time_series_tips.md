@@ -1,5 +1,20 @@
 # Time Series Tips
 
+## How to check for gaps in time series data? 
+
+[How NOT to Analyze Time Series](https://towardsdatascience.com/a-common-mistake-to-avoid-when-working-with-time-series-data-eedf60a8b4c1)
+
+- Understand the time range and tick granularity of the times series with visual examination of the example time series
+
+- Compare the actual number of ticks in each time series against the number of theoretical ticks implied by (max minus min timestamp) divided by tick spacing. This ratio is sometimes referred as the fill ratio — a value far less than 1 means there is a lot of ticks missing.
+
+- Filter out series that have low fill ratio. I often use 40% as the cutoff of insufficient information content, but this may vary depending on the specific task at hand.
+
+- Standardize tick spacing across time series by upsampling to a more granular resolution.
+
+- Fill in the upsampled ticks with the appropriate interpolation method for your analysis. e.g. take the last known value, or linear / quadratic interpolation, etc
+
+
 Data Preparation for Multivariate LSTM Forecasting
 
 ## Tips and Tricks (Multivariate time series)
@@ -237,6 +252,5 @@ def compute_accuracy(args, X, yhat, y, scaler_pred):
 [How to Develop a Bidirectional LSTM For Sequence Classification in Python with Keras](https://machinelearningmastery.com/develop-bidirectional-lstm-sequence-classification-python-keras/)
 
 [One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
-
 
 

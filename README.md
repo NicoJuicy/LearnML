@@ -8,6 +8,8 @@ This is a work in progress (just getting started) so there is still a lot missin
 
 [Getting Started](./getting_started.md)
 
+**NOTE:** The Medium and TowardsDataSciene articles are best viewed in a browser Private tab. 
+
 
 ## Artificial Intelligence
 
