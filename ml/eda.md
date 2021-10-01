@@ -13,11 +13,11 @@ Check the summary statistics and create histograms for the numeric variables of 
 
     # create the histograms
     histograms = df[numeric_variables].hist(bins =10, 
-                                            xlabelsize=10, 
-                                            ylabelsize=10, 
-                                            grid=False, 
-                                            sharey= True, 
-                                            figsize = (15,15)) 
+        xlabelsize=10, 
+        ylabelsize=10, 
+        grid=False, 
+        sharey= True, 
+        figsize = (15,15)) 
 ```
 
 Study the relationship between satisfaction and class category.
@@ -30,13 +30,53 @@ Check if age is affecting the satisfaction of customers.
 
 [Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
 
-It is important to know how to extract information from descriptive statistics. 
+It is important to know how to extract information from descriptive statistics.
+
+
+```py
+    # inspect the data 
+    df.head()
+
+    # get the data info
+    df.info()
+
+    # check the shape of the data-frame
+    df.shape
+    
+    # get column list
+    df.columns.tolist()
+
+    # check for missing values
+    df.isna()
+    
+    # Find and verify missing values
+    np.where(pd.isnull(df))
+    df.iloc[296, 12]
+
+    # replace missing values
+    df.replace(np.nan, 0)
+    
+    # check for duplicate values
+    df.duplicated()
+    
+    # check data types
+    df.dtypes
+    
+    # change column data type
+    df[['age', 'weight']] = df[['age', 'weight']].astype(float)
+    
+    # count of unique values
+    df.nunique()
+    
+    # drop duplicate column
+    df_X.drop(['TEST1', 'TEST2'], axis=1)
+```
 
 ### Statistical Distribution
 
 #### Mean
 
-With the mean value, you are trying to get a sense of what an average data point looks like
+With the mean value, you are trying to get a sense of what an average data point looks like. 
 
 #### Standard Deviation
 
@@ -52,7 +92,7 @@ Median is a preferred metric rather than mean if there are outliers or high vari
 
 If the difference between mean and median is _small_, you can infer that the data is symmetrically distributed.
 
-If the median is higher than the mean, data is likely left-skewed in distribution.
+If the median is higher than the mean, data is likely _left-skewed_ in distribution.
 
 #### Min and Max
 

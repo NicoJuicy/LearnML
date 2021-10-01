@@ -44,31 +44,7 @@
 
 [11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
 
-Exploratory Data Analysis (EDA) is one of the first steps of the data science process which involves learning as much as possible about the data without spending too much time. 
-
-### Summary Statistics
-
-[Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
-
-It is important to know how to extract information from descriptive statistics. 
-
-
-```py
-    # inspect the data 
-    df.head()
-
-    # get the data info
-    df.info()
-
-    # check the shape of the data-frame
-    df.shape
-
-    # check for missing values
-    df.isna()
-
-    # check for duplicate values
-    df.duplicated() 
-```
+Exploratory Data Analysis (EDA) is one of the first steps of the data science process which involves learning as much as possible about the data without spending too much time.
 
 
 ## Data Preparation
@@ -247,8 +223,58 @@ It is quite common to;
 The order that the transform operations are applied is important.
 
 
-----------
+## Train-Test Split
 
+[Training-validation-test split and cross-validation done right](https://machinelearningmastery.com/training-validation-test-split-and-cross-validation-done-right/)
+
+[A Gentle Introduction to k-fold Cross-Validation](https://machinelearningmastery.com/k-fold-cross-validation/)
+
+[How to Configure k-Fold Cross-Validation](https://machinelearningmastery.com/how-to-configure-k-fold-cross-validation/)
+
+A key step in ML is the choice of model. However, when we faced with a choice between models, we can use cross validation.
+
+Assuming we correctly separated the dataset into a training set and a test set and fitted the model with the training set while evaluated with the test set, we obtained only a _single_ sample point of evaluation with one test set. 
+
+If we have two models and found that one model is better than another based on the evaluation, how can we know this is not by chance?
+
+**Solution:** the training-validation-test split
+
+The model is initially fit on a training data set, 
+
+Next, the fitted model is used to predict the responses for the observations in a second data set called the validation data set. 
+
+Finally, the test data set is used to provide an unbiased evaluation of a final model fit on the training data set. 
+
+If the data in the test data set has never been used in training (such as cross-validation), the test data set is also called a _holdout_ data set.
+
+
+The reason for such practice is the concept of preventing _data leakage_ which is discussed below. 
+
+
+What we should care about is the evaluation metric on the _unseen data_. 
+
+Therefore, we need to keep a slice of data from the entire model selection and training process and save it for the final evaluation called the test set. 
+
+The process of _cross-validation_ is the following:
+
+1. training dataset is used to train a few candidate models
+
+2. validation dataset is used to evaluate the candidate models
+
+3. one of the candidates is chosen
+
+4. the chosen model is trained with a new training dataset
+
+5. the trained model is evaluated with the test dataset
+
+The dataset for evaluation in step 5 and the one we used in cross validation are different because we do not want _data leakage_. 
+
+If the test and validation sets were the same, we would see the same score that we have already seen from cross validation or the test score would be good because it was part of the data we used to train the model and we  adapted the model for that test dataset.
+
+We make use of the test dataset that was never used in previous steps to evaluate the performance on unseen data which is called _generalization_.  
+
+
+----------
 
 
 ## Data Cleaning
