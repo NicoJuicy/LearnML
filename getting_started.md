@@ -2,7 +2,7 @@
 
 **NOTE:** The Medium and TowardsDataSciene articles are best viewed in a browser Private tab.
 
-## Math 
+## Math
 
 [Learn Data Science For Free](https://medium.com/artificialis/learn-data-science-for-free-fad0aa268c1e)
 
@@ -253,6 +253,6 @@ Automated Machine Learning (AutoML) is an emerging field in which the process of
 
 [2] S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 3rd ed. Upper Saddle River, NJ, USA: Prentice Hall, ISBN: 978-0-13-604259-4, 2010.
 
-[3] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge, v. 3, IEEE, 2014. 
+[3] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge (SWEBOK) v. 3, IEEE, 2014. 
 
 
