@@ -1,15 +1,13 @@
 # AutoML Tools
 
-If you are like me and try to follow the principles of DRY, KISS, and Occam’s Razor then this Gist is for you!
-
-In short, the best model that fits your data is usually the best. 
-
-Be willing to settle for “good enough” rather than trying to find the “best” model/approach. Any other apprach just is not responsible/ethical AI engineering IMHO. 
-
 Automated Machine Learning (AutoML) is an emerging field in which the process of building machine learning models to model data is automated.
 
+Here is a list of tools that I have found to be helpful to an AI/ML engineer
 
-## How to choose ML framework?
+[All Top Python Libraries for Data Science Explained (with Code)](https://towardsdatascience.com/all-top-python-libraries-for-data-science-explained-with-code-40f64b363663)
+
+
+## How to choose an ML framework?
 
 [Keras vs PyTorch for Deep Learning](https://towardsdatascience.com/keras-vs-pytorch-for-deep-learning-a013cb63870d)
 
@@ -205,7 +203,7 @@ In addition, the package includes methods for assessing the explanatory power an
 
 [Kedro — A Python Framework for Reproducible Data Science Project](https://towardsdatascience.com/kedro-a-python-framework-for-reproducible-data-science-project-4d44977d4f04)
 
-Kedro is an open-source Python framework for creating reproducible, maintainable and modular data science code. 
+Kedro is an open-source Python framework for creating reproducible, maintainable, and modular data science code. 
 
 Kedro borrows concepts from software engineering and applies them to machine-learning code such as modularity, separation of concerns, and versioning.
 
@@ -223,13 +221,13 @@ PyMC3 is a Python package for Bayesian statistical modeling and Probabilistic Ma
 
 ### [SageMaker](https://aws.amazon.com/sagemaker/?nc2=h_a1)
 
-SageMaker is a machine learning environment that simplifies the work of any ML developer by providing tools for extra fast model building and deployment.
+SageMaker is a machine learning environment that simplifies the work of an ML developer by providing tools for extra fast model building and deployment.
 
 In 2021, Amazon launched SageMaker Studio, the first integrated IDE for machine learning. It provides a web interface to monitor all possible aspects of the life cycle of an ML model, Jupyter on steroids. Apart from being closely integrated into the AWS cloud it also offers data labeling software and many other features.
 
 ### [MXNet](https://github.com/apache/incubator-mxnet)
 
-Another open-source framework designed to train and deploy deep neural networks with a strong focus on scalability. 
+MXNet is an open-source framework designed to train and deploy deep neural networks with a strong focus on scalability. 
 
 In contrast to the torch and tflow￼ frameworks, MXNet is a child of the Apache foundation and probably the best true open-source framework. 
 
@@ -239,31 +237,42 @@ It is not as popular but still supported by all major clouds and can potentially
 
 ### [ONNX](https://github.com/onnx/onnx)
 
-ONNX is a format to represent machine learning models. The goal here is that future developers are not anymore forced to pick a model that has been trained in their particular framework. And can instead, regardless of what they started using their tools, compilers, and framework of choice. Respectively experiment with new ones, without too much porting work.
+ONNX is a format to represent machine learning models. The goal is that future developers are no longer forced to pick a model that has been trained in their particular framework.
 
-ONNX achieves this goal by specific a common set of operators, basically, the mathematical operations that happen between the different layers and a common file format. 
+ONNX achieves this goal by using a common set of operators (the mathematical operations) that happen between the different layers and a common file format. 
 
-ONNX is backed by pretty much all the big AI players and surely will have a huge impact on the future of ML development. Apart from Google all of the tech giants are partners in this project.
+ONNX is backed by pretty most of the big AI players and is sure to have a huge impact on the future of ML development. Apart from Google all of the tech giants are partners in this project.
 
 
 ### [wandb](https://docs.wandb.ai/)
 
-Weights and biases (W&B/wandb) lets you track, compare, visualize and optimize machine learning experiments with just a few lines of code. 
+Weights and biases (W&B/wandb) lets you track, compare, visualize, and optimize machine learning experiments with just a few lines of code. wandb also lets you track your datasets. 
 
-wandb also lets you track your datasets. 
-
-Use W&B's lightweight, interoperable tools to quickly track experiments, version and iterate on datasets, evaluate model performance, reproduce models, visualize results and spot regressions, and share findings with colleagues. 
+Using W&B's lightweight tools, you can quickly track experiments, version and iterate on datasets, evaluate model performance, reproduce models, visualize results and spot regressions, and share findings with colleagues. 
 
 ### [MLFlow](https://github.com/mlflow/mlflow)
 
 [Tutorial](https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html)
 
-Similar to W&B, MLFlow provides functionality for logging code, models and datasets on which your model has been trained. 
+Similar to W&B, MLFlow provides functionality for logging code, models, and datasets on which your model has been trained. 
 
-MLflow is a platform to streamline machine learning development, including tracking experiments, packaging code into reproducible runs, and sharing and deploying models. 
+MLflow is a platform to streamline machine learning development including tracking experiments, packaging code into reproducible runs, and deploying models. 
 
-MLflow offers a set of lightweight APIs that can be used with any existing machine learning application or library (TensorFlow, PyTorch, XGBoost, etc), wherever you currently run ML code (such as notebooks, standalone applications, or the cloud). 
+MLflow offers a set of lightweight APIs that can be used with any existing machine learning application or library (TensorFlow, PyTorch, XGBoost, etc.) wherever you currently run ML code (such as notebooks, standalone applications, or the cloud). 
 
+### gRPC
+
+The trend now is toward gRPC for microservices since it is more secure, faster, and more robust (especially with IoT).
+
+[gRPC with REST and Open APIs](https://grpc.io/blog/coreos/)
+
+- gRPC was recommended for developing microservices by my professor in Distributed Computing course.
+
+- gRPC uses HTTP/2 which enables applications to present both a HTTP 1.1 REST/JSON API and an efficient gRPC interface on a single TCP port (available for Go). 
+
+- gRPC provides developers with compatibility with the REST web ecosystem while advancing a new, high-efficiency RPC protocol. 
+
+- With the recent release of Go 1.6, Go ships with a stable net/http2 package by default.
 
 ### [Screen](https://linuxize.com/post/how-to-use-linux-screen/)
 
@@ -281,25 +290,33 @@ Streamlit is one of the fastest way to build and share data apps.
 
 All in Python. All for free. No front‑end experience required.
 
+
+
 ## Deep Learning Tools
 
 ### [Hydra](https://hydra.cc/docs/intro/) 
 
-Hydra provides a configuration file for the entire experiment. We can have different parameters to be set. It can be very helpful when we want to share our code with someone else or run the experiments on a different machine. It gives us the flexibility to set the desired configurations like learning rate, model hidden layer sizes, epochs, data set name, etc. without exposing someone to make changes to the actual code.
+Hydra provides a configuration file for the entire experiment. 
+
+Hydra is helpful when we want to share our code with someone else or run the experiments on a different machine. 
+
+Hydra provides the flexibility to set the desired configurations like learning rate, model hidden layer sizes, epochs, data set name, etc. without having to make changes to the actual code.
 
 ### [Pipreqs](https://pypi.org/project/pipreqs/) 
 
-Pipreqs proves quite useful when we want to port our code to a different machine and install all the dependencies. It helps us in creating a list of python dependencies along with the versions that our current working code is using and save them in a file that can be easily installed anywhere else.
+Pipreqs is useful when we want to port our code to a different machine and install all the dependencies. 
+
+Pipreqs helps to create a list of python dependencies along with the versions that the current working code is using and saves them in a file that can be easily installed anywhere.
 
 ### [Loguru](https://loguru.readthedocs.io/en/stable/api/logger.html)
 
-Loguru provides the functionality of a logger to log configuration, experiment name, and other training-related data. This proves to be quite helpful when we do multiple experiments and want to distinguish the results of different experiments. Thus, if we log the actual configuration as well as the results, then it’s easier to map the appropriate setting to the outputs that we got. provides the functionality of a logger to log configuration, experiment name, and other training-related data. 
+Loguru provides the functionality of a logger to log configuration, experiment name, and other training-related data.
 
-This proves to be quite helpful when we do multiple experiments and want to distinguish the results of different experiments. Thus, if we log the actual configuration as well as the results, then it’s easier to map the appropriate setting to the outputs that we got.
+Loguru provides the functionality of a logger to log configuration, experiment name, and other training-related data. 
 
 ### [H5py](https://docs.h5py.org/en/stable/quick.html)
 
-H5py can be used to store all the intermediate loss values in a dictionary mapped to appropriate key which can be loaded to be reused as a python code, as an appropriate object in future for reuse.
+H5py can be used to store all the intermediate loss values in a dictionary mapped to appropriate key which can be loaded to be reused as a python code.
 
 ### Pickle 
 
@@ -307,7 +324,7 @@ Picklecan be used to save and load the python classes or PyTorch models for reus
 
 ### [Tqdm](https://tqdm.github.io/) 
 
-Tqdm can be used with a loop (here we use with a loop over a torch.utils.data.DataLoader object) gives a good picture of time per gradient step or epoch which can help us to set our logging frequency of different results or saving the model or get an idea to set the validation intervals.
+Tqdm can be used with a loop (such as a loop over a torch `DataLoader` object) to provide a picture of time per gradient step or epoch which can help in setting logging frequency of different results, saving the model, or getting an idea of how to set the validation intervals.
 
 
 ## Feature Engineering Tools

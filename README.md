@@ -1,8 +1,15 @@
 # LearnML
 
+If you are like me and try to follow the principles of DRY, KISS, and Occam’s Razor then this repo is for you!
+
+In short, the best model that fits your data is usually the best. 
+
+As an AI/ML engineer, be willing to settle for “good enough” rather than trying to find the “best” model/approach.
+
 This repo contains notes from various articles and other resources on a variety of topics in Artificial Intelligence and Machine Learning.
 
-This is a work in progress (just getting started) so there is still a lot missing.
+This is a work in progress (just getting started), so there is still a lot missing and the content is changing. 
+
 
 [How to Learn AI/ML](./how_to_learn.md)
 
