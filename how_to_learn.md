@@ -2,9 +2,12 @@
 
 [How to Learn Python for Machine Learning](https://machinelearningmastery.com/how-to-learn-python-for-machine-learning/)
 
+**[Do you need a Master’s Degree in Data Science?](https://towardsdatascience.com/do-you-need-a-masters-degree-in-data-science-you-are-asking-the-wrong-question-8c83dec8bf1b?source=rss----7f60cf5620c9---4)**
+
 As a professional AI and software engineer with 25+ years of experience, I have a lot of experience in designing and implementing a variety of software applications and technologies. Thus, I have used and implemented hundreds (perhaps thousands) of various software libraries, frameworks, and APIs. 
 
 I have a M.S. in Mathematics and MSCS in Aritifical Intelligence, so I am more than qualified to mentor and teach computer science and software engineering courses.
+
 
 Since this is an AI forum, I believe most users will have the following assumptions:
 

@@ -82,6 +82,7 @@ So which method should you use?
 
   If the results show spearman rank correlation coefficient is greater than Pearson coefficient, it means your data has monotonic relationships and not linear (see example above).
 
+----------
 
 
 ## Project Definition
@@ -112,7 +113,9 @@ Step 5: Present results
 
 ## How to Select an ML Model?
 
-Every new data scientist finds that they need to decide what that  what model to use for a problem.
+[How to Select an ML Model?](https://www.kdnuggets.com/2021/08/select-initial-model-data-science-problem.html)
+
+Every new ML engineer finds that they need to decide what model to use for a problem.
 
 There are many models to choose from with seemingly endless variants.
 
@@ -124,11 +127,11 @@ The model you choose should do better than simple regression.
 
 This work has already been done for you with the standard python supervised learning packages, so you only need to select what option you want.
 
+The best practice is to evaluate many algorithms (10-20) using an AutoML tool such as Orange or PyCaret then narrow the choices to a few models based on accuracy and create a test harness to fully explore the candidates. 
 
-The best practice is to evaluate many algorithms (10-20) using an AutoML tool such as Orange and PyCaret then narrow the choices to a few models based on accuracy and create a test harness to fully explore the candidates. 
+### Why Simple Models?
 
-
-## Why Simple Models?
+[Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
 
 The two most common regression algorithms are:
 
@@ -139,11 +142,11 @@ Why should you start with these simple models? It is likely that your problem do
 
 Busting out some deep learning model and spending hundreds on AWS fees to get only a slight accuracy bump is not worth it.
 
-These two models have been studied for decades and are some of the most well-understood models in machine learning.
+These two models have been studied for decades and are some of the most well-understood models in ML.
 
 They are easily interpretable. Both models are linear, so their inputs translate to their output in a way that you could calculate by hand.
 
-### Save yourself some headache.
+### Save yourself some headache
    
 Even if you are an experienced data scientist, you should still know the performance of these models on your problem since they are so effortless to implement and test.
 
@@ -154,7 +157,12 @@ To convert regression problem to classificatiom problem, there are two common so
 - Softmax Regression: multiclass classification
 
 
+
 ## Multinomial Logistic Regression (MLR)
+
+[Multinomial Logistic Regression With Python](https://machinelearningmastery.com/multinomial-logistic-regression-with-python/)
+
+[Multinomial Logistic Regression In a Nutshell](https://medium.com/ds3ucsd/multinomial-logistic-regression-in-a-nutshell-53c94b30448f)
 
 Multinomial Logistic Regression is a classification algorithm used to do multiclass classification.
 
@@ -175,6 +183,7 @@ When your MLR models get complicated as you take steps to improve their efficacy
 Create predictions while varying a sole predictor and observe how the prediction changes, and use the nature of these changes to form your conclusions.
 
 
+
 ## Understand Machine Learning Algorithms
 
 You need to know what algorithms are available for a given problem, how they work, and how to get the most out of them. However, this does not mean you need to hand-code the algorithms from scratch.
@@ -186,32 +195,34 @@ In fact, there are many other concepts that are much more important when implmen
 - How to perform data preparation?
 - How to design an ML solution?
 - How to properly train an ML model?
-- How to deploy and ML solution?
+- How to choose a Performance/Error Metric?
+- How to deploy an ML solution?
+- How to debug ML models?
 
 - Parametric vs Nonparametric Algorithms
 - Supervised vs Unsupervised Algorithms
 - The Bias-Variance Trade-Off
+- How to Diagnose/Fix Overfitting and Underfitting?
+
 - Data Preparation Techniques
 - Feature Engineering Techniques
-
-- How to Diagnose/Fix Overfitting and Underfitting?
 - How to create a data pipeline?
 
-- How to deal with small data?
-- How to deal with imbalanced dataset?
-- How to choose a Performance/Error Metric?
-- How to debug ML models?
+- How to deal with small datasets?
+- How to deal with imbalanced datasets?
 
 - Anomaly Detection
 - AutoML
 
-Even if you are an experienced data scientist, you should still know the performance of simpler models on your dataset/problem since they are so effortless to implement and test. In fact, it is considered a best practice to run test datasets to see if your chosen machine learning model outperforms a recognised benchmark.
+Even if you are an experienced data scientist, you should still know the performance of simpler models on your dataset/problem since they are easy to implement and test. 
+
+In fact, it is considered a best practice to run test datasets to see if your chosen machine learning model outperforms a recognized benchmark.
 
 ### Feature Engineering Tools
 
-Feature engineering techniques for machine learning are a fundamental topic in machine learning but one that is often overlooked or deceptively simple.
+Feature engineering (FE) techniques for ML are a fundamental ML topic but one that is often overlooked or deceptively simple.
 
-There are many tools that will help you in automating the entire feature engineering process and producing a large pool of features in a short period of time for both classification and regression tasks.
+There are many tools that will help you to automate the entire FE process and produce a large pool of features in a short period of time for both classification and regression tasks.
 
 ### AutoML Tools
 
@@ -221,15 +232,7 @@ Automated Machine Learning (AutoML) is an emerging field in which the process of
 
 ## References
 
-[How to Select an ML Model?](https://www.kdnuggets.com/2021/08/select-initial-model-data-science-problem.html)
-
 [Gettting Started with Machine Learning](https://machinelearningmastery.com/start-here/)
-
-[Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
-
-[Multinomial Logistic Regression With Python](https://machinelearningmastery.com/multinomial-logistic-regression-with-python/)
-
-[Multinomial Logistic Regression In a Nutshell](https://medium.com/ds3ucsd/multinomial-logistic-regression-in-a-nutshell-53c94b30448f)
 
 [One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
 
@@ -239,7 +242,7 @@ Automated Machine Learning (AutoML) is an emerging field in which the process of
 [Introduction to APIs in Python](https://towardsdatascience.com/quick-fire-guide-to-apis-in-python-891dd98c8877?source=rss----7f60cf5620c9---4)
 
 
-## References
+## More References
 
 [Guide to the Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3)
 
