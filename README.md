@@ -6,6 +6,8 @@ In short, the best model that fits your data is usually the best.
 
 As an AI/ML engineer, be willing to settle for “good enough” rather than trying to find the “best” model/approach.
 
+Please note that I am not a fan of Scrum (which is actually a project management approach rather than a software development methodology) [1]. I prefer using an iterative, agile feature-driven development (FDD) methdology [2] which I have found is more scalable to larger projects. 
+
 This repo contains notes from various articles and other resources on a variety of topics in Artificial Intelligence and Machine Learning.
 
 This is a work in progress (just getting started), so there is still a lot missing and the content is changing. 
@@ -121,4 +123,12 @@ TODO: Add items
 [Datasets](./tips/datasets.md)
 
 [Memory Usage Tips](./tips/memory_usage.md)
+
+
+## Refrences
+
+[1] Software Engineering 10th ed., I.  Sommerville, Pearson, ISBN: 978-0133943030, 2015. 
+
+[2] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge (SWEBOK) v. 3, IEEE, 2014. 
+
 
