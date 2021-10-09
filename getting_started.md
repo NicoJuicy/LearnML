@@ -4,6 +4,8 @@
 
 I highly recommend that you refer to more than one resource (other than acikit-learn, tensorflow, and PyTorch documentation) when learning ML. 
 
+There are some good books on AI/ML on [oreilly.com](https://www.oreilly.com/) that are free to access if you have .edu email account.
+
 ## Math
 
 [Learn Data Science For Free](https://medium.com/artificialis/learn-data-science-for-free-fad0aa268c1e)
