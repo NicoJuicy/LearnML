@@ -131,7 +131,7 @@ The training history of your LSTM models can be used to diagnose the behavior of
 
 During the training of a machine learning model, the current state of the model at each step of the training algorithm can be evaluated. It can be evaluated on the training dataset to give an idea of how well the model is learning. 
 
-You can plot the performance of your model using the Matplotlib library. 
+You can plot the performance of your model using the `matplotlib` library. 
 
 - **Train Learning Curve:** Learning curve calculated from the training dataset that gives an idea of how well the model is learning.
 

@@ -2,6 +2,8 @@
 
 **NOTE:** The Medium and TowardsDataSciene articles are best viewed in a browser Private tab.
 
+I highly recommend that you refer to more than one resource (other than acikit-learn, tensorflow, and PyTorch documentation) when learning ML. 
+
 ## Math
 
 [Learn Data Science For Free](https://medium.com/artificialis/learn-data-science-for-free-fad0aa268c1e)
@@ -93,9 +95,9 @@ So which method should you use?
 
 - Describe the dataset including the input features and target feature(s). 
 
-- It is best practice to share summary statistics of the data including counts of any discrete or categorical features including the target feature. 
+- It is best to share summary statistics of the data including counts of any discrete or categorical features including the target feature. 
 
-- It is also best practice to share the entire dataset (if you want someone to help you then you must be open and honest).
+- It is also best to share the entire dataset (if you want someone to help you then you must be open and honest).
 
 ----------
 
@@ -183,6 +185,8 @@ When your MLR models get complicated as you take steps to improve their efficacy
 Create predictions while varying a sole predictor and observe how the prediction changes, and use the nature of these changes to form your conclusions.
 
 
+----------
+
 
 ## Understand Machine Learning Algorithms
 
@@ -190,12 +194,17 @@ You need to know what algorithms are available for a given problem, how they wor
 
 In fact, there are many other concepts that are much more important when implmenting ML models:
 
-- How to properly define an ML problem?
+- How to define an ML problem?
 - How to select a dataset?
-- How to perform data preparation?
+- Data Preparation Techniques
+- Feature Engineering Techniques
 - How to design an ML solution?
 - How to properly train an ML model?
+
 - How to choose a Performance/Error Metric?
+
+- How to display ML results?
+
 - How to deploy an ML solution?
 - How to debug ML models?
 
@@ -204,8 +213,6 @@ In fact, there are many other concepts that are much more important when implmen
 - The Bias-Variance Trade-Off
 - How to Diagnose/Fix Overfitting and Underfitting?
 
-- Data Preparation Techniques
-- Feature Engineering Techniques
 - How to create a data pipeline?
 
 - How to deal with small datasets?

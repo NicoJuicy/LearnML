@@ -94,6 +94,8 @@ Exploratory Data Analysis (EDA) is one of the first steps of the data science pr
 
 [Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
 
+[ML Guide Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html)
+
 Data cleaning refers to identifying and correcting errors in the dataset that may negatively impact a predictive model.
 
 - Identify Columns That Contain a Single Value
@@ -528,7 +530,7 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [Data Science Primer](https://elitedatascience.com/primer)
 
-[Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#)
+[ML Guide Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html)
 
 [Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
 

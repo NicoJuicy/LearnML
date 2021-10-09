@@ -97,7 +97,6 @@ plt.axis('off')
 plt.title("Fourth")
 ```
 
-
 ## Plot images side by side using matplotlib
 
 ```py
@@ -107,6 +106,7 @@ for img, ax in zip(imgs, axs):
     ax.imshow(img)
 plt.show()
 ```
+
 
 ## Visualize a batch of image data
 
