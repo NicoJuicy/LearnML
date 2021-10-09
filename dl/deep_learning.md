@@ -1,15 +1,5 @@
 ## Deep Learning
 
-[Deep Learning (Keras)](https://machinelearningmastery.com/start-here/#deeplearning)
-
-[Better Deep Learning Performance](https://machinelearningmastery.com/start-here/#better)
-
-[How To Improve Deep Learning Performance](https://machinelearningmastery.com/improve-deep-learning-performance/)
-
-[How to Choose Loss Functions When Training Deep Learning Neural Networks](https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/)
-
-[Understand the Impact of Learning Rate on Neural Network Performance](https://machinelearningmastery.com/understand-the-dynamics-of-learning-rate-on-deep-learning-neural-networks/)
-
 
 ## Challenge of Training Deep Learning Neural Networks
 
@@ -86,5 +76,21 @@ Some neural networks are too big to use. There is a way to make them smaller but
 
 1. Pruning
 2. Knowledge distillation
+
+
+## References
+
+[Deep Learning (Keras)](https://machinelearningmastery.com/start-here/#deeplearning)
+
+[Better Deep Learning Performance](https://machinelearningmastery.com/start-here/#better)
+
+[How To Improve Deep Learning Performance](https://machinelearningmastery.com/improve-deep-learning-performance/)
+
+[How to Choose Loss Functions When Training Deep Learning Neural Networks](https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/)
+
+[Importance of Loss functions in Deep Learning](https://towardsdatascience.com/importance-of-loss-functions-in-deep-learning-and-python-implementation-4307bfa92810?gi=6295a1b1892)
+
+[Understand the Impact of Learning Rate on Neural Network Performance](https://machinelearningmastery.com/understand-the-dynamics-of-learning-rate-on-deep-learning-neural-networks/)
+
 
 

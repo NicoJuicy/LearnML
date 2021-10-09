@@ -1,7 +1,5 @@
 # Imbalanced Classification
 
-[A Gentle Introduction to Imbalanced Classification](https://machinelearningmastery.com/what-is-imbalanced-classification/) 
-
 An imbalanced classification problem is a problem that involves predicting a class label where the distribution of class labels in the training dataset is skewed (there are many more examples for one class than the other classes). 
 
 Many real-world classification problems have an imbalanced class distribution, so it is important for ML engineers to be familiar with working with these types of problems.
@@ -26,13 +24,13 @@ A training dataset is a number of examples from the domain that include both the
 
 Depending on the complexity of the problem and the types of models we choose, we may need tens, hundreds, thousands, or even millions of exampled from the domain to constitute a training dataset.
 
-The training dataset is used to better understand the input data to help best prepare it for modeling:
+The training dataset is used to better understand the input data to help best prepare it for modeling to:
 
-- to evaluate a suite of different modeling algorithms
+- Evaluate a suite of different modeling algorithms
 
-- to tune the hyperparameters of a chosen model
+- Tune the hyperparameters of a chosen model
 
-- to train a final model on all available data that we can use to make predictions for new samples from the problem domain
+- Train a final model on all available data that we can use to make predictions for new samples from the problem domain
 
 
 
@@ -107,19 +105,25 @@ Imbalanced classification remains an open problem generally and practically must
 
 ## How to Handle Imbalanced Classes?
 
-[8 Tactics to Combat Imbalanced Classes in Your Machine Learning Dataset](https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/)
-
 Imbalanced data typically refers to a problem with classification problems where the classes are not represented equally.
 
-- Can You Collect More Data?
-- Try Changing Your Performance Metric
-- Try Different Algorithms
-- Try Penalized Models
-- Try a Different Perspective
+1. Can You Collect More Data?
+2. Try Changing Your Performance Metric
+3. Try Different Algorithms
+4. Try Penalized Models
+5. Try a Different Perspective
 
-- Try Resampling Your Dataset
-- Try Generating Synthetic Samples
-- Try Getting Creative
+6. Try Resampling Your Dataset
+7. Try Generating Synthetic Samples
+8. Try Getting Creative
+
+### Can You Collect More Data?
+
+Consider whether you are able to gather more data.
+
+A larger dataset may expose a more balanced perspective of the classes.
+
+More examples of the minor classes may be useful later for resampling the dataset.
 
 ### Try Changing Your Performance Metric
 
@@ -199,9 +203,9 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 
 
 
-## [How To Deal With Imbalanced Classification Without Rebalancing the Data](https://www.kdnuggets.com/2021/09/imbalanced-classification-without-re-balancing-data.html)
+## How To Handle With Imbalanced Classification Without Rebalancing?
 
-When building a ML classification model with data having far more instances of one class than another, the initial default classifier is often unsatisfactory because it classifies almost every sample as the majority class. 
+When building a ML classification model using data with more instances of one class than another, the initial default classifier is often unsatisfactory because it classifies almost every sample as the majority class. 
 
 Many articles show you how you could use oversampling (SMOTE) or undersampling or simply class-based sample weighting to retrain the model on “rebalanced” data, but this is not always necessary. 
 
@@ -244,7 +248,14 @@ Instead of naïvely or implicitly applying a default threshold of 0.5 or immedia
 
 ## References
 
+[A Gentle Introduction to Imbalanced Classification](https://machinelearningmastery.com/what-is-imbalanced-classification/) 
+
 [Step-By-Step Framework for Imbalanced Classification Projects](https://machinelearningmastery.com/framework-for-imbalanced-classification-projects/)
+
+[8 Tactics to Combat Imbalanced Classes in Your Machine Learning Dataset](https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/)
+
+[How To Deal With Imbalanced Classification Without Rebalancing the Data](https://www.kdnuggets.com/2021/09/imbalanced-classification-without-re-balancing-data.html)
+
 
 [Standard Machine Learning Datasets for Imbalanced Classification](https://machinelearningmastery.com/standard-machine-learning-datasets-for-imbalanced-classification/)
 

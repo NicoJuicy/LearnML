@@ -13,6 +13,9 @@ This tutorial explains how you can read five different types of data file format
 
 How to generate fake data using the Faker library. 
 
+## [ML Cheatsheet Dataset List](https://ml-cheatsheet.readthedocs.io/en/latest/datasets.html)
+
+List of public datasets in computer vision, NLP, and more.
 
 
 ## [huggingface](https://github.com/huggingface/datasets)
