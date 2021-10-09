@@ -1,8 +1,6 @@
 # Exploratory Data Analysis (EDA)
 
-## Exploratory Data Analysis Example
-
-[How to build a Machine Learning (ML) based Predictive System](https://towardsdatascience.com/machine-learning-ml-based-predictive-system-to-predict-the-satisfaction-level-of-airlines-f0780dbdbc87?source=rss----7f60cf5620c9---4)
+## EDA Example
 
 Check the summary statistics and create histograms for the numeric variables of the dataset as presented in the code below.
 
@@ -70,6 +68,13 @@ It is important to know how to extract information from descriptive statistics.
     
     # drop duplicate column
     df_X.drop(['TEST1', 'TEST2'], axis=1)
+    
+    pd.DataFrame({"values":{col:df[col].unique() for col in df},
+              'type':{col:df[col].dtype for col in df},
+              'unique values':{col:len(df[col].unique()) for col in df},
+              'NA values':{col:str(round(sum(df[col].isna())/len(df),2))+'%' for col in df},
+              'Duplicated Values':{col:sum(df[col].duplicated()) for col in df}
+              })
 ```
 
 ### Statistical Distribution
@@ -134,8 +139,6 @@ So far we have investigated descriptive statistics for numeric variables. Python
 
 
 ## Essential Code Blocks
-
-[11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
 
 Exploratory Data Analysis (EDA) is one of the first steps of the data science process which involves learning as much as possible about the data without spending too much time. 
 
@@ -251,114 +254,8 @@ What to look for:
 ----------
 
 
-# A Practical Guide to Linear Regression
-
-Linear regression is a typical regression algorithm that is responsible for numerous prediction. 
-
-In a nutshell, a linear regression finds the optimal linear relationship between independent variables and dependent variables, then makes prediction accordingly.
-
-## Exploratory Data Analysis (EDA)
-
-EDA is essential to both investigate the data quality and reveal hidden correlations among variables.
-
-1. Univariate Analysis
-
-Visualize the data distribution using histogram for numeric variables and bar chart for categorical variables.
-
-### Why do we need univariate analysis?
-
-- Determine if dataset contains outliers
-
-- Detrmine if we need data transformations or feature engineering
-
-In this case, we found out that “expenses” follows a power law distribution, which means that log transformation is required as a step of feature engineering step, to convert it to normal distribution.
-
-2. Multivariate Analysis
-
-When thinking of linear regression, the first visualization technique that we can think of is scatterplot. 
-
-By plotting the target variable against the independent variables using a single line of code `sns.pairplot(df)`, the underlying linear relationship becomes more evident.
-
-3. Correlation Analysis
-
-Correlation analysis examines the linear correlation between variable pairs which can be achieved by combining `corr()` function with `sns.heatmap()`. 
-
-### Why do we need correlation analysis?
-
-- To identify collinearity between independent variables — linear regression assumes no collinearity among independent features, so it is essential to drop some features if collinearity exists. 
-
-- To identify independent variables that are strongly correlated with the target — strong predictors.
-
-## Feature Engineering
-
-EDA brought some insights of what types of feature engineering techniques are suitable for the dataset.
-
-1. Log Transformation
-
-We  found that the target variable  “expenses” is right skewed and follows a power law distribution. 
-
-Since linear regression assumes linear relationship between input and output variable, it is necessary to use log transformation to “expenses” variable. 
-
-As shown below, the data tends to be more normally distributed after applying `np.log2()`.
-
-2. Encoding Categorical Variable
-
-Another requirement of machine learning algorithms is to encode categorical variable into numbers.
-
-Two common methods are one-hot encoding and label encoding. 
-
-
-## Model Implementation
-
-A simple linear regression y = b0 + b1x predicts relationship between one independent variable x and one dependent variable y. 
-
-As more features/independent variables are introduced, it becomes multiple linear regression y = b0 + b1x1 + b2x2 + … + bnxn, which cannot be easily plotted using a line in a two dimensional space.
-
-Here we use `LinearRegression()` class from scikit-learn to implement the linear regression. 
-
-We specify `normalize = True` so that independent variables will be normalized and transformed into same scale. 
-
-Note that scikit-learn linear regression utilizes **Ordinary Least Squares** to find the optimal line to fit the data which means the line, defined by coefficients b0, b1, b2 … bn, minimizes the residual sum of squares between the observed targets and the predictions (the blue lines in chart). 
-
-
-## Model Evaluation
-
-Linear regression model can be qualitatively evaluated by visualizing error distribution. 
-
-There are also quantitative measures such as MAE, MSE, RMSE and R squared.
-
-1. Error Distribution
-
-Here we use a histogram to visualize the distribution of error which should somewhat conform to a normal distribution. 
-
-A non-normal error distribution may indicates that there is non-linear relationship that model failed to pick up or more data transformations are needed.
-
-2. MAE, MSE, RMSE
-
-All three methods measure the errors by calculating the difference between predicted values ŷ and actual value y, so the smaller the better. 
-
-The main difference is that MSE/RMSE penalized large errors and are differentiable whereas MAE is not differentiable which makes it hard to apply in gradient descent. 
-
-Compared to MSE, RMSE takes the square root which maintains the original data scale.
-
-3. R Squared
-
-R squared or _coefficient of determination_ is a value between 0 and 1 that indicates the amount of variance in actual target variables explained by the model. 
-
-R squared is defined as 1 — RSS/TSS which is 1 minus the ratio between sum of squares of residuals (RSS) and total sum of squares (TSS). 
-
-Higher R squared means better model performance.
-
-In this case, a R squared value of 0.78 indicating that the model explains 78% of variation in target variable, which is generally considered as a good rate and not reaching the level of overfitting.
-
-
-----------
-
-
 
 # Essential Code Blocks
-
-[11 Essential Code Blocks for Complete EDA](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
 
 ## Basic data set Exploration
 
@@ -525,4 +422,69 @@ What to look out for:
 - Target variable: if it has strong positive or negative relationships with other features.
 
 
+---------
+
+
+## How to Identify Outliers?
+
+Many machine learning algorithms are sensitive to the range and distribution of the input data.
+
+Outliers in input data can affect the training process of ML algorithms abd result in less accurate models.
+
+### Extreme Value Analysis
+
+Start with a simple extreme value analysis:
+
+- Focus on univariate methods
+
+- Visualize the data using scatterplots, histograms, and box and whisker plots to identify extreme values
+
+- Assume a normal distribution (Gaussian) and look for values more than 2 or 3 standard deviations from the mean or 1.5 times from the first or third quartile
+
+- Filter out outliers from training set and evaluate model performance
+
+### Proximity Methods
+
+Next, consider trying proximity-based methods:
+
+- Use clustering methods to identify clusters in the data (such as k-Means and DBSCAN)
+
+- Identify and mark the cluster centroids
+
+- Identify data instances that are a fixed distance or percentage distance from the cluster centroids
+
+- Filter out outliers from training set and evaluate model performance
+
+### Projection Methods
+
+Finally, projection methods can be used to  identify outliers:
+
+- Use projection methods to summarize your data to two dimensions (such as PCA, MDS, and t-SNE)
+
+- Visualize the mapping and identify outliers
+
+- Use proximity measures from projected values or vectors to identify outliers
+
+- Filter out outliers from training set and evaluate model performance
+
+### Methods Robust to Outliers
+
+An alternative approach is to try models that are robust to outliers. 
+
+There are robust forms of regression that minimize the median least square errors rather than mean called robust regression but they are more computationally intensive. 
+
+There are also models such as decision trees that are robust to outliers.
+
+Spot check some methods that are robust to outliers to see if there is a significant improvement in model performance metrics.
+
+
+
+
+## References
+
+[How to build a Machine Learning (ML) Predictive System](https://towardsdatascience.com/machine-learning-ml-based-predictive-system-to-predict-the-satisfaction-level-of-airlines-f0780dbdbc87?source=rss----7f60cf5620c9---4)
+
+[11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
+
+[How to Identify Outliers in your Data](https://machinelearningmastery.com/how-to-identify-outliers-in-your-data/)
 
