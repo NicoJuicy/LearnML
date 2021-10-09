@@ -1,5 +1,7 @@
 # AI Checklists
 
+## Feature Engineering
+
 [Feature engineering A-Z](https://towardsdatascience.com/feature-engineering-a-z-aa8ce9639632)
 
 A checklist for transforming features for better model performance. 
@@ -11,12 +13,55 @@ If done correctly, feature engineering can play even a bigger role in model perf
 [Dimensionality Reduction Explained](https://towardsdatascience.com/dimensionality-reduction-explained-5ae45ae3058e)
 
 This article explains and implements PCA in Python. 
+ 
+
+## When You Should not use ML?
+
+[4 Reasons Why You Shouldn’t Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11?source=rss----7f60cf5620c9---4&gi=204e8d695029)
+
+1. Data-related issues
+
+In the [AI hierarchy of needs](https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007), it is important that you have a robust process for collecting, storing, moving, and transforming data. Otherwise, GIGO. 
+
+Not only do you need your data to be **reliable** but you need **enough** data to leverage the power of machine learning. 
+
+2. Interpretability
+
+There are two main categories of ML models: 
+
+- Predictive models focus on the model’s ability to produce accurate predictions.
+
+- Explanatory models focus more on understanding the relationships between the variables in the data.
+
+ML models (especially ensemble models and neural networks) are predictive models that are much better at predictions than traditional models such as linear/logistic regression.
+
+However, when it comes to understanding the relationships between the predictive variables and the target variable, these models are a black box. You may understand the underlying mechanics behind these models, but it is still not clear how they get to their final results.
+
+In general, ML and deep learning models are great for prediction but lack  explainability.
+
+3. Technical Debt
+
+Maintaining ML models over time can be challenging and expensive. 
+
+There are several types of “debt” to consider when maintaining ML models:
+
+- Dependency debt: The cost of maintaining multiple versions of the same model, legacy features, and underutilized packages.
+
+- Analysis debt: This refers to the idea that ML systems often end up influencing their own behavior if they update over time, resulting in direct and hidden feedback loops.
+
+- Configuration debt: The configuration of ML systems  also incur a debt similar to any software system. 
+
+4. Better Alternatives
+
+ML should not be used when simpler alternatives exist that are equally as effective. 
+
+You should start with the simplest solution that you can implement and iteratively determine if the marginal benefits from the next best alternative outweighs the marginal costs.
+
+Simpler = Better (Occam's Razor)
 
 
 
 ## AI Checklist
-
-[AI Checklist](https://towardsdatascience.com/the-ai-checklist-fe2d76907673)
 
 A checklist for transforming features for better model performance
 
@@ -207,4 +252,14 @@ The lifecycle of an AI project can be divided into 6 stages:
 10. Verify unnecessary calibration layers have been removed.
 
 11. Verify there is monitoring to detect slow poisoning of the model due to intermittent errors.
+
+
+## References
+
+[AI Checklist](https://towardsdatascience.com/the-ai-checklist-fe2d76907673)
+
+[Machine Learning Performance Improvement Cheat Sheet](https://machinelearningmastery.com/machine-learning-performance-improvement-cheat-sheet/)
+
+[Deploy Your Predictive Model To Production](https://machinelearningmastery.com/deploy-machine-learning-model-to-production/)
+
 
