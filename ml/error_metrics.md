@@ -1,20 +1,31 @@
 # Machine Learning Error Metrics
 
+There are several standard methods to evaluate the performance of ML models. 
+
 ## Performance Metrics For Classification
+
+Here are the common performance measures for classification problems:
 
 - Accuracy
 - Precision and Recall
 - F1 Score
+- Receiver operating curve (ROC)
+- Area under ROC (AUC)
+
+- Logarithmic loss
+- Confusion matrix (binary classification)
+- Classification report
 
 ## Performance Metrics For Regression
 
-The metrics such as accuracy, precision, recall and F1 score are only applicable only if the problem is classification. 
+Here are the common performance measures for regression problems:
 
 - Mean absolute error (MAE)
 - Mean square error (MSE) 
 - Root mean squared error (RMSE)
 - Mean absolute percentage error (MAPE)
 - Mean percentage error (MPE)
+- R^2
 
 If you are going to use a relative measure of error (MPE/MAPE) rather than an absolute measure of error (MAE/MSE), you you must be wary of data that will work against the calculation (zeroes).
 
@@ -26,13 +37,16 @@ In a sense, MAE is similar to mean, MSE is similar to variance, and RMSE is simi
 
 When values can be zero, accuracy (MPE/MAPE) does not make sense. If you exclude the zero values then the calculation is meaningless (the calculation must be done on all the values).
 
+----------
 
 
 ## Confidence Intervals
 
 [How to Calculate Bootstrap Confidence Intervals For Machine Learning Results in Python](https://machinelearningmastery.com/calculate-bootstrap-confidence-intervals-machine-learning-results-python/)
 
-It is important to present the expected skill of a machine learning model as well as confidence intervals for that model.
+[How to Report Classifier Performance with Confidence Intervals](https://machinelearningmastery.com/report-classifier-performance-confidence-intervals/)
+
+It is important to present the expected skill of a machine learning model as well as confidence intervals for the model.
 
 Confidence intervals are a way of quantifying the uncertainty of an estimate which can be used to add a bounds or likelihood on a population parameter such as mean or standard deviation that is estimated from a sample of independent observations from the population. 
 
@@ -60,8 +74,6 @@ Confidence intervals may be preferred in practice over the use of statistical si
 
 ### Classifier Error with Confidence Intervals
 
-[How to Report Classifier Performance with Confidence Intervals](https://machinelearningmastery.com/report-classifier-performance-confidence-intervals/)
-
 Rather than presenting just a single error score, a confidence interval can be calculated and presented as part of the model skill.
 
 A confidence interval is comprised of two things:
@@ -69,6 +81,7 @@ A confidence interval is comprised of two things:
 - Range. This is the lower and upper limit on the skill that can be expected on the model.
 
 - Probability. This is the probability that the skill of the model will fall within the range.
+
 In general, the confidence interval for classification error can be calculated as follows:
 
 ```
@@ -124,7 +137,6 @@ There is a 95% likelihood that the confidence interval [0.0, 0.0588] covers the 
 
 Notice that the confidence intervals on the classification error must be clipped to the values 0.0 and 1.0. It is impossible to have a negative error (e.g. less than 0.0) or an error more than 1.0.
 
-
 ### Nonparametric Confidence Interval
 
 Often we do not know the distribution for a chosen performance measure. In this case, we may not know the analytical way to calculate a confidence interval for a skill score.
@@ -150,12 +162,9 @@ There is a 95% likelihood that the range 0.741 to 0.757 covers the true statisti
 
 
 
-[Understand Time Series Forecast Uncertainty Using Prediction Intervals with Python](https://machinelearningmastery.com/time-series-forecast-uncertainty-using-confidence-intervals-python/)
-
-[Confidence Intervals for Machine Learning](https://machinelearningmastery.com/confidence-intervals-for-machine-learning/)
-
-
 ## References
+
+[Performance analysis of models](https://mclguide.readthedocs.io/en/latest/sklearn/performance.html)
 
 [Evaluation Metrics for Machine Learning](https://towardsdatascience.com/evaluation-metrics-for-machine-learning-2167fca1a291?gi=2512e2b9b1c0)
 
@@ -165,7 +174,13 @@ There is a 95% likelihood that the range 0.741 to 0.757 covers the true statisti
 
 [An Overview of Performance Evaluation Metrics of Machine Learning (Classification) Algorithms](https://towardsdatascience.com/an-overview-of-performance-evaluation-metrics-of-machine-learning-classification-algorithms-7a95783a762f?gi=884943f12b27)
 
-[Importance of Loss functions in Deep Learning](https://towardsdatascience.com/importance-of-loss-functions-in-deep-learning-and-python-implementation-4307bfa92810?gi=6295a1b1892)
+### Confidence Intervals
+
+[Understand Time Series Forecast Uncertainty Using Prediction Intervals with Python](https://machinelearningmastery.com/time-series-forecast-uncertainty-using-confidence-intervals-python/)
+
+[Confidence Intervals for Machine Learning](https://machinelearningmastery.com/confidence-intervals-for-machine-learning/)
+
+
 
 [PSI and CSI: Top 2 model monitoring metrics](https://towardsdatascience.com/psi-and-csi-top-2-model-monitoring-metrics-924a2540bed8?gi=7d4c901abece)
 
