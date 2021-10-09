@@ -32,6 +32,8 @@ Here is how to get started with machine learning algorithms:
 
 [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
+[Algorithms](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#algorithms)
+
 There are two common approaches of categorizing ML algorithms which you will come across.
 
 - Grouping of algorithms by learning style
@@ -94,11 +96,23 @@ This is perhaps the most useful way to group algorithms and it is the approach w
 
 This is a useful grouping method but it is not perfect. However, there are algorithms that could just as easily fit into multiple categories.
 
+### Classification Algorithms
+
+Classification is when the output Y is categorical such as positive vs negative (sentiment analysis), dog vs cat (image classification), and disease vs no disease (medical diagnosis).
+
+Linear: Logistic Regression, Linear Discriminant Analysis (LDA)
+
+Non-linear: K-nearest neighbor, Support vector machines (SVM), Naive Bayes, Decision Tree
+
 ### Regression Algorithms
 
 **Regression** is concerned with modeling the relationship between variables that is iteratively refined using a measure of error in the predictions made by the model.
 
 Regression methods are a workhorse of statistics and have been applied to statistical machine learning. 
+
+Linear: Linear regression, Ridge, LASSO, Elastic-net
+
+Non-linear: K-nearest neighbor, Support vector machines (SVM), Decision Tree
 
 The most common regression algorithms are:
 
@@ -340,6 +354,9 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 - Only capture the algorithm properties you actually need, keep it as simple as possible.
 
 
+----------
+
+
 ## Orange Algorithm List
 
 ### Regression
@@ -353,7 +370,6 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 - Naive Bayes
 - Correspondence Analysis (multivariate)
 
-
 ### Classification and Regression
 
 - AdaBoost
@@ -365,10 +381,10 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 
 ### Dimensionality Refuction
 
-- t-SNE
-- Manifold Learning
 - PCA
 - MDS
+- t-SNE
+- Manifold Learning
 
 ### Clustering
 
