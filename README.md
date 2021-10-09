@@ -81,6 +81,12 @@ TODO: Add items
  
 [Natural Language Understanding](./nlp/nlu.md)
 
+
+## Reinforcement Learning
+
+[Reinforcement Learning](./ml/rl.md)
+
+
 ## ML Guides
 
 [Applied Machine Learning Process](./process/applied_ml.md)
@@ -125,9 +131,9 @@ TODO: Add items
 [Memory Usage Tips](./tips/memory_usage.md)
 
 
-## Refrences
+## References
 
-[1] Software Engineering 10th ed., I.  Sommerville, Pearson, ISBN: 978-0133943030, 2015. 
+[1] I.  Sommerville, Software Engineering 10th ed., Pearson, ISBN: 978-0133943030, 2015. 
 
 [2] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge (SWEBOK) v. 3, IEEE, 2014. 
 
