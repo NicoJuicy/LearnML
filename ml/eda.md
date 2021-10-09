@@ -486,5 +486,12 @@ Spot check some methods that are robust to outliers to see if there is a signifi
 
 [11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
 
+
 [How to Identify Outliers in your Data](https://machinelearningmastery.com/how-to-identify-outliers-in-your-data/)
+
+[Detecting Outliers Using Python](https://towardsdatascience.com/detecting-outliers-using-python-66b25fc66e67)
+
+[Huber and Ridge Regressions in Python: Dealing with Outliers](https://towardsdatascience.com/huber-and-ridge-regressions-in-python-dealing-with-outliers-dc4fc0ac32e4?gi=c292a23ceab7)
+
+[Use k-medians clustering method if you have many outliers](https://towardsdatascience.com/use-this-clustering-method-if-you-have-many-outliers-5c99b4cd380d?gi=5c97a562ff04)
 
