@@ -108,7 +108,6 @@ In this case, a R squared value of 0.78 indicating that the model explains 78% o
 ----------
 
 
-
 # Guide to Logistic Regression
 
 Logistic regression is a good starting point when dealing with classification problems and can be considered the _baseline_ model. 
