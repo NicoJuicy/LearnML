@@ -12,12 +12,11 @@ Thus, we need to make sure that the orientation of the line segments in the char
 
 Here, the median absolute slope banking method has been used to calculate the aspect ratio for the sunspots plot. ￼
 
-The ggthemes package provides a function called bank_slopes() to calculate the aspect ratio of the plot which takes x and y values as the two arguments. The default method is the median absolute slope banking. 
+The `ggthemes` package provides a function called bank_slopes() to calculate the aspect ratio of the plot which takes x and y values as the two arguments. The default method is the median absolute slope banking. 
 
 ### Best practices:
 
 - **Plotting multiple line graphs for comparison on a single chart:** The default aspect ratio works only if you do not plan to compare two different plots.
-
 
 - **Comparing different line graphs from different charts:** Make sure the aspect ratio for each plot remains the same. Otherwise, the visual interpretation will be skewed. 
 
@@ -28,6 +27,15 @@ The ggthemes package provides a function called bank_slopes() to calculate the a
 **Time-series:** It is best to calculate the aspect ratio since some hidden information can be more pronounced when using the correct aspect ratio for the plot.
 
 
+## Run ML model training/evaluation with TMUX
+
+`tmux` can be used when you want to detach processes from their controlling terminals which allows remote sessions to remain active without beingvisible.
 
 
+## Watch your training and GPU resources
 
+```bash
+  watch -n nvidia-smi
+  nvtop
+  gpustat
+```
