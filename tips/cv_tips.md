@@ -112,16 +112,6 @@ for img_path in images:
   find -name *.png -type | wc -l
 ```
 
-## tmux
-
-[How To Install And Use tmux On Ubuntu 12.10](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-tmux-on-ubuntu-12-10--2)
-
-tmux is a terminal multiplexer that allows you to access a tmux terminal using multiple virtual terminals.
-
-This means that you can run several terminals at once concurrently off of a single tmux session without spawning any new actual terminal sessions.
-
-This also means that sudden disconnects from a cloud server running tmux will not kill the processes running inside the tmux session.
-
 
 ## Video/Image manipulation using ffmpeg
 
