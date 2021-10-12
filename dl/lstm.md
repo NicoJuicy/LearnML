@@ -131,6 +131,8 @@ In fact, models such as MLPs, CNNs, and LSTMs offer a lot of promise for time se
 [Comparing Classical and Machine Learning Algorithms for Time Series Forecasting](https://machinelearningmastery.com/findings-comparing-classical-and-machine-learning-methods-for-time-series-forecasting/)
 
 
+
+
 ### Model Types
 
 How to Develop MLPs for Time Series Forecasting
