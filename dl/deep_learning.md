@@ -78,6 +78,28 @@ Some neural networks are too big to use. There is a way to make them smaller but
 2. Knowledge distillation
 
 
+
+### Number of hidden layers and nodes
+
+The number of hidden layers depends on the complexity of the task. Very complex tasks (such as large image classification or speech recognition) usually require networks with dozens of layers and a huge amount of training data. 
+
+For the majority of the problems, we can start with just one or two hidden layers and7 gradually ramp up the number of hidden layers until we start overfitting the training set.
+
+The number of hidden nodes should have a relationship to the number of input and output nodes, the amount of training data available, and the complexity of the function being modeled. As a rule of thumb, the number of hidden nodes in each layer should be somewhere between the size of the input layer and the size of the output layer, ideally the mean. 
+
+The number of hidden nodes should not exceed twice the number of input nodes in order to avoid overfitting.
+
+### Batch size
+
+The batch size is the number of training examples in one forward/backward pass. 
+
+A batch size of 32 means that 32 samples from the training dataset will be used to estimate the error gradient before the model weights are updated. 
+
+The higher the batch size, the more memory space that is needed.
+
+There are some hyperparameterss that often have optimal values in base 2 such as batch_size mainly because it affects the data size that is fetched to/from memory by hardware that is base 2.
+
+
 ## References
 
 [Deep Learning (Keras)](https://machinelearningmastery.com/start-here/#deeplearning)
