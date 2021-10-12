@@ -53,9 +53,24 @@ Once you have mastered using ML algorithms, you can go back later and try to und
 In addition, a shift in mindset is required to be effective at machine learning from trying to find the “best” model/approach to “good enough”. 
 
 
+## Tutorials and Books
+
+Choosing a ML learning resource is primarliy a matter of personal preference. In geneal, I recommend that you refer to more than one resource (other than scikit-learn, tensorflow, and PyTorch documentation) when learning ML. 
+
+If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has two good books for beginners that are available “Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow” and “Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow”. I also found the "Pragmatic Bookshelf" series to be helpful including "Programming Machine Learning". There are also many other good books on various AI/ML topics available on oreilly.com
+
+**NOTE:** The Medium and TowardsDataSciene articles are best viewed in a browser Private tab.
+
+[Getting Started Guides](https://machinelearningmastery.com/start-here/)
+
+[oreilly.com](https://www.oreilly.com/)
+
+Every professional software engineer should be able to navigate the [SWEBOK](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3) and learn the key software engineering concepts that it contains since IEEE is the de facto authority on software and hardware technologies. 
+
+
 ## Consulting and Freelance
 
-If you ever do consulting or freelance work in the U.S. for $$; you should be aware that there are legal implications and I found XXX to be clear, concise resource on the topic. I am sure there are similar rules and regulations in the EU and elsewhere. 
+If you ever do consulting or freelance work in the U.S. for $$; you should be aware that there are legal implications and I found XXX to be clear, concise resource on the topic. I am sure there are similar rules and regulations in the EU and elsewhere.
 
 
 ## References

@@ -7,6 +7,17 @@ If you are going to spend the time to study AI/ML then you might as well invest 
 [Do you need a Master’s Degree in Data Science?](https://towardsdatascience.com/do-you-need-a-masters-degree-in-data-science-you-are-asking-the-wrong-question-8c83dec8bf1b?source=rss----7f60cf5620c9---4)
 
 
+## Recommended Tutorials and Books
+
+Choosing a ML learning resource is primarliy a matter of personal preference. In geneal, I recommend that you refer to more than one resource (other than scikit-learn, tensorflow, and PyTorch documentation) when learning ML. 
+
+If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has two good books for beginners that are available “Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow” and “Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow”. There also many other good books on various AI/ML topics available on oreilly.com
+
+[Getting Started Guides](https://machinelearningmastery.com/start-here/)
+
+[oreilly.com](https://www.oreilly.com/)
+
+
 ## How to Choose an ML Algorithm?
 
 Every new ML engineer finds that they need to decide what model to use for a problem.
