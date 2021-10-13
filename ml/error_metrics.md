@@ -16,6 +16,8 @@ Here are the common performance measures for classification problems:
 - Confusion matrix (binary classification)
 - Classification report
 
+For a classification problem, it is common to compute all of the following metrics: Accuracy, Precision and Recall, and AUC. 
+
 ## Performance Metrics For Regression
 
 Here are the common performance measures for regression problems:
@@ -27,15 +29,18 @@ Here are the common performance measures for regression problems:
 - Mean percentage error (MPE)
 - R^2
 
-If you are going to use a relative measure of error (MPE/MAPE) rather than an absolute measure of error (MAE/MSE), you you must be wary of data that will work against the calculation (zeroes).
+For a regression problem, it is common to compute all of the following metrics: MAE, RMSE, MAPE, and R^2. 
 
-In mathematics, accuracy is a kind of relative error which is undefined when the denominator (true value) is zero. Thus, you cannot compute accuracy when the true values are zero. [CRC Mathematical Tables 33 ed, p. 646]
+If you are going to use a relative measure of error (MPE/MAPE) rather than an absolute measure of error (MAE/MSE), you must be wary of data that will work against the calculation (zeroes).
+
+In mathematics, accuracy is a kind of _relative error_ which is undefined when the denominator (true value) is zero. Thus, you cannot compute accuracy when the true values can be zero. [CRC Mathematical Tables 33 ed, p. 646]
 
 Therefore, you should use MAE and MSE to evaluate your model when the true value can be zero. 
 
 In a sense, MAE is similar to mean, MSE is similar to variance, and RMSE is similar to standard deviation.
 
-When values can be zero, accuracy (MPE/MAPE) does not make sense. If you exclude the zero values then the calculation is meaningless (the calculation must be done on all the values).
+When values can be zero, accuracy (MPE/MAPE) does not make sense. If you exclude the zero values then the calculation is meaningless (the error metric must be computed on all the samples).
+
 
 ----------
 
