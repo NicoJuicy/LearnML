@@ -18,77 +18,6 @@ If you have an .edu email account you can get free access to [oreilly.com](https
 [An Introduction To Recurrent Neural Networks And The Math That Powers Them](https://machinelearningmastery.com/an-introduction-to-recurrent-neural-networks-and-the-math-that-powers-them/)
 
 
-## Statistics
-
-[What does RMSE really mean?](https://towardsdatascience.com/what-does-rmse-really-mean-806b65f2e48e)
-
-[Reasoning under Uncertainty (Chapters 13 and 14.1 - 14.4)](http://pages.cs.wisc.edu/~dyer/cs540/notes/uncertainty.html)
-
-[Conditional independence in general](http://www.cs.columbia.edu/~kathy/cs4701/documents/conditional-independence-bn.txt)
-
-
-[Important Statistics Data Scientists Need to Know](https://www.kdnuggets.com/2021/09/important-statistics-data-scientists.html)
-
-[Statistics in Python — Understanding Variance, Covariance, and Correlation](https://towardsdatascience.com/statistics-in-python-understanding-variance-covariance-and-correlation-4729b528db01?source=rss----7f60cf5620c9---4)
-
-Here is a list of the topics covered in thr article:
-
-- Descriptive vs. Inferential Statistics
-- Data Types
-- Probability and Bayes’ Theorem
-- Measures of Central Tendency
-- Skewness
-- Kurtosis
-- Measures of Dispersion
-- Covariance
-- Correlation
-- Probability Distributions
-- Hypothesis Testing
-- Regression
-
-
-### Correlation
-
-The correlation between two random variables measures both the strength and direction of a linear relationship that exists between them. 
-
-There are two ways to measure correlation:
-
-- Pearson Correlation Coefficient: captures the strength and direction of the linear association between two continuous variables
-
-- Spearman’s Rank Correlation Coefficient: determines the strength and direction of the monotonic relationship which exists between two ordinal (categorical) or continuous variables.
-
-Understanding the correlations between the various columns in your dataset is an important part of the process of preparing your data for machine learning. 
-
-You want to train your model using the columns that has the highest correlation with the target/label of your dataset.
-
-Like covariance, the sign of the pearson correlation coefficient indicates the direction of the relationship. However, the values of the Pearson correlation coefficient is contrained to be between -1 and 1. 
-
-Based on the value, you can deduce the following degrees of correlation:
-
-- Perfect: values near to ±1
-
-- High degree: values between ±0.5 and ±1
-
-- Moderate degree: values between ±0.3 and ±0.49
-
-- Low degree:values below ±0.29
-
-- No correlation: values close to 0
-
-### Which method should you use? Pearson or Spearman’s
-
-So which method should you use? 
-
-- Pearson correlation describes _linear_ relationships and spearman correlation describes _monotonic_ relationships. 
-
-- A scatter plot would be helpful to visualize the data — if the distribution is linear, use Pearson correlation. If it is monotonic, use Spearman correlation.
-
-- You can apply both the methods and check which is performing the best. 
-
-  If the results show spearman rank correlation coefficient is greater than Pearson coefficient, it means your data has monotonic relationships and not linear (see example above).
-
-----------
-
 
 ## Project Definition
 
@@ -102,8 +31,6 @@ So which method should you use?
 
 - It is also best to share the entire dataset (if you want someone to help you then you must be open and honest).
 
-----------
-
 
 ## The Machine Learning Process
 
@@ -115,24 +42,25 @@ Step 3: Spot-check algorithms
 Step 4: Improve results
 Step 5: Present results
 
-
-## How to Select an ML Model?
+## How to Choose an ML Model?
 
 [How to Select an ML Model?](https://www.kdnuggets.com/2021/08/select-initial-model-data-science-problem.html)
 
+[Applied Machine Learning Checklist](./checklist/applied_ml_checklist.md)
+
 Every new ML engineer finds that they need to decide what model to use for a problem.
 
-There are many models to choose from with seemingly endless variants.
+There are many models to choose from with seemingly endless variants, but there are usually only slight alterations needed to change a regression model into a classification model and vice versa.
 
-There are usually only slight alterations needed to change a regression model into a classification model and vice versa.
+There are a lot of models to choose from, so consider starting with regression models to obtain a simple baseline for comparison. The work has already been done for you with the standard scikit-learn supervised learning packages, so you only need to select what option you want.
 
-There are a lot of models to choose from, so consider starting with regression models to obtain a simple baseline for comparison. 
+The first step in solving an ML problem is to try a simple algorithm (such as Linear or Logistic Regression) as a baseline model which is used later to evaluate your model choice(s) which should perform better than the baseline. 
 
-The model you choose should do better than simple regression. 
+The best practice is to evaluate many algorithms (say 10-20) using an [AutoML Tool](./tips/automl_tools.md) and [ML Tool](./tips/ml_tools.md) such as Orange or PyCaret that c such as Orange or PyCaret then narrow the choices to a few models based on accuracy and error metrics. Then, create a test harness to fully explore the candidates.
 
-This work has already been done for you with the standard python supervised learning packages, so you only need to select what option you want.
+In general, you should have evaluated 10-20 models before trying to evaluate more complex models such as neural networks (a common beginner mistake).
 
-The best practice is to evaluate many algorithms (10-20) using an AutoML tool such as Orange or PyCaret then narrow the choices to a few models based on accuracy and create a test harness to fully explore the candidates. 
+Keep in mind that an accuracy of 50% is equivalent to random guessing (flip of a coin). Thus, your models should have an accuracy of at least 70-80% or better before optimization/tuning of hyperparameters. Otherwise, this should be a red flag that you need to select a different model and/or spend more time on data preparation and feature engineering. 
 
 ### Why Simple Models?
 
@@ -228,16 +156,19 @@ Even if you are an experienced data scientist, you should still know the perform
 
 In fact, it is considered a best practice to run test datasets to see if your chosen machine learning model outperforms a recognized benchmark.
 
-### Feature Engineering Tools
+
+## Feature Engineering Tools
 
 Feature engineering (FE) techniques for ML are a fundamental ML topic but one that is often overlooked or deceptively simple.
 
 There are many tools that will help you to automate the entire FE process and produce a large pool of features in a short period of time for both classification and regression tasks.
 
-### AutoML Tools
+
+## AutoML Tools
 
 Automated Machine Learning (AutoML) is an emerging field in which the process of building machine learning models to model data is automated.
 
+There are a plethora of [AutoML Tools](./tips/automl_tools.md) and [ML Tools](./tips/ml_tools.md) such as Orange or PyCaret that can be used to easily and quickly evaluate many models on a dataset.
 
 
 ## References
