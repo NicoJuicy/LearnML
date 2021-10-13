@@ -2,35 +2,41 @@
 
 ## Do I need a Master’s Degree?
 
-If you are going to spend the time to study AI/ML then you might as well invest in an online degree which will greatly increase your career opportunities (and a requirment for most AI engineer positions).
+If you are going to spend the time to study AI/ML then you might as well invest in an online degree which will greatly increase your career opportunities (and a requirement for most all AI engineer positions).
 
 [Do you need a Master’s Degree in Data Science?](https://towardsdatascience.com/do-you-need-a-masters-degree-in-data-science-you-are-asking-the-wrong-question-8c83dec8bf1b?source=rss----7f60cf5620c9---4)
 
 
 ## Recommended Tutorials and Books
 
-Choosing a ML learning resource is primarliy a matter of personal preference. In geneal, I recommend that you refer to more than one resource (other than scikit-learn, tensorflow, and PyTorch documentation) when learning ML. 
+See [Tutorials and Books](./how_to_learn.md)
 
-If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has two good books for beginners that are available “Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow” and “Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow”. There also many other good books on various AI/ML topics available on oreilly.com
 
-[Getting Started Guides](https://machinelearningmastery.com/start-here/)
+## How to ask an AI/ML question?
 
-[oreilly.com](https://www.oreilly.com/)
+1. Describe the dataset in detail and be willing to share your dataset. 
+
+If you are not willing to share the details of the dataset then is impossible for anyone to provide advice. 
+
+Please note that Discord users are more than willing to donate their time to give free consulting advice but it is unethical to try to ask vague questions and get free advice on a commercial or research project that you are getting paid to do.
+
+It is usually best to share files via DM to so that other users do not have to search the channels for your files. Keep in mind that Discord channel content is unstructured, so it is difficult to search channels for content. 
+
+2. Avoid asking users to help debug your code. 
+
+In general, the problem is usually not the algorithm implementation but the data preparation and feature engineering of your dataset. If you find yourself mired in debugging code then this should be a red flag that you need to refactor or more likely choose a simpler model (Occam's Razor). 
+
+See [How to Choose an ML Model?](./getting_started.md)
+
+
+## How to choose a performance metric?
+
+See [Machine Learning Error Metrics](./ml/error_metrics.md) 
 
 
 ## How to Choose an ML Algorithm?
 
-Every new ML engineer finds that they need to decide what model to use for a problem.
-
-There are many models to choose from with seemingly endless variants, but there are usually only slight alterations needed to change a regression model into a classification model and vice versa.
-
-There are a lot of models to choose from, so consider starting with regression models to obtain a simple baseline for comparison. This work has already been done for you with the standard scikit-learn supervised learning packages, so you only need to select what option you want.
-
-Keep in mind that the model you choose should do better than simple regression. 
-
-The best practice is to evaluate many algorithms (say 10-20) using an AutoML tool such as Orange or PyCaret then narrow the choices to a few models based on accuracy and error metrics. Then, create a test harness to fully explore the candidates. 
-
-[Applied Machine Learning Checklist](./checklist/applied_ml_checklist.md)
+See [How to Choose an ML Model?](./getting_started.md) and [Understand Machine Learning Algorithms](./ml/error_metrics.md)
 
 
 ## Should I start learning ML by coding an algorithm from scratch?
