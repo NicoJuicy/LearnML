@@ -2,6 +2,25 @@
 
 Here is a list of ML tools that I have found to be helpful to an AI/ML engineer. 
 
+<!-- MarkdownTOC levels=1,2 -->
+
+- How to choose an ML framework?
+- Keras Tutorials
+- Data Exploration Tools
+- Feature Engineering Tools
+- ML Libraries and Frameworks
+- Kedro
+- NLP Tools
+- Python Libraries
+- Cloud Tools
+- Deep Learning Tools
+- Linux Utilities
+- Time Series Libraries
+- References
+
+<!-- /MarkdownTOC -->
+
+
 ## How to choose an ML framework?
 
 [Keras vs PyTorch for Deep Learning](https://towardsdatascience.com/keras-vs-pytorch-for-deep-learning-a013cb63870d)
@@ -224,7 +243,7 @@ Deta is a free, developer friendly cloud platform.
 
 ## Deep Learning Tools
 
-### [Hydra](https://hydra.cc/docs/intro/) 
+### [Hydra](https://hydra.cc/docs/intro/)
 
 Hydra provides a configuration file for the entire experiment. 
 
@@ -232,7 +251,7 @@ Hydra is helpful when we want to share our code with someone else or run the exp
 
 Hydra provides the flexibility to set the desired configurations like learning rate, model hidden layer sizes, epochs, data set name, etc. without having to make changes to the actual code.
 
-### [Pipreqs](https://pypi.org/project/pipreqs/) 
+### [Pipreqs](https://pypi.org/project/pipreqs/)
 
 Pipreqs is useful when we want to port our code to a different machine and install all the dependencies. 
 
@@ -248,11 +267,11 @@ Loguru provides the functionality of a logger to log configuration, experiment n
 
 H5py can be used to store all the intermediate loss values in a dictionary mapped to appropriate key which can be loaded to be reused as a python code.
 
-### Pickle 
+### Pickle
 
 Picklecan be used to save and load the python classes or PyTorch models for reuse.
 
-### [Tqdm](https://tqdm.github.io/) 
+### [Tqdm](https://tqdm.github.io/)
 
 Tqdm can be used with a loop (such as a loop over a torch `DataLoader` object) to provide a picture of time per gradient step or epoch which can help in setting logging frequency of different results, saving the model, or getting an idea of how to set the validation intervals.
 
