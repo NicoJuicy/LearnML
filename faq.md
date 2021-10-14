@@ -65,7 +65,7 @@ See [How to Choose an ML Model?](./getting_started.md) and [Understand Machine L
 
 [How to Learn Machine Learning](https://link.medium.com/kgpRXAT9lkb)
 
-As my professor has said, any competent software engineer can implement any AI/ML algorithm. 
+As my professor has said "any competent software engineer can implement any AI/ML algorithm". 
 
 It is important to know what algorithms are available for a given problem, how they work, and how to get the most out of them. However, this does not mean you need to hand-code the algorithms from scratch.
 
