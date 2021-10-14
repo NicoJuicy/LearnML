@@ -6,6 +6,7 @@
 
 <!-- MarkdownTOC -->
 
+- Exploratory Data Analysis \(EDA\)
 - Data Preparation
     - Import data
     - Format adjustments
@@ -14,16 +15,16 @@
 - Data Cleaning
     - Handling missing values
     - Check the data types
-    - Scaling and normalization
+- Scaling vs. Normalization
+    - Scaling
+    - Normalization
     - Parsing dates
     - Inconsistent Data Entry
     - Add Dummy Variables
     - Highly Imbalanced Data
     - Order of Data Transforms for Time Series
-- Data Cleaning Challenge
-- Scaling vs. Normalization
-    - Scaling
-    - Normalization
+- Train-Test Split
+- Data Cleaning
 - Data Pipelines
     - Create a simple Pipeline
     - Best Scaler
@@ -31,13 +32,17 @@
     - Pipeline with With PCA
     - Joblib
     - Pandas pipe
+- Bootstrapping
 - References
     - Glossary
     - Data Preprocessing
     - Categorical Data
     - Exploratory Data Analysis \(EDA\)
+    - Train-Test Split
 
 <!-- /MarkdownTOC -->
+
+It is estumated that 80% of AI project development time is spent on preparing the data [1]. 
 
 
 ## Exploratory Data Analysis (EDA)
@@ -52,6 +57,8 @@ Exploratory Data Analysis (EDA) is one of the first steps of the data science pr
 ### Import data
 
 [Read datasets with URL](https://towardsdatascience.com/dont-download-read-datasets-with-url-in-python-8245a5eaa919)
+
+[13 ways to access data in Python](https://towardsdatascience.com/13-ways-to-access-data-in-python-bac5683e0063)
 
 - Split data along delimiters (CSV)
 
@@ -140,9 +147,53 @@ Check for null values. We can drop or fill the `NaN` values.
 ```
 
 
-### Scaling and normalization
+## Scaling vs. Normalization
 
-See "Normalization Techniques" in Feature Engineering.
+Also see "Normalization Techniques" in Feature Engineering.
+
+The process of scaling and normalization are very similar. In both cases, you are transforming the values of numeric variables so that the transformed data points have specific helpful properties.
+
+- In scaling, you are changing the _range_ of your data.
+
+- In normalization, you are changing the _shape_ of the distribution of your data.
+
+See **Feature Engineering** for code examples.
+
+### Scaling
+
+Some machine learning algorithms perform much better if all of the variables are scaled to the same range such as scaling all variables to values between 0 and 1 which is called normalization.
+
+This effects algorithms that use a weighted sum of the input (such as linear models and neural networks) as well as models that use distance measures (such as support vector machines and k-nearest neighbors).
+
+Therefore, it is a best practice to scale input data.
+
+In scaling, you are transforming your data so that it fits within a specific scale such as 0-100 or 0-1.
+
+It is common to have data where the scale of values differs from variable to variable. For example, one variable may be in feet and another in meters (pounds vs inches, kilograms vs meters).
+
+By scaling your variables, you can help compare different variables on equal footing.
+
+You especially want to scale data when you are using methods based on **measures of the distance between data points** such as support vector machines (SVM) or k-nearest neighbors (KNN). With these algorithms, a change of "1" in any numeric feature is given the same importance.
+
+### Normalization
+
+Scaling just changes the range of your data. 
+
+The point of normalization is to change your observations so that they can be described as a _normal distribution_.
+
+**Normal distribution:** This is a specific statistical distribution (bell curve) where a roughly equal number of observations fall above and below the mean, the mean and the median are the same, and there are more observations closer to the mean. The normal distribution is also known as the _Gaussian distribution_.
+
+In general, you only want to normalize your data if you are going to be using a machine learning or statistics technique that assumes your data is normally distributed. 
+
+Some examples are: t-tests, ANOVAs, linear regression, linear discriminant analysis (LDA), and Gaussian naive Bayes.
+
+TIP: any method with "Gaussian" in the name probably assumes normality.
+
+The method we are using to normalize here is called the Box-Cox Transformation.
+
+Let us take a quick peek at what normalizing some data looks like:
+
+Notice that the shape of our data has changed.
 
 
 ### Parsing dates
@@ -227,21 +278,21 @@ The order that the transform operations are applied is important.
 
 ## Train-Test Split
 
-[Training-validation-test split and cross-validation done right](https://machinelearningmastery.com/training-validation-test-split-and-cross-validation-done-right/)
+A key step in ML is the choice of model.  
 
-[A Gentle Introduction to k-fold Cross-Validation](https://machinelearningmastery.com/k-fold-cross-validation/)
+Here we assume the following:
 
-[How to Configure k-Fold Cross-Validation](https://machinelearningmastery.com/how-to-configure-k-fold-cross-validation/)
+1. We correctly separated the dataset into a training set and a test set. 
 
-A key step in ML is the choice of model. However, when we faced with a choice between models, we can use cross validation.
+2. We normalized the train and test sets being careful to fit the chosen scaler (Minmax, Standard, etc.) to the train set then applying the transform to both train and test sets. 
 
-Assuming we correctly separated the dataset into a training set and a test set and fitted the model with the training set while evaluated with the test set, we obtained only a _single_ sample point of evaluation with one test set. 
+3. We fit the model with the training set while evaluated with the test set, we obtained only a _single_ sample point of evaluation with one test set. 
 
 If we have two models and found that one model is better than another based on the evaluation, how can we know this is not by chance?
 
 **Solution:** the training-validation-test split
 
-The model is initially fit on a training data set, 
+The model is initially fit on the training data set. 
 
 Next, the fitted model is used to predict the responses for the observations in a second data set called the validation data set. 
 
@@ -259,15 +310,15 @@ Therefore, we need to keep a slice of data from the entire model selection and t
 
 The process of _cross-validation_ is the following:
 
-1. training dataset is used to train a few candidate models
+1. The train dataset is used to train a few candidate models. 
 
-2. validation dataset is used to evaluate the candidate models
+2. The validation dataset is used to evaluate the candidate models. 
 
-3. one of the candidates is chosen
+3. One of the candidates is chosen. 
 
-4. the chosen model is trained with a new training dataset
+4. The chosen model is trained with a new train dataset.
 
-5. the trained model is evaluated with the test dataset
+5. The trained model is evaluated with the test dataset. 
 
 The dataset for evaluation in step 5 and the one we used in cross validation are different because we do not want _data leakage_. 
 
@@ -288,56 +339,6 @@ The [Data Science Primer](https://elitedatascience.com/primer) covers explorator
 3. Parsing dates
 4. Character encodings
 5. Inconsistent Data Entry
-
-
-## Scaling vs. Normalization
-
-The process of scaling and normalization are very similar. In both cases, you are transforming the values of numeric variables so that the transformed data points have specific helpful properties.
-
-- In scaling, you are changing the _range_ of your data. 
-- In normalization, you are changing the _shape_ of the distribution of your data.
-
-See **Feature Engineering** for code examples.
-
-### Scaling
-
-Some machine learning algorithms perform much better if all of the variables are scaled to the same range such as scaling all variables to values between 0 and 1 which is called normalization.
-
-This effects algorithms that use a weighted sum of the input (such as linear models and neural networks) as well as models that use distance measures (such as support vector machines and k-nearest neighbors).
-
-Therefore, it is a best practice to scale input data.
-
-In scaling, you are transforming your data so that it fits within a specific scale such as 0-100 or 0-1.
-
-It is common to have data where the scale of values differs from variable to variable. For example, one variable may be in feet and another in meters (pounds vs inches, kilograms vs meters).
-
-By scaling your variables, you can help compare different variables on equal footing.
-
-You especially want to scale data when you are using methods based on **measures of the distance between data points** such as support vector machines (SVM) or k-nearest neighbors (KNN). With these algorithms, a change of "1" in any numeric feature is given the same importance.
-
-
-### Normalization
-
-Scaling just changes the range of your data. 
-
-The point of normalization is to change your observations so that they can be described as a _normal distribution_.
-
-**Normal distribution:** This is a specific statistical distribution (bell curve) where a roughly equal number of observations fall above and below the mean, the mean and the median are the same, and there are more observations closer to the mean. The normal distribution is also known as the _Gaussian distribution_.
-
-In general, you only want to normalize your data if you are going to be using a machine learning or statistics technique that assumes your data is normally distributed. 
-
-Some examples are: t-tests, ANOVAs, linear regression, linear discriminant analysis (LDA), and Gaussian naive Bayes.
-
-TIP: any method with "Gaussian" in the name probably assumes normality.
-
-The method we are using to normalize here is called the Box-Cox Transformation.
-
-Let us take a quick peek at what normalizing some data looks like:
-
-Notice that the shape of our data has changed.
-
-
-Before normalizing it was almost L-shaped but after normalizing it looks more like the outline of a bell (hence "bell curve").
 
 
 ## Data Pipelines
@@ -517,6 +518,9 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 ## References
 
+[1] [INFOGRAPHIC: Data prep and Labeling](https://www.cognilytica.com/2019/04/19/infographic-data-prep-and-labeling/)
+
+
 ### Glossary
 
 [ML Cheatsheet](https://github.com/shuaiw/ml-cheatsheet)
@@ -557,3 +561,11 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [Python Cheat Sheet for Data Science](https://chipnetics.com/tutorials/python-cheat-sheet-for-data-science/)
 
+
+### Train-Test Split
+
+[Training-validation-test split and cross-validation done right](https://machinelearningmastery.com/training-validation-test-split-and-cross-validation-done-right/)
+
+[A Gentle Introduction to k-fold Cross-Validation](https://machinelearningmastery.com/k-fold-cross-validation/)
+
+[How to Configure k-Fold Cross-Validation](https://machinelearningmastery.com/how-to-configure-k-fold-cross-validation/)

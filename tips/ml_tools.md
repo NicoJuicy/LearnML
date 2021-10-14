@@ -169,6 +169,10 @@ User-generated content on the Web and in social media is often dirty. Preprocess
 
 ## Python Libraries
 
+### [dateutil](https://github.com/dateutil/dateutil)
+
+The dateutil module provides powerful extensions to the standard datetime module.
+
 ### gRPC
 
 The trend now is toward gRPC for microservices since it is more secure, faster, and more robust (especially with IoT).
@@ -182,6 +186,40 @@ The trend now is toward gRPC for microservices since it is more secure, faster, 
 - gRPC provides developers with compatibility with the REST web ecosystem while advancing a new, high-efficiency RPC protocol. 
 
 - With the recent release of Go 1.6, Go ships with a stable net/http2 package by default.
+
+### Plots and Graphs
+
+Matplolib is the basis of image visualization in Python but there are other alternatives such as seaborn and plotly (which is browser-based).
+
+### [PySpark](https://github.com/apache/spark)
+
+PySpark is similar to pandas but built with distributed computing in mind. 
+
+PySpark is also focused on massive parallel Machine Learning for your very big data use cases. 
+
+### [tqdm](https://github.com/tqdm/tqdm)
+
+tqdm gives you a progress bar that you can use on any `for` loop that tells you how long each iteration takes on average and how long it will take. 
+
+### [urllib3](https://github.com/urllib3/urllib3)
+
+urllib3 is a Python HTTP library with thread-safe connection pooling, file post support, user friendly, and more.
+
+In shoet, urllib3 is a powerful, user-friendly HTTP client for Python.
+
+
+## Cloud Tools
+
+### [Deta](https://www.deta.sh)
+
+Deta is a free, developer friendly cloud platform. 
+
+**Deta  Micros** is a service to deploy Python and Node.js apps/APIs on the internet in seconds. 
+
+**Deta Base** is a super easy to use production-grade NoSQL database that comes with unlimited storage.
+
+**Deta Drive** is an easy to use cloud storage solution by Deta – get 10GB for free
+
 
 
 ## Deep Learning Tools
