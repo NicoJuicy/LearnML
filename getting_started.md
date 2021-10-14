@@ -32,15 +32,15 @@ Here are some undergraduate topics/courses that you should know before learning 
 
 ## Project Definition
 
-- In a few sentences describe the problem including the type of ML problem if known (classification, regression, NLP, CV, etc.). 
+In a few sentences describe the problem including the type of ML problem if known (classification, regression, NLP, CV, etc.). 
 
-- What is the goal? classify, predict, detect, translate, etc. 
+What is the goal? classify, predict, detect, translate, etc. 
 
-- Describe the dataset including the input features and target feature(s). 
+Describe the dataset including the input features and target feature(s). 
 
-- It is best to share summary statistics of the data including counts of any discrete or categorical features including the target feature. 
+It is best to share summary statistics of the data including counts of any discrete or categorical features including the target feature. 
 
-- It is also best to share the entire dataset (if you want someone to help you then you must be open and honest).
+It is best to share the entire dataset (if you want someone to help you then you must be open and honest).
 
 
 ## The Machine Learning Process
