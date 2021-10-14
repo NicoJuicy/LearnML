@@ -18,15 +18,22 @@ See [Tutorials and Books](./how_to_learn.md)
 
 If you are not willing to share the details of the dataset then is impossible for anyone to provide advice. 
 
-Please note that Discord users are more than willing to donate their time to give free consulting advice but it is unethical to try to ask vague questions and get free advice on a commercial or research project that you are getting paid to do.
+Please note that Discord users are more than willing to donate their time to give free consulting advice but it is unethical to try to ask vague questions and get free advice on a commercial or research project that you are getting paid to do. If this is the case then you must mskr s diligent effort to state this fact up front repeatedly (do not expect other Discord users to go data mining for your original post). 
 
-It is usually best to share files via DM to so that other users do not have to search the channels for your files. Keep in mind that Discord channel content is unstructured, so it is difficult to search channels for content. 
+It is usually best to share files via DM  so that other users do not have to search the channels for your files. Keep in mind that Discord channel content is unstructured, so it is difficult to search channels for content. 
 
 2. Avoid asking users to help debug your code. 
 
 In general, the problem is usually not the algorithm implementation but the data preparation and feature engineering of your dataset. If you find yourself mired in debugging code then this should be a red flag that you need to refactor or more likely choose a simpler model (Occam's Razor). 
 
 See [How to Choose an ML Model?](./getting_started.md)
+
+3. Plots and graphs
+
+It is best not to plot more than one metric on a graph since libraries such as matplotlib usually automatically rescale values to better show the difference in values (see [How to Diagnose Overfitting and Underfitting](./ml/diagnose_overfitting.md) for examples).
+
+However, the best practice (and approach used by most ML tools) is to compute the average values of performance metrics (see [Machine Learning Error Metrics](./ml/error_metrics.md) rather than plotting graphs. The only graph that is commonly used in ML is train/val loss to spot-check convergence of training of a model only. 
+
 
 
 ## How to choose a performance metric?
