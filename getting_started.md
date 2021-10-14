@@ -4,7 +4,18 @@ I highly recommend that you refer to more than one resource (other than acikit-l
 
 If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has two good books for beginners that are available “Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow” and “Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow”. There also many other good books on various AI/ML topics.
 
-**NOTE:** The Medium and TowardsDataSciene articles are best viewed in a browser Private tab.
+**NOTE:** The Medium and TowardsDataSciene articles can be viewed in a browser Private tab if you do not have a subscription. 
+
+Here are some undergraduate topics/courses that you should know before learning AI/ML (see Math and References sections):
+
+- Advanced Linear Algebra
+- Discrete Mathematics
+- Probability and Statitics
+- Statistical Programming
+- Computer Networks
+- Computer Organization
+- Operating Systems
+- Distributed Computing
 
 
 ## Math
@@ -197,3 +208,19 @@ There are a plethora of [AutoML Tools](./tips/automl_tools.md) and [ML Tools](./
 [3] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge (SWEBOK) v. 3, IEEE, 2014. 
 
 [4] B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modelling, Planning and Control, London: Springer, ISBN 978-1-84628-641-4, 2010. 
+
+
+W. McKinney, Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython, 2nd ed., O’Reilly Media, ISBN: 978-1491957660, 2017. 
+
+E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014. 
+
+S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 978-1787125933, 2017. 
+
+S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/.
+
+R. H. Arpaci-Dusseau and A. C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, 2018, v. 1.01, Available online: https://pages.cs.wisc.edu/~remzi/OSTEP/
+
+
+
+
+
