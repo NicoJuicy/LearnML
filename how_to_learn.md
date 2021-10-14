@@ -1,65 +1,29 @@
 # How to Learn Machine Learning
 
+[How to Learn Machine Learning](https://link.medium.com/EcMAbfOjkkb)
+
 [How to Learn Python for Machine Learning](https://machinelearningmastery.com/how-to-learn-python-for-machine-learning/)
 
 **[Do you need a Master’s Degree in Data Science?](https://towardsdatascience.com/do-you-need-a-masters-degree-in-data-science-you-are-asking-the-wrong-question-8c83dec8bf1b?source=rss----7f60cf5620c9---4)**
 
-As a professional AI and software engineer with 25+ years of experience, I have a lot of experience in designing and implementing a variety of software applications and technologies. Thus, I have used and implemented hundreds (perhaps thousands) of various software libraries, frameworks, and APIs. 
-
-I have a M.S. in Mathematics and MSCS in Aritifical Intelligence, so I am more than qualified to mentor and teach computer science and software engineering courses.
-
-
-Since this is an AI forum, I believe most users will have the following assumptions:
-
-- You are interested in becoming an AI/ML engineer
-
-- You are interested in learning/following software engineering best practices [1]
-
-If not, it is best to let users know when you post that it is only your hobby, experimentation, etc.
-
-Here are some beginner mistakes to avoid when learning ML:
-
-- Avoid asking "What is the best algorithm for X problem?"
-- Avoid trying to code ML algorithms from scratch
-- Avoid trying to do things manually
-- Avoid using neural networks (only as a last resort)
-
-Here are some important concepts for learning ML:
-
-- How to properly define an ML problem?
-- How to select a dataset?
-- How to perform data preparation?
-- How to select an ML algorithm?
-- How to properly train an ML model?
-- How to design and deploy an ML solution?
-
-
-In graduate school, we are taught that the proper technique for learning ML is to take a black-box view of ML algorithms (top-down approach) since it is best not to waste time trying to hand-code algorithms (bottom-up approach), especially when you are just getting started. In general, you will find that there is very little to learn by focusing on the internal implementation of an algorithm that will be useful in learning how best to use and deploy it. 
-
-In software engineering, there are many well-known principles such as DRY, KISS, and Occam's Razor. Perhaps the most important principle is "don't reinvent the wheel". Nevertheless, it seems as though every beginner in machine learning proceeds to try to implement a neural network from scratch. In fact, an ML engineer needs to know the best use of ALL software libraries, APIs, and algorithms that are used in an application, not just ML libraries.
-
-**Occam’s Razor:** The simplest solution is always the best. 
-
-
-An AI engineer knows that the current trend is a data-centric rather than model-centric approach to machine learning. Therefore, a beginner would be wise to focus on learning data preparation, feature engineering, dimenstionality reduction, and other important techniques rather than focus on the implementation details of a particular ML model.
-
-Automation of the full software development life cycle is a big part of modern software development, so the chances of you ever implementing and deploying a ML algorithm hand-coded is slim to none (don't reinvent the wheel). In fact, there are a multitude of reasons to avoid writing custom code when robust, well-proven libraries and frameworks are readily available. You can spend an entire career just learning the proper use of software libraries and frameworks. Thus, there are plenty of other topics that you should explore that are more important than trying to understand the internals of a particular ML algorithm.
-
-
-In general, Fortune 500 and other companies are not going to implement and deploy a custom algorithm hand-coded from scratch. It is also a software engineering best practice to only use software that has been rigorously proven and tested, especially ML software libraries. Therefore, you should use a commercial or open-source framework such as TensorFlow and PyTorch rather than code algorithms from scratch.
-
-Once you have mastered using ML algorithms, you can go back later and try to understand how they work internally by coding them by hand (if needed). However, there are far too many ML algorithms for the average software developer to ever code and understand all the details needed to properly implement them. Just concentrating on the "more interesting" or latest algorithm is a recipe for disaster and a common beginner mistake. 
-
-In addition, a shift in mindset is required to be effective at machine learning from trying to find the “best” model/approach to “good enough”. 
+**NOTE:** The Medium and TowardsDataSciene articles can be viewed in a browser Private tab if you do not have a subscription.
 
 
 ## Tutorials and Books
 
-Choosing a ML learning resource is primarliy a matter of personal preference. In geneal, I recommend that you refer to more than one resource (other than scikit-learn, tensorflow, and PyTorch documentation) when learning ML. 
+Choosing an ML learning resource is primarliy a matter of personal preference. In geneal, I recommend that you refer to more than one resource (other than scikit-learn, tensorflow, and PyTorch documentation) when learning ML.
 
-If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has two good books for beginners that are available “Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow” and “Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow”. I also found the "Pragmatic Bookshelf" series to be helpful including "Programming Machine Learning". There are also many other good books on various AI/ML topics available on oreilly.com
+"Artificial Intelligence: A Modern Approach" by S. Russell and P. Norvig (4th ed.) is an excellent graduate textbook on AI/ML. 
 
-**NOTE:** The Medium and TowardsDataSciene articles are best viewed in a browser Private tab.
+Here are some ML textbooks that I found helpful:
+
+- E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014. 
+
+- S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 978-1787125933, 2017.
+
+- S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online at https://www.nltk.org/book/.
+
+If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has two good books for beginners that are available “Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow” and “Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow”. I also found the "Pragmatic Bookshelf" series to be helpful including "Programming Machine Learning". There are also many other good books on various AI/ML topics available on oreilly.com. 
 
 [Getting Started Guides](https://machinelearningmastery.com/start-here/)
 
@@ -70,7 +34,7 @@ Every professional software engineer should be able to navigate the [SWEBOK](htt
 
 ## Consulting and Freelance
 
-If you ever do consulting or freelance work in the U.S. for $$; you should be aware that there are legal implications and I found XXX to be clear, concise resource on the topic. I am sure there are similar rules and regulations in the EU and elsewhere.
+If you ever do consulting or freelance work in the U.S. for $$, you should be aware that there are legal implications and I found [TODO] to be a clear, concise resource on the topic. I am sure there are similar rules and regulations in the EU and elsewhere.
 
 
 ## References
@@ -85,4 +49,5 @@ If you ever do consulting or freelance work in the U.S. for $$; you should be aw
 
 
 [1] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge, v. 3, IEEE, 2014. 
+
 
