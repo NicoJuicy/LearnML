@@ -43,7 +43,7 @@ TODO: Add items
 
 [Exploratory Data Analysis (EDA)](./ml/eda.md)
 
-[Error Metrics in Machine Learning](./ml/error_metrics.md)
+[Performance Metrics](./ml/performance_metrics.md)
 
 [Feature Emgineering](./ml/feature_engineering.md)
 
