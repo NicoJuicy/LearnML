@@ -278,53 +278,19 @@ The order that the transform operations are applied is important.
 
 ## Train-Test Split
 
+Also see [Train-Test Split](./ml/train_teat_split.md)
+
 A key step in ML is the choice of model.  
 
-Here we assume the following:
+> Split first, normalize later.
 
-1. We correctly separated the dataset into a training set and a test set. 
+A train-test split conists of the following:
 
-2. We normalized the train and test sets being careful to fit the chosen scaler (Minmax, Standard, etc.) to the train set then applying the transform to both train and test sets. 
+1. Split the dataset into training, validation and test set
 
-3. We fit the model with the training set while evaluated with the test set, we obtained only a _single_ sample point of evaluation with one test set. 
+2. We normalize the training set only (fit_transform). 
 
-If we have two models and found that one model is better than another based on the evaluation, how can we know this is not by chance?
-
-**Solution:** the training-validation-test split
-
-The model is initially fit on the training data set. 
-
-Next, the fitted model is used to predict the responses for the observations in a second data set called the validation data set. 
-
-Finally, the test data set is used to provide an unbiased evaluation of a final model fit on the training data set. 
-
-If the data in the test data set has never been used in training (such as cross-validation), the test data set is also called a _holdout_ data set.
-
-
-The reason for such practice is the concept of preventing _data leakage_ which is discussed below. 
-
-
-What we should care about is the evaluation metric on the _unseen data_. 
-
-Therefore, we need to keep a slice of data from the entire model selection and training process and save it for the final evaluation called the test set. 
-
-The process of _cross-validation_ is the following:
-
-1. The train dataset is used to train a few candidate models. 
-
-2. The validation dataset is used to evaluate the candidate models. 
-
-3. One of the candidates is chosen. 
-
-4. The chosen model is trained with a new train dataset.
-
-5. The trained model is evaluated with the test dataset. 
-
-The dataset for evaluation in step 5 and the one we used in cross validation are different because we do not want _data leakage_. 
-
-If the test and validation sets were the same, we would see the same score that we have already seen from cross validation or the test score would be good because it was part of the data we used to train the model and we  adapted the model for that test dataset.
-
-We make use of the test dataset that was never used in previous steps to evaluate the performance on unseen data which is called _generalization_.  
+3. We normalize the validation and test sets using the normalization factors from train set (transform).
 
 
 ----------
