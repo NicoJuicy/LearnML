@@ -263,6 +263,11 @@ Many of these methods can be adapted for use in classification and regression.
 - Flexible Discriminant Analysis (FDA)
 
 
+### Principal Component Analysis (PCA)
+
+PCA is not really considered an ML model rather it is a technique (linear transform) commonly used to reduce the dimensionality of the data (data preparation technique) in preparation for use with an ML model.
+
+
 ### Ensemble Algorithms
 
 Ensemble methods are models composed of multiple weaker models that are independently trained and whose predictions are combined in some way to make the overall prediction.
@@ -354,6 +359,8 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 - Only capture the algorithm properties you actually need, keep it as simple as possible.
 
 
+
+
 ----------
 
 
@@ -379,7 +386,7 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 - Gradient Boosting
 - SGD
 
-### Dimensionality Refuction
+### Dimensionality Reduction
 
 - PCA
 - MDS
@@ -390,6 +397,7 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 
 - k-Means
 - DBSCAN
-
+- Louvain Clustering
+- Hierarchical Clustering
 
 
