@@ -55,6 +55,7 @@ Step 3: Spot-check algorithms
 Step 4: Improve results
 Step 5: Present results
 
+
 ## How to Choose an ML Model?
 
 [How to Select an ML Model?](https://www.kdnuggets.com/2021/08/select-initial-model-data-science-problem.html)
@@ -136,21 +137,23 @@ Create predictions while varying a sole predictor and observe how the prediction
 
 You need to know what algorithms are available for a given problem, how they work, and how to get the most out of them. However, this does not mean you need to hand-code the algorithms from scratch.
 
+Even if you are an experienced ML engineer, you should still know the performance of simpler models on your dataset/problem since they are easy to implement and test. 
+
 In fact, there are many other concepts that are much more important when implmenting ML models:
 
 - How to define an ML problem?
 - How to select a dataset?
-- Data Preparation Techniques
-- Feature Engineering Techniques
-- How to design an ML solution?
-- How to properly train an ML model?
-
-- How to choose a Performance/Error Metric?
-
-- How to display ML results?
-
-- How to deploy an ML solution?
+- How to perform data preparation?
+- How to perform feature engineering?
+- How to select an ML algorithm?
+- How to choose a performance metric?
+- How to train an ML model?
+- How to present ML results?
+- How to design and deploy an ML solution?
 - How to debug ML models?
+
+
+[TODO: Additional topics below]
 
 - Parametric vs Nonparametric Algorithms
 - Supervised vs Unsupervised Algorithms
@@ -165,9 +168,6 @@ In fact, there are many other concepts that are much more important when implmen
 - Anomaly Detection
 - AutoML
 
-Even if you are an experienced data scientist, you should still know the performance of simpler models on your dataset/problem since they are easy to implement and test. 
-
-In fact, it is considered a best practice to run test datasets to see if your chosen machine learning model outperforms a recognized benchmark.
 
 
 ## Feature Engineering Tools
