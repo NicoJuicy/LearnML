@@ -26,6 +26,8 @@ Here are some undergraduate topics/courses that you should know before learning 
 
 [Trigonometry Handbook](http://www.mathguy.us/Handbooks/TrigonometryHandbook.pdf)
 
+[Lessons on How to Lie with Statistics](https://towardsdatascience.com/lessons-from-how-to-lie-with-statistics-57060c0d2f19?gi=27adc9e8b44a)
+
 [An Introduction To Recurrent Neural Networks And The Math That Powers Them](https://machinelearningmastery.com/an-introduction-to-recurrent-neural-networks-and-the-math-that-powers-them/)
 
 
