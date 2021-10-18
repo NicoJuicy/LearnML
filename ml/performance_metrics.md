@@ -1,6 +1,6 @@
-# Machine Learning Error Metrics
+# Machine Learning Performance Metrics
 
-There are several standard methods to evaluate the performance of ML models. 
+There are several standard methods to evaluate the performance of ML models. In fact, scikit-learn has a plethora of functions for computing performance metrics in the `sklearn.metrics` library. 
 
 ## Performance Metrics For Classification
 
@@ -29,7 +29,7 @@ Here are the common performance measures for regression problems:
 - Mean percentage error (MPE)
 - R^2
 
-For a regression problem, it is common to compute all of the following metrics: MAE, RMSE, MAPE, and R^2. 
+For a regression problem, it is common to compute all of the following metrics: Accuracy, MAE, RMSE, MAPE, and R^2. 
 
 If you are going to use a relative measure of error (MPE/MAPE) rather than an absolute measure of error (MAE/MSE), you must be wary of data that will work against the calculation (zeroes).
 
