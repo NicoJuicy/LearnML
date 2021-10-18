@@ -121,3 +121,6 @@ In summary, there are much more ethical ways to obtain copies of websites (inter
 
 [How to make an ethical crawler in Python](https://dev.to/miguelmj/how-to-make-an-ethical-crawler-in-python-4o1g)
 
+[What is a robots.txt file?](https://moz.com/learn/seo/robotstxt)
+
+[Robots txt File Example: 10 Templates To Use](https://pagedart.com/blog/robots-txt-file-example/)
