@@ -137,7 +137,10 @@ Here we review the following:
 
 [Supervised Machine Learning: Classification, Logistic Regression, and Classification Error Metrics](https://medium.com/the-quant-journey/supervised-machine-learning-classification-logistic-regression-and-classification-error-metrics-6c128263ac64?source=rss------artificial_intelligence-5)
 
-[Regression for Classification - Hands on](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
+
+[Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
+
+[One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
 
 
 [A Gentle Introduction to Multiple-Model Machine Learning](https://machinelearningmastery.com/multiple-model-machine-learning/)

@@ -24,6 +24,7 @@ For a classification problem, it is common to compute all of the following metri
 
 Here are the common performance measures for regression problems:
 
+- Accuracy
 - Mean absolute error (MAE)
 - Mean square error (MSE) 
 - Root mean squared error (RMSE)
