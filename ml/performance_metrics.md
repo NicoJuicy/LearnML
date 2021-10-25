@@ -18,6 +18,8 @@ Here are the common performance measures for classification problems:
 
 For a classification problem, it is common to compute all of the following metrics: Accuracy, Precision and Recall, and AUC. 
 
+<img width="401" alt="image" src="https://user-images.githubusercontent.com/2695661/138716142-8ef23ecf-ac92-4687-802b-fe34a5027f10.png">
+
 ## Performance Metrics For Regression
 
 Here are the common performance measures for regression problems:
@@ -30,6 +32,8 @@ Here are the common performance measures for regression problems:
 - R^2
 
 For a regression problem, it is common to compute all of the following metrics: Accuracy, MAE, RMSE, MAPE, and R^2. 
+
+<img width="337" alt="image" src="https://user-images.githubusercontent.com/2695661/138716004-28b11d77-de56-4ccf-93c0-dd2822b70133.png">
 
 If you are going to use a relative measure of error (MPE/MAPE) rather than an absolute measure of error (MAE/MSE), you must be wary of data that will work against the calculation (zeroes).
 
