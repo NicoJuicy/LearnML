@@ -33,7 +33,7 @@ Here are the common performance measures for regression problems:
 
 For a regression problem, it is common to compute all of the following metrics: Accuracy, MAE, RMSE, MAPE, and R^2. 
 
-<img width="337" alt="image" src="https://user-images.githubusercontent.com/2695661/138716004-28b11d77-de56-4ccf-93c0-dd2822b70133.png">
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/2695661/138717347-650b266e-8943-4457-8e82-18156df00944.png">
 
 If you are going to use a relative measure of error (MPE/MAPE) rather than an absolute measure of error (MAE/MSE), you must be wary of data that will work against the calculation (zeroes).
 
