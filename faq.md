@@ -14,13 +14,17 @@ See "Tutorials and Books" in [How to Learn Machine Learning](https://aicoder.med
 
 ## How to ask an AI/ML question?
 
-See [How to ask an AI/ML question](https://aicoder.medium.com/how-to-ask-an-ai-ml-question-6cfddaa75bc9)
+Briefly describe the following (1-2 sentences per item):
 
-1. Give some description of your background and experience
-2. Describe the problem
-3. Describe the dataset in detail and be willing to share your dataset
-4. Avoid asking users to help debug your code
-5. Limit use of plots and graphs
+1. Give some description of your background and experience. 
+2. Describe the problem. 
+3. Describe the dataset in detail and be willing to share your dataset.
+4. Describe any data preparation and feature engineering steps that you have done.
+5. Describe the models that you have tried. 
+6. Favor text and tables over plots and graphs.
+7. Avoid asking users to help debug your code. 
+
+See [How to ask an AI/ML question](https://aicoder.medium.com/how-to-ask-an-ai-ml-question-6cfddaa75bc9)
 
 
 ## How to choose a performance metric?
