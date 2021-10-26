@@ -1,31 +1,35 @@
 # LearnML
 
-If you are like me and try to follow the principles of DRY, KISS, and Occam’s Razor then this repo is for you!
+If you are like me and try to follow the principles of DRY, KISS, Deaign Patterns, and Occam’s Razor then this repo is for you!
 
-In short, the best model that fits your data is usually the best. 
+> Occam’s Razor: The best model that fits your data is usually the best. 
 
-As an AI/ML engineer, be willing to settle for “good enough” rather than trying to find the “best” model/approach.
+## Background
 
-Please note that I am not a fan of Scrum (which is actually a project management approach rather than a software development methodology) [1]. I prefer using an iterative, agile feature-driven development (FDD) methdology [2] which I have found is more scalable to larger projects. 
+As an AI/ML engineer, you should be willing to settle for “good enough” rather than trying to find the “best” model/approach.
 
-This repo contains notes from various articles and other resources on a variety of topics in Artificial Intelligence and Machine Learning.
+Scrum is a popular project management approach but not really a software development methodology [1]. I prefer using an iterative, agile feature-driven development (FDD) methdology where team members are able to work independently [2].
 
-This is a work in progress (just getting started), so there is still a lot missing and the content is changing. 
+This repo contains notes from various articles and other resources on a variety of topics in Artificial Intelligence (AI) and Machine Learning (ML). 
+
+This is a work in progress (just getting started), so there is still#  a lot missing and the content is changing. 
 
 
 [How to Learn AI/ML](./how_to_learn.md)
 
 [Getting Started](./getting_started.md)
 
-**NOTE:** The Medium and TowardsDataSciene articles are best viewed in a browser Private tab. 
+**NOTE:** The Medium and TowardsDataSciene articles can be viewed in a browser Private tab. 
 
 
-## Artificial Intelligence
+## Table of Comtents
+
+### Artificial Intelligence
 
 TODO: Add items
 
 
-## Machine Learning
+### Machine Learning
 
 [Machine Learning Algorithms](./ml/ml_algorithms.md)
 
@@ -64,7 +68,7 @@ TODO: Add items
 [SMOTE for Imbalanced Classification](./ml/smote.md)
 
 
-## Deep Learning
+### Deep Learning
 
 [Deep Learning](./dl/deep_learning.md)
 
@@ -73,7 +77,7 @@ TODO: Add items
 [Long Short-Term Memory Networks (LSTMs)](./dl/lstm.md)
 
 
-## Natural Language Processing
+### Natural Language Processing
 
 [Natural Language Processing](./nlp/nlp.md)
  
@@ -82,19 +86,19 @@ TODO: Add items
 [Natural Language Understanding](./nlp/nlu.md)
 
 
-## Reinforcement Learning
+### Reinforcement Learning
 
 [Reinforcement Learning](./ml/rl.md)
 
 
-## ML Guides
+### ML Guides
 
 [Applied Machine Learning Process](./process/applied_ml.md)
 
 [Imbalanced Classification Framework](./process/imbalanced_class.md)
 
 
-## Time Series
+### Time Series
 
 [Time Series Forecasting](./time_series/time_series_forecast.md)
 
@@ -103,16 +107,17 @@ TODO: Add items
 [Time Series Tips](./tips/time_series_tips.md)
 
 
-## Checklists
+### Checklists
 
 [AI Checklists](./checklist/ai_checklist.md)
 
 
-## Code Samples
+### Code Samples
+
+TODO: Add items
 
 
-
-## Tips
+### Tips
 
 [Recommended Books/References](./tips/ai_books.md)
 
@@ -129,6 +134,7 @@ TODO: Add items
 [Datasets](./tips/datasets.md)
 
 [Memory Usage Tips](./tips/memory_usage.md)
+
 
 
 ## References
