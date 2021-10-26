@@ -1,6 +1,22 @@
 # Time Series Tips
 
-## How to check for gaps in time series data? 
+<!-- MarkdownTOC -->
+
+- How to check for gaps in time series data?
+- Tips and Tricks \(Multivariate time series\)
+- How to Check if Time Series Data is Stationary with Python?
+- to_categorical
+- Keras Time Series Examples
+- Steps
+- Params Class
+- Train/Test Split
+- Normalization
+- Evaluate Performance
+- Time Series Tips and Tricks
+
+<!-- /MarkdownTOC -->
+
+## How to check for gaps in time series data?
 
 [How NOT to Analyze Time Series](https://towardsdatascience.com/a-common-mistake-to-avoid-when-working-with-time-series-data-eedf60a8b4c1)
 
@@ -236,21 +252,23 @@ def compute_accuracy(args, X, yhat, y, scaler_pred):
 
 ```
 
-### Time Series Tips and Tricks
+## Time Series Tips and Tricks
 
 [5 Tips for Working With Time Series in Python](https://medium.com/swlh/5-tips-for-working-with-time-series-in-python-d889109e676d)
 
 [4 Common Machine Learning Data Transforms for Time Series Forecasting](https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/)
 
-[Training Time Series Forecasting Models in PyTorch](https://towardsdatascience.com/training-time-series-forecasting-models-in-pytorch-81ef9a66bd3a)
+[Feature selection for forecasting algorithms](https://jackbakerds.com/posts/forecasting-feature-selection/)
+
+[Stop One-Hot Encoding your Time-based Features](https://towardsdatascience.com/stop-one-hot-encoding-your-time-based-features-24c699face2f)
+
+[Don’t Use K-fold Validation for Time Series Forecasting](https://towardsdatascience.com/dont-use-k-fold-validation-for-time-series-forecasting-30b724aaea64)
+
+[How To Resample and Interpolate Your Time Series Data With Python](https://machinelearningmastery.com/resample-interpolate-time-series-data-python/)
+
 
 [How to Grid Search Deep Learning Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/)
 
 [How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
-
-
-[How to Develop a Bidirectional LSTM For Sequence Classification in Python with Keras](https://machinelearningmastery.com/develop-bidirectional-lstm-sequence-classification-python-keras/)
-
-[One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
 
 
