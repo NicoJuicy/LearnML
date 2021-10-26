@@ -14,7 +14,7 @@
     - Correct inconsistencies
     - Handle errors in variables
 - Data Cleaning
-    - Handling missing values
+    - Handle missing values
     - Check the data types
 - Scaling vs Normalization
     - Scaling
@@ -119,24 +119,37 @@ Data cleaning refers to identifying and correcting errors in the dataset that ma
 
 Data cleaning also includes the following [2]:
 
-1. Handling missing values
+1. Handle missing values
 2. Scaling and normalization
 3. Parsing dates
 4. Character encodings
 5. Inconsistent Data Entry
 
+```py
+  # Handle categorical features
+  df['is_white_wine'] = [1 if typ == 'white' else 0 for typ in df['type']]
 
-### Handling missing values
+  # Convert to a binary classification task
+  df['is_good_wine'] = [1 if quality >= 6 else 0 for quality in df['quality']]
+
+  df.drop(['type', 'quality'], axis=1, inplace=True)
+```
+
+### Handle missing values
 
 Check for null values. We can drop or fill the `NaN` values.
 
 ```py
-    df.isnull().sum()  # if count > 0 then some values are NaN
+    # if count > 0 then some values are NaN
+    df.isnull().sum()  
+    
+    df = df.dropna()
 
     # Drop the NaN
     df['col_name'] = df['col_name'].dropna(axis=0, how="any")
 
-     df['col_name'].isnull().sum() # check NaN again
+     # check NaN again
+     df['col_name'].isnull().sum() 
 ```
 
 ### Check the data types
