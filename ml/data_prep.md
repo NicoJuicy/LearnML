@@ -4,8 +4,9 @@
 
 [Feature Engineering](https://gist.github.com/codecypher/dd4c7e8794982570288c2cfe95665c9c)
 
-<!-- MarkdownTOC -->
+<!-- MarkdownTOC levels=1,2,3 -->
 
+- Overview
 - Exploratory Data Analysis \(EDA\)
 - Data Preparation
     - Import data
@@ -15,7 +16,7 @@
 - Data Cleaning
     - Handling missing values
     - Check the data types
-- Scaling vs. Normalization
+- Scaling vs Normalization
     - Scaling
     - Normalization
     - Parsing dates
@@ -24,7 +25,6 @@
     - Highly Imbalanced Data
     - Order of Data Transforms for Time Series
 - Train-Test Split
-- Data Cleaning
 - Data Pipelines
     - Create a simple Pipeline
     - Best Scaler
@@ -34,7 +34,6 @@
     - Pandas pipe
 - Bootstrapping
 - References
-    - Glossary
     - Data Preprocessing
     - Categorical Data
     - Exploratory Data Analysis \(EDA\)
@@ -42,17 +41,29 @@
 
 <!-- /MarkdownTOC -->
 
-It is estumated that 80% of AI project development time is spent on preparing the data [1]. 
+## Overview
+
+The approaches will depend on the dataset as well as the data types, so there is no perfect list of steps.
+
+[Concatenating CSV files using Pandas module](https://www.geeksforgeeks.org)
+
+You try to handle the "worst" cases and not necessarily every case.
+
+Exploratory Data Analysis (EDA) is crucial: summary stats and making plots of the data.
+
+NOTE: It is estimated that 80% of AI project development time is spent on preparing the data [1]. 
 
 
 ## Exploratory Data Analysis (EDA)
 
 [11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
 
-Exploratory Data Analysis (EDA) is one of the first steps of the data science process which involves learning as much as possible about the data without spending too much time.
+Exploratory Data Analysis (EDA) is one of the first steps of the data science process which involves learning how to extract information from descriptive (summary) statistics. 
 
 
 ## Data Preparation
+
+The [Data Science Primer](https://elitedatascience.com/primer) covers exploratory analysis, data cleaning, feature engineering, algorithm selection, and model training.
 
 ### Import data
 
@@ -97,12 +108,6 @@ Exploratory Data Analysis (EDA) is one of the first steps of the data science pr
 
 ## Data Cleaning
 
-[How to Perform Data Cleaning for Machine Learning with Python?](https://machinelearningmastery.com/basic-data-cleaning-for-machine-learning/)
-
-[Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
-
-[ML Guide Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html)
-
 Data cleaning refers to identifying and correcting errors in the dataset that may negatively impact a predictive model.
 
 - Identify Columns That Contain a Single Value
@@ -111,6 +116,15 @@ Data cleaning refers to identifying and correcting errors in the dataset that ma
 - Remove Columns That Have A Low Variance
 - Identify Rows that Contain Duplicate Data
 - Delete Rows that Contain Duplicate Data
+
+Data cleaning also includes the following [2]:
+
+1. Handling missing values
+2. Scaling and normalization
+3. Parsing dates
+4. Character encodings
+5. Inconsistent Data Entry
+
 
 ### Handling missing values
 
@@ -147,7 +161,7 @@ Check for null values. We can drop or fill the `NaN` values.
 ```
 
 
-## Scaling vs. Normalization
+## Scaling vs Normalization
 
 Also see "Normalization Techniques" in Feature Engineering.
 
@@ -294,17 +308,6 @@ A train-test split conists of the following:
 
 
 ----------
-
-
-## Data Cleaning
-
-The [Data Science Primer](https://elitedatascience.com/primer) covers exploratory analysis, data cleaning, feature engineering, algorithm selection, and model training.
-
-1. Handling missing values
-2. Scaling and normalization
-3. Parsing dates
-4. Character encodings
-5. Inconsistent Data Entry
 
 
 ## Data Pipelines
@@ -486,33 +489,27 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [1] [INFOGRAPHIC: Data prep and Labeling](https://www.cognilytica.com/2019/04/19/infographic-data-prep-and-labeling/)
 
-
-### Glossary
-
-[ML Cheatsheet](https://github.com/shuaiw/ml-cheatsheet)
-
-[ML Glossary](https://ml-cheatsheet.readthedocs.io/en/latest/index.html)
-
-[Analytics Vidhya Glossary of Machine Learning Terms](https://www.analyticsvidhya.com/glossary-of-common-statistics-and-machine-learning-terms/#five)
-
+[2] [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
 
 ### Data Preprocessing
 
 [Data Science Primer](https://elitedatascience.com/primer)
 
-[ML Guide Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html)
+[How to Perform Data Cleaning for Machine Learning with Python?](https://machinelearningmastery.com/basic-data-cleaning-for-machine-learning/)
 
 [Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
+
+[ML Guide Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html)
 
 
 [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
 [How to Select a Data Splitting Method](https://towardsdatascience.com/how-to-select-a-data-splitting-method-4cf6bc6991da)
 
-[Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
-
 
 ### Categorical Data
+
+[4 Categorical Encoding Concepts to Know for Data Scientists](https://towardsdatascience.com/4-categorical-encoding-concepts-to-know-for-data-scientists-e144851c6383)
 
 [Smarter Ways to Encode Categorical Data for Machine Learning](https://towardsdatascience.com/smarter-ways-to-encode-categorical-data-for-machine-learning-part-1-of-3-6dca2f71b159)
 
@@ -535,3 +532,4 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 [A Gentle Introduction to k-fold Cross-Validation](https://machinelearningmastery.com/k-fold-cross-validation/)
 
 [How to Configure k-Fold Cross-Validation](https://machinelearningmastery.com/how-to-configure-k-fold-cross-validation/)
+
