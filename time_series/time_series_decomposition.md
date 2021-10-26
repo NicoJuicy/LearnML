@@ -31,9 +31,18 @@ Time series analysis provides a useful abstraction for selecting forecasting met
 A given time series is thought to consist of three systematic components: level, trend, and seasonality plus one non-systematic component called _noise_.
 
 - Level: The average value in the series.
+
 - Trend: The increasing or decreasing value in the series.
+
 - Seasonality: The repeating short-term cycle in the series.
+
 - Noise: The random variation in the series.
+
+
+- Cyclic Patterns: A cyclic pattern is a repetitive pattern of the data that does not occur in a fixed period of time. These is usually a repetitive patterns that continuously repeats more than a year or longer.
+
+- Signal: Signal is the real pattern, the repeatable process/pattern in data.
+
 
 Time series analysis is concerned with using methods such as decomposition of a time series into its systematic components in order to understand the underlying causes or the _why_ behind the time series dataset which is usually not helpful for prediction.
 
