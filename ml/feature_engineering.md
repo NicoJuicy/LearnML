@@ -205,6 +205,8 @@ We can apply the min-max scaling in Pandas using the `.min()` and `.max()` metho
         df_min_max_scaled[column] = (df_min_max_scaled[column] - df_min_max_scaled[column].min()) / (df_min_max_scaled[column].max() - df_min_max_scaled[column].min())    
 ```
 
+We can also use `RobustScaler` when we want to reduce the effects of outliers compared to `MinMaxScaler`.
+
 
 ### Using z-score scaling
 
