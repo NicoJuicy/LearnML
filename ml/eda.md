@@ -1,5 +1,38 @@
 # Exploratory Data Analysis (EDA)
 
+<!-- MarkdownTOC levels=1,2,3 -->
+
+- EDA Example
+- Summary Statistics
+    - Statistical Distribution
+    - Anomalies
+- Describing categorical data
+- Essential Code Blocks
+- Basic Dataset Exploration
+- Summary Statistics
+- Plot of numeric features
+- Plot of categorical features
+- Segment the target variable by categorical features
+- Group numeric features by each categorical feature
+- Relationships between numeric features
+    - Correlation matrix for numerical features
+    - Heatmap of the correlations
+- Essential Code Blocks
+- Basic data set Exploration
+- Distribution
+    - Numeric Features
+- Grouping and segmentation
+- Relationships between numeric features and other numeric features
+- How to Identify Outliers?
+    - Extreme Value Analysis
+    - Proximity Methods
+    - Projection Methods
+    - Methods Robust to Outliers
+- References
+
+<!-- /MarkdownTOC -->
+
+
 ## EDA Example
 
 Check the summary statistics and create histograms for the numeric variables of the dataset as presented in the code below.
@@ -149,9 +182,9 @@ We can get an instinctive as well as a high-level practical understanding of the
 1. Shape (dimensions) of the DataFrame
 2. Data types of the various columns
 
-   We may observe that our dataset has a combination of categorical (object) and numeric (float and int) features.
+We may observe that our dataset has a combination of categorical (object) and numeric (float and int) features.
 
-   Look for: Numeric features that should be categorical and vice versa.
+Look for: Numeric features that should be categorical and vice versa.
 
 3. Display a few rows
 
