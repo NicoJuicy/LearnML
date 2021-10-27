@@ -8,7 +8,7 @@ If you are like me and try to follow the principles of DRY, KISS, Deaign Pattern
 
 As an AI/ML engineer, you should be willing to settle for “good enough” rather than trying to find the “best” model/approach.
 
-Scrum is a popular project management approach but not really a software development methodology [1]. I prefer using an iterative, agile feature-driven development (FDD) methdology where team members are able to work independently [2].
+Scrum is a popular project management approach but not really a software development methodology [1]. I prefer using an iterative, agile feature-driven development (FDD) methodology where team members are able to work independently [2].
 
 This repo contains notes from various articles and other resources on a variety of topics in Artificial Intelligence (AI) and Machine Learning (ML). 
 
