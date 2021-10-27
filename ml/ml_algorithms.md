@@ -360,15 +360,14 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 
 
 
-
 ----------
+
 
 
 ## Orange Algorithm List
 
 ### Regression
 
-- SVM
 - Linear Regression
 
 ### Classification
@@ -385,6 +384,7 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 - Random Forest
 - Gradient Boosting
 - SGD
+- SVM
 
 ### Dimensionality Reduction
 
