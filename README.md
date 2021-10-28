@@ -143,6 +143,7 @@ TODO: Add items
 
 [2] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge (SWEBOK) v. 3, IEEE, 2014. 
 
+
 M. P. Deisenroth, A. A. Faisal, and C. S. Ong, Mathematics for Machine Learning, Cambridge, UK: Cambridge University Press, ISBN: 978-1-108-47004-9, 2020.
 
 W. McKinney, Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython, 2nd ed., O’Reilly Media, ISBN: 978-1491957660, 2017. 
@@ -152,6 +153,8 @@ S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Up
 
 E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014. 
 
+S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 978-1787125933, 2017.
+ 
 S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/.
 
 R. H. Arpaci-Dusseau and A. C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, 2018, v. 1.01, Available online: https://pages.cs.wisc.edu/~remzi/OSTEP/
