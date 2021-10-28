@@ -180,6 +180,32 @@ MLflow offers a set of lightweight APIs that can be used with any existing machi
 
 ## NLP Tools
 
+### NLTK
+
+Natural language toolkit (NLTK) is by far the most popular platform for building NLP related projects.
+
+This library is also an open-source library and is available for almost every kind of operating system. 
+
+### Polyglot
+
+Polyglot is a python library for NLP that supports extensive multilingual applications. According to the documentation of polyglot, it supports tokenization for 165 languages, language detection for 196 languages, part-of-speech tagging for 16 languages and sentiment analysis in more than 130 languages.
+
+### SpaCy
+
+SpaCy is a Python NLP library that can be useful for real-world projects containing huge amounts of text data.
+
+The main advantage of SpaCy is that it is much faster than other libraries since it is written in Cython which makes it capable of handling larger amounts of data efficiently.
+
+Support for more than 64 languages, 60 + train pipelines for 19 languages, multi-task learning with pre-trained transformers like BERT and support for modern ML/DL frameworks like Pytorch and Tensorflow makes SpaCy — a good choice for professional projects.
+
+### GenSim
+
+GenSim is an NLP library that is popular due to its amazing speed and memory optimization. 
+
+All the libraries used in GenSim are memory independent and can run easily with data sets of large size also. 
+
+GenSim uses SciPy and NumPy for computing and is used in applications such as chatbots, semantic search, etc.
+
 ### [clean-text](https://github.com/jfilter/clean-text)
 
 User-generated content on the Web and in social media is often dirty. Preprocess your scraped data with clean-text to create a normalized text representation.
