@@ -34,6 +34,8 @@ Here is how to get started with machine learning algorithms:
 
 [ML Cheatsheet - Algorithms](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#algorithms)
 
+[63 Machine Learning Algorithms](https://medium.com/swlh/63-machine-learning-algorithms-introduction-5e8ea4129644)
+
 There are two common approaches of categorizing ML algorithms which you will come across.
 
 - Grouping of algorithms by learning style
