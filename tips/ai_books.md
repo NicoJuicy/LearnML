@@ -1,7 +1,8 @@
-# Recommended Books/References
+# Recommended Resources
 
 [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3)
 
+The following books are available on  [oreilly.com](https://www.oreilly.com/) 
 
 - Artificial Intelligence with Python
 
@@ -12,12 +13,20 @@
 - Generative Adversarial Networks Projects
 
 
+## Books for Beginners
+
+- Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow
+
+- Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow
+
+
 ## Resources
 
 [Data Science Cheatsheet](https://github.com/aaronwangy/Data-Science-Cheatsheet)
 
-A helpful 5-page data science cheatsheet to assist with exam reviews, interview prep, and anything in-between. It covers over a semester of introductory machine learning, and is based on MIT's Machine Learning courses 6.867 and 15.072.
+[Cheatsheets](https://github.com/Neklaustares-tPtwP/Resources/tree/main/Cheat%20Sheets)
 
+[Introduction to APIs in Python](https://towardsdatascience.com/quick-fire-guide-to-apis-in-python-891dd98c8877?source=rss----7f60cf5620c9---4)
 
 
 ## PyTorch Books
@@ -27,8 +36,28 @@ A helpful 5-page data science cheatsheet to assist with exam reviews, interview 
 - PyTorch Artificial Intelligence Fundamentals
 - PyTorch Computer Vision Cookbook
 
-[1] aima-python: Python code for Artificial Intelligence: A Modern Approach. Accessed: June 14, 2020. [Online]. Available: https://github.com/aimacode/aima-python, 0.17.3. 2020.
 
-[2] S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 3rd ed. Upper Saddle River, NJ, USA: Prentice Hall, 2010.
+## Textbooks
 
+M. P. Deisenroth, A. A. Faisal, and C. S. Ong, Mathematics for Machine Learning, Cambridge, UK: Cambridge University Press, ISBN: 978-1-108-47004-9, 2020.
+
+R. H. Arpaci-Dusseau and A. C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, 2018, v. 1.01, Available online: https://pages.cs.wisc.edu/~remzi/OSTEP/
+
+
+W. McKinney, Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython, 2nd ed., O’Reilly Media, ISBN: 978-1491957660, 2017.
+
+S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 978-0-13-604259-4, 2021.
+
+E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.
+
+S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 978-1787125933, 2017.
+
+S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/.
+
+B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Planning and Control, London: Springer, ISBN: 978-1-84628-641-4, 2010.
+
+
+## Code Repos
+
+aima-python: Python code for Artificial Intelligence: A Modern Approach. Accessed: June 14, 2020. [Online]. Available: https://github.com/aimacode/aima-python, 0.17.3. 2020.
 
