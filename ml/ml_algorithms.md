@@ -32,7 +32,7 @@ Here is how to get started with machine learning algorithms:
 
 [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
-[Algorithms](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#algorithms)
+[ML Cheatsheet - Algorithms](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#algorithms)
 
 There are two common approaches of categorizing ML algorithms which you will come across.
 

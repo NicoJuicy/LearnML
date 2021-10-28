@@ -143,4 +143,3 @@ TODO: Add items
 
 [2] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge (SWEBOK) v. 3, IEEE, 2014. 
 
-
