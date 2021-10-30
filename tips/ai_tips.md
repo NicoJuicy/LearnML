@@ -1,6 +1,5 @@
 # AI Tips and Tricks
 
-
 [Applied Machine Learning Process](https://gist.github.com/codecypher/3b313b4959f32306f2ef2af034c3bdff)
 
 [AI Checklist](https://gist.github.com/codecypher/4584f9d5a806eeda7280e9135a9407a0)
@@ -19,7 +18,7 @@
 [How to Profile Memory Usage?](https://gist.github.com/codecypher/c741bffc7c95b5921641a11d164dca31)
 
 
-## ML Problem Solving 
+## ML Problem Solving
 
 [How to solve machine learning problems in the real world](https://www.kdnuggets.com/2021/09/solve-machine-learning-problems-real-world.html)
 
@@ -74,6 +73,17 @@
 [Github Student Developer Pack](https://education.github.com/pack)
 
 [Natural Language Processing Toolkit (NLTK)](https://www.nltk.org/book/)
+
+
+## Bayesian Networks (BN)
+
+The main problem with Bayesian Networks (BN) is that they appear to be deceptively simple. However, in reality there are many issues with their practical use:
+
+- Most of the software tools currently available for BN are GUI in nature which makes them impractical for most real-world applications. For a simple problem where the correct answer is already know, a BN GUI tool would probably be fine (see last comment below).
+
+- There are few software libaries available for BN and those that are available are usually poorly documented. I completed an assignment using pyagrum which was a recommended library for BN and I encountered many problems with the API and documentation.
+
+- My professor gave us what appeared to be a simple BN problem. However, none of the students in the class (including me) were able to get the problem correct even though we were given more than one chance (each time with more explanation on BN). However, I did get it correct the third time. Thus, I am not a fan of BN.
 
 
 ## Robotics
