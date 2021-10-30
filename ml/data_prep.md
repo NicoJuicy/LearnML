@@ -43,7 +43,12 @@
 
 ## Overview
 
-The approaches will depend on the dataset as well as the data types, so there is no perfect list of steps.
+> If you torture the data, it will confess to anything - Ronald Coase
+
+There is often more than one way to sample and interogate data which means that deciding the best approach is subjective and open to bias. Thus, _data torture_ is the practice of repeatedly interpreting source data until it reveals a desired result. 
+
+
+The approaches to data preparation will depend on the dataset as well as the data types, so there is no perfect list of steps.
 
 [Concatenating CSV files using Pandas module](https://www.geeksforgeeks.org)
 
