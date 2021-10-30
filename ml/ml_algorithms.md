@@ -36,11 +36,15 @@ Here is how to get started with machine learning algorithms:
 
 [63 Machine Learning Algorithms](https://medium.com/swlh/63-machine-learning-algorithms-introduction-5e8ea4129644)
 
-There are two common approaches of categorizing ML algorithms which you will come across.
+There are two common approaches to categorizing ML algorithms:
 
 - Grouping of algorithms by learning style
-
 - Grouping of algorithms by similarity in form or function
+
+
+<img width="800" alt="Taxonomy of 63 Machine Learning Algorithms" src="https://miro.medium.com/max/4056/1*A9QcGlMRQBAl6cfhxS-XeA.png" />
+
+<center>Figure: 63 Machine Learning Algorithms by Priyanshu Jain</center>
 
 
 ## Algorithms Grouped by Learning Style
@@ -361,9 +365,7 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 - Only capture the algorithm properties you actually need, keep it as simple as possible.
 
 
-
 ----------
-
 
 
 ## Orange Algorithm List
@@ -382,11 +384,11 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 
 - AdaBoost
 - kNN
-- Tree
 - Random Forest
 - Gradient Boosting
 - SGD
 - SVM
+- Tree
 
 ### Dimensionality Reduction
 
