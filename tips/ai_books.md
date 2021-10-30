@@ -2,25 +2,16 @@
 
 [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3)
 
-The following books are available on  [oreilly.com](https://www.oreilly.com/) 
+If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has  good books on a variety of AI/ML topics.
 
-- Artificial Intelligence with Python
+The following books are available on  [oreilly.com](https://www.oreilly.com/):
 
-- Artificial Intelligence By Example
 - Practical Convolutional Neural Networks
 - Neural Network Projects with Python
-
 - Generative Adversarial Networks Projects
 
 
-## Books for Beginners
-
-- Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow
-
-- Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow
-
-
-## Resources
+## Quickstart Resources
 
 [Data Science Cheatsheet](https://github.com/aaronwangy/Data-Science-Cheatsheet)
 
@@ -29,11 +20,24 @@ The following books are available on  [oreilly.com](https://www.oreilly.com/)
 [Introduction to APIs in Python](https://towardsdatascience.com/quick-fire-guide-to-apis-in-python-891dd98c8877?source=rss----7f60cf5620c9---4)
 
 
+## Books for Developers
+
+A. Artasanchez and P. Joshi, Artificial Intelligence with Python, 2nd ed. Birmingham, U.K.: Packt Pub. Ltd., 2020.
+
+D. Rothman, Artificial Intelligence by Example, 2nd ed. Birmingham, U.K.: Packt Pub. Ltd., 2020.
+
+S. Raschka and V. Mirjalili, Python Machine Learning, 3rd ed., Birmingham, U.K.: Packt Pub. Ltd., 2019.
+
+Y. Liu, Python Machine Learning by Example, 3rd ed., Birmingham, U.K.: Packt Pub. Ltd., 2020.
+
+
 ## PyTorch Books
 
-- Mastering PyTorch
+A. R. Jha, Mastering PyTorch, Birmingham, U.K.: Packt Pub. Ltd., 2021.
+
+J. Matthew, PyTorch Artificial Intelligence Fundamentals, Birmingham, U.K.: Packt Pub. Ltd., 2020.
+
 - Deep Learning with PyTorch
-- PyTorch Artificial Intelligence Fundamentals
 - PyTorch Computer Vision Cookbook
 
 
