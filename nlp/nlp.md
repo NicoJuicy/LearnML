@@ -12,32 +12,30 @@ Processing of language is needed when a system wants to work based on input from
 
 ## Challenges in Natural Language Processing
 
-- Lexical Ambiguity: This is the first level of ambiguity that occurs generally in words alone. For instance, when a code is given a word like ‘board’ it would not know whether to take it as a noun or a verb. This causes ambiguity in the processing of this piece of code.
+- **Lexical Ambiguity:** This is the first level of ambiguity that occurs generally in words alone. For instance, when a code is given a word like ‘board’ it would not know whether to take it as a noun or a verb. This causes ambiguity in the processing of this piece of code.
 
-- Syntax Level Ambiguity: This is another type of ambiguity that has more to do with the way phrases sound in comparison to how the machine perceives it. For instance, a sentence like, ‘He raised the scuttle with a blue cap’. This could mean one of two things. Either he raised a scuttle with the help of a blue cap, or he raised a scuttle that had a red cap.
+- **Syntax Level Ambiguity:** This is another type of ambiguity that has more to do with the way phrases sound in comparison to how the machine perceives it. For instance, a sentence like, ‘He raised the scuttle with a blue cap’. This could mean one of two things. Either he raised a scuttle with the help of a blue cap, or he raised a scuttle that had a red cap.
 
-- Referential Ambiguity: References made using pronouns constitute referential ambiguity. For instance, two girls are running on the track. Suddenly, she says, ‘I am exhausted’. It is not possible for the program to interpret, who out of the two girls is tired.
-
-
+- **Referential Ambiguity:** References made using pronouns constitute referential ambiguity. For instance, two girls are running on the track. Suddenly, she says, ‘I am exhausted’. It is not possible for the program to interpret, who out of the two girls is tired.
 
 
 ## Common Tasks
 
 Some NLP use cases and tasks are:
 
-- Sentiment Analysis: to understand the sentiment (negative, positive, neutral) a certain document/text holds.
+- **Sentiment Analysis:** to understand the sentiment (negative, positive, neutral) a certain document/text holds.
 
 Example: social media posts about Climate Change.
 
-- Topic Modeling: to draw clusters or organize the data based on the topics (goal is to learn these topics) it contains.
+- **Topic Modeling:** to draw clusters or organize the data based on the topics (goal is to learn these topics) it contains.
 
 Example: an insurance company wants to identify fraudulent claims by classifying causes into main labels and then further analyze the ones containing suspicious content/topics.
 
-- Text Generation: to create new data (textual mainly) based on previous examples from the same domain. Example: chatbots, quotes, email replies, etc.
+- **Text Generation:** to create new data (textual mainly) based on previous examples from the same domain. Example: chatbots, quotes, email replies, etc.
 
 Example: chatbots, quotes , email replies, …, etc.
 
-- Machine Translation → to automatically convert from one language to another.
+- **Machine Translation:** to automatically convert from one language to another.
 
 Example: English to German. 
 
@@ -161,6 +159,8 @@ The general idea with document clustering is to assign each document a vector re
 
 
 ## References
+
+S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/.
 
 [Natural Language Processing (NLP) in Python — Simplified](https://medium.com/@bedourabed/natural-language-processing-nlp-in-python-simplified-b96b89c8be93)
 
