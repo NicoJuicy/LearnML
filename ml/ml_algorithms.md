@@ -333,12 +333,6 @@ This article discusses some of the Pros and Cons of 9 common regression algorith
 9. XGBoost Regression
 
 
-
-## References
-
-[1] [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
-
-
 —————————-
 
 
@@ -366,6 +360,7 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 
 
 ----------
+
 
 
 ## Orange Algorithm List
@@ -404,4 +399,12 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 - Louvain Clustering
 - Hierarchical Clustering
 
+
+## References
+
+[1] [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
+
+[Clustering with K-Means: simple yet powerful](https://medium.com/@alexandre.hsd/everything-you-need-to-know-about-clustering-with-k-means-722f743ef1c4)
+
+[Stop using the Elbow Method](https://medium.com/geekculture/stop-using-the-elbow-method-96bcfbbbe9fd)
 
