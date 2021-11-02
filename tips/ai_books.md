@@ -60,6 +60,8 @@ S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Ana
 
 B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Planning and Control, London: Springer, ISBN: 978-1-84628-641-4, 2010.
 
+J. Zobel, Writing in Computer Science, London: Springer, ISBN: 978–1–4471–6638–2, 2014.
+
 
 ## Code Repos
 
