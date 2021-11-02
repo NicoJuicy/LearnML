@@ -75,17 +75,6 @@
 [Natural Language Processing Toolkit (NLTK)](https://www.nltk.org/book/)
 
 
-## Bayesian Networks (BN)
-
-The main problem with Bayesian Networks (BN) is that they appear to be deceptively simple. However, in reality there are many issues with their practical use:
-
-- Most of the software tools currently available for BN are GUI in nature which makes them impractical for most real-world applications. For a simple problem where the correct answer is already know, a BN GUI tool would probably be fine (see last comment below).
-
-- There are few software libaries available for BN and those that are available are usually poorly documented. I completed an assignment using pyagrum which was a recommended library for BN and I encountered many problems with the API and documentation.
-
-- My professor gave us what appeared to be a simple BN problem. However, none of the students in the class (including me) were able to get the problem correct even though we were given more than one chance (each time with more explanation on BN). However, I did get it correct the third time. Thus, I am not a fan of BN.
-
-
 ## Robotics
 
 [Robotics Learning](https://www.rosroboticslearning.com/)
@@ -96,4 +85,12 @@ The main problem with Bayesian Networks (BN) is that they appear to be deceptive
 
 [The Ultimate Guide to Jacobian Matrices for Robotics](https://automaticaddison.com/the-ultimate-guide-to-jacobian-matrices-for-robotics/)
 
+You can do some searching on robot soccer which is one type of classic robotics toy problem, often involving multiagent reinforcement learning (MARL). There are a lot of technical issues (mainly safety related) involved besides the biomechanics of walking. 
 
+There has been limited success for certain application areas such as the robot dog and of course robotic kits for arduino and raspberry pi (for hobbyists) but more practical applications still seem to be more elusive. 
+
+In general, it costs a lot of money for R&D in robotics and it takes a long time for ROI. For example, openai recently disbanded its robotics division dues to lack of data and capital. Perhaps more interesting is the lack of a proper dataset which is needed for real-world robotics applications in the wild. 
+
+https://arstechnica.com/gadgets/2020/06/boston-dynamics-robot-dog-can-be-yours-for-the-low-low-price-of-74500/ 
+
+https://venturebeat.com/2021/07/16/openai-disbands-its-robotics-research-team/
