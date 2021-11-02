@@ -2,15 +2,16 @@
 
 [What is NLU? How to make chatbots understand what you want?](https://medium.com/empathic-labs/what-is-nlu-how-to-make-chatbots-understand-what-you-want-cecafff7aa7b)
 
-NLU is a subset of NLP and its purpose is to extract the meaning from the text. 
+NLU is a subset of NLP and its purpose is to extract the _meaning_ from the text. 
 
-For example, extracting the sentiment from a sentence, the intention of the writer, or the semantics of the sentence. 
+Examples: Extracting the sentiment from a sentence, the intention of the writer, or the semantics of the sentence. 
 
-There are many applications for these specific techniques, such as text paraphrasing, summarisation, question answering and more. 
+There are many applications for these specific techniques such as text paraphrasing, summarization, question answering and more. 
+
 
 ## How does NLU services work?
 
-In the chatbot world, NLU is usually a service that is called on each message received by a user that tries to understand the intention of this user. 
+In the chatbot world, NLU is usually a _service_ that is called on each message received by a user that tries to understand the intention of this user. 
 
 This will allow the automated agent to know what and how to reply. 
 

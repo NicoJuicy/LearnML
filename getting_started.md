@@ -9,7 +9,7 @@ If you have an .edu email account you can get free access to [oreilly.com](https
 Here are some undergraduate topics/courses that you should know before learning AI/ML (see Math and References sections):
 
 - Calculus
-- Advanced Linear Algebra
+- Linear Algebra
 - Discrete Mathematics
 - Probability and Statitics
 - Statistical Programming

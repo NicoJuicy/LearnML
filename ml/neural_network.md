@@ -112,6 +112,6 @@ This is a complete guide to multi-class classification problem using neural netw
 
 [The complete guide to Keras neural networks classification](https://shaun-enslin.medium.com/deep-dive-into-tensorflow-keras-with-a-real-life-neural-network-multi-class-problem-e50b1420432f)
 
-
+[Neural Networks Basics: Activation Functions](https://medium.com/artificialis/neural-networks-basics-activation-functions-d75b67383da7)
 
 
