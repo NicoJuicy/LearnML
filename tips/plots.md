@@ -136,6 +136,32 @@ The `relplot` function is a figure-level interface for drawing relational plots 
     )
 ```
 
+## Seaborn Tips
+
+### Changing the Font Size in Seaborn
+
+1. Set_theme function
+
+https://miro.medium.com/max/2100/1*z3Bu9_mGcoVNt7ueVwz5nQ.png
+
+2. Axis level functions
+
+https://miro.medium.com/max/2100/1*HXJRNs84Wc23NnmJ9OomKA.png
+
+3. Set_axis_labels function
+
+https://miro.medium.com/max/2100/1*ELwHL4YC5ombql6yJKLdGA.png
+
+4. Matplotlib functions
+
+https://miro.medium.com/max/2100/1*WgJOamXxhwolExnNZEzl-g.png
+
+Seaborn allows for creating the common plots with just 3 functions:
+
+- Relplot: Used for creating relational plots
+- Displot: Used for creating distributions plots
+- Catplot: Used for creating categorical plots
+
 
 ## Data Visualization Packages
 
@@ -175,3 +201,6 @@ Yellowbrick was developed to help the model selection process using various visu
 
 [Top 3 Visualization Python Packages to Help Your Data Science Activities](https://towardsdatascience.com/top-3-visualization-python-packages-to-help-your-data-science-activities-168e22178e53)
 
+[4 Different Methods for Changing the Font Size in Python Seaborn](https://sonery.medium.com/4-different-methods-for-changing-the-font-size-in-python-seaborn-fd5600592242)
+
+[3 Seaborn Functions That Cover All Your Visualization Tasks](https://towardsdatascience.com/3-seaborn-functions-that-cover-almost-all-your-visualization-tasks-793f76510ac3)
