@@ -1,5 +1,32 @@
 # Machine Learning Tips
 
+<!-- MarkdownTOC -->
+
+- Bayesian Networks \(BN\)
+- What aspect ratio to use for line plots
+  - Calculating the aspect ratio
+  - Best practices:
+- Run ML model training/evaluation with TMUX
+- Watch your training and GPU resources
+- Testing the online inference models
+  - A/B test
+- Monitoring the model
+- References
+
+<!-- /MarkdownTOC -->
+
+
+## Bayesian Networks (BN)
+
+The main problem with Bayesian Networks (BN) is that they appear to be deceptively simple. However, in reality there are many issues with their practical use:
+
+- Most of the software tools currently available for BN are GUI in nature which makes them impractical for most real-world applications. For a simple problem where the correct answer is already know, a BN GUI tool would probably be fine (see last comment below).
+
+- There are few software libaries available for BN and those that are available are usually poorly documented. I completed an assignment using pyagrum which was a recommended library for BN and I encountered many problems with the API and documentation.
+
+- My professor gave us what appeared to be a simple BN problem. However, none of the students in the class (including me) were able to get the problem correct even though we were given more than one chance (each time with more explanation on BN). However, I did get it correct the third time. Thus, I am not a fan of BN.
+
+
 ## [What aspect ratio to use for line plots](https://towardsdatascience.com/should-you-care-about-the-aspect-ratio-when-creating-line-plots-ed423a5dceb3)
 
 One of the most overlooked aspects of creating charts is the use of correct aspect ratios. 
@@ -55,6 +82,7 @@ To measure the impact of a new model, we need to augment the evaluation by runni
 
 In an A/B test, users are split into two distinct non-overlapping cohorts. To run an A/B test, the population of users must be split into statistically identical populations that each experience a different algorithm.
 
+
 ## Monitoring the model
 
 Once a model has been deployed its behavior must be monitored. 
@@ -71,5 +99,7 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
 ## References
 
 [Best practices in the deployment of AI models](https://nagahemachandchinta.medium.com/best-practices-in-the-deployment-of-ai-models-c929c3146416)
+
+[Introduction to TensorFlow Probability (Bayesian Neural Network)](https://towardsdatascience.com/introduction-to-tensorflow-probability-6d5871586c0e)
 
 
