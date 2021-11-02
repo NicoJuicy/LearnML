@@ -1,12 +1,6 @@
 <!-- MarkdownTOC -->
 
-- How to Decompose Time Series Data into Trend and Seasonality
-    - Time Series Components
-- Time Series Data Visualization with Python
-    - Time Series Visualization
-- How To Isolate Trend, Seasonality, and Noise From A Time Series
-    - A step-by-step procedure for decomposing a time series into trend, seasonal, and noise components
-    - Time series decomposition using statsmodels
+- How to Decompose Time Series Data
     - Combining Time Series Components
     - Classical decomposition
         - Additive Model
@@ -17,6 +11,12 @@
 - Time Series 101 Guide Python
     - STL Decomposition
     - Basic Time Series Forecasting Merhods
+- How To Isolate Trend, Seasonality, and Noise From A Time Series
+    - A step-by-step procedure for decomposing a time series into trend, seasonal, and noise components
+    - Time series decomposition using statsmodels
+- Time Series Data Visualization with Python
+    - Time Series Visualization
+    - References
 
 <!-- /MarkdownTOC -->
 
