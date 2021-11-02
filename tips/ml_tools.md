@@ -54,7 +54,7 @@ A great tool for exploratory data analysis (EDA) and to evaluate many models as 
 
 DataPrep lets you prepare your data using a single library with a few lines of code.
 
-DataPrep.EDA is the fastest and the easiest EDA (Exploratory Data Analysis) tool in Python. It allows you to understand a Pandas/Dask DataFrame with a few lines of code in seconds.
+DataPrep.EDA is the fastest and the easiest EDA (Exploratory Data Analysis) tool in Python which allows you to understand a Pandas/Dask DataFrame with a few lines of code in seconds.
 
 **Create Profile Reports, Fast**
 
@@ -83,7 +83,9 @@ There are many tools that will help you in automating the entire feature enginee
 
 ### [Feature-engine](https://github.com/feature-engine/feature_engine)
 
-Feature-engine is a Python library with multiple transformers to engineer and select features for use in machine learning models. Feature-engine's transformers follow scikit-learn's functionality with fit() and transform() methods to first learn the transforming parameters from data and then transform the data.
+Feature-engine is a Python library with multiple transformers to engineer and select features for use in machine learning models. 
+
+Feature-engine's transformers follow scikit-learn's functionality with fit() and transform() methods to first learn the transforming parameters from data and then transform the data.
 
 ### [Featuretools](https://github.com/alteryx/featuretools)
 
@@ -116,6 +118,14 @@ OpenCV supports a wide variety of programming languages like Python, C++, Java, 
 OpenCV can process images and videos to identify objects, faces, or eve handwriting.
 
 
+## [Kale](https://github.com/kubeflow-kale/kale)
+
+[How to start contributing to open-source projects](https://towardsdatascience.com/how-to-start-contributing-to-open-source-projects-41fcfb654b2e)
+
+
+KALE (Kubeflow Automated pipeLines Engine is an open-source project that simplifies the Data Science experience with Kubeflow and Kubernetes (deploying Kubeflow Pipelines workflows). 
+
+
 ## [Kedro](https://github.com/quantumblacklabs/kedro)
 
 [Kedro — A Python Framework for Reproducible Data Science Project](https://towardsdatascience.com/kedro-a-python-framework-for-reproducible-data-science-project-4d44977d4f04)
@@ -127,7 +137,9 @@ Kedro borrows concepts from software engineering and applies them to machine-lea
 
 ### [PyMC3](https://github.com/pymc-devs/pymc3)
 
-PyMC3 is a Python package for Bayesian statistical modeling and Probabilistic Machine Learning focusing on advanced Markov chain Monte Carlo (MCMC) and variational inference (VI) algorithms. Its flexibility and extensibility make it applicable to a large suite of problems.
+PyMC3 is a Python package for Bayesian statistical modeling and Probabilistic Machine Learning focusing on advanced Markov chain Monte Carlo (MCMC) and variational inference (VI) algorithms. 
+
+The flexibility and extensibility of PyMC3 make it applicable to a large suite of problems.
 
 [A Gentle Introduction to Bayesian Belief Networks](https://machinelearningmastery.com/introduction-to-bayesian-belief-networks/)
 
@@ -184,11 +196,13 @@ MLflow offers a set of lightweight APIs that can be used with any existing machi
 
 Natural language toolkit (NLTK) is by far the most popular platform for building NLP related projects.
 
-This library is also an open-source library and is available for almost every kind of operating system. 
+NLTK is also an open-source library and is available for almost every kind of operating system. 
 
 ### Polyglot
 
-Polyglot is a python library for NLP that supports extensive multilingual applications. According to the documentation of polyglot, it supports tokenization for 165 languages, language detection for 196 languages, part-of-speech tagging for 16 languages and sentiment analysis in more than 130 languages.
+Polyglot is a python library for NLP that supports extensive multilingual applications. 
+
+According to the documentation, polyglot supports tokenization for 165 languages, language detection for 196 languages, part-of-speech tagging for 16 languages and sentiment analysis in more than 130 languages.
 
 ### SpaCy
 
@@ -236,6 +250,14 @@ The trend now is toward gRPC for microservices since it is more secure, faster, 
 
 Matplolib is the basis of image visualization in Python but there are other alternatives such as seaborn and plotly (which is browser-based).
 
+
+### [Poetry](https://python-poetry.org/)
+
+[Are You Still Using Virtualenv for Managing Dependencies in Python Projects?](https://towardsdatascience.com/poetry-to-complement-virtualenv-44088cc78fd1)
+
+Poetry is a tool for dependency management and packaging in Python.
+
+
 ### [PySpark](https://github.com/apache/spark)
 
 PySpark is similar to pandas but built with distributed computing in mind. 
@@ -250,7 +272,7 @@ tqdm gives you a progress bar that you can use on any `for` loop that tells you 
 
 urllib3 is a Python HTTP library with thread-safe connection pooling, file post support, user friendly, and more.
 
-In shoet, urllib3 is a powerful, user-friendly HTTP client for Python.
+In short, urllib3 is a powerful, user-friendly HTTP client for Python.
 
 
 ## Cloud Tools
@@ -273,13 +295,13 @@ Deta is a free, developer friendly cloud platform.
 
 Hydra provides a configuration file for the entire experiment. 
 
-Hydra is helpful when we want to share our code with someone else or run the experiments on a different machine. 
+Hydra is helpful when we want to share your code with someone else or run the experiments on a different machine. 
 
 Hydra provides the flexibility to set the desired configurations like learning rate, model hidden layer sizes, epochs, data set name, etc. without having to make changes to the actual code.
 
 ### [Pipreqs](https://pypi.org/project/pipreqs/)
 
-Pipreqs is useful when we want to port our code to a different machine and install all the dependencies. 
+Pipreqs is useful when you want to port your code to a different machine and install all the dependencies. 
 
 Pipreqs helps to create a list of python dependencies along with the versions that the current working code is using and saves them in a file that can be easily installed anywhere.
 
@@ -295,7 +317,7 @@ H5py can be used to store all the intermediate loss values in a dictionary mappe
 
 ### Pickle
 
-Picklecan be used to save and load the python classes or PyTorch models for reuse.
+Pickle can be used to save and load the python classes or PyTorch models for reuse.
 
 ### [Tqdm](https://tqdm.github.io/)
 
@@ -345,7 +367,15 @@ STUMPY is a powerful and scalable library that efficiently computes something ca
 
 ### [Darts](https://github.com/unit8co/darts)
 
-darts is a Python library for easy manipulation and forecasting of time series. It contains a variety of models, from classics such as ARIMA to deep neural networks. The models can all be used in the same way, using fit() and predict() functions, similar to scikit-learn. The library also makes it easy to backtest models, and combine the predictions of several models and external regressors. Darts supports both univariate and multivariate time series and models. The neural networks can be trained on multiple time series, and some of the models offer probabilistic forecasts.
+Darts is a Python library for easy manipulation and forecasting of time series that contains a variety of models, from classics such as ARIMA to deep neural networks. 
+
+The models can all be used in the same way using fit() and predict() functions which is similar to scikit-learn. 
+
+The library claims to make it easy to backtest models and combine the predictions of several models and external regressors. 
+
+Darts supports both univariate and multivariate time series and models. 
+
+The neural networks can be trained on multiple time series, and some of the models offer probabilistic forecasts.
 
 ### [AutoTS](https://github.com/winedarksea/AutoTS)
 
@@ -359,6 +389,10 @@ tsfresh is a python package that calculates a huge number of time series charact
 
 In addition, the package includes methods for assessing the explanatory power and significance of such traits in regression and classification tasks.
 
+
+## More Tools
+
+[The Only Web Scraping Tool you need for Data Science](https://medium.com/nerd-for-tech/the-only-web-scraping-tool-you-need-for-data-science-f388e2afa187)
 
 
 ## References
