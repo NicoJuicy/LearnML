@@ -64,11 +64,11 @@ You can create a beautiful profile report from a Pandas/Dask DataFrame with the 
 Interactive Visualization: DataPrep.EDA generates interactive visualizations in a report, which makes the report look more appealing to end users.
 Big Data Support: DataPrep.EDA naturally supports big data stored in a Dask cluster by accepting a Dask dataframe as input.
 
-### Bamboolib
+### [Bamboolib](https://github.com/8080labs/bamboolib)
 
 Bamboolib is a data analysis and exploration library that is very easy to use plus you can see the code and reuse it. 
 
-### TensorFlow Data Validation
+### [TensorFlow Data Validation](https://github.com/tensorflow/data-validation)
 
 TensorFlow Data Validation (TFDV) makes data exploration for machine learning more intuitive
 
