@@ -6,6 +6,105 @@
 
 Here are some notes on analyzing overfitting and underfitting.
 
+
+## Principles of Overfitting and Underfitting
+
+### Bias/Variance Trade-off
+
+Underfitting is a situation when your model is too simple for your data (high bias). 
+
+Overfitting is a situation when your model is too complex for your data (high variance). 
+
+In the bias/variance trade-off, here are possible values:
+
+- low bias, low variance: a good result.
+
+- high bias, low variance (underfitting): the algorithm outputs similar predictions for similar data but predictions are wrong.
+
+- low bias, high variance (overfitting): the algorithm outputs very different predictions for similar data.
+
+- high bias, high variance: very bad algorithm (rare occurance).
+
+### How to Detect Underfitting and Overfitting
+
+Underfitting means that your model makes accurate, but initially incorrect predictions. In this case, train error is large and val/test error is large too.
+
+Overfitting means that your model makes not accurate predictions. In this case, train error is very small and val/test error is large.
+
+When you find a good model, train error is small (but larger than in the case of overfitting) and val/test error is also small.
+
+
+NOTE: The train, validation, and test datasets should all have the same distribution.
+
+### More Simple / Complex Model
+
+To complicate the model, you need to add more parameters called _degrees of freedom_ which means to try a more powerful model. 
+
+If the algorithm is already quite complex (neural network or some ensemble model), you need to add more parameters to it such as increase the number of models in boosting. 
+
+In the context of neural networks, this means adding more layers / more neurons in each layer / more connections between layers / more filters for CNN, and so on.
+
+To simplify the model, you need to reduce the number of parameters by changing the algorithm (such as random forest instead of deep neural network) or reduce the number of degrees of freedom. 
+
+### More Regularization / Less Regularization
+
+Regularization is an indirect and forced simplification of the model. 
+
+The regularization term requires the model to keep parameters values as small as possible which requires the model to be as simple as possible. Complex models with strong regularization often perform better than simple models, so this is a very powerful tool.
+
+More regularization (simplifying the model) means increasing the impact of the regularization term which depends on the algorithm, so the regularization parameters are different. 
+
+Thus, you should study the parameters of the algorithm and pay attention to whether they should be increased or decreased in a particular situation. There are a lot of such parameters — L1/L2 coefficients for linear regression, C and gamma for SVM, maximum tree depth for decision trees, and so on. In the context of neural networks, the main regularization methods are:
+
+- Early stopping
+- Dropout
+- L1 and L2 Regularization
+
+In the case when the model needs to be complicated, you should reduce the influence of regularization terms or use no regularization and see what happens.
+
+### More Features / Fewer Features
+
+Adding new features also complicates the model.
+
+We can obtain new features for existing data is used infrequently, mainly due to the fact that it is very expensive and long but sometimes this can help.
+
+We can obtain artificial features from existing ones called _feature engineering_ which is often used for classical machine learning models. 
+
+There are as many examples of such transformations but here are the main ones:
+
+- polynomial features — from x₁, x₂ to x₁, x₂, x₁x₂, x₁², x₂², ... (sklearn.preprocessing.PolynomialFeatures class)
+
+- log(x) for data with not-normal distribution
+
+- ln(|x| + 1) for data with heavy right tail
+
+- transformation of categorical features
+
+- other non-linear data transformation (from length and width to area (`length*width`) and so on.
+
+Linear models often work worse if some features are dependent — highly correlated. In this case, you need to use feature selection approaches to select only those features that carry the maximum amount of useful information.
+
+For neural networks, feature engineering and feature selection make almost no sense because the network finds dependencies in the data itself which is why deep neural networks can restore such complex dependencies.
+
+### Why Getting More Data Sometimes Can’t Help
+
+One of the techniques to combat overfitting is to get more data. Surprisingly, this may not always help. 
+
+Getting more data will not help in case of underfitting.
+
+Getting more data can help with overfitting (not underfitting) if the model is not TOO complex.
+
+Some tools such as data cleaning and cross-validation or hold-out validation are common practices in  machine learning projects that can also be used to combat overfitting.
+
+<img width="600" alt="Techniques to fight underfitting and overfitting (extended)" src="https://towardsdatascience.com/overfitting-and-underfitting-principles-ea8964d9c45c" />
+
+Table: Techniques to fight underfitting and overfitting (extended). 
+
+
+—————
+
+
+
 ## Why is my validation loss lower than my training loss?
 
 In this tutorial, you will learn the three primary reasons your validation loss may be lower than your training loss when training your own custom deep neural networks.
@@ -250,13 +349,18 @@ This may also be identified by a validation loss that is lower than the training
     <img width="600" alt="Plot of Train and Validation Learning Curves Showing a Validation Dataset That Is Easier to Predict Than the Training Dataset" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-that-is-Easier-to-Predict-than-the-Training-Dataset.png" />
 </div>
 
+
+
 ## References
+
+[Overfitting and Underfitting Principles](https://towardsdatascience.com/overfitting-and-underfitting-principles-ea8964d9c45c)
 
 [How to Diagnose Overfitting and Underfitting of LSTM Models](https://machinelearningmastery.com/diagnose-overfitting-underfitting-lstm-models/)
 
-[How to use Learning Curves to Diagnose Machine Learning Model Performance](https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
 
 [Why is my validation loss lower than my training loss?](https://www.pyimagesearch.com/2019/10/14/why-is-my-validation-loss-lower-than-my-training-loss/)
 
 [How to Mitigate Overfitting with K-Fold Cross-Validation using sklearn](https://towardsdatascience.com/how-to-mitigate-overfitting-with-k-fold-cross-validation-518947ed7428)
+
+[How to use Learning Curves to Diagnose Machine Learning Model Performance](https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
 
