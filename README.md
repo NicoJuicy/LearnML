@@ -29,6 +29,24 @@ This is a work in progress (just getting started), so there is still#  a lot mis
 TODO: Add items
 
 
+### Checklists
+
+[AI Checklists](./checklist/ai_checklist.md)
+
+[Applied Machine Learning Checklist](./checklist/applied_ml_checklist.md)
+
+### ML Guides
+
+[Applied Machine Learning Process](./process/applied_ml.md)
+
+[Imbalanced Classification Framework](./process/imbalanced_class.md)
+
+
+### Code Samples
+
+TODO: Add items
+
+
 ### Machine Learning
 
 [Machine Learning Algorithms](./ml/ml_algorithms.md)
@@ -47,23 +65,27 @@ TODO: Add items
 
 [Exploratory Data Analysis (EDA)](./ml/eda.md)
 
+[Neural Network](./ml/neural_network.md)
+
 [Performance Metrics](./ml/performance_metrics.md)
+
+
+### Feature Engineering
+
+[Factor Analysis](./ml/factor_analysis.md)
 
 [Feature Emgineering](./ml/feature_engineering.md)
 
-[Imbalanced Datasets](./ml/imbalanced_data.md)
-
-[Neural Network](./ml/neural_network.md)
-
 [Overfitting and Underfitting](./ml/diagnose_overfitting.md)
 
-[Small Datasets](./ml/small_data.md)
 
-
+### Dataset Issues
 
 [Discrete Probability Distributions](./ml/discrete_prob_dist.md)
 
-[Factor Analysis](./ml/factor_analysis.md)
+[Small Datasets](./ml/small_data.md)
+
+[Imbalanced Datasets](./ml/imbalanced_data.md)
 
 [SMOTE for Imbalanced Classification](./ml/smote.md)
 
@@ -85,20 +107,21 @@ TODO: Add items
  
 [Natural Language Understanding](./nlp/nlu.md)
 
+[NLU Classification](./nlp/nlu_classification.md)
+
+[NLTK Textbook](./nlp/nltk_book.pdf)
+
 
 ### Reinforcement Learning
 
 [Reinforcement Learning](./ml/rl.md)
 
 
-### ML Guides
-
-[Applied Machine Learning Process](./process/applied_ml.md)
-
-[Imbalanced Classification Framework](./process/imbalanced_class.md)
-
-
 ### Time Series
+
+[Time Series Analysis](./time_series/time_series_analysis.md)
+
+[Time Series Decomposition](./time_series/time_series_decomposition.md)
 
 [Time Series Forecasting](./time_series/time_series_forecast.md)
 
@@ -107,35 +130,33 @@ TODO: Add items
 [Time Series Tips](./tips/time_series_tips.md)
 
 
-### Checklists
-
-[AI Checklists](./checklist/ai_checklist.md)
-
-
-### Code Samples
-
-TODO: Add items
-
-
 ### Tips
-
-[Recommended Books/References](./tips/ai_books.md)
-
-[Common Mistakes](./tips/common_mistakes.md)
 
 [AI Tips and Tricks](./tips/ai_tips.md)
 
-[Machine Learning Tips](./tips/ml_tips.md)
+[AutoML Tools](./tips/automl_tools.md)
 
-[Statistics for Machine Learning](./tips/statistics.md)
+[Books/References](./tips/ai_books.md)
+
+[Common Mistakes](./tips/common_mistakes.md)
 
 [Computer Vision Tips](./tips/cv_tips.md)
 
 [Datasets](./tips/datasets.md)
 
+[Machine Learning Tips](./tips/ml_tips.md)
+
+[Machine Learning Tools](./tips/ml_tools.md)
+
 [Memory Usage Tips](./tips/memory_usage.md)
 
+[Plots and Graphs](./tips/plots.md)
 
+[Project Ideas](./tips/ai_project_ideas.md)
+
+[Statistics for Machine Learning](./tips/statistics.md)
+
+[Hypertuning](.tips/tuning.md)
 
 ## References
 
