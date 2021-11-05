@@ -154,7 +154,7 @@ The `relplot` function is a figure-level interface for drawing relational plots 
 
 4. Matplotlib functions
 
-<img widht=600 src="https://miro.medium.com/max/2100/1*WgJOamXxhwolExnNZEzl-g.png" />
+<img width=600 src="https://miro.medium.com/max/2100/1*WgJOamXxhwolExnNZEzl-g.png" />
 
 
 Seaborn allows for creating the common plots with just 3 functions:
