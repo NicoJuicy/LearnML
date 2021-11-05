@@ -227,7 +227,7 @@ Visualize the same set of graphs for all numerical variables in a loop:
 
 ### plt.tight_layout()
 
-When plotting multiple graphs, it is common to see labels of some subplots overlapping on their neighbour subplots like this:
+When plotting multiple graphs, it is common to see labels of some subplots overlapping on their neighbour subplots:
 
 ```py
   categorical = df.select_dtypes('category').columns
