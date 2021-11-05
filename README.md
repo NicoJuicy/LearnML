@@ -127,7 +127,7 @@ TODO: Add items
 
 [Stationary Time Series](./time_series/time_series_stationary.md)
 
-[Time Series Tips](./tips/time_series_tips.md)
+[Time Series Tips](./time_series/time_series_tips.md)
 
 
 ### Tips
