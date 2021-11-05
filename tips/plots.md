@@ -142,19 +142,20 @@ The `relplot` function is a figure-level interface for drawing relational plots 
 
 1. Set_theme function
 
-https://miro.medium.com/max/2100/1*z3Bu9_mGcoVNt7ueVwz5nQ.png
+<img width=600 src="https://miro.medium.com/max/2100/1*z3Bu9_mGcoVNt7ueVwz5nQ.png" />
 
 2. Axis level functions
 
-https://miro.medium.com/max/2100/1*HXJRNs84Wc23NnmJ9OomKA.png
+<img width=600 src="https://miro.medium.com/max/2100/1*HXJRNs84Wc23NnmJ9OomKA.png" />
 
 3. Set_axis_labels function
 
-https://miro.medium.com/max/2100/1*ELwHL4YC5ombql6yJKLdGA.png
+<img width=600 src="https://miro.medium.com/max/2100/1*ELwHL4YC5ombql6yJKLdGA.png" />
 
 4. Matplotlib functions
 
-https://miro.medium.com/max/2100/1*WgJOamXxhwolExnNZEzl-g.png
+<img widht=600 src="https://miro.medium.com/max/2100/1*WgJOamXxhwolExnNZEzl-g.png" />
+
 
 Seaborn allows for creating the common plots with just 3 functions:
 
