@@ -136,6 +136,7 @@ The `relplot` function is a figure-level interface for drawing relational plots 
     )
 ```
 
+
 ## Seaborn Tips
 
 ### Changing the Font Size in Seaborn
@@ -162,6 +163,99 @@ Seaborn allows for creating the common plots with just 3 functions:
 - Relplot: Used for creating relational plots
 - Displot: Used for creating distributions plots
 - Catplot: Used for creating categorical plots
+
+
+
+## Plotting Multiple Graphs
+
+```py
+  import seaborn as sns # v0.11.2
+  import matplotlib.pyplot as plt # v3.4.2
+  sns.set(style='darkgrid', context='talk', palette='rainbow')
+```
+
+### plt.subplots()
+
+One way to plot multiple subplots is to use `plt.subplots()`. 
+
+```py
+  fig, ax = plt.subplots(1, 2, figsize=(10,4))
+  sns.histplot(data=df, x='tip', ax=ax[0])
+  sns.boxplot(data=df, x='tip', ax=ax[1])
+
+  # Set title for subplots
+  ax[0].set_title("Histogram")
+  ax[1].set_title("Boxplot")
+```
+
+Visualize the same set of graphs for all numerical variables in a loop:
+
+```py
+  numerical = df.select_dtypes('number').columns
+  for col in numerical:
+      fig, ax = plt.subplots(1, 2, figsize=(10,4))
+      sns.histplot(data=df, x=col, ax=ax[0])
+      sns.boxplot(data=df, x=col, ax=ax[1])
+```
+
+### plt.subplot()
+
+Another way to visualise multiple graphs is to use `plt.subplot()`.
+
+```py
+  plt.figure(figsize=(10,4))
+  ax1 = plt.subplot(1,2,1)
+  sns.histplot(data=df, x='tip', ax=ax1)
+  ax2 = plt.subplot(1,2,2)
+  sns.boxplot(data=df, x='tip', ax=ax2)
+```
+
+Visualize the same set of graphs for all numerical variables in a loop:
+
+```py
+  plt.figure(figsize=(14,4))
+  for i, col in enumerate(numerical):
+      ax = plt.subplot(1, len(numerical), i+1)
+      sns.boxplot(data=df, x=col, ax=ax) 
+      ax.set_title(f"Boxplot of {col}")
+```
+
+### Comparison between plt.subplots() and plt.subplot()
+
+<img width=600 src="https://miro.medium.com/max/1206/1*TH6KO5j_pKHV30MWzCS3lg.png" />
+
+
+### plt.tight_layout()
+
+When plotting multiple graphs, it is common to see labels of some subplots overlapping on their neighbour subplots like this:
+
+```py
+  categorical = df.select_dtypes('category').columns
+  plt.figure(figsize=(8, 8))
+  for i, col in enumerate(categorical):
+      ax = plt.subplot(2, 2, i+1)
+      sns.countplot(data=df, x=col, ax=ax)
+
+  # Fix overlap
+  plt.tight_layout()
+```
+
+### Set title for Figure
+
+```py
+  plt.figure(figsize=(8, 8))
+  for i, col in enumerate(categorical):
+      ax = plt.subplot(2, 2, i+1)
+      sns.countplot(data=df, x=col, ax=ax) 
+
+  # Set title for figure
+  plt.suptitle('Category counts for all categorical variables')
+
+  plt.tight_layout()
+```
+
+
+---------
 
 
 ## Data Visualization Packages
