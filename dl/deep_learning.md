@@ -1,5 +1,4 @@
-## Deep Learning
-
+# Deep Learning
 
 ## Challenge of Training Deep Learning Neural Networks
 
@@ -34,12 +33,12 @@ In fact, training a neural network is the most challenging part of using the tec
 
 The use of nonlinear activation functions in the neural network means that the optimization problem that we must solve in order to find model parameters is not convex.
 
-Solving this optimization is challenging, not least because the error surface contains many local optima, flat spots, and cliffs.
+Solving this optimization is challenging since the error surface often contains many local optima, flat spots, and cliffs.
 
 
 ### Navigating the Non-Convex Error Surface
 
-A NN model has a specific set of weights can be evaluated on the training dataset and the average error over all training datasets can be thought of as the error of the model. 
+A NN model has a specific set of weights that can be evaluated on the training dataset and the average error over all training datasets can be thought of as the error of the model. 
 
 A change to the model weights will result in a change to the model error. Therefore, we seek a set of weights that result in a model with a small error.
 
@@ -49,9 +48,10 @@ Thus, the process is a search or an optimization and we refer to optimization al
 
 The algorithm that is most commonly used to navigate the error surface is called stochastic gradient descent (SGD).
 
-Other global optimization algorithms designed for non-convex optimization problems could be used, such as a genetic algorithm but stochastic gradient descent is more efficient since it uses the gradient information specifically to update the model weights via an algorithm called _backpropagation_.
+Other global optimization algorithms designed for non-convex optimization problems could be used such as a genetic algorithm but stochastic gradient descent is more efficient since it uses the gradient information specifically to update the model weights via an algorithm called _backpropagation_.
 
-Backpropagation refers to a technique from calculus to calculate the derivative (e.g. the slope or the gradient) of the model error for specific model parameters which allows the model weights to be updated to move down the gradient.
+Backpropagation refers to a technique from calculus to calculate the derivative (auch as the slope or the gradient) of the model error for specific model parameters which allows the model weights to be updated to move down the gradient.
+
 
 ### Components of the Learning Algorithm
 
@@ -78,7 +78,6 @@ Some neural networks are too big to use. There is a way to make them smaller but
 2. Knowledge distillation
 
 
-
 ### Number of hidden layers and nodes
 
 The number of hidden layers depends on the complexity of the task: very complex tasks (such as large image classification or speech recognition) usually require networks with dozens of layers and a huge amount of training data. 
@@ -98,6 +97,7 @@ A batch size of 32 means that 32 samples from the training dataset will be used 
 The higher the batch size, the more memory space that is needed.
 
 There are some hyperparameterss that often have optimal values in base 2 such as batch_size mainly because it affects the data size that is fetched to/from memory by hardware that is base 2.
+
 
 
 ## References
