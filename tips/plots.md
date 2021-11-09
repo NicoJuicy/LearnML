@@ -284,6 +284,12 @@ Yellowbrick is an open-source package to visualize and work as diagnostic tools 
 Yellowbrick was developed to help the model selection process using various visualization APIs that extended from Scikit-Learn APIs.
 
 
+## Choosing Graphs
+
+[This Is How You Should Be Visualizing Your Data](https://towardsdatascience.com/this-is-how-you-should-be-visualizing-your-data-4512495c007b)
+
+
+
 ## References
 
 [Get Interactive Plots Directly With Pandas](https://www.kdnuggets.com/get-interactive-plots-directly-with-pandas.html/)

@@ -36,6 +36,17 @@ Here are some undergraduate topics/courses that you should know before learning 
 [An Introduction To Recurrent Neural Networks And The Math That Powers Them](https://machinelearningmastery.com/an-introduction-to-recurrent-neural-networks-and-the-math-that-powers-them/)
 
 
+## Artificial Intelligence vs Machine Learning vs Deep Learning
+
+[Artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence?wprov=sfti1) (AI) is the study of ways to build intelligent programs and machines that can creatively solve problems which has always been considered a human prerogative.
+
+[Machine learning](https://en.wikipedia.org/wiki/Machine_learning?wprov=sfti1) is a subset of AI that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. In ML, there are different algorithms (e.g. neural networks) that help to solve problems.
+
+[Deep learning](https://en.wikipedia.org/wiki/Deep_learning?wprov=sfti1) (DL) is a subset of machine learning which uses neural networks that have a structure similar to the human neural system.
+
+<img width=600 alt="Diagram showing comparison" src="https://serokell.io/files/zx/zxwju3ha.Machine-learning-vs-deep-learning.jpg" />
+
+
 
 ## Project Definition
 

@@ -110,6 +110,17 @@ Linear: Logistic Regression, Linear Discriminant Analysis (LDA)
 
 Non-linear: K-nearest neighbor, Support vector machines (SVM), Naive Bayes, Decision Tree
 
+#### [One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
+
+Not all classification predictive models support multi-class classification.
+
+Algorithms such as the Perceptron, Logistic Regression, and Support Vector Machines were designed for binary classification and do not natively support classification tasks with more than two classes.
+
+One approach for using binary classification algorithms for multi-classification problems is to split the multi-class classification dataset into multiple binary classification datasets and fit a binary classification model on each. 
+
+Two different examples of this approach are: One-vs-Rest and One-vs-One.
+
+
 ### Regression Algorithms
 
 **Regression** is concerned with modeling the relationship between variables that is iteratively refined using a measure of error in the predictions made by the model.
@@ -271,7 +282,7 @@ Many of these methods can be adapted for use in classification and regression.
 
 ### Principal Component Analysis (PCA)
 
-PCA is not really considered an ML model rather it is a technique (linear transform) commonly used to reduce the dimensionality of the data (data preparation technique) in preparation for use with an ML model.
+PCA is not really considered an ML model rather it is a technique (linear transform) used to reduce the dimensionality of the data (data preparation technique) in preparation for use with an ML model.
 
 
 ### Ensemble Algorithms

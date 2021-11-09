@@ -20,6 +20,21 @@ List of public datasets in computer vision, NLP, and more.
 
 ## ML Dataets
 
+### [7 Top Open Source Datasets to Train Natural Language Processing (NLP) & Text Models](https://www.kdnuggets.com/2021/11/top-open-source-datasets-nlp.html)
+
+One of the first steps you need to take is training your NLP model on datasets. Creating your own dataset is a lot of work and actually unnecessary when just starting out.
+
+There are many open source datasets available but keep in mind that open-source datasets are not without their problems. Unfortunately, you have to deal with bias, incomplete data, and a slew of other concerns when just grabbing any old dataset to test on.
+
+There are a couple of places online that do a great job of curating datasets to make it easier to find what you're looking for:
+
+- [Papers With Code](https://paperswithcode.com/datasets) - Nearly 5,000 machine learning datasets are categorized and easy to find.
+
+- [Hugging Face](https://huggingface.co/datasets) -  A great site to find datasets focused on audio, text, speech, and other datasets specifically targeting NLP.
+
+In addition, the following is a list of some of the best open-source datasets to start learning NLP:
+
+
 ### [huggingface](https://github.com/huggingface/datasets)
 
 Datasets is a lightweight library providing two main features:
