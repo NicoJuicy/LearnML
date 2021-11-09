@@ -59,9 +59,9 @@ TODO: Add items
 
 [Concurrency - Mutliprocessing vs Multithreading](./ml/concurrency.md)
 
-[Computer Vision](./ml/cv.md)
-
 [Data Preparation](./ml/data_prep.md)
+
+[Diagnose Overfitting and Underfitting](https://github.com/codecypher/LearnML/blob/main/ml/diagnose_overfitting.md)
 
 [Exploratory Data Analysis (EDA)](./ml/eda.md)
 
@@ -69,14 +69,16 @@ TODO: Add items
 
 [Performance Metrics](./ml/performance_metrics.md)
 
+[Regression](./ml/regression.md)
+
+[Train-Test Split](./train_test_split.md)
+
 
 ### Feature Engineering
 
 [Factor Analysis](./ml/factor_analysis.md)
 
 [Feature Emgineering](./ml/feature_engineering.md)
-
-[Overfitting and Underfitting](./ml/diagnose_overfitting.md)
 
 
 ### Dataset Issues
@@ -88,6 +90,13 @@ TODO: Add items
 [Imbalanced Datasets](./ml/imbalanced_data.md)
 
 [SMOTE for Imbalanced Classification](./ml/smote.md)
+
+
+### Computer Vision
+
+[Computer Vision](./cv/cv.md)
+
+[Image Augmentation](./cv/image_augment.md)
 
 
 ### Deep Learning
