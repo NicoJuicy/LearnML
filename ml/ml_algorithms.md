@@ -304,9 +304,7 @@ Ensemble is a very powerful class of techniques and as such is very popular.
 
 
 Other Lists of Machine Learning Algorithms
-
 How to Study Machine Learning Algorithms
-
 How to Run Machine Learning Algorithms
 
 
