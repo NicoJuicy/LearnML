@@ -135,6 +135,8 @@ Here we review the following:
 
 [A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
 
+[Essential guide to Multi-Class and Multi-Output Algorithms in Python](https://satyam-kumar.medium.com/essential-guide-to-multi-class-and-multi-output-algorithms-in-python-3041fea55214)
+
 [Supervised Machine Learning: Classification, Logistic Regression, and Classification Error Metrics](https://medium.com/the-quant-journey/supervised-machine-learning-classification-logistic-regression-and-classification-error-metrics-6c128263ac64?source=rss------artificial_intelligence-5)
 
 
