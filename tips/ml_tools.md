@@ -101,6 +101,8 @@ AutoFeat helps to perform Linear Prediction Models with Automated Feature Engine
 
 AutoFeat allows you to select the units of the input variables in order to avoid the construction of physically nonsensical features.
 
+[The Only Web Scraping Tool you need for Data Science](https://medium.com/nerd-for-tech/the-only-web-scraping-tool-you-need-for-data-science-f388e2afa187)
+
 
 
 ## ML Libraries and Frameworks
@@ -190,7 +192,22 @@ MLflow is a platform to streamline machine learning development including tracki
 MLflow offers a set of lightweight APIs that can be used with any existing machine learning application or library (TensorFlow, PyTorch, XGBoost, etc.) wherever you currently run ML code (such as notebooks, standalone applications, or the cloud). 
 
 
-## NLP Tools
+### [openai/gym](https://github.com/openai/gym)
+
+An open-source toolkit for developing and comparing reinforcement learning algorithms. It is compatible with any numerical computation lib
+
+
+
+## Computer Vision (CV)
+
+### ageitgey/face_recognition
+
+A library for building face recognition applications that is one of the simplest facial recognition APIs for Python and the command line.
+
+
+
+
+## Natural Language Programming (NLP)
 
 ### NLTK
 
@@ -273,6 +290,16 @@ tqdm gives you a progress bar that you can use on any `for` loop that tells you 
 urllib3 is a Python HTTP library with thread-safe connection pooling, file post support, user friendly, and more.
 
 In short, urllib3 is a powerful, user-friendly HTTP client for Python.
+
+
+### [The Algorithms - Python](https://github.com/TheAlgorithms/Python)
+
+All algorithms implemented are for learning purposes. 
+
+### [Awesome Python Awesome](https://github.com/vinta/awesome-python)
+
+A curated list of awesome Python frameworks, libraries, software, and resources.
+
 
 
 ## Cloud Tools
@@ -389,10 +416,6 @@ tsfresh is a python package that calculates a huge number of time series charact
 
 In addition, the package includes methods for assessing the explanatory power and significance of such traits in regression and classification tasks.
 
-
-## More Tools
-
-[The Only Web Scraping Tool you need for Data Science](https://medium.com/nerd-for-tech/the-only-web-scraping-tool-you-need-for-data-science-f388e2afa187)
 
 
 ## References
