@@ -2,6 +2,13 @@
 
 Here is a collection of some resources for ML datasets.
 
+### [Internet Archive](https://web.archive.org)
+
+Many developers are too quick to choose web crawling as an option to collect data when there are easier, more ethical resources available such as the internet archive. 
+
+The Internet Archive has been archiving the web for 20 years and has preserved billions of webpages from millions of websites. 
+
+
 ### [Read Datasets with URL in Python](https://towardsdatascience.com/dont-download-read-datasets-with-url-in-python-8245a5eaa919)
 
 A tutorial to read UCI datasets without downloading them locally in any format
