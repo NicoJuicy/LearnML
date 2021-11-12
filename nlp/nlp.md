@@ -10,6 +10,25 @@ Processing of language is needed when a system wants to work based on input from
 
 - Natural Language Generation (NLG): The generation phase of the processing is used in creating Natural Languages from the first phase. Generation starts with Text Planning, which is the extraction of relevant content from the base of knowledge. Next is the Sentence Planning phase where required words that will form the sentence are chosen. Ending with Text Realization is the final creation of the sentence structure.
 
+Researchers are now using NLP to understand the meaning of large sets of documents from an analysis perspective which means that they can understand the different contexts and nuances of what phrases mean. 
+
+## Data Mining
+
+Data mining is the process of analyzing data by searching for patterns to turn the data into information and better decisions. 
+
+Data mining is algorithm-based and finds patterns in large collections of data. 
+
+Data mining is also important because it presents a potentially more efficient and thorough way of interpreting data.
+
+## Pattern Recognition
+
+Pattern recognition is a branch of ML that is focused on categorizing information or finding anomalies in data. For example, facial pattern recognition might be used to determine the age and gender of a person in a photo. 
+
+Pattern recognition tends to be based on probability, so there is a chance that it does not accurately categorize information. 
+
+Pattern recognition is also typically controlled by an algorithm which means that the computer will continue to make guesses until it finds a pattern that matches what we know is true or until the probability of any other pattern remaining is too small to be considered.
+
+
 ## Challenges in Natural Language Processing
 
 - **Lexical Ambiguity:** This is the first level of ambiguity that occurs generally in words alone. For instance, when a code is given a word like ‘board’ it would not know whether to take it as a noun or a verb. This causes ambiguity in the processing of this piece of code.
@@ -166,8 +185,12 @@ S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Ana
 
 [Cleaning & Preprocessing Text Data by Building NLP Pipeline](https://towardsdatascience.com/cleaning-preprocessing-text-data-by-building-nlp-pipeline-853148add68a)
 
+
 [A Detailed, Novice Introduction to Natural Language Processing (NLP)](https://towardsdatascience.com/a-detailed-novice-introduction-to-natural-language-processing-nlp-90b7be1b7e54)
 
+[The Ultimate Guide To Different Word Embedding Techniques In NLP](https://www.kdnuggets.com/2021/11/guide-word-embedding-techniques-nlp.html)
+
 [NLP Techniques Every Data Scientist Should Know](https://towardsdatascience.com/6-nlp-techniques-every-data-scientist-should-know-7cdea012e5c3)
+
 
 
