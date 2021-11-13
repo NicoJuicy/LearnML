@@ -175,6 +175,18 @@ where
 
 
 
+## Medical Images
+
+[Medical Image Dataloaders in TensorFlow 2.x](https://towardsdatascience.com/medical-image-dataloaders-in-tensorflow-2-x-ee5327a4398f)
+
+[Medical Image Pre-Processing with Python](https://towardsdatascience.com/medical-image-pre-processing-with-python-d07694852606)
+
+[Computer Vision Feature Extraction 101 on Medical Images](https://towardsdatascience.com/computer-vision-feature-extraction-101-on-medical-images-part-1-edge-detection-sharpening-42ab8ef0a7cd)
+
+[Chest X-ray & Pneumonia: Deep Learning with TensorFlow](https://towardsdatascience.com/chest-x-ray-pneumonia-deep-learning-with-tensorflow-a58a9e6ade70)
+
+
+
 ## References
 
 [Image Processing and Data Augmentation Techniques for Computer Vision](https://towardsdatascience.com/image-processing-techniques-for-computer-vision-11f92f511e21)
