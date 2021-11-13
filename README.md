@@ -145,7 +145,7 @@ TODO: Add items
 
 [AutoML Tools](./tips/automl_tools.md)
 
-[Books/References](./tips/ai_books.md)
+[Books and References](./tips/ai_books.md)
 
 [Common Mistakes](./tips/common_mistakes.md)
 
