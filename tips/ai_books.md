@@ -1,5 +1,7 @@
 # Recommended Resources
 
+Be sure to see [AI Learning Resources](https://aicoder.medium.com/ai-learning-resources-b49da21fd3b8)
+
 [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3)
 
 If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has  good books on a variety of AI/ML topics.
