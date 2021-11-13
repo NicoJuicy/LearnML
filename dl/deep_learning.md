@@ -104,6 +104,8 @@ There are some hyperparameterss that often have optimal values in base 2 such as
 
 [Deep Learning (Keras)](https://machinelearningmastery.com/start-here/#deeplearning)
 
+[Convolutional Layers vs Fully Connected Layers](https://towardsdatascience.com/convolutional-layers-vs-fully-connected-layers-364f05ab460b)
+
 [Better Deep Learning Performance](https://machinelearningmastery.com/start-here/#better)
 
 [How To Improve Deep Learning Performance](https://machinelearningmastery.com/improve-deep-learning-performance/)
