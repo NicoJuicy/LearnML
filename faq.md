@@ -2,9 +2,11 @@
 
 ## Do I need a Master’s Degree?
 
+If you are going to spend the time to study AI/ML then you might as well invest in an online degree which will greatly increase your career opportunities (and a requirement for most all AI/ML engineer positions).
+
 [Do you need a Master’s Degree in Data Science?](https://towardsdatascience.com/do-you-need-a-masters-degree-in-data-science-you-are-asking-the-wrong-question-8c83dec8bf1b?source=rss----7f60cf5620c9---4)
 
-If you are going to spend the time to study AI/ML then you might as well invest in an online degree which will greatly increase your career opportunities (and a requirement for most all AI/ML engineer positions).
+[Do You Have the Degree it Takes to Get Hired as a Data Scientist?](https://link.medium.com/R46q0hJidlb)
 
 
 ## Recommended Tutorials and Books
@@ -40,6 +42,8 @@ See [How to Choose an ML Model](./getting_started.md) and [Understand Machine Le
 ## Should I start learning ML by coding an algorithm from scratch?
 
 See [How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
+
+The best approach would be to find several job postings that look interesting to you and see what skills and tools they require.  
 
 
 ## Is image channels first or last?
