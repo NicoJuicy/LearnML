@@ -69,3 +69,5 @@ J. Zobel, Writing in Computer Science, London: Springer, ISBN: 978–1–4471–
 
 aima-python: Python code for Artificial Intelligence: A Modern Approach. Accessed: June 14, 2020. [Online]. Available: https://github.com/aimacode/aima-python, 0.17.3. 2020.
 
+Python Machine Learning Code Repository, Accessed: 11/14/2021. [Online].  Available Online: https://github.com/rasbt/python-machine-learning-book-3rd-edition
+
