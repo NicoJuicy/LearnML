@@ -77,21 +77,25 @@ In the past, I encountered obscure image format issues going between Linux and m
 ## Object Classification
 
 [How to Develop a CNN for CIFAR-10 Photo Classification](https://machinelearningmastery.com/how-to-develop-a-cnn-from-scratch-for-cifar-10-photo-classification/)
+
 [How to Develop a CNN to Classify Photos of Dogs and Cats](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/)
-[How to Develop a CNN to Classify Satellite Photos](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-satellite-photos-of-the-amazon-rainforest/)
+
+[How to Develop a CNN to Classify Satellite Photos](https:/low /machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-satellite-photos-of-the-amazon-rainforest/)
 
 
 ## Basics of Convolutional Neural Networks
 
 [Gentle Introduction to Convolutional Layers in CNNS](https://machinelearningmastery.com/convolutional-layers-for-deep-learning-neural-networks/)
+
 [Gentle Introduction to Padding and Stride in CNNs](https://machinelearningmastery.com/padding-and-stride-for-convolutional-neural-networks/)
+
 [Gentle Introduction to Pooling Layers in CNNs](https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/)
 
 
 
 ## Object Detection and Tracking
 
-The approach will depend on your goal/project. I have mostly seen classification (object detection) apps which try to determine the counts of types of objects (pedestrian/vehicle). 
+The approach will depend on your goal/project but most common object detection projects are classification (object detection) apps which try to determine the counts of types of objects (pedestrian/vehicle). 
 
 **NOTE:** Be sure to open the articles in “private” tab/window. 
 
