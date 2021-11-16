@@ -131,6 +131,12 @@ Here we review the following:
 - Error Metrics in Python
 
 
+## Terminology
+
+The parameters of the train function are called _hyperparameters_ such as iterations and learning rate which are set so that the train function can find parameters such as w and b.
+
+
+
 ## References
 
 [A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
