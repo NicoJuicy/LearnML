@@ -83,18 +83,18 @@ Here we load the stock prices of Apple, Microsoft, Google, and Moderna between t
   import seaborn as sns
   sns.set(style="darkgrid")
   
-start = '2020-1-1'
-end = '2021-6-30'
-source = 'yahoo'
-stocks = pd.DataFrame(columns=["Date","Close","Volume","Stock"])
-stock_list = ["AAPL","IBM","MSFT","MRNA"]
-for stock in stock_list:
-    df = pdr.data.DataReader(stock, start=start ,end=end, 
-                         data_source=source).reset_index()
-    df["Stock"] = stock
-    df = df[["Date","Close","Volume","Stock"]]
-    stocks = pd.concat([stocks, df], ignore_index=True)
-    stocks.head()
+  start = '2020-1-1'
+  end = '2021-6-30'
+  source = 'yahoo'
+  stocks = pd.DataFrame(columns=["Date","Close","Volume","Stock"])
+  stock_list = ["AAPL","IBM","MSFT","MRNA"]
+  for stock in stock_list:
+      df = pdr.data.DataReader(stock, start=start ,end=end, 
+                           data_source=source).reset_index()
+      df["Stock"] = stock
+      df = df[["Date","Close","Volume","Stock"]]
+      stocks = pd.concat([stocks, df], ignore_index=True)
+      stocks.head()
 ```
 
 ### Line Plot
@@ -103,7 +103,7 @@ We can use the relplot or lineplot functions of Seaborn to create line plots.
 
 The `relplot` function is a figure-level interface for drawing relational plots including line plot and scatter plot. 
 
-```
+```py
   sns.relplot(
     data=stocks[stocks.Stock == "AAPL"], 
     x="Date", y="Close", 
