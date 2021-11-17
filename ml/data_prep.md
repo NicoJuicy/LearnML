@@ -509,6 +509,7 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [2] [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
 
+
 ### Data Preprocessing
 
 [Data Science Primer](https://elitedatascience.com/primer)
@@ -523,6 +524,11 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
 [How to Select a Data Splitting Method](https://towardsdatascience.com/how-to-select-a-data-splitting-method-4cf6bc6991da)
+
+
+### Missing Values
+
+[Missing Values Be Gone](https://towardsdatascience.com/missing-values-be-gone-a135c31f87c1?source=rss----7f60cf5620c9---4&gi=d11a8ff041dd)
 
 
 ### Categorical Data

@@ -16,6 +16,16 @@
 <!-- /MarkdownTOC -->
 
 
+## Avoid Using Different Library Versions
+
+A mistake we might run into is to use different versions of the various exploited libraries during the train / test and deployment phase.
+
+The risk of using different versions is to have unexpected behaviours which may lead to wrong predictions.
+
+A possible solution to this problem could be to create a virtual environment and install all the necessary libraries, also specifying the versions to be used and then use this virtual environment both during the train/test phase and during the deployment phase.
+
+
+
 ## Bayesian Networks (BN)
 
 The main problem with Bayesian Networks (BN) is that they appear to be deceptively simple. However, in reality there are many issues with their practical use:
@@ -94,6 +104,7 @@ When concept drift has been detected, we need to retrain the ML model but detect
 One strategy for monitoring is to use a metric from a deployed model that can be measured over time such as measuring the output distribution. The observed distribution can be compared to the training output distribution, and alerts can notify data scientists when the two quantities diverge.
 
 Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Seldon.io, BentoML, AWS SageMaker, Torchserve, Google AI.
+
 
 
 ## References

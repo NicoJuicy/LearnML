@@ -185,6 +185,8 @@ where
 
 [Chest X-ray & Pneumonia: Deep Learning with TensorFlow](https://towardsdatascience.com/chest-x-ray-pneumonia-deep-learning-with-tensorflow-a58a9e6ade70)
 
+[AI in Medical Diagnosis — Dealing with Medical Datasets](https://towardsdatascience.com/ai-in-medical-diagnosis-dealing-with-medical-datasets-b746e8bda9e5)
+
 
 
 ## References
