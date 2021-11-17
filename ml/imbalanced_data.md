@@ -178,32 +178,8 @@ The _accuracy paradox_ is used to describe the situation in which your accuracy 
 The accuracy paradox is very common because classification accuracy is often the first measure we use when evaluating models on classification problems.
 
 
-## Examples of Imbalanced Classification
 
-[Imbalanced Classification with the Fraudulent Credit Card Transactions Dataset](https://machinelearningmastery.com/imbalanced-classification-with-the-fraudulent-credit-card-transactions-dataset/)
-
-[Multi-Class Imbalanced Classification](https://machinelearningmastery.com/multi-class-imbalanced-classification/)
-
-Many of the classification predictive modeling problems that we are interested in solving in practice are imbalanced.
-
-Most of the examples are binary classification problems and the examples from the minority class are rare, extreme, abnormal, or unusual in some way.
-
-Many of the domains are described as “detection" which highlights the desire to discover the minority class amongst the abundant examples of the majority class.
-
-
-## Naive Classifier
-
-[How to Develop and Evaluate Naive Classifier Strategies Using Probability](https://machinelearningmastery.com/how-to-develop-and-evaluate-naive-classifier-strategies-using-probability/)
-
-The performance of naive classification models provides a baseline for comparison with other models.
-
-The majority class classifier achieves better accuracy than other naive classifier models such as random guessing and predicting a randomly selected observed class label.
-
-Naive classifier strategies can be used on predictive modeling projects via the `DummyClassifier` class in the scikit-learn library.
-
-
-
-## How To Handle With Imbalanced Classification Without Rebalancing?
+## Handle Imbalanced Classification without Rebalancing
 
 When building a ML classification model using data with more instances of one class than another, the initial default classifier is often unsatisfactory because it classifies almost every sample as the majority class. 
 
@@ -246,6 +222,33 @@ In scikit-learn, at least for the case of oversampling by instance duplication (
 Instead of naïvely or implicitly applying a default threshold of 0.5 or immediately re-training using re-balanced training data, we can try using the original model (trained on the original “imbalanced” data set) and simply plot the trade-off between false positives and false negatives to choose a threshold that may produce a desirable result.
 
 
+
+## Examples of Imbalanced Classification
+
+[Imbalanced Classification with the Fraudulent Credit Card Transactions Dataset](https://machinelearningmastery.com/imbalanced-classification-with-the-fraudulent-credit-card-transactions-dataset/)
+
+[Multi-Class Imbalanced Classification](https://machinelearningmastery.com/multi-class-imbalanced-classification/)
+
+Many of the classification predictive modeling problems that we are interested in solving in practice are imbalanced.
+
+Most of the examples are binary classification problems and the examples from the minority class are rare, extreme, abnormal, or unusual in some way.
+
+Many of the domains are described as “detection" which highlights the desire to discover the minority class amongst the abundant examples of the majority class.
+
+
+## Naive Classifier
+
+[How to Develop and Evaluate Naive Classifier Strategies Using Probability](https://machinelearningmastery.com/how-to-develop-and-evaluate-naive-classifier-strategies-using-probability/)
+
+The performance of naive classification models provides a baseline for comparison with other models.
+
+The majority class classifier achieves better accuracy than other naive classifier models such as random guessing and predicting a randomly selected observed class label.
+
+Naive classifier strategies can be used on predictive modeling projects via the `DummyClassifier` class in the scikit-learn library.
+
+
+
+
 ## References
 
 [A Gentle Introduction to Imbalanced Classification](https://machinelearningmastery.com/what-is-imbalanced-classification/) 
@@ -256,6 +259,8 @@ Instead of naïvely or implicitly applying a default threshold of 0.5 or immedia
 
 [How To Deal With Imbalanced Classification Without Rebalancing the Data](https://www.kdnuggets.com/2021/09/imbalanced-classification-without-re-balancing-data.html)
 
+[How to handle Multiclass Imbalanced Data? Not SMOTE](https://towardsdatascience.com/how-to-handle-multiclass-imbalanced-data-say-no-to-smote-e9a7f393c310)
+
 
 [Standard Machine Learning Datasets for Imbalanced Classification](https://machinelearningmastery.com/standard-machine-learning-datasets-for-imbalanced-classification/)
 
@@ -264,8 +269,6 @@ Instead of naïvely or implicitly applying a default threshold of 0.5 or immedia
 [Discrete Probability Distributions for Machine Learning](https://machinelearningmastery.com/discrete-probability-distributions-for-machine-learning/)
 
 [SMOTE for Imbalanced Classification with Python](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
-
-[How to handle Multiclass Imbalanced Data? Not SMOTE](https://towardsdatascience.com/how-to-handle-multiclass-imbalanced-data-say-no-to-smote-e9a7f393c310)
 
 
 
