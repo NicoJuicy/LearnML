@@ -1,4 +1,4 @@
-# Anomaly Detection 
+# Anomaly Detection
 
 ## Summary
 
@@ -51,6 +51,7 @@ For the performance comparison we created a system that aimed to provide an obje
   3. The ground truth dataset was used by a pipeline which only performed the evaluation after both Avora and KATS anomaly detection algorithms completed the labeling.
 
 
+## References
 
 [Anomaly Detection — How to Tell Good Performance from Bad](https://towardsdatascience.com/anomaly-detection-how-to-tell-good-performance-from-bad-b57116d71a10)
 
