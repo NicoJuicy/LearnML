@@ -415,5 +415,9 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 
 [Clustering with K-Means: simple yet powerful](https://medium.com/@alexandre.hsd/everything-you-need-to-know-about-clustering-with-k-means-722f743ef1c4)
 
+[One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
+
+
 [Stop using the Elbow Method](https://medium.com/geekculture/stop-using-the-elbow-method-96bcfbbbe9fd)
 
+[Stop Using One-vs-One or One-vs-Rest for Multi-Class Classification Tasks](https://towardsdatascience.com/stop-using-one-vs-one-or-one-vs-rest-for-multi-class-classification-tasks-31b3fd92cb5e)
