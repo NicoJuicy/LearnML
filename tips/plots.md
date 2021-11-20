@@ -161,17 +161,34 @@ The `relplot` function is a figure-level interface for drawing relational plots 
 Seaborn allows for creating the common plots with just 3 functions:
 
 - Relplot: Used for creating relational plots
+
 - Displot: Used for creating distributions plots
+
 - Catplot: Used for creating categorical plots
 
 
 
 ## Plotting Multiple Graphs
 
+### Import libraries
+
 ```py
   import seaborn as sns # v0.11.2
   import matplotlib.pyplot as plt # v3.4.2
+  
   sns.set(style='darkgrid', context='talk', palette='rainbow')
+```
+
+### Load datasets
+
+```py
+  # Load data using pandas
+  nifty_data = pd.read_csv('NIFTY_data_2020.csv', parse_dates=["Date"], index_col='Date')
+  nifty_data.head()
+
+  # Load data using seaborn
+  df = sns.load_dataset('tips')
+  df.head()
 ```
 
 ### plt.subplots()
