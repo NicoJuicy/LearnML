@@ -187,6 +187,9 @@ where
 
 [AI in Medical Diagnosis — Dealing with Medical Datasets](https://towardsdatascience.com/ai-in-medical-diagnosis-dealing-with-medical-datasets-b746e8bda9e5)
 
+[Compositional Breast Imaging with Artificial Intelligence to Improve Cancer Detection](https://towardsdatascience.com/compositional-breast-imaging-with-artificial-intelligence-to-improve-cancer-detection-c5f8f38f2266?source=rss----7f60cf5620c9---4)
+
+[Artificial intelligence for lung disease detection using chest CT scan images](https://medium.com/@atashnezhad1/artificial-intelligence-for-lung-disease-detection-using-chest-ct-scan-images-47e8ff279ce0)
 
 
 ## References
