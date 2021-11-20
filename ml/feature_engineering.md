@@ -100,7 +100,7 @@ Feature extraction can be further divided into _linear_ methods and _non-linear_
 
 ## Feature Engineering Techniques
 
-### 1. Imputation (missing values)
+### 1. Impute missing values
 
 Also see **Data Preparation**
 
@@ -110,13 +110,13 @@ Also see **Data Preparation**
 
 ### 2. Handling Outliers
 
-- Removal: Outlier entries are deleted from the distribution
+- Remove: Outlier entries are deleted from the distribution
 
-- Replacing: The outliers could be handled as missing values and replaced with suitable imputation.
+- Replace: The outliers could be handled as missing values and replaced with suitable imputation.
 
-- Capping: Using an arbitrary value or a value from a variable distribution to replace the maximum and minimum values.
+- Cap: Using an arbitrary value or a value from a variable distribution to replace the maximum and minimum values.
 
-- Discretization : Converting continuous variables into discrete values. 
+- Discretize: Converting continuous variables into discrete values. 
 
 
 ### 3. Log Transform
