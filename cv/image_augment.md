@@ -17,8 +17,11 @@ As shown in the paper, this idea helps to consistently improve the performance o
 In the example, we will implement the learnable image resizing module as proposed in the paper and demonstrate that on the Cats and Dogs dataset using the DenseNet-121 architecture.
 
 
+---------
 
-# Image Augmentation using imgaug
+
+
+## Image Augmentation using imgaug
 
 [5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
 
@@ -131,7 +134,8 @@ for n, images in enumerate(image[0:3]):
     plt.show()
 ```
 
-## Multiple Augmentations
+
+### Multiple Augmentations
 
 We can perform multiple augmentations on a single batch of images. 
 
@@ -167,6 +171,8 @@ for n, images in enumerate(image[0:3]):
 
 ## Image Data Preparation
 
+[Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
+
 [How to Manually Scale Image Pixel Data for Deep Learning](https://machinelearningmastery.com/how-to-manually-scale-image-pixel-data-for-deep-learning/)
 
 [How to Normalize, Center, and Standardize Images in Keras](https://machinelearningmastery.com/how-to-normalize-center-and-standardize-images-with-the-imagedatagenerator-in-keras/)
@@ -174,6 +180,8 @@ for n, images in enumerate(image[0:3]):
 [How to Evaluate Pixel Scaling Methods for Image Classification](https://machinelearningmastery.com/how-to-evaluate-pixel-scaling-methods-for-image-classification/)
 
 ### Image Data Augmentation
+
+[5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
 
 [How to Configure and Use Image Data Augmentation](https://machinelearningmastery.com/how-to-configure-image-data-augmentation-when-training-deep-learning-neural-networks/)
 
