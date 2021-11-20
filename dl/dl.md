@@ -99,8 +99,55 @@ The higher the batch size, the more memory space that is needed.
 There are some hyperparameterss that often have optimal values in base 2 such as batch_size mainly because it affects the data size that is fetched to/from memory by hardware that is base 2.
 
 
+## Encoder-Decoder 
+
+The Encoder-Decoder architecture is a way of organizing recurrent neural networks for sequence prediction problems that have a variable number of inputs, outputs, or both inputs and outputs.
+
+The architecture involves two components: an encoder and a decoder.
+
+- **Encoder:** The encoder reads the entire input sequence and encodes it into an internal representation, often a fixed-length vector called the context vector.
+
+- **Decoder:** The decoder reads the encoded input sequence from the encoder and generates the output sequence.
+
+
+## Attention
+
+Attention is the idea of freeing the encoder-decoder architecture from the fixed-length internal representation.
+
+
+## Transformer
+
+The Transformer architecture follows an encoder-decoder structure but does not rely on recurrence and convolutions in order to generate an output. 
+
+In a nutshell, the task of the encoder is to map an input sequence to a sequence of continuous representations which is fed into a decoder. 
+
+The decoder receives the output of the encoder together with the decoder output at the previous time step, to generate an output sequence.
+
+### The Transformer Attention Mechanism
+
+Before the introduction of the Transformer model, the use of attention for neural machine translation was being implemented using RNN-based encoder-decoder architectures. 
+
+The Transformer model revolutionized the implementation of attention by dispensing of recurrence and convolutions and relies only on a self-attention mechanism. 
+
+
+
+## Transfer Learning
+
+Transfer learning is a machine learning method where a model developed for a task is reused as the starting point for a model on a second task.
+
+Transfer learning is usually done for tasks where your dataset has too little data to train a full-scale model from scratch.
+
+A popular approach in deep learning is to use  pre-trained models as the starting point for computer vision and natural language processing tasks due to the vast compute and time resources required to develop neural network models on these problems.
+
+Transfer learning is related to problems such as multi-task learning and concept drift and is not exclusively an area of study for deep learning.
+
+This form of transfer learning used in deep learning is called inductive transfer. This is where the scope of possible models (model bias) is narrowed in a beneficial way by using a model fit on a different but related task.
+
 
 ## References
+
+H. Tatsat, S. Puri, and B. Lookabaugh, "Machine Learning and Data Science Blueprints for Finance", O’Reilly Media, ISBN: 978-1-492-07305-5, 2021. 
+
 
 [Deep Learning (Keras)](https://machinelearningmastery.com/start-here/#deeplearning)
 
@@ -117,5 +164,11 @@ There are some hyperparameterss that often have optimal values in base 2 such as
 [Understand the Impact of Learning Rate on Neural Network Performance](https://machinelearningmastery.com/understand-the-dynamics-of-learning-rate-on-deep-learning-neural-networks/)
 
 
-[1] H. Tatsat, S. Puri, and B. Lookabaugh, "Machine Learning and Data Science Blueprints for Finance", O’Reilly Media, ISBN: 978-1-492-07305-5, 2021. 
+[Encoder-Decoder Models for Text Summarization in Keras](https://machinelearningmastery.com/encoder-decoder-models-text-summarization-keras/)
+
+[The Transformer Model](https://machinelearningmastery.com/the-transformer-model/)
+
+[The Transformer Attention Mechanism](https://machinelearningmastery.com/the-transformer-attention-mechanism/)
+
+[A Gentle Introduction to Transfer Learning for Deep Learning](https://machinelearningmastery.com/transfer-learning-for-deep-learning/)
 
