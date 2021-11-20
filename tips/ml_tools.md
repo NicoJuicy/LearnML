@@ -105,7 +105,7 @@ AutoFeat allows you to select the units of the input variables in order to avoid
 
 
 
-## ML Libraries and Frameworks
+## ML Libraries
 
 ### [OpenCV](https://docs.opencv.org/master/d9/df8/tutorial_root.html)
 
@@ -124,18 +124,10 @@ OpenCV can process images and videos to identify objects, faces, or eve handwrit
 
 [How to start contributing to open-source projects](https://towardsdatascience.com/how-to-start-contributing-to-open-source-projects-41fcfb654b2e)
 
-
-KALE (Kubeflow Automated pipeLines Engine is an open-source project that simplifies the Data Science experience with Kubeflow and Kubernetes (deploying Kubeflow Pipelines workflows). 
+KALE (Kubeflow Automated pipeLines Engine) is an open-source project that simplifies the Data Science experience with Kubeflow and Kubernetes (deploying Kubeflow Pipelines workflows). 
 
 
 ## [Kedro](https://github.com/quantumblacklabs/kedro)
-
-[Kedro — A Python Framework for Reproducible Data Science Project](https://towardsdatascience.com/kedro-a-python-framework-for-reproducible-data-science-project-4d44977d4f04)
-
-Kedro is an open-source Python framework for creating reproducible, maintainable, and modular data science code. 
-
-Kedro borrows concepts from software engineering and applies them to machine-learning code such as modularity, separation of concerns, and versioning.
-
 
 ### [PyMC3](https://github.com/pymc-devs/pymc3)
 
@@ -154,7 +146,9 @@ The flexibility and extensibility of PyMC3 make it applicable to a large suite o
 
 SageMaker is a machine learning environment that simplifies the work of an ML developer by providing tools for extra fast model building and deployment.
 
-In 2021, Amazon launched SageMaker Studio, the first integrated IDE for machine learning. It provides a web interface to monitor all possible aspects of the life cycle of an ML model, Jupyter on steroids. Apart from being closely integrated into the AWS cloud it also offers data labeling software and many other features.
+In 2021, Amazon launched SageMaker Studio, the first integrated IDE for machine learning. It provides a web interface to monitor all possible aspects of the life cycle of an ML model, basicslly Jupyter on steroids. 
+
+Apart from being closely integrated into the AWS cloud it also offers data labeling software and other features.
 
 ### [MXNet](https://github.com/apache/incubator-mxnet)
 
@@ -175,23 +169,6 @@ ONNX achieves this goal by using a common set of operators (the mathematical ope
 ONNX is backed by pretty most of the big AI players and is sure to have a huge impact on the future of ML development. Apart from Google all of the tech giants are partners in this project.
 
 
-### [wandb](https://docs.wandb.ai/)
-
-Weights and biases (W&B/wandb) lets you track, compare, visualize, and optimize machine learning experiments with just a few lines of code. wandb also lets you track your datasets. 
-
-Using W&B's lightweight tools, you can quickly track experiments, version and iterate on datasets, evaluate model performance, reproduce models, visualize results and spot regressions, and share findings with colleagues. 
-
-### [MLFlow](https://github.com/mlflow/mlflow)
-
-[Tutorial](https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html)
-
-Similar to W&B, MLFlow provides functionality for logging code, models, and datasets on which your model has been trained. 
-
-MLflow is a platform to streamline machine learning development including tracking experiments, packaging code into reproducible runs, and deploying models. 
-
-MLflow offers a set of lightweight APIs that can be used with any existing machine learning application or library (TensorFlow, PyTorch, XGBoost, etc.) wherever you currently run ML code (such as notebooks, standalone applications, or the cloud). 
-
-
 ### [openai/gym](https://github.com/openai/gym)
 
 An open-source toolkit for developing and comparing reinforcement learning algorithms. It is compatible with any numerical computation lib
@@ -200,42 +177,49 @@ An open-source toolkit for developing and comparing reinforcement learning algor
 
 ## Computer Vision (CV)
 
-### ageitgey/face_recognition
+### [ageitgey/face_recognition](https://github.com/ageitgey/face_recognition
 
 A library for building face recognition applications that is one of the simplest facial recognition APIs for Python and the command line.
 
 
 
-
 ## Natural Language Programming (NLP)
 
-### NLTK
+### [NLTK](https://www.nltk.org)
+
+[NLTK Book](https://www.nltk.org/book/)
 
 Natural language toolkit (NLTK) is by far the most popular platform for building NLP related projects.
 
 NLTK is also an open-source library and is available for almost every kind of operating system. 
 
-### Polyglot
+### [Polyglot](https://github.com/aboSamoor/polyglot)
 
 Polyglot is a python library for NLP that supports extensive multilingual applications. 
 
 According to the documentation, polyglot supports tokenization for 165 languages, language detection for 196 languages, part-of-speech tagging for 16 languages and sentiment analysis in more than 130 languages.
 
-### SpaCy
+### [SpaCy](https://spacy.io/)
 
 SpaCy is a Python NLP library that can be useful for real-world projects containing huge amounts of text data.
 
 The main advantage of SpaCy is that it is much faster than other libraries since it is written in Cython which makes it capable of handling larger amounts of data efficiently.
 
-Support for more than 64 languages, 60 + train pipelines for 19 languages, multi-task learning with pre-trained transformers like BERT and support for modern ML/DL frameworks like Pytorch and Tensorflow makes SpaCy — a good choice for professional projects.
+spaCy comes with pretrained pipelines and currently supports tokenization and training for 60+ languages with pre-trained transformers such as BERT and support for modern ML/DL frameworks such as Pytorch and Tensorflow which makes SpaCy a good choice for professional projects.
 
-### GenSim
+### [GenSim](https://radimrehurek.com/gensim/)
 
 GenSim is an NLP library that is popular due to its amazing speed and memory optimization. 
 
 All the libraries used in GenSim are memory independent and can run easily with data sets of large size also. 
 
 GenSim uses SciPy and NumPy for computing and is used in applications such as chatbots, semantic search, etc.
+
+### [Pattern](https://github.com/clips/pattern)
+
+Pattern is a multipurpose Python library that can be used for different tasks such as natural language processing (tokenization, sentiment analysis, POS tagging, etc.) as well as data mining from websites and machine learning using built-in models such as K-nearest Neighbors, Support Vector Machine, etc.
+
+This library is easy to understand and implement for beginners due to its simple and straightforward syntax and it is also helpful for web developers who need to work with text data.
 
 ### [clean-text](https://github.com/jfilter/clean-text)
 
@@ -263,16 +247,15 @@ The trend now is toward gRPC for microservices since it is more secure, faster, 
 
 - With the recent release of Go 1.6, Go ships with a stable net/http2 package by default.
 
+
+### Pickle
+
+Pickle can be used to save and load the python classes or PyTorch models for reuse.
+
+
 ### Plots and Graphs
 
 Matplolib is the basis of image visualization in Python but there are other alternatives such as seaborn and plotly (which is browser-based).
-
-
-### [Poetry](https://python-poetry.org/)
-
-[Are You Still Using Virtualenv for Managing Dependencies in Python Projects?](https://towardsdatascience.com/poetry-to-complement-virtualenv-44088cc78fd1)
-
-Poetry is a tool for dependency management and packaging in Python.
 
 
 ### [PySpark](https://github.com/apache/spark)
@@ -318,6 +301,18 @@ Deta is a free, developer friendly cloud platform.
 
 ## Deep Learning Tools
 
+[Kedro — A Python Framework for Reproducible Data Science Project](https://towardsdatascience.com/kedro-a-python-framework-for-reproducible-data-science-project-4d44977d4f04)
+
+Kedro is an open-source Python framework for creating reproducible, maintainable, and modular data science code. 
+
+Kedro borrows concepts from software engineering and applies them to machine-learning code such as modularity, separation of concerns, and versioning.
+
+### [Poetry](https://python-poetry.org/)
+
+[Are You Still Using Virtualenv for Managing Dependencies in Python Projects?](https://towardsdatascience.com/poetry-to-complement-virtualenv-44088cc78fd1)
+
+Poetry is a tool for dependency management and packaging in Python.
+
 ### [Hydra](https://hydra.cc/docs/intro/)
 
 Hydra provides a configuration file for the entire experiment. 
@@ -341,10 +336,6 @@ Loguru provides the functionality of a logger to log configuration, experiment n
 ### [H5py](https://docs.h5py.org/en/stable/quick.html)
 
 H5py can be used to store all the intermediate loss values in a dictionary mapped to appropriate key which can be loaded to be reused as a python code.
-
-### Pickle
-
-Pickle can be used to save and load the python classes or PyTorch models for reuse.
 
 ### [Tqdm](https://tqdm.github.io/)
 
@@ -421,6 +412,8 @@ In addition, the package includes methods for assessing the explanatory power an
 ## References
 
 [All Top Python Libraries for Data Science Explained](https://towardsdatascience.com/all-top-python-libraries-for-data-science-explained-with-code-40f64b363663)
+
+[7 Amazing Python Libraries For Natural Language Processing](https://towardsdatascience.com/7-amazing-python-libraries-for-natural-language-processing-50ca6f9f5f11)
 
 [4 Amazing Python Libraries That You Should Try Right Now](https://towardsdatascience.com/4-amazing-python-libraries-that-you-should-try-right-now-872df6f1c93)
 
