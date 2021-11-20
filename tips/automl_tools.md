@@ -48,6 +48,22 @@ H2O is extensible so that developers can add data transformations and custom alg
 H2O models can be downloaded and loaded into H2O memory for scoring or exported into POJO or MOJO format for extemely fast scoring in production.
 
 
+### [wandb](https://docs.wandb.ai/)
+
+Weights and biases (W&B/wandb) lets you track, compare, visualize, and optimize machine learning experiments with just a few lines of code. wandb also lets you track your datasets. 
+
+Using W&B's lightweight tools, you can quickly track experiments, version and iterate on datasets, evaluate model performance, reproduce models, visualize results and spot regressions, and share findings with colleagues. 
+
+
+### [MLFlow](https://github.com/mlflow/mlflow)
+
+[Tutorial](https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html)
+
+Similar to W&B, MLFlow provides functionality for logging code, models, and datasets on which your model has been trained. 
+
+MLflow is a platform to streamline machine learning development including tracking experiments, packaging code into reproducible runs, and deploying models. 
+
+MLflow offers a set of lightweight APIs that can be used with any existing machine learning application or library (TensorFlow, PyTorch, XGBoost, etc.) wherever you currently run ML code (such as notebooks, standalone applications, or the cloud). 
 
 
 ### [auto-sklearn](https://github.com/automl/auto-sklearn)
@@ -74,10 +90,15 @@ Auto_ViML was designed for building High Performance Interpretable Models with t
 Auto_ViML is every Data Scientist's model assistant that:
 
 1. Helps you with data cleaning
+
 2. Assists you with variable classification
+
 3. Performs feature reduction automatically
+
 4. Produces model performance results as graphs automatically
+
 5. Handles text, date-time, structs (lists, dictionaries), numeric, boolean, factor and categorical variables all in one model using one straight process.
+
 6. Allows you to use the featuretools library to do Feature Engineering.
 
 
@@ -86,15 +107,6 @@ Auto_ViML is every Data Scientist's model assistant that:
 Automatically Visualize any dataset, any size with a single line of code.
 
 AutoViz performs automatic visualization of any dataset with one line. Give any input file (CSV, txt or json) and AutoViz will visualize it.
-
-
-### [spaCy](https://github.com/explosion/spaCy)
-
-spaCy is a library for advanced Natural Language Processing in Python and Cython. It is built on the very latest research and was designed from day one to be used in real products.
-
-spaCy comes with pretrained pipelines and currently supports tokenization and training for 60+ languages. 
-
-spaCy features state-of-the-art speed and neural network models for tagging, parsing, named entity recognition, text classification and more, multi-task learning with pretrained transformers like BERT, as well as a production-ready training system and easy model packaging, deployment and workflow management. 
 
 
 ### [MediaPipe](https://github.com/google/mediapipe)
