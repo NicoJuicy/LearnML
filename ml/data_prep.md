@@ -100,7 +100,7 @@ The [Data Science Primer](https://elitedatascience.com/primer) covers explorator
 
 - Handle missing values (add data or remove rows)
 
-- Handle/Remove duplicates
+- Handle duplicates
 
 ### Handle errors in variables
 
@@ -116,39 +116,41 @@ The [Data Science Primer](https://elitedatascience.com/primer) covers explorator
 Data cleaning refers to identifying and correcting errors in the dataset that may negatively impact a predictive model.
 
 - Identify Columns That Contain a Single Value
+
 - Delete Columns That Contain a Single Value
+
 - Consider Columns That Have Very Few Values
+
 - Remove Columns That Have A Low Variance
+
 - Identify Rows that Contain Duplicate Data
+
 - Delete Rows that Contain Duplicate Data
 
 Data cleaning also includes the following [2]:
 
 1. Handle missing values
-2. Scaling and normalization
-3. Parsing dates
-4. Character encodings
-5. Inconsistent Data Entry
-
-```py
-  # Handle categorical features
-  df['is_white_wine'] = [1 if typ == 'white' else 0 for typ in df['type']]
-
-  # Convert to a binary classification task
-  df['is_good_wine'] = [1 if quality >= 6 else 0 for quality in df['quality']]
-
-  df.drop(['type', 'quality'], axis=1, inplace=True)
-```
+2. Encoding class labels
+3. Scaling and normalization
+4. Parsing dates
+5. Character encodings
+6. Inconsistent Data Entry
 
 ### Handle missing values
 
 Check for null values. We can drop or fill the `NaN` values.
 
+Also see **Feature Engineering**
+
 ```py
-    # if count > 0 then some values are NaN
+    # return the number of missing values (NaN) per column
     df.isnull().sum()  
     
+    # drop rows with missing values
     df = df.dropna()
+    
+    # drop cols with missing values
+    df.dropna(axis=1)
 
     # Drop the NaN
     df['col_name'] = df['col_name'].dropna(axis=0, how="any")
@@ -156,6 +158,13 @@ Check for null values. We can drop or fill the `NaN` values.
      # check NaN again
      df['col_name'].isnull().sum() 
 ```
+
+The removal of samples or dropping of  feature columns may not feasible because we might lose too much valuable data. 
+
+We can use interpolation techniques to estimate the missing values from the other training samples in the dataset.
+
+One of the most common interpolation techniques is _mean imputation_ where we simply replace the missing value by the mean value of the entire feature column
+
 
 ### Check the data types
 
@@ -179,9 +188,97 @@ Check for null values. We can drop or fill the `NaN` values.
 ```
 
 
+## Handling categorical data
+
+For categorical data, we need to distinguish between nominal and ordinal features. 
+
+Ordinal features can be understood as categorical values that can be sorted or ordered. For example, T-shirt size would be an ordinal feature because we can define an order XL > L > M. 
+
+Nominal features do not imply any order. Thus, T-shirt color is a nominal feature since it typically does not make sense to say that red is larger than blue.
+
+### Mapping ordinal features
+
+To make sure that the ML algorithm interprets the ordinal features correctly, we need to convert the categorical string values into integers. 
+
+Unfortunately, there is no convenient function that can automatically derive the correct order of the labels of our size feature. 
+
+Thus, we have to define the mapping manually.
+
+```py
+  size_mapping = {
+    'XL': 3,
+    'L': 2,
+    'M': 1}
+
+  df['size'] = df['size'].map(size_mapping)
+```
+
+### Encoding class labels
+
+Many machine learning libraries require that class labels are encoded as integer values. 
+
+It is considered good practice to provide class labels as integer arrays to avoid technical glitches. 
+
+```py
+  # Handle categorical features
+  df['is_white_wine'] = [1 if typ == 'white' else 0 for typ in df['type']]
+
+  # Convert to a binary classification task
+  df['is_good_wine'] = [1 if quality >= 6 else 0 for quality in df['quality']]
+
+  df.drop(['type', 'quality'], axis=1, inplace=True)
+```
+
+To encode the class labels, we can use an approach similar to the mapping of ordinal features above. 
+
+We need to remember that class labels are not ordinal so it does not matter which integer number we assign to a particular string-label.
+
+There is a convenient `LabelEncoder` class  in scikit-learn to achieve the same results as map.  
+
+```py
+  from sklearn.preprocessing import LabelEncoder
+  class_le = LabelEncoder()
+  y = class_le.fit_transform(df['classlabel'].values)
+  # array([0, 1, 0])
+  
+  class_le.inverse_transform(y)
+  # array(['class1', 'class2', 'class1'], dtype=object)
+```
+
+### Performing one-hot encoding on nominal features
+
+In the previous section, we used a simple dictionary-mapping approach to convert the ordinal size feature into integers. 
+
+Since scikit-learn's estimators treat class labels without any order, we can use the convenient `LabelEncoder` class to encode the string labels into integers.
+
+```py
+  X = df[['color', 'size', 'price']].values
+  color_le = LabelEncoder()
+  X[:, 0] = color_le.fit_transform(X[:, 0])
+```
+
+After executing the code above, the first column of the NumPy array X now holds the new color values which are encoded as follows: blue = 0, green = 1, red = 2 n
+
+However, we will make one of the most common mistakes in dealing with categorical data. Although the color values are not ordered, a ML algorithm will now assume that green is larger than blue, and red is larger than green. Thus, the results would not be optimal.
+
+A common workaround is to use a technique called _one-hot encoding_ to create a new dummy feature for each unique value in the nominal feature column. 
+
+Here, we would convert the color feature into three new features: blue, green, and red. 
+
+Binary values can then be used to indicate the particular color of a sample; for example, a blue sample can be encodedas blue=1, green=0, red=0. 
+
+We can use the `OneHotEncoder` that is implemented in the scikit-learn.preprocessing module. 
+
+An even more convenient way to create those dummy features via one-hot encoding is to use the get_dummies method implemented in pandas. Applied on a DataFrame, the get_dummies method will only convert string columns and leave all other columns unchanged:
+
+```py
+  pd.get_dummies(df[['price', 'color', 'size']])
+```
+
+
 ## Scaling vs Normalization
 
-Also see "Normalization Techniques" in Feature Engineering.
+See **Normalization Techniques** in Feature Engineering.
 
 The process of scaling and normalization are very similar. In both cases, you are transforming the values of numeric variables so that the transformed data points have specific helpful properties.
 
@@ -189,7 +286,6 @@ The process of scaling and normalization are very similar. In both cases, you ar
 
 - In normalization, you are changing the _shape_ of the distribution of your data.
 
-See **Feature Engineering** for code examples.
 
 ### Scaling
 
@@ -227,8 +323,28 @@ Let us take a quick peek at what normalizing some data looks like:
 
 Notice that the shape of our data has changed.
 
+### Normalization vs Standardization
 
-### Parsing dates
+_Feature scaling_ is a crucial step in a preprocessing pipeline that can easily be forgotten. 
+
+Decision trees and random forests are one of the few machine learning algorithms where we do not need to worry about feature scaling.
+
+The majority of machine learning and optimization algorithms behave much better if features are on the same scale. 
+
+Normalization via min-max scaling is a commonly used technique that is useful when we need values in a bounded interval.
+
+Normalization refers to the rescaling of the features to a range of [0, 1] which is a special case of min-max scaling, so we can just apply the min-max scaling to each feature column. 
+
+Standardization can be more practical for many machine learning algorithms since many linear models such as logistic regression and SVM initialize the weights to 0 or small random values close to 0. Using standardization, we center the feature columns at mean 0 with standard deviation 1 so that the feature columns take the form of a normal distribution which makes it easier to learn the weights.
+
+> Note that we fit the `StandardScaler` on the training data then use those parameters to transform the test set or any new data point.
+
+In addition, standardization maintains useful information about outliers and makes the algorithm less sensitive to them in contrast to min-max scaling which scales the data to a limited range of values.
+
+> Regularization is another reason to use feature scaling such as standardization. For regularization to work properly, we need to ensure that all our features are on comparable scales.
+
+
+## Parsing dates
 
 Method 1: Parse date columns using `read_csv`
 
@@ -261,12 +377,12 @@ Method 2: Parse dates using `to_datetime`
 ```
 
 
-### Inconsistent Data Entry
+## Inconsistent Data Entry
 
 TODO: This will most likely vary 
 
 
-### Add Dummy Variables
+## Add Dummy Variables
 
 [Ordinal and One-Hot Encodings for Categorical Data](https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/)
 
@@ -286,14 +402,14 @@ In contrast, a dummy variable encoding represents C categories with C-1 binary v
     pd.get_dummies(df, columns=['Color'], prefix=['Color'])
 ```
 
-### Highly Imbalanced Data
+## Highly Imbalanced Data
 
 Need to upsample, but categories with only 1 entry when oversampled will give a 100% accuracy and artificially inflate the total accuracy/precision.
 
 - We can use `UpSample` in Keras/PyTorch and `pd.resample()`
 
 
-### Order of Data Transforms for Time Series
+##  Order of Data Transforms for Time Series
 
 You may want to experiment with applying multiple data transforms to a time series prior to modeling.
 
@@ -323,6 +439,9 @@ A train-test split conists of the following:
 2. We normalize the training set only (fit_transform). 
 
 3. We normalize the validation and test sets using the normalization factors from train set (transform).
+
+
+> Instead of discarding the allocated test data after model training and evaluation, it is a good idea to retrain a classifier on the entire dataset for optimal performance.
 
 
 ----------
