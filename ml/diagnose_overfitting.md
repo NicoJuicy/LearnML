@@ -7,13 +7,34 @@
 Here are some notes on analyzing overfitting and underfitting.
 
 
+## Selecting meaningful features
+
+Here are some common solutions to reduce the generalization error:
+
+- Collect more training data
+
+- Introduce a penalty for complexity via regularization
+
+- Choose a simpler model with fewer parameters
+
+- Reduce the dimensionality of the data
+
+Collecting more training data is often not applicable. 
+
+In the next chapter, we will learn about a useful technique to check whether more training data is helpful at all. 
+
+Here we look at some ways to reduce overfitting using regularization and dimensionality reduction via feature selection.
+
+Another useful approach to select relevant features from a dataset is to use a random forest which is an ensemble technique. 
+
+
 ## Principles of Overfitting and Underfitting
 
 ### Bias/Variance Trade-off
 
-Underfitting is a situation when your model is too simple for your data (high bias). 
+_Underfitting_ is when your model is too simple for your data (high bias). 
 
-Overfitting is a situation when your model is too complex for your data (high variance). 
+_Overfitting_ is when your model is too complex for your data (high variance) but does not generalize well to new data. 
 
 In the bias/variance trade-off, here are possible values:
 
@@ -25,11 +46,15 @@ In the bias/variance trade-off, here are possible values:
 
 - high bias, high variance: very bad algorithm (rare occurance).
 
+_Variance_ measures the consistency or variability of the model prediction for a particular sample instance if we were to retrain the model multiple times using different subsets of the training dataset. Thus, we say that the model is sensitive to the _randomness_ in the training data. 
+
+_Bias_ measures how far off the predictions are from the correct values on average if we rebuild the model multiple times on different training datasets. Thus, bias is the measure of the _error_ that is not due to randomness.
+
 ### How to Detect Underfitting and Overfitting
 
-Underfitting means that your model makes accurate, but initially incorrect predictions. In this case, train error is large and val/test error is large too.
+Underfitting means that your model makes accurate but incorrect predictions. In this case, train error is large and val/test error is large too.
 
-Overfitting means that your model makes not accurate predictions. In this case, train error is very small and val/test error is large.
+Overfitting means that your model makes not accurate predictions. In this case, train error is small and val/test error is large.
 
 When you find a good model, train error is small (but larger than in the case of overfitting) and val/test error is also small.
 
