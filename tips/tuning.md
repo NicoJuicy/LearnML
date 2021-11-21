@@ -68,7 +68,7 @@ The advantage of randomized search is that you can extend your search limits wit
 
 The main difference with Bayesian search is that the algorithm optimizes its parameter selection in each round according to the previous round score. Thus, the algorithm optimizes the choice and theoretically reaches the best parameter set faster than the other methods which means that this method will choose only the relevant search space and discard the range of values that will most likely not deliver the best solution. 
 
-Thus, Bayesian search can be beneficial when you have a large amount of data and/or the learning processis slow and you want to minimize the tuning time.
+Thus, Bayesian search can be beneficial when you have a large amount of data and/or the learning process is slow and you want to minimize the tuning time.
 
 ```py
     from skopt import BayesSearchCV
