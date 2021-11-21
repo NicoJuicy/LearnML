@@ -2,8 +2,6 @@
 
 ## Discovering and Classifying In-app Message Intent at Airbnb
 
-[Discovering and Classifying In-app Message Intent at Airbnb](https://medium.com/airbnb-engineering/discovering-and-classifying-in-app-message-intent-at-airbnb-6a55f5400a0c)
-
 Conversational AI is inspiring us to rethink the customer experience on our platform.
 
 ### Identifying Message Intent
@@ -127,8 +125,6 @@ There were two primary root causes for the misclassifications:
 
 ## Using the DIET classifier for intent classification
 
-[Using the DIET classifier for intent classification in dialogue](https://medium.com/the-research-nest/using-the-diet-classifier-for-intent-classification-in-dialogue-489c76e62804)
-
 The task of intent classification comes under Natural Language Understanding (NLU) and the output of the intent classifier acts as the final interpretation of the query. 
 
 The classification task is pretty straightforward and it can be addressed using various techniques. 
@@ -187,8 +183,6 @@ For example, we will train the DIET classifier for both entity recognition and i
 
 
 ## How intent classification works in NLU?
-
-[How intent classification works in NLU?](https://botfront.io/blog/how-intent-classification-works-in-nlu/)
 
 ### Teaching semantics to a machine: word embeddings
 
@@ -321,5 +315,13 @@ With transformers, your model has a chance to understand that “not” is stron
 
 When you include many other examples with negations, it becomes a concept your model can learn.
 
+
+## References
+
+[Discovering and Classifying In-app Message Intent at Airbnb](https://medium.com/airbnb-engineering/discovering-and-classifying-in-app-message-intent-at-airbnb-6a55f5400a0c)
+
+[Using the DIET classifier for intent classification in dialogue](https://medium.com/the-research-nest/using-the-diet-classifier-for-intent-classification-in-dialogue-489c76e62804)
+
+[How intent classification works in NLU?](https://botfront.io/blog/how-intent-classification-works-in-nlu/)
 
 

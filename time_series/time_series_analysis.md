@@ -1,7 +1,5 @@
 # Time Series Analysis
 
-[A Comprehensive Guide to Time Series Analysis in Python](https://www.machinelearningplus.com/time-series/time-series-analysis-python/)
-
 ## How to import time series in python?
 
 ```py
@@ -255,3 +253,13 @@ Ways to smoothen a series:
   2. Do a LOESS smoothing (Localized Regression)
 
   3. Do a LOWESS smoothing (Locally Weighted Regression)
+
+  
+## References
+
+[A Comprehensive Guide to Time Series Analysis in Python](https://www.machinelearningplus.com/time-series/time-series-analysis-python/)
+
+[5 Must-Know Terms in Time Series Analysis](https://towardsdatascience.com/5-must-know-terms-in-time-series-analysis-bf2455b2a87)
+
+
+
