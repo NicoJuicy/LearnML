@@ -14,16 +14,30 @@
     - Correct inconsistencies
     - Handle errors in variables
 - Data Cleaning
+    - Check data types
     - Handle missing values
-    - Check the data types
+    - Handle Outliers
+- Encoding Categorical Features
+    - Integer \(Ordinal\) Encoding
+    - Encoding Class Labels
+    - One-Hot Encoding of Nominal Features
+    - Dummy Variable Encoding
+    - Complete One-Hot Encoding Example
 - Scaling vs Normalization
     - Scaling
     - Normalization
-    - Parsing dates
-    - Inconsistent Data Entry
-    - Add Dummy Variables
-    - Highly Imbalanced Data
-    - Order of Data Transforms for Time Series
+    - Normalization vs Standardization
+    - How to Choose between Standardization vs Normalization?
+    - Log Transform
+- Normalization Techniques
+    - Using maximum absolute scaling
+    - Using min-max scaling
+    - Using z-score scaling
+- Parsing dates
+- Inconsistent Data Entry
+- Add Dummy Variables
+- Highly Imbalanced Data
+- Order of Data Transforms for Time Series
 - Train-Test Split
 - Data Pipelines
     - Create a simple Pipeline
@@ -34,14 +48,17 @@
     - Pandas pipe
 - Bootstrapping
 - References
+    - Exploratory Data Analysis \(EDA\)
     - Data Preprocessing
     - Categorical Data
-    - Exploratory Data Analysis \(EDA\)
+    - Scaling
     - Train-Test Split
 
 <!-- /MarkdownTOC -->
 
 ## Overview
+
+[Feature Engineering](./feature_engineering.md)
 
 > If you torture the data, it will confess to anything - Ronald Coase
 
@@ -130,43 +147,15 @@ Data cleaning refers to identifying and correcting errors in the dataset that ma
 Data cleaning also includes the following [2]:
 
 1. Handle missing values
-2. Encoding class labels
-3. Scaling and normalization
-4. Parsing dates
-5. Character encodings
-6. Inconsistent Data Entry
+2. Handle Outliers
+3. Handle categorical data
+3. Encoding class labels
+4. Scaling and normalization
+5. Parsing dates
+6. Character encodings
+7. Inconsistent Data Entry
 
-### Handle missing values
-
-Check for null values. We can drop or fill the `NaN` values.
-
-Also see **Feature Engineering**
-
-```py
-    # return the number of missing values (NaN) per column
-    df.isnull().sum()  
-    
-    # drop rows with missing values
-    df = df.dropna()
-    
-    # drop cols with missing values
-    df.dropna(axis=1)
-
-    # Drop the NaN
-    df['col_name'] = df['col_name'].dropna(axis=0, how="any")
-
-     # check NaN again
-     df['col_name'].isnull().sum() 
-```
-
-The removal of samples or dropping of  feature columns may not feasible because we might lose too much valuable data. 
-
-We can use interpolation techniques to estimate the missing values from the other training samples in the dataset.
-
-One of the most common interpolation techniques is _mean imputation_ where we simply replace the missing value by the mean value of the entire feature column
-
-
-### Check the data types
+### Check data types
 
 ```py
   df.info()
@@ -187,16 +176,71 @@ One of the most common interpolation techniques is _mean imputation_ where we si
             df[column] = pd.to_numeric(df[column])
 ```
 
+### Handle missing values
 
-## Handling categorical data
+Check for null values. We can drop or fill the `NaN` values.
 
-For categorical data, we need to distinguish between nominal and ordinal features. 
+```py
+    # return the number of missing values (NaN) per column
+    df.isnull().sum()  
+    
+    # drop rows with missing values
+    df = df.dropna()
+    
+    # drop cols with missing values
+    df.dropna(axis=1)
+
+    # Drop the NaN
+    df['col_name'] = df['col_name'].dropna(axis=0, how="any")
+
+     # check NaN again
+     df['col_name'].isnull().sum() 
+```
+
+The removal of samples or dropping of feature columns may not feasible because we might lose too much valuable data. 
+
+We can use interpolation techniques to estimate the missing values from the other training samples in the dataset.
+
+One of the most common interpolation techniques is _mean imputation_ where we simply replace the missing value by the mean value of the entire feature column
+
+- Numerical Imputation
+- Categorical Imputation
+
+### Handle Outliers
+
+- Remove: Outlier entries are deleted from the distribution
+
+- Replace: The outliers could be handled as missing values and replaced with suitable imputation.
+
+- Cap: Using an arbitrary value or a value from a variable distribution to replace the maximum and minimum values.
+
+- Discretize: Converting continuous variables into discrete values. 
+
+
+## Encoding Categorical Features
+
+[Ordinal and One-Hot Encodings for Categorical Data](https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/)
+
+[3 Ways to Encode Categorical Variables for Deep Learning](https://machinelearningmastery.com/how-to-prepare-categorical-data-for-deep-learning-in-python/)
+
+Machine learning algorithms and deep learning neural networks require that input and output variables are numbers.
+
+This means that categorical data must be encoded to numbers before we can use it to fit and evaluate a model.
+
+For categorical data, we need to distinguish between _nominal_ and _ordinal_ features. 
 
 Ordinal features can be understood as categorical values that can be sorted or ordered. For example, T-shirt size would be an ordinal feature because we can define an order XL > L > M. 
 
 Nominal features do not imply any order. Thus, T-shirt color is a nominal feature since it typically does not make sense to say that red is larger than blue.
 
-### Mapping ordinal features
+There are many ways to encode categorical variables:
+
+  1. Integer (Ordinal) Encoding: each unique label/category is mapped to an integer.
+  2. One Hot Encoding: each label is mapped to a binary vector.
+  3. Dummy Variable Encoding
+  4. Learned Embedding: a distributed representation of the categories is learned.
+
+### Integer (Ordinal) Encoding
 
 To make sure that the ML algorithm interprets the ordinal features correctly, we need to convert the categorical string values into integers. 
 
@@ -213,7 +257,7 @@ Thus, we have to define the mapping manually.
   df['size'] = df['size'].map(size_mapping)
 ```
 
-### Encoding class labels
+### Encoding Class Labels
 
 Many machine learning libraries require that class labels are encoded as integer values. 
 
@@ -233,7 +277,7 @@ To encode the class labels, we can use an approach similar to the mapping of ord
 
 We need to remember that class labels are not ordinal so it does not matter which integer number we assign to a particular string-label.
 
-There is a convenient `LabelEncoder` class  in scikit-learn to achieve the same results as map.  
+There is a convenient `LabelEncoder` class in scikit-learn to achieve the same results as _map_.  
 
 ```py
   from sklearn.preprocessing import LabelEncoder
@@ -245,7 +289,11 @@ There is a convenient `LabelEncoder` class  in scikit-learn to achieve the same 
   # array(['class1', 'class2', 'class1'], dtype=object)
 ```
 
-### Performing one-hot encoding on nominal features
+### One-Hot Encoding of Nominal Features
+
+A one-hot encoding is a type of encoding in which an element of a finite set is represented by the index in that set where only one element has its index set to “1” and all other elements are assigned indices within the range [0, n-1]. 
+
+In contrast to binary encoding schemes where each bit can represent 2 values (0 and 1), one-hot encoding assigns a unique value to each possible value.
 
 In the previous section, we used a simple dictionary-mapping approach to convert the ordinal size feature into integers. 
 
@@ -275,6 +323,86 @@ An even more convenient way to create those dummy features via one-hot encoding 
   pd.get_dummies(df[['price', 'color', 'size']])
 ```
 
+### Dummy Variable Encoding
+
+The one-hot encoding creates one binary variable for each category.
+
+The problem with one-hot encoding is that the representation includes redundancy. 
+
+If we know that [1, 0, 0] represents “blue” and [0, 1, 0] represents “green” we do not need another binary variable to represent “red“. We could use 0 values for both “blue” and “green” alone: [0, 0].
+
+This is called a dummy variable encoding and always represents C categories with C-1 binary variables.
+
+In addition to being slightly less redundant, a dummy variable representation is required for some models such as linear regression model (and other regression models that have a bias term) since a one hot encoding will cause the matrix of input data to become singular which means it cannot be inverted, so the linear regression coefficients cannot be calculated using linear algebra. Therefore, a dummy variable encoding must be used.
+
+However, we rarely encounter this problem in practice when evaluating machine learning algorithms other than linear regression.
+
+It turns out that we can also use the `OneHotEncoder` class to implement a dummy encoding.
+
+
+### Complete One-Hot Encoding Example
+
+A one-hot encoding is appropriate for categorical data where no relationship exists between categories.
+
+The scikit-learn library provides the OneHotEncoder class to automatically one hot encode one or more variables.
+
+By default the `OneHotEncoder` class will output data with a sparse representation which is efficient because most values are 0 in the encoded representation. However, we can disable this feature by setting the `sparse=False` so that we can review the effect of the encoding.
+
+```py
+    import numpy as np
+    import pandas as pd
+
+    from numpy import mean
+    from numpy import std
+    from pandas import read_csv
+
+    from sklearn.model_selection import train_test_split
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+    from sklearn.metrics import accuracy_score
+
+    # define the location of the dataset
+    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/breast-cancer.csv"
+
+    # load the dataset
+    dataset = read_csv(url, header=None)
+
+    # retrieve the array of data
+    data = dataset.values
+
+    # separate into input and output columns
+    X = data[:, :-1].astype(str)
+    y = data[:, -1].astype(str)
+
+    # split the dataset into train and test sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=1)
+
+    # one-hot encode input variables
+    onehot_encoder = OneHotEncoder()
+    onehot_encoder.fit(X_train)
+    X_train = onehot_encoder.transform(X_train)
+    X_test = onehot_encoder.transform(X_test)
+
+    # ordinal encode target variable
+    label_encoder = LabelEncoder()
+    label_encoder.fit(y_train)
+    y_train = label_encoder.transform(y_train)
+    y_test = label_encoder.transform(y_test)
+
+    # define the model
+    model = LogisticRegression()
+
+    # fit on the training set
+    model.fit(X_train, y_train)
+
+    # predict on test set
+    yhat = model.predict(X_test)
+
+    # evaluate predictions
+    accuracy = accuracy_score(y_test, yhat)
+    print('Accuracy: %.2f' % (accuracy * 100))
+```
+
 
 ## Scaling vs Normalization
 
@@ -285,7 +413,6 @@ The process of scaling and normalization are very similar. In both cases, you ar
 - In scaling, you are changing the _range_ of your data.
 
 - In normalization, you are changing the _shape_ of the distribution of your data.
-
 
 ### Scaling
 
@@ -325,23 +452,137 @@ Notice that the shape of our data has changed.
 
 ### Normalization vs Standardization
 
-_Feature scaling_ is a crucial step in a preprocessing pipeline that can easily be forgotten. 
+_Feature scaling_ is a crucial step in a preprocessing pipeline that can easily be forgotten.
 
 Decision trees and random forests are one of the few machine learning algorithms where we do not need to worry about feature scaling.
 
 The majority of machine learning and optimization algorithms behave much better if features are on the same scale. 
 
-Normalization via min-max scaling is a commonly used technique that is useful when we need values in a bounded interval.
+- **Normalization:** All values are scaled in a specified range between 0 and 1 via normalization or min-max scaling. 
 
-Normalization refers to the rescaling of the features to a range of [0, 1] which is a special case of min-max scaling, so we can just apply the min-max scaling to each feature column. 
+- **Standardization:** The process of scaling values while accounting for standard deviation or z-score normalization.
 
-Standardization can be more practical for many machine learning algorithms since many linear models such as logistic regression and SVM initialize the weights to 0 or small random values close to 0. Using standardization, we center the feature columns at mean 0 with standard deviation 1 so that the feature columns take the form of a normal distribution which makes it easier to learn the weights.
+  If the standard deviation of features differs, the range of those features will also differ. Therefore, the effect of outliers is reduced. 
+
+  To arrive at a distribution with a 0 mean and 1 variance, all the data points are subtracted by their mean and the result divided by the distribution’s variance.
 
 > Note that we fit the `StandardScaler` on the training data then use those parameters to transform the test set or any new data point.
 
-In addition, standardization maintains useful information about outliers and makes the algorithm less sensitive to them in contrast to min-max scaling which scales the data to a limited range of values.
+> Regularization is another reason to use feature scaling such as standardization. For regularization to work properly, all features must be on comparable scales.
 
-> Regularization is another reason to use feature scaling such as standardization. For regularization to work properly, we need to ensure that all our features are on comparable scales.
+
+### How to Choose between Standardization vs Normalization?
+
+Data-centric heuristics include the following:
+
+1. If your data has outliers, use standardization or robust scaling.
+2. If your data has a gaussian distribution, use standardization.
+3. If your data has a non-normal distribution, use normalization.
+
+Model-centric rules include these:
+
+1. If your modeling algorithm assumes (but does not require) a normal distribution of the residuals (such as regularized linear regression, regularized logistic regression, or linear discriminant analysis), use standardization.
+
+2. If your modeling algorithm makes no assumptions about the distribution of the data (such as k-nearest neighbors, support vector machines, and artificial neural networks), then use normalization.
+
+In each use case, the rule proposes a mathematical fit with either the data or the learning model. 
+
+
+Normalization does not affect the feature distribution, but it does exacerbate the effects of outliers due to lower standard deviations. Thus, outliers should be dealt with prior to normalization.
+
+Standardization can be more practical for many machine learning algorithms since many linear models such as logistic regression and SVM initialize the weights to 0 or small random values close to 0. Using standardization, we center the feature columns at mean 0 with standard deviation 1 so that the feature columns take the form of a normal distribution which makes it easier to learn the weights.
+
+In addition, standardization maintains useful information about outliers and makes the algorithm less sensitive to them whereas min-max only scales the data to a limited range of values.
+
+
+### Log Transform
+
+Log Transform is the most used technique among data scientists to turn a skewed distribution into a normal or less-skewed distribution. 
+
+We take the log of the values in a column and utilize those values as the column in this transform. 
+
+Log transform is used to handle confusing data so that the data becomes more approximative to normal applications.
+
+
+## Normalization Techniques
+
+[How to Use StandardScaler and MinMaxScaler Transforms in Python](https://machinelearningmastery.com/standardscaler-and-minmaxscaler-transforms-in-python/)
+
+[How to Use Power Transforms for Machine Learning](https://machinelearningmastery.com/power-transforms-with-scikit-learn/)
+
+Data Normalization is a typical practice in machine learning which consists of transforming numeric columns to a _standard scale_. Some feature values may differ from others multiple times. Therefore, the features with higher values will dominate the learning process.
+
+### Using maximum absolute scaling
+
+The _maximum absolute_ scaling rescales each feature between -1 and 1 by dividing every observation by its maximum absolute value. 
+
+We can apply the maximum absolute scaling in Pandas using the `.max()` and `.abs()` methods.
+
+```py
+    # copy the data
+    df_max_scaled = df.copy()
+      
+    # apply normalization from scratch
+    for column in df_max_scaled.columns:
+        df_max_scaled[column] = df_max_scaled[column]  / df_max_scaled[column].abs().max()
+```
+
+### Using min-max scaling
+
+The _min-max_ scaling (normalization) rescales the feature to the range of [0, 1] by subtracting the minimum value of the feature then dividing by the range. 
+
+We can use `MinMaxScaler` class from sklearn.
+
+```py
+    from sklearn.preprocessing import MinMaxScaler
+
+    # define scaler
+    scaler = MinMaxScaler()
+
+    # transform data
+    scaled = scaler.fit_transform(data)
+```
+
+We can apply the min-max scaling in Pandas using the `.min()` and `.max()` methods which preserves the column headers/names.
+
+```py
+    # copy the data
+    df_min_max_scaled = df.copy()
+      
+    # apply normalization from scratch
+    for column in df_min_max_scaled.columns:
+        df_min_max_scaled[column] = (df_min_max_scaled[column] - df_min_max_scaled[column].min()) / (df_min_max_scaled[column].max() - df_min_max_scaled[column].min())    
+```
+
+We can also use `RobustScaler` when we want to reduce the effects of outliers compared to `MinMaxScaler`.
+
+
+### Using z-score scaling
+
+The _z-score_ scaling (standardization) transforms the data into a **normal (Gaussian) distribution** with a mean of 0 and a typical deviation of 1. Each standardized value is computed by subtracting the mean of the corresponding feature then dividing by the quality deviation.
+
+We can apply standardization using `StandardScaler` class from sklearn.
+
+```py
+    from sklearn.preprocessing import StandardScaler
+
+    # define scaler
+    scaler = StandardScaler()
+
+    # transform data
+    scaled = scaler.fit_transform(data)
+```
+
+We can apply the standardization in Pandas using the `.min()` and `.max()` methods which preserves the column headers/names.
+
+```py
+    # copy the data
+    df_z_scaled = df.copy()
+      
+    # apply normalization from scratch
+    for column in df_z_scaled.columns:
+        df_z_scaled[column] = (df_z_scaled[column] - df_z_scaled[column].mean()) / df_z_scaled[column].std()    
+```
 
 
 ## Parsing dates
@@ -409,7 +650,7 @@ Need to upsample, but categories with only 1 entry when oversampled will give a 
 - We can use `UpSample` in Keras/PyTorch and `pd.resample()`
 
 
-##  Order of Data Transforms for Time Series
+## Order of Data Transforms for Time Series
 
 You may want to experiment with applying multiple data transforms to a time series prior to modeling.
 
@@ -629,6 +870,15 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 [2] [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
 
 
+### Exploratory Data Analysis (EDA)
+
+[Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
+
+[11 Essential Code Blocks for Complete EDA (Exploratory Data Analysis) Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
+
+[Python Cheat Sheet for Data Science](https://chipnetics.com/tutorials/python-cheat-sheet-for-data-science/)
+
+
 ### Data Preprocessing
 
 [Data Science Primer](https://elitedatascience.com/primer)
@@ -636,6 +886,8 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 [How to Perform Data Cleaning for Machine Learning with Python?](https://machinelearningmastery.com/basic-data-cleaning-for-machine-learning/)
 
 [Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
+
+[Missing Values Be Gone](https://towardsdatascience.com/missing-values-be-gone-a135c31f87c1?source=rss----7f60cf5620c9---4&gi=d11a8ff041dd)
 
 [ML Guide Quick Reference](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html)
 
@@ -645,27 +897,26 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 [How to Select a Data Splitting Method](https://towardsdatascience.com/how-to-select-a-data-splitting-method-4cf6bc6991da)
 
 
-### Missing Values
-
-[Missing Values Be Gone](https://towardsdatascience.com/missing-values-be-gone-a135c31f87c1?source=rss----7f60cf5620c9---4&gi=d11a8ff041dd)
-
-
 ### Categorical Data
 
 [4 Categorical Encoding Concepts to Know for Data Scientists](https://towardsdatascience.com/4-categorical-encoding-concepts-to-know-for-data-scientists-e144851c6383)
+
+[Ordinal and One-Hot Encodings for Categorical Data](https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/)
 
 [Smarter Ways to Encode Categorical Data for Machine Learning](https://towardsdatascience.com/smarter-ways-to-encode-categorical-data-for-machine-learning-part-1-of-3-6dca2f71b159)
 
 [Stop One-Hot Encoding Your Categorical Variables](https://towardsdatascience.com/stop-one-hot-encoding-your-categorical-variables-bbb0fba89809)
 
 
-### Exploratory Data Analysis (EDA)
+### Scaling
 
-[Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
+[How to Selectively Scale Numerical Input Variables for Machine Learning](https://machinelearningmastery.com/selectively-scale-numerical-input-variables-for-machine-learning/)
 
-[11 Essential Code Blocks for Complete EDA (Exploratory Data Analysis) Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
+[How to use Data Scaling Improve Deep Learning Model Stability and Performance](https://machinelearningmastery.com/how-to-improve-neural-network-stability-and-modeling-performance-with-data-scaling/)
 
-[Python Cheat Sheet for Data Science](https://chipnetics.com/tutorials/python-cheat-sheet-for-data-science/)
+[How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
+
+[The Mystery of Feature Scaling is Finally Solved](https://towardsdatascience.com/the-mystery-of-feature-scaling-is-finally-solved-29a7bb58efc2?source=rss----7f60cf5620c9---4)
 
 
 ### Train-Test Split
