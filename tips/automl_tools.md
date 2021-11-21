@@ -123,3 +123,19 @@ MediaPipe offers cross-platform, customizable ML solutions for live and streamin
 - Objectron
 
 
+### [Ray](https://github.com/ray-project/ray)
+
+An open source framework that provides a simple, universal API for building distributed applications. 
+
+Ray is packaged with `RLlib` which is a scalable reinforcement learning library and `Tune` which is a scalable hyperparameter tuning library.
+
+
+### [SageMaker](https://aws.amazon.com/sagemaker/?nc2=h_a1)
+
+SageMaker is a machine learning environment that simplifies the work of an ML developer by providing tools for extra fast model building and deployment.
+
+In 2021, Amazon launched SageMaker Studio, the first integrated IDE for machine learning. It provides a web interface to monitor all possible aspects of the life cycle of an ML model, basicslly Jupyter on steroids. 
+
+Apart from being closely integrated into the AWS cloud it also offers data labeling software and other features.
+
+
