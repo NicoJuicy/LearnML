@@ -68,6 +68,69 @@ Your are always welcome to share your work in the following Discord AI forum cha
 [Comparison of Basic Deep Learning Cloud Platforms](https://aicoder.medium.com/comparison-of-basic-deep-learning-cloud-platforms-9a4b69f44a46)
 
 
+
+## Common Questions on Encoding
+
+This section lists some common questions and answers when encoding categorical data.
+
+### What if I have hundreds of categories?
+
+What if I concatenate many one-hot encoded vectors to create a many-thousand-element input vector?
+
+You can use a one-hot encoding up to thousands and tens of thousands of categories. Having large vectors as input sounds intimidating but the models can usually handle it.
+
+### What encoding technique is the best?
+
+This is impossible to answer. The best approach would be to test each technique on your dataset with your chosen model and discover what works best.
+
+### What if I have a mixture of numeric and categorical data?
+
+What if I have a mixture of categorical and ordinal data?
+
+You will need to prepare or encode each variable (column) in your dataset separately then concatenate all of the prepared variables back together into a single array for fitting or evaluating the model.
+
+Alternately, you can use the `ColumnTransformer` to conditionally apply different data transforms to different input variables.
+
+
+## Common Questions on Normalization
+
+This section lists some common questions and answers when scaling numerical data.
+
+### Which Scaling Technique is Best?
+
+This is impossible to answer. The best approach would be to evaluate models on data prepared with each transform and use the transform or combination of transforms that result in the best performance for your data set and model.
+
+### Should I Normalize or Standardize?
+
+Whether input variables require scaling depends on the specifics of your problem and of each variable.
+
+If the distribution of the values is normal, it should be standardized. Otherwise, the data should be normalized.
+
+The data should be normalized whether the range of quantity values is large (10s, 100s, ...) or small (0.01, 0.0001, ...).
+
+If the values are small (near 0-1) and the distribution is limited (standard deviation near 1) you might be able to get away with no scaling of the data.
+
+Predictive modeling problems can be complex and it may not be clear how to best scale input data.
+
+If in doubt, normalize the input sequence. If you have the resources, explore modeling with the raw data, standardized data, and normalized data and see if there is a difference in the performance of the resulting model.
+
+### Should I Standardize then Normalize?
+
+Standardization can give values that are both positive and negative centered around zero.
+
+It may be desirable to normalize data after it has been standardized.
+
+Standardize then Normalize may be a good approach if you have a mixture of standardized and normalized variables and would like all input variables to have the same minimum and maximum values as input for a given algorithm such as an algorithm that calculates distance measures.
+
+### How Do I Handle Out-of-Bounds Values?
+
+You may normalize your data by calculating the minimum and maximum on the training data.
+
+Later, you may have new data with values smaller or larger than the minimum or maximum respectively.
+
+One simple approach to handling this may be to check for out-of-bound values and change their values to the known minimum or maximum prior to scaling. Alternately, you can estimate the minimum and maximum values used in the normalization manually based on domain knowledge.
+
+
 ## Medical Images
 
 Small and imbalanced datasets are common in medical applications. However, it is still considered an open research problem in CS. Thus, there is not standard “recipe” for data prep. Just some heuristics that people have come up with. So u will need to do some research to justify your final choice of data prep techniques, especially for medical datasets. At least one of the articles discusses X-ray images which may have some references that are helpful (not sure). I would also try searching on arxiv.org for “Survey” articles that would list some peer-reviewed journal articles on the type of images that u are working with.
