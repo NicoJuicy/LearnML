@@ -225,20 +225,20 @@ Instead of naïvely or implicitly applying a default threshold of 0.5 or immedia
 
 ## Examples of Imbalanced Classification
 
-[Imbalanced Classification with the Fraudulent Credit Card Transactions Dataset](https://machinelearningmastery.com/imbalanced-classification-with-the-fraudulent-credit-card-transactions-dataset/)
-
-[Multi-Class Imbalanced Classification](https://machinelearningmastery.com/multi-class-imbalanced-classification/)
-
 Many of the classification predictive modeling problems that we are interested in solving in practice are imbalanced.
 
 Most of the examples are binary classification problems and the examples from the minority class are rare, extreme, abnormal, or unusual in some way.
 
 Many of the domains are described as “detection" which highlights the desire to discover the minority class amongst the abundant examples of the majority class.
 
+[Imbalanced Classification with the Fraudulent Credit Card Transactions Dataset](https://machinelearningmastery.com/imbalanced-classification-with-the-fraudulent-credit-card-transactions-dataset/)
+
+[Multi-Class Imbalanced Classification](https://machinelearningmastery.com/multi-class-imbalanced-classification/)
+
+[Classification with Imbalanced Data](https://towardsdatascience.com/classification-with-imbalanced-data-f13ccb0496b3)
+
 
 ## Naive Classifier
-
-[How to Develop and Evaluate Naive Classifier Strategies Using Probability](https://machinelearningmastery.com/how-to-develop-and-evaluate-naive-classifier-strategies-using-probability/)
 
 The performance of naive classification models provides a baseline for comparison with other models.
 
@@ -246,6 +246,7 @@ The majority class classifier achieves better accuracy than other naive classifi
 
 Naive classifier strategies can be used on predictive modeling projects via the `DummyClassifier` class in the scikit-learn library.
 
+[How to Develop and Evaluate Naive Classifier Strategies Using Probability](https://machinelearningmastery.com/how-to-develop-and-evaluate-naive-classifier-strategies-using-probability/)
 
 
 
