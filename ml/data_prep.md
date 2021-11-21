@@ -35,7 +35,6 @@
     - Using z-score scaling
 - Parsing dates
 - Inconsistent Data Entry
-- Add Dummy Variables
 - Highly Imbalanced Data
 - Order of Data Transforms for Time Series
 - Train-Test Split
@@ -325,26 +324,28 @@ An even more convenient way to create those dummy features via one-hot encoding 
 
 ### Dummy Variable Encoding
 
-The one-hot encoding creates one binary variable for each category.
+Most machine learning algorithms cannot directly handle categorical features that are _text values_.
 
-The problem with one-hot encoding is that the representation includes redundancy. 
+Therefore, we need to create dummy variables for our categorical features which is called _one-hot encoding_.
 
-If we know that [1, 0, 0] represents “blue” and [0, 1, 0] represents “green” we do not need another binary variable to represent “red“. We could use 0 values for both “blue” and “green” alone: [0, 0].
+The one-hot encoding creates one binary variable for each category which includes redundancy. 
 
-This is called a dummy variable encoding and always represents C categories with C-1 binary variables.
+In contrast, a dummy variable encoding represents N categories with N-1 binary variables.
+
+```py
+    pd.get_dummies(df, columns=['Color'], prefix=['Color'])
+```
 
 In addition to being slightly less redundant, a dummy variable representation is required for some models such as linear regression model (and other regression models that have a bias term) since a one hot encoding will cause the matrix of input data to become singular which means it cannot be inverted, so the linear regression coefficients cannot be calculated using linear algebra. Therefore, a dummy variable encoding must be used.
 
 However, we rarely encounter this problem in practice when evaluating machine learning algorithms other than linear regression.
-
-It turns out that we can also use the `OneHotEncoder` class to implement a dummy encoding.
 
 
 ### Complete One-Hot Encoding Example
 
 A one-hot encoding is appropriate for categorical data where no relationship exists between categories.
 
-The scikit-learn library provides the OneHotEncoder class to automatically one hot encode one or more variables.
+The scikit-learn library provides the `OneHotEncoder` class to automatically one hot encode one or more variables.
 
 By default the `OneHotEncoder` class will output data with a sparse representation which is efficient because most values are 0 in the encoded representation. However, we can disable this feature by setting the `sparse=False` so that we can review the effect of the encoding.
 
@@ -622,26 +623,6 @@ Method 2: Parse dates using `to_datetime`
 
 TODO: This will most likely vary 
 
-
-## Add Dummy Variables
-
-[Ordinal and One-Hot Encodings for Categorical Data](https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/)
-
-Most machine learning algorithms cannot directly handle categorical features. Specifically, they cannot handle _text values_.
-
-Therefore, we need to create dummy variables for our categorical features which is called _one-hot encoding_.
-
-A **dummy variable** is a binary (0 or 1) variable that represents a single class from a categorical feature.
-
-The information you represent is exactly the same but the numeric representation allows you to pass the values to be process by ML algorithms.
-
-The one-hot encoding creates one binary variable for each category which includes redundancy. 
-
-In contrast, a dummy variable encoding represents C categories with C-1 binary variables.
-
-```py
-    pd.get_dummies(df, columns=['Color'], prefix=['Color'])
-```
 
 ## Highly Imbalanced Data
 
