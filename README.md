@@ -46,6 +46,11 @@ TODO: Add items
 
 TODO: Add items
 
+### Background
+
+[Probability](./ml/probability.md)
+
+[Statistics](./ml/statistics.md)
 
 ### Machine Learning
 
@@ -55,11 +60,9 @@ TODO: Add items
 
 [AutoML Tools](./ml/automl_tools.md)
 
-[Bias-Variance Tradeoff](./ml/bias_variance_tradeoff.md)
+[Bias-Variance Tradeoff](./ml/bias_variance.md)
 
 [Concurrency - Mutliprocessing vs Multithreading](./ml/concurrency.md)
-
-[Data Preparation](./ml/data_prep.md)
 
 [Diagnose Overfitting and Underfitting](https://github.com/codecypher/LearnML/blob/main/ml/diagnose_overfitting.md)
 
@@ -70,6 +73,8 @@ TODO: Add items
 [Performance Metrics](./ml/performance_metrics.md)
 
 [Regression](./ml/regression.md)
+
+[Robotics](./ml/robotics.md)
 
 [Train-Test Split](./train_test_split.md)
 
@@ -82,6 +87,8 @@ TODO: Add items
 
 
 ### Dataset Issues
+
+[Data Preparation](./ml/data_prep.md)
 
 [Discrete Probability Distributions](./ml/discrete_prob_dist.md)
 
@@ -107,8 +114,12 @@ TODO: Add items
 
 [Long Short-Term Memory Networks (LSTMs)](./dl/lstm.md)
 
+[Optimization Functions](./dl/optimizers.md)
+
 
 ### Natural Language Processing
+
+[NLTK Textbook](./nlp/nltk_book.pdf)
 
 [Natural Language Processing](./nlp/nlp.md)
  
@@ -117,8 +128,6 @@ TODO: Add items
 [Natural Language Understanding](./nlp/nlu.md)
 
 [NLU Classification](./nlp/nlu_classification.md)
-
-[NLTK Textbook](./nlp/nltk_book.pdf)
 
 
 ### Reinforcement Learning
@@ -137,6 +146,8 @@ TODO: Add items
 [Stationary Time Series](./time_series/time_series_stationary.md)
 
 [Time Series Tips](./time_series/time_series_tips.md)
+
+[More Time Series Tips](./time_series/time_series_tips_more.md)
 
 
 ### Tips
@@ -163,9 +174,9 @@ TODO: Add items
 
 [Project Ideas](./tips/ai_project_ideas.md)
 
-[Statistics for Machine Learning](./tips/statistics.md)
-
 [Hypertuning](.tips/tuning.md)
+
+
 
 ## References
 
