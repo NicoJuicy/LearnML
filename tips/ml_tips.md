@@ -26,17 +26,6 @@ A possible solution to this problem could be to create a virtual environment and
 
 
 
-## Bayesian Networks (BN)
-
-The main problem with Bayesian Networks (BN) is that they appear to be deceptively simple. However, in reality there are many issues with their practical use:
-
-- Most of the software tools currently available for BN are GUI in nature which makes them impractical for most real-world applications. For a simple problem where the correct answer is already know, a BN GUI tool would probably be fine (see last comment below).
-
-- There are few software libaries available for BN and those that are available are usually poorly documented. I completed an assignment using pyagrum which was a recommended library for BN and I encountered many problems with the API and documentation.
-
-- My professor gave us what appeared to be a simple BN problem. However, none of the students in the class (including me) were able to get the problem correct even though we were given more than one chance (each time with more explanation on BN). However, I did get it correct the third time. Thus, I am not a fan of BN.
-
-
 ## [What aspect ratio to use for line plots](https://towardsdatascience.com/should-you-care-about-the-aspect-ratio-when-creating-line-plots-ed423a5dceb3)
 
 One of the most overlooked aspects of creating charts is the use of correct aspect ratios. 

@@ -201,6 +201,17 @@ The most popular Bayesian algorithms are:
 - Bayesian Network (BN)
 
 
+#### Problems with Bayesian Networks 
+
+The main problem with Bayesian Networks (BN) is that they appear to be deceptively simple. However, in reality there are many issues with their practical use:
+
+- Most of the software tools currently available for BN are GUI which makes them impractical for most real-world applications.
+
+- There are few software libaries available for BN and those that are available are usually poorly documented. I completed an assignment using pyagrum which was a recommended library for BN and I encountered many problems with the API and documentation.
+
+- My professor gave us what appeared to be a simple BN problem. However, none of the students in the class (including me) were able to get the problem correct even though we were given more than one chance (each time with more explanation on BN). However, I did get it correct the third time. Thus, I am not a fan of BN.
+
+
 ### Clustering Algorithms
 
 Clustering (like regression) describes the class of problem and the class of methods.
@@ -310,8 +321,6 @@ How to Run Machine Learning Algorithms
 
 ### Decision Trees
 
-[Classification And Regression Trees for Machine Learning](https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/)
-
 Decision Trees are an important type of algorithm for predictive modeling machine learning.
 
 The classical decision tree algorithms have been around for decades and modern variations like random forest are among the most powerful techniques available.
@@ -414,8 +423,6 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 [1] [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
 [Clustering with K-Means: simple yet powerful](https://medium.com/@alexandre.hsd/everything-you-need-to-know-about-clustering-with-k-means-722f743ef1c4)
-
-[One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
 
 
 [Stop using the Elbow Method](https://medium.com/geekculture/stop-using-the-elbow-method-96bcfbbbe9fd)
