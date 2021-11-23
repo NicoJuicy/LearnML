@@ -1,10 +1,8 @@
 # Statistics
 
-[Important Statistics Data Scientists Need to Know](https://www.kdnuggets.com/2021/09/important-statistics-data-scientists.html)
-
 Here is a list of the topics covered in the article:
 
-- Descriptive vs. Inferential Statistics
+- Descriptive vs Inferential Statistics
 - Data Types
 - Probability and Bayes’ Theorem
 - Measures of Central Tendency
@@ -20,9 +18,6 @@ Here is a list of the topics covered in the article:
 
 ## Correlation
 
-[Statistics in Python — Understanding Variance, Covariance, and Correlation](https://towardsdatascience.com/statistics-in-python-understanding-variance-covariance-and-correlation-4729b528db01?source=rss----7f60cf5620c9---4)
-
-
 The correlation between two random variables measures both the strength and direction of a linear relationship that exists between them. 
 
 There are two ways to measure correlation:
@@ -33,7 +28,7 @@ There are two ways to measure correlation:
 
 Understanding the correlations between the various columns in your dataset is an important part of the process of preparing your data for machine learning. 
 
-You want to train your model using the columns that has the highest correlation with the target/label of your dataset.
+You want to train your model using the columns that have the highest correlation with the target/label of your dataset.
 
 Like covariance, the sign of the pearson correlation coefficient indicates the direction of the relationship. However, the values of the Pearson correlation coefficient is contrained to be between -1 and 1. 
 
@@ -62,7 +57,36 @@ So which method should you use?
   If the results show spearman rank correlation coefficient is greater than Pearson coefficient, it means your data has monotonic relationships and not linear (see example above).
 
 
+
+## Statistics for Machine Learning
+
+Statistical Methods an important foundation area of mathematics required for achieving a deeper understanding of the behavior of machine learning algorithms.
+
+Below is the 3 step process that you can use to get up-to-speed with statistical methods for machine learning, fast.
+
+**Step 1:** Discover what Statistical Methods are.
+
+What is Statistics (and why is it important in machine learning)?
+
+**Step 2:** Discover why Statistical Methods are important for machine learning.
+
+The Close Relationship Between Applied Statistics and Machine Learning
+10 Examples of How to Use Statistical Methods in a Machine Learning Project
+
+**Step 3:** Dive into the topics of Statistical Methods.
+
+Statistics for Machine Learning (7-Day Mini-Course)
+
+
+
 ## References
+
+[Important Statistics Data Scientists Need to Know](https://www.kdnuggets.com/2021/09/important-statistics-data-scientists.html)
+
+[Statistics in Python — Understanding Variance, Covariance, and Correlation](https://towardsdatascience.com/statistics-in-python-understanding-variance-covariance-and-correlation-4729b528db01?source=rss----7f60cf5620c9---4)
+
+[Statistics for Machine Learning](https://machinelearningmastery.com/start-here/#statistical_methods)
+
 
 [What does RMSE really mean?](https://towardsdatascience.com/what-does-rmse-really-mean-806b65f2e48e)
 
