@@ -138,3 +138,20 @@ Small and imbalanced datasets are common in medical applications. However, it is
 Resampling is just one approach to balance a dataset but it is an advanced concept, so u need to have a thorough understanding of the core ML concepts. Otherwise, your results will be suspect. I have some notes on “Dataset Issues” that may help get u started. However, the approach is different for image datasets.
 
 
+## Why are Robots not more common?
+
+Robot soccer is one type of classic robotics toy problem, often involving multiagent reinforcement learning (MARL). 
+
+In robotics, there are a lot of technical issues (mainly safety related) involved besides the biomechanics of walking. 
+
+There has been limited success for certain application areas such as the robot dog and of course robotic kits for arduino and raspberry pi (for hobbyists) but more practical applications still seem to be more elusive. 
+
+In general, it costs a lot of money for R&D in robotics and it takes a long time for ROI. For example, openai recently disbanded its robotics division dues to lack of data and capital. Perhaps more interesting is the lack of a proper dataset which is needed for real-world robotics applications in the wild.
+
+
+[OpenAI disbands its robotics research team](https://venturebeat.com/2021/07/16/openai-disbands-its-robotics-research-team/)
+
+[Boston Dynamics now sells a robot dog to the public, starting at $74,500](https://arstechnica.com/gadgets/2020/06/boston-dynamics-robot-dog-can-be-yours-for-the-low-low-price-of-74500/)
+
+
+
