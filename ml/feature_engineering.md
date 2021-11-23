@@ -16,8 +16,6 @@
     - Automatic Transform of the Target Variable
     - Complete Regression Example
 - References
-    - Feature Engineering
-    - Dimensionality Reduction
     - Time Series Data Preparation
 
 <!-- /MarkdownTOC -->
@@ -26,9 +24,7 @@
 
 [Data Preparation](./data_prep.md)
 
-[What is Feature Engineering?](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10?source=rss----7f60cf5620c9---4)
-
-Feature engineering techniques for machine learning are a fundamental topic in machine learning, yet one that is often overlooked or deceptively simple.
+Feature engineering techniques for machine learning are a fundamental topic in machine learning but one that is often overlooked or deceptively simple.
 
 Feature engineering consists of various processes:
 
@@ -36,23 +32,21 @@ Feature engineering consists of various processes:
 
   EDA is often applied when the goal is to create hypotheses or find patterns in the data. 
 
-  EDA is often used on large amounts of qualitative or quantitative data that haven’t been analyzed before.
+  EDA is often used on large amounts of qualitative or quantitative data that have not been analyzed before.
 
 - **Transformations:** Feature transformation is simply a function that transforms features from one representation to another. 
 
-  The goal here is to plot and visualise data, if something is not adding up with the new features we can reduce the number of features used, speed up training, or increase the accuracy of a certain model.
+  The goal is to plot and visualize the data. If something is not adding up with the new features we can reduce the number of features used, speed up training, or increase the accuracy of a model.
 
-- **Feature Creation:** Creating features involves creating new variables which will be most helpful for our model. 
+- **Feature Selection:** The process of creating new variables that will be most helpful for our model which can include adding or removing some features. 
 
-  This can be adding or removing some features. As we saw above, the cost per sq. ft column was a feature creation.
+- **Feature Extraction:** The process of extracting features from a data set to identify useful information. 
 
-- **Feature Extraction:** Feature extraction is the process of extracting features from a data set to identify useful information. 
+  Without distorting the original relationships or other information, we compress the amount of data into manageable quantities for algorithms to process.
 
-  Without distorting the original relationships or significant information, this compresses the amount of data into manageable quantities for algorithms to process.
+- **Benchmark:** A Benchmark Model is the most user-friendly, dependable, transparent, and interpretable model against which you can measure your final model. 
 
-- **Benchmark:** A Benchmark Model is the most user-friendly, dependable, transparent, and interpretable model against which you can measure your own. 
-
-  It is a good idea to run test datasets to see if your new machine learning model outperforms a recognised benchmark. These benchmarks are often used as measures for comparing the performance between different machine learning models
+  It is a good idea to run test datasets to see if your new machine learning model outperforms a recognized benchmark which are often used as measures for comparing the performance of different ML models. 
 
 
 ## Dimensionality Reduction
@@ -63,15 +57,19 @@ Dimensionality reduction is a data preprocessing step, so it is done before trai
 
 There are two main methods for reducing dimensionality:
 
-- In **feature selection**, we only keep the most important features in the dataset and remove the redundant features. There are no transformations applied to the set of features.
+- In **feature selection**, we only keep the most important features in the dataset and remove the redundant features. 
+
+  There are no transformations applied to the set of features.
 
   Thus, feature selection selects a minimal subset of the variables that contain all predictive information necessary to produce a predictive model for the target variable (outcome).
 
   Examples: Backward elimination, Forward selection, and Random forests. 
 
-- In **feature extraction**, we find a combination of new features and an appropriate transformation is applied to the set of features. The new set of features contains different values rather than the original values. 
+- In **feature extraction**, we find a combination of new features and an appropriate transformation is applied to the set of features. 
 
-Feature extraction can be further divided into _linear_ methods and _non-linear_ methods.
+  The new set of features contains different values rather than the original values. 
+
+  Feature extraction can be further divided into _linear_ methods and _non-linear_ methods.
 
 
 ----------
@@ -90,14 +88,14 @@ Feature extraction can be further divided into _linear_ methods and _non-linear_
 ### Method 3: Obtain importances from PCA loading scores
 
 
-----------
-
 
 ## Feature Engineering Techniques
 
-## Transform Target Variables for Regression
 
-[How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
+----------
+
+
+## Transform Target Variables for Regression
 
 Performing data preparation operations such as scaling is relatively straightforward for input variables and has been made routine in Python via the `Pipeline` scikit-learn class.
 
@@ -268,14 +266,15 @@ By default, the `PowerTransformer` also performs a standardization of each varia
 
 ## References
 
-### Feature Engineering
+[What is Feature Engineering?](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10?source=rss----7f60cf5620c9---4)
+
+[How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
+
 
 [Representation: Feature Engineering](https://developers.google.com/machine-learning/crash-course/representation/feature-engineering)
 
 [Basic Feature Discovering for Machine Learning](https://medium.com/diko-hary-adhanto-portfolio/basic-feature-discovering-for-machine-learning-cbd47bf4b651)
 
-
-### Dimensionality Reduction
 
 [Techniques for Dimensionality Reduction](https://towardsdatascience.com/techniques-for-dimensionality-reduction-927a10135356)
 
