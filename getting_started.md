@@ -86,9 +86,9 @@ There are a lot of models to choose from, so consider starting with regression m
 
 The first step in solving an ML problem is to try a simple algorithm (such as Linear or Logistic Regression) as a baseline model which is used later to evaluate your model choice(s) which should perform better than the baseline. 
 
-The best practice is to evaluate many algorithms (say 10-20) using an [AutoML Tool](./tips/automl_tools.md) and [ML Tool](./tips/ml_tools.md) such as Orange or PyCaret that c such as Orange or PyCaret then narrow the choices to a few models based on accuracy and error metrics. Then, create a test harness to fully explore the candidates.
+Next, the best practice is to evaluate many algorithms (say 10-20) using an [AutoML Tool](./tips/automl_tools.md) or [ML Tool](./tips/ml_tools.md) such as Orange and PyCaret then narrow the choices to a few models based on accuracy and error metrics. Then, create a test harness to fully explore the candidates.
 
-In general, you should have evaluated 10-20 models before trying to evaluate more complex models such as neural networks (a common beginner mistake).
+In general, you should have evaluated 10-20 models before trying to evaluate more complex models such as neural networks.
 
 Keep in mind that an accuracy of 50% is equivalent to random guessing (flip of a coin). Thus, your models should have an accuracy of at least 70-80% or better before optimization/tuning of hyperparameters. Otherwise, this should be a red flag that you need to select a different model and/or spend more time on data preparation and feature engineering. 
 
@@ -204,6 +204,12 @@ There are a plethora of [AutoML Tools](./tips/automl_tools.md) and [ML Tools](./
 
 [Gettting Started with Machine Learning](https://machinelearningmastery.com/start-here/)
 
-[One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
+[How to start contributing to open-source projects](https://towardsdatascience.com/how-to-start-contributing-to-open-source-projects-41fcfb654b2e)
+
+[A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6)
+
+[Regression for Classification | Hands on Experience](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
+
+[End-to-end machine learning project: Telco customer churn](https://towardsdatascience.com/end-to-end-machine-learning-project-telco-customer-churn-90744a8df97d?source=rss----7f60cf5620c9---4)
 
 

@@ -1,7 +1,5 @@
 # Natural Language Understanding (NLU)
 
-[What is NLU? How to make chatbots understand what you want?](https://medium.com/empathic-labs/what-is-nlu-how-to-make-chatbots-understand-what-you-want-cecafff7aa7b)
-
 NLU is a subset of NLP and its purpose is to extract the _meaning_ from the text. 
 
 Examples: Extracting the sentiment from a sentence, the intention of the writer, or the semantics of the sentence. 
@@ -46,9 +44,7 @@ LM is a pre-cursor task in applications such as speech recognition and machine t
 
 ## Challenges of NLU
 
-[Challenges of Traditional Text Analytics used in NLP/NLU](https://constkogan.medium.com/challenges-of-traditional-text-analytics-used-in-nlp-nlu-b79904f9f9a9)
-
-But all of the current solutions still use many traditional text mining algorithms to get meaning from unstructured text documents which is far from ideal.
+A|ll of the current solutions still use many traditional text mining algorithms to get meaning from unstructured text documents which is far from ideal.
 
 To better understand the shortcomings of these algorithms used for natural language understanding (NLU), we take a detailed look at the problems of old school approaches at each step of flexible natural language processing. 
 
@@ -81,8 +77,6 @@ When we look at the steps a traditional algorithm follows, we could identify sev
 
 ## What is intent recognition?
 
-[What is intent recognition and how can I use it?](https://medium.com/mysuperai/what-is-intent-recognition-and-how-can-i-use-it-9ceb35055c4f)
-
 _Intent recognition_ or intent classification is the task of taking a written or spoken input and classifying it based on what the user wants to achieve. 
 
 Intent recognition forms an essential component of chatbots and finds use in sales conversions, customer support, and many other areas.
@@ -91,17 +85,17 @@ Intent recognition forms an essential component of chatbots and finds use in sal
 
 NLU also analyzes different aspects of the input language that is given to the program.
 
-## How intent recognition works
+### How intent recognition works
 
 Intent recognition works through the process of providing examples of text alongside their intents to a machine learning (ML) model.
 
-## Training data
+### Training data
 
 Training data is a representative sample of raw data that is manually labeled or organized in the way you eventually want your model to do automatically. 
 
 Once you have labeled the data yourself, you feed it into your ML model to train a model.
 
-## Creating training data
+### Creating training data
 
 When it comes to intent recognition the process of creating training data looks like this:
 
@@ -121,7 +115,7 @@ When it comes to intent recognition the process of creating training data looks 
     
     You input your raw data and the data program breaks it apart into discrete tasks to produce a coherent labeled output automatically. 
     
-## Training your model
+### Training your model
 
 With your training data assembled you can ask us to train a model for you, which would be accessible via API, or you can create your own or choose from many open-source models (such as one from Google’s BERT) and begin the training process yourself. 
 
@@ -129,8 +123,17 @@ Once your model performs well on your validation set, you are ready to let it lo
 
 More high quality training data makes for more finely tuned models
 
-## Intent recognition use cases
+### Intent recognition use cases
 
 Intent recognition finds a comfortable home in any situation where there are a large number of requests or questions that are often quite similar (Chatbots, Customer support). 
 
+
+
+## References
+
+[What is NLU? How to make chatbots understand what you want?](https://medium.com/empathic-labs/what-is-nlu-how-to-make-chatbots-understand-what-you-want-cecafff7aa7b)
+
+[Challenges of Traditional Text Analytics used in NLP/NLU](https://constkogan.medium.com/challenges-of-traditional-text-analytics-used-in-nlp-nlu-b79904f9f9a9)
+
+[What is intent recognition and how can I use it?](https://medium.com/mysuperai/what-is-intent-recognition-and-how-can-i-use-it-9ceb35055c4f)
 
