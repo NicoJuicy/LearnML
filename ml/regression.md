@@ -136,8 +136,24 @@ Here we review the following:
 The parameters of the train function are called _hyperparameters_ such as iterations and learning rate which are set so that the train function can find parameters such as w and b.
 
 
+----------
 
-## References
+
+# Regression Examples
+
+[A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
+
+
+# Classification Examples
+
+[Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
+
+[One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
+
+[Classification And Regression Trees for Machine Learning](https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/)
+
+
+# References
 
 [A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
 
@@ -146,9 +162,11 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 [Supervised Machine Learning: Classification, Logistic Regression, and Classification Error Metrics](https://medium.com/the-quant-journey/supervised-machine-learning-classification-logistic-regression-and-classification-error-metrics-6c128263ac64?source=rss------artificial_intelligence-5)
 
 
-[Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
+[A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9)
 
-[One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
+[Five Regression Python Modules That Every Data Scientist Must Know](https://towardsdatascience.com/five-regression-python-modules-that-every-data-scientist-must-know-a4e03a886853)
+
+[How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
 
 
 [A Gentle Introduction to Multiple-Model Machine Learning](https://machinelearningmastery.com/multiple-model-machine-learning/)
