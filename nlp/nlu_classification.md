@@ -182,7 +182,7 @@ For example, we will train the DIET classifier for both entity recognition and i
 
 
 
-## How intent classification works in NLU?
+## How Intent Classification Works
 
 ### Teaching semantics to a machine: word embeddings
 

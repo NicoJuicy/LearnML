@@ -193,4 +193,5 @@ S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Ana
 [NLP Techniques Every Data Scientist Should Know](https://towardsdatascience.com/6-nlp-techniques-every-data-scientist-should-know-7cdea012e5c3)
 
 
+[The Current Conversational AI & Chatbot Landscape](https://cobusgreyling.medium.com/the-current-conversational-ai-chatbot-landscape-c147e9bcc01b)
 

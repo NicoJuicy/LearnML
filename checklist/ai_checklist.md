@@ -2,17 +2,19 @@
 
 ## Feature Engineering
 
-[Feature engineering A-Z](https://towardsdatascience.com/feature-engineering-a-z-aa8ce9639632)
-
-A checklist for transforming features for better model performance. 
-
-Feature engineering is the process of transforming data to extract valuable information. 
+Feature engineering is the process of transforming data to extract valuable information.
 
 If done correctly, feature engineering can play even a bigger role in model performance than hyperparameter tuning.
 
+A checklist for transforming features for better model performance:
+
+[Feature engineering A-Z](https://towardsdatascience.com/feature-engineering-a-z-aa8ce9639632)
+
+
+The following article explains and implements PCA in Python:
+
 [Dimensionality Reduction Explained](https://towardsdatascience.com/dimensionality-reduction-explained-5ae45ae3058e)
 
-This article explains and implements PCA in Python. 
  
 
 ## When You Should not use ML?

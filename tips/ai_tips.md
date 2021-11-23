@@ -85,12 +85,3 @@
 
 [The Ultimate Guide to Jacobian Matrices for Robotics](https://automaticaddison.com/the-ultimate-guide-to-jacobian-matrices-for-robotics/)
 
-You can do some searching on robot soccer which is one type of classic robotics toy problem, often involving multiagent reinforcement learning (MARL). There are a lot of technical issues (mainly safety related) involved besides the biomechanics of walking. 
-
-There has been limited success for certain application areas such as the robot dog and of course robotic kits for arduino and raspberry pi (for hobbyists) but more practical applications still seem to be more elusive. 
-
-In general, it costs a lot of money for R&D in robotics and it takes a long time for ROI. For example, openai recently disbanded its robotics division dues to lack of data and capital. Perhaps more interesting is the lack of a proper dataset which is needed for real-world robotics applications in the wild. 
-
-https://arstechnica.com/gadgets/2020/06/boston-dynamics-robot-dog-can-be-yours-for-the-low-low-price-of-74500/ 
-
-https://venturebeat.com/2021/07/16/openai-disbands-its-robotics-research-team/
