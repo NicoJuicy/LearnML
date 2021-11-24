@@ -316,6 +316,8 @@ In addition, you should have some understanding of deployment and what the end p
 
 ## Generating Synthetic Data
 
+[Gretel Synthetics](https://github.com/gretelai/gretel-synthetics)
+
 [Creating synthetic time series data](https://gretel.ai/blog/creating-synthetic-time-series-data)
 
 [Synthetic data generation using Generative Adversarial Networks (GANs)](https://medium.com/data-science-at-microsoft/synthetic-data-generation-using-generative-adversarial-networks-gans-part-1-47ecbf46b575)
