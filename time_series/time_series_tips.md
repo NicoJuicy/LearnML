@@ -3,9 +3,9 @@
 <!-- MarkdownTOC -->
 
 - How to check for gaps in time series data?
-- Tips and Tricks \(Multivariate time series\)
+- Tips and Tricks for Multivariate Time Series
 - How to Check if Time Series Data is Stationary with Python?
-- to_categorical
+- Using to_categorical
 - Keras Time Series Examples
 - Steps
 - Params Class
@@ -33,17 +33,20 @@
 
 Data Preparation for Multivariate LSTM Forecasting
 
-## Tips and Tricks (Multivariate time series)
+## Tips and Tricks for Multivariate Time Series
 
 - Do not shuffle train/test datasets
 - Convert dataset to 3D supervised shape [samples, ntimesteps n_feature].
 - Reframe the problem as supervised learning problem with  (X, y) datasets.
 
+
 ## [How to Check if Time Series Data is Stationary with Python?](https://gist.github.com/codecypher/80d6bc9ade74a33ae8b5ca863662896d)
 
-## to_categorical
+
+## Using to_categorical
 
 [Simple MNIST convnet](https://keras.io/examples/vision/mnist_convnet/)
+
 
 
 ## Keras Time Series Examples
@@ -252,12 +255,8 @@ def compute_accuracy(args, X, yhat, y, scaler_pred):
 
 ```
 
+
 ## Time Series Tips and Tricks
-
-[5 Tips for Working With Time Series in Python](https://medium.com/swlh/5-tips-for-working-with-time-series-in-python-d889109e676d)
-
-[4 Common Machine Learning Data Transforms for Time Series Forecasting](https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/)
-
 
 [Feature selection for forecasting algorithms](https://jackbakerds.com/posts/forecasting-feature-selection/)
 
