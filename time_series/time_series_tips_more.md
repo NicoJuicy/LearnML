@@ -2,29 +2,31 @@
 
 <!-- MarkdownTOC -->
 
-- 5 Tips for Working With Time Series in Python
-    - Removing noise with the Fourier Transform
-    - Removing noise with the Kalman Filter
-    - Dealing with Outliers
-    - The right way to normalize time series data.
-    - A flexible way to compute returns.
-- 4 Common Machine Learning Data Transforms for Time Series Forecasting
-    - Transforms for Time Series Data
-        - Power Transform
-        - Difference Transform
-        - Standardization
-        - Normalization
-    - Considerations for Model Evaluation
-    - Order of Data Transforms
+- Tips for Working With Time Series
+  - Removing noise with the Fourier Transform
+  - Removing noise with the Kalman Filter
+  - Dealing with Outliers
+  - The right way to normalize time series data.
+  - A flexible way to compute returns.
+- Common Machine Learning Data Transforms for Time Series Forecasting
+  - Transforms for Time Series Data
+    - Power Transform
+    - Difference Transform
+    - Standardization
+    - Normalization
+  - Considerations for Model Evaluation
+  - Order of Data Transforms
 - Training Time Series Forecasting Models in PyTorch
-    - Data Quality/Preprocessing
-    - Model Choice and hyper-parameter selection
-    - Robustness
+  - Data Quality/Preprocessing
+  - Model Choice and hyper-parameter selection
+  - Robustness
+  - Generating Synthetic Data
+  - References
 
 <!-- /MarkdownTOC -->
 
 
-# [5 Tips for Working With Time Series in Python](https://medium.com/swlh/5-tips-for-working-with-time-series-in-python-d889109e676d)
+# Tips for Working With Time Series
 
 ## Removing noise with the Fourier Transform
 
@@ -64,7 +66,7 @@ When filtering financial time series, the ideal procedure filters returns first 
 
 
 
-# [4 Common Machine Learning Data Transforms for Time Series Forecasting](https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/)
+# Common Machine Learning Data Transforms for Time Series Forecasting
 
 ## Transforms for Time Series Data
 
@@ -312,4 +314,17 @@ In addition, you should have some understanding of deployment and what the end p
   When you perform further testing, it may become obvious that the model was just learning to memorize rather than the actual casual effects of features.
 
 
+## Generating Synthetic Data
 
+[Creating synthetic time series data](https://gretel.ai/blog/creating-synthetic-time-series-data)
+
+[Synthetic data generation using Generative Adversarial Networks (GANs)](https://medium.com/data-science-at-microsoft/synthetic-data-generation-using-generative-adversarial-networks-gans-part-1-47ecbf46b575)
+
+[Generating Synthetic Data Using a Generative Adversarial Network (GAN) with PyTorch](https://visualstudiomagazine.com/articles/2021/06/02/gan-pytorch.aspx?m=1)
+
+
+## References
+
+[5 Tips for Working With Time Series in Python](https://medium.com/swlh/5-tips-for-working-with-time-series-in-python-d889109e676d)
+
+[4 Common Machine Learning Data Transforms for Time Series Forecasting](https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/)
