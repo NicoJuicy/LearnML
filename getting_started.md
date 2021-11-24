@@ -9,8 +9,8 @@ If you have an .edu email account you can get free access to [oreilly.com](https
 Here are some undergraduate topics/courses that you should know before learning AI/ML (see Math and References sections):
 
 - Calculus
-- Linear Algebra
 - Discrete Mathematics
+- Linear Algebra
 - Probability and Statitics
 - Statistical Programming
 
@@ -25,8 +25,6 @@ Here are some undergraduate topics/courses that you should know before learning 
 
 ## Math
 
-[Learn Data Science For Free](https://medium.com/artificialis/learn-data-science-for-free-fad0aa268c1e)
-
 [Math Refresher for Scientists and Engineers](http://itc-books.weebly.com/uploads/1/4/1/0/14101304/ebooksclub.org__math_refresher_for_scientists_and_engineers.pdf)
 
 [Trigonometry Handbook](http://www.mathguy.us/Handbooks/TrigonometryHandbook.pdf)
@@ -35,8 +33,10 @@ Here are some undergraduate topics/courses that you should know before learning 
 
 [An Introduction To Recurrent Neural Networks And The Math That Powers Them](https://machinelearningmastery.com/an-introduction-to-recurrent-neural-networks-and-the-math-that-powers-them/)
 
+[Learn Data Science For Free](https://medium.com/artificialis/learn-data-science-for-free-fad0aa268c1e)
 
-## Artificial Intelligence vs Machine Learning vs Deep Learning
+
+## AI vs ML vs DL
 
 [Artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence?wprov=sfti1) (AI) is the study of ways to build intelligent programs and machines that can creatively solve problems which has always been considered a human prerogative.
 
