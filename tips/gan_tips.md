@@ -21,6 +21,6 @@ Here are some online resources that I found to be helpful:
 - [How to Identify and Diagnose GAN Failure Modes](https://machinelearningmastery.com/practical-guide-to-gan-failure-modes/)
 - [DCGAN Tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html)
 - [How to Build a DCGAN with PyTorch](https://towardsdatascience.com/how-to-build-a-dcgan-with-pytorch-31bfbf2ad96a)
-- [Deep Convolutional Vs Wasserstein Generative Adversarial Network](https://towardsdatascience.com/deep-convolutional-vs-wasserstein-generative-adversarial-network-183fbcfdce1f)
+- [Deep Convolutional vs Wasserstein Generative Adversarial Network](https://towardsdatascience.com/deep-convolutional-vs-wasserstein-generative-adversarial-network-183fbcfdce1f)
 
 Good luck!
