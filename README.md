@@ -76,7 +76,7 @@ TODO: Add items
 
 [Robotics](./ml/robotics.md)
 
-[Train-Test Split](./train_test_split.md)
+[Train-Test Split](./ml/train_test_split.md)
 
 
 ### Feature Engineering
