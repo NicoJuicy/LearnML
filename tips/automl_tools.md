@@ -4,6 +4,25 @@ Automated Machine Learning (AutoML) is an emerging field in which the process of
 
 Here is a list of AutoML tools that I have found to be helpful to an AI/ML engineer. 
 
+<!-- MarkdownTOC -->
+
+- FLAML
+- PyCaret
+- H2O
+- wandb
+- MLFlow
+- auto-sklearn
+- AutoGluon
+- AutoKeras
+- Auto-ViML
+- AutoViz
+- MediaPipe
+- Ray
+- SageMaker
+- Time Series Libraries
+
+<!-- /MarkdownTOC -->
+
 
 ### [FLAML](https://github.com/microsoft/FLAML)
 
@@ -138,4 +157,21 @@ In 2021, Amazon launched SageMaker Studio, the first integrated IDE for machine 
 
 Apart from being closely integrated into the AWS cloud it also offers data labeling software and other features.
 
+
+---------
+
+
+## Time Series Libraries
+
+- PyCaret
+
+- AutoGluon
+- AutoKeras
+- AutoTS
+- Darts
+- mlforecast
+
+- TimeSynth
+- TimeGAN
+- Gretel.ai
 
