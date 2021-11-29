@@ -8,9 +8,11 @@ Here is a list of ML tools that I have found to be helpful to an AI/ML engineer.
 - Keras Tutorials
 - Data Exploration Tools
 - Feature Engineering Tools
-- ML Libraries and Frameworks
+- ML Libraries
+- Kale
 - Kedro
-- NLP Tools
+- Computer Vision
+- Natural Language Programming
 - Python Libraries
 - Cloud Tools
 - Deep Learning Tools
@@ -167,15 +169,15 @@ An open-source toolkit for developing and comparing reinforcement learning algor
 
 
 
-## Computer Vision (CV)
+## Computer Vision
 
-### [ageitgey/face_recognition](https://github.com/ageitgey/face_recognition
+### [ageitgey/face_recognition](https://github.com/ageitgey/face_recognition)
 
 A library for building face recognition applications that is one of the simplest facial recognition APIs for Python and the command line.
 
 
 
-## Natural Language Programming (NLP)
+## Natural Language Programming
 
 ### [NLTK](https://www.nltk.org)
 
