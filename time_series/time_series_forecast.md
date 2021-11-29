@@ -22,24 +22,22 @@
     - Multivariate LSTM Models
         - Multiple Input Series
         - Multiple Parallel Series
-    - Time Series Libraries
 - References
     - Time Series Background
     - Time Series for Beginners
     - Time Series Analysis
     - Time Series Decomposition
+    - Time Series Data Preparation
+    - Forecast Performance Baseline
     - Time Series Classification
     - Time Series Forecasting using Keras
     - Time Series Examples using Pytorch
+    - Time Series Examples using PyCaret
     - More Time Series Examples
 
 <!-- /MarkdownTOC -->
 
 # Time Series Forecasting
-
-[What Is Time Series Forecasting?](https://machinelearningmastery.com/time-series-forecasting/)
-
-[Taxonomy of Time Series Forecasting Problems](https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/)
 
 ## Describing vs Predicting
 
@@ -101,24 +99,14 @@ All time series have a level, most have noise, and the trend and seasonality are
 
 ## Time Series Data Preparation
 
-[How to Load and Explore Time Series Data in Python](https://machinelearningmastery.com/load-explore-time-series-data-python/)
-
-[Basic Feature Engineering With Time Series Data in Python](https://machinelearningmastery.com/basic-feature-engineering-time-series-data-python/)
-
-[How To Backtest Machine Learning Models for Time Series Forecasting](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
-
-NOTE: k-fold Cross Validation Does Not Work for Time Series Data.
-
 The goal of time series forecasting is to make accurate predictions about the future.
 
 The fast and powerful methods that we rely on in machine learning (such as using train-test splits and k-fold cross validation) do not work in the case of time series data since they ignore the temporal components inherent in the problem.
 
+NOTE: k-fold Cross Validation Does Not Work for Time Series Data.
+
 
 ## Forecast Performance Baseline
-
-[How to Make Baseline Predictions for Time Series Forecasting with Python](https://machinelearningmastery.com/persistence-time-series-forecasting-with-python/)
-
-[How to Create an ARIMA Model for Time Series Forecasting in Python](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/)
 
 A _baseline_ in forecast performance provides a point of comparison.
 
@@ -149,6 +137,7 @@ Three properties of a good technique for making a baseline forecast are:
 - Repeatable: A method that is deterministic, meaning that it produces an expected output given the same input.
 
 A common algorithm used in establishing a baseline performance is the _persistence algorithm_.
+
 
 
 ## 5-Step Forecasting Task
@@ -182,7 +171,7 @@ This 5-step process provides a strong overview from starting off with an idea or
 The focus of the process is on understanding the problem and fitting a good model.
 
 
-## [Error Metrics used in Time Series Forecasting](https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca)
+## Error Metrics used in Time Series Forecasting
 
 Some of the common error metrics used in particular with Time Series Forecasting model assessment and they are:
 
@@ -196,9 +185,8 @@ Some of the common error metrics used in particular with Time Series Forecasting
 ----------
 
 
-# [How to Develop LSTM Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/)
 
-[How to Develop CNN Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-develop-convolutional-neural-network-models-for-time-series-forecasting/)
+# How to Develop LSTM Models for Time Series Forecasting
 
 In this tutorial, we will explore how to develop a suite of different types of LSTM models for time series forecasting.
 
@@ -470,42 +458,28 @@ The first sample of this dataset would be:
 
 
 
-
-----------
-
-
-## Time Series Libraries
-
-- AutoGluon
-- AutoKeras
-- AutoTS
-- Darts
-- mlforecast
-
-- TimeSynth
-- TimeGAN
-- Gretel.ai
-
-- PyCaret
-
-
-----------
-
-
 # References
+
+[What Is Time Series Forecasting?](https://machinelearningmastery.com/time-series-forecasting/)
+
+[Taxonomy of Time Series Forecasting Problems](https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/)
+
+[Error Metrics used in Time Series Forecasting](https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca)
+
 
 [Classical Time Series Forecasting Methods in Python (Cheat Sheet)](https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/)
 
 [How to Load, Visualize, and Explore a Multivariate Multistep Time Series Dataset](https://machinelearningmastery.com/how-to-load-visualize-and-explore-a-complex-multivariate-multistep-time-series-forecasting-dataset/)
-
-[How to Make Baseline Predictions for Time Series Forecasting with Python](https://machinelearningmastery.com/persistence-time-series-forecasting-with-python/)
 
 
 [Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
 
 [How to Develop LSTM Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/)
 
-[How to Develop Multivariate Multi-Step Time Series Forecasting Models for Air Pollution](https://machinelearningmastery.com/how-to-develop-machine-learning-models-for-multivariate-multi-step-air-pollution-time-series-forecasting/)
+[How to Develop Multivariate Multi-Step Time Series Forecasting Models for Air Pollution](https://machinelearningmastery.com/howp-to-develop-machine-learning-models-for-multivariate-multi-step-air-pollution-time-series-forecasting/)
+
+[How to Develop CNN Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-develop-convolutional-neural-network-models-for-time-series-forecasting/)
+
 
 
 ## Time Series Background
@@ -548,6 +522,22 @@ The first sample of this dataset would be:
 [Time Series Data Visualization with Python](https://machinelearningmastery.com/time-series-data-visualization-with-python/)
 
 
+## Time Series Data Preparation
+
+[How to Load and Explore Time Series Data in Python](https://machinelearningmastery.com/load-explore-time-series-data-python/)
+
+[Basic Feature Engineering With Time Series Data in Python](https://machinelearningmastery.com/basic-feature-engineering-time-series-data-python/)
+
+[How To Backtest Machine Learning Models for Time Series Forecasting](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
+
+
+## Forecast Performance Baseline
+
+[How to Make Baseline Predictions for Time Series Forecasting with Python](https://machinelearningmastery.com/persistence-time-series-forecasting-with-python/)
+
+[How to Create an ARIMA Model for Time Series Forecasting in Python](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/)
+
+
 ## Time Series Classification
 
 [Timeseries classification from scratch](https://keras.io/examples/timeseries/timeseries_classification_from_scratch/)
@@ -562,6 +552,8 @@ The first sample of this dataset would be:
 [Time Series Forecast Using Deep Learning](https://medium.com/geekculture/time-series-forecast-using-deep-learning-adef5753ec85)
 
 [Timeseries forecasting for weather prediction](https://keras.io/examples/timeseries/timeseries_weather_forecasting/)
+
+[Timeseries classification from scratch](https://keras.io/examples/timeseries/timeseries_classification_from_scratch/)
 
 [How to Develop a Bidirectional LSTM For Sequence Classification in Python with Keras](https://machinelearningmastery.com/develop-bidirectional-lstm-sequence-classification-python-keras/)
 
@@ -579,11 +571,20 @@ The first sample of this dataset would be:
 [Training Time Series Forecasting Models in PyTorch](https://towardsdatascience.com/training-time-series-forecasting-models-in-pytorch-81ef9a66bd3a)
 
 
+## Time Series Examples using PyCaret
+
+[Introduction to Binary Classification with PyCaret](https://towardsdatascience.com/introduction-to-binary-classification-with-pycaret-a37b3e89ad8d?source=rss----7f60cf5620c9---4)
+
+[PyCaret + SKORCH: Build PyTorch Neural Networks using Minimal Code](https://towardsdatascience.com/pycaret-skorch-build-pytorch-neural-networks-using-minimal-code-57079e197f33)
+
+[Multiple Time Series Forecasting with PyCaret](https://towardsdatascience.com/multiple-time-series-forecasting-with-pycaret-bc0a779a22fe)
+
+[Time Series Forecasting with PyCaret Regression Module](https://towardsdatascience.com/time-series-forecasting-with-pycaret-regression-module-237b703a0c63)
+
+
 ## More Time Series Examples
 
 [Forecasting with Machine Learning Models using mlforecast](https://towardsdatascience.com/forecasting-with-machine-learning-models-95a6b6579090)
 
 [Stacking Machine Learning Models for Multivariate Time Series](https://towardsdatascience.com/stacking-machine-learning-models-for-multivariate-time-series-28a082f881)
-
-
 

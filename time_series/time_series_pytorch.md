@@ -1,4 +1,4 @@
-# [PyTorch LSTMs for time series forecasting of Indian Stocks](https://medium.com/analytics-vidhya/pytorch-lstms-for-time-series-forecasting-of-indian-stocks-8a49157da8b9)
+# PyTorch LSTMs for time series forecasting
 
 ## Curating Data to pass it to an LSTM model
 
@@ -231,4 +231,12 @@ Once these are selected, you can hit the submit button to see the model train in
 Once we have a trained model, we can perform predictions on previously unseen data that we set aside as validation data at the beginning of training.
 
 We will do that and plot it to analyze the performance of the model.
+
+
+## References
+
+[PyTorch LSTMs for time series forecasting of Indian Stocks](https://medium.com/analytics-vidhya/pytorch-lstms-for-time-series-forecasting-of-indian-stocks-8a49157da8b9)
+
+
+[Training Time Series Forecasting Models in PyTorch](https://towardsdatascience.com/training-time-series-forecasting-models-in-pytorch-81ef9a66bd3a)
 

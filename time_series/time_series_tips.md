@@ -4,21 +4,18 @@
 
 - How to check for gaps in time series data?
 - Tips and Tricks for Multivariate Time Series
-- How to Check if Time Series Data is Stationary with Python?
 - Using to_categorical
-- Keras Time Series Examples
-- Steps
+- Data Preparation for Multivariate Time Series
 - Params Class
 - Train/Test Split
 - Normalization
 - Evaluate Performance
 - Time Series Tips and Tricks
+- References
 
 <!-- /MarkdownTOC -->
 
 ## How to check for gaps in time series data?
-
-[How NOT to Analyze Time Series](https://towardsdatascience.com/a-common-mistake-to-avoid-when-working-with-time-series-data-eedf60a8b4c1)
 
 - Understand the time range and tick granularity of the times series with visual examination of the example time series
 
@@ -31,16 +28,14 @@
 - Fill in the upsampled ticks with the appropriate interpolation method for your analysis. e.g. take the last known value, or linear / quadratic interpolation, etc
 
 
-Data Preparation for Multivariate LSTM Forecasting
 
 ## Tips and Tricks for Multivariate Time Series
 
 - Do not shuffle train/test datasets
-- Convert dataset to 3D supervised shape [samples, ntimesteps n_feature].
-- Reframe the problem as supervised learning problem with  (X, y) datasets.
 
+- Convert dataset to 3D supervised shape [samples, ntimesteps n_feature]
 
-## [How to Check if Time Series Data is Stationary with Python?](https://gist.github.com/codecypher/80d6bc9ade74a33ae8b5ca863662896d)
+- Reframe the problem as supervised learning problem with  (X, y) datasets
 
 
 ## Using to_categorical
@@ -48,16 +43,7 @@ Data Preparation for Multivariate LSTM Forecasting
 [Simple MNIST convnet](https://keras.io/examples/vision/mnist_convnet/)
 
 
-
-## Keras Time Series Examples
-
-You can also skim these two examples to see if u get any ideas:
-
-[Timeseries forecasting for weather prediction](https://keras.io/examples/timeseries/timeseries_weather_forecasting/)
-
-[Timeseries classification from scratch](https://keras.io/examples/timeseries/timeseries_classification_from_scratch/)
-
-## Steps
+## Data Preparation for Multivariate Time Series
 
   1. data_prep
   2. select_features
@@ -66,6 +52,7 @@ You can also skim these two examples to see if u get any ideas:
   5. Reshape input to be 3D [samples, timesteps, features]
   6. Save scalers to .pkl
   7. Save dataset to .npz
+  
 
 ## Params Class
 
@@ -267,8 +254,17 @@ def compute_accuracy(args, X, yhat, y, scaler_pred):
 [How To Resample and Interpolate Your Time Series Data With Python](https://machinelearningmastery.com/resample-interpolate-time-series-data-python/)
 
 
-[How to Grid Search Deep Learning Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/)
+## Generating Synthetic Data
 
-[How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
+Generative Adversarial Networks (GANs) can generate several types of synthetic data, including image data, tabular data, and sound/speech data.
 
+See [GAN Tips](../tips/gan_tips.md)
+
+
+
+## References
+
+[How NOT to Analyze Time Series](https://towardsdatascience.com/a-common-mistake-to-avoid-when-working-with-time-series-data-eedf60a8b4c1)
+
+[How to Check if Time Series Data is Stationary with Python?](https://gist.github.com/codecypher/80d6bc9ade74a33ae8b5ca863662896d)
 

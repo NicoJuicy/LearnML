@@ -8,7 +8,7 @@
   - Dealing with Outliers
   - The right way to normalize time series data.
   - A flexible way to compute returns.
-- Common Machine Learning Data Transforms for Time Series Forecasting
+- Common Data Transforms for Time Series Forecasting
   - Transforms for Time Series Data
     - Power Transform
     - Difference Transform
@@ -66,7 +66,7 @@ When filtering financial time series, the ideal procedure filters returns first 
 
 
 
-# Common Machine Learning Data Transforms for Time Series Forecasting
+# Common Data Transforms for Time Series Forecasting
 
 ## Transforms for Time Series Data
 
@@ -312,17 +312,6 @@ In addition, you should have some understanding of deployment and what the end p
   Sometimes you may look at a model and think it is performing well, then you check the heatmap and see the model is not using the important features for forecasting. 
   
   When you perform further testing, it may become obvious that the model was just learning to memorize rather than the actual casual effects of features.
-
-
-## Generating Synthetic Data
-
-[Gretel Synthetics](https://github.com/gretelai/gretel-synthetics)
-
-[Creating synthetic time series data](https://gretel.ai/blog/creating-synthetic-time-series-data)
-
-[Synthetic data generation using Generative Adversarial Networks (GANs)](https://medium.com/data-science-at-microsoft/synthetic-data-generation-using-generative-adversarial-networks-gans-part-1-47ecbf46b575)
-
-[Generating Synthetic Data Using a Generative Adversarial Network (GAN) with PyTorch](https://visualstudiomagazine.com/articles/2021/06/02/gan-pytorch.aspx?m=1)
 
 
 ## References
