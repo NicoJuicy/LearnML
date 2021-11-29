@@ -114,9 +114,6 @@ Hyperparameters are the variables that govern the training process and the topol
 
 - **Algorithm hyperparameters** which influence the speed and quality of the learning algorithm such as the learning rate for Stochastic Gradient Descent (SGD) and the number of nearest neighbors for a k Nearest Neighbors (KNN) classifier
 
-[Introduction to the Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner)
-
-[Hyperparameter Tuning with KerasTuner and TensorFlow](https://towardsdatascience.com/hyperparameter-tuning-with-kerastuner-and-tensorflow-c4a4d690b31a)
 
 
 ### Optuna
@@ -134,3 +131,10 @@ Optuna is framework agnostic, so you can use it with any machine learning or dee
 [Hyperparameter Tuning Methods](https://towardsdatascience.com/bayesian-optimization-for-hyperparameter-tuning-how-and-why-655b0ee0b399)
 
 [Hyperparameter Tuning with KerasTuner and TensorFlow](https://towardsdatascience.com/hyperparameter-tuning-with-kerastuner-and-tensorflow-c4a4d690b31a)
+
+[Introduction to the Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner)
+
+
+[How to Grid Search Deep Learning Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/)
+
+[How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
