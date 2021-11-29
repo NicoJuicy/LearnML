@@ -34,7 +34,7 @@ Image recognition can perform different tasks including:
 
 - Detection: This is important when you want to find an entity in an image . Once the object is found, a bounding box is placed around the object in question.
 
-- Segmentation: This falls under the detection task, and it is responsible for locating an element in an image to the nearest pixel. In some instances, it is necessary to maintain a higher degree of accuracy, just like in the development of autonomous cars.
+- Segmentation: This falls under the detection task and it is responsible for locating an element in an image to the nearest pixel. In some instances, it is necessary to maintain a higher degree of accuracy, just like in the development of autonomous cars.
 
 
 ## Overview
