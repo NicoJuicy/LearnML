@@ -1,5 +1,35 @@
 # Probability Review
 
+<!-- MarkdownTOC -->
+
+- Probability Spaces
+- Random variables
+- Axioms of Probability Theory
+- Joint probability
+- Conditional Probability
+- Probability Rules
+- Bayes’ Rule \(Theorem\)
+- General form of Bayes' Rule
+- Independence
+- Reasoning under Uncertainty \(Chapters 13 and 14.1 - 14.4\)
+- Why Reason Probabilistically?
+- Axioms of Probability Theory
+- Joint Probability Distribution
+  - Example
+- Conditional Probabilities
+- Example: Computing Conditional Probability from the Joint Probability Distribution
+- Some important rules related to conditional probability
+- General form of Bayes' Rule
+- Conditional Independence in General
+- Conditional independence in Bayesian Networks
+  - Example
+- The specific case of Figure 14.2
+- Example on p. 514
+- References
+
+<!-- /MarkdownTOC -->
+
+
 ## Probability Spaces
 
 - A _sample space_ is a collection of basic outcomes or sample points.
@@ -23,9 +53,12 @@
 
 - A _probability mass function (pmf)_ defines the probabilities for a discrete random variable.
 
-- A _probability density function (pdf)_ specifies the probability for a continuous rv — the likelihood the value falls into a range of values.
+- A _probability density function (pdf)_ specifies the probability for a continuous random variable — the likelihood the value falls into a range of values.
 
 Since a random variable has a numeric range, we can often do mathematics more easily by working with the values of a random variable
+
+
+Introduction to Mathematical Statistics Section 2.1. 
 
 
 ## Axioms of Probability Theory
@@ -53,7 +86,7 @@ The two events are usually designated A and B.
 
 It can be written as:  p(A and B) or p(A ∪ B) or p(A, B)
 
-- Joint probability is also called the _intersection_ of two (or more) events. The intersection can be represented by a _Venn diagram_.
+- Joint probability is also called the _intersection_ of two (or more) events which can be represented by a _Venn diagram_.
 
 
 ## Conditional Probability
