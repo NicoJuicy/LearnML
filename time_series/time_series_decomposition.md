@@ -275,6 +275,17 @@ In this tutorial, we will take a look at 6 different types of visualizations tha
 The focus is on univariate time series, but the techniques are just as applicable to multivariate time series, when you have more than one observation at each time step.
 
 
+## Avoid Common Mistakes
+
+[Avoid These Mistakes with Time Series Forecasting](https://www.kdnuggets.com/2021/12/avoid-mistakes-time-series-forecasting.html)
+
+- How to find peaks and troughs in a time series signal?
+
+- What is (and how to use) autocorrelation plot?
+
+- How to check if a time series has any statistically significant signal?
+
+
 
 ## References
 
@@ -285,3 +296,6 @@ The focus is on univariate time series, but the techniques are just as applicabl
 [How To Isolate Trend, Seasonality, and Noise From A Time Series](https://timeseriesreasoning.com/contents/time-series-decomposition/)
 
 [Time Series Data Visualization with Python](https://machinelearningmastery.com/time-series-data-visualization-with-python/)
+
+[Avoid These Mistakes with Time Series Forecasting](https://www.kdnuggets.com/2021/12/avoid-mistakes-time-series-forecasting.html)
+
