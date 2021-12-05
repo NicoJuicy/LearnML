@@ -1,12 +1,40 @@
 # Frequently Asked Questions
 
+<!-- MarkdownTOC -->
+
+- Do I need a Master’s Degree?
+- Recommended Tutorials and Books
+- How to ask an AI/ML question?
+- How to choose a performance metric?
+- How to Choose an ML Algorithm?
+- Should I start learning ML by coding an algorithm from scratch?
+- Is image channels first or last?
+- How to share your work?
+- How to choose a Cloud Platform?
+- Common Questions on Encoding
+    - What if I have hundreds of categories?
+    - What encoding technique is the best?
+    - What if I have a mixture of numeric and categorical data?
+- Common Questions on Normalization
+    - Which Scaling Technique is Best?
+    - Should I Normalize or Standardize?
+    - Should I Standardize then Normalize?
+    - How Do I Handle Out-of-Bounds Values?
+- Medical Images
+- Why are Robots not more common?
+
+<!-- /MarkdownTOC -->
+
+
 ## Do I need a Master’s Degree?
 
 If you are going to spend the time to study AI/ML then you might as well invest in an online degree which will greatly increase your career opportunities (and a requirement for most all AI/ML engineer positions).
 
 [Do you need a Master’s Degree in Data Science?](https://towardsdatascience.com/do-you-need-a-masters-degree-in-data-science-you-are-asking-the-wrong-question-8c83dec8bf1b?source=rss----7f60cf5620c9---4)
 
-[Do You Have the Degree it Takes to Get Hired as a Data Scientist?](https://link.medium.com/R46q0hJidlb)
+[Do You Have the Degree it Takes to Get Hired as a Data Scientist?](https://medium.com/@ODSC/do-you-have-the-degree-it-takes-to-get-hired-as-a-data-scientist-e87e2d6c0c87)
+
+[Why Machine Learning Engineers are Replacing Data Scientists](https://www.kdnuggets.com/2021/11/why-machine-learning-engineers-are-replacing-data-scientists.html)
 
 
 ## Recommended Tutorials and Books

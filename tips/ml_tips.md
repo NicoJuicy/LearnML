@@ -2,15 +2,16 @@
 
 <!-- MarkdownTOC -->
 
-- Bayesian Networks \(BN\)
-- What aspect ratio to use for line plots
+- Avoid Using Different Library Versions
+- What aspect ratio to use for line plots?
   - Calculating the aspect ratio
-  - Best practices:
+  - Best practices
 - Run ML model training/evaluation with TMUX
 - Watch your training and GPU resources
 - Testing the online inference models
   - A/B test
 - Monitoring the model
+- Improve Python Performance
 - References
 
 <!-- /MarkdownTOC -->
@@ -26,7 +27,7 @@ A possible solution to this problem could be to create a virtual environment and
 
 
 
-## [What aspect ratio to use for line plots](https://towardsdatascience.com/should-you-care-about-the-aspect-ratio-when-creating-line-plots-ed423a5dceb3)
+## What aspect ratio to use for line plots?
 
 One of the most overlooked aspects of creating charts is the use of correct aspect ratios. 
 
@@ -40,7 +41,7 @@ Here, the median absolute slope banking method has been used to calculate the as
 
 The `ggthemes` package provides a function called bank_slopes() to calculate the aspect ratio of the plot which takes x and y values as the two arguments. The default method is the median absolute slope banking. 
 
-### Best practices:
+### Best practices
 
 - **Plotting multiple line graphs for comparison on a single chart:** The default aspect ratio works only if you do not plan to compare two different plots.
 
@@ -95,10 +96,33 @@ One strategy for monitoring is to use a metric from a deployed model that can be
 Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Seldon.io, BentoML, AWS SageMaker, Torchserve, Google AI.
 
 
+## Improve Python Performance
+
+```py
+  # Install intel conda packages with Continuum's Python
+  conda install mkl -c intel --no-update-deps
+  conda install numpy -c intel --no-update-deps
+
+  # Install intel optimization for tensorflow from anaconda channel
+  conda install tensorflow -c anaconda
+  conda install tensorflow-mkl -c anaconda
+
+  # Install intel optimization for tensorflow from intel channel
+  conda install tensorflow -c intel
+```
+
+[Intel Extension for Scikit-learn](https://intel.github.io/scikit-learn-intelex/index.html#intelex)
+
+[Installing Intel Distribution for Python and Intel Performance Libraries with Anaconda](https://www.intel.com/content/www/us/en/developer/articles/technical/using-intel-distribution-for-python-with-anaconda.html)
+
+[Intel Optimization for TensorFlow Installation Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/optimization-for-tensorflow-installation-guide.html)
+
 
 ## References
 
 [Best practices in the deployment of AI models](https://nagahemachandchinta.medium.com/best-practices-in-the-deployment-of-ai-models-c929c3146416)
+
+[What aspect ratio to use for line plots](https://towardsdatascience.com/should-you-care-about-the-aspect-ratio-when-creating-line-plots-ed423a5dceb3)
 
 [Introduction to TensorFlow Probability (Bayesian Neural Network)](https://towardsdatascience.com/introduction-to-tensorflow-probability-6d5871586c0e)
 
