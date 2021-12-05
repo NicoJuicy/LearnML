@@ -55,15 +55,6 @@ In addition, dimensionality reduction has the following advantages:
   4. Less dimensions allow usage of algorithms unfit for a large number of dimensions
   5. Removes redundant features and noise.
 
-## Feature Selection and Feature Engineering for dimensionality reduction
-
-Dimensionality reduction could be done by feature selection methods as well as feature engineering methods.
-
-_Feature selection_ is the process of identifying and selecting relevant features for your sample. 
-
-_Feature engineering_ is manually generating new features from existing features by applying some transformation or performing some operation on them.
-
-
 
 ---------
 
@@ -214,3 +205,5 @@ No single dimensionality reduction technique consistently provides the â€˜bestâ€
 [Techniques for Dimensionality Reduction](https://towardsdatascience.com/techniques-for-dimensionality-reduction-927a10135356)
 
 [11 Dimensionality reduction techniques you should know in 2021](https://towardsdatascience.com/11-dimensionality-reduction-techniques-you-should-know-in-2021-dcb9500d388b)
+
+[A Guide to Dimensionality Reduction in Python](https://towardsdatascience.com/a-guide-to-dimensionality-reduction-in-python-ce0c6ab91986?source=rss----7f60cf5620c9---4)

@@ -75,21 +75,53 @@ There are two main methods for reducing dimensionality:
 ----------
 
 
+## Feature Selection and Feature Engineering
+
+Dimensionality reduction can be done using feature selection methods as well as feature engineering methods.
+
+_Feature selection_ is the process of identifying and selecting relevant features for your sample. 
+
+_Feature engineering_ is manually generating new features from existing features by applying some transformation or performing some operation on them.
+
+
 ## Feature Importance
+
+How to determining which features are the most important?
 
 [3 Essential Ways to Calculate Feature Importance in Python](https://towardsdatascience.com/3-essential-ways-to-calculate-feature-importance-in-python-2f9149592155)
 
 ### Dataset loading and preparation
 
-### Method 1: Obtain importances from correlation coefficients
+The article has some code samples of data loading and preparation.
 
-### Method 2: Obtain importances from a tree-based model
+### Feature Importance Techniques
 
-### Method 3: Obtain importances from PCA loading scores
+1. Obtain importances from correlation coefficients
+
+2. Obtain importances from a tree-based model
+
+When determining which features are the most important, algorithms such as Random Forest and ExtraTreesClassifier can be used.
+
+3. Obtain importances from PCA loading scores
+
+PCA is an algorithm used for dimensionality reduction based on the idea to choose features with high variance as high variance features contain more information. 
 
 
 
 ## Feature Engineering Techniques
+
+1. Converting text data features into vectors
+
+Since ML is based on linear algebra, it is therefore necessary to convert textual data features into vectors. Techniques used to convert text data to features are Bag of Words(BOW), TF-IDF(Term Frequency-Inverse Document Frequency), Avg Word2Vec, and TF-IDF Word2Vec.
+
+2. Modifying features
+
+Some features need to be modified using feature binning, mathematical transform, feature slicing, and indicator variable techniques for best results.
+
+3. Creating new features
+
+New features can also be created using existing features like the featurization of categorical data using one-hot encoding.
+
 
 
 ----------
@@ -267,6 +299,8 @@ By default, the `PowerTransformer` also performs a standardization of each varia
 ## References
 
 [What is Feature Engineering?](https://towardsdatascience.com/what-is-feature-engineering-importance-tools-and-techniques-for-machine-learning-2080b0269f10?source=rss----7f60cf5620c9---4)
+
+[The Lazy Data Scientist’s Guide to AI/ML Troubleshooting](https://medium.com/@ODSC/the-lazy-data-scientists-guide-to-ai-ml-troubleshooting-abaf20479317?source=linkShare-d5796c2c39d5-1638394993&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9bLTU3JLM3VS87P1Xcxy8xID4gMc8lJAgCSs4wwIwAAAA%3D%3D&_branch_match_id=994707642716437243)
 
 [How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
 
