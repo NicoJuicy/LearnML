@@ -76,7 +76,18 @@ TensorFlow Data Validation (TFDV) makes data exploration for machine learning mo
 
 TFDV allows you to get a quick look at the statistics of a dataset.
 
-TFDV can also identify anomalies in the data and can be configured to detect different classes of anomalies. 
+TFDV can also identify anomalies in the data and can be configured to detect different classes of anomalies.
+
+### [Great Expectations](https://github.com/great-expectations/great_expectations) 
+
+Great Expectations is a Python library that helps us validate, document, and profile our data so that we always make sure it is good and just like we expect it to be.
+
+Great Expectations provides several functions to evaluate the data from many different perspectives.
+
+[A Great Python Library: Great Expectations](https://towardsdatascience.com/a-great-python-library-great-expectations-6ac6d6fe822e)
+
+The article uses the Great Expectations library to evaluate a sample dataset.
+
 
 
 ## Feature Engineering Tools

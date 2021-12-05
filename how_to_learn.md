@@ -13,7 +13,7 @@
 
 Choosing an ML learning resource is primarliy a matter of personal preference. In geneal, I recommend that you refer to more than one resource (other than scikit-learn, tensorflow, and PyTorch documentation) when learning ML.
 
-See [AI Learning Resources](https://aicoder.medium.com/ai-learning-resources-b49da21fd3b8)
+[AI Learning Resources](https://aicoder.medium.com/ai-learning-resources-b49da21fd3b8)
 
 
 ## Consulting and Freelance

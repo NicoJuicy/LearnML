@@ -14,6 +14,7 @@ This repo contains notes from various articles and other resources on a variety 
 
 This is a work in progress (just getting started), so there is still#  a lot missing and the content is changing. 
 
+[Medium Articles](https://aicoder.medium.com/)
 
 [How to Learn AI/ML](./how_to_learn.md)
 

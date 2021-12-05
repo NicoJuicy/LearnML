@@ -1,5 +1,6 @@
 # GAN Tips
 
+
 Since I completed my Master's Thesis on Generative Adversarial Networks (GANs), I thought I would share a few things that I have learned:
 
 1. What is your goal/application? GAN is primarily used for computer vision applications. If you try to use GAN with custom datatsets (such as financial data), you will most likely encounter formatting and other internal model issues with PyTorch. In fact, there are newer, better models.
@@ -47,6 +48,7 @@ GANs can generate several types of synthetic data, including image data, tabular
 
 [Generating Synthetic Data Using a Generative Adversarial Network (GAN) with PyTorch](https://visualstudiomagazine.com/articles/2021/06/02/gan-pytorch.aspx?m=1)
 
+[GAN-based Deep Learning data synthesizer ~ CopulaGAN](https://bobrupakroy.medium.com/gan-based-deep-learning-data-synthesizer-copulagan-a6376169b3ca)
 
 
 Good luck!
