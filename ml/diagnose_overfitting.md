@@ -6,26 +6,108 @@
 
 Here are some notes on analyzing overfitting and underfitting.
 
+<!-- MarkdownTOC -->
 
-## Selecting meaningful features
+- Solutions to Overfitting
+- Principles of Overfitting and Underfitting
+    - Bias/Variance Trade-off
+    - How to Detect Underfitting and Overfitting
+    - More Simple / Complex Model
+    - More Regularization / Less Regularization
+    - More Features / Fewer Features
+    - Why Getting More Data Sometimes Can’t Help
+- Why is my validation loss lower than my training loss?
+    - Reason 1: Regularization applied during training but not during validation/testing
+    - Reason 2: Training loss is measured during each epoch while validation loss is measured after each epoch
+    - Reason 3: The validation set may be easier than the training set \(or there may be leaks\)
+- Diagnose Overfitting and Underfitting of LSTM Models
+    - Tutorial Overview
+    - Training History in Keras
+    - Diagnostic Plots
+    - Underfit Example
+        - Underfit Example 1
+        - Underfit Example 2
+        - Underfit Example 3
+    - Good Fit Example
+        - Good Fit Example 1
+        - Good Fit Example 2
+    - Overfit Example
+        - Underfit Example 1
+        - Underfit Example 2
+    - Multiple Runs Example
+- Diagnosing Unrepresentative Datasets
+    - Unrepresentative Train Dataset
+    - Unrepresentative Validation Dataset
+- References
 
-Here are some common solutions to reduce the generalization error:
+<!-- /MarkdownTOC -->
+
+
+## Solutions to Overfitting
+
+Here are some common solutions to reduce generalization error:
 
 - Collect more training data
 
-- Introduce a penalty for complexity via regularization
+Collecting more training data is often not applicable. 
 
-- Choose a simpler model with fewer parameters
+- Simplify the model
+
+  We can choose a simpler model with fewer parameters
+
+- Regularization
+
+Regularization helps a model to choose between two models with the same accuracy. If you obtain the same accuracy with a complex model as with a simple model, you should choose the simpler model.
+
+This principle is often referred to as Occam’s razor, the KISS principle, and more.
+
+The goal of regularization is to change the cost function in order to make model complexity an additional cost.
+
+In short, we introduce a penalty for complexity via regularization.
+
+- Data augmentation
+
+Data augmentation is a task that is very often used in ML for image treatment. 
+
+It is easy to augment image data by adding slightly transformed images to your train data set. Examples are:
+
+Many functions exist for data augmentation on images such as the Tensorflow data augmentation layers.
+
+For tabular data, data augmentation includes oversampling and undersampling techniques such as SMOTE. 
 
 - Reduce the dimensionality of the data
 
-Collecting more training data is often not applicable. 
-
-In the next chapter, we will learn about a useful technique to check whether more training data is helpful at all. 
+In the next chapter, we will learn about a useful technique to check whether more training data is helpful. 
 
 Here we look at some ways to reduce overfitting using regularization and dimensionality reduction via feature selection.
 
 Another useful approach to select relevant features from a dataset is to use a random forest which is an ensemble technique. 
+
+- Hyperparameter tuning with cross-validation
+
+Hyperparameter tuning is the task of adjusting the model hyperparameters to improve model performance.
+
+The simplest approach is to use a grid search which involves testing out multiple combinations of hyperparameter values and evaluating their performance using cross-validation.
+
+This, we can find the hyperparameter combination that yields the best cross-validation score.
+
+- Ensemble models
+
+Random Forests claim not ro overfit but practice this is debatable. 
+
+However, it is safe to say that ensemble can be a great help in avoiding overfitting.
+
+An ensemble model is the art of putting multiple weak learners together. The new prediction is the average prediction of all of those weak learners. 
+
+We can create an ensemble by grouping multiple models into an ensemble wrapper:
+
+Voting Classifier: For multiple classification models the most often predicted class will be retained.
+
+Voting Regressor: Takes the average prediction of all individual models to make a prediction for a numerical target.
+
+Stacking Classifier: Build an additional classification model that uses the predictions of each individual model as an input and predicts the final target.
+
+Stacking Regressor: Build an additional regression model that uses the predictions of each individual model as an input for a final regression model that combines them into a final prediction.
 
 
 ## Principles of Overfitting and Underfitting
@@ -117,7 +199,7 @@ One of the techniques to combat overfitting is to get more data. Surprisingly, t
 
 Getting more data will not help in case of underfitting.
 
-Getting more data can help with overfitting (not underfitting) if the model is not TOO complex.
+Getting more data can help with overfitting (not underfitting) if the model is not too complex.
 
 Some tools such as data cleaning and cross-validation or hold-out validation are common practices in  machine learning projects that can also be used to combat overfitting.
 
@@ -229,7 +311,7 @@ After completing this tutorial, you will know:
 
 ### Tutorial Overview
 
-This tutorial is divided into 6 parts; they are:
+This tutorial is divided into 6 parts:
 
 1. Training History in Keras
 2. Diagnostic Plots
@@ -243,7 +325,7 @@ This tutorial is divided into 6 parts; they are:
 
 You can learn a lot about the behavior of your model by reviewing its performance over time.
 
-LSTM models are trained by calling the **fit()** function which returns a variable called _history_ that contains a trace of the loss and any other metrics specified during the compilation of the model. 
+LSTM models are trained by calling the `fit()` function which returns a variable called _history_ that contains a trace of the loss and any other metrics specified during the compilation of the model. 
 
 Theae metric scores are recorded at the end of each epoch.
 
@@ -276,13 +358,27 @@ An underfit model is one that is demonstrated to perform well on the training da
 
 This can be diagnosed from a plot where the training loss is lower than the validation loss, and the validation loss has a trend that suggests further improvements are possible.
 
+
+#### Underfit Example 1
+
+Plot showing underfit model
+
 <div class="image-preview">
     <img width="600" alt="Plot showing underfit model" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Underfit-Model.png" />
 </div>
 
+
+#### Underfit Example 2
+
+Plot of Training Learning Curve of Underfit Model That Does Not Have Sufficient Capacity
+
 <div class="image-preview">
     <img width="600" alt="Plot of Training Learning Curve of Underfit Model That Does Not Have Sufficient Capacity" src="https://machinelearningmastery.com/wp-content/uploads/2019/02/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Does-Not-Have-Sufficient-Capacity.png" />
 </div>
+
+#### Underfit Example 3
+
+Plot of Training Learning Curve Showing an Underfit Model That Requires Further Training
 
 <div class="image-preview">
     <img width="600" alt="Plot of Training Learning Curve Showing an Underfit Model That Requires Further Training" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Requires-Further-Training.png" />
@@ -300,13 +396,18 @@ A good fit is a case where the performance of the model is good on both the trai
 
 This can be diagnosed from a plot where the train and validation loss decrease and stabilize around the same point.
 
+#### Good Fit Example 1
+
 <div class="image-preview">
     <img width="600" alt="Plot showing good fit" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-a-Good-Fit-for-a-Model.png" />
 </div>
 
+#### Good Fit Example 2
+
 <div class="image-preview">
     <img width="600" alt="Plot of Train and Validation Learning Curves Showing a Good Fit" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-A-Good-Fit.png" />
 </div>
+
 
 ### Overfit Example
 
@@ -314,9 +415,13 @@ An overfit model is one where performance on the train set is good and continues
 
 This can be diagnosed from a plot where the train loss slopes down and the validation loss slopes down, hits an inflection point, and starts to slope up again.
 
+#### Underfit Example 1
+
 <div class="image-preview">
     <img width="600" alt="Plot showing overfit model" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Overfit-Model.png" />
 </div>
+
+#### Underfit Example 2
 
 <div class="image-preview">
     <img width="600" alt="Plot of Train and Validation Learning Curves Showing an Overfit Model" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-An-Overfit-Model.png" />
@@ -352,9 +457,13 @@ This may occur if the training dataset has too few examples as compared to the v
 
 This situation can be identified by a learning curve for training loss that shows improvement and similarly a learning curve for validation loss that shows improvement, but a large gap remains between both curves.
 
+
 <div class="image-preview">
     <img width="600" alt="Plot of Train and Validation Learning Curves Showing a Training Dataset That May Be too Small Relative to the Validation Dataset" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Training-Dataset-the-May-be-too-Small-Relative-to-the-Validation-Dataset.png" />
 </div>
+
+Figure: Plot of Train and Validation Learning Curves Showing a Training Dataset That May Be too Small Relative to the Validation Dataset
+
 
 ### Unrepresentative Validation Dataset
 
@@ -368,12 +477,15 @@ This case can be identified by a learning curve for training loss that looks lik
     <img width="600" alt="Plot of Train and Validation Learning Curves Showing a Validation Dataset That May Be too Small Relative to the Training Dataset" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-the-May-be-too-Small-Relative-to-the-Training-Dataset.png" />
 </div>
 
+Figure: Plot of Train and Validation Learning Curves Showing a Validation Dataset That May Be too Small Relative to the Training Dataset
+
 This may also be identified by a validation loss that is lower than the training loss which indicates that the validation dataset may be easier for the model to predict than the training dataset.
 
 <div class="image-preview">
     <img width="600" alt="Plot of Train and Validation Learning Curves Showing a Validation Dataset That Is Easier to Predict Than the Training Dataset" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-that-is-Easier-to-Predict-than-the-Training-Dataset.png" />
 </div>
 
+Figure: Plot of Train and Validation Learning Curves Showing a Validation Dataset That Is Easier to Predict Than the Training Dataset
 
 
 ## References
@@ -389,3 +501,4 @@ This may also be identified by a validation loss that is lower than the training
 
 [How to use Learning Curves to Diagnose Machine Learning Model Performance](https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
 
+[Solutions against overfitting for tabular data and classical machine learning](https://towardsdatascience.com/solutions-against-overfitting-for-machine-learning-on-tabular-data-857c080651fd?source=rss----7f60cf5620c9---4)
