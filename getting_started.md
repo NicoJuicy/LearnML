@@ -1,5 +1,24 @@
 # Getting Started
 
+<!-- MarkdownTOC -->
+
+- Math
+- AI vs ML vs DL
+- Project Definition
+- The Machine Learning Process
+- How to Choose an ML Model?
+    - Model Selection Criteria
+    - Why Simple Models?
+    - Save yourself some headache
+- Multinomial Logistic Regression \(MLR\)
+- Understand Machine Learning Algorithms
+- Feature Engineering Tools
+- AutoML Tools
+- References
+
+<!-- /MarkdownTOC -->
+
+
 I highly recommend that you refer to more than one resource (other than acikit-learn, tensorflow, and PyTorch documentation) when learning ML. 
 
 If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has  good books on a variety of AI/ML topics.
@@ -11,8 +30,10 @@ Here are some undergraduate topics/courses that you should know before learning 
 - Calculus
 - Discrete Mathematics
 - Linear Algebra
-- Probability and Statitics
+- Probability and Statistics
 - Statistical Programming
+
+The following courses are usually required for a computer science degree:
 
 - Computer Networks
 - Computer Organization
@@ -46,6 +67,7 @@ Here are some undergraduate topics/courses that you should know before learning 
 
 <img width=600 alt="Diagram showing comparison" src="https://serokell.io/files/zx/zxwju3ha.Machine-learning-vs-deep-learning.jpg" />
 
+[Overview of AI and ML](https://ocw.mit.edu/resources/res-ll-005-mathematics-of-big-data-and-machine-learning-january-iap-2020/lecture-notes/MITRES_LL_005IAP20_Supplemental_Ses01.pdf)
 
 
 ## Project Definition
@@ -74,10 +96,6 @@ Step 5: Present results
 
 ## How to Choose an ML Model?
 
-[How to Select an ML Model?](https://www.kdnuggets.com/2021/08/select-initial-model-data-science-problem.html)
-
-[Applied Machine Learning Checklist](./checklist/applied_ml_checklist.md)
-
 Every new ML engineer finds that they need to decide what model to use for a problem.
 
 There are many models to choose from with seemingly endless variants, but there are usually only slight alterations needed to change a regression model into a classification model and vice versa.
@@ -92,9 +110,70 @@ In general, you should have evaluated 10-20 models before trying to evaluate mor
 
 Keep in mind that an accuracy of 50% is equivalent to random guessing (flip of a coin). Thus, your models should have an accuracy of at least 70-80% or better before optimization/tuning of hyperparameters. Otherwise, this should be a red flag that you need to select a different model and/or spend more time on data preparation and feature engineering. 
 
-### Why Simple Models?
+### Model Selection Criteria
 
-[Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
+Given the following seven criteria it will help to shortlist your choices to be able to apply them in a short time.
+
+**1. Explainability**
+
+There is a trade-off between explainability and model performance. 
+
+Using a more complex model will often increase the performance but it will be more difficult to interpret. 
+
+If there is no need to explain the model and its output to a non-technical audience, then more complex models could be used such as ensemble learners and deep neural networks.
+
+**2. In memory vs out memory**
+
+It is important to consider the size of your data and RAM of the server or your personal computer that training will occur on. 
+
+If the RAM can handle all of the training data then you can choose from a wide variety of machine learning algorithms. 
+
+If the RAM cannot handle the training data, therefore different incremental learning algorithms which can improve the model by adding more training data gradually would be a good choice.
+
+**3. Number of features and examples**
+
+The number of training examples and the number of features per example is also important in model selection. 
+
+If you have a small number of examples and features then a simple learner would be a great choice such as a decision tree and KNN. 
+
+If you have a small number of examples and a large number of features, SVM and gaussian processes would be a good choice as they can handle a large number of features, but are very modest in their capacity. 
+
+If you have a large number of examples then deep neural networks and boosting algorithms would be a great choice since they can handle millions of examples and features. 
+
+**4. Categorical vs numerical features**
+
+The type of features is also an important when choosing a model. 
+
+Some machine learning algorithms cannot handle categorical features such as linear regressions and you have to convert them into numerical features while other algorithms can handle categorical features and numerical features such as decision trees and random forests.
+
+**5. Normality of data**
+
+If your data is linearly separable or can be modeled using a linear model then SVM with linear kernel or logistic regression or linear regression model could be used. 
+
+If your data is non-linearly separable or non-linearly modeled then deep neural networks or ensemble learners would be a good choice.
+
+**6. Training speed**
+
+The available time for training is also another important criterion to choose your training model on. 
+
+Simple algorithms such as logistic and linear regression or decision trees can be trained in a short time. 
+
+Complex algorithms such as neural networks and ensemble learners are known to be slow to train. 
+
+If you have access to a multi-core machine this could significantly reduce the training time of more complex algorithms.
+
+**7. Prediction speed**
+
+The speed of generating the results is a another important criterion to choose a model. 
+
+If your model will be used in real-time or in a production environment, it should be able to generate the results with very low latency. 
+
+Algorithms such as SVMs, linear and logistic regression, and some types of neural networks are extremely fast at the prediction time. 
+
+You should also consider where uiu premises you will deploy your model on. If you are using the models for  analysis or theoretical purposes, your prediction time can be longer which means you could use ensemble algorithms and very deep neural networks.
+
+
+### Why Simple Models?
 
 The two most common regression algorithms are:
 
@@ -197,6 +276,8 @@ There are many tools that will help you to automate the entire FE process and pr
 
 Automated Machine Learning (AutoML) is an emerging field in which the process of building machine learning models to model data is automated.
 
+[A Beginner’s Guide to End to End Machine Learning](https://link.medium.com/ao2ANbsVDlb)
+
 There are a plethora of [AutoML Tools](./tips/automl_tools.md) and [ML Tools](./tips/ml_tools.md) such as Orange or PyCaret that can be used to easily and quickly evaluate many models on a dataset.
 
 
@@ -204,12 +285,19 @@ There are a plethora of [AutoML Tools](./tips/automl_tools.md) and [ML Tools](./
 
 [Gettting Started with Machine Learning](https://machinelearningmastery.com/start-here/)
 
-[How to start contributing to open-source projects](https://towardsdatascience.com/how-to-start-contributing-to-open-source-projects-41fcfb654b2e)
+[How to Select an ML Model?](https://www.kdnuggets.com/2021/08/select-initial-model-data-science-problem.html)
 
-[A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6)
+[Brief Guide for Machine Learning Model Selection](https://medium.com/mlearning-ai/brief-guide-for-machine-learning-model-selection-a19a82f8bdcd)
+
+[Applied Machine Learning Checklist](./checklist/applied_ml_checklist.md)
 
 [Regression for Classification | Hands on Experience](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
 
+[A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6)
+
+
 [End-to-end machine learning project: Telco customer churn](https://towardsdatascience.com/end-to-end-machine-learning-project-telco-customer-churn-90744a8df97d?source=rss----7f60cf5620c9---4)
+
+[How to start contributing to open-source projects](https://towardsdatascience.com/how-to-start-contributing-to-open-source-projects-41fcfb654b2e)
 
 
