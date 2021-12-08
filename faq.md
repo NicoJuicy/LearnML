@@ -161,9 +161,13 @@ One simple approach to handling this may be to check for out-of-bound values and
 
 ## Medical Images
 
-Small and imbalanced datasets are common in medical applications. However, it is still considered an open research problem in CS. Thus, there is not standard “recipe” for data prep. Just some heuristics that people have come up with. So u will need to do some research to justify your final choice of data prep techniques, especially for medical datasets. At least one of the articles discusses X-ray images which may have some references that are helpful (not sure). I would also try searching on arxiv.org for “Survey” articles that would list some peer-reviewed journal articles on the type of images that u are working with.
+Small and imbalanced datasets are common in medical applications. However, it is still considered an open research problem in CS. Thus, there is not standard “recipe” for data prep. Just some heuristics that people have come up with. So u will need to do some research to justify your final choice of data prep techniques, especially for medical datasets. 
 
-Resampling is just one approach to balance a dataset but it is an advanced concept, so u need to have a thorough understanding of the core ML concepts. Otherwise, your results will be suspect. I have some notes on “Dataset Issues” that may help get u started. However, the approach is different for image datasets.
+At least one of the articles discusses X-ray images which may have some references that are helpful (not sure). I would also try searching on arxiv.org for “Survey” articles that would list some peer-reviewed journal articles on the type of images that u are working with.
+
+Resampling is just one approach to balance a dataset but it is an advanced concept, so u need to have a thorough understanding of the core ML concepts. Otherwise, your results will be suspect. 
+
+I have some notes on “Dataset Issues” that may help get u started. However, the approach is different for image datasets.
 
 
 ## Why are Robots not more common?

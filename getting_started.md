@@ -98,6 +98,8 @@ Step 5: Present results
 
 Every new ML engineer finds that they need to decide what model to use for a problem.
 
+[10 Simple Things to Try Before Neural Networks](https://www.kdnuggets.com/2021/12/10-simple-things-try-neural-networks.html)
+
 There are many models to choose from with seemingly endless variants, but there are usually only slight alterations needed to change a regression model into a classification model and vice versa.
 
 There are a lot of models to choose from, so consider starting with regression models to obtain a simple baseline for comparison. The work has already been done for you with the standard scikit-learn supervised learning packages, so you only need to select what option you want.
@@ -107,8 +109,6 @@ The first step in solving an ML problem is to try a simple algorithm (such as Li
 Next, the best practice is to evaluate many algorithms (say 10-20) using an [AutoML Tool](./tips/automl_tools.md) or [ML Tool](./tips/ml_tools.md) such as Orange and PyCaret then narrow the choices to a few models based on accuracy and error metrics. Then, create a test harness to fully explore the candidates.
 
 In general, you should have evaluated 10-20 models before trying to evaluate more complex models such as neural networks. 
-
-[10 Simple Things to Try Before Neural Networks](https://www.kdnuggets.com/2021/12/10-simple-things-try-neural-networks.html)
 
 Keep in mind that an accuracy of 50% is equivalent to random guessing (flip of a coin). Thus, your models should have an accuracy of at least 70-80% or better before optimization/tuning of hyperparameters. Otherwise, this should be a red flag that you need to select a different model and/or spend more time on data preparation and feature engineering. 
 
