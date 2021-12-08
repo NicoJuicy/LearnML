@@ -23,7 +23,7 @@ This is a work in progress (just getting started), so there is still#  a lot mis
 **NOTE:** The Medium and TowardsDataSciene articles can be viewed in a browser Private tab. 
 
 
-## Table of Comtents
+## Table of Contents
 
 ### Artificial Intelligence
 

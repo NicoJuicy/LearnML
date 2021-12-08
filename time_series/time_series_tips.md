@@ -258,7 +258,7 @@ def compute_accuracy(args, X, yhat, y, scaler_pred):
 
 Generative Adversarial Networks (GANs) can generate several types of synthetic data, including image data, tabular data, and sound/speech data.
 
-See [GAN Tips](../tips/gan_tips.md)
+[GAN Tips](../tips/gan_tips.md)
 
 
 
