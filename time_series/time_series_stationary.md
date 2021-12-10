@@ -1,18 +1,18 @@
 # Stationary Time Series
 
-[How to Check if Time Series Data is Stationary with Python?](https://machinelearningmastery.com/time-series-data-stationary-python/)
-
 When modeling, there are assumptions that the summary statistics of observations are consistent. In time series terminology, we refer to this expectation as the time series being stationary.
 
 These assumptions can be easily violated in time series by the addition of a trend, seasonality, and other time-dependent structures.
 
 In this tutorial, you will discover how to check if your time series is stationary with Python.
 
-### Stationary Time Series
+## Stationary Time Series
 
 The observations in a stationary time series are not dependent on time.
 
-Time series are stationary if they do not have trend or seasonal effects. Summary statistics calculated on the time series are consistent over time, like the mean or the variance of the observations.
+Time series are stationary if they do not have trend or seasonal effects. 
+
+Summary statistics calculated on the time series are consistent over time such as mean or variance of the observations.
 
 If a time series is _stationary_ it can be easier to model. 
 
@@ -22,9 +22,9 @@ Should you make your time series stationary?
 
 Generally, yes.
 
-If you have clear trend and seasonality in your time series, then model these components, remove them from observations and train models on the residuals.
+If you have clear trend and seasonality in your time series then model these components, remove them from observations, and train models on the residuals.
 
-### Non-Stationary Time Series
+## Non-Stationary Time Series
 
 Observations from a non-stationary time series show seasonal effects, trends, and other structures that depend on the time index.
 
@@ -34,7 +34,23 @@ Classical time series analysis and forecasting methods are concerned with making
 
 Statistical time series methods and even modern machine learning methods will benefit from the clearer signal in the data.
 
-### Checks for Stationarity
+## Types of Stationary Time Series
+
+The notion of stationarity comes from the theoretical study of time series and it is a useful abstraction when forecasting.
+
+There are some finer-grained notions of stationarity that you may come across if you dive deeper into this topic:
+
+- Stationary Process: A process that generates a stationary series of observations.
+
+- Stationary Model: A model that describes a stationary series of observations.
+
+- Trend Stationary: A time series that does not exhibit a trend.
+
+- Seasonal Stationary: A time series that does not exhibit seasonality.
+
+- Strictly Stationary: A mathematical definition of a stationary process, specifically that the joint distribution of observations is invariant to time shift.
+
+## Checks for Stationarity
 
 There are many methods to check whether a time series (direct observations, residuals, otherwise) is stationary or non-stationary.
 
@@ -44,23 +60,23 @@ There are many methods to check whether a time series (direct observations, resi
 
 3. **Statistical Tests:** You can use statistical tests to check if the expectations of stationarity are met or have been violated.
 
-### Summary Statistics
+## Summary Statistics
 
 Airline Passengers Dataset
 
 We can take one step back and check if assuming a Gaussian distribution makes sense in this case by plotting the values of the time series as a histogram:
 
-Running the example shows that indeed the distribution of values does not look like a Gaussian, therefore the mean and variance values are less meaningful.
+Running the example shows that indeed the distribution of values does not look Gaussian, so the mean and variance values are less meaningful.
 
 This squashed distribution of the observations may be another indicator of a non-stationary time series. 
 
-Reviewing the plot of the time series again, we can see that there is an obvious seasonality component, and it looks like the seasonality component is growing.
+Reviewing the plot of the time series, we can see that there is an obvious seasonality component and it looks like the seasonality component is growing which may suggest an exponential growth from season to season. 
 
-This may suggest an exponential growth from season to season. A log transform can be used to flatten out exponential change back to a linear relationship.
+A _log transform_ can be used to flatten the exponential change to a linear relationship.
 
 Below is the same histogram with a log transform of the time series.
 
-Running the example, we can see the more familiar Gaussian-like or Uniform-like distribution of values.
+Running the example, we can see the more familiar Gaussian or Uniform distribution of values.
 
 We also create a line plot of the log transformed data and can see the exponential growth seems diminished, but we still have a trend and seasonal elements.
 
@@ -76,7 +92,7 @@ We could also explore statistical significance tests, like the Student t-test, b
 
 In the next section, we will use a statistical test designed to explicitly comment on whether a univariate time series is stationary.
 
-### Augmented Dickey-Fuller test
+## Augmented Dickey-Fuller test
 
 Statistical tests make strong assumptions about your data. 
 
@@ -125,4 +141,9 @@ This suggests that we can reject the null hypothesis with a significance level o
 Rejecting the null hypothesis means that the process has no unit root, and in turn that the time series is stationary or does not have time-dependent structure.
 
 We can log transform the dataset again to make the distribution of values more linear and better meet the expectations of this statistical test:
+
+
+## References
+
+[How to Check if Time Series Data is Stationary with Python?](https://machinelearningmastery.com/time-series-data-stationary-python/)
 
