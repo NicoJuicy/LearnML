@@ -99,8 +99,6 @@ A nonlinear seasonality has an increasing or decreasing frequency and/or amplitu
 
 ## Decomposition as a Tool
 
-This is a useful abstraction.
-
 Decomposition is primarily used for time series analysis which can be used to inform forecasting models on your problem.
 
 It provides a structured way of thinking about a time series forecasting problem, both generally in terms of modeling complexity and specifically in terms of how to best capture each of these components in a given model.
@@ -148,9 +146,7 @@ The snippet below shows how to decompose a series into trend, seasonal, and resi
     print(result.observed)
 ```
 
-The result object provides access to the trend and seasonal series as arrays. It also 
-provides access to the _residuals_ which are the time series after the trend and 
-seasonal components are removed. Finally, the original or observed data is also stored.
+The result object provides access to the trend and seasonal series as arrays. It also provides access to the _residuals_ which are the time series after the trend and  seasonal components are removed. Finally, the original or observed data is also stored.
 
 These four time series can be plotted directly from the result object by calling the `plot()` function.
 
@@ -214,7 +210,9 @@ The method is robust to outliers and can handle any kind of seasonality which al
 There are a few things you can control when using STL:
 
 - Trend cycle smoothness
+
 - Rate of changes in seasonal component
+
 - The robustness towards the user outlier or exceptional values which will allow you to control the effects of outliers on the seasonal and trend components.
 
 SLT has its disadvantages. 
@@ -224,6 +222,19 @@ SLT has its disadvantages.
 - STL only provides a decomposition for additive models. 
 
   You can get the multiplicative decomposition by first taking the logs of the data and then back transforming the components.
+
+```py
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from statsmodels.tsa.seasonal import STL
+ 
+elecequip = read_csv(r"C:/Users/datas/python/data/elecequip.csv")
+stl = STL(elecequip, period=12, robust=True)
+res_robust = stl.fit()
+fig = res_robust.plot()
+```
+
 
 ## Basic Time Series Forecasting Merhods
 
@@ -239,15 +250,42 @@ These methods will also serve as the foundation for some of the other methods.
 ----------
 
 
+
 # How To Isolate Trend, Seasonality, and Noise From A Time Series
 
 The commonly occurring seasonal periods are a day, week, month, quarter (or season), and year.
 
 ## A step-by-step procedure for decomposing a time series into trend, seasonal, and noise components
 
+There are many decomposition methods available ranging from simple moving average based methods to powerful ones such as STL.
+
+In Python, the `statsmodels` library has a `seasonal_decompose()` method that lets you decompose a time series into trend, seasonality and noise in one line of code.
+
+First, let us understand how decomposition  works. 
+
+We can create the decomposition of a time series into its trend, seasonal and noise components using a simple procedure based on moving averages using the following steps:
+
+STEP 1: Identify the length of the seasonal period
+STEP 2: Isolate the trend
+STEP 3: Isolate the seasonality+noise
+STEP 4: Isolate the seasonality
+STEP 5: Isolate the noise
+
+We will use the following time series of retail sales of user cars dealers in the US:
+
 ## Time series decomposition using statsmodels
 
-Now that we know how decomposition works from the inside, we can cheat a little, and use `seasonal_decompose()` in statsmodels to do all of the above work in one line of code:
+Now that we know how decomposition works from the inside, we can cheat a little and use `seasonal_decompose()` in statsmodels to do all of the above work in one line of code. 
+
+```py
+from statsmodels.tsa.seasonal import seasonal_decompose
+ 
+components = seasonal_decompose(df['Retail_Sales'], model='multiplicative')
+
+# components = seasonal_decompose(np.array(elecequip), model='multiplicative', freq=4)
+ 
+components.plot()
+```
 
 
 ----------
@@ -272,7 +310,7 @@ In this tutorial, we will take a look at 6 different types of visualizations tha
 5. Lag Plots or Scatter Plots
 6. Autocorrelation Plots
 
-The focus is on univariate time series, but the techniques are just as applicable to multivariate time series, when you have more than one observation at each time step.
+The focus is on univariate time series, but the techniques are just as applicable to multivariate time series when you have more than one observation at each time step.
 
 
 ## Avoid Common Mistakes
