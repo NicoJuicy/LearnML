@@ -170,6 +170,17 @@ Resampling is just one approach to balance a dataset but it is an advanced conce
 I have some notes on “Dataset Issues” that may help get u started. However, the approach is different for image datasets.
 
 
+## How to Develop a Chatbot?
+
+Chatbots are better to use pretrained model and software. You can take a look at Moodle and Rasa which are popular. There is also an example using NLTK that claims to be somewhat accurate. 
+
+[How to Create a Moodle Chatbot Without Any Coding?](https://chatbotsjournal.com/how-to-create-a-moodle-chatbot-without-any-coding-3d08f95d94df)
+
+[Building a Chatbot with Rasa](https://towardsdatascience.com/building-a-chatbot-with-rasa-3f03ecc5b324)
+
+[Python Chatbot Project – Learn to build your first chatbot using NLTK and Keras](https://data-flair.training/blogs/python-chatbot-project/)
+
+
 ## Why are Robots not more common?
 
 Robot soccer is one type of classic robotics toy problem, often involving multiagent reinforcement learning (MARL). 
