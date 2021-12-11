@@ -16,6 +16,7 @@
     - Time series decomposition using statsmodels
 - Time Series Data Visualization with Python
     - Time Series Visualization
+    - Avoid Common Mistakes
     - References
 
 <!-- /MarkdownTOC -->
