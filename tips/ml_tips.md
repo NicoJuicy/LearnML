@@ -96,19 +96,23 @@ One strategy for monitoring is to use a metric from a deployed model that can be
 Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Seldon.io, BentoML, AWS SageMaker, Torchserve, Google AI.
 
 
+
 ## Improve Python Performance
 
 ```py
   # Install intel conda packages with Continuum's Python
-  conda install mkl -c intel --no-update-deps
-  conda install numpy -c intel --no-update-deps
+  conda install mkl intel::mkl --no-update-deps
+  conda install numpy intel::numpy --no-update-deps
+
+  # Needed on macOS
+  conda install -c intel numpy=1.19.5 --no-update-deps
 
   # Install intel optimization for tensorflow from anaconda channel
-  conda install tensorflow -c anaconda
-  conda install tensorflow-mkl -c anaconda
+  conda install -c anaconda tensorflow
+  conda install -c anaconda tensorflow-mkl
 
   # Install intel optimization for tensorflow from intel channel
-  conda install tensorflow -c intel
+  # conda install tensorflow -c intel
 ```
 
 [Intel Extension for Scikit-learn](https://intel.github.io/scikit-learn-intelex/index.html#intelex)
