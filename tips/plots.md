@@ -272,6 +272,22 @@ When plotting multiple graphs, it is common to see labels of some subplots overl
 ```
 
 
+## How To Label The Values Plots With Matplotlib
+
+```py
+fig, ax = plt.subplots(figsize=(12,8))
+plt.plot(x, y)
+plt.xlabel("x values", size=12)
+plt.ylabel("y values", size=12)
+plt.title("Learning more about pyplot with random numbers chart", size=15)
+
+# increase the frequency of the x and y ticks to match the actual values of x and the possible values of y
+plt.xticks(x, size=12)
+plt.yticks([i for i in range(20)], size=12)
+plt.show()
+```
+
+
 ---------
 
 
@@ -316,6 +332,8 @@ Yellowbrick was developed to help the model selection process using various visu
 [The Easiest Way to Make Beautiful Interactive Visualizations With Pandas using Cufflinks](https://towardsdatascience.com/the-easiest-way-to-make-beautiful-interactive-visualizations-with-pandas-cdf6d5e91757)
 
 [4 simple tips for plotting multiple graphs in Python](https://towardsdatascience.com/4-simple-tips-for-plotting-multiple-graphs-in-python-38df2112965c)
+
+[](https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1?source=rss----7f60cf5620c9---4)
 
 [Top 3 Visualization Python Packages to Help Your Data Science Activities](https://towardsdatascience.com/top-3-visualization-python-packages-to-help-your-data-science-activities-168e22178e53)
 
