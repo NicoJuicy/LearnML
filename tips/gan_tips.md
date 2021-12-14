@@ -51,4 +51,24 @@ GANs can generate several types of synthetic data, including image data, tabular
 [GAN-based Deep Learning data synthesizer ~ CopulaGAN](https://bobrupakroy.medium.com/gan-based-deep-learning-data-synthesizer-copulagan-a6376169b3ca)
 
 
+## Generative Deep Learning
+
+Might be possible with one of the GAN models (not sure). I have seen a lot of different applications of the approach. I would take a look at StyleGAN, Pix2Pix, and CycleGAN.. There are some books on oreilly.com that are free access with an edu email. There is also the <#823867104741818398> channel. Also here are some good references to get started.
+
+[Generative Deep Learning](https://keras.io/examples/generative/)
+
+[A Gentle Introduction to Generative Adversarial Networks (GANs)](https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/)
+
+[18 Impressive Applications of Generative Adversarial Networks (GANs)](https://machinelearningmastery.com/impressive-applications-of-generative-adversarial-networks/)
+
+
+[Intuitively Understanding Variational Autoencoders](https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf)
+
+[Variational Autoencoders as Generative Models with Keras](https://towardsdatascience.com/variational-autoencoders-as-generative-models-with-keras-e0c79415a7eb)
+
+[A Tutorial on Variational Autoencoders with a Concise Keras Implementation](https://tiao.io/post/tutorial-on-variational-autoencoders-with-a-concise-keras-implementation/)
+
+[Variational AutoEncoders](https://www.geeksforgeeks.org/variational-autoencoders/)
+
+
 Good luck!
