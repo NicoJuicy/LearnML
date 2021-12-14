@@ -295,6 +295,17 @@ By default, the `PowerTransformer` also performs a standardization of each varia
 ```
 
 
+## Feature Selection in Scikit-learn
+
+Simple ways to filter features for simpler and faster model.
+
+[Feature Selection in Scikit-learn](https://towardsdatascience.com/feature-selection-in-scikit-learn-dc005dcf38b7?source=rss----7f60cf5620c9---4)
+
+It is often useful to filter out non-predictive features and keep the model lean so that the model is faster, easier to explain to stakeholders and simpler to deploy.
+
+The article five different ways to do feature selection for supervised machine learning problem.
+
+
 
 ## References
 
