@@ -673,6 +673,8 @@ A train-test split conists of the following:
 
 [Build Machine Learning Pipelines](https://medium.datadriveninvestor.com/build-machine-learning-pipelines-with-code-part-1-bd3ed7152124?gi=c419327a3c8c)
 
+[Customizing Sklearn Pipelines: TransformerMixin](https://towardsdatascience.com/customizing-sklearn-pipelines-transformermixin-a54341d8d624?source=rss----7f60cf5620c9---4)
+
 Pipeline is a technique used to create a linear sequence of data preparation and modeling steps to automate machine learning workflows.
 
 Pipelines also help in parallelization which means different jobs can be run in parallel as well as help to inspect and debug the data flow in the model.
