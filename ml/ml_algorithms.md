@@ -1,5 +1,44 @@
 # Machine Learning Algorithms
 
+<!-- MarkdownTOC -->
+
+- Categories of ML Algorithms
+    - Overview of Machine Learning Algorithms
+    - Machine Learning Techniques
+    - Algorithms Grouped by Learning Style
+        - Supervised Learning
+        - Unsupervised Learning
+        - Semi-Supervised Learning
+    - Algorithms Grouped By Similarity
+        - Classification Algorithms
+            - One-vs-Rest and One-vs-One for Multi-Class Classification
+        - Regression Algorithms
+        - Instance-based Algorithms
+        - Decision Tree Algorithms
+        - Bayesian Algorithms
+            - Problems with Bayesian Networks
+        - Clustering Algorithms
+        - Association Rule Learning Algorithms
+        - Artificial Neural Network Algorithms
+        - Deep Learning Algorithms
+        - Dimensionality Reduction Algorithms
+        - Principal Component Analysis \(PCA\)
+        - Ensemble Algorithms
+        - Decision Trees
+    - Pros and Cons
+    - Examples of Algorithm Lists To Create
+    - Tips for Creating Algorithm List
+    - Orange Algorithm List
+        - Regression
+        - Classification
+        - Classification and Regression
+        - Dimensionality Reduction
+        - Clustering
+    - References
+
+<!-- /MarkdownTOC -->
+
+
 [Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
 
 Machine learning is about machine learning algorithms.
@@ -36,6 +75,7 @@ Here is how to get started with machine learning algorithms:
 
 [63 Machine Learning Algorithms](https://medium.com/swlh/63-machine-learning-algorithms-introduction-5e8ea4129644)
 
+
 There are two common approaches to categorizing ML algorithms:
 
 - Grouping of algorithms by learning style
@@ -45,6 +85,33 @@ There are two common approaches to categorizing ML algorithms:
 <img width="800" alt="Taxonomy of 63 Machine Learning Algorithms" src="https://miro.medium.com/max/4056/1*A9QcGlMRQBAl6cfhxS-XeA.png" />
 
 <center>Figure: 63 Machine Learning Algorithms by Priyanshu Jain</center>
+
+## Overview of Machine Learning Algorithms
+
+When crunching data to model business decisions, you are most usually using supervised and unsupervised learning methods.
+
+A hot topic at the moment is semi-supervised learning methods in areas such as image classification where there are large datasets with very few labeled examples.
+
+
+## Machine Learning Techniques
+
+[10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
+
+Data set, algorithms, models, feature extraction, and training are 5 crucial components of Machine Learning . Depending upon the scenario, data type, input, etc., there are different ways an ML model learns: supervised and unsupervised.
+
+In general, there are 10 Machine Learning techniques that are commonly used for AI development.
+
+1. Regression (Supervised ML)
+2. Classification (Supervised ML)
+3. Transfer Learning (Supervised ML)
+4. Clustering (Unsupervised ML)
+5. Ensemble Methods (Supervised ML)
+6. Neural Networks and Deep Learning (Unsupervised ML)
+7. Dimensionality Reduction (Supervised and Unsupervised Learning)
+8. Word Embeddings (Unsupervised Learning)
+9. Natural Language Processing (Unsupervised Learning)
+10. Reinforcement Learning (Unsupervised Learning)
+
 
 
 ## Algorithms Grouped by Learning Style
@@ -85,13 +152,6 @@ There is a desired prediction problem but the model must learn the structures to
 Example problems: classification and regression.
 
 Example algorithms are extensions to other flexible methods that make assumptions about how to model the unlabeled data.
-
-
-## Overview of Machine Learning Algorithms
-
-When crunching data to model business decisions, you are most usually using supervised and unsupervised learning methods.
-
-A hot topic at the moment is semi-supervised learning methods in areas such as image classification where there are large datasets with very few labeled examples.
 
 
 ## Algorithms Grouped By Similarity
@@ -201,7 +261,7 @@ The most popular Bayesian algorithms are:
 - Bayesian Network (BN)
 
 
-#### Problems with Bayesian Networks 
+#### Problems with Bayesian Networks
 
 The main problem with Bayesian Networks (BN) is that they appear to be deceptively simple. However, in reality there are many issues with their practical use:
 
@@ -338,7 +398,7 @@ This raises the question as to how many trees (weak learners or estimators) to c
 
 There are many regression algorithms you should know and try when working on a real-world problem. 
 
-This article discusses some of the Pros and Cons of 9 common regression algorithms with code using Scikit-learn and XGBoost:
+The article discusses some of the Pros and Cons of 9 common regression algorithms with code using Scikit-learn and XGBoost:
 
 1. Linear Regression
 2. Polynomial Regression
