@@ -38,6 +38,27 @@
 Check the summary statistics and create histograms for the numeric variables of the dataset as presented in the code below.
 
 ```py
+df.shape
+dr.dtypes
+df.size
+
+# number of missing values in each column
+df.isna().sum()
+
+df.describe()
+
+# check the distribution of categorical columns
+df["product_group"].value_counts()
+
+# see the percent share of each value by using the normalize parameter.
+df["product_group"].value_counts(normalize=True)
+
+# check the average price of products for each product group 
+df.groupby("product_group", as_index=False).agg(  
+    avg_price = ("price","mean")
+    )
+    
+
     numeric_variables = list(df.select_dtypes(include=['int64', 'float64'])) #select the numeric variables
 
     df[numeric_variables].describe().apply(lambda x:round(x,2)).T #apply describe method
@@ -518,6 +539,8 @@ Spot check some methods that are robust to outliers to see if there is a signifi
 [How to build a Machine Learning (ML) Predictive System](https://towardsdatascience.com/machine-learning-ml-based-predictive-system-to-predict-the-satisfaction-level-of-airlines-f0780dbdbc87?source=rss----7f60cf5620c9---4)
 
 [11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
+
+[6 Pandas Functions for a Quick Exploratory Data Analysis](https://sonery.medium.com/6-pandas-functions-for-a-quick-exploratory-data-analysis-ff9ece0867d7)
 
 
 [How to Identify Outliers in your Data](https://machinelearningmastery.com/how-to-identify-outliers-in-your-data/)
