@@ -30,16 +30,20 @@
 
 If you are going to spend the time to study AI/ML then you might as well invest in an online degree which will greatly increase your career opportunities (and a requirement for most all AI/ML engineer positions).
 
-[Do you need a Master’s Degree in Data Science?](https://towardsdatascience.com/do-you-need-a-masters-degree-in-data-science-you-are-asking-the-wrong-question-8c83dec8bf1b?source=rss----7f60cf5620c9---4)
-
-[Do You Have the Degree it Takes to Get Hired as a Data Scientist?](https://medium.com/@ODSC/do-you-have-the-degree-it-takes-to-get-hired-as-a-data-scientist-e87e2d6c0c87)
-
-[Why Machine Learning Engineers are Replacing Data Scientists](https://www.kdnuggets.com/2021/11/why-machine-learning-engineers-are-replacing-data-scientists.html)
+[How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
 
 
 ## Recommended Tutorials and Books
 
-See "Tutorials and Books" in [How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
+[AI Learning Resources](https://aicoder.medium.com/ai-learning-resources-b49da21fd3b8)
+
+
+## How to access Safari Online?
+
+If you have an .edu email account you can get free access to [Safari Online](https://www.oreilly.com/member/login/?next=%2Fapi%2Fv1%2Fauth%2Fopenid%2Fauthorize%2F%3Fclient_id%3D235442%26redirect_uri%3Dhttps%3A%2F%2Flearning.oreilly.com%2Fcomplete%2Funified%2F%26state%3DC3l2tLIMbQr0lpQKLDHucVJomOkg52rX%26response_type%3Dcode%26scope%3Dopenid%2Bprofile%2Bemail&locale=en) which has some good books for beginners as well as advanced books on various AI/ML topics.
+
+[Creating an Account](https://ecpi.libguides.com/SafariOReilly)
+
 
 
 ## How to ask an AI/ML question?
@@ -64,12 +68,12 @@ See [Machine Learning Performance Metrics](./ml/performance_metrics.md)
 
 ## How to Choose an ML Algorithm?
 
-See [How to Choose an ML Model](./getting_started.md) and [Understand Machine Learning Algorithms](./ml/getting_started.md)
+[How to Choose an ML Model](./getting_started.md) and [Understand Machine Learning Algorithms](./ml/getting_started.md)
 
 
 ## Should I start learning ML by coding an algorithm from scratch?
 
-See [How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
+[How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
 
 The best approach would be to find several job postings that look interesting to you and see what skills and tools they require.  
 
