@@ -1,6 +1,20 @@
 # Hyperparameter Tuning
 
-[How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
+<!-- MarkdownTOC -->
+
+- Simple pipeline used in all the examples
+- Grid Search
+- Random Search
+- Bayesian Search
+- Visualization of parameter search \(learning rate\)
+- Visualization of mean score for each iteration
+- AutoML Tools for Tuning
+- KerasTuner
+- Optuna
+- Improve Model Performance
+- References
+
+<!-- /MarkdownTOC -->
 
 
 The process of searching for optimal hyperparameters is called hyperparameter tuning or _hypertuning_ which is essential in any machine learning project. 
@@ -124,7 +138,17 @@ Optuna is framework agnostic, so you can use it with any machine learning or dee
 
 
 
+## Improve Model Performance
+
+[Profiling Neural Networks to improve model training and inference speed](https://pub.towardsai.net/profiling-neural-networks-to-improve-model-training-and-inference-speed-22be473492bf)
+
+[How to Speed Up XGBoost Model Training](https://towardsdatascience.com/how-to-speed-up-xgboost-model-training-fcf4dc5dbe5f?source=rss----7f60cf5620c9---4)
+
+
+
 ## References
+
+[How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
 
 [A Practical Introduction to Grid Search, Random Search, and Bayes Search](https://towardsdatascience.com/a-practical-introduction-to-grid-search-random-search-and-bayes-search-d5580b1d941d)
 
@@ -135,9 +159,8 @@ Optuna is framework agnostic, so you can use it with any machine learning or dee
 [Introduction to the Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner)
 
 
-[How to Grid Search Deep Learning Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/)
 
-[How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
+[How to Grid Search Deep Learning Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/)
 
 [Scikit-Optimize for Hyperparameter Tuning in Machine Learning](https://machinelearningmastery.com/scikit-optimize-for-hyperparameter-tuning-in-machine-learning/)
 
