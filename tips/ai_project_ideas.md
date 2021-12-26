@@ -4,6 +4,8 @@ Some of the articles are best viewed in Private tab.
 
 [Python Projects for 2021](https://data-flair.training/blogs/python-project-ideas/)
 
+[Learn Deep Learning by Building 15 Neural Network Projects in 2022](https://medium.com/@param005raval/156c9b1aefc6?source=rss------artificial_intelligence-5)
+
 [20 Machine Learning Projects That Will Get You Hired in 2021](https://medium.com/projectpro/20-machine-learning-projects-that-will-get-you-hired-in-2021-a89473f2d2c7)
 
 [Top 10 Projects for Beginners in Computer Vision and Medical Imaging](https://towardsdatascience.com/top-10-projects-for-beginners-in-computer-vision-and-medical-imaging-c138a646e44e)
