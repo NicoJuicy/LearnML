@@ -39,12 +39,16 @@
 - Order of Data Transforms for Time Series
 - Train-Test Split
 - Data Pipelines
-    - Create a simple Pipeline
+    - Create Simple Pipeline
     - Best Scaler
     - Best Estimator
-    - Pipeline with With PCA
+    - Pipeline with PCA
     - Joblib
     - Pandas pipe
+- Pipeline Example
+    - Data Prep
+    - Create Pipeline
+    - Train and Evaluate Pipeline
 - Bootstrapping
 - References
     - Exploratory Data Analysis \(EDA\)
@@ -679,8 +683,7 @@ Pipeline is a technique used to create a linear sequence of data preparation and
 
 Pipelines also help in parallelization which means different jobs can be run in parallel as well as help to inspect and debug the data flow in the model.
 
-
-### Create a simple Pipeline
+### Create Simple Pipeline
 
 ```py
     # Create a pipeline
@@ -739,7 +742,7 @@ Pipelines also help in parallelization which means different jobs can be run in 
     print('%s pipeline Test Accuracy Score: %.4f' % (pipeline_dict[i], accuracy_score(testY, val.predict(testX))))
 ```
 
-Convert it to dataFrame and show the best model:
+Convert pipeline to dataFrame and show the best model:
 
 ```py
     l = []
@@ -814,7 +817,7 @@ Convert it to dataFrame and show the best model:
     print(b_model)
 ```
 
-### Pipeline with With PCA
+### Pipeline with PCA
 
 Pipeline example with Principal Component Analysis (PCA)
 
@@ -832,6 +835,72 @@ The pandas `pipe` function offers a structured and organized way for combining s
 As the number of steps increase, the syntax becomes cleaner with the pipe function compared to executing functions separately.
 
 [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
+
+
+
+## Pipeline Example
+
+[Unleash the Power of Scikit-learn’s Pipelines](https://towardsdatascience.com/unleash-the-power-of-scikit-learns-pipelines-b5f03f9196de)
+
+### Data Prep
+
+```py
+# convert question mark '?' to NaN
+df.replace('?', np.nan, inplace=True)
+    
+# convert target column from string to number
+le = LabelEncoder()
+df.income = le.fit_transform(df.income)
+```
+
+### Create Pipeline
+
+```py
+# create column transformer component
+# We will select and handle categorical and numerical features in a differently
+preprocessor = ColumnTransformer([
+    ('numerical', numerical_pipe, make_column_selector(dtype_include=['int', 'float'])),
+    ('categorical', categorical_pipe, make_column_selector(dtype_include=['object'])),
+    ])
+
+# create pipeline for numerical features
+numerical_pipe = Pipeline([
+    ('imputer', SimpleImputer(missing_values=np.nan, strategy='mean')),
+    ('scaler', StandardScaler())
+])
+
+# create pipeline for categorical features
+categorical_pipe = Pipeline([
+    ('imputer', SimpleImputer(missing_values=np.nan, strategy='most_frequent')),
+    ('one_hot', OneHotEncoder(handle_unknown='ignore'))
+    ])
+
+    
+# create main pipeline
+pipe = Pipeline([
+    ('column_transformer', preprocessor),
+    ('model', KNeighborsClassifier())
+    ])
+```
+
+### Train and Evaluate Pipeline
+
+```py
+# create X and y variables
+X = df.drop('income', axis=1)
+y = df.income
+
+# split data into train and test data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+
+# fit pipeline with train data and predicting test data
+pipe.fit(X_train, y_train)
+predictions = pipe.predict(X_test)
+
+# check pipeline accuracy
+accuracy_score(y_test, predictions)
+```
+
 
 
 ## Bootstrapping
