@@ -2,7 +2,7 @@
 
 If you are like me and try to follow the principles of DRY, KISS, Deaign Patterns, and Occam’s Razor then this repo is for you!
 
-> Occam’s Razor: The best model that fits your data is usually the best. 
+> Occam’s Razor: The simplest model that fits your data is usually the best. 
 
 ## Background
 
@@ -18,7 +18,7 @@ This is a work in progress (just getting started), so there is still#  a lot mis
 
 [How to Learn AI/ML](./how_to_learn.md)
 
-[Getting Started](./getting_started.md)
+[Getting Started](https://aicoder.medium.com/getting-started-cd1f1534e048)
 
 **NOTE:** The Medium and TowardsDataSciene articles can be viewed in a browser Private tab. 
 
@@ -124,7 +124,7 @@ TODO: Add items
 
 [Natural Language Processing](./nlp/nlp.md)
  
-[NLP Text Preprocessing](./nlp/nlp_text.md)
+[NLP Text Preprocessing](./nlp/nlp_dataprep.md)
  
 [Natural Language Understanding](./nlp/nlu.md)
 
