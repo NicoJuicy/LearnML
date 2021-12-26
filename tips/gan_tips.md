@@ -38,7 +38,7 @@ Here are some PyTorch resources that I found helpful:
 
 ## Generating Synthetic Data
 
-GANs can generate several types of synthetic data, including image data, tabular data, and sound/speech data.
+GANs can generate several types of synthetic data including image data, tabular data, and sound/speech data.
 
 [Gretel Synthetics](https://github.com/gretelai/gretel-synthetics)
 
@@ -50,10 +50,10 @@ GANs can generate several types of synthetic data, including image data, tabular
 
 [GAN-based Deep Learning data synthesizer ~ CopulaGAN](https://bobrupakroy.medium.com/gan-based-deep-learning-data-synthesizer-copulagan-a6376169b3ca)
 
+[OpenAI Glow and the Art of Learning from Small Datasets](https://jrodthoughts.medium.com/openai-glow-and-the-art-of-learning-from-small-datasets-e6b0a0cd6fe4)
+
 
 ## Generative Deep Learning
-
-Might be possible with one of the GAN models (not sure). I have seen a lot of different applications of the approach. I would take a look at StyleGAN, Pix2Pix, and CycleGAN.. There are some books on oreilly.com that are free access with an edu email. There is also the <#823867104741818398> channel. Also here are some good references to get started.
 
 [Generative Deep Learning](https://keras.io/examples/generative/)
 
