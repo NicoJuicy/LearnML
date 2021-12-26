@@ -18,6 +18,8 @@ GANs are an exciting and rapidly changing field, that deliver on the promise of 
 
 [A Tour of Generative Adversarial Network Models](https://machinelearningmastery.com/tour-of-generative-adversarial-network-models/)
 
+[Generative Adversarial Networks 101](https://towardsdatascience.com/generative-adversarial-networks-101-c4b135a440d5?source=linkShare-d5796c2c39d5-1639505229&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9bLTU3JLM3VS87P1XesTA01M85Ij8pJAgA66TofIwAAAA%3D%3D&_branch_match_id=994707642716437243)
+
 [How to Code the GAN Training Algorithm and Loss Functions](https://machinelearningmastery.com/how-to-code-the-generative-adversarial-network-training-algorithm-and-loss-functions/)
 
 [How to Implement GAN Hacks in Keras to Train Stable Models](https://machinelearningmastery.com/how-to-code-generative-adversarial-network-hacks/)

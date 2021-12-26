@@ -98,6 +98,8 @@ The higher the batch size, the more memory space that is needed.
 
 There are some hyperparameterss that often have optimal values in base 2 such as batch_size mainly because it affects the data size that is fetched to/from memory by hardware that is base 2.
 
+----------
+
 
 ## Encoder-Decoder 
 
@@ -144,6 +146,14 @@ Transfer learning is related to problems such as multi-task learning and concept
 This form of transfer learning used in deep learning is called inductive transfer. This is where the scope of possible models (model bias) is narrowed in a beneficial way by using a model fit on a different but related task.
 
 
+## Examples
+
+[Deep Learning with Python: Neural Networks (complete tutorial)](https://towardsdatascience.com/deep-learning-with-python-neural-networks-complete-tutorial-6b53c0b06af0)
+
+[Keras Code Examples](https://keras.io/examples/)
+
+
+
 ## References
 
 H. Tatsat, S. Puri, and B. Lookabaugh, "Machine Learning and Data Science Blueprints for Finance", O’Reilly Media, ISBN: 978-1-492-07305-5, 2021. 
@@ -171,4 +181,6 @@ H. Tatsat, S. Puri, and B. Lookabaugh, "Machine Learning and Data Science Bluepr
 [The Transformer Attention Mechanism](https://machinelearningmastery.com/the-transformer-attention-mechanism/)
 
 [A Gentle Introduction to Transfer Learning for Deep Learning](https://machinelearningmastery.com/transfer-learning-for-deep-learning/)
+
+
 
