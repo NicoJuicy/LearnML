@@ -1,9 +1,5 @@
 # Computer Vision
 
-[A Gentle Introduction to Computer Vision](https://machinelearningmastery.com/what-is-computer-vision/)
-
-[Guide to Deep Learning for Computer Vision](https://machinelearningmastery.com/start-here/#dlfcv)
-
 Computer Vision (CV) is defined as a field of study that seeks to develop techniques to help computers “see” and understand the content of digital images such as photographs and videos.
 
 Many popular computer vision applications involve trying to recognize things in photographs:
@@ -22,19 +18,20 @@ Many popular computer vision applications involve trying to recognize things in 
 
 - Object Recognition: What objects are in this photograph and where are they?
 
+
 ## What is Image Recognition?
 
 Image recognition or image classification is the task of recognizing images and classifying them in one of the several predefined individual classes.
 
 Image recognition can perform different tasks including:
 
-- Classification: It is the recognition of the “class” of an image. An image can only have a single class.
+- **Classification:** It is the recognition of the class of an image where an image contains only a single object.
 
-- Tagging: It also falls under the classification task but with a higher level of precision. It can identify the presence of numerous concepts or entities within an image. One or more tags can thus be allotted to a specific image.
+- **Tagging:** It is a classification task but it can also identify the presence of numerous concepts or entities within an image. Thus, one or more tags can be allotted to a specific image.
 
-- Detection: This is important when you want to find an entity in an image . Once the object is found, a bounding box is placed around the object in question.
+- **Detection:** This is finding an entity in an image. Once the object is found, a bounding box is placed around the object in question.
 
-- Segmentation: This falls under the detection task and it is responsible for locating an element in an image to the nearest pixel. In some instances, it is necessary to maintain a higher degree of accuracy, just like in the development of autonomous cars.
+- **Segmentation:** It is a detection task but it is also responsible for locating an element in an image to the nearest pixel. In some cases, it is necessary to maintain a higher degree of accuracy such as the development of autonomous cars.
 
 
 ## Overview
@@ -47,7 +44,7 @@ The following sections discuss several important CV concepts:
 
 - Object Recognition
 - Object Classification
-- Object Detection and Tracking
+- Object Detection
 
 
 ## Image Data Loading
@@ -62,16 +59,54 @@ The following sections discuss several important CV concepts:
 
 [A Gentle Introduction to Channels-First and Channels-Last Image Formats](https://machinelearningmastery.com/a-gentle-introduction-to-channels-first-and-channels-last-image-formats-for-deep-learning/)
 
-In the past, I encountered obscure image format issues going between Linux and macOS (NHWC vs HCHW).
+You will often encounter obscure image format issues going between Linux and macOS (NHWC vs HCHW).
 
 
-## Object Recognition
+## Object Recognition 
 
-[A Gentle Introduction to Object Recognition](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
+_Object recognition_ is a general term to describe a collection of related computer vision tasks that involve identifying objects in digital images.
 
-[How to Perform Object Detection with Mask R-CNN](https://machinelearningmastery.com/how-to-perform-object-detection-in-photographs-with-mask-r-cnn-in-keras/)
+_Image classification_ involves predicting the class of an object in an image.
 
-[How to Perform Object Detection With YOLOv3 in Keras](https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/)
+_Object localization_ refers to identifying the location of one or more objects in an image and drawing a bounding box around them. 
+
+_Object detection_ combines these two tasks and localizes and classifies one or more objects in an image.
+
+We will be using the term _object recognition_ broadly to encompass both image classification (what object classes are present in the image) and object detection (localize all objects present in the image).
+
+We can distinguish between these three computer vision tasks:
+
+- **Image Classification:** Predict the type or class of an object in an image.
+
+Input: An image with a single object such as a photograph.
+Output: A class label (one or more integers that are mapped to class labels).
+
+- **Object Localization:** Locate the presence of objects in an image and indicate their location with a bounding box.
+
+Input: An image with one or more objects, such as a photograph.
+Output: One or more bounding boxes (defined by a point, width, and height).
+
+- **Object Detection:** Locate the presence of objects with a bounding box and types or classes of the located objects in an image.
+
+Input: An image with one or more objects, such as a photograph.
+Output: One or more bounding boxes and a class label for each bounding box.
+
+
+- **Object segmentation:** Instances of recognized objects are indicated by highlighting the specific pixels of the object instead of a coarse bounding box which is sometimes called “object instance segmentation” or “semantic segmentation”. 
+
+
+<img width="600" alt="Overview of Object Recognition Computer Vision Tasks" src="https://machinelearningmastery.com/wp-content/uploads/2019/05/Object-Recognition.png" />
+
+Figure: Overview of Object Recognition Computer Vision Tasks
+
+Most of the recent innovations in image recognition problems have come as part of participation in the ILSVRC tasks which is an annual academic competition with a separate challenge for each of three problem types: image classification, object localization, and object detection. 
+
+- Image classification: Algorithms produce a list of object categories present in the image.
+
+- Single-object localization: Algorithms produce a list of object categories present in the image and an axis-aligned bounding box indicating the position and scale of one instance of each object category.
+
+- Object detection: Algorithms produce a list of object categories present in the image along with an axis-aligned bounding box indicating the position and scale of every instance of each object category.
+
 
 
 ## Object Classification
@@ -83,29 +118,36 @@ In the past, I encountered obscure image format issues going between Linux and m
 [How to Develop a CNN to Classify Satellite Photos](https:/low /machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-satellite-photos-of-the-amazon-rainforest/)
 
 
-## Basics of Convolutional Neural Networks
+## Object Detection
 
-[Gentle Introduction to Convolutional Layers in CNNS](https://machinelearningmastery.com/convolutional-layers-for-deep-learning-neural-networks/)
+The approach will depend on the goal but most common object detection projects are classification (object detection) apps which try to determine the counts of types of objects (pedestrian/vehicle).
 
-[Gentle Introduction to Padding and Stride in CNNs](https://machinelearningmastery.com/padding-and-stride-for-convolutional-neural-networks/)
+Object detection involves identifying the presence, location, and type of one or more objects in a given photograph.
 
-[Gentle Introduction to Pooling Layers in CNNs](https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/)
+**Object detection** involves building upon the methods for _object classification_ (what are they), _object localization_ (what are their extent), and _object recognition_ (where are they).
+
+Object detection combines all these tasks and draws a bounding box around each object of interest in the image and assigns them a class label. 
 
 
+Yolo is the latest approach to object detection and there is a version that can run on raspi. 
 
-## Object Detection and Tracking
+Yolo is supposed to be easier to setup/use and have faster performance.  
 
-The approach will depend on your goal/project but most common object detection projects are classification (object detection) apps which try to determine the counts of types of objects (pedestrian/vehicle). 
+[How to Train an Object Detection Model with Keras](https://machinelearningmastery.com/how-to-train-an-object-detection-model-with-keras/)
 
-**NOTE:** Be sure to open the articles in “private” tab/window. 
+[How to Perform Object Detection With YOLOv3 in Keras](https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/)
+
 
 [Making Road Traffic Counting App based on Computer Vision and OpenCV](https://medium.com/machine-learning-world/tutorial-making-road-traffic-counting-app-based-on-computer-vision-and-opencv-166937911660)
 
 [Vehicle Detection and Tracking using Machine Learning and HOG](https://towardsdatascience.com/vehicle-detection-and-tracking-using-machine-learning-and-hog-f4a8995fc30a?gi=b793ee27f135)
 
-Yolo is the latest approach to object detection and there is a version that can run on raspi. Yolo is supposed to be easier to setup/use and faster performance.  
-
 [Object tracking using YOLOv4 and TensorFlow](https://pythonawesome.com/object-tracking-implemented-with-yolov4-and-tensorflow/)
+
+
+[How to Perform Object Detection with Mask R-CNN](https://machinelearningmastery.com/how-to-perform-object-detection-in-photographs-with-mask-r-cnn-in-keras/)
+
+[How to Perform Object Detection With YOLOv3 in Keras](https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/)
 
 
 
@@ -143,7 +185,7 @@ plt.show()
 
 ## VGG
 
-Given a photograph of an object, derrmine which of 1,000 specific objects the photograph shows.
+Given a photograph of an object, determine which of 1,000 specific objects the photograph shows.
 
 A competition-winning model for this task is the VGG model by researchers at Oxford. 
 
@@ -164,9 +206,9 @@ The second is to classify images, each labeled with one of 1000 categories which
 
 ## Residual Networks (ResNet)
 
-[Residual Networks (ResNet)](https://www.geeksforgeeks.org/residual-networks-resnet-deep-learning/)
+After the first CNN-based architecture (AlexNet) that win the ImageNet 2012 competition, every subsequent winning architecture uses more layers in a deep neural network to reduce the error rate which works for less number of layers.
 
-After the first CNN-based architecture (AlexNet) that win the ImageNet 2012 competition, every subsequent winning architecture uses more layers in a deep neural network to reduce the error rate which works for less number of layers.  
+[Residual Networks (ResNet)](https://www.geeksforgeeks.org/residual-networks-resnet-deep-learning/)
 
 When we increase the number of layers, there is a common problem in deep learning called Vanishing/Exploding gradient which causes the gradient to become 0 or too large. Thus, when we increase the number of layers, the training and test error rate also increases.
 
@@ -175,3 +217,18 @@ When we increase the number of layers, there is a common problem in deep learnin
 In order to solve the problem of the vanishing/exploding gradient, ResNet introduced the concept called Residual Network which uses a technique called _skip connections_. 
 
 The skip connection skips training from a few layers and connects directly to the output.
+
+
+
+## References
+
+[A Gentle Introduction to Computer Vision](https://machinelearningmastery.com/what-is-computer-vision/)
+
+[Guide to Deep Learning for Computer Vision](https://machinelearningmastery.com/start-here/#dlfcv)
+
+[9 Applications of Deep Learning for Computer Vision](https://machinelearningmastery.com/applications-of-deep-learning-for-computer-vision/)
+
+[A Gentle Introduction to Object Recognition](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
+
+
+

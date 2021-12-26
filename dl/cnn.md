@@ -1,4 +1,6 @@
-# [Convolutional Neural Networks (CNN)](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2)
+# Convolutional Neural Networks (CNN)
+
+[Convolutional Neural Networks (CNN)](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2)
 
 ## Overview
 
@@ -14,9 +16,13 @@ Now we will cover the most popular deep learning model: Convolutional Neural Net
 
 ## 1. Introduction
 
-Convolutional Neural Networks (CNN) are everywhere. It is arguably the most popular deep learning architecture. The recent surge of interest in deep learning is due to the immense popularity and effectiveness of convnets. The interest in CNN started with AlexNet in 2012 and it has grown exponentially ever since. In just three years, researchers progressed from 8 layer AlexNet to 152 layer ResNet.
+Convolutional Neural Networks (CNN) are perhaps the most popular deep learning architecture. The recent surge of interest in deep learning is due to the immense popularity and effectiveness of convnets. 
 
-CNN is now the go-to model on every **image related problem**. In terms of accuracy, they blow the competition out of the water. It has also been successfully applied to recommender systems, natural language processing, and more. 
+The interest in CNN started with AlexNet in 2012 and it has grown exponentially ever since. In just three years, researchers progressed from 8 layer AlexNet to 152 layer ResNet.
+
+CNN is now the go-to model on every **image related problem**. In terms of accuracy, they blow the competition out of the water. 
+
+CNN has been successfully applied to recommender systems, natural language processing, and more. 
 
 The main advantage of CNN compared to its predecessors is that it automatically detects the important features without any human supervision. 
 
@@ -45,7 +51,7 @@ The main building block of CNN is the _convolutional layer_.
 
 Convolution is a mathematical operation to merge two sets of information. 
 
-Here, the convolution is applied on the input data using a _convolution filter_ to produce a _feature map+.
+Here, the convolution is applied on the input data using a _convolution filter_ to produce a _feature map_.
 
 On the left side is the input to the convolution layer such as the input image. 
 
@@ -298,13 +304,24 @@ There are very few resources on the web which do a thorough visual exploration o
 
 The entire code for this article is available here if you want to hack on it yourself.
 
+
 ----------
 
-## References
 
-- [Pytorch [Basics] — Intro to CNN](https://towardsdatascience.com/pytorch-basics-how-to-train-your-neural-net-intro-to-cnn-26a14c2ea29)
+## Basics of Convolutional Neural Networks
 
-- [Complete Guide to build CNN in Pytorch and Keras](https://medium.com/analytics-vidhya/complete-guide-to-build-cnn-in-pytorch-and-keras-abc9ed8b8160)
+[Gentle Introduction to Convolutional Layers in CNNS](https://machinelearningmastery.com/convolutional-layers-for-deep-learning-neural-networks/)
+
+[Gentle Introduction to Padding and Stride in CNNs](https://machinelearningmastery.com/padding-and-stride-for-convolutional-neural-networks/)
+
+[Gentle Introduction to Pooling Layers in CNNs](https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/)
+
+
+## CNN using PyTorch
+
+[Pytorch [Basics] — Intro to CNN](https://towardsdatascience.com/pytorch-basics-how-to-train-your-neural-net-intro-to-cnn-26a14c2ea29)
+
+[Complete Guide to build CNN in Pytorch and Keras](https://medium.com/analytics-vidhya/complete-guide-to-build-cnn-in-pytorch-and-keras-abc9ed8b8160)
 
 
 
