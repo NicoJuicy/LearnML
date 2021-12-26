@@ -26,4 +26,7 @@ The below list of text preprocessing steps is really important:
 8. Lemmatization / Stemming
 
 
+## References
+
+[Cleaning & Preprocessing Text Data by Building NLP Pipeline](https://towardsdatascience.com/cleaning-preprocessing-text-data-by-building-nlp-pipeline-853148add68a)
 
