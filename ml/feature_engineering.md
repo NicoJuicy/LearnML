@@ -334,5 +334,9 @@ The article five different ways to do feature selection for supervised machine l
 
 	
 
+## References
+
+[Alternative Feature Selection Methods in Machine Learning](https://www.kdnuggets.com/2021/12/alternative-feature-selection-methods-machine-learning.html)
+
 
 
