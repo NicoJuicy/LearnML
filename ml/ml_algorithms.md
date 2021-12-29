@@ -116,7 +116,7 @@ In general, there are 10 Machine Learning techniques that are commonly used for 
 
 ## Algorithms Grouped by Learning Style
 
-There are different ways an algorithm can model a problem based on its interaction with the experience, environment, or whatever we want to call the input data.
+There are four ways an algorithm can model a problem based on its interaction with the experience, environment, or whatever we want to call the input data.
 
 It is popular in machine learning and AI textbooks to consider the learning styles that an algorithm can adopt.
 
@@ -152,6 +152,23 @@ There is a desired prediction problem but the model must learn the structures to
 Example problems: classification and regression.
 
 Example algorithms are extensions to other flexible methods that make assumptions about how to model the unlabeled data.
+
+### Reinforcement Learning
+
+In reinforcement learning (RL), an agent (a model) gets feedback as it goes about its task, and learns from that feedback. 
+
+RL can be applied to situations where the agent has a goal and tries different actions within its environment until it reaches the goal.
+
+There are two main types of reinforcement learning: policy and value function-based.
+
+Policy-based RL is where an algorithm determines which action to take in a given situation by estimating which action is most likely to bring about a good result based on the agent’s current policy which is a state-action mapping that can be updated with each action taken.
+
+Value function RL adjusts the agent’s behaviour according to how valuable   certain actions are within its environment by estimating expected future rewards when certain actions are performed in a given state.
+
+With reinforcement learning, you do not have any labelled data for training purposes. You provide direct feedback from the environment to let the agent know what works and what does not. 
+
+Once agents have been taught using reinforcement learning, they can  apply this knowledge elsewhere in their environment.
+
 
 
 ## Algorithms Grouped By Similarity
