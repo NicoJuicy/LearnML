@@ -52,6 +52,8 @@ Orange is a data mining and visualization toolbox for novice and expert alike
 
 A great tool for exploratory data analysis (EDA) and to evaluate many models as you narrow the choices for a particular dataset.
 
+NOTE: It is best to install the native executable on your local machine rather than install using anaconda and/or pip.
+
 ### [dataprep](https://github.com/sfu-db/dataprep)
 
 DataPrep lets you prepare your data using a single library with a few lines of code.
@@ -78,7 +80,7 @@ TFDV allows you to get a quick look at the statistics of a dataset.
 
 TFDV can also identify anomalies in the data and can be configured to detect different classes of anomalies.
 
-### [Great Expectations](https://github.com/great-expectations/great_expectations) 
+### [Great Expectations](https://github.com/great-expectations/great_expectations)
 
 Great Expectations is a Python library that helps us validate, document, and profile our data so that we always make sure it is good and just like we expect it to be.
 
