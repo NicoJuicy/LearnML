@@ -1,6 +1,32 @@
 # NLU Intent Classification
 
-## Discovering and Classifying In-app Message Intent at Airbnb
+<!-- MarkdownTOC -->
+
+- Discover and Classify In-app Message Intent at Airbnb
+  - Identifying Message Intent
+  - Intent Discovery
+  - Labeling: From Unsupervised to Supervised
+  - Intent Classification with CNN
+- Using the DIET classifier for intent classification
+  - What is Rasa?
+  - DIET: A Quick Introduction:
+- How Intent Classification Works
+  - Teaching semantics to a machine: word embeddings
+  - Training a NLU model
+  - Limitations of word embeddings
+    - Homonyms
+    - Plurals, abbreviations and typos
+    - Heavy
+  - Training your own embeddings
+    - Mixing pre-trained with your own embeddings
+    - Giving context to embeddings with transformers
+    - Ordering and negation
+- References
+
+<!-- /MarkdownTOC -->
+
+
+## Discover and Classify In-app Message Intent at Airbnb
 
 Conversational AI is inspiring us to rethink the customer experience on our platform.
 
@@ -106,7 +132,7 @@ Our to-be-open-sourced Bighead Library made all these feasible.
 
 The overall accuracy of the Phase-1 and 2 solution is around 70% and outperforms the Phase-1 only solution by a magnitude of 50–100%. 
 
-It also exceeds the accuracy of predicting based on label distribution by a magnitude of ~400%.
+It also exceeds the accuracy of predicting based on label distribution by a magnitude of `~400%`.
 
 We evaluated classification accuracies class by class, especially when the dataset was imbalanced across different classes.
 
@@ -314,6 +340,8 @@ If you have any experience with NLU, you know how handling negation has always b
 With transformers, your model has a chance to understand that “not” is strongly related to “great” and weigh it differently. 
 
 When you include many other examples with negations, it becomes a concept your model can learn.
+
+
 
 
 ## References
