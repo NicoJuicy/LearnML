@@ -249,6 +249,14 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 [How to Develop and Evaluate Naive Classifier Strategies Using Probability](https://machinelearningmastery.com/how-to-develop-and-evaluate-naive-classifier-strategies-using-probability/)
 
 
+## Keras Imbalanced Classification
+
+[Imbalanced classification: credit card fraud detection](https://keras.io/examples/structured_data/imbalanced_classification/)
+
+[Large-scale multi-label text classification](https://keras.io/examples/nlp/multi_label_classification/)
+
+[Sample weights](https://keras.io/guides/training_with_built_in_methods/#sample-weights)
+
 
 ## References
 
