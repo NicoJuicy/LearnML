@@ -1,5 +1,27 @@
 # Natural Language Processing (NLP)
 
+<!-- MarkdownTOC -->
+
+- Overview
+- Data Mining
+- Pattern Recognition
+- Challenges in Natural Language Processing
+- Common Tasks
+- NLP Workflow
+- Lemmatization and Stemming
+- Keyword extraction
+- Named Entity Recognition \(NER\)
+- Topic Modeling
+- Summarization
+- Sentiment Analysis
+  - Sentiment Analysis using Python
+  - Sentiment Analysis using AutoML
+- Applications
+- References
+
+<!-- /MarkdownTOC -->
+
+
 ## Overview
 
 Natural Language Processing (NLP) is a category of ML concerned with the analysis and building of intelligent systems that can function in languages that humans speak. 
@@ -59,7 +81,7 @@ Example: chatbots, quotes , email replies, …, etc.
 Example: English to German. 
 
 
-## NLP Workflow 
+## NLP Workflow
 
 In Data Science (and NLP) there is a workflow or pipeline that can be described as follows:
 
@@ -149,6 +171,7 @@ Text summarization is an advanced technique that uses other techniques that we j
 
 Summarization is accomplished in two steps: extract and abstract.
 
+
 ## Sentiment Analysis
 
 The most famous and most commonly used NLP technique is sentiment analysis (SA). 
@@ -160,6 +183,44 @@ The technique's most simple results lay on a trinary scale: negative, positive, 
 The SA algorithm can be more complex and advanced; however, the results will be numeric in this case. 
 
 If the result is a negative number, the sentiment behind the text has a negative tone to it, and if it is positive then some positivity is present in the text.
+
+### Sentiment Analysis using Python
+
+[Best Practices for Text Classification with Deep Learning](https://machinelearningmastery.com/best-practices-document-classification-deep-learning/)
+
+[How to Develop a Deep Learning Bag-of-Words Model for Sentiment Analysis (Text Classification)](https://machinelearningmastery.com/deep-learning-bag-of-words-model-sentiment-analysis/)
+
+[Deep Convolutional Neural Network for Sentiment Analysis (Text Classification)](https://machinelearningmastery.com/develop-word-embedding-model-predicting-movie-review-sentiment/)
+
+[How to Use Word Embedding Layers for Deep Learning with Keras](https://machinelearningmastery.com/use-word-embedding-layers-deep-learning-keras/)
+
+[Keras Code Examples](https://keras.io/examples/)
+
+----------
+
+[Twitter Sentiment Analysis using NLTK and Python](https://towardsdatascience.com/twitter-sentiment-analysis-classification-using-nltk-python-fa912578614c)
+
+[Classifying Tweets for Sentiment Analysis: NLP in Python for Beginners](https://medium.com/vickdata/detecting-hate-speech-in-tweets-natural-language-processing-in-python-for-beginners-4e591952223)
+
+[Tweet Classification and Clustering in Python](https://medium.com/swlh/tweets-classification-and-clustering-in-python-b107be1ba7c7)
+
+
+### Sentiment Analysis using AutoML
+
+[A Gentle Introduction to PyCaret for Machine Learning](https://machinelearningmastery.com/pycaret-for-machine-learning/)
+
+[NLP Text-Classification in Python: PyCaret Approach vs The Traditional Approach](https://towardsdatascience.com/nlp-classification-in-python-pycaret-approach-vs-the-traditional-approach-602d38d29f06)
+
+[Natural Language Processing Tutorial (NLP101) - Level Beginner](http://www.pycaret.org/tutorials/html/NLP101.html)
+
+----------
+
+[Complete Guide to Perform Classification of Tweets with SpaCy](https://towardsdatascience.com/complete-guide-to-perform-classification-of-tweets-with-spacy-e550ee92ca79)
+
+[Sentiment Analysis of Tweets using BERT](https://thinkingneuron.com/sentiment-analysis-of-tweets-using-bert/)
+
+[How to use SHAP with PyCaret](https://astrobenhart.medium.com/how-to-use-shap-with-pycaret-dc9a31278621)
+
 
 
 ## Applications
@@ -176,34 +237,6 @@ The general idea with document clustering is to assign each document a vector re
 
 - Spell Check: PyEnchant, SymSpell Python ports
 
-
-## Sentiment Analysis
-
-[Best Practices for Text Classification with Deep Learning](https://machinelearningmastery.com/best-practices-document-classification-deep-learning/)
-
-[How to Develop a Deep Learning Bag-of-Words Model for Sentiment Analysis (Text Classification)](https://machinelearningmastery.com/deep-learning-bag-of-words-model-sentiment-analysis/)
-
-[Deep Convolutional Neural Network for Sentiment Analysis (Text Classification)](https://machinelearningmastery.com/develop-word-embedding-model-predicting-movie-review-sentiment/)
-
-[How to Use Word Embedding Layers for Deep Learning with Keras](https://machinelearningmastery.com/use-word-embedding-layers-deep-learning-keras/)
-
-[Keras Code Examples](https://keras.io/examples/)
-
-
-## Sentiment Analysis using AutoML
-
-[A Gentle Introduction to PyCaret for Machine Learning](https://machinelearningmastery.com/pycaret-for-machine-learning/)
-
-[NLP Text-Classification in Python: PyCaret Approach vs The Traditional Approach](https://towardsdatascience.com/nlp-classification-in-python-pycaret-approach-vs-the-traditional-approach-602d38d29f06)
-
-[Natural Language Processing Tutorial (NLP101) - Level Beginner](http://www.pycaret.org/tutorials/html/NLP101.html)
-
-
-[Sentiment Analysis of Tweets using BERT](https://thinkingneuron.com/sentiment-analysis-of-tweets-using-bert/)
-
-[Complete Guide to Perform Classification of Tweets with SpaCy](https://towardsdatascience.com/complete-guide-to-perform-classification-of-tweets-with-spacy-e550ee92ca79)
-
-[How to use SHAP with PyCaret](https://astrobenhart.medium.com/how-to-use-shap-with-pycaret-dc9a31278621)
 
 
 ## References
