@@ -6,19 +6,22 @@ Here is a list of AutoML tools that I have found to be helpful to an AI/ML engin
 
 <!-- MarkdownTOC -->
 
-- FLAML
-- PyCaret
-- H2O
-- wandb
-- MLFlow
-- auto-sklearn
-- AutoGluon
-- AutoKeras
-- Auto-ViML
-- AutoViz
-- MediaPipe
-- Ray
-- SageMaker
+- Quick Start
+- MLOps Tools
+    - wandb
+    - MLFlow
+- AutoML Tools
+    - PyCaret
+    - H2O
+    - auto-sklearn
+    - AutoGluon
+    - AutoKeras
+    - Auto-ViML
+    - AutoViz
+    - MediaPipe
+    - Ray
+    - FLAML
+    - SageMaker
 - Time Series Libraries
 
 <!-- /MarkdownTOC -->
