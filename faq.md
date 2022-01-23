@@ -25,6 +25,12 @@
 
 <!-- /MarkdownTOC -->
 
+## What is an AI Engineer?
+
+[Artificial Intelligence Engineering](https://www.sei.cmu.edu/our-work/artificial-intelligence-engineering/)
+
+In simplest terms, an AI Engineer is a type of software engineer specializing in development of AI/ML applications. Thus, he/she needs to have a thorough understanding of the core software engineering concepts (SWEBOK) as well as the full software development life cycle for AI/ML applications which has some  differences.
+
 
 ## Do I need a Master’s Degree?
 
@@ -93,6 +99,9 @@ A huge gotcha with both PyTorch and Keras. Actually, you need to sometimes need 
 ## How to share your work?
 
 Your are always welcome to share your work in the following Discord AI forum channels of the SHARE KNOWLEDGE Section: #share-your-projects, #share-datasets, and #our-accomplishments. 
+
+A key ML skill needed is deployment. There are several options available but the simplest method to try first would be streamlit or deta cloud services.
+
 
 
 ## How to choose a Cloud Platform?

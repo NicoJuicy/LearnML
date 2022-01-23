@@ -30,9 +30,18 @@ Processing of language is needed when a system wants to work based on input from
 
 - Natural Language Understanding (NLU): The understanding phase of the processing is responsible for mapping the input that is given in natural language to a beneficial representation. It also analyzes different aspects of the input language that is given to the program.
 
-- Natural Language Generation (NLG): The generation phase of the processing is used in creating Natural Languages from the first phase. Generation starts with Text Planning, which is the extraction of relevant content from the base of knowledge. Next is the Sentence Planning phase where required words that will form the sentence are chosen. Ending with Text Realization is the final creation of the sentence structure.
+- Natural Language Generation (NLG): The generation phase of the processing is used in creating Natural Languages from the first phase. 
 
-Researchers are now using NLP to understand the meaning of large sets of documents from an analysis perspective which means that they can understand the different contexts and nuances of what phrases mean. 
+Generation starts with Text Planning, which is the extraction of relevant content from the base of knowledge. 
+
+Next, the Sentence Planning phase is where required words that will form the sentence are chosen. 
+
+Finally, Text Realization is the final creation of the sentence structure.
+
+Researchers are now using NLP to understand the meaning of large sets of documents from an analysis perspective which means that they can understand the different contexts and nuances of what phrases mean.
+
+Natural language toolkit (NLTK) is the defacto standard for building NLP  projects.
+
 
 ## Data Mining
 
@@ -78,10 +87,15 @@ Example: chatbots, quotes , email replies, …, etc.
 
 - **Machine Translation:** to automatically convert from one language to another.
 
-Example: English to German. 
+Example: English to German.
+
 
 
 ## NLP Workflow
+
+[Text Augmentation in a few lines of Python Code](https://towardsdatascience.com/text-augmentation-in-few-lines-of-python-code-cdd10cf3cf84)
+
+[Hands on Implementation of Basic NLP Techniques: NLTK or spaCy](https://towardsdatascience.com/hands-on-implementation-of-basic-nlp-techniques-nltk-or-spacy-687099e02816)
 
 In Data Science (and NLP) there is a workflow or pipeline that can be described as follows:
 
@@ -118,6 +132,7 @@ Deciding on an approach/technique usually means choosing the suitable model or l
 In this step, you need to make use of your communication and representation skills as a data scientist. 
 
 
+
 ## Lemmatization and Stemming
 
 Stemming and lemmatization are probably the first two steps to build an NLP project — you often use one of the two. 
@@ -136,6 +151,7 @@ In these types of algorithms, some linguistic and grammar knowledge needs to be 
 
 For lemmatization algorithms to perform accurately, they need to extract the correct lemma of each word. Thuz, they often require a _dictionary_ of the language to be able to categorize each word correctly.
 
+
 ## Keyword extraction
 
 Keyword extraction (keyword detection or keyword analysis) is an NLP technique used for text analysis. 
@@ -143,6 +159,7 @@ Keyword extraction (keyword detection or keyword analysis) is an NLP technique u
 This main purpose of keyword extraction (KE) is to automatically extract the most frequent words and expressions from the body of a text. 
 
 KE is often used as a first step to summarize the main ideas of a text and to deliver the key ideas presented in the text.
+
 
 ## Named Entity Recognition (NER)
 
@@ -153,13 +170,15 @@ NER algorithm has mainly two steps.
   1. It needs to detect an entity in the text
   2. It categorizes the text into one category. 
 
-The performance of NER depends heavily on the training data used to develop the model. The more relevant the training data to the actual data, the more accurate the results will be.
+The performance of NER depends heavily on the training data used to develop the model. The more relevant the training data to the actual data, the more accurate the results will
+be.
 
 ## Topic Modeling
 
 You can use keyword extraction techniques to narrow down a large body of text to a handful of main keywords and ideas. Then, you can extract the main topic of the text.
 
 Another, more advanced technique to identify a the topic of text is topic modeling which is built upon unsupervised machine learning that does not require a labeled data for training.
+
 
 ## Summarization
 
@@ -196,13 +215,17 @@ If the result is a negative number, the sentiment behind the text has a negative
 
 [Keras Code Examples](https://keras.io/examples/)
 
+
 ----------
+
 
 [Twitter Sentiment Analysis using NLTK and Python](https://towardsdatascience.com/twitter-sentiment-analysis-classification-using-nltk-python-fa912578614c)
 
 [Classifying Tweets for Sentiment Analysis: NLP in Python for Beginners](https://medium.com/vickdata/detecting-hate-speech-in-tweets-natural-language-processing-in-python-for-beginners-4e591952223)
 
 [Tweet Classification and Clustering in Python](https://medium.com/swlh/tweets-classification-and-clustering-in-python-b107be1ba7c7)
+
+[Identifying Tweet Sentiment in Python](https://towardsdatascience.com/identifying-tweet-sentiment-in-python-7c37162c186b)
 
 
 ### Sentiment Analysis using AutoML
@@ -213,7 +236,9 @@ If the result is a negative number, the sentiment behind the text has a negative
 
 [Natural Language Processing Tutorial (NLP101) - Level Beginner](http://www.pycaret.org/tutorials/html/NLP101.html)
 
+
 ----------
+
 
 [Complete Guide to Perform Classification of Tweets with SpaCy](https://towardsdatascience.com/complete-guide-to-perform-classification-of-tweets-with-spacy-e550ee92ca79)
 
