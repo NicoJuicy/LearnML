@@ -1,4 +1,24 @@
 # Computer Vision
+<!-- MarkdownTOC -->
+
+- What is Image Recognition?
+- Overview
+- Image Data Loading
+    - NHWC vs HCHW
+- Object Recognition
+- Object Classification
+- Object Detection
+- Object Detection Examples
+- Keras Examples
+- Code Snippets
+    - Reading an image
+    - Showing multiple images in a grid
+- VGG
+- Residual Networks \(ResNet\)
+    - Residual Block
+- References
+
+<!-- /MarkdownTOC -->
 
 Computer Vision (CV) is defined as a field of study that seeks to develop techniques to help computers “see” and understand the content of digital images such as photographs and videos.
 
@@ -62,7 +82,7 @@ The following sections discuss several important CV concepts:
 You will often encounter obscure image format issues going between Linux and macOS (NHWC vs HCHW).
 
 
-## Object Recognition 
+## Object Recognition
 
 _Object recognition_ is a general term to describe a collection of related computer vision tasks that involve identifying objects in digital images.
 
