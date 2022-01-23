@@ -117,10 +117,13 @@ Most of the recent innovations in image recognition problems have come as part o
 
 [How to Develop a CNN to Classify Satellite Photos](https:/low /machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-satellite-photos-of-the-amazon-rainforest/)
 
+[Fixed Feature Extractor as the Transfer Learning Method for Image Classification Using MobileNet](https://audhiaprilliant.medium.com/fixed-feature-extractor-as-the-transfer-learning-method-for-image-classification-using-mobilenet-b26376e25d49)
+
+
 
 ## Object Detection
 
-The approach will depend on the goal but most common object detection projects are classification (object detection) apps which try to determine the counts of types of objects (pedestrian/vehicle).
+The approach will depend on the goal but most common object detection projects are classification apps which try to determine the counts of types of objects (pedestrian/vehicle).
 
 Object detection involves identifying the presence, location, and type of one or more objects in a given photograph.
 
@@ -131,7 +134,10 @@ Object detection combines all these tasks and draws a bounding box around each o
 
 Yolo is the latest approach to object detection and there is a version that can run on raspi. 
 
-Yolo is supposed to be easier to setup/use and have faster performance.  
+Yolo is supposed to be easier to setup/use and have faster performance
+.  
+
+## Object Detection Examples
 
 [How to Train an Object Detection Model with Keras](https://machinelearningmastery.com/how-to-train-an-object-detection-model-with-keras/)
 
@@ -142,13 +148,28 @@ Yolo is supposed to be easier to setup/use and have faster performance.
 
 [Vehicle Detection and Tracking using Machine Learning and HOG](https://towardsdatascience.com/vehicle-detection-and-tracking-using-machine-learning-and-hog-f4a8995fc30a?gi=b793ee27f135)
 
+[Training a model for custom object detection (TF 2.x) on Google] Colab](https://techzizou007.medium.com/training-a-model-for-custom-object-detection-tf-2-x-on-google-colab-4507f2cc6b80)
+
 [Object tracking using YOLOv4 and TensorFlow](https://pythonawesome.com/object-tracking-implemented-with-yolov4-and-tensorflow/)
 
 
 [How to Perform Object Detection with Mask R-CNN](https://machinelearningmastery.com/how-to-perform-object-detection-in-photographs-with-mask-r-cnn-in-keras/)
 
-[How to Perform Object Detection With YOLOv3 in Keras](https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/)
 
+## Keras Examples
+
+[Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
+
+[Working with preprocessing layers](https://keras.io/guides/preprocessing_layers/)
+
+[Transfer learning & fine-tuning](https://keras.io/guides/transfer_learning/)
+
+
+[3D image classification from CT scans](https://keras.io/examples/vision/3D_image_classification/)
+
+
+
+----------
 
 
 ## Code Snippets

@@ -2,6 +2,13 @@
 
 Here is a collection of some resources for ML datasets.
 
+[Google Dataset Search](https://datasetsearch.research.google.com)
+
+[HuggingFace Datasets](https://github.com/huggingface/datasets)
+
+[The Best Data is Free Data](https://towardsdatascience.com/the-best-data-is-free-data-of-course-b88230b5b47f)
+
+
 ### [Internet Archive](https://web.archive.org)
 
 Many developers are too quick to choose web crawling as an option to collect data when there are easier, more ethical resources available such as the internet archive. 
