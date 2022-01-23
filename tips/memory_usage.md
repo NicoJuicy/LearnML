@@ -1,7 +1,23 @@
 # Memory Usage Tips
 
-Here are some resources to evaluate Python memory usage.
+<!-- MarkdownTOC -->
 
+- Effective use of Data Types
+  - Numerical Features
+  - DateTime
+  - Categorical
+    - Better performance with categoricals
+    - Categorical Methods
+  - Creating dummy variables for modeling
+  - Converting Between String and Datetime
+  - Typecasting while Reading Data
+- How to Profile Memory Usage?
+- Optimize Your Python Code
+- References
+
+<!-- /MarkdownTOC -->
+
+Here are some resources to evaluate Python memory usage.
 
 ## Effective use of Data Types
 
@@ -29,13 +45,140 @@ By default, datetime columns are assigned as object data types that can be downg
 
 ### Categorical
 
-Pandas assign non-numerical feature columns as object data types which can be downgraded to category data types. 
+Pandas assign non-numerical feature columns as object data types which can be downgraded to category data types.
 
 The non-numerical feature column usually has categorical variables which are mostly repeating. 
 
 For example, the gender feature column has just 2 categories ‘Male’ and ‘Female’ that are repeating over and over again for all the instances which are re-occupying the space. 
 
 Assigning gender to category datatype is a more compact representation.
+
+**Better performance with categoricals**
+
+If you do a lot of analytics on a particular dataset, converting to categorical can yield substantial overall performance gains. 
+
+A categorical version of a DataFrame column will often use significantly less memory.
+
+#### Better performance with categoricals
+
+If you do a lot of analytics on a particular dataset, converting to categorical can yield substantial overall performance gains. A categorical version of a DataFrame column will often use significantly less memory, too.
+
+#### Categorical Methods
+
+Series containing categorical data have several special methods similar to the `Series.str` specialized string methods. This also provides convenient access to the categories and codes. 
+
+The special attribute cat provides access to categorical methods:
+
+```py
+  s = pd.Series(['a', 'b', 'c', 'd'] * 2)
+  
+  cat_s = s.astype('category')
+  cat_s.cat.codes
+  cat_s.cat.categories
+  
+  
+  actual_categories = ['a', 'b', 'c', 'd', 'e']
+
+  cat_s2 = cat_s.cat.set_categories(actual_categories)
+  cat_s2.value_counts()
+```
+
+In large datasets, categoricals are often used as a convenient tool for memory savings and better performance. After you filter a large DataFrame or Series, many of the categories may not appear in the data.
+
+```py
+  cat_s3 = cat_s[cat_s.isin(['a', 'b'])]
+  cat_s3.cat.remove_unused_categories()
+```
+
+Table 12-1: Categorical methods for Series in pandas
+
+### Creating dummy variables for modeling
+
+When using statistics or machine learning tools, we usually transform categorical data into dummy variables callwd _one-hot encoding_ which involves creating a DataFrame with a column for each distinct category; these columns contain 1s for occurrences of a given category and 0 otherwise.
+
+```py
+  cat_s = pd.Series(['a', 'b', 'c', 'd'] * 2, dtype='category')
+
+  pd.get_dummies(cat_s)
+```
+
+11. Time Series
+
+11.1 Date and Time Data Types and Tools
+
+11.2 Time Series Basics
+
+11.3 Date Ranges, Frequencies, and Shifting
+
+11.5 Periods and Period Arithmetic
+
+11.6 Resampling and Frequency Conversion
+
+11.7 Moving Window Functions
+
+Table 11-1: Types in datetime module
+
+Table 11-2: Datetime format specification (ISO C89 compatible)
+
+Table 11-3: Locale-specific date formatting
+
+Table 11-4: Base time series frequencies (not comprehensive)
+
+Table 11-5. Resample method arguments
+
+
+### Converting Between String and Datetime
+
+You can format datetime objects and pandas Timestamp objects as strings using `str` or the `strftime` method passing a format specification. 
+
+```py
+  stamp = datetime(2011, 1, 3)
+
+  str(stamp)
+  stamp.strftime('%Y-%m-%d')
+```
+
+You can use many of the same format codes to convert strings to dates using `datetime.strptime`. 
+
+```py
+  value = '2011-01-03'
+
+  datetime.strptime(value, '%Y-%m-%d')
+
+  datestrs = ['7/6/2011', '8/6/2011']
+
+  [datetime.strptime(x, '%m/%d/%Y') for x in datestrs]
+```
+
+pandas is generally oriented toward working with arrays of dates whether used as an axis index or a column in a DataFrame. 
+
+The `to_datetime` method parses many different kinds of date representations. It also handles values that should be considered missing (None, empty string, etc.). 
+
+NaT (Not a Time) is pandas’s null value for timestamp data.
+
+
+12.2 Advanced GroupBy Use
+
+12.3 Techniques for Method Chaining
+
+The pipe Method
+
+You can accomplish a lot with built-in pandas functions and the approaches to method chaining with callables that we just looked at. 
+
+Sometimes you need to use your own functions or functions from third-party libraries. 
+
+```py
+  a = f(df, arg1=v1)
+  b = g(a, v2, arg3=v3)
+  c = h(b, arg4=v4)
+
+  result = (df.pipe(f, arg1=v1)
+            .pipe(g, v2, arg3=v3)
+            .pipe(h, arg4=v4))
+```
+
+The statement `f(df)` and `df.pipe(f)` are equivalent but `pipe` makes chained invocation easier.
+
 
 ### Typecasting while Reading Data
 
@@ -133,6 +276,8 @@ This is because the dictionaries use hash tables to store the elements which hav
 
 
 ## References
+
+W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018. 
 
 [Try These 5 Tips To Optimize Your Python Code](https://towardsdatascience.com/try-these-5-tips-to-optimize-your-python-code-c7e0ccdf486a?source=rss----7f60cf5620c9---4)
 

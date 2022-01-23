@@ -11,7 +11,7 @@
 - Bayes’ Rule \(Theorem\)
 - General form of Bayes' Rule
 - Independence
-- Reasoning under Uncertainty \(Chapters 13 and 14.1 - 14.4\)
+- Reasoning under Uncertainty
 - Why Reason Probabilistically?
 - Axioms of Probability Theory
 - Joint Probability Distribution
@@ -25,6 +25,9 @@
   - Example
 - The specific case of Figure 14.2
 - Example on p. 514
+- Terminology
+  - Binomial Distribution
+  - Code Samples
 - References
 
 <!-- /MarkdownTOC -->
@@ -73,7 +76,7 @@ The following are the three axioms of probability theory:
 
   3. P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
 
-If A and B are disjoint (A ∩ B = ∅), then P(A ∪ B) = P(A) + P(B)
+If A and B are disjoint (A ∩ B = ∅) then P(A ∪ B) = P(A) + P(B)
 
 Two events A and B are _independent_ iff P(A ∩ B) = P(A) P(B)
 
@@ -189,7 +192,9 @@ A and B are _conditionally independent_ given C iff
 ----------------------------------
 
 
-# [Reasoning under Uncertainty (Chapters 13 and 14.1 - 14.4)](http://pages.cs.wisc.edu/~dyer/cs540/notes/uncertainty.html)
+# Reasoning under Uncertainty
+
+[Reasoning under Uncertainty (Chapters 13 and 14.1 - 14.4)](http://pages.cs.wisc.edu/~dyer/cs540/notes/uncertainty.html)
 
 
 ## Why Reason Probabilistically?
@@ -277,7 +282,7 @@ Using the table above, we can compute
 
   P(Bird=T) = P(B) = 0.0 + 0.2 + 0.04 + 0.01 = 0.25
 
-  P(Bird=T, Flier=F) = P(B,~F) = P(B,~F,Y) + F(B,~F,~Y) = 0.04 + 0.01 = 0.05
+  P(Bird=T, Flier=F) = P(B,~F) = P(B,~F,Y) + P(B,~F,~Y) = 0.04 + 0.01 = 0.05
 
 
 ## Conditional Probabilities
@@ -374,7 +379,9 @@ where α is the normalization constant needed to make the entries in P(Y|X) sum 
 ----------
 
 
-# [Conditional Independence in General](http://www.cs.columbia.edu/~kathy/cs4701/documents/conditional-independence-bn.txt)
+# Conditional Independence in General
+
+[Conditional Independence in General](http://www.cs.columbia.edu/~kathy/cs4701/documents/conditional-independence-bn.txt)
 
 Conditional independence of two random variables A and B given C holds just in case
 
@@ -560,7 +567,7 @@ This gives us the following table:
 ```
   B E A  p(B,E|A)
   0 0 0  0.998517709903
-  0 0 1  0.39619510404      (uh-oh, trigger-happy alarm!)
+  0 0 1  0.39619510404      (trigger-happy alarm!)
   0 1 0  0.00142215878008
   0 1 1  0.230253667678
   1 0 0  6.00310646925e-05
@@ -656,7 +663,69 @@ Section 14.4 explains how to do this but also describes methods that are much mo
 
 
 
+## Terminology
+
+Some of the basic terminology and concepts of probability distribution.
+
+**Random Experiment:** A random experiment is an experiment for which we cannot predict the output with certainty. For example, tossing a coin. We can have two possible outcomes, heads or tails.
+
+**Sample Space:** It is the set of all possible outcomes of an experiment. It is usually represented by ‘S’.
+
+For example, sample space for tossing a coin will be, S = { Heads, Tails }; for tossing two coins, S = {HT, TH, HH, TT}
+
+**Event:** An event is the subset of sample space (S), and is usually useful in calculating probability.
+
+For example, tossing two coins simultaneously and the outcomes which have at least one head, then the set of all such possibilities can be given as: E = { HT, TH }
+
+**Random Variable:** It is a function that maps every outcome in the sample space to real number. Depending upon the values it take, a random variable can be classified into two types, i.e. discrete and continuous.
+
+**Discrete Random Variable:** A discrete random variable can have only finite or countably infinite set of values. Example : For a coin toss either it’ll be heads or tails(binary), number of orders received in a shop(countably infinite).
+
+These are described using probability mass function (PMF) and cumulative distribution function (CDF). PMF is the probability that a random variable X takes a specific value (eg. number of returns in an e-commerce site is 30, P(X = 30).
+
+CDF is the probability that the random variable X will take a values less than or equal to 30, P(X≤ 30).
+
+**Continuous Random Variable:** A continuous random variable can have infinite set of values. Example : Attrition percentage in a company.
+
+These are described using probability density function (PDF) and cumulative distribution function (CDF). 
+
+PDF is the probability that the continuous random variable will take in the neighborhood of x.
+
+Figure: Probability Density Function
+
+CDF is the probability that random variable will take the value less than or equal to value ‘z’.
+
+Figure: Cumulative Distribution Function
+
+
+### Binomial Distribution
+
+A binomial distribution is a discrete probability distribution in which the random variable can have only two outcomes, pass or fail. 
+
+The probability of pass is p and for fail is (1-p). 
+
+Examples are customer churn, loan default ( default / no default), and coin toss (heads / tails).
+
+### Code Samples
+
+On any particular day in a bank about 20% of their loan repayment is defaulted. 
+
+On one specific day, 25 customers are to repay their loan. 
+
+We can calculate the following:
+
+1. Probability that exactly 10 customers will default.
+
+2. Probability that a maximum of 10 customers will default.
+
+3. Probability that more than 10 customers will default.
+
+
+
 ## References
 
+[Probability Distribution : A Brief Introduction](https://medium.com/@the.erised/probability-distribution-a-brief-introduction-55cc11148f35)
+
 [What does RMSE really mean?](https://towardsdatascience.com/what-does-rmse-really-mean-806b65f2e48e
+
 

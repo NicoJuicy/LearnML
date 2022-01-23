@@ -3,7 +3,6 @@
 - Dimensionality Reduction
   - What is Dimensionality Reduction?
   - The Curse of Dimensionality
-  - Feature Selection and Feature Engineering for dimensionality reduction
 - Techniques for Dimensionality Reduction
   - What is data mining?
   - What is Dimensional Reduction?
@@ -169,7 +168,7 @@ In Python’s scikit-learn, we can use the StandardScaler function to ensure all
 
 First, the LDA algorithm computes the separability between classes. Second, it computes the distance between the sample of each class and the mean. Finally, it produces the dataset in a lower-dimensionality space.
 
-- **Singular Value Composition (SVD)** extracts the most important features from the dataset which is popular because is based on simple, interpretable linear algebra models.
+- **Singular Value Composition (SVD)** extracts the most important features from the dataset which is popular because it is based on simple, interpretable linear algebra models.
 
 
 ## Manifold Learning

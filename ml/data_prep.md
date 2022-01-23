@@ -7,7 +7,6 @@
 <!-- MarkdownTOC levels=1,2,3 -->
 
 - Overview
-- Exploratory Data Analysis \(EDA\)
 - Data Preparation
     - Import data
     - Format adjustments
@@ -56,6 +55,7 @@
     - Categorical Data
     - Scaling
     - Train-Test Split
+- References
 
 <!-- /MarkdownTOC -->
 
@@ -79,16 +79,20 @@ Exploratory Data Analysis (EDA) is crucial: summary stats and making plots of th
 NOTE: It is estimated that 80% of AI project development time is spent on preparing the data [1]. 
 
 
-## Exploratory Data Analysis (EDA)
-
-[11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
-
-Exploratory Data Analysis (EDA) is one of the first steps of the data science process which involves learning how to extract information from descriptive (summary) statistics. 
-
 
 ## Data Preparation
 
 The [Data Science Primer](https://elitedatascience.com/primer) covers exploratory analysis, data cleaning, feature engineering, algorithm selection, and model training.
+
+7.1 Handling Missing Data
+7.2 Data Transformation
+7.3 String Manipulation
+
+8.2 Combining and Merging Datasets
+8.3 Reshaping and Pivoting
+
+10. Data Aggregation and Group Operations
+
 
 ### Import data
 
@@ -98,7 +102,7 @@ The [Data Science Primer](https://elitedatascience.com/primer) covers explorator
 
 - Split data along delimiters (CSV)
 
-- Extract parts from data entries (Do you only need a part of a certain attribute?)
+- Extract parts from data entries (Do you only need part of a certain attribute?)
 
 - Remove leading and trailing spaces
 
@@ -108,7 +112,7 @@ The [Data Science Primer](https://elitedatascience.com/primer) covers explorator
 
 - Replace unrecognizable or corrupted characters
 
-- Check for truncated entries (data entries are cut off at a certain position)
+- Check for truncated entries (data entries that are cut off at a certain position)
 
 ### Correct inconsistencies
 
@@ -136,15 +140,10 @@ The [Data Science Primer](https://elitedatascience.com/primer) covers explorator
 Data cleaning refers to identifying and correcting errors in the dataset that may negatively impact a predictive model.
 
 - Identify Columns That Contain a Single Value
-
 - Delete Columns That Contain a Single Value
-
 - Consider Columns That Have Very Few Values
-
 - Remove Columns That Have A Low Variance
-
 - Identify Rows that Contain Duplicate Data
-
 - Delete Rows that Contain Duplicate Data
 
 Data cleaning also includes the following [2]:
@@ -196,8 +195,8 @@ Check for null values. We can drop or fill the `NaN` values.
     # Drop the NaN
     df['col_name'] = df['col_name'].dropna(axis=0, how="any")
 
-     # check NaN again
-     df['col_name'].isnull().sum() 
+    # check NaN again
+    df['col_name'].isnull().sum() 
 ```
 
 The removal of samples or dropping of feature columns may not feasible because we might lose too much valuable data. 
@@ -218,6 +217,7 @@ One of the most common interpolation techniques is _mean imputation_ where we si
 - Cap: Using an arbitrary value or a value from a variable distribution to replace the maximum and minimum values.
 
 - Discretize: Converting continuous variables into discrete values. 
+
 
 
 ## Encoding Categorical Features
@@ -578,7 +578,7 @@ We can apply standardization using `StandardScaler` class from sklearn.
     scaled = scaler.fit_transform(data)
 ```
 
-We can apply the standardization in Pandas using the `.min()` and `.max()` methods which preserves the column headers/names.
+We can apply the standardization in Pandas using the `.mean()` and `.std()` methods which preserves the column headers/names.
 
 ```py
     # copy the data
@@ -981,3 +981,7 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [How to Configure k-Fold Cross-Validation](https://machinelearningmastery.com/how-to-configure-k-fold-cross-validation/)
 
+
+## References
+
+W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018. 

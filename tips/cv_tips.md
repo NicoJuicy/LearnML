@@ -1,7 +1,30 @@
-# Computer Visiok Tips
+# Computer Vision Tips
+
+<!-- MarkdownTOC -->
+
+- Data Augmentation for MNIST
+- MNIST Image Augmentation Using Tensorflow
+  - Step 1: Import the MNIST dataset
+  - Step 2: Identify and Plot Baseline Digits Using Matplotlib
+  - Step 3:  Understand Image Augmentation and Techniques Relevant To MNIST
+    - Overlay Images
+  - Step 4: Augment The MNIST Dataset
+- Command-line Snippets
+- Video/Image manipulation using ffmpeg
+  - Check video duration
+  - Convert video format
+  - Generate dataset from videos
+  - Generate a sequence of frames
+  - Crop a bounding box of video
+- Stack Videos
+- Medical Image Overview
+- Medical Image Examples
+- References
+
+<!-- /MarkdownTOC -->
 
 
-## Data Augmentation
+## Data Augmentation for MNIST
 
 [Improving Classification accuracy on MNIST using Data Augmentation](https://towardsdatascience.com/improving-accuracy-on-mnist-using-data-augmentation-b5c38eb5a903?gi=916228e35c66)
 
@@ -10,23 +33,16 @@ We can write a method to shift the images in all four directions by the given or
 We will shift the images to each of the four directions by one pixel and generate four more images from a single image.
 
 
-## Image Data Pipeline
-
-[Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
-
-We can build better and faster image pipelines using `tf.data`. 
-
-While training a neural network, it is quite common to use `ImageDataGenerator` class to generate batches of tensor image data with real-time data augmentation, but the `tf.data` API can be used to build a faster input data pipeline with reusable pieces.
-
-
 ----------
 
 
-# Augment MNIST Dataset Using Tensorflow
+# MNIST Image Augmentation Using Tensorflow
 
 [How To Augment the MNIST Dataset Using Tensorflow](https://medium.com/the-data-science-publication/how-to-augment-the-mnist-dataset-using-tensorflow-4fbf113e99a0)
 
-### Step 1: Importing the MNIST dataset
+In this tutorial, we will use the `ImageDataGenerator` class in the `tensorflow.keras` python library. 
+
+### Step 1: Import the MNIST dataset
 
 In step 1, we will import the MNIST dataset using the tensorflow library. The imported dataset will be divided into train/test and input/output arrays.
 
@@ -49,9 +65,7 @@ Realistically, hand-written digits will seldom meet these criteria in real-world
 
 To create a robust digit recognition model, it is in your interest to augment the MNIST dataset and capture these types of behavior. 
 
-We discuss the various types of augmentation techniques we can use to enhance the MNIST digit dataset. 
-
-In this tutorial, we will use the `ImageDataGenerator` class available in the `tensorflow.keras` python library. 
+We discuss the various types of augmentation techniques we can use to enhance the MNIST digit dataset using the Keras `ImageDataGenerator` class. 
 
 - Rotate
 - Shift
@@ -77,7 +91,7 @@ This method can also be used in conjunction with existing forms of data augmenta
 
 _ColorJitter_ is another simple type of image data augmentation where we randomly change the brightness, contrast, and saturation of the image. 
 
-### Overlay Images
+#### Overlay Images
 
 Sometimes, we need to add a background to an existing image for formatting purposes. For instance, by padding a solid color as margins, we can make many images of different sizes become the same shape. Several techniques are relevant here.
 
@@ -89,7 +103,7 @@ Finally, we can combine all of the previously mentioned transformations to obtai
 ----------
 
 
-## Command-line
+## Command-line Snippets
 
 ```py
 # Check dimensions of images
@@ -111,6 +125,8 @@ for img_path in images:
   # count of PNG files
   find -name *.png -type | wc -l
 ```
+
+----------
 
 
 ## Video/Image manipulation using ffmpeg
@@ -174,8 +190,13 @@ where
 - 2x2 grid stacking with xstack
 
 
+----------
 
-## Medical Images
+
+
+## Medical Image Overview
+
+[AI in Medical Diagnosis — Dealing with Medical Datasets](https://towardsdatascience.com/ai-in-medical-diagnosis-dealing-with-medical-datasets-b746e8bda9e5)
 
 [Medical Image Dataloaders in TensorFlow 2.x](https://towardsdatascience.com/medical-image-dataloaders-in-tensorflow-2-x-ee5327a4398f)
 
@@ -183,24 +204,19 @@ where
 
 [Computer Vision Feature Extraction 101 on Medical Images](https://towardsdatascience.com/computer-vision-feature-extraction-101-on-medical-images-part-1-edge-detection-sharpening-42ab8ef0a7cd)
 
+
+## Medical Image Examples
+
 [Chest X-ray & Pneumonia: Deep Learning with TensorFlow](https://towardsdatascience.com/chest-x-ray-pneumonia-deep-learning-with-tensorflow-a58a9e6ade70)
-
-[AI in Medical Diagnosis — Dealing with Medical Datasets](https://towardsdatascience.com/ai-in-medical-diagnosis-dealing-with-medical-datasets-b746e8bda9e5)
-
-[Compositional Breast Imaging with Artificial Intelligence to Improve Cancer Detection](https://towardsdatascience.com/compositional-breast-imaging-with-artificial-intelligence-to-improve-cancer-detection-c5f8f38f2266?source=rss----7f60cf5620c9---4)
 
 [Artificial intelligence for lung disease detection using chest CT scan images](https://medium.com/@atashnezhad1/artificial-intelligence-for-lung-disease-detection-using-chest-ct-scan-images-47e8ff279ce0)
 
+[Compositional Breast Imaging with Artificial Intelligence to Improve Cancer Detection](https://towardsdatascience.com/compositional-breast-imaging-with-artificial-intelligence-to-improve-cancer-detection-c5f8f38f2266?source=rss----7f60cf5620c9---4)
+
+
+
 
 ## References
-
-[Image Processing and Data Augmentation Techniques for Computer Vision](https://towardsdatascience.com/image-processing-techniques-for-computer-vision-11f92f511e21)
-
-[Data Augmentation Compilation with Python and OpenCV](https://towardsdatascience.com/data-augmentation-compilation-with-python-and-opencv-b76b1cd500e0)
-
-[5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
-
-[5 Useful Image Manipulation Techniques Using Python OpenCV](https://betterprogramming.pub/5-useful-image-manipulation-techniques-using-python-opencv-505492d077ef)
 
 [Achieving 95.42% Accuracy on Fashion-Mnist Dataset](https://secantzhang.github.io/blog/deep-learning-fashion-mnist)
 

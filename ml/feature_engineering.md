@@ -4,19 +4,20 @@
 
 - Overview
 - Dimensionality Reduction
+- Feature Selection and Feature Engineering
 - Feature Importance
     - Dataset loading and preparation
-    - Method 1: Obtain importances from correlation coefficients
-    - Method 2: Obtain importances from a tree-based model
-    - Method 3: Obtain importances from PCA loading scores
+    - Feature Importance Techniques
 - Feature Engineering Techniques
 - Transform Target Variables for Regression
     - Importance of Data Scaling
     - How to Scale Target Variables?
     - Automatic Transform of the Target Variable
     - Complete Regression Example
+- Feature Selection in Scikit-learn
 - References
     - Time Series Data Preparation
+- References
 
 <!-- /MarkdownTOC -->
 

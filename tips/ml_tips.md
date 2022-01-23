@@ -12,6 +12,7 @@
   - A/B test
 - Monitoring the model
 - Improve Python Performance
+- Larger than Memory Datasets
 - References
 
 <!-- /MarkdownTOC -->
@@ -115,17 +116,38 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
   # conda install tensorflow -c intel
 ```
 
+```py
+  # Intel Extension for Scikit-learn
+  conda install -c conda-forge scikit-learn-intelex
+
+  from sklearnex import patch_sklearn
+  patch_sklearn()
+```
+
 [Intel Extension for Scikit-learn](https://intel.github.io/scikit-learn-intelex/index.html#intelex)
 
 [Installing Intel Distribution for Python and Intel Performance Libraries with Anaconda](https://www.intel.com/content/www/us/en/developer/articles/technical/using-intel-distribution-for-python-with-anaconda.html)
 
 [Intel Optimization for TensorFlow Installation Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/optimization-for-tensorflow-installation-guide.html)
 
+----------
+
 [A simple guide to speed up your training in TensorFlow 2](https://blog.seeso.io/a-simple-guide-to-speed-up-your-training-in-tensorflow-2-8386e6411be4?gi=55c564475d16)
 
 [Accelerate your training and inference running on Tensorflow](https://towardsdatascience.com/accelerate-your-training-and-inference-running-on-tensorflow-896aa963aa70)
 
 [Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
+
+
+
+## Larger than Memory Datasets
+
+[4 Python Libraries that Make It Easier to Work with Large Datasets](https://towardsdatascience.com/4-python-libraries-that-ease-working-with-large-dataset-8e91632b8791)
+
+- Read using Pandas in Chunks
+- Dask
+- Modin
+- Vaex
 
 
 

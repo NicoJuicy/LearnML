@@ -21,6 +21,10 @@ The process of searching for optimal hyperparameters is called hyperparameter tu
 
 Hypertuning helps boost performance and reduces model complexity by removing unnecessary parameters (e.g., number of units in a dense layer).
 
+
+> The first rule of optimization is to not do it. If you really have to then use profiling tools to find bottlenecks and optimize where appropriate.
+
+
 There are two types of hyperparameters:
 
 - Model hyperparameters: influence model architecture (such as number and width of hidden layers in a DNN)
