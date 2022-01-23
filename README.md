@@ -1,6 +1,28 @@
 # LearnML
 
-If you are like me and try to follow the principles of DRY, KISS, Deaign Patterns, and Occam’s Razor then this repo is for you!
+<!-- MarkdownTOC -->
+
+- Background
+- Table of Contents
+    - Artificial Intelligence
+    - Checklists
+    - ML Guides
+    - Code Samples
+    - Background
+    - Machine Learning
+    - Feature Engineering
+    - Dataset Issues
+    - Computer Vision
+    - Deep Learning
+    - Natural Language Processing
+    - Reinforcement Learning
+    - Time Series
+    - Tips
+- References
+
+<!-- /MarkdownTOC -->
+
+If you are like me and try to follow the principles of DRY, KISS, GoF Design Patterns, Occam’s Razor, and other [software engineering best practices](https://www.computer.org/education/bodies-of-knowledge/software-engineering) then this repo is for you!
 
 > Occam’s Razor: The simplest model that fits your data is usually the best. 
 
@@ -12,15 +34,18 @@ Scrum is a popular project management approach but not really a software develop
 
 This repo contains notes from various articles and other resources on a variety of topics in Artificial Intelligence (AI) and Machine Learning (ML). 
 
-This is a work in progress (just getting started), so there is still#  a lot missing and the content is changing. 
+This is a work in progress (just getting started), so there is still a lot missing and the content is changing. 
 
 [Medium Articles](https://aicoder.medium.com/)
 
 [How to Learn AI/ML](./how_to_learn.md)
 
-[Getting Started](https://aicoder.medium.com/getting-started-cd1f1534e048)
+[Getting Started](https://medium.com/codex/getting-started-with-ai-13eafc77ac8e)
 
-**NOTE:** The Medium and TowardsDataSciene articles can be viewed in a browser Private tab. 
+[GitHub Lists](https://github.com/codecypher?tab=stars)
+
+
+**NOTE:** The Medium and TowardsDataSciene articles can be viewed in a browser Private tab without a subscription. 
 
 
 ## Table of Contents
@@ -183,5 +208,5 @@ TODO: Add items
 
 [1] I.  Sommerville, Software Engineering 10th ed., Pearson, ISBN: 978-0133943030, 2015. 
 
-[2] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge (SWEBOK) v. 3, IEEE, 2014. 
+[2] P. Bourque and R. E. Fairley, [Guide to the Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering), v. 3, IEEE, 2014. 
 
