@@ -154,8 +154,7 @@ Object detection combines all these tasks and draws a bounding box around each o
 
 Yolo is the latest approach to object detection and there is a version that can run on raspi. 
 
-Yolo is supposed to be easier to setup/use and have faster performance
-.  
+Yolo is supposed to be easier to setup/use and have faster performance.
 
 ## Object Detection Examples
 
