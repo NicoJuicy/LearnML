@@ -1,5 +1,26 @@
 # Deep Learning
 
+<!-- MarkdownTOC -->
+
+- Challenge of Training Deep Learning Neural Networks
+    - Neural Networks Learn a Mapping Function
+    - Navigating the Non-Convex Error Surface
+    - Components of the Learning Algorithm
+    - Decrease Neural Network Size and Maintain Accuracy
+    - Number of hidden layers and nodes
+    - Batch size
+- Encoder-Decoder
+- Attention
+- Transformer
+    - The Transformer Attention Mechanism
+- Transfer Learning
+    - Transfer learning types
+- Examples
+- References
+
+<!-- /MarkdownTOC -->
+
+
 ## Challenge of Training Deep Learning Neural Networks
 
 [A Gentle Introduction to the Challenge of Training Deep Learning Neural Network Models](https://machinelearningmastery.com/a-gentle-introduction-to-the-challenge-of-training-deep-learning-neural-network-models/)
@@ -101,7 +122,7 @@ There are some hyperparameterss that often have optimal values in base 2 such as
 ----------
 
 
-## Encoder-Decoder 
+## Encoder-Decoder
 
 The Encoder-Decoder architecture is a way of organizing recurrent neural networks for sequence prediction problems that have a variable number of inputs, outputs, or both inputs and outputs.
 
@@ -145,12 +166,46 @@ Transfer learning is related to problems such as multi-task learning and concept
 
 This form of transfer learning used in deep learning is called inductive transfer. This is where the scope of possible models (model bias) is narrowed in a beneficial way by using a model fit on a different but related task.
 
+### Transfer learning types
+
+In transfer learning, there are three kinds of methods that can be used (depending on the problem statement):
+
+- **Fixed feature extractor:** the pre-trained model is used as a feature extractor in which the weights in the feature extraction layer are frozen while the fully connected layer is removed
+
+- **Fine-tuning:** it uses the architecture of a pre-trained model and initializes the weights in the feature extraction layer. It means the weights in the feature extraction layer are not frozen
+
+- **Hybrid:** the combination between fixed feature extractor and fine-tuning — some layers are frozen while the others are trained (their weights are initialized)
+
+How to choose the method to be used?
+
+
+<div class="image-preview">
+    <img width="600" alt="Transfer learning quadrant" src="https://miro.medium.com/max/1722/1*ZSx3ZsBxs3kE87ybpY4NnA.png" />
+</div>
+
+Figure: Transfer learning quadrant
+
+
+- Quadrant 1: large data size but has a small data similarity. In this case, better if we develop the model from scratch
+
+- Quadrant 2: large data size but has a high data similarity. In this case, we should consider training some layers in the feature extraction layer while the others are frozen. The number of layers is debatable, it depends on the needs
+
+- Quadrant 3: small data size but has a small data similarity. Similar to the quadrant 2 scenario
+
+- Quadrant 4: small data size but has a high data similarity. In this case, we can implement the fixed feature extractor method for transfer learning
+
 
 ## Examples
 
 [Deep Learning with Python: Neural Networks (complete tutorial)](https://towardsdatascience.com/deep-learning-with-python-neural-networks-complete-tutorial-6b53c0b06af0)
 
 [Keras Code Examples](https://keras.io/examples/)
+
+[Training & evaluation with the built-in methods](https://keras.io/guides/training_with_built_in_methods/)
+
+[Working with preprocessing layers](https://keras.io/guides/preprocessing_layers/)
+
+[Transfer learning & fine-tuning](https://keras.io/guides/transfer_learning/)
 
 
 

@@ -1,5 +1,21 @@
 # Guide to Linear Regression
 
+<!-- MarkdownTOC -->
+
+- Exploratory Data Analysis \(EDA\)
+    - Why do we need univariate analysis?
+    - Why do we need correlation analysis?
+- Feature Engineering
+- Model Implementation
+- Model Evaluation
+- Guide to Logistic Regression
+- Terminology
+- Regression Examples
+- Classification Examples
+- References
+
+<!-- /MarkdownTOC -->
+
 Linear regression is a good starting point when dealing with regression problems and can be considered the _baseline_ model. 
 
 Linear regression finds the optimal linear relationship between independent variables and dependent variables in order to make predictions.

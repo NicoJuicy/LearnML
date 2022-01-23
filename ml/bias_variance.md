@@ -1,5 +1,21 @@
 # Bias Variance Trade-off
 
+<!-- MarkdownTOC -->
+
+- Searching for the Optimal Estimator
+- Bias Variance Decomposition
+- Bias
+- Variance
+- Effect of Bias and Variance on the Total Error of your Model
+- What is Bias?
+- How to lower the bias?
+- What is Variance?
+- What is the importance of variance?
+- How to lower the variance?
+- References
+
+<!-- /MarkdownTOC -->
+
 The bias-variance trade-off will help us understand the concepts of models over-fitting and under-fitting to training data.
 
 The processing done by a neuron can be denoted as:

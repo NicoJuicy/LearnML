@@ -1,5 +1,14 @@
 # Statistics
 
+<!-- MarkdownTOC -->
+
+- Correlation
+  - Which method should you use? Pearson or Spearman’s
+- Statistics for Machine Learning
+- References
+
+<!-- /MarkdownTOC -->
+
 Here is a list of the topics covered in the article:
 
 - Descriptive vs Inferential Statistics

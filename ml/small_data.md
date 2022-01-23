@@ -1,5 +1,20 @@
 # Dealing With Small Data
 
+<!-- MarkdownTOC -->
+
+- How to address the problem of less data?
+  - Change the loss function
+  - Anomaly/Change detection
+  - Up-sample or Down-sample
+  - Generate Synthetic Data
+  - Ensembling Techniques
+- Key factors in training Neural Nets with small dataset
+- Ways to overcome optimization difficulties
+- Addressing the lack of Generalization
+- References
+
+<!-- /MarkdownTOC -->
+
 Keep these points in mind when dealing with small data:
 
 - Realize that your model will not generalize that well.

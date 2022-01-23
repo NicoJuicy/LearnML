@@ -1,5 +1,15 @@
 # Anomaly Detection
 
+<!-- MarkdownTOC -->
+
+- Summary
+- Intuitively Measuring and Explaining Performance
+- False Positive and False Negative Rates
+- Methodology
+- References
+
+<!-- /MarkdownTOC -->
+
 ## Summary
 
 - Beyond accuracy, the **False Positive** and **False Negative rates** are ways of assessing performance

@@ -1,5 +1,11 @@
 # GAN Tips
 
+<!-- MarkdownTOC -->
+
+- Generating Synthetic Data
+- Generative Deep Learning
+
+<!-- /MarkdownTOC -->
 
 Since I completed my Master's Thesis on Generative Adversarial Networks (GANs), I thought I would share a few things that I have learned:
 

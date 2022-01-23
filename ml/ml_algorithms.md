@@ -9,6 +9,7 @@
         - Supervised Learning
         - Unsupervised Learning
         - Semi-Supervised Learning
+        - Reinforcement Learning
     - Algorithms Grouped By Similarity
         - Classification Algorithms
             - One-vs-Rest and One-vs-One for Multi-Class Classification

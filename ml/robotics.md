@@ -1,5 +1,19 @@
 ## [Robotics Technology](https://builtin.com/robotics)
 
+<!-- MarkdownTOC -->
+
+- What Is Robotics?
+- Types of Robots
+    - Pre-Programmed Robots
+    - Humanoid Robots
+    - Autonomous Robots
+    - Teleoperated Robots
+    - Augmenting Robots
+- 4 Types of Robots Every Manufacturer Should Know
+
+<!-- /MarkdownTOC -->
+
+
 Robotics is an interdisciplinary sector of science and engineering dedicated to the design, construction and use of mechanical robots. Our guide will give you a concrete grasp of robotics, including different types of robots and how they are being applied across industries.
 
 ### What Is Robotics?

@@ -2,18 +2,24 @@
 
 <!-- MarkdownTOC -->
 
+- Bias vs Variance Tradeoff
 - Machine Learning
+  - Analyze the Data
+  - Process the data
+  - Transform the data
 - Artificial Intelligence
-  - How to Chosose the Right AI Algorithm
-  - Artificial Intelligence Tutorial
+  - How to Choose the Right AI Algorithm
+  - Artificial Intelligence Tutorial : All you need to know about AI
 - Deep Learning
   - Challenges
   - Applications
 - Machine Learning for Humans
-- Neural Networks & Deep Learning
+- Neural Networks and Deep Learning
   - Deep learning applications
 - Reinforcement Learning
-
+- Gradient descent
+- What is online learning?
+- References
 
 <!-- /MarkdownTOC -->
 

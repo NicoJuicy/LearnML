@@ -1,5 +1,19 @@
 # Machine Learning Performance Metrics
 
+<!-- MarkdownTOC -->
+
+- Performance Metrics For Classification
+- Performance Metrics For Regression
+- Confidence Intervals
+  - Classifier Error with Confidence Intervals
+  - Validation Dataset
+  - Confidence Interval Example
+  - Nonparametric Confidence Interval
+- References
+  - Confidence Intervals
+
+<!-- /MarkdownTOC -->
+
 There are several standard methods to evaluate the performance of ML models. In fact, scikit-learn has a plethora of functions for computing performance metrics in the `sklearn.metrics` library. 
 
 ## Performance Metrics For Classification
@@ -19,6 +33,7 @@ Here are the common performance measures for classification problems:
 For a classification problem, it is common to compute all of the following metrics: Accuracy, Precision and Recall, and AUC. 
 
 <img width="405" alt="image" src="https://user-images.githubusercontent.com/2695661/138717691-255e8946-b87f-46fc-9e32-3562a95ec7ae.png">
+
 
 ## Performance Metrics For Regression
 

@@ -1,10 +1,25 @@
 # Deployment
 
+<!-- MarkdownTOC -->
+
+- Deploying, Serving, and Inferencing Models at Scale
+- Observing and Monitoring Model in Production
+- Deployment Examples
+- Deployment Franeworks
+    - Fastapi
+    - gRPC
+- Cloud Services
+    - Streamlit
+    - Deta
+- References
+
+<!-- /MarkdownTOC -->
+
 Consider using model life cycle development and management platforms like MLflow, DVC, Weights & Biases, or SageMaker Studio. And Ray, Ray Tune, Ray Train (formerly Ray SGD), PyTorch and TensorFlow for distributed, compute-intensive and deep learning ML workloads.
 
 NOTE: Consider feature stores as part of your model development process. Look to Feast, Tecton, SageMaker, and Databricks for feature stores. 
 
-## Deploying, Serving and Inferencing Models at Scale
+## Deploying, Serving, and Inferencing Models at Scale
 
 Once the model is trained and tested and meets the business requirements for model accuracy, there are seven crucial requirements for scalable model serving frameworks to consider are:
 
@@ -43,6 +58,63 @@ Model monitoring is critical to model viability in the post deployment productio
 Collectively, these aforementioned monitoring model concepts are called _model observability_ which is important in MLOps best practices. Monitoring the health of data and models should be part of the model development cycle.
 
 NOTE: For model observability look to Evidently.ai, Arize.ai, Arthur.ai, Fiddler.ai, Valohai.com, or whylabs.ai.
+
+
+
+## Deployment Examples
+
+[Serving ML Models with gRPC](https://towardsdatascience.com/serving-ml-models-with-grpc-2116cf8374dd)
+
+[The Nice Way To Deploy An ML Model Using Docker](https://towardsdatascience.com/the-nice-way-to-deploy-an-ml-model-using-docker-91995f072fe8)
+
+[Deploying Your First Machine Learning API using FastAPI and Deta](https://www.kdnuggets.com/2021/10/deploying-first-machine-learning-api.html)
+
+[Deploy MNIST Trained Model as a Web Service using Flask](https://towardsdatascience.com/deploy-mnist-trained-model-as-a-web-service-ba333d233a5d)
+
+
+
+## Deployment Franeworks
+
+### Fastapi
+
+Similar to the flask, fastapi is also a popular framework in Python for web backend development. 
+
+Fastapi focuses on using the least code to write regular Web APIs which is good if backend is not too complex. 
+
+
+### gRPC
+
+The trend now is toward gRPC for microservices since it is more secure, faster, and more robust (especially with IoT).
+
+[gRPC with REST and Open APIs](https://grpc.io/blog/coreos/)
+
+- gRPC was recommended for developing microservices by my professor in Distributed Computing course.
+
+- gRPC uses HTTP/2 which enables applications to present both a HTTP 1.1 REST/JSON API and an efficient gRPC interface on a single TCP port (available for Go). 
+
+- gRPC provides developers with compatibility with the REST web ecosystem while advancing a new, high-efficiency RPC protocol. 
+
+- With the recent release of Go 1.6, Go ships with a stable net/http2 package by default.
+
+
+
+## Cloud Services
+
+### [Streamlit](https://streamlit.io/)
+
+Streamlit is a Python package that makes it very easy to create dashboards and data applications without the need for any front-end programming expertise
+
+All in Python. All for free. No front‑end experience required.
+
+### [Deta](https://www.deta.sh)
+
+Deta is a free, developer friendly cloud platform. 
+
+**Deta Micros** is a service to deploy Python and Node.js apps/APIs on the internet in seconds. 
+
+**Deta Base** is a super easy to use production-grade NoSQL database that comes with unlimited storage.
+
+**Deta Drive** is an easy to use cloud storage solution by Deta – get 10GB for free
 
 
 

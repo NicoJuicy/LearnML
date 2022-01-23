@@ -1,5 +1,26 @@
 # Imbalanced Classification
 
+<!-- MarkdownTOC -->
+
+- Imbalanced Classification Problems
+- Causes of Class Imbalance
+- Challenge of Imbalanced Classification
+- How to Handle Imbalanced Classes?
+    - Can You Collect More Data?
+    - Try Changing Your Performance Metric
+    - Try Different Algorithms
+    - Try a Different Perspective
+    - Accuracy Paradox
+- Handle Imbalanced Classification without Rebalancing
+    - Reasons not to balance your imbalanced data
+    - Conclusion
+- Examples of Imbalanced Classification
+- Naive Classifier
+- Keras Imbalanced Classification
+- References
+
+<!-- /MarkdownTOC -->
+
 An imbalanced classification problem is a problem that involves predicting a class label where the distribution of class labels in the training dataset is skewed (there are many more examples for one class than the other classes). 
 
 Many real-world classification problems have an imbalanced class distribution, so it is important for ML engineers to be familiar with working with these types of problems.

@@ -1,5 +1,22 @@
 # Audio
 
+<!-- MarkdownTOC -->
+
+- Fourier Transforms With scipy.fft: Python Signal Processing
+  - The Fourier Transform
+  - Why Would You Need the Fourier Transform?
+  - Time Domain vs Frequency Domain
+  - Types of Fourier Transforms
+  - Example: Remove Unwanted Noise From Audio
+- Understanding Audio data, Fourier Transform, FFT and Spectrogram features for a Speech Recognition System
+  - 2. Fourier Transform \(FT\)
+  - 3. Fast Fourier Transform \(FFT\)
+  - 4. Spectrogram
+    - Creating and Plotting the spectrogram
+  - 5. Speech Recognition using Spectrogram Features
+
+<!-- /MarkdownTOC -->
+
 ## [Fourier Transforms With scipy.fft: Python Signal Processing](https://realpython.com/python-scipy-fft/)
 
 - The scipy.fft Module

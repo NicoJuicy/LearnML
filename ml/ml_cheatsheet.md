@@ -1,5 +1,29 @@
 # Machine Learning Cheatsheet
 
+<!-- MarkdownTOC -->
+
+- Compute-centric vs Data-centric
+- Maximum Likelihood Estimation
+- Empirical risk minimization
+- Neural Networks
+   - Layers
+      - Convolution
+      - Dropout
+      - Pooling
+   - Loss Functions
+      - Cross-Entropy
+      - Mean Absolute Error \(L1\)
+      - MSE \(L2\)
+   - Optimizers
+      - What is Optimizer?
+   - Regularization
+      - What is overfitting?
+      - What is Regularization?
+   - Architectures
+      - Autoencoder
+      - VAE
+
+<!-- /MarkdownTOC -->
 
 ## Compute-centric vs Data-centric
 
@@ -12,6 +36,25 @@ In the data-centric paradigm, the processing is done locally at the origin of th
 Although we appear to be quickly moving towards a ceiling in the compute-centric paradigm, work in the data-centric paradigm has only just begun.
 
 **Tiny machine learning (tinyML)** is the intersection of machine learning and embedded internet of things (IoT) devices. The field is an emerging engineering discipline that has the potential to revolutionize many industries.
+
+
+## Maximum Likelihood Estimation
+
+In statistics, Maximum Likelihood Estimation (MLE) is a way of finding the best possible parameters which make the observed data most probable by finding parameters θ that maximize the likelihood function.
+
+We can also define the loss function to be a measure of how bad our model is therefore we define loss function as -l(θ).
+
+Now, the problem of MLE is the same as  finding the set of parameters which minimize the Negative Log Likelihood Loss for the Logistic Regression Model.
+
+
+## Empirical risk minimization
+
+In general, the risk cannot be computed because the distribution P(x,y) is unknown to the learning algorithm (referred to as agnostic learning). However, we can compute an approximation called empirical risk by averaging the loss function on the training set. 
+
+The empirical risk minimization principle states that the learning algorithm should choose a hypothesis h which minimizes the empirical risk. 
+
+Thus, the learning algorithm defined by the ERM principle consists in solving the above optimization problem.
+
 
 
 ## Neural Networks

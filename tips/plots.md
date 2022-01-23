@@ -1,5 +1,41 @@
 # Plots and Graphs
 
+<!-- MarkdownTOC -->
+
+- Bokeh and Cufflinks
+  - Import the Dataset
+  - Plotting using Pandas
+  - Plotting using Pandas-Bokeh
+  - Plotting using Cufflinks
+- Seaborn
+  - Import Dataset
+  - Line Plot
+- Seaborn Tips
+  - Changing the Font Size in Seaborn
+- Plotting Multiple Graphs
+  - Import libraries
+  - Load datasets
+  - plt.subplots\(\)
+  - plt.subplot\(\)
+  - Comparison between plt.subplots\(\) and plt.subplot\(\)
+  - plt.tight_layout\(\)
+  - Set title for Figure
+- How To Label The Values Plots With Matplotlib
+- plotnine
+- Data Visualization Packages
+  - AutoViz
+  - Missingno
+  - Yellowbricks
+- Choosing Graphs
+- Trees and Graphs
+- References
+
+<!-- /MarkdownTOC -->
+
+
+Matplolib is the basis of image visualization in Python but there are other alternatives such as seaborn and plotly (which is browser-based).
+
+
 ## Bokeh and Cufflinks
 
 In this section, we discuss two visualization libraries  `pandas_bokeh` and `cufflinks` to create plotly and bokeh charts using the basic pandas plotting syntax. 
@@ -288,12 +324,23 @@ plt.show()
 ```
 
 
+## plotnine
+
+plotnine is the implementation of the R package ggplot2 in Python. 
+
+[Introduction to Plotnine as the Alternative of Data Visualization Package in Python](https://towardsdatascience.com/introduction-to-plotnine-as-the-alternative-of-data-visualization-package-in-python-46011ebef7fe?gi=c5498e05addd)
+
+[ggplot: Grammar of Graphics in Python with Plotnine](https://towardsdatascience.com/ggplot-grammar-of-graphics-in-python-with-plotnine-2e97edd4dacf)
+
+[Why Is ggplot2 So Good For Data Visualization?](https://towardsdatascience.com/why-is-ggplot2-so-good-for-data-visualization-b38705f43f85)
+
+
 ---------
 
 
 ## Data Visualization Packages
 
-In this section, we discuss three visualization python packages to help with data science activities. 
+In this section, we discuss three visualization python packages. 
 
 ### AutoViz
 
@@ -322,6 +369,12 @@ Yellowbrick was developed to help the model selection process using various visu
 [This Is How You Should Be Visualizing Your Data](https://towardsdatascience.com/this-is-how-you-should-be-visualizing-your-data-4512495c007b)
 
 
+## Trees and Graphs
+
+DSPlot is a Python package that draws and renders images of data structures. 
+
+[Visualize Trees and Graphs in Seconds With DSPlot](https://betterprogramming.pub/visualize-trees-and-graphs-in-seconds-with-dsplot-9112f465da8f?source=rss----d0b105d10f0a---4)
+
 
 ## References
 
@@ -333,7 +386,7 @@ Yellowbrick was developed to help the model selection process using various visu
 
 [4 simple tips for plotting multiple graphs in Python](https://towardsdatascience.com/4-simple-tips-for-plotting-multiple-graphs-in-python-38df2112965c)
 
-[](https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1?source=rss----7f60cf5620c9---4)
+[How To Label The Values of Data Points With Matplotlib](https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1?source=rss----7f60cf5620c9---4)
 
 [Top 3 Visualization Python Packages to Help Your Data Science Activities](https://towardsdatascience.com/top-3-visualization-python-packages-to-help-your-data-science-activities-168e22178e53)
 

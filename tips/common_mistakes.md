@@ -1,5 +1,15 @@
 # Common Machine Learning Mistakes
 
+<!-- MarkdownTOC -->
+
+- Put Machine Learning on a pedestal
+- Write Machine Learning Code
+- Doing Things Manually
+- Reinvent Solutions to Common Problems
+- Ignoring the Math
+
+<!-- /MarkdownTOC -->
+
 [Stop Coding Machine Learning Algorithms From Scratch](https://machinelearningmastery.com/dont-implement-machine-learning-algorithms/)
 
 There are five common mistakes that programmers make when getting started in machine learning:

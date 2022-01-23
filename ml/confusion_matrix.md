@@ -1,5 +1,13 @@
 # Confusion Matrix
 
+<!-- MarkdownTOC -->
+
+- Confusion Matrix Terminology
+- ROC Curve
+- References
+
+<!-- /MarkdownTOC -->
+
 A _confusion matrix_ is a table that is often used to describe the performance of a classification model (or classifier) on a set of test data for which the true values are known. 
 
 

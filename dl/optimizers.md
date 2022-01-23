@@ -1,5 +1,16 @@
 # Optimization Functions
 
+<!-- MarkdownTOC -->
+
+- Stochastic Gradient Descent
+- SGDMomentum
+- AdaGrad
+- RMSprop
+- Adam
+- Summary
+
+<!-- /MarkdownTOC -->
+
 [Neural Network Optimizers from Scratch in Python](https://towardsdatascience.com/neural-network-optimizers-from-scratch-in-python-af76ee087aab?source=rss----7f60cf5620c9---4)
 
 This article covers the mathematical expressions of common non-convex optimizers and their Python implementations from scratch . 
@@ -13,9 +24,9 @@ Understanding the math behind these optimization algorithms can help enlighten y
 - Adam
 
 
-## Stochastic Gradient Descent (SGD)
+## Stochastic Gradient Descent
 
-SGD is an iterative, non-convex, and first-order optimization algorithm over the differentiable error surfaces. 
+Stochastic Gradient Descent (SGD) is an iterative, non-convex, and first-order optimization algorithm over the differentiable error surfaces. 
 
 SGD is a stochastic estimation of gradient descent in which the training data is randomized that is a computationally-stable and mathematically well-established optimization algorithm. 
 

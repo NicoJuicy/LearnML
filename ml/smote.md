@@ -1,5 +1,17 @@
 # SMOTE for Imbalanced Classification
 
+<!-- MarkdownTOC -->
+
+- Tutorial Overview
+- Synthetic Minority Oversampling Technique
+- SMOTE for Balancing Data
+- SMOTE for Classification
+- SMOTE With Selective Synthetic Sample Generation
+   - Adaptive Synthetic Sampling \(ADASYN\)
+- Refrences
+
+<!-- /MarkdownTOC -->
+
 [SMOTE for Imbalanced Classification with Python](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
 
 Imbalanced classification involves developing predictive models on classification datasets that have a severe class imbalance.
@@ -24,7 +36,7 @@ This tutorial is divided into five parts:
 
 A problem with imbalanced classification is that there are too few examples of the minority class for a model to effectively learn the decision boundary.
 
-One way to solve this problem is to **oversample **the examples in the minority class which can be achieved by simply duplicating examples from the minority class in the training dataset prior to fitting a model which can balance the class distribution but does not provide any additional information to the model.
+One way to solve this problem is to **oversample** the examples in the minority class which can be achieved by simply duplicating examples from the minority class in the training dataset prior to fitting a model which can balance the class distribution but does not provide any additional information to the model.
 
 An improvement on duplicating examples from the minority class is to _synthesize_ new examples from the minority class which is a type of data augmentation for tabular data and can be very effective.
 

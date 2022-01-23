@@ -1,5 +1,17 @@
 # AI Tips and Tricks
 
+<!-- MarkdownTOC -->
+
+- ML Tips
+- ML Problem Solving
+- Code Snippets
+- Resources
+- Tools
+- Robotics
+
+<!-- /MarkdownTOC -->
+
+
 [Applied Machine Learning Process](../process/applied_ml.md)
 
 [AI Checklist](../checklist/ai_checklist.md)
@@ -7,6 +19,9 @@
 [Applied ML Checklist](../checklist/applied_ml_checklist.md)
 
 [AutoML Tools](./automl_tools.md)
+
+
+Asynchronous vs Event-Driven Architecture
 
 
 ## ML Tips
