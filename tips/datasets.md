@@ -1,5 +1,21 @@
 # Datasets
 
+<!-- MarkdownTOC -->
+
+- Internet Archive
+- Read Datasets with URL in Python
+- How to generate dummy data in Python
+- ML Cheatsheet Dataset List
+- Computer Vision Datasets
+- Medical Image Datasets
+- NLP Datasets
+- NLP Open Source Datasets
+- huggingface
+- nlp-datasets
+- Amazon Reviews and Wikipedia Links
+
+<!-- /MarkdownTOC -->
+
 Here is a collection of some resources for ML datasets.
 
 [Google Dataset Search](https://datasetsearch.research.google.com)
@@ -32,41 +48,15 @@ How to generate fake data using the Faker library.
 List of public datasets in computer vision, NLP, and more.
 
 
-## ML Dataets
-
-### [7 Top Open Source Datasets to Train Natural Language Processing (NLP) & Text Models](https://www.kdnuggets.com/2021/11/top-open-source-datasets-nlp.html)
-
-One of the first steps you need to take is training your NLP model on datasets. Creating your own dataset is a lot of work and actually unnecessary when just starting out.
-
-There are many open source datasets available but keep in mind that open-source datasets are not without their problems. Unfortunately, you have to deal with bias, incomplete data, and a slew of other concerns when just grabbing any old dataset to test on.
-
-There are a couple of places online that do a great job of curating datasets to make it easier to find what you're looking for:
-
-- [Papers With Code](https://paperswithcode.com/datasets) - Nearly 5,000 machine learning datasets are categorized and easy to find.
-
-- [Hugging Face](https://huggingface.co/datasets) -  A great site to find datasets focused on audio, text, speech, and other datasets specifically targeting NLP.
-
-In addition, the following is a list of some of the best open-source datasets to start learning NLP:
-
-
-### [huggingface](https://github.com/huggingface/datasets)
-
-Datasets is a lightweight library providing two main features:
-
-- one-line dataloaders for many public datasets: one liners to download and pre-process any of the number of datasets major public datasets (in 467 languages and dialects!) provided on the HuggingFace Datasets Hub.
-
-- efficient data pre-processing: simple, fast and reproducible data pre-processing for the above public datasets as well as your own local datasets in CSV/JSON/text. 
-
-
-
 ## Computer Vision Datasets
 
-### [Open Source Datasets for Computer Vision](https://www.kdnuggets.com/2021/08/open-source-datasets-computer-vision.html)
+[Open Source Datasets for Computer Vision](https://www.kdnuggets.com/2021/08/open-source-datasets-computer-vision.html)
 
-This article discuses some of the popular datasets used in the Deep Learning (DL) to train state-of-the-art ML systems for CV tasks.
+### Medical Image Datasets
 
+[medical-imaging-datasets](https://github.com/sfikas/medical-imaging-datasets)
 
-### [A Systematic Collection of Medical Image Datasets for Deep Learning](https://arxiv.org/abs/2106.12864)
+[A Systematic Collection of Medical Image Datasets for Deep Learning](https://arxiv.org/abs/2106.12864)
 
 This paper has three purposes: 
 
@@ -76,15 +66,11 @@ This paper has three purposes:
 
 3) to provide a route to relevant algorithms for the relevant medical topics, and challenge leaderboards.
 
-### [medical-imaging-datasets](https://github.com/sfikas/medical-imaging-datasets)
-
-A list of medical imaging datasets.
 
 
+## NLP Datasets
 
-## Natural Language Processing Datasets
-
-### [Datasets for Natural Language Processing](https://machinelearningmastery.com/datasets-natural-language-processing/)
+[Datasets for Natural Language Processing](https://machinelearningmastery.com/datasets-natural-language-processing/)
 
 You need datasets to practice on when getting started with deep learning for natural language processing tasks.
 
@@ -102,18 +88,39 @@ This post is divided into 7 parts:
 6. Speech Recognition
 7. Document Summarization
 
+### NLP Open Source Datasets
+
+[7 Top Open Source Datasets to Train Natural Language Processing (NLP) & Text Models](https://www.kdnuggets.com/2021/11/top-open-source-datasets-nlp.html)
+
+[20 Open Datasets for Natural Language Processing](https://medium.com/@ODSC/20-open-datasets-for-natural-language-processing-538fbfaf8e38)
+
+One of the first steps you need to take is training your NLP model on datasets. Creating your own dataset is a lot of work and actually unnecessary when just starting out.
+
+There are many open source datasets available but keep in mind that open-source datasets are not without their problems. Unfortunately, you have to deal with bias, incomplete data, and a slew of other concerns when just grabbing any old dataset to test on.
+
+There are a couple of places online that do a great job of curating datasets to make it easier to find what you're looking for:
+
+- [Papers With Code](https://paperswithcode.com/datasets) - Nearly 5,000 machine learning datasets are categorized and easy to find.
+
+- [Hugging Face](https://huggingface.co/datasets) -  A great site to find datasets focused on audio, text, speech, and other datasets specifically targeting NLP.
+
+In addition, the following is a list of some of the best open-source datasets to start learning NLP:
+
+### [huggingface](https://github.com/huggingface/datasets)
+
+Datasets is a lightweight library providing two main features:
+
+- one-line dataloaders for many public datasets: one liners to download and pre-process any of the number of datasets major public datasets (in 467 languages and dialects!) provided on the HuggingFace Datasets Hub.
+
+- efficient data pre-processing: simple, fast and reproducible data pre-processing for the above public datasets as well as your own local datasets in CSV/JSON/text. 
+
 ### [nlp-datasets](https://github.com/niderhoff/nlp-datasets)
 
 Alphabetical list of free/public domain datasets with text data for use in Natural Language Processing (NLP). Most stuff here is just raw unstructured text data, if you are looking for annotated corpora or Treebanks refer to the sources at the bottom.
 
-### [20 Open Datasets for Natural Language Processing](https://medium.com/@ODSC/20-open-datasets-for-natural-language-processing-538fbfaf8e38)
+### Amazon Reviews and Wikipedia Links
 
-
-Natural language processing is a significant part of machine learning use cases, but it requires a lot of data and some deftly handled training. 
-
-Here are 20 more great datasets for NLP use 
-
-### [25 Excellent Machine Learning Open Datasets](https://opendatascience.com/25-excellent-machine-learning-open-datasets/)
+[25 Excellent Machine Learning Open Datasets](https://opendatascience.com/25-excellent-machine-learning-open-datasets/)
 
 Here we list Amazon Reviews and Wikipedia Links for general NLP and the Standford Sentiment Treebank and Twitter US Airlines Reviews specifically for sentiment analysis. 
 
