@@ -100,6 +100,12 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
 
 ## Improve Python Performance
 
+[Intel Extension for Scikit-learn](https://intel.github.io/scikit-learn-intelex/index.html#intelex)
+
+[Installing Intel Distribution for Python and Intel Performance Libraries with Anaconda](https://www.intel.com/content/www/us/en/developer/articles/technical/using-intel-distribution-for-python-with-anaconda.html)
+
+[Intel Optimization for TensorFlow Installation Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/optimization-for-tensorflow-installation-guide.html)
+
 ```py
   # Install intel conda packages with Continuum's Python
   conda install mkl intel::mkl --no-update-deps
@@ -124,12 +130,6 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
   from sklearnex import patch_sklearn
   patch_sklearn()
 ```
-
-[Intel Extension for Scikit-learn](https://intel.github.io/scikit-learn-intelex/index.html#intelex)
-
-[Installing Intel Distribution for Python and Intel Performance Libraries with Anaconda](https://www.intel.com/content/www/us/en/developer/articles/technical/using-intel-distribution-for-python-with-anaconda.html)
-
-[Intel Optimization for TensorFlow Installation Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/optimization-for-tensorflow-installation-guide.html)
 
 ----------
 
