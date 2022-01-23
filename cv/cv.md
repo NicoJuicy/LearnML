@@ -167,10 +167,17 @@ Yolo is supposed to be easier to setup/use and have faster performance.
 
 [Vehicle Detection and Tracking using Machine Learning and HOG](https://towardsdatascience.com/vehicle-detection-and-tracking-using-machine-learning-and-hog-f4a8995fc30a?gi=b793ee27f135)
 
-[Training a model for custom object detection (TF 2.x) on Google] Colab](https://techzizou007.medium.com/training-a-model-for-custom-object-detection-tf-2-x-on-google-colab-4507f2cc6b80)
+[Training a model for custom object detection (TF 2.x) on Google] Colab]((https://techzizou007.medium.com/training-a-model-for-custom-object-detection-tf-2-x-on-google-colab-4507f2cc6b80)
 
 [Object tracking using YOLOv4 and TensorFlow](https://pythonawesome.com/object-tracking-implemented-with-yolov4-and-tensorflow/)
 
+----------
+
+[Detect an object with OpenCV-Python](https://www.geeksforgeeks.org/detect-an-object-with-opencv-python/)
+
+[Object detection with Tensorflow model and OpenCV](https://towardsdatascience.com/object-detection-with-tensorflow-model-and-opencv-d839f3e42849)
+
+[How to Detect Objects in Real-Time Using OpenCV and Python](https://towardsdatascience.com/how-to-detect-objects-in-real-time-using-opencv-and-python-c1ba0c2c69c0)
 
 [How to Perform Object Detection with Mask R-CNN](https://machinelearningmastery.com/how-to-perform-object-detection-in-photographs-with-mask-r-cnn-in-keras/)
 
