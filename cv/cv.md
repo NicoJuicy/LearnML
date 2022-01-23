@@ -181,7 +181,7 @@ Yolo is supposed to be easier to setup/use and have faster performance.
 
 [Working with preprocessing layers](https://keras.io/guides/preprocessing_layers/)
 
-[Transfer learning & fine-tuning](https://keras.io/guides/transfer_learning/)
+[Transfer learning and fine-tuning](https://keras.io/guides/transfer_learning/)
 
 
 [3D image classification from CT scans](https://keras.io/examples/vision/3D_image_classification/)
