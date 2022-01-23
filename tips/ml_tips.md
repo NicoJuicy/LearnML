@@ -107,7 +107,7 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
 [Intel Optimization for TensorFlow Installation Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/optimization-for-tensorflow-installation-guide.html)
 
 ```py
-  # Install intel conda packages with Continuum's Python
+  # Install intel conda packages with Continuum's Python (may show version conflicts)
   conda install mkl intel::mkl --no-update-deps
   conda install numpy intel::numpy --no-update-deps
 
@@ -115,7 +115,7 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
   conda install -c intel numpy=1.19.5 --no-update-deps
 
   # Install intel optimization for tensorflow from anaconda channel 
-  # unable to install tensorflow-mkl on macOS (version conflict)
+  # unable to install tensorflow-mkl on macOS (version conflicts)
   conda install -c anaconda tensorflow
   conda install -c anaconda tensorflow-mkl
 
