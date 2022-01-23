@@ -1,8 +1,19 @@
 # Image Augmentation
 
-## Image Data Preparation
+<!-- MarkdownTOC -->
 
-[Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
+- Image Data Preparation
+- Image Augmentation using imgaug
+    - Multiple Augmentations
+- Image Data Preparation
+- Image Data Augmentation
+- Keras Examples
+- Image Data Pipeline
+- References
+
+<!-- /MarkdownTOC -->
+
+## Image Data Preparation
 
 When training vision models, it is common to resize images to a lower dimension ((224 x 224), (299 x 299), etc.) to allow mini-batch learning and also to keep up the compute limitations. 
 
@@ -20,10 +31,7 @@ In the example, we will implement the learnable image resizing module as propose
 ---------
 
 
-
 ## Image Augmentation using imgaug
-
-[5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
 
 The term image augmentation refers to twchniques used to increase the amount of data by adding slightly modified copies of existing data or creating  synthetic data from existing data.
 
@@ -162,16 +170,7 @@ for n, images in enumerate(image[0:3]):
 ```
 
 
-
-## References
-
-### Image Data Loading
-
-[How to Load Large Datasets From Directories](https://machinelearningmastery.com/how-to-load-large-datasets-from-directories-for-deep-learning-with-keras/)
-
 ## Image Data Preparation
-
-[Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
 
 [How to Manually Scale Image Pixel Data for Deep Learning](https://machinelearningmastery.com/how-to-manually-scale-image-pixel-data-for-deep-learning/)
 
@@ -179,20 +178,50 @@ for n, images in enumerate(image[0:3]):
 
 [How to Evaluate Pixel Scaling Methods for Image Classification](https://machinelearningmastery.com/how-to-evaluate-pixel-scaling-methods-for-image-classification/)
 
-### Image Data Augmentation
 
-[5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
-
-[How to Configure and Use Image Data Augmentation](https://machinelearningmastery.com/how-to-configure-image-data-augmentation-when-training-deep-learning-neural-networks/)
-
-[Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
+## Image Data Augmentation
 
 [Image Processing and Data Augmentation Techniques for Computer Vision](https://towardsdatascience.com/image-processing-techniques-for-computer-vision-11f92f511e21)
 
-[Data Augmentation Compilation with Python and OpenCV](https://towardsdatascience.com/data-augmentation-compilation-with-python-and-opencv-b76b1cd500e0)
+[Data Augmentation Compilation with Python and OpenCV](https://towardsdatascience.com/data-paugmentation-compilation-with-python-and-opencv-b76b1cd500e0)
+
+
+[5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
 
 [5 Useful Image Manipulation Techniques Using Python OpenCV](https://betterprogramming.pub/5-useful-image-manipulation-techniques-using-python-opencv-505492d077ef)
 
+
+[How to Configure and Use Image Data Augmentation using Keras ImageDataGenerator](https://machinelearningmastery.com/how-to-configure-image-data-augmentation-when-training-deep-learning-neural-networks/)
+
+
 [Introduction to Test-Time Data Augmentation](https://machinelearningmastery.com/how-to-use-test-time-augmentation-to-improve-model-performance-for-image-classification/)
 
+
+
+## Keras Examples
+
+[3D image classification from CT scans](https://keras.io/examples/vision/3D_image_classification/)
+
+[Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
+
+
+
+
+## Image Data Pipeline
+
+[Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
+
+We can build better and faster image pipelines using `tf.data`. 
+
+While training a neural network, it is quite common to use `ImageDataGenerator` class to generate batches of tensor image data with real-time data augmentation, but the `tf.data` API can be used to build a faster input data pipeline with reusable pieces.
+
+
+
+## References
+
+[Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
+
+[5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
+
+[How to Load Large Datasets From Directories](https://machinelearningmastery.com/how-to-load-large-datasets-from-directories-for-deep-learning-with-keras/)
 
