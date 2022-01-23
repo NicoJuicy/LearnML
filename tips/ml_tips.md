@@ -108,7 +108,8 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
   # Needed on macOS
   conda install -c intel numpy=1.19.5 --no-update-deps
 
-  # Install intel optimization for tensorflow from anaconda channel
+  # Install intel optimization for tensorflow from anaconda channel 
+  # unable to install tensorflow-mkl on macOS (version conflict)
   conda install -c anaconda tensorflow
   conda install -c anaconda tensorflow-mkl
 
