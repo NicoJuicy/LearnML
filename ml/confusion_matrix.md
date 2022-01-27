@@ -16,8 +16,8 @@ A _confusion matrix_ is a table that is often used to describe the performance o
 </div>
 
 <div class="image-preview">
-    <img width="600" alt="Confusion Matrix" src="https://user-images.githubusercontent.com/2695661/151418583-57ef8547-c9f9-4f42-9424-24d134ba60b2.jpeg" />
-  Figure: Confusion Matrix Sample [1]
+    <div><img width="600" alt="Confusion Matrix" src="https://user-images.githubusercontent.com/2695661/151418583-57ef8547-c9f9-4f42-9424-24d134ba60b2.jpeg" /></div>
+  <caption>Figure: Confusion Matrix Sample [1]</caption>
 </div>
 
 
