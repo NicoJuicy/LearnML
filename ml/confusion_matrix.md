@@ -53,7 +53,7 @@ ROC Curve is a commonly used graph that summarizes the performance of a classifi
 
 
 <div class="image-preview">
-  <div><img width="600" alt="ROC Curve" src="https://user-images.githubusercontent.com/2695661/151419963-98e3e66c-5e28-446a-89e8-572b2c1bc049.jpeg" /></div>
+  <div><img width="600" alt="ROC Curve" src="https://user-images.githubusercontent.com/2695661/151420109-9b05b6dc-c1d3-45af-a68d-298f372c6a18.jpeg" /></div>
   <caption>Figure: ROC Curve in Week 2 Notebook</caption>
 </div>
 
