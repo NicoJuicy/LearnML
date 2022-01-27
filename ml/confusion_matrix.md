@@ -11,7 +11,7 @@
 A _confusion matrix_ is a table that is often used to describe the performance of a classification model (or classifier) on a set of test data for which the true values are known. 
 
 <div class="image-preview">
-  <img width="600" alt="Confusion Matrix" src="https://user-images.githubusercontent.com/2695661/151418339-8ef5f171-8f14-4974-ae24-7f6b33202c5b.jpeg" />
+  <div><img width="600" alt="Confusion Matrix" src="https://user-images.githubusercontent.com/2695661/151418339-8ef5f171-8f14-4974-ae24-7f6b33202c5b.jpeg" /></div>
   <caption>Figure: Confusion Matrix</caption>
 </div>
 
