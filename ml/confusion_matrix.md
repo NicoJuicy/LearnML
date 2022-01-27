@@ -2,7 +2,7 @@
 
 <!-- MarkdownTOC -->
 
-- Confusion Matrix Terminology
+- Terminology
 - ROC Curve
 - References
 
@@ -10,8 +10,19 @@
 
 A _confusion matrix_ is a table that is often used to describe the performance of a classification model (or classifier) on a set of test data for which the true values are known. 
 
+<div class="image-preview">
+  <img width="600" alt="Confusion Matrix" src="https://user-images.githubusercontent.com/2695661/151418339-8ef5f171-8f14-4974-ae24-7f6b33202c5b.jpeg" />
+  Figure: Confusion Matrix
+</div>
 
-## Confusion Matrix Terminology
+<div class="image-preview">
+    <img width="600" alt="Confusion Matrix" src="https://user-images.githubusercontent.com/2695661/151418583-57ef8547-c9f9-4f42-9424-24d134ba60b2.jpeg" />
+  Figure: Confusion Matrix Sample [1]
+</div>
+
+
+
+## Terminology
 
 True positives = relevant items that we correctly identified as relevant.
 
@@ -53,7 +64,7 @@ You can think of AUC as representing the probability that a classifier will rank
 
 ## References
 
-[Simple guide to confusion matrix terminology](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/)
+[1] [Simple guide to confusion matrix terminology](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/)
 
-[ROC curves and Area Under the Curve explained](https://www.dataschool.io/roc-curves-and-auc-explained/)
+[2] [ROC curves and Area Under the Curve explained](https://www.dataschool.io/roc-curves-and-auc-explained/)
 
