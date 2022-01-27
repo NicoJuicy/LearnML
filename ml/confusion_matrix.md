@@ -28,9 +28,11 @@ True positives = relevant items that we correctly identified as relevant.
 
 True negatives = irrelevant items that we correctly identified as irrelevant.
 
-Fall-out or false positive rate (FPR) (Type I errors) = irrelevant items that were incorrectly identified as relevant.
+False positive (Type I errors) = irrelevant items that were incorrectly identified as relevant.
 
 False negatives (Type II errors) = relevant items that were incorrectly identified as irrelevant.
+
+----------
 
 Precision = percentage of true positive predictions among all positive predictions
 
