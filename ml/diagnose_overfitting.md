@@ -203,7 +203,10 @@ Getting more data can help with overfitting (not underfitting) if the model is n
 
 Some tools such as data cleaning and cross-validation or hold-out validation are common practices in  machine learning projects that can also be used to combat overfitting.
 
-<img width="600" alt="Techniques to fight underfitting and overfitting (extended)" src="https://towardsdatascience.com/overfitting-and-underfitting-principles-ea8964d9c45c" />
+<div>
+  <div><img width="600" alt="Techniques (extended)" src="https://towardsdatascience.com/overfitting-and-underfitting-principles-ea8964d9c45c" /></div>
+  <caption>Figure: Techniques to fight underfitting and overfitting (extended)</caption>
+</div>
 
 Table: Techniques to fight underfitting and overfitting (extended). 
 
@@ -361,27 +364,23 @@ This can be diagnosed from a plot where the training loss is lower than the vali
 
 #### Underfit Example 1
 
-Plot showing underfit model
-
 <div class="image-preview">
-    <img width="600" alt="Plot showing underfit model" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Underfit-Model.png" />
+    <img width="600" alt="Underfit Example 1" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Underfit-Model.png" />
+  <caption>Figure: Plot showing underfit model</caption>
 </div>
 
 
 #### Underfit Example 2
-
-Plot of Training Learning Curve of Underfit Model That Does Not Have Sufficient Capacity
-
 <div class="image-preview">
-    <img width="600" alt="Plot of Training Learning Curve of Underfit Model That Does Not Have Sufficient Capacity" src="https://machinelearningmastery.com/wp-content/uploads/2019/02/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Does-Not-Have-Sufficient-Capacity.png" />
+    <img width="600" alt="Underfit Example 2" src="https://machinelearningmastery.com/wp-content/uploads/2019/02/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Does-Not-Have-Sufficient-Capacity.png" />
+  <caption>Figure: Plot of Training Learning Curve of Underfit Model That Does Not Have Sufficient Capacity</caption>
 </div>
 
 #### Underfit Example 3
 
-Plot of Training Learning Curve Showing an Underfit Model That Requires Further Training
-
 <div class="image-preview">
-    <img width="600" alt="Plot of Training Learning Curve Showing an Underfit Model That Requires Further Training" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Requires-Further-Training.png" />
+    <img width="600" alt="Underfit Example 3" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Requires-Further-Training.png" />
+    <caption>Figure: Plot of Training Learning Curve Showing an Underfit Model That Requires Further Training</caption>
 </div>
 
 A plot of learning curves shows underfitting if:
@@ -418,13 +417,15 @@ This can be diagnosed from a plot where the train loss slopes down and the valid
 #### Underfit Example 1
 
 <div class="image-preview">
-    <img width="600" alt="Plot showing overfit model" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Overfit-Model.png" />
+    <img width="600" alt="Underfit Example 1" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Overfit-Model.png" />
+  <caption>Figure: Plot showing overfit model</caption>
 </div>
 
 #### Underfit Example 2
 
 <div class="image-preview">
-    <img width="600" alt="Plot of Train and Validation Learning Curves Showing an Overfit Model" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-An-Overfit-Model.png" />
+    <img width="600" alt="Underfit Example 2" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-An-Overfit-Model.png" />
+    <caption>Figure: Plot of Train and Validation Learning Curves Showing an Overfit Model"</caption>
 </div>
 
 ### Multiple Runs Example
@@ -459,10 +460,9 @@ This situation can be identified by a learning curve for training loss that show
 
 
 <div class="image-preview">
-    <img width="600" alt="Plot of Train and Validation Learning Curves Showing a Training Dataset That May Be too Small Relative to the Validation Dataset" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Training-Dataset-the-May-be-too-Small-Relative-to-the-Validation-Dataset.png" />
+    <img width="600" alt="Unrepresentative Train Dataset" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Training-Dataset-the-May-be-too-Small-Relative-to-the-Validation-Dataset.png" />
+  <caption>Figure: Plot of Train and Validation Learning Curves Showing a Training Dataset That May Be too Small Relative to the Validation Dataset</caption>
 </div>
-
-Figure: Plot of Train and Validation Learning Curves Showing a Training Dataset That May Be too Small Relative to the Validation Dataset
 
 
 ### Unrepresentative Validation Dataset
@@ -474,7 +474,8 @@ This may occur if the validation dataset has too few examples as compared to the
 This case can be identified by a learning curve for training loss that looks like a good fit (or other fits) and a learning curve for validation loss that shows noisy movements around the training loss.
 
 <div class="image-preview">
-    <img width="600" alt="Plot of Train and Validation Learning Curves Showing a Validation Dataset That May Be too Small Relative to the Training Dataset" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-the-May-be-too-Small-Relative-to-the-Training-Dataset.png" />
+    <img width="600" alt="Unrepresentative Validation Dataset 1" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-the-May-be-too-Small-Relative-to-the-Training-Dataset.png" />
+  <caption>Figure: Plot of Train and Validation Learning Curves Showing a Validation Dataset That May Be too Small Relative to the Training Dataset</caption>
 </div>
 
 Figure: Plot of Train and Validation Learning Curves Showing a Validation Dataset That May Be too Small Relative to the Training Dataset
@@ -482,10 +483,9 @@ Figure: Plot of Train and Validation Learning Curves Showing a Validation Datase
 This may also be identified by a validation loss that is lower than the training loss which indicates that the validation dataset may be easier for the model to predict than the training dataset.
 
 <div class="image-preview">
-    <img width="600" alt="Plot of Train and Validation Learning Curves Showing a Validation Dataset That Is Easier to Predict Than the Training Dataset" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-that-is-Easier-to-Predict-than-the-Training-Dataset.png" />
+    <img width="600" alt="Unrepresentative Validation Dataset 2" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-that-is-Easier-to-Predict-than-the-Training-Dataset.png" />
+  <caption>Figure: Plot of Train and Validation Learning Curves Showing a Validation Dataset That Is Easier to Predict Than the Training Dataset</caption>
 </div>
-
-Figure: Plot of Train and Validation Learning Curves Showing a Validation Dataset That Is Easier to Predict Than the Training Dataset
 
 
 ## References
