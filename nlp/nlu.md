@@ -27,16 +27,35 @@ Each utterance will be mapped to an intent and each intent can have 0, 1, or mul
 
 It is possible to create our own NLU service or we can use existing systems such as Microsoft LUIS, Google Dialogflow, IBM Watson NLU, Amazon Lex, Rasa NLU and more.
 
-## What are the logical steps to create an assistant?
+
+## Steps to create an assistant
 
 When creating a conversational agent with a NLU service, you have to follow different steps.
 
+
 ## Language Modeling
 
-Language modeling (LM) involves developing a statistical model for predicting the next word in a sentence or next letter in a word given whatever has come before. 
+Language modeling (LM) or Text Generation involves developing a statistical model for predicting the next word in a sentence or next letter in a word given whatever has come before. 
 
 LM is a pre-cursor task in applications such as speech recognition and machine translation.
 
+[How to evaluate Text Generation Models?](https://towardsdatascience.com/how-to-evaluate-text-generation-models-metrics-for-automatic-evaluation-of-nlp-models-e1c251b04ec1)
+
+
+## Text Generation Examples
+
+[Text Generation With LSTM Recurrent Neural Networks in Python with Keras](https://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/)
+
+[Text Generation using Recurrent Long Short Term Memory Network](https://www.geeksforgeeks.org/text-generation-using-recurrent-long-short-term-memory-network/)
+
+[Text Generation Using LSTM](https://bansalh944.medium.com/text-generation-using-lstm-b6ced8629b03)
+
+[Text Generation through Bidirectional LSTM model](https://towardsdatascience.com/nlp-text-generation-through-bidirectional-lstm-model-9af29da4e520)
+
+
+[Text Generation using FNet](https://keras.io/examples/nlp/text_generation_fnet/)
+
+[How to Train Keras Deep Learning Models on AWS EC2 GPUs (step-by-step)](https://machinelearningmastery.com/develop-evaluate-large-deep-learning-models-keras-amazon-web-services/)
 
 
 ----------
