@@ -15,6 +15,7 @@
 - Data Cleaning
     - Check data types
     - Handle missing values
+    - Handle duplicate values
     - Handle Outliers
 - Encoding Categorical Features
     - Integer \(Ordinal\) Encoding
@@ -49,8 +50,7 @@
     - Create Pipeline
     - Train and Evaluate Pipeline
 - Bootstrapping
-- References
-    - Exploratory Data Analysis \(EDA\)
+- Code Examples and References
     - Data Preprocessing
     - Categorical Data
     - Scaling
@@ -180,7 +180,17 @@ Data cleaning also includes the following [2]:
 
 ### Handle missing values
 
-Check for null values. We can drop or fill the `NaN` values.
+The removal of samples or dropping of feature columns may not feasible because we might lose too much valuable data. 
+
+We can use interpolation techniques to estimate the missing values from the other training samples in the dataset.
+
+One of the most common interpolation techniques is _mean imputation_ where we simply replace the missing value by the mean value of the entire feature column
+
+- Numerical Imputation
+- Categorical Imputation
+
+Check for null values. 
+We can drop or fill the `NaN` values.
 
 ```py
     # return the number of missing values (NaN) per column
@@ -199,14 +209,40 @@ Check for null values. We can drop or fill the `NaN` values.
     df['col_name'].isnull().sum() 
 ```
 
-The removal of samples or dropping of feature columns may not feasible because we might lose too much valuable data. 
+```py
+    # We can delete rows that have NaN value in any column
+    df.dropna(how='any').shape
 
-We can use interpolation techniques to estimate the missing values from the other training samples in the dataset.
+    # We can delete rows that have all there columns 'unknown' or have missing values
+    df.dropna(how='any').shape
 
-One of the most common interpolation techniques is _mean imputation_ where we simply replace the missing value by the mean value of the entire feature column
+    # We can delete specific columns by passing them in a list
+    df.dropna(subset=['City', 'Shape Reported'], how='all').shape
 
-- Numerical Imputation
-- Categorical Imputation
+    # Replace NaN by a specific value using fillna() method
+    df['Shape Reported'].isna().sum()
+
+    df['Shape Reported'].fillna(value='VARIOUS', inplace=True)
+    df['Shape Reported'].isna().sum()
+    df['Shape Reported'].value_counts(dropna=False)
+```
+
+### Handle duplicate values
+
+```py
+    # We can show if there is duplicated in specific column 
+    # by calling 'duplicated' on a Series.
+    df.zip_code.duplicated().sum()
+
+    # Check if an entire row is duplicated 
+    df.duplicated().sum()
+
+    # Return DataFrame with duplicate 
+    # rows removed, optionally only considering certain columns.
+    # 'keep' controls the rows to keep.
+    df.drop_duplicates(keep='first').shape
+```
+
 
 ### Handle Outliers
 
@@ -252,12 +288,8 @@ Unfortunately, there is no convenient function that can automatically derive the
 Thus, we have to define the mapping manually.
 
 ```py
-  size_mapping = {
-    'XL': 3,
-    'L': 2,
-    'M': 1}
-
-  df['size'] = df['size'].map(size_mapping)
+    size_mapping = { 'XL': 3, 'L': 2, 'M': 1}
+    df['size'] = df['size'].map(size_mapping)
 ```
 
 ### Encoding Class Labels
@@ -267,13 +299,13 @@ Many machine learning libraries require that class labels are encoded as integer
 It is considered good practice to provide class labels as integer arrays to avoid technical glitches. 
 
 ```py
-  # Handle categorical features
-  df['is_white_wine'] = [1 if typ == 'white' else 0 for typ in df['type']]
+    # Handle categorical features
+    df['is_white_wine'] = [1 if typ == 'white' else 0 for typ in df['type']]
 
-  # Convert to a binary classification task
-  df['is_good_wine'] = [1 if quality >= 6 else 0 for quality in df['quality']]
+    # Convert to a binary classification task
+    df['is_good_wine'] = [1 if quality >= 6 else 0 for quality in df['quality']]
 
-  df.drop(['type', 'quality'], axis=1, inplace=True)
+    df.drop(['type', 'quality'], axis=1, inplace=True)
 ```
 
 To encode the class labels, we can use an approach similar to the mapping of ordinal features above. 
@@ -283,13 +315,13 @@ We need to remember that class labels are not ordinal so it does not matter whic
 There is a convenient `LabelEncoder` class in scikit-learn to achieve the same results as _map_.  
 
 ```py
-  from sklearn.preprocessing import LabelEncoder
-  class_le = LabelEncoder()
-  y = class_le.fit_transform(df['classlabel'].values)
-  # array([0, 1, 0])
-  
-  class_le.inverse_transform(y)
-  # array(['class1', 'class2', 'class1'], dtype=object)
+    from sklearn.preprocessing import LabelEncoder
+    class_le = LabelEncoder()
+    y = class_le.fit_transform(df['classlabel'].values)
+    # array([0, 1, 0])
+
+    class_le.inverse_transform(y)
+    # array(['class1', 'class2', 'class1'], dtype=object)
 ```
 
 ### One-Hot Encoding of Nominal Features
@@ -303,9 +335,9 @@ In the previous section, we used a simple dictionary-mapping approach to convert
 Since scikit-learn's estimators treat class labels without any order, we can use the convenient `LabelEncoder` class to encode the string labels into integers.
 
 ```py
-  X = df[['color', 'size', 'price']].values
-  color_le = LabelEncoder()
-  X[:, 0] = color_le.fit_transform(X[:, 0])
+    X = df[['color', 'size', 'price']].values
+    color_le = LabelEncoder()
+    X[:, 0] = color_le.fit_transform(X[:, 0])
 ```
 
 After executing the code above, the first column of the NumPy array X now holds the new color values which are encoded as follows: blue = 0, green = 1, red = 2 n
@@ -323,7 +355,7 @@ We can use the `OneHotEncoder` that is implemented in the scikit-learn.preproces
 An even more convenient way to create those dummy features via one-hot encoding is to use the get_dummies method implemented in pandas. Applied on a DataFrame, the get_dummies method will only convert string columns and leave all other columns unchanged:
 
 ```py
-  pd.get_dummies(df[['price', 'color', 'size']])
+    pd.get_dummies(df[['price', 'color', 'size']])
 ```
 
 ### Dummy Variable Encoding
@@ -845,61 +877,61 @@ As the number of steps increase, the syntax becomes cleaner with the pipe functi
 ### Data Prep
 
 ```py
-# convert question mark '?' to NaN
-df.replace('?', np.nan, inplace=True)
-    
-# convert target column from string to number
-le = LabelEncoder()
-df.income = le.fit_transform(df.income)
+    # convert question mark '?' to NaN
+    df.replace('?', np.nan, inplace=True)
+        
+    # convert target column from string to number
+    le = LabelEncoder()
+    df.income = le.fit_transform(df.income)
 ```
 
 ### Create Pipeline
 
 ```py
-# create column transformer component
-# We will select and handle categorical and numerical features in a differently
-preprocessor = ColumnTransformer([
-    ('numerical', numerical_pipe, make_column_selector(dtype_include=['int', 'float'])),
-    ('categorical', categorical_pipe, make_column_selector(dtype_include=['object'])),
+    # create column transformer component
+    # We will select and handle categorical and numerical features in a differently
+    preprocessor = ColumnTransformer([
+        ('numerical', numerical_pipe, make_column_selector(dtype_include=['int', 'float'])),
+        ('categorical', categorical_pipe, make_column_selector(dtype_include=['object'])),
+        ])
+
+    # create pipeline for numerical features
+    numerical_pipe = Pipeline([
+        ('imputer', SimpleImputer(missing_values=np.nan, strategy='mean')),
+        ('scaler', StandardScaler())
     ])
 
-# create pipeline for numerical features
-numerical_pipe = Pipeline([
-    ('imputer', SimpleImputer(missing_values=np.nan, strategy='mean')),
-    ('scaler', StandardScaler())
-])
+    # create pipeline for categorical features
+    categorical_pipe = Pipeline([
+        ('imputer', SimpleImputer(missing_values=np.nan, strategy='most_frequent')),
+        ('one_hot', OneHotEncoder(handle_unknown='ignore'))
+        ])
 
-# create pipeline for categorical features
-categorical_pipe = Pipeline([
-    ('imputer', SimpleImputer(missing_values=np.nan, strategy='most_frequent')),
-    ('one_hot', OneHotEncoder(handle_unknown='ignore'))
-    ])
-
-    
-# create main pipeline
-pipe = Pipeline([
-    ('column_transformer', preprocessor),
-    ('model', KNeighborsClassifier())
-    ])
+        
+    # create main pipeline
+    pipe = Pipeline([
+        ('column_transformer', preprocessor),
+        ('model', KNeighborsClassifier())
+        ])
 ```
 
 ### Train and Evaluate Pipeline
 
 ```py
-# create X and y variables
-X = df.drop('income', axis=1)
-y = df.income
+    # create X and y variables
+    X = df.drop('income', axis=1)
+    y = df.income
 
-# split data into train and test data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+    # split data into train and test data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
 
-# fit pipeline with train data and predicting test data
-pipe.fit(X_train, y_train)
-predictions = pipe.predict(X_test)
+    # fit pipeline with train data and predicting test data
+    pipe.fit(X_train, y_train)
+    predictions = pipe.predict(X_test)
 
-# check pipeline accuracy
-accuracy_score(y_test, predictions)
-```
+    # check pipeline accuracy
+    accuracy_score(y_test, predictions)
+    ```
 
 
 
@@ -914,22 +946,11 @@ Each simulated bootstrap sample is used to calculate an estimate of the paramete
 The bootstrap sampling distribution then allows us to draw statistical inferences such as estimating the standard error of the parameter.
 
 
-
-## References
-
-[1] [INFOGRAPHIC: Data prep and Labeling](https://www.cognilytica.com/2019/04/19/infographic-data-prep-and-labeling/)
-
-[2] [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
+----------
 
 
-### Exploratory Data Analysis (EDA)
 
-[Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
-
-[11 Essential Code Blocks for Complete EDA (Exploratory Data Analysis) Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
-
-[Python Cheat Sheet for Data Science](https://chipnetics.com/tutorials/python-cheat-sheet-for-data-science/)
-
+## Code Examples and References
 
 ### Data Preprocessing
 
@@ -982,6 +1003,12 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 [How to Configure k-Fold Cross-Validation](https://machinelearningmastery.com/how-to-configure-k-fold-cross-validation/)
 
 
+
 ## References
 
 W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018. 
+
+[1] [INFOGRAPHIC: Data prep and Labeling](https://www.cognilytica.com/2019/04/19/infographic-data-prep-and-labeling/)
+
+[2] [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
+
