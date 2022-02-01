@@ -3,16 +3,21 @@
 <!-- MarkdownTOC -->
 
 - Effective use of Data Types
-  - Numerical Features
-  - DateTime
-  - Categorical
-    - Better performance with categoricals
-    - Categorical Methods
-  - Creating dummy variables for modeling
-  - Converting Between String and Datetime
-  - Typecasting while Reading Data
+    - Numerical Features
+    - DateTime
+    - Categorical
+        - Better performance with categoricals
+        - Categorical Methods
+    - Creating dummy variables for modeling
+    - Converting Between String and Datetime
+    - Typecasting while Reading Data
 - How to Profile Memory Usage?
 - Optimize Your Python Code
+- Make It Easier to Work with Large Datasets
+    - Read using Pandas in Chunks
+    - Dask
+    - Vaex
+    - Modin
 - References
 
 <!-- /MarkdownTOC -->
@@ -20,8 +25,6 @@
 Here are some resources to evaluate Python memory usage.
 
 ## Effective use of Data Types
-
-[Optimize Pandas Memory Usage for Large Datasets](https://towardsdatascience.com/optimize-pandas-memory-usage-while-reading-large-datasets-1b047c762c9b)
 
 Make effective use of data types to prevent crashing of memory.
 
@@ -274,11 +277,107 @@ For example, It is always a good idea to use dictionaries instead of lists in py
 This is because the dictionaries use hash tables to store the elements which have a time complexity of O(1) when it comes to searching compared to O(n) for lists in the worst case. So it will give you a considerable performance gain.
 
 
+## Make It Easier to Work with Large Datasets
+
+Pandas mainly uses a single core of CPU to process instructions and does not take advantage of scaling up the computation across various cores of the CPU to speed up the workflow. 
+
+Thus, Pandas can cause memory issues when reading large datasets since it fails to load larger-than-memory data into RAM.
+
+There are various other Python libraries that do not load the large data at once but interacts with system OS to map the data with Python. Further, they utilize all the cores of the CPU to speed up the computations. In this article, we will discuss 4 such Python libraries that can read and process large-sized datasets.
+
+1. Pandas with chunks
+2. Dask
+3. Vaex
+4. Modin
+
+### Read using Pandas in Chunks
+
+Pandas loads the entire dataset into RAM which may cause a memory overflow issue while reading large datasets.
+
+Instead, we can read the large dataset in _chunks_ and perform data processing for each chunk.
+
+The idea is to load 10k instances in each chunk (lines 11–14), perform text processing for each chunk (lines 15–16), and append the processed data to the existing CSV file (lines 18–21).
+
+```py
+# append to existing CSV file or save to new file
+def saveDataFrame(data_temp):
+    
+    path = "DATA/text_dataset.csv"
+    if os.path.isfile(path):
+        with open(path, 'a') as f:
+            data_temp.to_csv(f, header=False)
+    else:
+        data_temp.to_csv(path, index=False)
+        
+# Define chunksize
+chunk_size = 10**3
+
+# Read and process the dataset in chunks
+for chunk in tqdm(pd.read_csv("DATA/text_dataset.csv", chunksize=chunk_size)):
+    preprocessed_review = preprocess_text(chunk['review'].values)
+     saveDataFrame(pd.DataFrame({'preprocessed_review':preprocessed_review, 
+           'target':chunk['target'].values
+         }))
+```
+
+### Dask
+
+Dask is an open-source Python library that provides multi-core and distributed parallel execution of larger-than-memory datasets
+
+Dask provides the high-performance implementation of the function that parallelizes the implementation across all the cores of the CPU.
+
+Dask provides API similar to Pandas and Numpycwhich makes it easy for developers to switch between the libraries.
+
+```py
+import dask.dataframe as dd
+
+# Read the data using dask
+df_dask = dd.read_csv("DATA/text_dataset.csv")
+
+# Parallelize the text processing with dask
+df_dask['review'] = df_dask.review.map_partitions(preprocess_text)
+```
+
+### Vaex
+
+Vaex is a Python library that uses an _expression system_ and _memory mapping_ to interact with the CPU and parallelize the computations across various cores of the CPU.
+
+Instead of loading the entire data into memory, Vaex just memory maps the data and creates an expression system.
+
+Vaex covers some of the API of pandas and is efficient to perform data exploration and visualization for a large dataset on a standard machine.
+
+```py
+import vaex
+
+# Read the data using Vaex
+df_vaex = vaex.read_csv("DATA/text_dataset.csv")
+
+# Parallize the text processing
+df_vaex['review'] = df_vaex.review.apply(preprocess_text)
+```
+
+### Modin
+
+In contrast to Pandas, Modin utilizes all the cores available in the system, to speed up the Pandas workflow, only requiring users to change a single line of code in their notebooks.
+
+```py
+import modin.pandas as md
+
+# read data using modin
+modin_df = pd.read_csv("DATA/text_dataset.csv")
+
+# Parallel text processing of review feature 
+modin_df['review'] = modin_df.review.apply(preprocess_text)
+```
+
+
 
 ## References
 
 W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018. 
 
+[Optimize Pandas Memory Usage for Large Datasets](https://towardsdatascience.com/optimize-pandas-memory-usage-while-reading-large-datasets-1b047c762c9b)
+
 [Try These 5 Tips To Optimize Your Python Code](https://towardsdatascience.com/try-these-5-tips-to-optimize-your-python-code-c7e0ccdf486a?source=rss----7f60cf5620c9---4)
 
-
+[4 Python Libraries that Make It Easier to Work with Large Datasets](https://towardsdatascience.com/4-python-libraries-that-ease-working-with-large-dataset-8e91632b8791)
