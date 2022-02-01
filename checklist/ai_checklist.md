@@ -256,6 +256,12 @@ The lifecycle of an AI project can be divided into 6 stages:
 11. Verify there is monitoring to detect slow poisoning of the model due to intermittent errors.
 
 
+## NLP Checklist
+
+[NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
+
+
+
 ## References
 
 [AI Checklist](https://towardsdatascience.com/the-ai-checklist-fe2d76907673)
