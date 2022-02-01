@@ -107,15 +107,17 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
 [Intel Optimization for TensorFlow Installation Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/optimization-for-tensorflow-installation-guide.html)
 
 ```py
-  # Install intel conda packages with Continuum's Python (may show version conflicts)
+  # Install intel conda packages with Continuum's Python (version conflicts on Linux)
   conda install mkl intel::mkl --no-update-deps
   conda install numpy intel::numpy --no-update-deps
+
+  # macOS: AttributeError: module 'numpy' has no attribute 'ndarray'
 
   # Needed on macOS
   conda install -c intel numpy=1.19.5 --no-update-deps
 
   # Install intel optimization for tensorflow from anaconda channel 
-  # unable to install tensorflow-mkl on macOS (version conflicts)
+  # cannot install tensorflow-mkl on macOS (version conflicts)
   conda install -c anaconda tensorflow
   conda install -c anaconda tensorflow-mkl
 
@@ -156,6 +158,8 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
 ## References
 
 [Best practices in the deployment of AI models](https://nagahemachandchinta.medium.com/best-practices-in-the-deployment-of-ai-models-c929c3146416)
+
+[Data Science Mistakes to Avoid: Data Leakage](https://towardsdatascience.com/data-science-mistakes-to-avoid-data-leakage-e447f88aae1c)
 
 [10 Simple Things to Try Before Neural Networks](https://www.kdnuggets.com/2021/12/10-simple-things-try-neural-networks.html)
 

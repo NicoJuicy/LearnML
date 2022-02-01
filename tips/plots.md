@@ -26,6 +26,7 @@
   - AutoViz
   - Missingno
   - Yellowbricks
+  - Mito
 - Choosing Graphs
 - Trees and Graphs
 - References
@@ -334,6 +335,8 @@ plotnine is the implementation of the R package ggplot2 in Python.
 
 [Why Is ggplot2 So Good For Data Visualization?](https://towardsdatascience.com/why-is-ggplot2-so-good-for-data-visualization-b38705f43f85)
 
+[ggplot (plotnine) in action!](https://medium.com/geekculture/ggplot-in-action-7008f304bee1)
+
 
 ---------
 
@@ -362,6 +365,16 @@ Yellowbrick is a library to visualize the machine learning model process.
 Yellowbrick is an open-source package to visualize and work as diagnostic tools that build on top of Scikit-Learn. 
 
 Yellowbrick was developed to help the model selection process using various visualization APIs that extended from Scikit-Learn APIs.
+
+
+### Mito
+
+[How to Make Basic Visualizations in Python without Coding using Mito](https://towardsdatascience.com/how-to-make-basic-visualizations-in-python-without-coding-f1da689d838e)
+
+Mito is a spreadsheet that lives inside JupyterLab notebooks. 
+
+Mito allows you to edit Pandas dataframes like an Excel file and generates Python code that corresponds to each of your edits.
+
 
 
 ## Choosing Graphs

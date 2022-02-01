@@ -436,10 +436,11 @@ There are also models such as decision trees that are robust to outliers.
 Spot check some methods that are robust to outliers to see if there is a significant improvement in model performance metrics.
 
 
-
 ## References
 
 [Reading and interpreting summary statistics](https://towardsdatascience.com/reading-and-interpreting-summary-statistics-df34f4e69ba6)
+
+[Python Cheat Sheet for Data Science](https://chipnetics.com/tutorials/python-cheat-sheet-for-data-science/)
 
 [11 Essential Code Blocks for EDA Regression Task](https://towardsdatascience.com/11-simple-code-blocks-for-complete-exploratory-data-analysis-eda-67c2817f56cd)
 

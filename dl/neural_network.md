@@ -50,7 +50,10 @@ Each input is multiplied by the weight associated with the synapse connecting th
 
 If there are 3 inputs or neurons in the previous layer, each neuron in the current layer will have 3 distinct weights — one for each each synapse.
 
+
 ## Activation Functions
+
+[How to Choose the Right Activation Function for Neural Networks](https://towardsdatascience.com/how-to-choose-the-right-activation-function-for-neural-networks-3941ff0e6f9c)
 
 Activation functions are contained within neural network layers and modify the data they receive before passing it to the next layer. 
 

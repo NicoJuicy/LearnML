@@ -1,4 +1,4 @@
-# Guide to Linear Regression
+# Guide to Classification and Regression
 
 <!-- MarkdownTOC -->
 
@@ -10,8 +10,8 @@
 - Model Evaluation
 - Guide to Logistic Regression
 - Terminology
-- Regression Examples
 - Classification Examples
+- Regression Examples
 - References
 
 <!-- /MarkdownTOC -->
@@ -24,6 +24,7 @@ There are two main types:
 
 - Simple regression (y = mx + b)
 - Multivariable regression
+
 
 ## Exploratory Data Analysis (EDA)
 
@@ -124,7 +125,7 @@ In this case, a R squared value of 0.78 indicating that the model explains 78% o
 ----------
 
 
-# Guide to Logistic Regression
+## Guide to Logistic Regression
 
 Logistic regression is a good starting point when dealing with classification problems and can be considered the _baseline_ model. 
 
@@ -155,12 +156,7 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 ----------
 
 
-# Regression Examples
-
-[A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
-
-
-# Classification Examples
+## Classification Examples
 
 [Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
 
@@ -168,8 +164,17 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 
 [Classification And Regression Trees for Machine Learning](https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/)
 
+[Building a Random Forest Classifier to Predict Neural Spikes](https://medium.com/@mzabolocki/building-a-random-forest-classifier-for-neural-spike-data-8e523f3639e1)
 
-# References
+
+## Regression Examples
+
+[A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
+
+[A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9)
+
+
+## References
 
 [A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
 
@@ -177,8 +182,6 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 
 [Supervised Machine Learning: Classification, Logistic Regression, and Classification Error Metrics](https://medium.com/the-quant-journey/supervised-machine-learning-classification-logistic-regression-and-classification-error-metrics-6c128263ac64?source=rss------artificial_intelligence-5)
 
-
-[A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9)
 
 [Five Regression Python Modules That Every Data Scientist Must Know](https://towardsdatascience.com/five-regression-python-modules-that-every-data-scientist-must-know-a4e03a886853)
 

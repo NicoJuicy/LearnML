@@ -13,6 +13,7 @@
 - huggingface
 - nlp-datasets
 - Amazon Reviews and Wikipedia Links
+- Working with Large Datasets
 
 <!-- /MarkdownTOC -->
 
@@ -23,6 +24,8 @@ Here is a collection of some resources for ML datasets.
 [HuggingFace Datasets](https://github.com/huggingface/datasets)
 
 [The Best Data is Free Data](https://towardsdatascience.com/the-best-data-is-free-data-of-course-b88230b5b47f)
+
+
 
 
 ### [Internet Archive](https://web.archive.org)
@@ -39,7 +42,6 @@ A tutorial to read UCI datasets without downloading them locally in any format
 This tutorial explains how you can read five different types of data file format: data, csv, arff, zip, and rar
 
 ### [How to generate dummy data in Python](https://towardsdatascience.com/how-to-generate-dummy-data-in-python-a05bce24a6c6)
-
 
 How to generate fake data using the Faker library. 
 
@@ -123,4 +125,10 @@ Alphabetical list of free/public domain datasets with text data for use in Natur
 [25 Excellent Machine Learning Open Datasets](https://opendatascience.com/25-excellent-machine-learning-open-datasets/)
 
 Here we list Amazon Reviews and Wikipedia Links for general NLP and the Standford Sentiment Treebank and Twitter US Airlines Reviews specifically for sentiment analysis. 
+
+
+### Working with Large Datasets
+
+[Memory Usage Tips](./tips/memory_usage.md)
+
 

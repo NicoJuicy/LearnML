@@ -17,7 +17,8 @@ Here is a list of ML tools that I have found to be helpful to an AI/ML engineer.
 - Plots and Graphs
 - Deep Learning Tools
 - Linux Utilities
-- Time Series Libraries
+- Time Series
+- Audio
 - References
 
 <!-- /MarkdownTOC -->
@@ -255,13 +256,20 @@ rich makes it easy to add colour and style to terminal output. It can also rende
 
 
 
-## Time Series Libraries
+## Time Series
 
 - statsmodels
 - stumpy
 - AutoTS
 - Darts
 - TsFresh
+
+
+
+## Audio
+
+- [AssemblyAI](https://www.assemblyai.com/)
+
 
 
 ## References

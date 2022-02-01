@@ -68,7 +68,9 @@ E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-026
 
 S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 978-1787125933, 2017.
 
-S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/.
+S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/
+
+D. Jurafsky and J. H. Martin. 2008 (2nd edition). Speech and Language Processing. Prentice Hall. ISBN: 978-0131873216. Available online: https://web.stanford.edu/~jurafsky/slp3/
 
 B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Planning and Control, London: Springer, ISBN: 978-1-84628-641-4, 2010.
 
