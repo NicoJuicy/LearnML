@@ -9,8 +9,8 @@
   - Validation Dataset
   - Confidence Interval Example
   - Nonparametric Confidence Interval
+- Confidence Intervals
 - References
-  - Confidence Intervals
 
 <!-- /MarkdownTOC -->
 
@@ -186,6 +186,17 @@ Bootstrapping estimates the properties of a population parameter or estimator (b
 There is a 95% likelihood that the range 0.741 to 0.757 covers the true statistic mean.
 
 
+## Confidence Intervals
+
+[Understand Time Series Forecast Uncertainty Using Prediction Intervals with Python](https://machinelearningmastery.com/time-series-forecast-uncertainty-using-confidence-intervals-python/)
+
+[Confidence Intervals for Machine Learning](https://machinelearningmastery.com/confidence-intervals-for-machine-learning/)
+
+
+[PSI and CSI: Top 2 model monitoring metrics](https://towardsdatascience.com/psi-and-csi-top-2-model-monitoring-metrics-924a2540bed8?gi=7d4c901abece)
+
+
+
 
 ## References
 
@@ -199,15 +210,8 @@ There is a 95% likelihood that the range 0.741 to 0.757 covers the true statisti
 
 [An Overview of Performance Evaluation Metrics of Machine Learning (Classification) Algorithms](https://towardsdatascience.com/an-overview-of-performance-evaluation-metrics-of-machine-learning-classification-algorithms-7a95783a762f?gi=884943f12b27)
 
-### Confidence Intervals
+[Stop Using Accuracy to Evaluate Your Classification Models](https://towardsdatascience.com/evaluating-ml-models-with-a-confusion-matrix-3fd9c3ab07dd)
 
-[Understand Time Series Forecast Uncertainty Using Prediction Intervals with Python](https://machinelearningmastery.com/time-series-forecast-uncertainty-using-confidence-intervals-python/)
-
-[Confidence Intervals for Machine Learning](https://machinelearningmastery.com/confidence-intervals-for-machine-learning/)
-
-
-
-[PSI and CSI: Top 2 model monitoring metrics](https://towardsdatascience.com/psi-and-csi-top-2-model-monitoring-metrics-924a2540bed8?gi=7d4c901abece)
 
 
 

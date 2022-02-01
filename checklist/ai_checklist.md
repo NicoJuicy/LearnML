@@ -1,5 +1,21 @@
 # AI Checklists
 
+<!-- MarkdownTOC -->
+
+- Feature Engineering
+- When You Should not use ML?
+- AI Checklist
+- Problem Definition Checklist
+- Dataset Selection Checklist
+- Data Preparation Checklist
+- Design Checklist
+- Training Checklist
+- Operationalize Checklist
+- NLP Checklist
+- References
+
+<!-- /MarkdownTOC -->
+
 ## Feature Engineering
 
 Feature engineering is the process of transforming data to extract valuable information.

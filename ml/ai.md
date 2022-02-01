@@ -15,7 +15,7 @@
   - Applications
 - Machine Learning for Humans
 - Neural Networks and Deep Learning
-  - Deep learning applications
+- Deep learning applications
 - Reinforcement Learning
 - Gradient descent
 - What is online learning?
@@ -226,7 +226,9 @@ The definition of AGI is an artificial intelligence that can successfully perfor
 ------
 
 
-## [Neural Networks and Deep Learning](https://medium.com/machine-learning-for-humans/neural-networks-deep-learning-cdad8aeae49b)
+## Neural Networks and Deep Learning
+
+[Neural Networks and Deep Learning](https://medium.com/machine-learning-for-humans/neural-networks-deep-learning-cdad8aeae49b)
 
 Some extensions and further concepts worth noting:
 
@@ -238,7 +240,8 @@ Some extensions and further concepts worth noting:
 
 - **Deep reinforcement learning** is one of the most exciting areas of deep learning research, at the heart of recent achievements in AI. We will dive deeper in Part 5, but essentially the goal is to apply all of the techniques in this post to the problem of teaching an agent to maximize reward. This can be applied in any context that can be gamified — from actual games like Counter Strike or Pacman, to self-driving cars, to trading stocks, to real life and the real world.
 
-### Deep learning applications
+
+## Deep learning applications
 
 Here are a few examples of the incredible things that deep learning can do:
 

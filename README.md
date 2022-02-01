@@ -98,7 +98,7 @@ TODO: Add items
 
 [Performance Metrics](./ml/performance_metrics.md)
 
-[Regression](./ml/regression.md)
+[Classication and Regression](./ml/regression.md)
 
 [Robotics](./ml/robotics.md)
 

@@ -3,39 +3,38 @@
 <!-- MarkdownTOC -->
 
 - Categories of ML Algorithms
-    - Overview of Machine Learning Algorithms
-    - Machine Learning Techniques
-    - Algorithms Grouped by Learning Style
-        - Supervised Learning
-        - Unsupervised Learning
-        - Semi-Supervised Learning
-        - Reinforcement Learning
-    - Algorithms Grouped By Similarity
-        - Classification Algorithms
-            - One-vs-Rest and One-vs-One for Multi-Class Classification
-        - Regression Algorithms
-        - Instance-based Algorithms
-        - Decision Tree Algorithms
-        - Bayesian Algorithms
-            - Problems with Bayesian Networks
-        - Clustering Algorithms
-        - Association Rule Learning Algorithms
-        - Artificial Neural Network Algorithms
-        - Deep Learning Algorithms
-        - Dimensionality Reduction Algorithms
-        - Principal Component Analysis \(PCA\)
-        - Ensemble Algorithms
-        - Decision Trees
-    - Pros and Cons
-    - Examples of Algorithm Lists To Create
-    - Tips for Creating Algorithm List
-    - Orange Algorithm List
-        - Regression
-        - Classification
-        - Classification and Regression
-        - Dimensionality Reduction
-        - Clustering
-    - References
+- Overview of Machine Learning Algorithms
+- Machine Learning Techniques
+- Algorithms Grouped by Learning Style
+    - Supervised Learning
+    - Unsupervised Learning
+    - Semi-Supervised Learning
+    - Reinforcement Learning
+- Algorithms Grouped By Similarity
+    - Classification Algorithms
+    - Regression Algorithms
+    - Instance-based Algorithms
+    - Decision Tree Algorithms
+    - Bayesian Algorithms
+        - Problems with Bayesian Networks
+    - Clustering Algorithms
+    - Association Rule Learning Algorithms
+    - Artificial Neural Network Algorithms
+    - Deep Learning Algorithms
+    - Dimensionality Reduction Algorithms
+    - Principal Component Analysis \(PCA\)
+    - Ensemble Algorithms
+    - Decision Trees
+- Pros and Cons
+- Examples of Algorithm Lists To Create
+- Tips for Creating Algorithm List
+- Orange Algorithm List
+    - Regression
+    - Classification
+    - Classification and Regression
+    - Dimensionality Reduction
+    - Clustering
+- References
 
 <!-- /MarkdownTOC -->
 
@@ -68,7 +67,7 @@ Here is how to get started with machine learning algorithms:
 ----------
 
 
-# Categories of ML Algorithms
+## Categories of ML Algorithms
 
 [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
@@ -86,6 +85,7 @@ There are two common approaches to categorizing ML algorithms:
 <img width="800" alt="Taxonomy of 63 Machine Learning Algorithms" src="https://miro.medium.com/max/4056/1*A9QcGlMRQBAl6cfhxS-XeA.png" />
 
 <center>Figure: 63 Machine Learning Algorithms by Priyanshu Jain</center>
+
 
 ## Overview of Machine Learning Algorithms
 
@@ -180,15 +180,16 @@ This is perhaps the most useful way to group algorithms and it is the approach w
 
 This is a useful grouping method but it is not perfect. However, there are algorithms that could just as easily fit into multiple categories.
 
+
 ### Classification Algorithms
+
+[Guide to Classification and Regression](./ml/regression.md)
 
 Classification is when the output Y is categorical such as positive vs negative (sentiment analysis), dog vs cat (image classification), and disease vs no disease (medical diagnosis).
 
 Linear: Logistic Regression, Linear Discriminant Analysis (LDA)
 
 Non-linear: K-nearest neighbor, Support vector machines (SVM), Naive Bayes, Decision Tree
-
-#### [One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
 
 Not all classification predictive models support multi-class classification.
 

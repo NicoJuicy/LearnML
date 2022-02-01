@@ -3,6 +3,7 @@
 <!-- MarkdownTOC -->
 
 - Overview
+- NLP Cheatsheet
 - Data Mining
 - Pattern Recognition
 - Challenges in Natural Language Processing
@@ -41,6 +42,15 @@ Finally, Text Realization is the final creation of the sentence structure.
 Researchers are now using NLP to understand the meaning of large sets of documents from an analysis perspective which means that they can understand the different contexts and nuances of what phrases mean.
 
 Natural language toolkit (NLTK) is the defacto standard for building NLP  projects.
+
+
+
+## NLP Cheatsheet
+
+This article is a checklist for the  exploration needed to develop an NLP model that performs well. 
+
+[NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
+
 
 
 ## Data Mining
@@ -245,6 +255,8 @@ If the result is a negative number, the sentiment behind the text has a negative
 [Sentiment Analysis of Tweets using BERT](https://thinkingneuron.com/sentiment-analysis-of-tweets-using-bert/)
 
 [How to use SHAP with PyCaret](https://astrobenhart.medium.com/how-to-use-shap-with-pycaret-dc9a31278621)
+
+[Fine-Tuning BERT for Tweets Classification with HuggingFace](https://www.kdnuggets.com/2022/01/finetuning-bert-tweets-classification-ft-hugging-face.html)
 
 
 
