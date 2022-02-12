@@ -33,7 +33,7 @@ In the example, we will implement the learnable image resizing module as propose
 
 ## Image Augmentation using imgaug
 
-The term image augmentation refers to twchniques used to increase the amount of data by adding slightly modified copies of existing data or creating  synthetic data from existing data.
+The term _image augmentation_ refers to twchniques used to increase the amount of data by adding slightly modified copies of existing data or creating  synthetic data from existing data.
 
 In ML, data augmentations are used to reduce overfitting data during  training.
 

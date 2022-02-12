@@ -2,9 +2,12 @@
 
 <!-- MarkdownTOC -->
 
+- What is an AI Engineer?
 - Do I need a Master’s Degree?
 - Recommended Tutorials and Books
+- How to access Safari Online?
 - How to ask an AI/ML question?
+- When You Should not use ML
 - How to choose a performance metric?
 - How to Choose an ML Algorithm?
 - Should I start learning ML by coding an algorithm from scratch?
@@ -21,6 +24,7 @@
     - Should I Standardize then Normalize?
     - How Do I Handle Out-of-Bounds Values?
 - Medical Images
+- How to Develop a Chatbot?
 - Why are Robots not more common?
 
 <!-- /MarkdownTOC -->
@@ -36,12 +40,18 @@ In simplest terms, an AI Engineer is a type of software engineer specializing in
 
 If you are going to spend the time to study AI/ML then you might as well invest in an online degree which will greatly increase your career opportunities (and a requirement for most all AI/ML engineer positions).
 
+The best approach would be to find several job postings that look interesting to you and see what skills and tools they require.
+
 [How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
 
 
 ## Recommended Tutorials and Books
 
 [AI Learning Resources](https://aicoder.medium.com/ai-learning-resources-b49da21fd3b8)
+
+Open source projects can be a good resume builder such as PyCaret, scikit-learn, etc. GitHub repos usually have a “good first issue” or "help wanted" tags on the Issues tab. It can be a bit of work but u should be able to find some open-source project that u can contribute to.
+
+It is also good to do some small projects yourself to create a portfolio that you can share on your own GitHub repos, even if it is just to fork and add some features/enhancements yourself to some small ML repo that you find interesting.
 
 
 ## How to access Safari Online?
@@ -67,21 +77,49 @@ Briefly describe the following (1-2 sentences per item):
 See [How to ask an AI/ML question](https://aicoder.medium.com/how-to-ask-an-ai-ml-question-6cfddaa75bc9)
 
 
+## When You Should not use ML
+
+[4 Reasons Why You Shouldn’t Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11?source=rss----7f60cf5620c9---4&gi=204e8d695029) 
+
+Technically, AI/ML is a graduate level topic which will has quite a few undergrad prerequisites in math and CS which always makes me wonder and probably why about 80% of AI projects fail. 
+
+In fact, Tesla and OpenAI just made a billion dollar AI newbie mistake. I don’t think most people realize that Musk doesn’t have any degrees. If ur spacecraft blows up or ur AV kill’s someone that isn’t a “learning experience”, u screwed up big time IMO.
+
+
 ## How to choose a performance metric?
 
 See [Machine Learning Performance Metrics](./ml/performance_metrics.md) 
 
 
+
 ## How to Choose an ML Algorithm?
 
-[How to Choose an ML Model](./getting_started.md) and [Understand Machine Learning Algorithms](./ml/getting_started.md)
+First, remember to take a data-centric approach, so avoid asking “what models should I use”. Thus, the first step in ML process would be to perform EDA to understand the properties of your model such as balanced (classification) or Gaussian (regression).
+
+Concentrate on learning the key concepts such as data preparation, feature engineering, model selection, sklearn and tflow and pipelines, tflow Dataset class, etc. It also would be good to work through a few end-to-end classification/regression examples to get an idea for some of the steps involved.
+
+[Getting Started with AI](https://medium.com/codex/getting-started-with-ai-13eafc77ac8e)
+
+[LearnML](https://github.com/codecypher/LearnML)
+
+
+[An End-to-End Machine Learning Project — Heart Failure Prediction](https://towardsdatascience.com/an-end-to-end-machine-learning-project-heart-failure-prediction-part-1-ccad0b3b468a?gi=498f31004bdf)
+
+[A Beginner’s Guide to End to End Machine Learning](https://towardsdatascience.com/a-beginners-guide-to-end-to-end-machine-learning-a42949e15a47?gi=1736097101b9)
+
+[End-to-End Machine Learning Workflow](https://medium.com/mlearning-ai/end-to-end-machine-learning-workflow-part-1-b5aa2e3d30e2)
+
 
 
 ## Should I start learning ML by coding an algorithm from scratch?
 
 [How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
 
-The best approach would be to find several job postings that look interesting to you and see what skills and tools they require.  
+I would recommend using Orange, AutoGluon, PyCaret, and/or simmilar tools to evaluate many models on your dataset. The tools will also help detect any issues with the data as well as perform the most common transforms needed for the various algorithms. Then, select the top 3 for further study. 
+
+AutoML tools are the future of AI, so now would be a good time to see how they work rather than spend a lot of time coding the wrong algorithm from scratch which is a common beginner mistake. In short, you need to learn a data-centric approach.
+
+The rule of thunb (heuristic) is that a DL model should be your last choice (Occam's Razor). 
 
 
 ## Is image channels first or last?
@@ -94,6 +132,8 @@ A huge gotcha with both PyTorch and Keras. Actually, you need to sometimes need 
 
 [A Gentle Introduction to Channels-First and Channels-Last Image Formats](https://machinelearningmastery.com/a-gentle-introduction-to-channels-first-and-channels-last-image-formats-for-deep-learning/)
 
+
+[Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
 
 
 ## How to share your work?
@@ -176,11 +216,11 @@ One simple approach to handling this may be to check for out-of-bound values and
 
 Small and imbalanced datasets are common in medical applications. However, it is still considered an open research problem in CS. Thus, there is not standard “recipe” for data prep. Just some heuristics that people have come up with. So u will need to do some research to justify your final choice of data prep techniques, especially for medical datasets. 
 
-At least one of the articles discusses X-ray images which may have some references that are helpful (not sure). I would also try searching on arxiv.org for “Survey” articles that would list some peer-reviewed journal articles on the type of images that u are working with.
+At least one of the articles discusses X-ray images which may have some references that are helpful (not sure). I would try searching on arxiv.org for “Survey” articles that would list some peer-reviewed journal articles on the type of images that u are working with.
 
-Resampling is just one approach to balance a dataset but it is an advanced concept, so u need to have a thorough understanding of the core ML concepts. Otherwise, your results will be suspect. 
+Resampling is just one approach to balance a dataset but it is an advanced concept, so you need to have a thorough understanding of the core ML concepts. Otherwise, your results will be suspect. 
 
-I have some notes on “Dataset Issues” that may help get u started. However, the approach is different for image datasets.
+I have some notes on “Dataset Issues” that may help get you started for structured datasets. However, the approach is different for image datasets.
 
 
 ## How to Develop a Chatbot?
@@ -192,6 +232,7 @@ Chatbots are better to use pretrained model and software. You can take a look at
 [Building a Chatbot with Rasa](https://towardsdatascience.com/building-a-chatbot-with-rasa-3f03ecc5b324)
 
 [Python Chatbot Project – Learn to build your first chatbot using NLTK and Keras](https://data-flair.training/blogs/python-chatbot-project/)
+
 
 
 ## Why are Robots not more common?
