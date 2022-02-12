@@ -32,6 +32,9 @@ The following books are available on  [oreilly.com](https://www.oreilly.com/):
 [Introduction to APIs in Python](https://towardsdatascience.com/quick-fire-guide-to-apis-in-python-891dd98c8877?source=rss----7f60cf5620c9---4)
 
 
+[Mathematics for Machine Learning](https://mml-book.github.io/)
+
+
 ## Books for Developers
 
 A. Artasanchez and P. Joshi, Artificial Intelligence with Python, 2nd ed. Birmingham, U.K.: Packt Pub. Ltd., 2020.
