@@ -22,9 +22,9 @@
 
 <!-- /MarkdownTOC -->
 
-If you are like me and try to follow the principles of DRY, KISS, GoF Design Patterns, Occam’s Razor, and other [software engineering best practices](https://www.computer.org/education/bodies-of-knowledge/software-engineering) then this repo is for you!
+If you are like me and try to follow the principles of DRY, KISS, GoF Design Patterns, Occam’s Razor, and other [software engineering body of knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering) then this repo is for you!
 
-> Occam’s Razor: The simplest model that fits your data is usually the best. 
+> Occam’s Razor: The simplest model that fitsthe data is usually the best. 
 
 ## Background
 
@@ -36,11 +36,12 @@ This repo contains notes from various articles and other resources on a variety 
 
 This is a work in progress (just getting started), so there is still a lot missing and the content is changing. 
 
+
 [Medium Articles](https://aicoder.medium.com/)
 
-[How to Learn AI/ML](./how_to_learn.md)
+[How to Learn AI](https://medium.com/geekculture/how-to-learn-ai-7bb743f0bbdf)
 
-[Getting Started](https://medium.com/codex/getting-started-with-ai-13eafc77ac8e)
+[Getting Started with AI](https://medium.com/codex/getting-started-with-ai-13eafc77ac8e)
 
 [GitHub Lists](https://github.com/codecypher?tab=stars)
 
