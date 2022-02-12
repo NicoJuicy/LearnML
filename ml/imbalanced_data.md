@@ -279,6 +279,12 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 [Sample weights](https://keras.io/guides/training_with_built_in_methods/#sample-weights)
 
 
+## CV Imbalanced Classification
+
+[Computer Vision: How to tackle the problem of class imbalance in image datasets?](https://medium.com/mlearning-ai/computer-vision-how-to-tackle-the-problem-of-class-imbalance-in-image-datasets-d4d0ca6bd5db)
+
+
+
 ## References
 
 [A Gentle Introduction to Imbalanced Classification](https://machinelearningmastery.com/what-is-imbalanced-classification/) 
