@@ -2,6 +2,9 @@
 """
   generate_token.py
   Generate token for jupyterlab install
+  
+  Jeff Holmes
+  02/11/2022
 """
 import IPython as IPython
 

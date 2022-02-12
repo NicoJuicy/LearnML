@@ -6,12 +6,14 @@
   Code samples performing image augmentation using OpenCV
 
   References:
-  
   [Recognizing hand-written digits](https://scikit-learn.org/)
   [Image Processing in Python](https://www.geeksforgeeks.org/)
   [Image Processing and Data Augmentation Techniques for Computer Vision](https://towardsdatascience.com)
   [Image Augmentation with skimage](https://towardsdatascience.com)
   [Random Numbers in Python](https://www.geeksforgeeks.org/)
+
+  Jeff Holmes
+  02/11/2022
 """
 import cv2
 import numpy as np
