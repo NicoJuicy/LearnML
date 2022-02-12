@@ -1,9 +1,5 @@
 # Data Preparation
 
-[Tour of Data Preparation Techniques for Machine Learning](https://machinelearningmastery.com/data-preparation-techniques-for-machine-learning/)
-
-[Feature Engineering](https://gist.github.com/codecypher/dd4c7e8794982570288c2cfe95665c9c)
-
 <!-- MarkdownTOC levels=1,2,3 -->
 
 - Overview
@@ -27,7 +23,7 @@
     - Scaling
     - Normalization
     - Normalization vs Standardization
-    - How to Choose between Standardization vs Normalization?
+    - How to Choose between Standardization vs Normalization
     - Log Transform
 - Normalization Techniques
     - Using maximum absolute scaling
@@ -39,13 +35,14 @@
 - Order of Data Transforms for Time Series
 - Train-Test Split
 - Data Pipelines
+    - Import Libraries
     - Create Simple Pipeline
     - Best Scaler
     - Best Estimator
     - Pipeline with PCA
     - Joblib
     - Pandas pipe
-- Pipeline Example
+- scikit-learn Pipeline Example
     - Data Prep
     - Create Pipeline
     - Train and Evaluate Pipeline
@@ -54,12 +51,15 @@
     - Data Preprocessing
     - Categorical Data
     - Scaling
+    - Normalization
     - Train-Test Split
 - References
 
 <!-- /MarkdownTOC -->
 
 ## Overview
+
+[Tour of Data Preparation Techniques for Machine Learning](https://machinelearningmastery.com/data-preparation-techniques-for-machine-learning/)
 
 [Feature Engineering](./feature_engineering.md)
 
@@ -230,13 +230,19 @@ We can drop or fill the `NaN` values.
 ### Handle duplicate values
 
 ```py
-    # We can show if there is duplicated in specific column 
+    # We can show if there are duplicates in specific column 
     # by calling 'duplicated' on a Series.
     df.zip_code.duplicated().sum()
 
     # Check if an entire row is duplicated 
     df.duplicated().sum()
 
+    # find duplicate rows across all columns
+    dup_rows = df[df.duplicated()]
+    
+    # find duplicate rows across specific columns
+    dup_rows = df[df.duplicated(['col1', 'col2'])]
+     
     # Return DataFrame with duplicate 
     # rows removed, optionally only considering certain columns.
     # 'keep' controls the rows to keep.
@@ -257,10 +263,6 @@ We can drop or fill the `NaN` values.
 
 
 ## Encoding Categorical Features
-
-[Ordinal and One-Hot Encodings for Categorical Data](https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/)
-
-[3 Ways to Encode Categorical Variables for Deep Learning](https://machinelearningmastery.com/how-to-prepare-categorical-data-for-deep-learning-in-python/)
 
 Machine learning algorithms and deep learning neural networks require that input and output variables are numbers.
 
@@ -508,7 +510,7 @@ The majority of machine learning and optimization algorithms behave much better 
 > Regularization is another reason to use feature scaling such as standardization. For regularization to work properly, all features must be on comparable scales.
 
 
-### How to Choose between Standardization vs Normalization?
+### How to Choose between Standardization vs Normalization
 
 Data-centric heuristics include the following:
 
@@ -542,10 +544,6 @@ Log transform is used to handle confusing data so that the data becomes more app
 
 
 ## Normalization Techniques
-
-[How to Use StandardScaler and MinMaxScaler Transforms in Python](https://machinelearningmastery.com/standardscaler-and-minmaxscaler-transforms-in-python/)
-
-[How to Use Power Transforms for Machine Learning](https://machinelearningmastery.com/power-transforms-with-scikit-learn/)
 
 Data Normalization is a typical practice in machine learning which consists of transforming numeric columns to a _standard scale_. Some feature values may differ from others multiple times. Therefore, the features with higher values will dominate the learning process.
 
@@ -707,13 +705,29 @@ A train-test split conists of the following:
 
 ## Data Pipelines
 
-[Build Machine Learning Pipelines](https://medium.datadriveninvestor.com/build-machine-learning-pipelines-with-code-part-1-bd3ed7152124?gi=c419327a3c8c)
-
-[Customizing Sklearn Pipelines: TransformerMixin](https://towardsdatascience.com/customizing-sklearn-pipelines-transformermixin-a54341d8d624?source=rss----7f60cf5620c9---4)
+There are multiple stages to running machine learning algorithms since it involves a sequence of tasks including pre-processing, feature extraction, model fitting, performance, and validation.
 
 Pipeline is a technique used to create a linear sequence of data preparation and modeling steps to automate machine learning workflows.
 
-Pipelines also help in parallelization which means different jobs can be run in parallel as well as help to inspect and debug the data flow in the model.
+Pipelines help in parallelization which means different jobs can be run in parallel as well as help to inspect and debug the data flow in the model.
+
+### Import Libraries
+
+```py
+    import pandas as pd
+    import numpy as np
+
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.svm import SVC
+    from sklearn.neighbors import KNeighborsClassifier
+    from sklearn.tree import DecisionTreeClassifier
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.pipeline import Pipeline
+    from sklearn.metrics import accuracy_score
+    from sklearn.model_selection import train_test_split
+    from sklearn.preprocessing import MinMaxScaler, RobustScaler, StandardScaler
+    from sklearn.decomposition import PCA
+```
 
 ### Create Simple Pipeline
 
@@ -854,6 +868,7 @@ Convert pipeline to dataFrame and show the best model:
 Pipeline example with Principal Component Analysis (PCA)
 
 
+
 ### Joblib
 
 [Lightweight Pipelining In Python using Joblib](https://towardsdatascience.com/lightweight-pipelining-in-python-1c7a874794f4)
@@ -870,7 +885,7 @@ As the number of steps increase, the syntax becomes cleaner with the pipe functi
 
 
 
-## Pipeline Example
+## scikit-learn Pipeline Example
 
 [Unleash the Power of Scikit-learn’s Pipelines](https://towardsdatascience.com/unleash-the-power-of-scikit-learns-pipelines-b5f03f9196de)
 
@@ -980,6 +995,8 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [Smarter Ways to Encode Categorical Data for Machine Learning](https://towardsdatascience.com/smarter-ways-to-encode-categorical-data-for-machine-learning-part-1-of-3-6dca2f71b159)
 
+[3 Ways to Encode Categorical Variables for Deep Learning](https://machinelearningmastery.com/how-to-prepare-categorical-data-for-deep-learning-in-python/)
+
 [Stop One-Hot Encoding Your Categorical Variables](https://towardsdatascience.com/stop-one-hot-encoding-your-categorical-variables-bbb0fba89809)
 
 
@@ -992,6 +1009,13 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 [How to Transform Target Variables for Regression in Python](https://machinelearningmastery.com/how-to-transform-target-variables-for-regression-with-scikit-learn/)
 
 [The Mystery of Feature Scaling is Finally Solved](https://towardsdatascience.com/the-mystery-of-feature-scaling-is-finally-solved-29a7bb58efc2?source=rss----7f60cf5620c9---4)
+
+
+### Normalization
+
+[How to Use StandardScaler and MinMaxScaler Transforms in Python](https://machinelearningmastery.com/standardscaler-and-minmaxscaler-transforms-in-python/)
+
+[How to Use Power Transforms for Machine Learning](https://machinelearningmastery.com/power-transforms-with-scikit-learn/)
 
 
 ### Train-Test Split
@@ -1012,3 +1036,6 @@ W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0,
 
 [2] [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
 
+[Build Machine Learning Pipelines](https://medium.datadriveninvestor.com/build-machine-learning-pipelines-with-code-part-1-bd3ed7152124?gi=c419327a3c8c)
+
+[Customizing Sklearn Pipelines: TransformerMixin](https://towardsdatascience.com/customizing-sklearn-pipelines-transformermixin-a54341d8d624?source=rss----7f60cf5620c9---4)
