@@ -156,7 +156,15 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 ----------
 
 
+
 ## Classification Examples
+
+[End-to-End Machine Learning Workflow (Part 1)](https://medium.com/mlearning-ai/end-to-end-machine-learning-workflow-part-1-b5aa2e3d30e2)
+
+[End-to-End Machine Learning Workflow (Part 2)](https://medium.com/mlearning-ai/end-to-end-machine-learning-workflow-part-2-e7b6d3fb1d53)
+
+
+[An End-to-End Machine Learning Project — Heart Failure Prediction](https://towardsdatascience.com/an-end-to-end-machine-learning-project-heart-failure-prediction-part-1-ccad0b3b468a?gi=498f31004bdf)
 
 [Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
 
@@ -169,6 +177,8 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 
 ## Regression Examples
 
+[A Beginner’s Guide to End to End Machine Learning](https://towardsdatascience.com/a-beginners-guide-to-end-to-end-machine-learning-a42949e15a47?gi=1736097101b9)
+
 [A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
 
 [A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9)
@@ -177,6 +187,8 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 ## References
 
 [A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
+
+[End-to-End Machine Learning Workflow](https://medium.com/mlearning-ai/end-to-end-machine-learning-workflow-part-1-b5aa2e3d30e2)
 
 [Essential guide to Multi-Class and Multi-Output Algorithms in Python](https://satyam-kumar.medium.com/essential-guide-to-multi-class-and-multi-output-algorithms-in-python-3041fea55214)
 
