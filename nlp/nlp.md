@@ -51,6 +51,8 @@ This article is a checklist for the  exploration needed to develop an NLP model 
 
 [NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
 
+[NLTK cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-nltk-cheatsheet-d09c57267a0b)
+
 
 
 ## Data Mining
