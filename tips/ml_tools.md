@@ -156,7 +156,6 @@ NLTK is also an open-source library and is available for almost every kind of op
 ## Python Libraries
 
 - dateutil
-- Modin
 - Pipreqs
 - Poetry
 - tqdm
@@ -165,6 +164,39 @@ NLTK is also an open-source library and is available for almost every kind of op
 - The Algorithms - Python
 - vinta/awesome-python
 - josephmisiti/awesome-machine-learning
+
+
+### Jupyterlab
+
+[JupyterLab](https://github.com/jupyterlab/jupyterlab) is the next-generation user interface for Project Jupyter offering all the familiar building blocks of the classic Jupyter Notebook (notebook, terminal, text editor, file browser, rich outputs, etc.) in a flexible and powerful user interface. JupyterLab will eventually replace the classic Jupyter Notebook.
+
+Jupyterlab has an updated UI/UX with a tab interface for working with multiple files and notebooks.
+
+Since Jupyter is really a web server application, it runs much better on a remote server. 
+
+I currently have Jupyterlab installed and running as a Docker container on a VM droplet which runs much better than on my local machine. The only issue is that my VM only has 2GB memory. However, I have had great success so far using Jupyterlab and Modin with notebooks that I am unable to run on my local machine with 32GB memory (out of memory issues) without any performance issues.
+
+If you do not have cloud server of your own, a nice alternative is [Deepnote](https://deepnote.com). The free tier does not offer GPU access but it does offer a shared VM with 24GB of memory running a custom version of Jupyterlab which I have found more useful than Google Colab Pro. It is definitely worth a try. 
+
+### Modin
+
+[Modin](https://github.com/modin-project/modin) is a drop-in replacement for pandas. 
+
+While pandas is single-threaded, Modin lets you speed up your workflows by scaling pandas so it uses all of your cores. 
+
+Modin works especially well on larger datasets where pandas becomes painfully slow or runs out of memory.
+
+Using modin is as simple as replacing the pandas import:
+
+```py
+  # import pandas as pd
+  import modin.pandas as pd
+```
+
+I have a sample [notebook](./python/) that demonstrates using modin. 
+
+Since Modin is still under development, I do experience occasional warning/error messages but everything seems to be working. However, the developers seem to be quick to answer questions and provide assistance in troubleshooting issues. Highly recommend trying it out. 
+
 
 ### Pickle
 
