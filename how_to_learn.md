@@ -1,10 +1,19 @@
-# How to Learn Machine Learning
+# How to Learn AI
 
-[How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
+<!-- MarkdownTOC -->
+
+- Tutorials and Books
+- Consulting and Freelance
+- References
+
+<!-- /MarkdownTOC -->
+
+
+[How to Learn AI](https://medium.com/geekculture/how-to-learn-ai-7bb743f0bbdf)
 
 [How to Learn Python for Machine Learning](https://machinelearningmastery.com/how-to-learn-python-for-machine-learning/)
 
-**[Do you need a Master’s Degree in Data Science?](https://towardsdatascience.com/do-you-need-a-masters-degree-in-data-science-you-are-asking-the-wrong-question-8c83dec8bf1b?source=rss----7f60cf5620c9---4)**
+[Do you need a Master’s Degree in Data Science?](https://towardsdatascience.com/do-you-need-a-masters-degree-in-data-science-you-are-asking-the-wrong-question-8c83dec8bf1b?source=rss----7f60cf5620c9---4)
 
 **NOTE:** The Medium and TowardsDataSciene articles can be viewed in a browser Private tab if you do not have a subscription.
 
@@ -29,7 +38,7 @@ If you ever do consulting or freelance work in the U.S. for $$, you should be aw
 
 [Stop Coding Machine Learning Algorithms From Scratch](https://machinelearningmastery.com/dont-implement-machine-learning-algorithms/)
 
-[5 Mistakes Programmers Make when Starting in Machine Learning](httpsp://machinelearningmastery.com/mistakes-programmers-make-when-starting-in-machine-learning/)
+[5 Mistakes Programmers Make when Starting in Machine Learning](https://machinelearningmastery.com/mistakes-programmers-make-when-starting-in-machine-learning/)
 
 
 [1] P. Bourque and R. E. Fairley, Guide to the Software Engineering Body of Knowledge, v. 3, IEEE, 2014. 

@@ -2,8 +2,8 @@
 
 <!-- MarkdownTOC -->
 
-- Feature Engineering
 - When You Should not use ML?
+- Feature Engineering
 - AI Checklist
 - Problem Definition Checklist
 - Dataset Selection Checklist
@@ -16,22 +16,6 @@
 
 <!-- /MarkdownTOC -->
 
-## Feature Engineering
-
-Feature engineering is the process of transforming data to extract valuable information.
-
-If done correctly, feature engineering can play even a bigger role in model performance than hyperparameter tuning.
-
-A checklist for transforming features for better model performance:
-
-[Feature engineering A-Z](https://towardsdatascience.com/feature-engineering-a-z-aa8ce9639632)
-
-
-The following article explains and implements PCA in Python:
-
-[Dimensionality Reduction Explained](https://towardsdatascience.com/dimensionality-reduction-explained-5ae45ae3058e)
-
- 
 
 ## When You Should not use ML?
 
@@ -75,8 +59,26 @@ ML should not be used when simpler alternatives exist that are equally as effect
 
 You should start with the simplest solution that you can implement and iteratively determine if the marginal benefits from the next best alternative outweighs the marginal costs.
 
-Simpler = Better (Occam's Razor)
+> Simpler = Better (Occam's Razor)
 
+
+## Feature Engineering
+
+Feature engineering is the process of transforming data to extract valuable information.
+
+If done correctly, feature engineering can play even a bigger role in model performance than hyperparameter tuning.
+
+A checklist for transforming features for better model performance:
+
+[Feature engineering A-Z](https://towardsdatascience.com/feature-engineering-a-z-aa8ce9639632)
+
+
+The following article explains and implements PCA in Python:
+
+[Dimensionality Reduction Explained](https://towardsdatascience.com/dimensionality-reduction-explained-5ae45ae3058e)
+
+
+----------
 
 
 ## AI Checklist
@@ -114,7 +116,7 @@ The lifecycle of an AI project can be divided into 6 stages:
 
 7. Verify impact when the logistic classification prediction is incorrect.
 
-8. Ensure project costs include the cost of managing corresponding data pipelines.
+8. Ensure project costs include the cost of managing the corresponding data pipelines.
 
 
 ## Dataset Selection Checklist

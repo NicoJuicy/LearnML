@@ -1,5 +1,35 @@
 # Applied Machine Learning Checklist
 
+<!-- MarkdownTOC -->
+
+- Each Data Problem is Different
+- The Checklist
+    - 5-Step Systematic Process
+    - 1. Define The Problem
+        - 1.1 What is the problem?
+        - 1.2 Why does the problem need to be solved?
+        - 1.3 How could the problem be solved manually?
+    - 2. Prepare The Data
+        - 2.1 Data Description
+        - 2.2 Data Preprocessing
+        - 2.3 Data Transformation
+        - 2.4 Data Summarization
+    - 3. Spot Check Algorithms
+        - 3.1 Create Test Harness
+        - 3.2 Evaluate Candidate Algorithms
+    - 4. Improve Results
+        - 4.1 Algorithm Tuning
+        - 4.2 Ensemble Methods
+        - 4.3 Model Selection
+    - 5. Finalize Project
+        - 5.1 Present Results
+        - 5.2 Operationalize Results
+    - Next Step
+- References
+
+<!-- /MarkdownTOC -->
+
+
 You can use a checklist to structure your search for the right combination of elements to consistently deliver a good solution to any machine learning (ML) problem.
 
 A checklist is a simple tool that guarantees an outcome, not a panacea or silver bullet. 
@@ -80,7 +110,9 @@ You should spend most of your time trying to understand your data.
 Here we try to think about all of the data that is and is not available.
 
 - Describe the extent of the data that is available.
+
 - Describe data that is not available but is desirable.
+
 - Describe the data that is available that you don’t need.
 
 #### 2.2 Data Preprocessing
@@ -88,7 +120,9 @@ Here we try to think about all of the data that is and is not available.
 Here we try to to organize the raw data into a form that we can work with in modeling tools.
 
 - Format data so that it is in a form that you can work with.
+
 - Clean the data so that it is uniform and consistent.
+
 - Sample the data in order to best trade-off redundancy and problem fidelity.
 
 **Shortlist of Data Sampling**
@@ -102,9 +136,13 @@ Below are some ideas for different approaches that you can use to sample your da
 You should use each one in turn and let the results from your test harness tell you which representation to use.
 
 - Random or stratified samples
+
 - Rebalance instances by class (more on rebalancing methods)
+
 - Remove outliers (more on outlier methods)
+
 - Remove highly correlated attributes
+
 - Apply dimensionality reduction methods (principle components or t-SNE)
 
 #### 2.3 Data Transformation
@@ -135,7 +173,9 @@ Again you should try each of them in turn and let the results from your test har
 Here we try to find any obvious relationships in the data.
 
 - Create univariate plots of each attribute.
+
 - Create bivariate plots of each attribute with every other attribute.
+
 - Create bivariate plots of each attribute with the class variable. 
 
 
@@ -152,7 +192,9 @@ Now we can start building and evaluating models.
 Here we define a method for model evaluation that we can use to compare results.
 
 - Create a hold-out validation dataset for use later.
+
 - Evaluate and select an appropriate test option.
+
 - Select one (or a small set) performance measure used to evaluate models.
 
 #### 3.2 Evaluate Candidate Algorithms
@@ -160,7 +202,9 @@ Here we define a method for model evaluation that we can use to compare results.
 Here we try to quickly find how learnable the problem might be and what algorithms and views of the data may be good for further investigation.
 
 - Select a diverse set of algorithms to evaluate (10-20).
+
 - Use common or standard algorithm parameter configurations.
+
 - Evaluate each algorithm on each prepared view of the data.
 
 **Shortlist of Algorithms To Try on Classification Problems**
@@ -170,9 +214,13 @@ Here the list does not matter as much as the strategy of spot checking and not g
 Try to evaluate a good mix of algorithms that model the problem quite differently. 
 
 - Instance-based like k-Nearest Neighbors and Learning Vector Quantization
+
 - Simpler methods like Naive Bayes, Logistic Regression and Linear Discriminant Analysis
+
 - Decision Trees like CART and C4.5/C5.0
+
 - Complex non-linear approaches like Backpropagation and Support Vector Machines
+
 - Always try random forest and gradient boosted machines
 
 [Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
@@ -189,7 +237,9 @@ Here we will have a smaller pool of models that are known to be effective on the
 Here we try to get the most from well-performing models.
 
 - Use historically effective model parameters.
+
 - Search the space of model parameters.
+
 - Optimize well performing model parameters.
 
 #### 4.2 Ensemble Methods
@@ -197,7 +247,9 @@ Here we try to get the most from well-performing models.
 Here we tey to combine the results from well-performing models obtain a further improvement in accuracy.
 
 - Use Bagging on well performing models.
+
 - Use Boosting on well performing models.
+
 - Blend the results of well performing models.
 
 #### 4.3 Model Selection
@@ -205,7 +257,9 @@ Here we tey to combine the results from well-performing models obtain a further 
 Here we try to verify that the process of model selection is well-rounded.
 
 - Select a diverse subset (5-10) of well performing models or model configurations.
+
 - Evaluate well performing models on a hold out validation dataset.
+
 - Select a small pool (1-3) of well performing models.
 
 
@@ -220,7 +274,9 @@ Now that we have some results, we can review the problem definition to make good
 Here we try to ensure that we capture what we have done and learned so that we can make the best use of it later. 
 
 - Write up project in a short report (1-5 pages).
+
 - Convert write-up to a slide deck to share findings with others.
+
 - Share code and results with interested parties.
 
 #### 5.2 Operationalize Results
@@ -228,7 +284,9 @@ Here we try to ensure that we capture what we have done and learned so that we c
 Here we try to make sure that we deliver on the solution promise that we made up front.
 
 - Adapt the discovered procedure from raw data to result to an operational setting.
+
 - Deliver and make use of the predictions.
+
 - Deliver and make use of the predictive model.
 
 

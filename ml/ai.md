@@ -2,7 +2,10 @@
 
 <!-- MarkdownTOC -->
 
-- Bias vs Variance Tradeoff
+- Terminology
+  - Pareto Principle
+  - Bias vs Variance Tradeoff
+- Curse of Dimensionality
 - Machine Learning
   - Analyze the Data
   - Process the data
@@ -23,13 +26,20 @@
 
 <!-- /MarkdownTOC -->
 
-**Occam’s Razor:** 
+## Terminology
+
+> Occam’s Razor: The simplest model that fits the data is usually the best. 
+
+- The simplest model that correctly fits the data is also the most consistent.
 
 - Prefer the simplest hypothesis consistent with the data.
 
-- The simplest solution is always the best
 
-- The simplest model that correctly fits the data is the most consistent.
+### Pareto Principle
+
+The **Pareto Principle** states that a vital few inputs/causes (20% of inputs) directly influence a significant majority of the outputs/effects (80% of outputs) which is also known as the 80–20 rule. 
+
+The Pareto Principle states that (for a wide variety of situations) about 80% of the outcome is caused by about 20% of the inputs.
 
 **bootstrap** means to randomly draw (with replacement) rows from the training dataset.
 
@@ -39,9 +49,13 @@
 Thus, a general-purpose universal optimization strategy is theoretically impossible and the only way one strategy can outperform another is if it is specialized to the specific problem under consideration. 
 
 
-## Bias vs Variance Tradeoff
+### Bias vs Variance Tradeoff
 
 The bias-variance trade-off will help us understand the concepts of models over-fitting and under-fitting to training data.
+
+## Curse of Dimensionality
+
+TODO: Add notes
 
 
 
