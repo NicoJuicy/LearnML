@@ -3,9 +3,9 @@
 <!-- MarkdownTOC -->
 
 - Internet Archive
-- Read Datasets with URL in Python
-- How to generate dummy data in Python
-- ML Cheatsheet Dataset List
+- Read Datasets
+- Generate dummy data
+- Dataset Cheatsheet
 - Computer Vision Datasets
 - Medical Image Datasets
 - NLP Datasets
@@ -19,6 +19,9 @@
 
 Here is a collection of some resources for ML datasets.
 
+
+## Dataset Search
+
 [Google Dataset Search](https://datasetsearch.research.google.com)
 
 [HuggingFace Datasets](https://github.com/huggingface/datasets)
@@ -26,28 +29,41 @@ Here is a collection of some resources for ML datasets.
 [The Best Data is Free Data](https://towardsdatascience.com/the-best-data-is-free-data-of-course-b88230b5b47f)
 
 
+## Dataset Cheatsheet
+
+[ML Cheatsheet Dataset List](https://ml-cheatsheet.readthedocs.io/en/latest/datasets.html)
+
+List of public datasets in computer vision, NLP, and more.
 
 
-### [Internet Archive](https://web.archive.org)
+## Read Datasets
 
-Many developers are too quick to choose web crawling as an option to collect data when there are easier, more ethical resources available such as the internet archive. 
-
-The Internet Archive has been archiving the web for 20 years and has preserved billions of webpages from millions of websites. 
-
-
-### [Read Datasets with URL in Python](https://towardsdatascience.com/dont-download-read-datasets-with-url-in-python-8245a5eaa919)
+[Read Datasets with URL in Python](https://towardsdatascience.com/dont-download-read-datasets-with-url-in-python-8245a5eaa919)
 
 A tutorial to read UCI datasets without downloading them locally in any format
 
 This tutorial explains how you can read five different types of data file format: data, csv, arff, zip, and rar
 
-### [How to generate dummy data in Python](https://towardsdatascience.com/how-to-generate-dummy-data-in-python-a05bce24a6c6)
+
+## Generate Dummy Data
+
+[How to generate dummy data in Python](https://towardsdatascience.com/how-to-generate-dummy-data-in-python-a05bce24a6c6)
 
 How to generate fake data using the Faker library. 
 
-### [ML Cheatsheet Dataset List](https://ml-cheatsheet.readthedocs.io/en/latest/datasets.html)
 
-List of public datasets in computer vision, NLP, and more.
+## Structured Datasets
+
+### [huggingface](https://github.com/huggingface/datasets)
+
+[Forget Complex Traditional Approaches to handle NLP Datasets, HuggingFace Dataset Library](https://medium.com/@arjunkumbakkara/forget-complex-traditional-approaches-to-handle-nlp-datasets-huggingface-dataset-library-is-your-f7445ea79267)
+
+HuggingFace Datasets is a lightweight library providing two main features:
+
+- one-line dataloaders for many public datasets: one liners to download and pre-process any of the number of datasets major public datasets (in 467 languages and dialects!) provided on the HuggingFace Datasets Hub.
+
+- efficient data pre-processing: simple, fast and reproducible data pre-processing for the above public datasets as well as your own local datasets in CSV/JSON/text. 
+
 
 
 ## Computer Vision Datasets
@@ -108,17 +124,15 @@ There are a couple of places online that do a great job of curating datasets to 
 
 In addition, the following is a list of some of the best open-source datasets to start learning NLP:
 
-### [huggingface](https://github.com/huggingface/datasets)
-
-Datasets is a lightweight library providing two main features:
-
-- one-line dataloaders for many public datasets: one liners to download and pre-process any of the number of datasets major public datasets (in 467 languages and dialects!) provided on the HuggingFace Datasets Hub.
-
-- efficient data pre-processing: simple, fast and reproducible data pre-processing for the above public datasets as well as your own local datasets in CSV/JSON/text. 
-
 ### [nlp-datasets](https://github.com/niderhoff/nlp-datasets)
 
 Alphabetical list of free/public domain datasets with text data for use in Natural Language Processing (NLP). Most stuff here is just raw unstructured text data, if you are looking for annotated corpora or Treebanks refer to the sources at the bottom.
+
+### [Internet Archive](https://web.archive.org)
+
+Many developers are too quick to choose web crawling as an option to collect data when there are easier, more ethical resources available such as the internet archive. 
+
+The Internet Archive has been archiving the web for 20 years and has preserved billions of webpages from millions of websites. 
 
 ### Amazon Reviews and Wikipedia Links
 
@@ -127,8 +141,9 @@ Alphabetical list of free/public domain datasets with text data for use in Natur
 Here we list Amazon Reviews and Wikipedia Links for general NLP and the Standford Sentiment Treebank and Twitter US Airlines Reviews specifically for sentiment analysis. 
 
 
-### Working with Large Datasets
+
+## Working with Large Datasets
 
 [Memory Usage Tips](./tips/memory_usage.md)
 
-
+[A Big Problem with Linear Regression and How to Solve It](https://towardsdatascience.com/robust-regression-23b633e5d6a5)
