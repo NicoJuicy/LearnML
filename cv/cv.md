@@ -1,4 +1,5 @@
 # Computer Vision
+
 <!-- MarkdownTOC -->
 
 - What is Image Recognition?
@@ -320,6 +321,12 @@ Yolo is supposed to be easier to setup/use and have faster performance.
 
 
 [Making Road Traffic Counting App based on Computer Vision and OpenCV](https://medium.com/machine-learning-world/tutorial-making-road-traffic-counting-app-based-on-computer-vision-and-opencv-166937911660)
+
+
+[Traffic Sign Detection using Convolutional Neural Network and Keras](https://towardsdatascience.com/traffic-sign-detection-using-convolutional-neural-network-660fb32fe90e)
+
+[Traffic sign recognition using deep neural networks using Keras](https://towardsdatascience.com/traffic-sign-recognition-using-deep-neural-networks-6abdb51d8b70)
+
 
 
 ----------
