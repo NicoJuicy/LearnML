@@ -9,10 +9,11 @@ Here is a list of ML tools that I have found to be helpful to an AI/ML engineer.
 - How to choose an ML framework?
 - Keras Tutorials
 - Data Exploration Tools
-- Feature Engineering Tools
+- Pretrained Models
 - ML Libraries
 - Computer Vision
 - Natural Language Programming
+- Feature Engineering Tools
 - Python Libraries
 - Plots and Graphs
 - Deep Learning Tools
@@ -22,6 +23,11 @@ Here is a list of ML tools that I have found to be helpful to an AI/ML engineer.
 - References
 
 <!-- /MarkdownTOC -->
+
+
+[Starred Github lists](https://github.com/codecypher?tab=stars)
+
+[Github Student Developer Pack](https://education.github.com/pack)
 
 
 ## How to choose an ML framework?
@@ -61,17 +67,19 @@ NOTE: It is best to install the Orange native executable on your local machine r
 
 
 
-## Feature Engineering Tools
+## Pretrained Models
 
-There are many tools that will help you in automating the entire feature engineering process and producing a large pool of features in a short period of time for both classification and regression tasks.
+[Model Zoo](https://modelzoo.co/)
 
-- Feature-engine
-- Featuretools
-- AutoFeat
+[TensorFlow Hub](https://tfhub.dev/)
 
-### Tutorials
+[TensorFlow Model Garden](https://github.com/tensorflow/models/tree/master/official)
 
-[The Only Web Scraping Tool you need for Data Science](https://medium.com/nerd-for-tech/the-only-web-scraping-tool-you-need-for-data-science-f388e2afa187)
+[Hugging Face](https://github.com/huggingface)
+
+[PyTorch Hub](https://pytorch.org/hub/)
+
+[Papers with Code](https://paperswithcode.com/)
 
 
 
@@ -153,6 +161,20 @@ NLTK is also an open-source library and is available for almost every kind of op
 
 
 
+## Feature Engineering Tools
+
+There are many tools that will help you in automating the entire feature engineering process and producing a large pool of features in a short period of time for both classification and regression tasks.
+
+- Feature-engine
+- Featuretools
+- AutoFeat
+
+### Tutorials
+
+[The Only Web Scraping Tool you need for Data Science](https://medium.com/nerd-for-tech/the-only-web-scraping-tool-you-need-for-data-science-f388e2afa187)
+
+
+
 ## Python Libraries
 
 - dateutil
@@ -174,7 +196,7 @@ Jupyterlab has an updated UI/UX with a tab interface for working with multiple f
 
 Since Jupyter is really a web server application, it runs much better on a remote server. 
 
-I currently have Jupyterlab installed and running as a Docker container on a VM droplet which runs much better than on my local machine. The only issue is that my VM only has 2GB memory. However, I have had great success so far using Jupyterlab and Modin with notebooks that I am unable to run on my local machine with 32GB memory (out of memory issues) without any performance issues.
+I currently have Jupyterlab installed and running as a Docker container on a VM droplet which runs much better than on my local machine. The only issue is that my VM only has 4GB memory. However, I have had great success so far using Jupyterlab and Modin with notebooks that I am unable to run on my local machine with 32GB memory (out of memory issues) without any performance issues.
 
 If you do not have cloud server of your own, a nice alternative is [Deepnote](https://deepnote.com). The free tier does not offer GPU access but it does offer a shared VM with 24GB of memory running a custom version of Jupyterlab which I have found more useful than Google Colab Pro. It is definitely worth a try. 
 
@@ -300,7 +322,7 @@ rich makes it easy to add colour and style to terminal output. It can also rende
 
 ## Audio
 
-- [AssemblyAI](https://www.assemblyai.com/)
+[AssemblyAI](https://www.assemblyai.com/)
 
 
 
