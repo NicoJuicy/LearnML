@@ -17,9 +17,15 @@
 - Examples of Imbalanced Classification
 - Naive Classifier
 - Keras Imbalanced Classification
+- CV Imbalanced Classification
 - References
 
 <!-- /MarkdownTOC -->
+
+Class imbalance naturally occurs in certain types of classification problems such as credit approval (dataset usually contains much more approved credits than rejected) or fraud detection.
+
+Class imbalance means that one of the modalities of a categorical variable is over-represented with respect to the others. 
+
 
 An imbalanced classification problem is a problem that involves predicting a class label where the distribution of class labels in the training dataset is skewed (there are many more examples for one class than the other classes). 
 
@@ -125,6 +131,52 @@ Imbalanced classification remains an open problem generally and practically must
 
 
 ## How to Handle Imbalanced Classes?
+
+It is recommended to handle class imbalance before training a model and the common methods usually fall in one of the following categories:
+
+- Over-sampling
+- Under-sampling
+- A mix between the two
+
+
+Reasons why class imbalance needs to be dealt with and the effects it can have on model performance:
+
+- The chosen performance metric needs to be aware of class imbalance
+
+Choosing accuracy as a performance measure (the fraction of correct predictions out of the total predictions) may lead to training a dummy model that continuously predicts the most frequent class. 
+
+Choosing a good metric for model evaluation is never obvious and this is especially true in case of class imbalance. Dealing with class imbalance at the source can help remove this extra concern.
+
+
+- Using the default classification threshold may result in poor performance
+
+The classification threshold is often forgotten when performing model evaluation but it provides an extra degree of freedom that can help tune a trained model in order to reach the desired performance.
+
+The threshold is set by default to 0.5 whixh usually divides the theoretical model output in half (normality is generally assumed by most ML models although some are robust enough in case this hypothesis does not hold). 
+
+Training a model based on an imbalanced data set leads to a very skewed output distribution. Thus, using the default value for the classification threshold might result in poor performance.
+
+Even non probabilistic models such as random forests still rely on the assumption that the sampling used to perform bootstrap aggregation is representative. This assumption does not necessarily hold in case of imbalanced classes which can lead to poor performance.
+
+For a skewed output distribution, an optimal classification threshold can be computed from the ROC curve or from the Precision-Recall curve or by defining a custom grid search score which are discussed in [3]. 
+
+
+- Balancing classes does not come for free
+
+It is important to deal with imbalanced data but applying such transformations to the data can have consequences. 
+
+Depending on the method chosen it can introduce bias, lead to overfitting, or remove important information.
+
+After balancing the classes we can check that the overall model performance is not too impacted by the used balancing technique. 
+
+For example, the ROC curve for the imbalanced data (red) is almost superposed to the ROC curve for balanced data (green) which means low loss in performance for the added robustness.
+
+If the results for the balanced dataset are much better or too good something probably went wrong. 
+
+A common mistake is oversampling before splitting the data set in train and test or before cross-validating which leads to data leakage and evaluation metrics that cannot be trusted.
+
+----------
+
 
 Imbalanced data typically refers to a problem with classification problems where the classes are not represented equally.
 
@@ -287,9 +339,14 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 
 ## References
 
-[A Gentle Introduction to Imbalanced Classification](https://machinelearningmastery.com/what-is-imbalanced-classification/) 
+[1] [A Gentle Introduction to Imbalanced Classification](https://machinelearningmastery.com/what-is-imbalanced-classification/)
 
-[Step-By-Step Framework for Imbalanced Classification Projects](https://machinelearningmastery.com/framework-for-imbalanced-classification-projects/)
+[2] [Why we need to deal with imbalanced classes](https://towardsdatascience.com/why-we-need-to-deal-with-imbalanced-classes-ec0dc1a7b803)
+
+[3] [A Gentle Introduction to Threshold-Moving for Imbalanced Classification](https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/)
+
+[4] [Step-By-Step Framework for Imbalanced Classification Projects](https://machinelearningmastery.com/framework-for-imbalanced-classification-projects/)
+
 
 [8 Tactics to Combat Imbalanced Classes in Your Machine Learning Dataset](https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/)
 
