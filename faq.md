@@ -8,6 +8,7 @@
 - How to access Safari Online?
 - How to ask an AI/ML question?
 - When You Should not use ML
+- Disinformation in AI Research
 - How to choose a performance metric?
 - How to Choose an ML Algorithm?
 - Should I start learning ML by coding an algorithm from scratch?
@@ -23,9 +24,10 @@
     - Should I Normalize or Standardize?
     - Should I Standardize then Normalize?
     - How Do I Handle Out-of-Bounds Values?
-- Medical Images
-- How to Develop a Chatbot?
-- Why are Robots not more common?
+- Using AI with Medical Images
+- How to Develop a Chatbot
+- How to Develop Recommender Systems
+- Why are Robots not more common
 
 <!-- /MarkdownTOC -->
 
@@ -43,6 +45,9 @@ If you are going to spend the time to study AI/ML then you might as well invest 
 The best approach would be to find several job postings that look interesting to you and see what skills and tools they require.
 
 [How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
+
+
+AWS and Azure (and MLOps in general) really do not require a degree (esp MSCS) so I would avoid those. Try to find some postings that you like. In the US, most jobs requiring MSCS are looking for experience with tflow, anaconda, numpy, pandas, openai, opencv, NLTK. I highly recommend getting experience understanding the ML workflow using AutoML tools such as Orange and AutoGluon, DataPrep, Auto-ViML, H2O, and Keras Tuner. For robotics, you need to do some real-world projects on your own with raspi and ROS using Python and C++.
 
 
 ## Recommended Tutorials and Books
@@ -74,21 +79,46 @@ Briefly describe the following (1-2 sentences per item):
 6. Favor text and tables over plots and graphs.
 7. Avoid asking users to help debug your code. 
 
-See [How to ask an AI/ML question](https://aicoder.medium.com/how-to-ask-an-ai-ml-question-6cfddaa75bc9)
+[How to ask an AI/ML question](https://aicoder.medium.com/how-to-ask-an-ai-ml-question-6cfddaa75bc9)
+
+In AI and CS you should always be able to describe in a few sentences what you are doing and why you are doing it. It is the first step in defining an AI problem. Also, there is a category and/or terminology for everything we do in CS. It always applies whether you are doing research or working on a simple problem. If you have not taken the time to think about the problem and put it into writing then u really don’t know what you are doing, do you?
 
 
 ## When You Should not use ML
 
 [4 Reasons Why You Shouldn’t Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11?source=rss----7f60cf5620c9---4&gi=204e8d695029) 
 
-Technically, AI/ML is a graduate level topic which will has quite a few undergrad prerequisites in math and CS which always makes me wonder and probably why about 80% of AI projects fail. 
+Technically, AI/ML is a graduate level topic which has several undergraduate prerequisites in math and CS which is probably why about 80% of AI projects fail. 
 
-In fact, Tesla and OpenAI just made a billion dollar AI newbie mistake. I don’t think most people realize that Musk doesn’t have any degrees. If ur spacecraft blows up or ur AV kill’s someone that isn’t a “learning experience”, u screwed up big time IMO.
+
+
+## Disinformation in AI Research
+
+Not just social media and online, disinformation can also be found in scientific research publications. Occurrences in research are more apparent when research or study data are irreproducible. In fact, a Harvard researcher resigned after a fraud discovery occurred.
+
+> One study concluded 33.7% of scientists surveyed admitted to questionable research practices at least once in their career. [IEEE Computer, 12/2021]
+
+Source data validation is necessary for research — especially funded research. The cost of source data validation is estimated to be between 20% and 30% of an overall clinical trial budget. 
+
+What stops someone from simulating, tampering, or falsifying raw data to deliver a desired result to support a “desired” study hypothesis (actually had this occur  on a NIH research project that I was working on)? If data can be easily fabricated and falsified, is source data validation worth the costs? In addition, falsification may not be the only problem here; withholding data is also a problem. 
+
+It is important to keep in mind that data _reproducibility_ can be a challenge because of improper research techniques such as when researchers look for data correlations until they find a bizarre outlier and then claim its statistical significance. Here, they could employ improper statistical techniques or change variables/combine data sets, invalidating the research/ study data and its results.  
+
+If researchers were to maintain and use a data repository, it might create a learning community. In a learning community, outsiders not associated with the creation of the original data could request access to datasets to  test research outcomes and offer peer-reviewed improvements in a data owner’s experimental techniques. This could also discourage data tampering and falsification.
+
+IEEE has attempted to help by providing a utility for researchers called [IEEE Dataport](https://ieee-dataport .org/) which offers researchers free data uploads and access of up to 2 TB. 
+
+The IEEE Dataport is not only beneficial by having research data stored at a trusted organization but datasets may also be connected to IEEE journal and magazine articles which increases data and research visibility.
+
+IEEE Dataport currently has almost 700,000 users and over 1,500 data sets.
+
+Most importantly, this offering should support reproducible research, a topic that Computer will discuss further in future issues. 
+
 
 
 ## How to choose a performance metric?
 
-See [Machine Learning Performance Metrics](./ml/performance_metrics.md) 
+[Machine Learning Performance Metrics](./ml/performance_metrics.md) 
 
 
 
@@ -97,6 +127,18 @@ See [Machine Learning Performance Metrics](./ml/performance_metrics.md)
 First, remember to take a data-centric approach, so avoid asking “what models should I use”. Thus, the first step in ML process would be to perform EDA to understand the properties of your model such as balanced (classification) or Gaussian (regression).
 
 Concentrate on learning the key concepts such as data preparation, feature engineering, model selection, sklearn and tflow and pipelines, tflow Dataset class, etc. It also would be good to work through a few end-to-end classification/regression examples to get an idea for some of the steps involved.
+
+
+There are some applied AI/ML processes and techniques given in Chapter 19 of the following textbooks that include a procedure for model selection:
+
+S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 978-0-13-604259-4, 2021.
+
+E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.
+
+J Brownlee also describes an “Applied Machine Learning Process” that I have found most helpful in practice. 
+
+I have some notes and checklists that I have created concerning the applied AI process in general. The process is  similar to the approach of SWE best practices given in SWEBOK. 
+
 
 [Getting Started with AI](https://medium.com/codex/getting-started-with-ai-13eafc77ac8e)
 
@@ -212,7 +254,8 @@ Later, you may have new data with values smaller or larger than the minimum or m
 One simple approach to handling this may be to check for out-of-bound values and change their values to the known minimum or maximum prior to scaling. Alternately, you can estimate the minimum and maximum values used in the normalization manually based on domain knowledge.
 
 
-## Medical Images
+
+## Using AI with Medical Images
 
 Small and imbalanced datasets are common in medical applications. However, it is still considered an open research problem in CS. Thus, there is not standard “recipe” for data prep. Just some heuristics that people have come up with. So u will need to do some research to justify your final choice of data prep techniques, especially for medical datasets. 
 
@@ -223,7 +266,7 @@ Resampling is just one approach to balance a dataset but it is an advanced conce
 I have some notes on “Dataset Issues” that may help get you started for structured datasets. However, the approach is different for image datasets.
 
 
-## How to Develop a Chatbot?
+## How to Develop a Chatbot
 
 Chatbots are better to use pretrained model and software. You can take a look at Moodle and Rasa which are popular. There is also an example using NLTK that claims to be somewhat accurate. 
 
@@ -234,8 +277,21 @@ Chatbots are better to use pretrained model and software. You can take a look at
 [Python Chatbot Project – Learn to build your first chatbot using NLTK and Keras](https://data-flair.training/blogs/python-chatbot-project/)
 
 
+## How to Develop Recommender Systems
 
-## Why are Robots not more common?
+This article give a high level overview of recommender systems which may give some ideas for approaches. You can also track web browser activity in various ways to build a custom dataset but you should be able to find a toy dataset to work with initially once you decide on an approach.  
+
+Once you decide on an approach (there are many such collaborative filtering for example), you should be able to determine the type of dataset that you need which will then allow to find a toy dataset to use for experimentation and prototyping since it will most likely take a lot of time and effort to build a custom dataset for many of the approaches such as web browser tracking. 
+
+Then, you should have a toy dataset on which you can use some AutoML tools to evaluate many different models and be able to narrow the choices to just a few models.
+
+[Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/inside-recommendations-how-a-recommender-system-recommends.html/)
+
+[Recommender System using Collaborative Filtering in Pyspark](https://angeleastbengal.medium.com/recommender-system-using-collaborative-filtering-in-pyspark-b98eab2aea75?source=post_page-----b98eab2aea75-----------------------------------)
+
+
+
+## Why are Robots not more common
 
 Robot soccer is one type of classic robotics toy problem, often involving multiagent reinforcement learning (MARL). 
 
