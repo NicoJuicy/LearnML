@@ -22,9 +22,21 @@
 
 <!-- /MarkdownTOC -->
 
-If you are like me and try to follow the principles of DRY, KISS, GoF Design Patterns, Occam’s Razor, and other [software engineering body of knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering) then this repo is for you!
+If you are like me and try to follow the principles of DRY, KISS, Design Patterns, Occam’s Razor, and other software engineering best practices  then this repo is for you!
 
-> Occam’s Razor: The simplest model that fitsthe data is usually the best. 
+> Don't reinvent the wheel (DRTW)
+
+> Occam’s Razor: simple is best.
+
+> Complex theories do not work, simple algorithms do. – Vladimir Vapnik
+
+
+[LearnML](https://github.com/codecypher/LearnML)
+
+[medium](https://aicoder.medium.com)
+
+[Instapaper](https://instapaper.com/p/codecypher)
+
 
 ## Background
 
