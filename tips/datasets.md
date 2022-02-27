@@ -2,17 +2,19 @@
 
 <!-- MarkdownTOC -->
 
-- Internet Archive
-- Read Datasets
-- Generate dummy data
+- Dataset Search
 - Dataset Cheatsheet
+- Read Datasets
+- Generate Dummy Data
+- Structured Datasets
+    - huggingface
 - Computer Vision Datasets
-- Medical Image Datasets
+    - Medical Image Datasets
 - NLP Datasets
-- NLP Open Source Datasets
-- huggingface
-- nlp-datasets
-- Amazon Reviews and Wikipedia Links
+    - NLP Open Source Datasets
+    - nlp-datasets
+    - Internet Archive
+    - Amazon Reviews and Wikipedia Links
 - Working with Large Datasets
 
 <!-- /MarkdownTOC -->
@@ -27,6 +29,8 @@ Here is a collection of some resources for ML datasets.
 [HuggingFace Datasets](https://github.com/huggingface/datasets)
 
 [The Best Data is Free Data](https://towardsdatascience.com/the-best-data-is-free-data-of-course-b88230b5b47f)
+
+[Papers with Code](https://paperswithcode.com/)
 
 
 ## Dataset Cheatsheet

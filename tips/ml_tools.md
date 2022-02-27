@@ -6,7 +6,7 @@ Here is a list of ML tools that I have found to be helpful to an AI/ML engineer.
 
 <!-- MarkdownTOC levels=1,2 -->
 
-- How to choose an ML framework?
+- How to choose an ML framework
 - Keras Tutorials
 - Data Exploration Tools
 - Pretrained Models
@@ -30,9 +30,10 @@ Here is a list of ML tools that I have found to be helpful to an AI/ML engineer.
 [Github Student Developer Pack](https://education.github.com/pack)
 
 
-## How to choose an ML framework?
+## How to choose an ML framework
 
 [Keras vs PyTorch for Deep Learning](https://towardsdatascience.com/keras-vs-pytorch-for-deep-learning-a013cb63870d)
+
 
 ## Keras Tutorials
 
@@ -88,6 +89,8 @@ NOTE: It is best to install the Orange native executable on your local machine r
 - Kedro
 - ONNX
 - openai/gym
+- poetry
+- pyenv
 - PyMC
 - Snap ML
 - Streamlit

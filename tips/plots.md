@@ -20,7 +20,8 @@
   - Comparison between plt.subplots\(\) and plt.subplot\(\)
   - plt.tight_layout\(\)
   - Set title for Figure
-- How To Label The Values Plots With Matplotlib
+- How to Customize Matplotlib Plots
+  - How To Label The Values Plots With Matplotlib
 - plotnine
 - Data Visualization Packages
   - AutoViz
@@ -52,6 +53,9 @@ In this section, we discuss two visualization libraries  `pandas_bokeh` and `cuf
 ```
 
 ### Plotting using Pandas
+
+TODO: add some notes
+
 
 ### Plotting using Pandas-Bokeh
 
@@ -309,7 +313,14 @@ When plotting multiple graphs, it is common to see labels of some subplots overl
 ```
 
 
-## How To Label The Values Plots With Matplotlib
+
+## How to Customize Matplotlib Plots
+
+[Coloring Matplotlib Plots](https://towardsdatascience.com/coloring-matplotlib-plots-32d5abb786a)
+
+[How To Label The Values of Data Points With Matplotlib](https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1?source=rss----7f60cf5620c9---4)
+
+### How To Label The Values Plots With Matplotlib
 
 ```py
 fig, ax = plt.subplots(figsize=(12,8))
@@ -399,7 +410,6 @@ DSPlot is a Python package that draws and renders images of data structures.
 
 [4 simple tips for plotting multiple graphs in Python](https://towardsdatascience.com/4-simple-tips-for-plotting-multiple-graphs-in-python-38df2112965c)
 
-[How To Label The Values of Data Points With Matplotlib](https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1?source=rss----7f60cf5620c9---4)
 
 [Top 3 Visualization Python Packages to Help Your Data Science Activities](https://towardsdatascience.com/top-3-visualization-python-packages-to-help-your-data-science-activities-168e22178e53)
 
