@@ -109,15 +109,19 @@ The number of hidden nodes should have a relationship to the number of input and
 
 The number of hidden nodes should not exceed twice the number of input nodes in order to avoid overfitting.
 
+
 ### Batch size
 
-The batch size is the number of training examples in one forward/backward pass. 
+The batch size is the number of training examples in one forward/backward pass.
+
+[Why Small Batch sizes lead to greater generalization in Deep Learning](https://medium.com/geekculture/why-small-batch-sizes-lead-to-greater-generalization-in-deep-learning-a00a32251a4f)
 
 A batch size of 32 means that 32 samples from the training dataset will be used to estimate the error gradient before the model weights are updated. 
 
 The higher the batch size, the more memory space that is needed.
 
-There are some hyperparameterss that often have optimal values in base 2 such as batch_size mainly because it affects the data size that is fetched to/from memory by hardware that is base 2.
+There are some hyperparameterss that often have optimal values in base 2 such as `batch_size` mainly because it affects the data size that is fetched to/from memory by hardware that is base 2.
+
 
 ----------
 
