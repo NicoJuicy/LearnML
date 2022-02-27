@@ -215,6 +215,9 @@ b) GAN: Generative adversarial networks are a type of generative models which ca
 
 [7 Tips for Dealing With Small Data](https://towardsdatascience.com/7-tips-for-dealing-with-small-data-7ffbd3d399a3)
 
+[Is a Small Dataset Risky?](https://towardsdatascience.com/is-a-small-dataset-risky-b664b8569a21)
+
+
 [OpenAI Glow and the Art of Learning from Small Datasets](https://jrodthoughts.medium.com/openai-glow-and-the-art-of-learning-from-small-datasets-e6b0a0cd6fe4)
 
 [Oversampling: A PCA-KNN Approach](https://towardsdatascience.com/oversampling-a-pca-knn-approach-f392ca232486)

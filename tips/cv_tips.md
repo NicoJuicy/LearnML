@@ -209,10 +209,12 @@ where
 
 [Chest X-ray & Pneumonia: Deep Learning with TensorFlow](https://towardsdatascience.com/chest-x-ray-pneumonia-deep-learning-with-tensorflow-a58a9e6ade70)
 
+[Deep Learning in Medicine: Identifying Pneumonia from a Chest-X-Ray](https://medium.com/@atulranjan975/deep-learning-in-medicine-identifying-pneumonia-from-a-chest-x-ray-6d1aabe68b01)
+
 [Artificial intelligence for lung disease detection using chest CT scan images](https://medium.com/@atashnezhad1/artificial-intelligence-for-lung-disease-detection-using-chest-ct-scan-images-47e8ff279ce0)
 
-[Compositional Breast Imaging with Artificial Intelligence to Improve Cancer Detection](https://towardsdatascience.com/compositional-breast-imaging-with-artificial-intelligence-to-improve-cancer-detection-c5f8f38f2266?source=rss----7f60cf5620c9---4)
 
+[Compositional Breast Imaging with Artificial Intelligence to Improve Cancer Detection](https://towardsdatascience.com/compositional-breast-imaging-with-artificial-intelligence-to-improve-cancer-detection-c5f8f38f2266?source=rss----7f60cf5620c9---4)
 
 
 
