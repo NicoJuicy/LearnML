@@ -75,6 +75,7 @@ S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Ana
 
 D. Jurafsky and J. H. Martin. 2008 (2nd edition). Speech and Language Processing. Prentice Hall. ISBN: 978-0131873216. Available online: https://web.stanford.edu/~jurafsky/slp3/
 
+
 B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Planning and Control, London: Springer, ISBN: 978-1-84628-641-4, 2010.
 
 J. Zobel, Writing in Computer Science, London: Springer, ISBN: 978–1–4471–6638–2, 2014.
