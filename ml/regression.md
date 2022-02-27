@@ -174,6 +174,9 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 
 [Building a Random Forest Classifier to Predict Neural Spikes](https://medium.com/@mzabolocki/building-a-random-forest-classifier-for-neural-spike-data-8e523f3639e1)
 
+[KNN Algorithm for Classification and Regression: Hands-On With Scikit- Learn](https://cdanielaam.medium.com/knn-algorithm-for-classification-and-regression-hands-on-with-scikit-learn-4c5ec558cdba)
+
+
 
 ## Regression Examples
 
