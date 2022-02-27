@@ -1,4 +1,4 @@
-# [Cross Validation: A Beginner’s Guide](https://towardsdatascience.com/cross-validation-a-beginners-guide-5b8ca04962cd)
+# Cross Validatio
 
 <!-- MarkdownTOC -->
 
@@ -21,6 +21,8 @@
     - LOOCV
 - When would you not want to use cross validation?
 - Key Terminology
+- Ways to cross-validate your data
+- References
 
 <!-- /MarkdownTOC -->
 
@@ -327,3 +329,20 @@ We will examine this phenomenon by performing a normal holdout validation and a 
 **Overfit:** Occurs when the model is not complex enough to account for general trends in the data which would be useful in predicting targets in subsequent datasets, such as using a linear fit on a polynomial trend.
 
 **Bias-Variance Trade-off:** The idea that as error due to bias decreases error due to variance increases, creating a trade-off which should be minimized in model validation, and other circumstances.
+
+
+## Ways to cross-validate your data
+
+- Basic KFold
+- Stratified KFold
+- Group K-fold
+- StratifiedGroupKFold
+- TimeSeriesSplit
+
+
+
+## References
+
+[Cross Validation: A Beginner’s Guide](https://towardsdatascience.com/cross-validation-a-beginners-guide-5b8ca04962cd)
+
+[5 different ways to cross-validate your data](https://medium.com/the-techlife/5-different-ways-to-cross-validate-your-data-376a79b7f205)
