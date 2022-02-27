@@ -22,7 +22,7 @@
     - Multivariate LSTM Models
         - Multiple Input Series
         - Multiple Parallel Series
-- References
+- Categories of Articles
     - Time Series Background
     - Time Series for Beginners
     - Time Series Analysis
@@ -34,6 +34,7 @@
     - Time Series Examples using Pytorch
     - Time Series Examples using PyCaret
     - More Time Series Examples
+- References
 
 <!-- /MarkdownTOC -->
 
@@ -265,6 +266,7 @@ A type of LSTM related to the CNN-LSTM is the ConvLSTM where the convolutional r
 The ConvLSTM was developed for reading two-dimensional spatial-temporal data, but can be adapted for use with univariate time series forecasting.
 
 
+
 ## Multivariate LSTM Models
 
 Multivariate time series data means data which has more than one observation for each time step.
@@ -453,34 +455,10 @@ Again, the data must be split into input/output samples in order to train a mode
 The first sample of this dataset would be:
 
 
-
 ----------
 
 
-
-# References
-
-[What Is Time Series Forecasting?](https://machinelearningmastery.com/time-series-forecasting/)
-
-[Taxonomy of Time Series Forecasting Problems](https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/)
-
-[Error Metrics used in Time Series Forecasting](https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca)
-
-
-[Classical Time Series Forecasting Methods in Python (Cheat Sheet)](https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/)
-
-[How to Load, Visualize, and Explore a Multivariate Multistep Time Series Dataset](https://machinelearningmastery.com/how-to-load-visualize-and-explore-a-complex-multivariate-multistep-time-series-forecasting-dataset/)
-
-
-[Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
-
-[How to Develop LSTM Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/)
-
-[How to Develop Multivariate Multi-Step Time Series Forecasting Models for Air Pollution](https://machinelearningmastery.com/howp-to-develop-machine-learning-models-for-multivariate-multi-step-air-pollution-time-series-forecasting/)
-
-[How to Develop CNN Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-develop-convolutional-neural-network-models-for-time-series-forecasting/)
-
-
+# Categories of Articles
 
 ## Time Series Background
 
@@ -587,4 +565,30 @@ The first sample of this dataset would be:
 [Forecasting with Machine Learning Models using mlforecast](https://towardsdatascience.com/forecasting-with-machine-learning-models-95a6b6579090)
 
 [Stacking Machine Learning Models for Multivariate Time Series](https://towardsdatascience.com/stacking-machine-learning-models-for-multivariate-time-series-28a082f881)
+
+
+----------
+
+
+# References
+
+[What Is Time Series Forecasting?](https://machinelearningmastery.com/time-series-forecasting/)
+
+[Taxonomy of Time Series Forecasting Problems](https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/)
+
+[Error Metrics used in Time Series Forecasting](https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca)
+
+
+[Classical Time Series Forecasting Methods in Python (Cheat Sheet)](https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/)
+
+[How to Load, Visualize, and Explore a Multivariate Multistep Time Series Dataset](https://machinelearningmastery.com/how-to-load-visualize-and-explore-a-complex-multivariate-multistep-time-series-forecasting-dataset/)
+
+
+[Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
+
+[How to Develop LSTM Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/)
+
+[How to Develop Multivariate Multi-Step Time Series Forecasting Models for Air Pollution](https://machinelearningmastery.com/howp-to-develop-machine-learning-models-for-multivariate-multi-step-air-pollution-time-series-forecasting/)
+
+[How to Develop CNN Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-develop-convolutional-neural-network-models-for-time-series-forecasting/)
 

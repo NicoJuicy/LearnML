@@ -20,7 +20,6 @@
   - Data Quality/Preprocessing
   - Model Choice and hyper-parameter selection
   - Robustness
-  - Generating Synthetic Data
   - References
 
 <!-- /MarkdownTOC -->
@@ -229,7 +228,7 @@ It is important to remember that when the transform operations are inverted, the
 ----------
 
 
-# [Training Time Series Forecasting Models in PyTorch](https://towardsdatascience.com/training-time-series-forecasting-models-in-pytorch-81ef9a66bd3a)
+# Training Time Series Forecasting Models in PyTorch
 
 Lessons and tips learned from training hundreds of PyTorch time series forecasting models in many different domains.
 
@@ -319,3 +318,6 @@ In addition, you should have some understanding of deployment and what the end p
 [5 Tips for Working With Time Series in Python](https://medium.com/swlh/5-tips-for-working-with-time-series-in-python-d889109e676d)
 
 [4 Common Machine Learning Data Transforms for Time Series Forecasting](https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/)
+
+[Training Time Series Forecasting Models in PyTorch](https://towardsdatascience.com/training-time-series-forecasting-models-in-pytorch-81ef9a66bd3a)
+
