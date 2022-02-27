@@ -12,7 +12,7 @@
   - A/B test
 - Monitoring the model
 - Improve Python Performance
-- Larger than Memory Datasets
+- Improve Tensorflow Performance
 - References
 
 <!-- /MarkdownTOC -->
@@ -97,7 +97,6 @@ One strategy for monitoring is to use a metric from a deployed model that can be
 Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Seldon.io, BentoML, AWS SageMaker, Torchserve, Google AI.
 
 
-
 ## Improve Python Performance
 
 [Intel Extension for Scikit-learn](https://intel.github.io/scikit-learn-intelex/index.html#intelex)
@@ -133,25 +132,21 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
   patch_sklearn()
 ```
 
-----------
+
+## Improve Tensorflow Performance
+
+[The Ultimate TensorFlow-GPU Installation Guide For 2022 And Beyond](https://towardsdatascience.com/the-ultimate-tensorflow-gpu-installation-guide-for-2022-and-beyond-27a88f5e6c6e)
+
+[Leverage the Intel TensorFlow Optimizations for Windows to Boost AI Inference Performance](https://medium.com/intel-tech/leverage-the-intel-tensorflow-optimizations-for-windows-to-boost-ai-inference-performance-ba56ba60bcc4)
+
+[Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
+
+[Optimizing a TensorFlow Input Pipeline: Best Practices in 2022](https://medium.com/@virtualmartire/optimizing-a-tensorflow-input-pipeline-best-practices-in-2022-4ade92ef8736)
 
 
 [A simple guide to speed up your training in TensorFlow 2](https://blog.seeso.io/a-simple-guide-to-speed-up-your-training-in-tensorflow-2-8386e6411be4?gi=55c564475d16)
 
 [Accelerate your training and inference running on Tensorflow](https://towardsdatascience.com/accelerate-your-training-and-inference-running-on-tensorflow-896aa963aa70)
-
-[Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
-
-
-
-## Larger than Memory Datasets
-
-[4 Python Libraries that Make It Easier to Work with Large Datasets](https://towardsdatascience.com/4-python-libraries-that-ease-working-with-large-dataset-8e91632b8791)
-
-- Read using Pandas in Chunks
-- Dask
-- Modin
-- Vaex
 
 
 
