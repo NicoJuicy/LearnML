@@ -11,13 +11,17 @@
     - Creating dummy variables for modeling
     - Converting Between String and Datetime
     - Typecasting while Reading Data
-- How to Profile Memory Usage?
+- How to Profile Memory Usage
 - Optimize Your Python Code
 - Make It Easier to Work with Large Datasets
-    - Read using Pandas in Chunks
+    - Explicitly pass the data-types
+    - Select subset of columns
+    - Convert dataframe to parquet
+    - Convert to pkl
     - Dask
-    - Vaex
     - Modin
+    - Vaex
+    - Read using Pandas in Chunks
 - References
 
 <!-- /MarkdownTOC -->
@@ -212,7 +216,7 @@ The DateTime feature column can be passed to the `parse_dates` parameter.
 ```
 
 
-## How to Profile Memory Usage?
+## How to Profile Memory Usage
 
 [How Much Memory is your ML Code Consuming?](https://towardsdatascience.com/how-much-memory-is-your-ml-code-consuming-98df64074c8f)
 
@@ -277,6 +281,7 @@ For example, It is always a good idea to use dictionaries instead of lists in py
 This is because the dictionaries use hash tables to store the elements which have a time complexity of O(1) when it comes to searching compared to O(n) for lists in the worst case. So it will give you a considerable performance gain.
 
 
+
 ## Make It Easier to Work with Large Datasets
 
 Pandas mainly uses a single core of CPU to process instructions and does not take advantage of scaling up the computation across various cores of the CPU to speed up the workflow. 
@@ -285,10 +290,92 @@ Thus, Pandas can cause memory issues when reading large datasets since it fails 
 
 There are various other Python libraries that do not load the large data at once but interacts with system OS to map the data with Python. Further, they utilize all the cores of the CPU to speed up the computations. In this article, we will discuss 4 such Python libraries that can read and process large-sized datasets.
 
-1. Pandas with chunks
-2. Dask
-3. Vaex
-4. Modin
+- Explicitly pass the data-types
+- Select subset of columns
+- Convert dataframe to parquet
+- Convert to pkl
+- Dask
+- Modin
+- Vaex
+- Pandas with chunks
+
+### Explicitly pass the data-types
+
+```py
+import pandas as pd
+df = pd.read_csv(data_file, n_rows = 100, dtype={'col1': 'object', 'col2': 'float32',})
+```
+
+### Select subset of columns
+
+```py
+cols_to_use = ['col1', 'col2',]
+df = pd.read_csv(data_file, usecols=cols_to_use)
+```
+
+### Convert dataframe to parquet
+
+```py
+  df.to_parquet()
+  df = pd.read_parquet()
+```
+
+### Convert to pkl
+
+```py
+  df.to_pickle(‘train.pkl’)
+```
+
+### Dask
+
+Dask is an open-source Python library that provides multi-core and distributed parallel execution of larger-than-memory datasets
+
+Dask provides the high-performance implementation of the function that parallelizes the implementation across all the cores of the CPU.
+
+Dask provides API similar to Pandas and Numpycwhich makes it easy for developers to switch between the libraries.
+
+```py
+import dask.dataframe as dd
+
+# Read the data using dask
+df_dask = dd.read_csv("DATA/text_dataset.csv")
+
+# Parallelize the text processing with dask
+df_dask['review'] = df_dask.review.map_partitions(preprocess_text)
+```
+
+### Modin
+
+In contrast to Pandas, Modin utilizes all the cores available in the system, to speed up the Pandas workflow, only requiring users to change a single line of code in their notebooks.
+
+```py
+import modin.pandas as md
+
+# read data using modin
+modin_df = pd.read_csv("DATA/text_dataset.csv")
+
+# Parallel text processing of review feature 
+modin_df['review'] = modin_df.review.apply(preprocess_text)
+```
+
+### Vaex
+
+Vaex is a Python library that uses an _expression system_ and _memory mapping_ to interact with the CPU and parallelize the computations across various cores of the CPU.
+
+Instead of loading the entire data into memory, Vaex just memory maps the data and creates an expression system.
+
+Vaex covers some of the API of pandas and is efficient to perform data exploration and visualization for a large dataset on a standard machine.
+
+```py
+import vaex
+
+# Read the data using Vaex
+df_vaex = vaex.read_csv("DATA/text_dataset.csv")
+
+# Parallize the text processing
+df_vaex['review'] = df_vaex.review.apply(preprocess_text)
+```
+
 
 ### Read using Pandas in Chunks
 
@@ -320,61 +407,14 @@ for chunk in tqdm(pd.read_csv("DATA/text_dataset.csv", chunksize=chunk_size)):
          }))
 ```
 
-### Dask
-
-Dask is an open-source Python library that provides multi-core and distributed parallel execution of larger-than-memory datasets
-
-Dask provides the high-performance implementation of the function that parallelizes the implementation across all the cores of the CPU.
-
-Dask provides API similar to Pandas and Numpycwhich makes it easy for developers to switch between the libraries.
-
-```py
-import dask.dataframe as dd
-
-# Read the data using dask
-df_dask = dd.read_csv("DATA/text_dataset.csv")
-
-# Parallelize the text processing with dask
-df_dask['review'] = df_dask.review.map_partitions(preprocess_text)
-```
-
-### Vaex
-
-Vaex is a Python library that uses an _expression system_ and _memory mapping_ to interact with the CPU and parallelize the computations across various cores of the CPU.
-
-Instead of loading the entire data into memory, Vaex just memory maps the data and creates an expression system.
-
-Vaex covers some of the API of pandas and is efficient to perform data exploration and visualization for a large dataset on a standard machine.
-
-```py
-import vaex
-
-# Read the data using Vaex
-df_vaex = vaex.read_csv("DATA/text_dataset.csv")
-
-# Parallize the text processing
-df_vaex['review'] = df_vaex.review.apply(preprocess_text)
-```
-
-### Modin
-
-In contrast to Pandas, Modin utilizes all the cores available in the system, to speed up the Pandas workflow, only requiring users to change a single line of code in their notebooks.
-
-```py
-import modin.pandas as md
-
-# read data using modin
-modin_df = pd.read_csv("DATA/text_dataset.csv")
-
-# Parallel text processing of review feature 
-modin_df['review'] = modin_df.review.apply(preprocess_text)
-```
-
-
 
 ## References
 
-W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018. 
+W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018.
+
+[Pandas tips to deal with huge datasets!](https://kvirajdatt.medium.com/pandas-tips-to-deal-with-huge-datasets-f6a012d4e953)
+
+[Top 2 tricks for compressing and loading huge datasets](https://medium.com/the-techlife/top-2-tricks-for-compressing-and-loading-huge-datasets-91a7e394c933)
 
 [Optimize Pandas Memory Usage for Large Datasets](https://towardsdatascience.com/optimize-pandas-memory-usage-while-reading-large-datasets-1b047c762c9b)
 
