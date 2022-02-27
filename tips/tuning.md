@@ -149,6 +149,13 @@ Optuna is framework agnostic, so you can use it with any machine learning or dee
 [How to Speed Up XGBoost Model Training](https://towardsdatascience.com/how-to-speed-up-xgboost-model-training-fcf4dc5dbe5f?source=rss----7f60cf5620c9---4)
 
 
+## Pruning in Tensorflow
+
+Tensorflow provides Model Optimization Toolkit for pruning and other post-training optimizations. 
+
+[Accelerate your training and inference running on Tensorflow](https://towardsdatascience.com/accelerate-your-training-and-inference-running-on-tensorflow-896aa963aa70)
+
+
 
 ## References
 
