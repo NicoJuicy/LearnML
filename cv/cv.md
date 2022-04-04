@@ -30,19 +30,19 @@ Computer Vision (CV) is defined as a field of study that seeks to develop techni
 
 Many popular computer vision applications involve trying to recognize things in photographs:
 
-- Object Classification: What broad category of object is in this photograph?
+- **Object Classification:** What broad category of object is in this photograph?
 
-- Object Identification: Which type of a given object is in this photograph?
+- **Object Identification:** Which type of a given object is in this photograph?
 
-- Object Verification: Is the object in the photograph?
+- **Object Verification:** Is the object in the photograph?
 
-- Object Detection: Where are the objects in the photograph?
+- **Object Detection:** Where are the objects in the photograph?
 
-- Object Landmark Detection: What are the key points for the object in the photograph?
+- **Object Landmark Detection:** What are the key points for the object in the photograph?
 
-- Object Segmentation: What pixels belong to the object in the image?
+- **Object Segmentation:** What pixels belong to the object in the image?
 
-- Object Recognition: What objects are in this photograph and where are they?
+- **Object Recognition:** What objects are in this photograph and where are they?
 
 
 ## What is Image Recognition?
