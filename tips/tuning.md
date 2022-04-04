@@ -12,10 +12,10 @@
 - KerasTuner
 - Optuna
 - Improve Model Performance
+- Pruning in Tensorflow
 - References
 
 <!-- /MarkdownTOC -->
-
 
 The process of searching for optimal hyperparameters is called hyperparameter tuning or _hypertuning_ which is essential in any machine learning project. 
 
@@ -120,7 +120,7 @@ Thus, Bayesian search can be beneficial when you have a large amount of data and
 
 ## AutoML Tools for Tuning
 
-### [KerasTuner](https://keras.io/keras_tuner/)
+### KerasTuner
 
 KerasTuner is an easy-to-use, scalable hyperparameter optimization framework that solves the pain points of hyperparameter search. 
 
@@ -149,6 +149,94 @@ Optuna is framework agnostic, so you can use it with any machine learning or dee
 [How to Speed Up XGBoost Model Training](https://towardsdatascience.com/how-to-speed-up-xgboost-model-training-fcf4dc5dbe5f?source=rss----7f60cf5620c9---4)
 
 
+Here we discuss some ways to improve the accuracy of machine learning models. 
+
+1. Handling Missing Values and Outliers
+
+One of the easiest ways to improve the accuracy of your machine learning models is to handle missing values and outliers.
+
+If you have data that is missing values or contains outliers, your models will likely be less accurate. This is because missing values and outliers can cause the model to make incorrect assumptions about your data.
+
+Its is important to note that missing values and outliers can cause your models to overfit or underfit!
+
+There are a number of ways that you can handle missing values and outliers:
+
+- Remove the data points that contain missing values or outliers from your training dataset.
+
+- Impute the missing values using a technique like k-nearest neighbors or linear regression.
+
+- Use a technique like bootstrapping to remove the influence of the outlier data
+
+2. Feature Engineering
+
+Feature engineering is the art of creating new features from your existing ones.
+
+Feature engineering helps improve the accuracy of machine learning models by allowing them to make more accurate predictions.
+
+One of the most common ways to create new features is by combining multiple existing features into one or more new features.
+
+There are many different ways to engineer features, and the best way to do it often depends on the dataset: 
+
+- Try to find correlations between different features and create new ones that capture these relationships.
+
+- Use transforms like logarithmic transformation or standardization to make your features more comparable and easier to work with.
+
+- Make use of data pre-processing techniques like feature extraction and selection to help you find the most important features in your dataset.
+
+3. Feature Selection
+
+Feature selection is a process that helps you identify the most useful features in your dataset.
+
+The goal is to reduce or eliminate noise and improve the accuracy of machine learning models by removing redundant information from them such as data points containing only one feature.
+
+There are many different ways to select features, but they all involve using some form of statistical analysis or filtering out features with low importance scores (those that do not contribute much to model accuracy).
+
+Some common techniques for feature selection include:
+
+- Ranking features based on their correlation with other variables in the dataset, then removing those that are less correlated than others. For example, you could use the Pearson Correlation Coefficient to measure the strength of the relationship between two variables.
+
+- Filtering features based on their importance scores, which are usually calculated using a technique like gradient descent or random forests.
+
+- Selecting a subset of features that have a high correlation with the target variable but low correlations among themselves (i.e., they are uncorrelated or independent of each other).
+
+4. Try Multiple Algorithms
+
+A common mistake is to only try one algorithm when training your model. 
+
+There will likely be some features in your dataset that do not contribute much to the accuracy of the model and removing them will only make things worse which is where multiple algorithms can be helpful.
+
+By trying different algorithms, you can identify which ones work best for your data and then use that information to improve the accuracy of your models.
+
+There are many different types of machine learning algorithms, so it can be difficult to know which ones are right for your data. A good place to start is by using cross-validation with multiple algorithms on the same dataset and then comparing their accuracy scores against each other.
+
+If you are using scikit-learn, it has a nice list of common machine learning models that you can try out on your data including:
+
+- Linear Regression
+- Support Vector Machines
+- Decision Trees
+- Random Forests
+- Neural Networks
+- Ensemble Models
+
+Another approach is to use an ensemble method, which combines two or more algorithms together into one model. Ensembles are often more accurate than any individual algorithm because they leverage the strengths of each and compensate for their weaknesses.
+
+Thus, you can combine multiple weak learners (models that perform poorly on their own) into one ensemble to get a stronger learner (a model that performs well as an individual).
+
+5. Adjusting Hyperparameters
+
+Hyperparameters are the parameters in machine learning models which include things such as number of layers in a deep neural network or how many trees there should be in an ensemble model.
+
+We usually need to adjust the hyperparameters since they are not automatically set during model training and cross-validation can be helpful. 
+
+By splitting the data into training and test sets, we can try different combinations of hyperparameters on the training set to see how well they perform on the test set to find the best combination of hyperparameters for the model.
+
+We can also use grid search which is a method of finding the optimal combination of hyperparameters for a model.
+
+Grid search searches all the possible combinations of parameters to find one that provides the best performance on your metric such as accuracy. Then, we can then use that combination of hyperparameters to train the model.
+
+We can use Grid Search in the scikit-learn library.
+
+
 ## Pruning in Tensorflow
 
 Tensorflow provides Model Optimization Toolkit for pruning and other post-training optimizations. 
@@ -159,16 +247,21 @@ Tensorflow provides Model Optimization Toolkit for pruning and other post-traini
 
 ## References
 
-[How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
+[1] [5 Effective Ways to Improve the Accuracy of Your Machine Learning Models](https://towardsdatascience.com/5-effective-ways-to-improve-the-accuracy-of-your-machine-learning-models-f1ea1f2b5d65)
+
+[2] [Are You Sure That You Can Implement Image Classification Networks?](https://pub.towardsai.net/are-you-sure-that-you-can-implement-image-classification-networks-d5f0bffb242d)
+
 
 [A Practical Introduction to Grid Search, Random Search, and Bayes Search](https://towardsdatascience.com/a-practical-introduction-to-grid-search-random-search-and-bayes-search-d5580b1d941d)
 
 [Hyperparameter Tuning Methods](https://towardsdatascience.com/bayesian-optimization-for-hyperparameter-tuning-how-and-why-655b0ee0b399)
 
+
+[How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
+
 [Hyperparameter Tuning with KerasTuner and TensorFlow](https://towardsdatascience.com/hyperparameter-tuning-with-kerastuner-and-tensorflow-c4a4d690b31a)
 
 [Introduction to the Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner)
-
 
 
 [How to Grid Search Deep Learning Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/)
