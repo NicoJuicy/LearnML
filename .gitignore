@@ -352,3 +352,7 @@ MigrationBackup/
 
 # Added to file
 nlp/book
+
+.idea/
+
+.spyproject/
