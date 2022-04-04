@@ -24,6 +24,11 @@ Here is a collection of some resources for ML datasets.
 
 ## Dataset Search
 
+[A Guide to Getting Datasets for Machine Learning in Python](https://machinelearningmastery.com/a-guide-to-getting-datasets-for-machine-learning-in-python/)
+
+[A Guide to Obtaining Time Series Datasets in Python](https://machinelearningmastery.com/a-guide-to-obtaining-time-series-datasets-in-python/)
+
+
 [Google Dataset Search](https://datasetsearch.research.google.com)
 
 [HuggingFace Datasets](https://github.com/huggingface/datasets)
