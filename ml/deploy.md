@@ -2,6 +2,7 @@
 
 <!-- MarkdownTOC -->
 
+- Overview
 - Deploying, Serving, and Inferencing Models at Scale
 - Observing and Monitoring Model in Production
 - Deployment Examples
@@ -15,9 +16,12 @@
 
 <!-- /MarkdownTOC -->
 
+## Overview
+
 Consider using model life cycle development and management platforms like MLflow, DVC, Weights & Biases, or SageMaker Studio. And Ray, Ray Tune, Ray Train (formerly Ray SGD), PyTorch and TensorFlow for distributed, compute-intensive and deep learning ML workloads.
 
 NOTE: Consider feature stores as part of your model development process. Look to Feast, Tecton, SageMaker, and Databricks for feature stores. 
+
 
 ## Deploying, Serving, and Inferencing Models at Scale
 
