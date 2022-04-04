@@ -323,16 +323,16 @@ When plotting multiple graphs, it is common to see labels of some subplots overl
 ### How To Label The Values Plots With Matplotlib
 
 ```py
-fig, ax = plt.subplots(figsize=(12,8))
-plt.plot(x, y)
-plt.xlabel("x values", size=12)
-plt.ylabel("y values", size=12)
-plt.title("Learning more about pyplot with random numbers chart", size=15)
+  fig, ax = plt.subplots(figsize=(12,8))
+  plt.plot(x, y)
+  plt.xlabel("x values", size=12)
+  plt.ylabel("y values", size=12)
+  plt.title("Learning more about pyplot with random numbers chart", size=15)
 
-# increase the frequency of the x and y ticks to match the actual values of x and the possible values of y
-plt.xticks(x, size=12)
-plt.yticks([i for i in range(20)], size=12)
-plt.show()
+  # increase the frequency of the x and y ticks to match the actual values of x and the possible values of y
+  plt.xticks(x, size=12)
+  plt.yticks([i for i in range(20)], size=12)
+  plt.show()
 ```
 
 
