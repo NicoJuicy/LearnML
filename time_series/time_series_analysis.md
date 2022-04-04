@@ -1,5 +1,32 @@
 # Time Series Analysis
 
+<!-- MarkdownTOC -->
+
+- How to import time series in python?
+- What is panel data?
+- Visualizing a time series
+- Patterns in a time series
+- Additive and multiplicative time series
+- How to decompose a time series into its components?
+- Stationary and Non-Stationary Time Series
+  - How to make a time series stationary?
+  - Why make a non-stationary series stationary before forecasting?
+  - How to test for stationarity?
+  - What is the difference between white noise and a stationary series?
+- How to detrend a time series?
+- How to deseasonalize a time series?
+- How to test for seasonality of a time series?
+- How to treat missing values in a time series?
+- What is autocorrelation and partial autocorrelation functions?
+  - How to compute partial autocorrelation function?
+- Lag Plots
+- How to estimate the forecastability of a time series?
+- Why and How to smoothen a time series?
+- References
+
+<!-- /MarkdownTOC -->
+
+
 ## How to import time series in python?
 
 ```py
@@ -32,7 +59,7 @@ def plot_df(df, x, y, title="", xlabel='Date', ylabel='Value', dpi=100):
     plot_df(df, x=df.index, y=df.value, title='Monthly anti-diabetic drug sales in Australia from 1992 to 2008.')
 ```
 
-##  Patterns in a time series
+## Patterns in a time series
 
 Any time series may be split into the following components: Base Level + Trend + Seasonality + Error
 
@@ -119,7 +146,7 @@ There are multiple implementations of Unit Root tests like:
 
 The most commonly used is the ADF test where the null hypothesis is the time series possesses a unit root and is non-stationary. 
 
-Thus, if the P-Value in ADH test is less than the significance level (0.05), you reject the null hypothesis.
+Thus, if the P-Value in ADH test is less than the _significance level_ (0.05), you reject the null hypothesis.
 
 
 The KPSS test is used to test for trend stationarity. The null hypothesis and the P-Value interpretation are the opposite of ADH test.
