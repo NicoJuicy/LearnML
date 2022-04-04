@@ -15,6 +15,7 @@
 - Topic Modeling
 - Summarization
 - Sentiment Analysis
+  - HuggingFace Transformers for NLP With Python
   - Sentiment Analysis using Python
   - Sentiment Analysis using AutoML
 - Applications
@@ -215,6 +216,16 @@ The SA algorithm can be more complex and advanced; however, the results will be 
 
 If the result is a negative number, the sentiment behind the text has a negative tone to it, and if it is positive then some positivity is present in the text.
 
+
+### HuggingFace Transformers for NLP With Python
+
+This article [8] explores the use of a simple pre-trained HuggingFace transformer language model for some common NLP tasks in Python.
+
+- Text Classification
+- Named Entity Recognition
+- Text Summarization
+
+
 ### Sentiment Analysis using Python
 
 [Best Practices for Text Classification with Deep Learning](https://machinelearningmastery.com/best-practices-document-classification-deep-learning/)
@@ -229,7 +240,6 @@ If the result is a negative number, the sentiment behind the text has a negative
 
 
 ----------
-
 
 [Twitter Sentiment Analysis using NLTK and Python](https://towardsdatascience.com/twitter-sentiment-analysis-classification-using-nltk-python-fa912578614c)
 
@@ -280,21 +290,22 @@ The general idea with document clustering is to assign each document a vector re
 
 ## References
 
-S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/.
+[1] S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/.
 
-[Deep Learning for Natural Language Processing (NLP)](https://machinelearningmastery.com/start-here/#nlp)
+[2] [Deep Learning for Natural Language Processing (NLP)](https://machinelearningmastery.com/start-here/#nlp)
 
-[How to Get Started with Deep Learning for Natural Language Processing](https://machinelearningmastery.com/category/natural-language-processing/)
-
-
-[Natural Language Processing (NLP) in Python — Simplified](https://medium.com/@bedourabed/natural-language-processing-nlp-in-python-simplified-b96b89c8be93)
+[3] [How to Get Started with Deep Learning for Natural Language Processing](https://machinelearningmastery.com/category/natural-language-processing/)
 
 
-[A Detailed, Novice Introduction to Natural Language Processing (NLP)](https://towardsdatascience.com/a-detailed-novice-introduction-to-natural-language-processing-nlp-90b7be1b7e54)
+[4] [Natural Language Processing (NLP) in Python — Simplified](https://medium.com/@bedourabed/natural-language-processing-nlp-in-python-simplified-b96b89c8be93)
 
-[The Ultimate Guide To Different Word Embedding Techniques In NLP](https://www.kdnuggets.com/2021/11/guide-word-embedding-techniques-nlp.html)
+[5] [A Detailed, Novice Introduction to Natural Language Processing (NLP)](https://towardsdatascience.com/a-detailed-novice-introduction-to-natural-language-processing-nlp-90b7be1b7e54)
 
-[NLP Techniques Every Data Scientist Should Know](https://towardsdatascience.com/6-nlp-techniques-every-data-scientist-should-know-7cdea012e5c3)
+[6] [The Ultimate Guide To Different Word Embedding Techniques In NLP](https://www.kdnuggets.com/2021/11/guide-word-embedding-techniques-nlp.html)
+
+[7] [NLP Techniques Every Data Scientist Should Know](https://towardsdatascience.com/6-nlp-techniques-every-data-scientist-should-know-7cdea012e5c3)
+
+[8] [Exploring HuggingFace Transformers For NLP With Python](https://medium.com/geekculture/exploring-huggingface-transformers-for-nlp-with-python-5ae683289e67)
 
 
 [The Current Conversational AI & Chatbot Landscape](https://cobusgreyling.medium.com/the-current-conversational-ai-chatbot-landscape-c147e9bcc01b)
