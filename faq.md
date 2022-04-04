@@ -7,8 +7,6 @@
 - Recommended Tutorials and Books
 - How to access Safari Online?
 - How to ask an AI/ML question?
-- When You Should not use ML
-- Disinformation in AI Research
 - How to choose a performance metric?
 - How to Choose an ML Algorithm?
 - Should I start learning ML by coding an algorithm from scratch?
@@ -82,37 +80,6 @@ Briefly describe the following (1-2 sentences per item):
 [How to ask an AI/ML question](https://aicoder.medium.com/how-to-ask-an-ai-ml-question-6cfddaa75bc9)
 
 In AI and CS you should always be able to describe in a few sentences what you are doing and why you are doing it. It is the first step in defining an AI problem. Also, there is a category and/or terminology for everything we do in CS. It always applies whether you are doing research or working on a simple problem. If you have not taken the time to think about the problem and put it into writing then u really don’t know what you are doing, do you?
-
-
-## When You Should not use ML
-
-[4 Reasons Why You Shouldn’t Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11?source=rss----7f60cf5620c9---4&gi=204e8d695029) 
-
-Technically, AI/ML is a graduate level topic which has several undergraduate prerequisites in math and CS which is probably why about 80% of AI projects fail. 
-
-
-
-## Disinformation in AI Research
-
-Not just social media and online, disinformation can also be found in scientific research publications. Occurrences in research are more apparent when research or study data are irreproducible. In fact, a Harvard researcher resigned after a fraud discovery occurred.
-
-> One study concluded 33.7% of scientists surveyed admitted to questionable research practices at least once in their career. [IEEE Computer, 12/2021]
-
-Source data validation is necessary for research — especially funded research. The cost of source data validation is estimated to be between 20% and 30% of an overall clinical trial budget. 
-
-What stops someone from simulating, tampering, or falsifying raw data to deliver a desired result to support a “desired” study hypothesis (actually had this occur  on a NIH research project that I was working on)? If data can be easily fabricated and falsified, is source data validation worth the costs? In addition, falsification may not be the only problem here; withholding data is also a problem. 
-
-It is important to keep in mind that data _reproducibility_ can be a challenge because of improper research techniques such as when researchers look for data correlations until they find a bizarre outlier and then claim its statistical significance. Here, they could employ improper statistical techniques or change variables/combine data sets, invalidating the research/ study data and its results.  
-
-If researchers were to maintain and use a data repository, it might create a learning community. In a learning community, outsiders not associated with the creation of the original data could request access to datasets to  test research outcomes and offer peer-reviewed improvements in a data owner’s experimental techniques. This could also discourage data tampering and falsification.
-
-IEEE has attempted to help by providing a utility for researchers called [IEEE Dataport](https://ieee-dataport .org/) which offers researchers free data uploads and access of up to 2 TB. 
-
-The IEEE Dataport is not only beneficial by having research data stored at a trusted organization but datasets may also be connected to IEEE journal and magazine articles which increases data and research visibility.
-
-IEEE Dataport currently has almost 700,000 users and over 1,500 data sets.
-
-Most importantly, this offering should support reproducible research, a topic that Computer will discuss further in future issues. 
 
 
 
