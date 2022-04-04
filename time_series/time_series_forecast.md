@@ -1,6 +1,6 @@
 # Time Series Forecasting
 
-<!-- MarkdownTOC -->
+<!-- MarkdownTOC levels=1,2,3 -->
 
 - Time Series Forecasting
     - Describing vs Predicting
@@ -22,18 +22,20 @@
     - Multivariate LSTM Models
         - Multiple Input Series
         - Multiple Parallel Series
+    - Time Series Datasets using Keras
 - Categories of Articles
     - Time Series Background
     - Time Series for Beginners
     - Time Series Analysis
     - Time Series Decomposition
     - Time Series Data Preparation
+    - Time Series Feature Engineering
     - Forecast Performance Baseline
     - Time Series Classification
     - Time Series Forecasting using Keras
-    - Time Series Examples using Pytorch
+    - Time Series Examples using PyTorch
+    - Time Series Examples using AutoML
     - Time Series Examples using PyCaret
-    - More Time Series Examples
 - References
 
 <!-- /MarkdownTOC -->
@@ -44,13 +46,14 @@
 
 We have different goals depending on whether we are interested in understanding a dataset or making predictions.
 
-Time series analysis is concerned with using methods such as decomposition of a time series into its systematic components in order to understand the underlying causes or the _why_ behind the time series dataset which is usually not helpful for prediction.
+Time series analysis is concerned with using methods such as decomposition of a time series into its systematic components in order to understand the underlying causes or the _why_ behind the time series dataset which is usually not helpful for prediction. However, time series analysis can be used to remove trend and/or seasonality components which can help with forecasting.
 
-Time series Forecasting is making predictions about the future which is called _extrapolation_ in the classical statistical approach to time series data.
+Time series forecasting is making predictions about the future which is called _extrapolation_ in the classical statistical approach to time series data.
 
 Forecasting involves taking models fit on historical data and using them to predict future observations.
 
 Time series analysis can be used to remove trend and/or seasonality components which can help with forecasting.
+
 
 ## Time Series Analysis
 
@@ -62,12 +65,15 @@ This often involves making assumptions about the form of the data and decomposin
 
 The quality of a descriptive model is determined by how well it describes all available data and the interpretation it provides to better inform the problem domain.
 
+
 ## Time Series Forecasting
 
 Time series forecasting can broadly be categorized into the following categories:
 
 - Classical / Statistical Models: Moving Averages, Exponential smoothing, ARIMA, SARIMA, TBATS
+
 - Machine Learning: Linear Regression, XGBoost, Random Forest (any ML model with reduction methods)
+
 - Deep Learning: RNN, LSTM
 
 
@@ -81,7 +87,7 @@ Descriptive models can borrow for the future (to smooth or remove noise), they o
 
 An important distinction in forecasting is that the future is completely unavailable and must only be estimated from what has already happened.
 
-However, time series analysis can be use to remove trend and/or seasonality components which can help with forecasting.
+Time series analysis can be used to remove trend and/or seasonality components which can help with forecasting.
 
 
 ## Time Series Decomposition
@@ -165,7 +171,7 @@ Models are configured and fit to the historical data.
 
 5. Using and Evaluating a Forecasting Model. The model is used to make forecasts and the performance of those forecasts is evaluated and the skill of the models is estimated. 
 
-This may involve back-testing with historical data or waiting for new observations to become available for comparison.
+This may involve back-testing with historical data or waiting for new observations to become available  for comparison.
 
 This 5-step process provides a strong overview from starting off with an idea or problem statement and leading to a model that can be used to make predictions.
 
@@ -189,9 +195,19 @@ Some of the common error metrics used in particular with Time Series Forecasting
 
 # How to Develop LSTM Models for Time Series Forecasting
 
-In this tutorial, we will explore how to develop a suite of different types of LSTM models for time series forecasting.
+There are many time series forecasting tutorials and examples using and air pollution and weather toy datasets. 
 
-The models are demonstrated on small contrived time series problems intended to give the flavor of the type of time series problem being addressed.
+Unless you make use of the time series features of tflow Dataset or torch Dataloader you will encounter two issues: 
+
+1. You will have to write a custom function to reframe the problem from time series to a supervised learning problem (X, y) which is what most all ML models including a NN such as LSTM will require. 
+
+2. Your custom function will likely not perform as well as a Dataset/Dataloader and will probably not scale or support parallelization. 
+
+
+Here, we explore how to develop a suite of different types of LSTM models for time series forecasting.
+
+> The following examples manually convert the time series to supervised problem (split_seauences and series_to_supervised). A better approach is to make use of the time series featues of tflow Datset or torch Daraloader, espcially for multivariate time series. 
+
 
 ## Univariate LSTM Models
 
@@ -458,6 +474,100 @@ The first sample of this dataset would be:
 ----------
 
 
+## Time Series Datasets using Keras
+
+```py
+def normalize(data: np.ndarray, train_split: float):
+    data_mean = data[:train_split].mean(axis=0)
+    data_std = data[:train_split].std(axis=0)
+    return (data - data_mean) / data_std, data_mean, data_std
+
+
+def get_ds_shape(ds: tf.data.Dataset):
+    # The dataset yields tuples: (batch_of_sequences, batch_of_targets)
+    count = 0
+    ds_shape = []
+    for batch in ds.take(-1):
+        inputs, targets = batch
+        count += inputs.numpy().shape[0]
+        ds_shape = [count, inputs.numpy().shape[1], inputs.numpy().shape[2]]
+
+        # input is (batch_size, time_steps, num_features)
+        # print("\ntrain:", inputs.numpy().shape, targets.numpy().shape)
+
+    return ds_shape
+
+    
+def create_datasets(params: Params, debug: bool = False):
+    """
+    Create train/val/test datasets.
+    TODO: Update code snippet
+    """
+    batch_size = params.batch_size
+
+    # use the last past values to forecast the value for future time steps ahead
+    step = 1  # sample rate (1 per day)
+    past = 10  # tracking data from past 10 timestamps (10/1=1 day)
+    future = 1  # predict the target after 1 timestamps (1/1=10 days).
+
+    sequence_length = int(past / step)
+
+    train_dfs, date_dfs = load_data(params)
+    train_df, date_df = data_prep(params, train_dfs, date_dfs)
+
+    # target feature is first column
+    # filtered_df, filtered_df_ext = select_features(params, train_df)
+
+    date_df.index.rename("date", inplace=True)
+    # date_df.drop('day', axis='columns', inplace=True)
+    # date_df['day'] = np_date_data
+    # date_df.index = date_df['day']
+
+    data, target, mean_array, std_array = preprocess(params, train_df, debug=debug)
+
+    # Create datasets
+    train_ds = keras.preprocessing.timeseries_dataset_from_array(
+        data,
+        target,
+        sequence_length=sequence_length,
+        sampling_rate=step,
+        batch_size=batch_size,
+        end_index=params.train_split - 1,
+    )
+
+    val_ds = keras.preprocessing.timeseries_dataset_from_array(
+        data,
+        target,
+        sequence_length=sequence_length,
+        sampling_rate=step,
+        batch_size=batch_size,
+        start_index=params.train_split,
+        end_index=params.val_split - 1,
+    )
+
+    test_ds = keras.preprocessing.timeseries_dataset_from_array(
+        data,
+        target,
+        sequence_length=sequence_length,
+        sampling_rate=step,
+        batch_size=batch_size,
+        start_index=params.val_split + 1,
+    )
+
+    train_shape = get_ds_shape(train_ds)
+    val_shape = get_ds_shape(val_ds)
+    test_shape = get_ds_shape(test_ds)
+
+    if debug:
+        print(f"\ntrain: {train_shape}")
+        print(f"val: {val_shape}")
+        print(f"test: {test_shape}")
+
+    return train_ds, val_ds, test_ds, mean_array, std_array
+```
+
+
+
 # Categories of Articles
 
 ## Time Series Background
@@ -486,6 +596,8 @@ The first sample of this dataset would be:
 
 [How to Check if Time Series Data is Stationary](https://machinelearningmastery.com/time-series-data-stationary-python/)
 
+[Avoid These Mistakes with Time Series Forecasting](https://www.kdnuggets.com/2021/12/avoid-mistakes-time-series-forecasting.html)
+
 
 ## Time Series Decomposition
 
@@ -499,6 +611,8 @@ The first sample of this dataset would be:
 
 [Time Series Data Visualization with Python](https://machinelearningmastery.com/time-series-data-visualization-with-python/)
 
+[Stacking Machine Learning Models for Multivariate Time Series](https://towardsdatascience.com/stacking-machine-learning-models-for-multivariateo-time-series-28a082f881)
+
 
 ## Time Series Data Preparation
 
@@ -506,7 +620,14 @@ The first sample of this dataset would be:
 
 [Basic Feature Engineering With Time Series Data in Python](https://machinelearningmastery.com/basic-feature-engineering-time-series-data-python/)
 
-[How To Backtest Machine Learning Models for Time Series Forecasting](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
+
+## Time Series Feature Engineering
+
+[Building a Tractable, Feature Engineering Pipeline for Multivariate Time Series](https://www.kdnuggets.com/2022/03/building-tractable-feature-engineering-pipeline-multivariate-time-series.html)
+
+[Feature selection for forecasting algorithms](https://towardsdatascience.com/feature-selection-for-forecasting-algorithms-10598e50667f)
+
+[How To Resample and Interpolate Your Time Series Data With Python](https://machinelearningmastery.com/resample-interpolate-time-series-data-python/)
 
 
 ## Forecast Performance Baseline
@@ -514,6 +635,8 @@ The first sample of this dataset would be:
 [How to Make Baseline Predictions for Time Series Forecasting with Python](https://machinelearningmastery.com/persistence-time-series-forecasting-with-python/)
 
 [How to Create an ARIMA Model for Time Series Forecasting in Python](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/)
+
+[How To Backtest Machine Learning Models for Time Series Forecasting](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
 
 
 ## Time Series Classification
@@ -525,20 +648,23 @@ The first sample of this dataset would be:
 
 ## Time Series Forecasting using Keras
 
+[Timeseries forecasting for weather prediction](https://keras.io/examples/timeseries/timeseries_weather_forecasting)
+
+[Timeseries data preprocessing](https://keras.io/api/preprocessing/timeseries/)
+
+[Timeseries classification from scratch](https://keras.io/examples/timeseries/timeseries_classification_from_scratch/)
+
+
 [Predicting stock prices using Deep Learning LSTM model in Python](https://thinkingneuron.com/predicting-stock-prices-using-deep-learning-lstm-model-in-python/)
 
 [Time Series Forecast Using Deep Learning](https://medium.com/geekculture/time-series-forecast-using-deep-learning-adef5753ec85)
-
-[Timeseries forecasting for weather prediction](https://keras.io/examples/timeseries/timeseries_weather_forecasting/)
-
-[Timeseries classification from scratch](https://keras.io/examples/timeseries/timeseries_classification_from_scratch/)
 
 [How to Develop a Bidirectional LSTM For Sequence Classification in Python with Keras](https://machinelearningmastery.com/develop-bidirectional-lstm-sequence-classification-python-keras/)
 
 [Time series forecasting using Tensorflow](https://www.tensorflow.org/tutorials/structured_data/time_series)
 
 
-## Time Series Examples using Pytorch
+## Time Series Examples using PyTorch
 
 [LSTM for time series prediction](https://towardsdatascience.com/lstm-for-time-series-prediction-de8aeb26f2ca)
 
@@ -547,6 +673,16 @@ The first sample of this dataset would be:
 [PyTorch LSTMs for time series forecasting of Indian Stocks](https://medium.com/analytics-vidhya/pytorch-lstms-for-time-series-forecasting-of-indian-stocks-8a49157da8b9)
 
 [Training Time Series Forecasting Models in PyTorch](https://towardsdatascience.com/training-time-series-forecasting-models-in-pytorch-81ef9a66bd3a)
+
+
+## Time Series Examples using AutoML
+
+[Multiple Series? Forecast Them together with any Sklearn Model](https://towardsdatascience.com/multiple-series-forecast-them-together-with-any-sklearn-model-96319d46269)
+
+[Forecasting Atmospheric CO2 with Python with Darts](https://towardsdatascience.com/forecasting-atmospheric-co2-concentration-with-python-c4a99e4cf142)
+
+
+[Forecasting with Machine Learning Models using mlforecast](https://towardsdatascience.com/forecasting-with-machine-learning-models-95a6b6579090)
 
 
 ## Time Series Examples using PyCaret
@@ -560,35 +696,32 @@ The first sample of this dataset would be:
 [Time Series Forecasting with PyCaret Regression Module](https://towardsdatascience.com/time-series-forecasting-with-pycaret-regression-module-237b703a0c63)
 
 
-## More Time Series Examples
-
-[Forecasting with Machine Learning Models using mlforecast](https://towardsdatascience.com/forecasting-with-machine-learning-models-95a6b6579090)
-
-[Stacking Machine Learning Models for Multivariate Time Series](https://towardsdatascience.com/stacking-machine-learning-models-for-multivariate-time-series-28a082f881)
 
 
 ----------
+
 
 
 # References
 
 [What Is Time Series Forecasting?](https://machinelearningmastery.com/time-series-forecasting/)
 
-[Taxonomy of Time Series Forecasting Problems](https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/)
-
-[Error Metrics used in Time Series Forecasting](https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca)
-
-
 [Classical Time Series Forecasting Methods in Python (Cheat Sheet)](https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/)
 
-[How to Load, Visualize, and Explore a Multivariate Multistep Time Series Dataset](https://machinelearningmastery.com/how-to-load-visualize-and-explore-a-complex-multivariate-multistep-time-series-forecasting-dataset/)
+[Taxonomy of Time Series Forecasting Problems](https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/)
 
-
-[Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
 
 [How to Develop LSTM Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/)
 
-[How to Develop Multivariate Multi-Step Time Series Forecasting Models for Air Pollution](https://machinelearningmastery.com/howp-to-develop-machine-learning-models-for-multivariate-multi-step-air-pollution-time-series-forecasting/)
+[Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
+
+[How to Develop Multivariate Multi-Step Time Series Forecasting Models for Air Pollution](https://machinelearningmastery.com/how-to-develop-machine-learning-models-for-multivariate-multi-step-air-pollution-time-series-forecasting/)
+
+
+[How to Load, Visualize, and Explore a Multivariate Multistep Time Series Dataset](https://machinelearningmastery.com/how-to-load-visualize-and-explore-a-complex-multivariate-multistep-time-series-forecasting-dataset/)
+
+[Error Metrics used in Time Series Forecasting](https://medium.com/analytics-vidhya/error-metrics-used-in-time-series-forecasting-modeling-9f068bdd31ca)
+
 
 [How to Develop CNN Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-develop-convolutional-neural-network-models-for-time-series-forecasting/)
 
