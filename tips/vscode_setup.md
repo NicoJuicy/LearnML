@@ -15,6 +15,11 @@
 - CodeSnap
 - Image Preview
 
+- Coverage Gutters
+- Flutter Coverage
+- GistPad 
+- Todo Tree
+
 - Color Highlight
 
 - Dart Data Class Generator
@@ -36,14 +41,17 @@
 - Material Icon Theme
 - Official Python extension (Microsoft)
 - Python docstring generator
+- AutoDocstring
 - Enable Python linter using Command Palette
+- Python Indent
+- Python Resource Monitor
+- Python Test Explorer
+- LiveCode for python (optional)
 
 - Folder Templates
 - ES7+ React/Redux/React-Native snippets
 - VS Code React Refactor
 - Peacock
-
-
 
 
 ## References
