@@ -1,5 +1,15 @@
 # Python Code Snippets
 
+<!-- MarkdownTOC -->
+
+- Show samples from each class
+- Display multiple images in one figure
+- Plot images side by side
+- Visualize a batch of image data
+- Decorators
+
+<!-- /MarkdownTOC -->
+
 ## Show samples from each class
 
 ```py
@@ -35,10 +45,10 @@ show_images(num_classes)
 ```
 
 
-## How to Display Multiple Images in One Figure in Matplotlib
+## Display multiple images in one figure
 
 ```py
-#import libraries
+# import libraries
 import cv2
 from matplotlib import pyplot as plt
   
@@ -97,7 +107,7 @@ plt.axis('off')
 plt.title("Fourth")
 ```
 
-## Plot images side by side using matplotlib
+## Plot images side by side
 
 ```py
 _, axs = plt.subplots(num_rows, num_cols, figsize=(12, 12))
@@ -111,4 +121,131 @@ plt.show()
 ## Visualize a batch of image data
 
 TODO: Add code sample
+
+
+
+## Decorators
+
+
+```py
+def timer(func):
+  """
+  Display time it took for our function to run. 
+  """
+  @wraps(func)
+  def wrapper(*args, **kwargs):
+    start = time.perf_counter()
+
+    # Call the actual function
+    res = func(*args, **kwargs)
+
+    duration = time.perf_counter() - start
+    print(f'[{wrapper.__name__}] took {duration * 1000} ms')
+    return res
+    return wrapper
+```
+
+```py
+@timer
+def isprime(number: int):
+  """ Check if a number is a prime number """
+  isprime = False
+  for i in range(2, number):
+    if ((number % i) == 0):
+      isprime = True
+      break
+      return isprime
+```
+
+
+```py
+def performance_check(func):
+    """ Measure performance of a function """
+
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+      tracemalloc.start()
+      start_time = time.perf_counter()
+      res = func(*args, **kwargs)
+      duration = time.perf_counter() - start_time
+      current, peak = tracemalloc.get_traced_memory()
+      tracemalloc.stop()
+
+      print(f"\nFunction:             {func.__name__} ({func.__doc__})"
+            f"\nMemory usage:         {current / 10**6:.6f} MB"
+            f"\nPeak memory usage:    {peak / 10**6:.6f} MB"
+            f"\nDuration:             {duration:.6f} sec"
+            f"\n{'-'*40}"
+      )
+      return res
+      return wrapper
+```
+
+```py
+@performance_check
+def is_prime_number(number: int):
+    """Check if a number is a prime number"""
+    # ....rest of the function
+```
+
+
+```py
+def repeater(iterations:int=1):
+  """ Repeat the decorated function [iterations] times """
+  def outer_wrapper(func):
+    def wrapper(*args, **kwargs):
+      res = None
+      for i in range(iterations):
+        res = func(*args, **kwargs)
+      return res
+    return wrapper
+    return outer_wrapper
+```
+
+```py
+@repeater(iterations=2)
+def sayhello():
+  print("hello")
+```
+
+
+```py
+def prompt_sure(prompt_text:str):
+  """ Show prompt asking you whether you want to continue. Exits on anything but y(es) """
+
+  def outer_wrapper(func):
+    def wrapper(*args, **kwargs):
+      if (input(prompt_text).lower() != 'y'):
+        return
+      return func(*args, **kwargs)
+    return wrapper
+    return outer_wrapper
+```
+
+```py
+@prompt_sure('Sure? Press y to continue, press n to stop')
+def say_hi():
+  print("hi")
+```
+
+
+```py
+def trycatch(func):
+  """ Wraps the decorated function in a try-catch. If function fails print out the exception. """
+
+  @wraps(func)
+  def wrapper(*args, **kwargs):
+    try:
+      res = func(*args, **kwargs)
+      return res
+    except Exception as e:
+      print(f"Exception in {func.__name__}: {e}")
+      return wrapper
+```
+
+```py
+@trycatch
+def trycatchExample(numA:float, numB:float):
+  return numA / numB
+```
 
