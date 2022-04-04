@@ -17,6 +17,7 @@
   - Generate a sequence of frames
   - Crop a bounding box of video
 - Stack Videos
+- Improve Model Performance
 - Medical Image Overview
 - Medical Image Examples
 - References
@@ -191,6 +192,11 @@ where
 
 
 ----------
+
+
+## Improve Model Performance
+
+[How to Accelerate Computer Vision Model Inference](https://wallarooai.medium.com/how-to-accelerate-computer-vision-model-inference-98ba449c0f53)
 
 
 
