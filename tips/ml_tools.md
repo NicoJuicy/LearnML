@@ -1,19 +1,15 @@
 # Machine Learning Tools
 
-Here is a list of ML tools that I have found to be helpful to an AI/ML engineer.
-
-[GitHub Lists](https://github.com/codecypher?tab=stars)
-
 <!-- MarkdownTOC levels=1,2 -->
 
 - How to choose an ML framework
 - Keras Tutorials
 - Data Exploration Tools
-- Pretrained Models
 - ML Libraries
 - Computer Vision
 - Natural Language Programming
 - Feature Engineering Tools
+- Pretrained Models
 - Python Libraries
 - Plots and Graphs
 - Deep Learning Tools
@@ -24,8 +20,11 @@ Here is a list of ML tools that I have found to be helpful to an AI/ML engineer.
 
 <!-- /MarkdownTOC -->
 
+Here is a list of ML tools that I have found to be helpful for AI engineering.
 
-[Starred Github lists](https://github.com/codecypher?tab=stars)
+For items without links, see **Github Lists**. 
+
+[GitHub Lists](https://github.com/codecypher?tab=stars)
 
 [Github Student Developer Pack](https://education.github.com/pack)
 
@@ -68,24 +67,9 @@ NOTE: It is best to install the Orange native executable on your local machine r
 
 
 
-## Pretrained Models
-
-[Model Zoo](https://modelzoo.co/)
-
-[TensorFlow Hub](https://tfhub.dev/)
-
-[TensorFlow Model Garden](https://github.com/tensorflow/models/tree/master/official)
-
-[Hugging Face](https://github.com/huggingface)
-
-[PyTorch Hub](https://pytorch.org/hub/)
-
-[Papers with Code](https://paperswithcode.com/)
-
-
-
 ## ML Libraries
 
+- Miniforge with mamba (mambaforge)
 - Kedro
 - ONNX
 - openai/gym
@@ -94,10 +78,6 @@ NOTE: It is best to install the Orange native executable on your local machine r
 - PyMC
 - Snap ML
 - Streamlit
-
-### models
-
-The models repo is also called “TensorFlow Modul Garden” which organises machine learning models and has them implemented using TensorFlow with examples. The models could be from TensorFlow officially, from some famous research projects or the community. They can be very helpful to save our time when we want to use any machine learning models in TensorFlow.
 
 ### Snap ML
 
@@ -132,7 +112,9 @@ Snap ML is a library that provides high-speed training of popular machine learni
 
 - ageitgey/face_recognition
 
-### [OpenCV](https://docs.opencv.org/master/d9/df8/tutorial_root.html)
+### OpenCV
+
+[OpenCV](https://docs.opencv.org/master/d9/df8/tutorial_root.html)
 
 OpenCV is a huge open-source library for computer vision, machine learning, and image processing. 
 
@@ -142,7 +124,9 @@ OpenCV can process images and videos to identify objects, faces, or eve handwrit
 
 ### openpilot
 
-openpilot repo is an open-source driver assistance system. It performs the functions of Adaptive Cruise Control (ACC), Automated Lane Centering (ALC), Forward Collision Warning (FCW) and Lane Departure Warning (LDW) for a growing variety of supported car makes, models and model years. However, you need to buy their product and install it on your car. It is not completely DIY but reduces the efforts.
+The openpilot repo is an open-source driver assistance system that performs the functions of Adaptive Cruise Control (ACC), Automated Lane Centering (ALC), Forward Collision Warning (FCW) and Lane Departure Warning (LDW) for a growing variety of supported car makes, models, and model years. 
+
+However, you will need to buy their product and install it on your car and it is not completely DIY but reduces the effort.
 
 
 
@@ -175,6 +159,23 @@ There are many tools that will help you in automating the entire feature enginee
 ### Tutorials
 
 [The Only Web Scraping Tool you need for Data Science](https://medium.com/nerd-for-tech/the-only-web-scraping-tool-you-need-for-data-science-f388e2afa187)
+
+
+
+## Pretrained Models
+
+[Model Zoo](https://modelzoo.co/)
+
+[TensorFlow Hub](https://tfhub.dev/)
+
+[TensorFlow Model Garden](https://github.com/tensorflow/models/tree/master/official)
+
+[Hugging Face](https://github.com/huggingface)
+
+[PyTorch Hub](https://pytorch.org/hub/)
+
+[Papers with Code](https://paperswithcode.com/)
+
 
 
 
