@@ -13,6 +13,11 @@
 - Monitoring the model
 - Improve Python Performance
 - Improve Tensorflow Performance
+  - Mixed Precision on NVIDIA GPUs
+  - Mix Precision in Tensorflow
+  - Fusing multiple ops into one
+  - Fusion with Tensorflow 2.x
+- Keras GPU Performance
 - References
 
 <!-- /MarkdownTOC -->
@@ -99,15 +104,17 @@ Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Se
 
 ## Improve Python Performance
 
-The rule of thumb is that a computer is a sum of its parts or weakest link. 
+The rule of thumb is that a computer is a sum of its parts or weakest link. In addition, the basic performance equation reminds us that there are always tradeoffs in hardware/software performance. 
 
 Thus, there is no silver bullet hardware or software technology that will magically improve computer performance.
 
-Hardware upgrades usually provide marginal improvement in performance. However, we can achieve 30-100x performance improvement using software libraries and code refactoring [1][2]. 
-
-In general, improving computer performance is a cumulative process of several or many different techniques. 
+Hardware upgrades (vertical scaling) usually provide only marginal improvement in performance. However, we can achieve as much as 30-100x performance improvement using software libraries and code refactoring to improve parallelization (horizontal scaling) [1][2].
 
 > There is no silver bullet to improve performance.
+
+In general, improving computer performance is a cumulative process of several or many different approaches primarily software related.
+
+> NOTE: Many of the software libraries to improve pandas performance also enhance numpy performance as well. 
 
 
 [Intel Extension for Scikit-learn](https://intel.github.io/scikit-learn-intelex/index.html#intelex)
@@ -174,7 +181,6 @@ Enabling XLA is as simple as using the  `@tf.function` decorator.
 [Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
 
 [Optimizing a TensorFlow Input Pipeline: Best Practices in 2022](https://medium.com/@virtualmartire/optimizing-a-tensorflow-input-pipeline-best-practices-in-2022-4ade92ef8736)
-)
 
 
 ### Mixed Precision on NVIDIA GPUs
@@ -237,6 +243,62 @@ Fusing ops together provides several performance advantages:
 - Increases opportunities for ILP, vectorization etc.
 
 - Improves temporal and spatial locality of data access
+
+
+
+
+## Keras GPU Performance
+
+[Using GPUs With Keras: A Tutorial With Code](https://wandb.ai/authors/ayusht/reports/Using-GPUs-With-Keras-A-Tutorial-With-Code--VmlldzoxNjEyNjE)
+
+[Use a GPU with Tensorflow](https://www.tensorflow.org/guide/gpu)
+
+[Using an AMD GPU in Keras](https://www.petelawson.com/post/using-an-amd-gpu-in-keras/)
+
+[TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)](https://stackoverflow.com/questions/65298241/what-does-this-tensorflow-message-mean-any-side-effect-was-the-installation-su)
+
+
+```py
+    import os
+    
+    from tensorflow.python.client import device_lib
+    
+    # disable oneDNN warning
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
+
+    print(f"tensorflow version is {tf.__version__}")
+
+    # Check if tensorflow is using GPU
+    print(f"\nPhysical Devices:\n{tf.config.list_physical_devices('GPU')}")
+    print(f"\n\nLocal Devices:\n{device_lib.list_local_devices()}")
+    print(f"\nNum GPUs Available: {len(tf.config.list_physical_devices('GPU'))}")
+```
+
+```py
+    import tensorflow as tf
+    import tensorflow_datasets as tfds
+
+    from tensorflow.python.framework.ops import disable_eager_execution
+    from tensorflow.python.compiler.mlcompute import mlcompute
+
+    #disable_eager_execution()
+
+    mlcompute.set_mlc_device(device_name='gpu')
+```
+
+
+[Getting Started with tensorflow-metal PluggableDevice](https://developer.apple.com/metal/tensorflow-plugin/)
+
+[GPU-Accelerated Machine Learning on MacOS](https://towardsdatascience.com/gpu-accelerated-machine-learning-on-macos-48d53ef1b545)
+
+[apple/tensorflow_macos](https://github.com/apple/tensorflow_macos/issues/153)
+
+[tensorflow Mac OS gpu support](https://stackoverflow.com/questions/44744737/tensorflow-mac-os-gpu-support)
+
+[Install Tensorflow 2 and PyTorch for AMD GPUs](https://medium.com/analytics-vidhya/install-tensorflow-2-for-amd-gpus-87e8d7aeb812)
+
+[Installing TensorFlow on the M1 Mac](https://towardsdatascience.com/installing-tensorflow-on-the-m1-mac-410bb36b776)
+
 
 
 
