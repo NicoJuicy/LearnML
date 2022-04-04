@@ -5,12 +5,13 @@
 - Quickstart Resources
 - Books for Developers
 - PyTorch Books
+- Prerequisites
 - Textbooks
 - Code Repos
 
 <!-- /MarkdownTOC -->
 
-Be sure to see [AI Learning Resources](https://aicoder.medium.com/ai-learning-resources-b49da21fd3b8)
+[AI Learning Resources](https://aicoder.medium.com/ai-learning-resources-b49da21fd3b8)
 
 [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering)
 
@@ -56,12 +57,33 @@ J. Matthew, PyTorch Artificial Intelligence Fundamentals, Birmingham, U.K.: Pack
 - PyTorch Computer Vision Cookbook
 
 
-## Textbooks
+## Prerequisites
+
+K. Rosen, Discrete Mathematics and Its Applications, 8th ed., McGraw Hill, ISBN: 978-1-259-67651-2, 2019. 
+
+
+J. Fanchi, Math Refresher for Scientists and Engineers, 3rd ed., Wiley, ISBN: 0-471-75715-2, 2006. 
 
 M. P. Deisenroth, A. A. Faisal, and C. S. Ong, Mathematics for Machine Learning, Cambridge, UK: Cambridge University Press, ISBN: 978-1-108-47004-9, 2020.
 
+D. Zwillinger, CRC Standard Mathematical Tables and Formulas, 33rd ed., CRC Press, ISBN: 978-1-4987-7780-3, 2018.
+
+
+R. V. Hogg, J. W. McKean, and A. T. Craig, Introduction to Mathematical Statistics, Pearson, ISBN 0134686993, 2019.  
+
+C. Hamacher, Z. Vranesic, S. Zaky, and N. Manjikian, Computer Organization and Embedded Systems, 6th ed., McGraw Hill, ISBN: 978–0–07–338065–0, 2012. 
+
+A. S. Tanenbaum and D. J. Wetherall, Computer Networks, 5th ed., Pearson, ISBN: 0-13-212695-8, 2011. 
+
 R. H. Arpaci-Dusseau and A. C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, 2018, v. 1.01, Available online: https://pages.cs.wisc.edu/~remzi/OSTEP/
 
+
+S. McConnell, Code Complete, 2nd ed., Microsoft Press, ISBN: 0-7356-1967-0, 2004. 
+
+M. Howard and D. LeBlanc, Writing Secure Code, 2nd ed., Microsoft Press Press, ISBN: 0735617228, 2003. 
+
+
+## Textbooks
 
 W. McKinney, Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython, 2nd ed., O’Reilly Media, ISBN: 978-1491957660, 2017.
 
@@ -73,7 +95,7 @@ S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 978-
 
 S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/
 
-D. Jurafsky and J. H. Martin. 2008 (2nd edition). Speech and Language Processing. Prentice Hall. ISBN: 978-0131873216. Available online: https://web.stanford.edu/~jurafsky/slp3/
+D. Jurafsky and J. H. Martin, 2nd edition. Speech and Language Processing. Prentice Hall, ISBN: 978-0131873216, 2008. Available online: https://web.stanford.edu/~jurafsky/slp3/
 
 
 B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Planning and Control, London: Springer, ISBN: 978-1-84628-641-4, 2010.
