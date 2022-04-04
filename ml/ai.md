@@ -4,8 +4,11 @@
 
 - Terminology
   - Pareto Principle
+  - No Free Lunch Theorem
   - Bias vs Variance Tradeoff
 - Curse of Dimensionality
+- When You Should not use ML
+- Disinformation in AI Research
 - Machine Learning
   - Analyze the Data
   - Process the data
@@ -44,7 +47,13 @@ The Pareto Principle states that (for a wide variety of situations) about 80% of
 **bootstrap** means to randomly draw (with replacement) rows from the training dataset.
 
 
-**No Free Lunch Theorem:** Any two algorithms are equivalent when their performance is averaged across all possible problems. 
+### No Free Lunch Theorem
+
+**No Free Lunch Theorem:** Any two algorithms are equivalent when their performance is averaged across all possible problems.
+
+There is no such thing as the _best_ learning algorithm. For any learning algorithm, there is a dataset where it is very accurate and another dataset where it is very poor. 
+
+When we say that a learning algorithm is _good_, we only quantify how well its inductive bias matches the properties of the data.
 
 Thus, a general-purpose universal optimization strategy is theoretically impossible and the only way one strategy can outperform another is if it is specialized to the specific problem under consideration. 
 
@@ -53,9 +62,48 @@ Thus, a general-purpose universal optimization strategy is theoretically impossi
 
 The bias-variance trade-off will help us understand the concepts of models over-fitting and under-fitting to training data.
 
+
+> If you torture the data long enough, it will confes - Ronald Coase
+
+
 ## Curse of Dimensionality
 
 TODO: Add notes
+
+
+
+## When You Should not use ML
+
+[4 Reasons Why You Shouldn’t Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11?source=rss----7f60cf5620c9---4&gi=204e8d695029) 
+
+Technically, AI/ML is a graduate level topic which has several undergraduate prerequisites in math and CS which is probably why 80% or more of AI projects fail. 
+
+
+## Disinformation in AI Research
+
+Disinformation can also be found in scientific research publications, not just social media and online. Occurrences in research are more apparent when research or study data are irreproducible. In fact, a Harvard researcher resigned after a fraud discovery occurred.
+
+> One study found that 33.7% of scientists surveyed admitted to questionable research practices at least once in their career - IEEE Computer, 12/2021
+
+Source data validation is necessary for research — especially funded research. The cost of source data validation is estimated to be between 20% and 30% of an overall clinical trial budget. 
+
+What stops someone from simulating, tampering, or falsifying raw data to deliver a desired result to support a “desired” study hypothesis (this actually occured on a NIH research project that I was working on)? If data can be easily fabricated and falsified, is source data validation worth the costs? In addition, falsification may not be the only problem here; withholding data is also a problem. 
+
+It is important to keep in mind that data _reproducibility_ can be a challenge because of improper research techniques such as when researchers look for data correlations until they find a bizarre outlier and then claim its statistical significance. Here, they could employ improper statistical techniques or change variables/combine data sets, invalidating the research/ study data and its results.  
+
+If researchers were to maintain and use a data repository, it might create a learning community. In a learning community, outsiders not associated with the creation of the original data could request access to datasets to  test research outcomes and offer peer-reviewed improvements in a data owner’s experimental techniques. This could also discourage data tampering and falsification.
+
+IEEE has attempted to help by providing a utility for researchers called [IEEE Dataport](https://ieee-dataport .org/) which offers researchers free data uploads and access of up to 2 TB. 
+
+The IEEE Dataport is not only beneficial by having research data stored at a trusted organization but datasets may also be connected to IEEE journal and magazine articles which increases data and research visibility.
+
+IEEE Dataport currently has almost 700,000 users and over 1,500 data sets.
+
+Most importantly, this offering should support reproducible research, a topic that Computer will discuss further in future issues. 
+
+
+
+----------
 
 
 

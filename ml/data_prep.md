@@ -40,15 +40,15 @@
     - Best Scaler
     - Best Estimator
     - Pipeline with PCA
-    - Joblib
-    - Pandas pipe
-- scikit-learn Pipeline Example
+- More on scikit-learn pipeline
     - Data Prep
     - Create Pipeline
     - Train and Evaluate Pipeline
+    - Joblib
+    - Pandas pipe
 - Bootstrapping
 - Code Examples and References
-    - Data Preprocessing
+    - Data Preparation
     - Categorical Data
     - Scaling
     - Normalization
@@ -59,7 +59,7 @@
 
 ## Overview
 
-[Tour of Data Preparation Techniques for Machine Learning](https://machinelearningmastery.com/data-preparation-techniques-for-machine-learning/)
+> Data quality is important to creating a successful machine learning model
 
 [Feature Engineering](./feature_engineering.md)
 
@@ -195,29 +195,28 @@ We can drop or fill the `NaN` values.
 ```py
     # return the number of missing values (NaN) per column
     df.isnull().sum()  
-    
-    # drop rows with missing values
-    df = df.dropna()
-    
-    # drop cols with missing values
-    df.dropna(axis=1)
 
+    # remove all rows that contain a missing value
+    df.dropna()
+    
+    # remove all columns with at least one missing value
+    df.dropna(axis=1)
+    
     # Drop the NaN
     df['col_name'] = df['col_name'].dropna(axis=0, how="any")
 
     # check NaN again
-    df['col_name'].isnull().sum() 
+    df['col_name'].isnull().sum()
+    
+    # remove rows with None in column "date"
+    # notna is much faster
+    df.dropna(subset=['date'])
+    df = df[df["date"].notna()]
 ```
 
 ```py
-    # We can delete rows that have NaN value in any column
-    df.dropna(how='any').shape
-
-    # We can delete rows that have all there columns 'unknown' or have missing values
-    df.dropna(how='any').shape
-
-    # We can delete specific columns by passing them in a list
-    df.dropna(subset=['City', 'Shape Reported'], how='all').shape
+    # We can delete specific columns by passing a list
+    df.dropna(subset=['City', 'Shape Reported'], how='all')
 
     # Replace NaN by a specific value using fillna() method
     df['Shape Reported'].isna().sum()
@@ -247,7 +246,16 @@ We can drop or fill the `NaN` values.
     # rows removed, optionally only considering certain columns.
     # 'keep' controls the rows to keep.
     df.drop_duplicates(keep='first').shape
-```
+    
+    # extract date column and remove None values
+    # drop_duplicates is faster on larger dataframes
+    date = df[df["date"].notna()]
+    date_set = date.drop_duplicates(subset=['date'])['date'].values
+    
+    # extract date column and remove None values
+    date = df[df["date"].notna()]['date'].values
+    date_set = np.unique(date)
+``` 
 
 
 ### Handle Outliers
@@ -260,6 +268,22 @@ We can drop or fill the `NaN` values.
 
 - Discretize: Converting continuous variables into discrete values. 
 
+
+```py
+    # making boolean series for a team name
+    filter1 = data["Team"] == "Atlanta Hawks"
+
+    # making boolean series for age
+    filter2 = data["Age"] > 24
+
+    # filtering data on basis of both filters
+    df.where(filter1 & filter2, inplace=True)
+
+    df.loc[filter1 & filter2]
+
+    # display
+    print(df.head(20))
+```
 
 
 ## Encoding Categorical Features
@@ -707,9 +731,11 @@ A train-test split conists of the following:
 
 There are multiple stages to running machine learning algorithms since it involves a sequence of tasks including pre-processing, feature extraction, model fitting, performance, and validation.
 
-Pipeline is a technique used to create a linear sequence of data preparation and modeling steps to automate machine learning workflows.
+**Pipeline** is a technique used to create a linear sequence of data preparation and modeling steps to automate machine learning workflows [3].
 
 Pipelines help in parallelization which means different jobs can be run in parallel as well as help to inspect and debug the data flow in the model.
+
+Here we are using the Pipeline class from scikit-learn. 
 
 ### Import Libraries
 
@@ -727,6 +753,27 @@ Pipelines help in parallelization which means different jobs can be run in paral
     from sklearn.model_selection import train_test_split
     from sklearn.preprocessing import MinMaxScaler, RobustScaler, StandardScaler
     from sklearn.decomposition import PCA
+```
+
+```py
+    # Load dataset
+    data_df=pd.read_csv("Path to CSV file")
+    
+    # Drop null values
+    data_df.dropna()
+    
+    data_df.head()
+    
+    # Calculate the value counts for each category
+    data_df['R'].value_counts()
+    
+    # Find the unique values
+    data_df['R'].unique()
+    
+    # Split the data into training and testing set
+    x = data_df.drop(['R'], axis=1)
+    y = data_df['R']
+    trainX, testX, trainY, testY = train_test_split(x, y, test_size = 0.2)
 ```
 
 ### Create Simple Pipeline
@@ -788,7 +835,7 @@ Pipelines help in parallelization which means different jobs can be run in paral
     print('%s pipeline Test Accuracy Score: %.4f' % (pipeline_dict[i], accuracy_score(testY, val.predict(testX))))
 ```
 
-Convert pipeline to dataFrame and show the best model:
+Convert pipeline to DataFrame and show the best model:
 
 ```py
     l = []
@@ -868,26 +915,11 @@ Convert pipeline to dataFrame and show the best model:
 Pipeline example with Principal Component Analysis (PCA)
 
 
+## More on scikit-learn pipeline
 
-### Joblib
+A scikit-learn pipeline is a component provided by scikit-learn package that allow us to merge different components within the scikit-learn API and run them sequentially. 
 
-[Lightweight Pipelining In Python using Joblib](https://towardsdatascience.com/lightweight-pipelining-in-python-1c7a874794f4)
-
-Joblib is an open-source Python library that helps in saving pipelines to a file which can be used later.
-
-### Pandas pipe
-
-The pandas `pipe` function offers a structured and organized way for combining several functions into a single operation.
-
-As the number of steps increase, the syntax becomes cleaner with the pipe function compared to executing functions separately.
-
-[A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
-
-
-
-## scikit-learn Pipeline Example
-
-[Unleash the Power of Scikit-learn’s Pipelines](https://towardsdatascience.com/unleash-the-power-of-scikit-learns-pipelines-b5f03f9196de)
+Thus, pipelines are very helpful because the component can perform all the data preprocessing and model fitting and also help to minimize human error during the data transformation and fitting process [5][6]. 
 
 ### Data Prep
 
@@ -946,7 +978,32 @@ As the number of steps increase, the syntax becomes cleaner with the pipe functi
 
     # check pipeline accuracy
     accuracy_score(y_test, predictions)
-    ```
+```
+
+The main advantage of using this pipelines is that we can save them just like any other model in scikit-learn. 
+
+The scikit-learn pipelines are estimators, so we can save them with all the preprocessing and modelling steps into a binary file using joblib and load them from the binary file later. 
+
+```py
+    import joblib
+
+    # Save the pipeline into a binary file
+    joblib.dump(pipe, 'wine_pipeline.bin')
+
+    # Load the saved pipeline from a binary file
+    pipe = joblib.load('wine_pipeline.bin')
+```
+
+
+### Joblib
+
+**Joblib** is an open-source Python library that helps to save pipelines to a file that can be used later [7].
+
+### Pandas pipe
+
+The pandas `pipe` function offers a structured and organized way for combining several functions into a single operation.
+
+As the number of steps increase, the syntax becomes cleaner with the pipe function compared to executing functions 
 
 
 
@@ -967,9 +1024,12 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 ## Code Examples and References
 
-### Data Preprocessing
+### Data Preparation
 
 [Data Science Primer](https://elitedatascience.com/primer)
+
+[Tour of Data Preparation Techniques for Machine Learning](https://machinelearningmastery.com/data-preparation-techniques-for-machine-learning/)
+
 
 [How to Perform Data Cleaning for Machine Learning with Python?](https://machinelearningmastery.com/basic-data-cleaning-for-machine-learning/)
 
@@ -981,8 +1041,6 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [The Lazy Data Scientist’s Guide to AI/ML Troubleshooting](https://medium.com/@ODSC/the-lazy-data-scientists-guide-to-ai-ml-troubleshooting-abaf20479317?source=linkShare-d5796c2c39d5-1638394993&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9bLTU3JLM3VS87P1Xcxy8xID4gMc8lJAgCSs4wwIwAAAA%3D%3D&_branch_match_id=994707642716437243)
 
-
-[A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
 
 [How to Select a Data Splitting Method](https://towardsdatascience.com/how-to-select-a-data-splitting-method-4cf6bc6991da)
 
@@ -1030,12 +1088,22 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 ## References
 
-W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018. 
+W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018.
 
 [1] [INFOGRAPHIC: Data prep and Labeling](https://www.cognilytica.com/2019/04/19/infographic-data-prep-and-labeling/)
 
 [2] [Kaggle Data Cleaning Challenge: Missing values](https://www.kaggle.com/rtatman/data-cleaning-challenge-handling-missing-values)
 
-[Build Machine Learning Pipelines](https://medium.datadriveninvestor.com/build-machine-learning-pipelines-with-code-part-1-bd3ed7152124?gi=c419327a3c8c)
+
+[3] [Build Machine Learning Pipelines](https://medium.datadriveninvestor.com/build-machine-learning-pipelines-with-code-part-1-bd3ed7152124?gi=c419327a3c8c)
+
+[4] [A Better Way for Data Preprocessing: Pandas Pipe](https://towardsdatascience.com/a-better-way-for-data-preprocessing-pandas-pipe-a08336a012bc)
+
+[5] [Introduction to Scikit-learn’s Pipelines](https://towardsdatascience.com/introduction-to-scikit-learns-pipelines-565cc549754a)
+
+[6] [Unleash the Power of Scikit-learn’s Pipelines](https://towardsdatascience.com/unleash-the-power-of-scikit-learns-pipelines-b5f03f9196de)
+
+[7] [Lightweight Pipelining In Python using Joblib](https://towardsdatascience.com/lightweight-pipelining-in-python-1c7a874794f4)
+
 
 [Customizing Sklearn Pipelines: TransformerMixin](https://towardsdatascience.com/customizing-sklearn-pipelines-transformermixin-a54341d8d624?source=rss----7f60cf5620c9---4)
