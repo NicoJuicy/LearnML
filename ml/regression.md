@@ -163,12 +163,13 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 
 [End-to-End Machine Learning Workflow (Part 2)](https://medium.com/mlearning-ai/end-to-end-machine-learning-workflow-part-2-e7b6d3fb1d53)
 
+[Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
+
 
 [An End-to-End Machine Learning Project — Heart Failure Prediction](https://towardsdatascience.com/an-end-to-end-machine-learning-project-heart-failure-prediction-part-1-ccad0b3b468a?gi=498f31004bdf)
 
-[Regression for Classification](https://towardsdatascience.com/regression-for-classification-hands-on-experience-8754a909a298)
-
 [One-vs-Rest and One-vs-One for Multi-Class Classification](https://machinelearningmastery.com/one-vs-rest-and-one-vs-one-for-multi-class-classification/)
+
 
 [Classification And Regression Trees for Machine Learning](https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/)
 
