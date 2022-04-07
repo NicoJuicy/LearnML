@@ -143,6 +143,7 @@ Rejecting the null hypothesis means that the process has no unit root, and in tu
 We can log transform the dataset again to make the distribution of values more linear and better meet the expectations of this statistical test:
 
 
+
 ## References
 
 [How to Check if Time Series Data is Stationary with Python?](https://machinelearningmastery.com/time-series-data-stationary-python/)

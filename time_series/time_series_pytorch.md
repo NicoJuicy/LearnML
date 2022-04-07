@@ -1,4 +1,4 @@
-# PyTorch LSTMs for time series forecasting
+# PyTorch LSTMs for Time Series Forecasting
 
 ## Curating Data to pass it to an LSTM model
 
