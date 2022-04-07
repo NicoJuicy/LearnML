@@ -27,6 +27,17 @@
 <!-- /MarkdownTOC -->
 
 
+## Overview
+
+When using classical statistics, the primary concern is the analysis of time series.
+
+The goal of _time series analysis_ (TSA) is to develop models that best capture or describe an observed time series in order to understand the underlying causes.
+
+TSA seeks the **Why** behind the time series dataset which often involves making assumptions about the form of the data and decomposing the time series into constituent components.
+
+The quality of a descriptive model is determined by how well it describes _all_ available data and the interpretation it provides to better inform the problem domain.
+
+
 ## How to import time series in python?
 
 ```py
@@ -34,38 +45,46 @@
   df = pd.read_csv('https://raw.githubusercontent.com/selva86/datasets/master/a10.csv', parse_dates=['date'])
 ```
 
-You can also import it as a pandas Series with the date as index by specifying the `index_col` argument. 
+We can also import a file as a pandas Series with the date as index by specifying the `index_col` argument. 
+
 
 ## What is panel data?
 
 Panel data is also a time-based dataset.
 
-In addition to time series, it also contains one or more related variables that are measured for the same time periods.
+In addition to time series, panel data contains one or more related variables that are measured for the same time periods.
 
-Typically, the columns present in panel data contain explanatory variables that can be helpful in predicting the Y, provided those columns will be available at the future forecasting period.
+Typically, the columns present in panel data contain explanatory variables that can be helpful in predicting the Y, provided the columns will be available at the future forecasting period.
 
-## Visualizing a time series
+
+## Visualize a time series
 
 We can use matplotlib to visualise the time series.
 
 ```py
-# Draw Plot
-def plot_df(df, x, y, title="", xlabel='Date', ylabel='Value', dpi=100):
-    plt.figure(figsize=(16,5), dpi=dpi)
-    plt.plot(x, y, color='tab:red')
-    plt.gca().set(title=title, xlabel=xlabel, ylabel=ylabel)
-    plt.show()
-
-    plot_df(df, x=df.index, y=df.value, title='Monthly anti-diabetic drug sales in Australia from 1992 to 2008.')
+    # Draw Plot
+    def plot_dataframe(df, x, y, title="", xlabel='Date', ylabel='Value', dpi=100):
+        plt.figure(figsize=(16,5), dpi=dpi)
+        plt.plot(x, y, color='tab:red')
+        plt.gca().set(title=title, xlabel=xlabel, ylabel=ylabel)
+        plt.show()
+    
+    plot_dataframe(df, 
+                   x=df.index, 
+                   y=df.value, 
+                   title="Monthly anti-diabetic drug sales in Australia from 1992 to 2008.")
 ```
+
 
 ## Patterns in a time series
 
-Any time series may be split into the following components: Base Level + Trend + Seasonality + Error
+A time series can be split into the following components: 
 
-A trend is observed when there is an increasing or decreasing slope observed in the time series. 
+    Base Level + Trend + Seasonality + Error
 
-Seasonality is observed when there is a distinct repeated pattern observed between regular intervals due to seasonal factors. 
+A _trend_ is observed when there is an increasing or decreasing slope in the time series. 
+
+A _seasonality_ is observed when there is a distinct repeated pattern between regular intervals due to seasonal factors. 
 
 The seasonality could be due to the month of the year, the day of the month, weekdays, or even time of day.
 
@@ -74,85 +93,83 @@ Another aspect to consider is _cyclic_ behaviour which happens when the rise and
 
 ## Additive and multiplicative time series
 
-Depending on the nature of the trend and seasonality, a time series can be modeled as an additive or multiplicative where each observation in the series can be expressed as either a sum or a product of the components:
+Depending on the nature of the trend and seasonality, a time series can be modeled as an _additive_ or _multiplicative_ where each observation in the series can be expressed as either a sum or a product of the components:
 
-Additive time series:       Value = Base Level + Trend + Seasonality + Error
+Additive time series:        Value = Base Level + Trend + Seasonality + Error
 
-Multiplicative Time Series: Value = Base Level x Trend x Seasonality x Error
+Multiplicative Time Series:  Value = Base Level x Trend x Seasonality x Error
 
 
 ## How to decompose a time series into its components?
 
-We can perform a classical decomposition of a time series by considering the series as an additive or multiplicative combination of the base level, trend, seasonal index and the residual using the `seasonal_decompose` function in statsmodels.
+We can perform a classical decomposition of a time series by considering the series as an additive or multiplicative combination of the base level, trend, seasonal index, and the residual using the `seasonal_decompose` function in statsmodels.
 
 
 ## Stationary and Non-Stationary Time Series
 
-Stationarity is a property of a time series. A stationary series is one where the values of the series is not a function of time.
+A time series is _stationary_ when the values of the series are not a function of time.
 
-The statistical properties of the series like mean, variance, and autocorrelation are constant over time. 
+The statistical properties of the series such as mean, variance, and autocorrelation are constant over time. 
 
-Autocorrelation of the series is nothing but the correlation of the series with its previous values, more on this coming up.
+The _autocorrelation_ of the series is simply the correlation of the series with its previous values.
 
-A stationary time series is devoid of seasonal effects as well.
+A stationary time series is also devoid of seasonal effects.
 
 Most statistical forecasting methods are designed to work on a stationary time series. 
 
-The first step in the forecasting process is typically to do some transformation to convert a non-stationary series to stationary.
+The first step in the forecasting process is usually to do some transformation to convert a non-stationary series to stationary.
 
+### Why make a time series stationary before forecasting?
+
+Forecasting a stationary series is relatively easy and the forecasts are more reliable.
+
+An important reason is that autoregressive forecasting models are essentially linear regression models that utilize the lag(s) of the series as predictors.
+
+We know that linear regression works best if the predictors (X) are not correlated with each other. 
+
+Thus, making the series stationary solves this problem since it removes any persistent autocorrelation which makes the predictors (lags of the series) in the forecasting models nearly independent.
 
 ### How to make a time series stationary?
 
-You can make series stationary by:
+The are several ways to make a time series stationary:
 
 1. Differencing the series (once or more)
 2. Take the log of the series
 3. Take the nth root of the series
 4. Combination of the above
 
-The most common and convenient method to stationarize the series is by differencing the series at least once until it becomes approximately stationary.
+The most common and convenient method to make the series statinoary is differencing the series at least once until it becomes approximately stationary.
 
-In short, differencing the series is simply subtracting the next value by the current value: y = y(t) - y(t-1)
+In short, differencing the series is simply subtracting the next value by the current value: 
 
-### Why make a non-stationary series stationary before forecasting?
-
-Forecasting a stationary series is relatively easy and the forecasts are more reliable.
-
-An important reason is that autoregressive forecasting models are essentially linear regression models that utilize the lag(s) of the series itself as predictors.
-
-We know that linear regression works best if the predictors (X) are not correlated against each other. 
-
-Thus, stationarizing the series solves this problem since it removes any persistent autocorrelation, thereby making the predictors(lags of the series) in the forecasting models nearly independent.
+y = y(t) - y(t-1)
 
 ### How to test for stationarity?
 
-The stationarity of a series can be established by looking at the plot of the series like we did earlier.
+The stationarity of a series can be determined by looking at the plot of the series.
 
-Another method is to split the series into two or more contiguous parts and computing the summary statistics like the mean, variance and the autocorrelation. 
+Another method is to split the series into two or more contiguous parts and computing the summary statistics such as mean, variance, and autocorrelation. 
 
-If the stats are quite different, then the series is not likely to be stationary.
+If the stats are quite different, the series is not likely to be stationary.
 
-We nwed a method to quantitatively determine if a given series is stationary or not which can be done using statistical tests called "Unit Root Tests". 
+We can determine if a given series is stationary or not using statistical tests called _unit root tests_. 
 
 There are multiple variations of unit root tests where the tests check if a time series is non-stationary and possess a unit root.
 
-There are multiple implementations of Unit Root tests like:
+There are several implementations of unit root tests:
 
 - Augmented Dickey Fuller test (ADH Test)
-
 - Kwiatkowski-Phillips-Schmidt-Shin – KPSS test (trend stationary)
-
 - Philips Perron test (PP Test)
 
-The most commonly used is the ADF test where the null hypothesis is the time series possesses a unit root and is non-stationary. 
+The most commonly used stationary test is the ADF test where the null hypothesis is that the time series possesses a unit root and is non-stationary. 
 
-Thus, if the P-Value in ADH test is less than the _significance level_ (0.05), you reject the null hypothesis.
+Thus, if the P-Value in ADH test is less than the _significance level_ (0.05), we reject the null hypothesis.
+
+The KPSS test is used to test for trend stationarity where the null hypothesis and the p-value interpretation are the opposite of ADH test.
 
 
-The KPSS test is used to test for trend stationarity. The null hypothesis and the P-Value interpretation are the opposite of ADH test.
-
-
-### What is the difference between white noise and a stationary series?
+### What is the difference between white noise and a stationary time series?
 
 Like a stationary series, the white noise is also not a function of time which means its mean and variance do not change over time. 
 
@@ -167,7 +184,7 @@ Mathematically, a sequence of completely random numbers with mean zero is consid
 
 Detrending a time series is to remove the trend component from a time series. 
 
-There are multiple approaches to extract the trend:
+There are several approaches to extract the trend:
 
 1. Subtract the line of best fit from the time series. 
 
@@ -175,43 +192,44 @@ There are multiple approaches to extract the trend:
   
 2. Subtract the trend component obtained from time series decomposition we saw earlier.
 
-3. Subtract the mean
+3. Subtract the mean.
 
 4. Apply a filter like Baxter-King filter or the Hodrick-Prescott Filter to remove the moving average trend lines or the cyclical components.
 
+
 ## How to deseasonalize a time series?
 
-There are multiple approaches to deseasonalize a time series:
+There are several approaches to deseasonalize a time series:
 
 1. Take a moving average with length as the seasonal window which will smoothen the series in the process.
 
-2. Seasonal difference the series (subtract the value of previous season from the current value)
+2. Seasonal difference the series (subtract the value of previous season from the current value).
 
-3. Divide the series by the seasonal index obtained from STL decomposition
+3. Divide the series by the seasonal index obtained from STL decomposition.
 
-If dividing by the seasonal index does not work well, try taking a log of the series and then do the deseasonalizing. 
+If dividing by the seasonal index does not work well, try taking a log of the series and then perform deseasonalizing. 
 
-You can later restore to the original scale by taking an exponential.
+We can later restore to the original scale by applying an exponential.
 
 
 ## How to test for seasonality of a time series?
 
-The common method to test for seasonality is to plot the series and check for repeatable patterns in a fixed time interval (hourly, daily, weekly, monthly, yearly)
+The most common method to test for seasonality is to plot the series and check for repeatable patterns in a fixed time interval (hourly, daily, weekly, monthly, yearly)
 
-If you want a more definitive inspection of the seasonality, use the Autocorrelation Function (ACF) plot. 
+If we want a more definitive inspection of the seasonality, we can use the autocorrelation function (ACF) plot. 
 
 
 ## How to treat missing values in a time series?
 
-Sometimes your time series will have missing dates/times which means the data was not captured or was not available for those periods. 
+Sometimes a time series will have missing dates/times which means the data was not captured or was not available for those periods. 
 
-It could be that the measurement was zero on those days in which case you may fill up those periods with zero.
+It could be that the measurement was zero on those days in which case we can replace those values with zero.
 
-When it comes to time series, you should typically NOT replace missing values with the mean of the series, especially if the series is not stationary. 
+When working with time series, we should usually NOT replace missing values with the mean of the series, especially if the series is non-stationary. 
 
-What you could do instead for a quick and dirty workaround is to _forward-fill_ the previous value.
+What we could do instead for a quick and dirty workaround is to _forward-fill_ the previous value.
 
-However, depending on the nature of the series, you want to try out multiple approaches before concluding. 
+However, depending on the nature of the series, we may want to try multiple approaches before choosing. 
 
 Some effective alternatives to imputation are:
 
@@ -221,16 +239,16 @@ Some effective alternatives to imputation are:
 - Mean of nearest neighbors
 - Mean of seasonal couterparts
 
-To measure the imputation performance, we can manually introduce missing values to the time series, impute it with above approaches, and then measure the mean squared error of the imputed against the actual values.
+To measure the imputation performance, we can manually introduce missing values to the time series, impute the value with above approaches, and then measure the mean squared error of the imputed versus the actual values.
 
 
 ## What is autocorrelation and partial autocorrelation functions?
 
-Autocorrelation is simply the correlation of a series with its own lags. 
+_Autocorrelation_ is the correlation of a series with its own lags. 
 
 If a series is significantly autocorrelated, the previous values of the series (lags) may be helpful in predicting the current value.
 
-Partial Autocorrelation also conveys similar information but it conveys the pure correlation of a series and its lag, excluding the correlation contributions from the intermediate lags.
+Partial Autocorrelation also conveys similar information but conveys the pure correlation of a series and its lag, excluding the correlation contributions from the intermediate lags.
 
 ### How to compute partial autocorrelation function?
 
@@ -239,6 +257,7 @@ The partial autocorrelation of lag (k) of a series is the coefficient of that la
 The autoregressive equation of Y is the linear regression of Y with its own lags as predictors.
 
 Example: if Y_t is the current series and Y_t-1 is the lag 1 of Y, the partial autocorrelation of lag 3 (Y_t-3) is the coefficient alpha_3 of Y_t-3 in the following equation:
+
 
 ## Lag Plots
 
@@ -255,30 +274,29 @@ The more regular and repeatable patterns a time series has, the easier it is to 
 
 The **approximate entropy** can be used to quantify the regularity and unpredictability of fluctuations in a time series.
 
-The higher the approximate entropy, the more difficult it is to forecast it.
+The higher the approximate entropy, the more difficult it is to forecast the time series.
 
-**Sample Entropy** is similar to approximate entropy but is more consistent in estimating the complexity even for smaller time series. 
+Thw **sample entropy** is similar to approximate entropy but is more consistent in estimating the complexity even for smaller time series. 
 
 For example, a random time series with fewer data points can have a lower approximate entropy than a more regular time series whereas a longer random time series will have a higher approximate entropy.
 
-Thus, sample entropy is a better alternative to approximate entropy
+Thus, sample entropy is a better alternative to approximate entropy.
 
 
 ## Why and How to smoothen a time series?
 
 Smoothening of a time series may be useful:
 
-- To reduce the effect of noise in a signal get a fair approximation of the noise-filtered series.
+- To reduce the effect of noise in a signal and get a fair approximation of the noise-filtered series.
 
-- The smoothed version of series can be used as a feature to explain the original series itself.
+- The smoothed version of the series can be used as a feature to explain the original series.
+
 - Visualize the underlying trend better
 
 Ways to smoothen a series:
 
   1. Take a moving average
-
   2. Do a LOESS smoothing (Localized Regression)
-
   3. Do a LOWESS smoothing (Locally Weighted Regression)
 
   
