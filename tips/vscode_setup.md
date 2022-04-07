@@ -1,4 +1,4 @@
-# Visual Studio Code Flutter Setup
+# Visual Studio Code Setup
 
 ## VS Code Extensions
 
