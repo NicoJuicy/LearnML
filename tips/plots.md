@@ -2,32 +2,32 @@
 
 <!-- MarkdownTOC -->
 
-- Bokeh and Cufflinks
-  - Import the Dataset
-  - Plotting using Pandas
-  - Plotting using Pandas-Bokeh
-  - Plotting using Cufflinks
-- Seaborn
-  - Import Dataset
-  - Line Plot
-- Seaborn Tips
-  - Changing the Font Size in Seaborn
-- Plotting Multiple Graphs
-  - Import libraries
-  - Load datasets
-  - plt.subplots\(\)
-  - plt.subplot\(\)
-  - Comparison between plt.subplots\(\) and plt.subplot\(\)
-  - plt.tight_layout\(\)
-  - Set title for Figure
+- Plotting Multiple Graphs in Matplotlib
+    - Import libraries
+    - Load datasets
+    - plt.subplots\(\)
+    - plt.subplot\(\)
+    - Comparison between plt.subplots\(\) and plt.subplot\(\)
+    - plt.tight_layout\(\)
+    - Set title for Figure
 - How to Customize Matplotlib Plots
-  - How To Label The Values Plots With Matplotlib
+    - How To Label The Values Plots With Matplotlib
+- Seaborn
+    - Import Dataset
+    - Line Plot
+- Seaborn Tips
+    - Changing the Font Size in Seaborn
+- Bokeh and Cufflinks
+    - Import the Dataset
+    - Plotting using Pandas
+    - Plotting using Pandas-Bokeh
+    - Plotting using Cufflinks
 - plotnine
 - Data Visualization Packages
-  - AutoViz
-  - Missingno
-  - Yellowbricks
-  - Mito
+    - AutoViz
+    - Missingno
+    - Yellowbricks
+    - Mito
 - Choosing Graphs
 - Trees and Graphs
 - References
@@ -38,78 +38,133 @@
 Matplolib is the basis of image visualization in Python but there are other alternatives such as seaborn and plotly (which is browser-based).
 
 
-## Bokeh and Cufflinks
+## Plotting Multiple Graphs in Matplotlib
 
-In this section, we discuss two visualization libraries  `pandas_bokeh` and `cufflinks` to create plotly and bokeh charts using the basic pandas plotting syntax. 
-
-### Import the Dataset
+### Import libraries
 
 ```py
-  # Reading in the data
-  df = pd.read_csv('NIFTY_data_2020.csv',parse_dates=["Date"],index_col='Date')
+    import seaborn as sns # v0.11.2
+    import matplotlib.pyplot as plt # v3.4.2
 
-  # resample/aggregate the data by month-end
-  df_resample = nifty_data.resample(rule = 'M').mean()
+    sns.set(style='darkgrid', context='talk', palette='rainbow')
 ```
 
-### Plotting using Pandas
-
-TODO: add some notes
-
-
-### Plotting using Pandas-Bokeh
+### Load datasets
 
 ```py
-  import pandas as pd
-  import pandas_bokeh as pb
-  
-  # embedding plots in Jupyter Notebooks
-  pb.output_notebook() 
-  
-  # export plots as HTML
-  pb.output_file(filename) 
+    # Load data using pandas
+    nifty_data = pd.read_csv('NIFTY_data_2020.csv', parse_dates=["Date"], index_col='Date')
+    nifty_data.head()
+
+    # Load data using seaborn
+    df = sns.load_dataset('tips')
+    df.head()
 ```
+
+### plt.subplots()
+
+One way to plot multiple subplots is to use `plt.subplots()`. 
 
 ```py
-  df.plot_bokeh(kind='line')
-  df.plot_bokeh.line()  # same thing
-  
-  # scatter plot
-  df.plot_bokeh.scatter(x='NIFTY FMCG index', y='NIFTY Bank index')
-  
-  # histogram
-  df[['NIFTY FMCG index','NIFTY Bank index']].plot_bokeh(kind='hist', bins=30)
+    fig, ax = plt.subplots(1, 2, figsize=(10,4))
+    sns.histplot(data=df, x='tip', ax=ax[0])
+    sns.boxplot(data=df, x='tip', ax=ax[1])
 
-  # bar plot df_resample.plot_bokeh(kind='bar',figsize=(10,6))
+    # Set title for subplots
+    ax[0].set_title("Histogram")
+    ax[1].set_title("Boxplot")
 ```
 
-
-### Plotting using Cufflinks
-
-Cufflinks is an independent third-party wrapper library around Plotly that is more versatile, has more features, and has an API similar to pandas plotting. 
+Visualize the same set of graphs for all numerical variables in a loop:
 
 ```py
-import pandas as pd
-import cufflinks as cf
-
-# making all charts public and setting a global theme
-from IPython.display import display,HTML
-
-cf.set_config_file(sharing='public',theme='white',offline=True)
+    numerical = df.select_dtypes('number').columns
+    for col in numerical:
+        fig, ax = plt.subplots(1, 2, figsize=(10,4))
+        sns.histplot(data=df, x=col, ax=ax[0])
+        sns.boxplot(data=df, x=col, ax=ax[1])
 ```
+
+### plt.subplot()
+
+Another way to visualise multiple graphs is to use `plt.subplot()`.
 
 ```py
-  df.iplot(kind='line')
-  
-  # scatter plot
-  df.iplot(kind='scatter',x='NIFTY FMCG index', y='NIFTY Bank index',mode='markers')
-  
-  # histogram
-  df[['NIFTY FMCG index','NIFTY Bank index']].iplot(kind='hist', bins=30)
-  
-  # bar plot
-  df_resample.iplot(kind='bar')
+    plt.figure(figsize=(10,4))
+    ax1 = plt.subplot(1,2,1)
+    sns.histplot(data=df, x='tip', ax=ax1)
+    ax2 = plt.subplot(1,2,2)
+    sns.boxplot(data=df, x='tip', ax=ax2)
 ```
+
+Visualize the same set of graphs for all numerical variables in a loop:
+
+```py
+    plt.figure(figsize=(14,4))
+    for i, col in enumerate(numerical):
+        ax = plt.subplot(1, len(numerical), i+1)
+        sns.boxplot(data=df, x=col, ax=ax) 
+        ax.set_title(f"Boxplot of {col}")
+```
+
+### Comparison between plt.subplots() and plt.subplot()
+
+<img width=600 src="https://miro.medium.com/max/1206/1*TH6KO5j_pKHV30MWzCS3lg.png" />
+
+
+### plt.tight_layout()
+
+When plotting multiple graphs, it is common to see labels of some subplots overlapping on their neighbour subplots:
+
+```py
+    categorical = df.select_dtypes('category').columns
+    plt.figure(figsize=(8, 8))
+    for i, col in enumerate(categorical):
+        ax = plt.subplot(2, 2, i+1)
+        sns.countplot(data=df, x=col, ax=ax)
+
+    # Fix overlap
+    plt.tight_layout()
+```
+
+### Set title for Figure
+
+```py
+    plt.figure(figsize=(8, 8))
+    for i, col in enumerate(categorical):
+        ax = plt.subplot(2, 2, i+1)
+        sns.countplot(data=df, x=col, ax=ax) 
+
+    # Set title for figure
+    plt.suptitle('Category counts for all categorical variables')
+
+    plt.tight_layout()
+```
+
+
+## How to Customize Matplotlib Plots
+
+[Coloring Matplotlib Plots](https://towardsdatascience.com/coloring-matplotlib-plots-32d5abb786a)
+
+[How To Label The Values of Data Points With Matplotlib](https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1?source=rss----7f60cf5620c9---4)
+
+### How To Label The Values Plots With Matplotlib
+
+```py
+    fig, ax = plt.subplots(figsize=(12,8))
+    plt.plot(x, y)
+    plt.xlabel("x values", size=12)
+    plt.ylabel("y values", size=12)
+    plt.title("Learning more about pyplot with random numbers chart", size=15)
+
+    # increase the frequency of the x and y ticks to match the actual values of x and the possible values of y
+    plt.xticks(x, size=12)
+    plt.yticks([i for i in range(20)], size=12)
+    plt.show()
+```
+
+
+----------
 
 
 ## Seaborn
@@ -119,23 +174,23 @@ cf.set_config_file(sharing='public',theme='white',offline=True)
 Here we load the stock prices of Apple, Microsoft, Google, and Moderna between the given start and end dates.
 
 ```py
-  import pandas as pd
-  import pandas_datareader as pdr
-  import seaborn as sns
-  sns.set(style="darkgrid")
-  
-  start = '2020-1-1'
-  end = '2021-6-30'
-  source = 'yahoo'
-  stocks = pd.DataFrame(columns=["Date","Close","Volume","Stock"])
-  stock_list = ["AAPL","IBM","MSFT","MRNA"]
-  for stock in stock_list:
-      df = pdr.data.DataReader(stock, start=start ,end=end, 
-                           data_source=source).reset_index()
-      df["Stock"] = stock
-      df = df[["Date","Close","Volume","Stock"]]
-      stocks = pd.concat([stocks, df], ignore_index=True)
-      stocks.head()
+    import pandas as pd
+    import pandas_datareader as pdr
+    import seaborn as sns
+    sns.set(style="darkgrid")
+
+    start = '2020-1-1'
+    end = '2021-6-30'
+    source = 'yahoo'
+    stocks = pd.DataFrame(columns=["Date","Close","Volume","Stock"])
+    stock_list = ["AAPL","IBM","MSFT","MRNA"]
+    for stock in stock_list:
+        df = pdr.data.DataReader(stock, start=start ,end=end, 
+                             data_source=source).reset_index()
+        df["Stock"] = stock
+        df = df[["Date","Close","Volume","Stock"]]
+        stocks = pd.concat([stocks, df], ignore_index=True)
+        stocks.head()
 ```
 
 ### Line Plot
@@ -145,36 +200,36 @@ We can use the relplot or lineplot functions of Seaborn to create line plots.
 The `relplot` function is a figure-level interface for drawing relational plots including line plot and scatter plot. 
 
 ```py
-  sns.relplot(
-    data=stocks[stocks.Stock == "AAPL"], 
-    x="Date", y="Close", 
-    kind="line",
-    height=5, aspect=2 
-    )
+    sns.relplot(
+      data=stocks[stocks.Stock == "AAPL"], 
+      x="Date", y="Close", 
+      kind="line",
+      height=5, aspect=2 
+      )
 
-  # increase font size of the axis titles and legend
-  sns.set(font_scale=1.5)
-  
-  # plot all stocks
-  sns.relplot(
-    data=stocks, 
-    x="Date", y="Close", hue="Stock", 
-    height=5, aspect=2, 
-    kind="line",
-    palette="cool"
-    ).set(
-      title="Stock Prices", 
-      ylabel="Closing Price",
-      xlabel=None
-    )
+    # increase font size of the axis titles and legend
+    sns.set(font_scale=1.5)
 
-  # create line plot for each stock using row and/or col
-  sns.relplot(
-    data=stocks, x="Date", y="Close", 
-    row="Stock",
-    height=3, aspect=3.5,
-    kind="line"
-    )
+    # plot all stocks
+    sns.relplot(
+      data=stocks, 
+      x="Date", y="Close", hue="Stock", 
+      height=5, aspect=2, 
+      kind="line",
+      palette="cool"
+      ).set(
+        title="Stock Prices", 
+        ylabel="Closing Price",
+        xlabel=None
+      )
+
+    # create line plot for each stock using row and/or col
+    sns.relplot(
+      data=stocks, x="Date", y="Close", 
+      row="Stock",
+      height=3, aspect=3.5,
+      kind="line"
+      )
 ```
 
 
@@ -208,131 +263,81 @@ Seaborn allows for creating the common plots with just 3 functions:
 - Catplot: Used for creating categorical plots
 
 
+----------
 
-## Plotting Multiple Graphs
 
-### Import libraries
+
+## Bokeh and Cufflinks
+
+In this section, we discuss two visualization libraries  `pandas_bokeh` and `cufflinks` to create plotly and bokeh charts using the basic pandas plotting syntax. 
+
+### Import the Dataset
 
 ```py
-  import seaborn as sns # v0.11.2
-  import matplotlib.pyplot as plt # v3.4.2
-  
-  sns.set(style='darkgrid', context='talk', palette='rainbow')
+    # Reading in the data
+    df = pd.read_csv('NIFTY_data_2020.csv',parse_dates=["Date"],index_col='Date')
+
+    # resample/aggregate the data by month-end
+    df_resample = nifty_data.resample(rule = 'M').mean()
 ```
 
-### Load datasets
+### Plotting using Pandas
+
+TODO: add some notes
+
+
+### Plotting using Pandas-Bokeh
 
 ```py
-  # Load data using pandas
-  nifty_data = pd.read_csv('NIFTY_data_2020.csv', parse_dates=["Date"], index_col='Date')
-  nifty_data.head()
+    import pandas as pd
+    import pandas_bokeh as pb
 
-  # Load data using seaborn
-  df = sns.load_dataset('tips')
-  df.head()
+    # embedding plots in Jupyter Notebooks
+    pb.output_notebook() 
+
+    # export plots as HTML
+    pb.output_file(filename) 
 ```
 
-### plt.subplots()
-
-One way to plot multiple subplots is to use `plt.subplots()`. 
-
 ```py
-  fig, ax = plt.subplots(1, 2, figsize=(10,4))
-  sns.histplot(data=df, x='tip', ax=ax[0])
-  sns.boxplot(data=df, x='tip', ax=ax[1])
+    df.plot_bokeh(kind='line')
+    df.plot_bokeh.line()  # same thing
+    
+    # scatter plot
+    df.plot_bokeh.scatter(x='NIFTY FMCG index', y='NIFTY Bank index')
+    
+    # histogram
+    df[['NIFTY FMCG index','NIFTY Bank index']].plot_bokeh(kind='hist', bins=30)
 
-  # Set title for subplots
-  ax[0].set_title("Histogram")
-  ax[1].set_title("Boxplot")
-```
-
-Visualize the same set of graphs for all numerical variables in a loop:
-
-```py
-  numerical = df.select_dtypes('number').columns
-  for col in numerical:
-      fig, ax = plt.subplots(1, 2, figsize=(10,4))
-      sns.histplot(data=df, x=col, ax=ax[0])
-      sns.boxplot(data=df, x=col, ax=ax[1])
-```
-
-### plt.subplot()
-
-Another way to visualise multiple graphs is to use `plt.subplot()`.
-
-```py
-  plt.figure(figsize=(10,4))
-  ax1 = plt.subplot(1,2,1)
-  sns.histplot(data=df, x='tip', ax=ax1)
-  ax2 = plt.subplot(1,2,2)
-  sns.boxplot(data=df, x='tip', ax=ax2)
-```
-
-Visualize the same set of graphs for all numerical variables in a loop:
-
-```py
-  plt.figure(figsize=(14,4))
-  for i, col in enumerate(numerical):
-      ax = plt.subplot(1, len(numerical), i+1)
-      sns.boxplot(data=df, x=col, ax=ax) 
-      ax.set_title(f"Boxplot of {col}")
-```
-
-### Comparison between plt.subplots() and plt.subplot()
-
-<img width=600 src="https://miro.medium.com/max/1206/1*TH6KO5j_pKHV30MWzCS3lg.png" />
-
-
-### plt.tight_layout()
-
-When plotting multiple graphs, it is common to see labels of some subplots overlapping on their neighbour subplots:
-
-```py
-  categorical = df.select_dtypes('category').columns
-  plt.figure(figsize=(8, 8))
-  for i, col in enumerate(categorical):
-      ax = plt.subplot(2, 2, i+1)
-      sns.countplot(data=df, x=col, ax=ax)
-
-  # Fix overlap
-  plt.tight_layout()
-```
-
-### Set title for Figure
-
-```py
-  plt.figure(figsize=(8, 8))
-  for i, col in enumerate(categorical):
-      ax = plt.subplot(2, 2, i+1)
-      sns.countplot(data=df, x=col, ax=ax) 
-
-  # Set title for figure
-  plt.suptitle('Category counts for all categorical variables')
-
-  plt.tight_layout()
+    # bar plot df_resample.plot_bokeh(kind='bar',figsize=(10,6))
 ```
 
 
+### Plotting using Cufflinks
 
-## How to Customize Matplotlib Plots
-
-[Coloring Matplotlib Plots](https://towardsdatascience.com/coloring-matplotlib-plots-32d5abb786a)
-
-[How To Label The Values of Data Points With Matplotlib](https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1?source=rss----7f60cf5620c9---4)
-
-### How To Label The Values Plots With Matplotlib
+Cufflinks is an independent third-party wrapper library around Plotly that is more versatile, has more features, and has an API similar to pandas plotting. 
 
 ```py
-  fig, ax = plt.subplots(figsize=(12,8))
-  plt.plot(x, y)
-  plt.xlabel("x values", size=12)
-  plt.ylabel("y values", size=12)
-  plt.title("Learning more about pyplot with random numbers chart", size=15)
+    import pandas as pd
+    import cufflinks as cf
 
-  # increase the frequency of the x and y ticks to match the actual values of x and the possible values of y
-  plt.xticks(x, size=12)
-  plt.yticks([i for i in range(20)], size=12)
-  plt.show()
+    # making all charts public and setting a global theme
+    from IPython.display import display,HTML
+
+    cf.set_config_file(sharing='public',theme='white',offline=True)
+```
+
+```py
+    df.iplot(kind='line')
+
+    # scatter plot
+    df.iplot(kind='scatter',x='NIFTY FMCG index', y='NIFTY Bank index',mode='markers')
+
+    # histogram
+    df[['NIFTY FMCG index','NIFTY Bank index']].iplot(kind='hist', bins=30)
+
+    # bar plot
+    df_resample.iplot(kind='bar')
 ```
 
 
@@ -349,7 +354,9 @@ plotnine is the implementation of the R package ggplot2 in Python.
 [ggplot (plotnine) in action!](https://medium.com/geekculture/ggplot-in-action-7008f304bee1)
 
 
+
 ---------
+
 
 
 ## Data Visualization Packages
@@ -406,9 +413,9 @@ DSPlot is a Python package that draws and renders images of data structures.
 
 [7 Examples to Master Line Plots With Python Seaborn](https://towardsdatascience.com/7-examples-to-master-line-plots-with-python-seaborn-42d8aaa383a9?gi=9da22d442565)
 
-[The Easiest Way to Make Beautiful Interactive Visualizations With Pandas using Cufflinks](https://towardsdatascience.com/the-easiest-way-to-make-beautiful-interactive-visualizations-with-pandas-cdf6d5e91757)
-
 [4 simple tips for plotting multiple graphs in Python](https://towardsdatascience.com/4-simple-tips-for-plotting-multiple-graphs-in-python-38df2112965c)
+
+[The Easiest Way to Make Beautiful Interactive Visualizations With Pandas using Cufflinks](https://towardsdatascience.com/the-easiest-way-to-make-beautiful-interactive-visualizations-with-pandas-cdf6d5e91757)
 
 
 [Top 3 Visualization Python Packages to Help Your Data Science Activities](https://towardsdatascience.com/top-3-visualization-python-packages-to-help-your-data-science-activities-168e22178e53)
