@@ -1,12 +1,22 @@
 # Python Code Snippets
 
-<!-- MarkdownTOC -->
+<!-- MarkdownTOC levels=1,2,3 -->
 
 - Show samples from each class
 - Display multiple images in one figure
 - Plot images side by side
 - Visualize a batch of image data
-- Decorators
+- The Decorator Pattern
+    - @staticmethod
+    - @classmethod
+    - @property
+- Decorator Code Snippets
+    - Timer
+    - Measure Function Performance
+    - Repeat
+    - Show prompt
+    - Try/Catch
+- Python one-liners
 - Utility Classes
 - References
 
@@ -125,9 +135,145 @@
 
 TODO: Add code sample
 
+----------
+
+## The Decorator Pattern
+
+### @staticmethod
+
+A static method is a method that does not require the creation of an instance of a class. 
+
+```py
+    class Cellphone:
+        def __init__(self, brand, number):
+            self.brand = brand
+            self.number = number
+            
+        def get_number(self):
+            return self.number
+          
+        @staticmethod
+        def get_emergency_number():
+            return "911"
+          
+    Cellphone.get_emergency_number()
+    # '911'
+```
+
+### @classmethod
+
+A class method requires the class itself as the first argument which is written as cls. 
+
+A class method normally works as a factory method and returns an instance of the class with supplied arguments. However, it does not have to work as a factory class and return an instance.
+
+We can create an instance in the class method and do whatever you need without having to return it.
+
+Class methods are very commonly used in third-party libraries.
+
+Here, it is a factory method here and returns an instance of the Cellphone class with the brand preset to “Apple”.
+
+```py
+    class Cellphone:
+        def __init__(self, brand, number):
+            self.brand = brand
+            self.number = number
+            
+        def get_number(self):
+            return self.number
+          
+        @staticmethod
+        def get_emergency_number():
+            return "911"
+          
+        @classmethod
+        def iphone(cls, number):
+            _iphone = cls("Apple", number)
+            print("An iPhone is created.")
+            return _iphone
+         
+    iphone = Cellphone.iphone("1112223333")
+    # An iPhone is created.
+    iphone.get_number()
+    # "1112223333"
+    iphone.get_emergency_number()
+    # "911"
+```
+
+If you use class methods properly, you can reduce code redundancy dramatically and make your code more readable and more professional. 
+
+The key idea is that we can create an instance of the class based on some specific arguments in a class method, so we do not have to repeatedly create instances in other places (DRY).
 
 
-## Decorators
+### @property
+
+In the code snippet above, there is a function called `get_number` which returns the number of a Cellphone instance. 
+
+We can optimize the method a bit and return a formatted phone number.
+
+
+In Python, we can also use getter and setter to easily manage the attributes of the class instances.
+
+
+```py
+    class Cellphone:
+        def __init__(self, brand, number):
+            self.brand = brand
+            self.number = number
+            
+        @property
+        def number(self):
+            _number = "-".join([self._number[:3], self._number[3:6],self._number[6:]])
+            return _number
+        
+        @number.setter
+        def number(self, number):
+            if len(number) != 10:
+                raise ValueError("Invalid phone number.")
+            self._number = number
+
+    cellphone = Cellphone("Samsung", "1112223333")
+    print(cellphone.number)
+    # 111-222-3333
+
+    cellphone.number = "123"
+    # ValueError: Invalid phone number.
+```
+
+
+Here is the complete example using the three decorators in Python: `@staticmethod`, `@classmethod`, and `@property`:
+
+```py
+    class Cellphone:
+        def __init__(self, brand, number):
+            self.brand = brand
+            self.number = number
+            
+        @property
+        def number(self):
+            _number = "-".join([self._number[:3], self._number[3:6],self._number[6:]])
+            return _number
+
+        @number.setter
+        def number(self, number):
+            if len(number) != 10:
+                raise ValueError("Invalid phone number.")
+            self._number = number
+        
+        @staticmethod
+        def get_emergency_number():
+            return "911"
+        
+        @classmethod
+        def iphone(cls, number):
+            _iphone = cls("Apple", number)
+            print("An iPhone is created.")
+            return _iphone
+```
+
+
+## Decorator Code Snippets
+
+### Timer
 
 ```py
     def timer(func):
@@ -159,6 +305,7 @@ TODO: Add code sample
           return isprime
 ```
 
+### Measure Function Performance
 
 ```py
     def performance_check(func):
@@ -189,6 +336,7 @@ TODO: Add code sample
         # ....rest of the function
 ```
 
+### Repeat
 
 ```py
     def repeater(iterations:int=1):
@@ -209,6 +357,7 @@ TODO: Add code sample
       print("hello")
 ```
 
+### Show prompt
 
 ```py
     def prompt_sure(prompt_text:str):
@@ -228,6 +377,7 @@ TODO: Add code sample
       print("hi")
 ```
 
+### Try/Catch
 
 ```py
     def trycatch(func):
@@ -247,6 +397,46 @@ TODO: Add code sample
     def trycatchExample(numA:float, numB:float):
       return numA / numB
 ```
+
+
+----------
+
+
+## Python one-liners
+
+```py
+    # Palindrome Python One-Liner
+    phrase.find(phrase[::-1])
+
+    # Swap Two Variables Python One-Liner
+     a, b = b, a
+
+    # Sum Over Every Other Value Python One-Liner
+     sum(stock_prices[::2])
+
+    # Read File Python One-Liner
+     [line.strip() for line in open(filename)]
+
+    # Factorial Python One-Liner
+     reduce(lambda x, y: x * y, range(1, n+1))
+
+    # Performance Profiling Python One-Liner
+     python -m cProfile foo.py
+
+    # Superset Python One-Liner
+     lambda l: reduce(lambda z, x: z + [y + [x] for y in z], l, [[]])
+
+    # Fibonacci Python One-Liner
+     lambda x: x if x<=1 else fib(x-1) + fib(x-2)
+
+    # Quicksort Python One-liner
+     lambda L: [] if L==[] else qsort([x for x in L[1:] if x< L[0]]) + L[0:1] + qsort([x for x in L[1:] if x>=L[0]])
+
+    # Sieve of Eratosthenes Python One-liner
+    reduce( (lambda r,x: r-set(range(x**2,n,x)) if (x in r) else r), range(2,int(n**0.5)), set(range(2,n)))
+```
+
+---------
 
 
 ## Utility Classes
@@ -298,8 +488,9 @@ TODO: Add code sample
     Student(name='John', gender='M')
 ```
 
-"""
-# References
+
+
+## References
 
 [4 simple tips for plotting multiple graphs in Python](https://towardsdatascience.com/4-simple-tips-for-plotting-multiple-graphs-in-python-38df2112965c)
 
@@ -307,5 +498,9 @@ TODO: Add code sample
 
 [3 Alternatives for Regular Custom Classes in Python](https://betterprogramming.pub/3-alternatives-for-regular-custom-classes-in-python-2f2bafd66338)
 
+[How to Use the Magical @staticmethod, @classmethod, and @property Decorators in Python](https://betterprogramming.pub/how-to-use-the-magical-staticmethod-classmethod-and-property-decorators-in-python-e42dd74e51e7?gi=8734ec8451fb)
+
+[Learn Python By Example: 10 Python One-Liners That Will Help You Save Time](https://medium.com/@alains/learn-python-by-example-10-python-one-liners-that-will-help-you-save-time-ccc4cabb9c68)
+
+
 [6 Must-Know Methods in Python’s Random Module](https://medium.com/geekculture/6-must-know-methods-in-pythons-random-module-338263b5f927)
-"""
