@@ -87,7 +87,6 @@ Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. Design Patterns: E
 [Data Mesh Observability Pattern](https://towardsdatascience.com/data-mesh-observability-pattern-467438627572)
 
 
-
 [Design Patterns in Machine Learning for MLOps](https://towardsdatascience.com/design-patterns-in-machine-learning-for-mlops-a3f63f745ce4)
 
 [How (not) to do MLOps](https://towardsdatascience.com/how-not-to-do-mlops-96244a21c35e)
