@@ -9,10 +9,11 @@
     - Correct inconsistencies
     - Handle errors in variables
 - Data Cleaning
-    - Check data types
-    - Handle missing values
-    - Handle duplicate values
+    - Check Data Types
+    - Handle Missing Values
+    - Handle Duplicate Values
     - Handle Outliers
+    - Remove Outliers
 - Encoding Categorical Features
     - Integer \(Ordinal\) Encoding
     - Encoding Class Labels
@@ -157,7 +158,7 @@ Data cleaning also includes the following [2]:
 6. Character encodings
 7. Inconsistent Data Entry
 
-### Check data types
+### Check Data Types
 
 ```py
   df.info()
@@ -178,7 +179,7 @@ Data cleaning also includes the following [2]:
             df[column] = pd.to_numeric(df[column])
 ```
 
-### Handle missing values
+### Handle Missing Values
 
 The removal of samples or dropping of feature columns may not feasible because we might lose too much valuable data. 
 
@@ -215,6 +216,37 @@ We can drop or fill the `NaN` values.
 ```
 
 ```py
+    # check for nan/null
+    df.isnull().values.any()
+
+    # count of nulls per column
+    df.isnull().sum()
+
+    # Drop NULL values
+    df.dropna(inplace=True)
+
+
+    # Find and verify missing values
+    np.where(pd.isnull(df))
+    df.iloc[296, 12]
+
+    # replace missing values
+    df.replace(np.nan, 0)
+    
+    # count of unique values
+    df.nunique()
+    
+    # change null to 0 
+    df5.loc[df5['column1'].isnull(),   'column1'] = 0
+    
+    # change nan to 0 
+    df['column1'] = df['column1'].fillna(0)
+
+    # drop rows where all columns are missing/NaN
+    df.dropna(axis=0, how="any", inplace=True)   
+```
+
+```py
     # We can delete specific columns by passing a list
     df.dropna(subset=['City', 'Shape Reported'], how='all')
 
@@ -226,7 +258,7 @@ We can drop or fill the `NaN` values.
     df['Shape Reported'].value_counts(dropna=False)
 ```
 
-### Handle duplicate values
+### Handle Duplicate Values
 
 ```py
     # We can show if there are duplicates in specific column 
@@ -257,6 +289,16 @@ We can drop or fill the `NaN` values.
     date_set = np.unique(date)
 ``` 
 
+```py
+    # check for duplicate values
+    df.duplicated()
+
+    # Remove duplicates
+    df.drop_duplicates(subset=['PersonId', 'RecordDate'], keep='last')
+
+    # Drop duplicate column
+    df_X.drop(['TEST1', 'TEST2'], axis=1)
+```
 
 ### Handle Outliers
 
@@ -283,6 +325,47 @@ We can drop or fill the `NaN` values.
 
     # display
     print(df.head(20))
+```
+
+```py
+    def get_outliers(df):
+        """
+        Identify the number of outliers +/- 3 standard deviations. 
+        Pass this function a data frame and it returns a dictionary. 
+        The 68–95–99.7 rule states that 99.7% of all data in a normal 
+        distribution lies within three standard deviations of the mean. 
+        When your data is highly left or right-skewed, this will not be true. 
+        """
+        outs = {}
+
+        df = df.select_dtypes(include=['int64'])
+
+        for col in df.columns:
+            # calculate summary statistics
+            data_mean, data_std = np.mean(df[col]), np.std(df[col])
+
+            # identify outliers
+            cut_off = data_std * 3
+            lower, upper = data_mean - cut_off, data_mean + cut_off
+
+            # identify outliers
+            outliers = [x for x in df[col] if x < lower or x > upper]
+
+            outs[col] = len(outliers)
+
+            return outs
+```
+
+### Remove Outliers
+
+```py
+    from scipy import stats
+
+    # build a list of columns that you wish to remove ouliers from
+    out_list = ['balance', 'pdays', 'duration']
+
+    # overwrite the dataframe with outlier rows removed.
+    df = df[((np.abs(stats.zscore(df[out_list])) < 3)).all(axis=1)]
 ```
 
 
