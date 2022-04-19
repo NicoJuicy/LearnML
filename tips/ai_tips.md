@@ -4,7 +4,6 @@
 
 - ML Tips
 - ML Problem Solving
-- Code Snippets
 - Resources
 - Robotics
 - MLOps
