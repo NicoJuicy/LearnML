@@ -1,7 +1,8 @@
 # Machine Learning Algorithms
 
-<!-- MarkdownTOC -->
+<!-- MarkdownTOC levels=1,2,3 -->
 
+- Background
 - Categories of ML Algorithms
 - Overview of Machine Learning Algorithms
 - Machine Learning Techniques
@@ -16,7 +17,6 @@
     - Instance-based Algorithms
     - Decision Tree Algorithms
     - Bayesian Algorithms
-        - Problems with Bayesian Networks
     - Clustering Algorithms
     - Association Rule Learning Algorithms
     - Artificial Neural Network Algorithms
@@ -25,7 +25,7 @@
     - Principal Component Analysis \(PCA\)
     - Ensemble Algorithms
     - Decision Trees
-- Pros and Cons
+- Regression Algorithms Pros and Cons
 - Examples of Algorithm Lists To Create
 - Tips for Creating Algorithm List
 - Orange Algorithm List
@@ -38,6 +38,7 @@
 
 <!-- /MarkdownTOC -->
 
+## Background
 
 [Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
 
@@ -60,8 +61,7 @@ Here is how to get started with machine learning algorithms:
 **Step 3:** Discover how top machine learning algorithms work.
 
 - Machine Learning Algorithms Mini-Course
-- Master Machine Learning Algorithms (my book)
-
+- Master Machine Learning Algorithms
 
 
 ----------
@@ -410,10 +410,10 @@ Gradient boosting involves the creation and addition of decision trees sequentia
 
 This raises the question as to how many trees (weak learners or estimators) to configure in your gradient boosting model and how big each tree should be
 
+[Decision Trees vs Random Forest](https://medium.com/mlearning-ai/decision-trees-vs-random-forest-c0fcabb757f2)
 
-## Pros and Cons
 
-[A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9?source=rss----7f60cf5620c9---4)
+## Regression Algorithms Pros and Cons
 
 There are many regression algorithms you should know and try when working on a real-world problem. 
 
@@ -501,8 +501,12 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 
 [1] [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
-[Clustering with K-Means: simple yet powerful](https://medium.com/@alexandre.hsd/everything-you-need-to-know-about-clustering-with-k-means-722f743ef1c4)
+[2] [Clustering with K-Means: simple yet powerful](https://medium.com/@alexandre.hsd/everything-you-need-to-know-about-clustering-with-k-means-722f743ef1c4)
 
+[3] [A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9?source=rss----7f60cf5620c9---4)
+
+
+[Comprehensive Guide to Decision Tree Learning for Classification](https://therised.medium.com/comprehensive-guide-to-decision-tree-learning-for-classification-61bf2c510c6b)
 
 [Stop using the Elbow Method](https://medium.com/geekculture/stop-using-the-elbow-method-96bcfbbbe9fd)
 
