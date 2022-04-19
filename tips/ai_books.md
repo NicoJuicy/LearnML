@@ -85,11 +85,12 @@ M. Howard and D. LeBlanc, Writing Secure Code, 2nd ed., Microsoft Press Press, I
 
 ## Textbooks
 
-W. McKinney, Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython, 2nd ed., O’Reilly Media, ISBN: 978-1491957660, 2017.
+E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.
 
 S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 978-0-13-604259-4, 2021.
 
-E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.
+
+W. McKinney, Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython, 2nd ed., O’Reilly Media, ISBN: 978-1491957660, 2017.
 
 S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 978-1787125933, 2017.
 
@@ -97,6 +98,8 @@ S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Ana
 
 D. Jurafsky and J. H. Martin, 2nd edition. Speech and Language Processing. Prentice Hall, ISBN: 978-0131873216, 2008. Available online: https://web.stanford.edu/~jurafsky/slp3/
 
+
+R. L. Glass, Facts and Fallacies of Software Engineering, Addison-Wesley Professional, 1st ed., ISBN: 0321117425, 2002.
 
 B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Planning and Control, London: Springer, ISBN: 978-1-84628-641-4, 2010.
 
