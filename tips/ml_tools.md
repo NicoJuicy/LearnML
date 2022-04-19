@@ -7,15 +7,19 @@
 - Data Exploration Tools
 - ML Libraries
 - Computer Vision
-- Natural Language Programming
 - Feature Engineering Tools
-- Pretrained Models
+- Pretrained Model Libraries
 - Python Libraries
 - Plots and Graphs
 - Deep Learning Tools
-- Linux Utilities
 - Time Series
 - Audio
+- Browser Extensions for Web Developers
+- Websites for Developers
+- CSS Websites for Developers
+- JetBrains Plugins
+- Linux Utilities
+- Multipass
 - References
 
 <!-- /MarkdownTOC -->
@@ -129,25 +133,6 @@ The openpilot repo is an open-source driver assistance system that performs the 
 However, you will need to buy their product and install it on your car and it is not completely DIY but reduces the effort.
 
 
-
-## Natural Language Programming
-
-- Polyglot
-- SpaCy
-- GenSim
-- Pattern
-- clean-text
-
-### [NLTK](https://www.nltk.org)
-
-[NLTK Book](https://www.nltk.org/book/)
-
-Natural language toolkit (NLTK) is by far the most popular platform for building NLP related projects.
-
-NLTK is also an open-source library and is available for almost every kind of operating system. 
-
-
-
 ## Feature Engineering Tools
 
 There are many tools that will help you in automating the entire feature engineering process and producing a large pool of features in a short period of time for both classification and regression tasks.
@@ -162,7 +147,7 @@ There are many tools that will help you in automating the entire feature enginee
 
 
 
-## Pretrained Models
+## Pretrained Model Libraries
 
 [Model Zoo](https://modelzoo.co/)
 
@@ -175,7 +160,6 @@ There are many tools that will help you in automating the entire feature enginee
 [PyTorch Hub](https://pytorch.org/hub/)
 
 [Papers with Code](https://paperswithcode.com/)
-
 
 
 
@@ -252,9 +236,39 @@ PySpark is an interface for Apache Spark in Python. It not only allows you to wr
 
 - MXNet
 
-### [H5py](https://docs.h5py.org/en/stable/quick.html)
+### Hydra
 
-H5py can be used to store all the intermediate loss values in a dictionary mapped to appropriate key which can be loaded to be reused as a python code.
+[Hydra](https://hydra.cc/docs/intro/) is an open-source Python framework that simplifies the development of research and other complex applications. 
+
+The key feature is the ability to dynamically create a hierarchical configuration by composition and override it through config files and the command line. 
+
+The name Hydra comes from its ability to run multiple similar jobs - similar to a Hydra with multiple heads.
+
+Hydra provides a configuration file for the entire experiment. We can have different parameters to be set. It can be very helpful when we want to share our code with someone else or run the experiments on a different machine. 
+
+Hydra provides the flexibility to set the desired configurations such as learning rate, model hidden layer sizes, epochs, data set name, etc. without exposing someone to make changes to the actual code.
+
+### H5py
+
+[H5py](https://docs.h5py.org/en/stable/quick.html) can be used to store all the intermediate loss values in a dictionary mapped to appropriate key which can be loaded to be reused as a python code.
+
+### Loguru
+
+[Loguru](https://loguru.readthedocs.io/en/stable/api/logger.html) provides the functionality of a logger to log configuration, experiment name, and other training-related data which is helpful when we do multiple experiments and want to distinguish the results of different experiments. Thus, if we log the actual configuration as well as the results, then it is easier to map the appropriate setting to the outputs.
+
+### Pickle
+
+Pickle can be used to save and load the python classes or PyTorch models for reuse. We can pickle the objects and load it in future to save the time for preprocessing.
+
+### Pipreqs
+
+[Pipreqs](https://pypi.org/project/pipreqs/) is useful when we want to port our code to a different machine and install all the dependencies. It helps us in creating a list of python dependencies along with the versions that our current working code is using and save them in a file that can be easily installed anywhere else.
+
+### Tqdm
+
+When used with a loop (here we use with a loop over a torch.utils.data.DataLoader object), [Tqdm](https://tqdm.github.io/) provides a viewe of time per gradient step or epoch which can help us to set our logging frequency of different results or saving the model or get an idea to set the validation intervals.
+
+
 
 ### Tutorials
 
@@ -264,11 +278,160 @@ H5py can be used to store all the intermediate loss values in a dictionary mappe
 
 
 
+## Time Series
+
+- statsmodels
+- stumpy
+- AutoTS
+- Darts
+- TsFresh
+
+
+## Audio
+
+[AssemblyAI](https://www.assemblyai.com/)
+
+
+
+## Browser Extensions for Web Developers
+
+- Awesome Screenshots
+- Form Vault
+- JsonVue
+- Octotree
+- Site Pallette
+- Temp Email
+- User JavaScript and CSS
+- Wappalyzer
+- Web Developer Checklist
+
+
+## Websites for Developers
+
+- [Browser frame](https://browserframe.com/)
+- [Can I use](https://caniuse.com/?search=Grid)
+- [Codepen](https://codepen.io/)
+- [DevDocs](https://devdocs.io/)
+- [LambdaTest](https://www.lambdatest.com/)
+- [Meta Tags](https://metatags.io/)
+- [Peppertype](https://www.peppertype.ai/)
+- [Profile Pic Maker](https://pfpmaker.com/)
+- [Regex101](https://regex101.com/)
+- [Resume.io](https:/resume.io)
+- [Roadmap](https://roadmap.sh/)
+- [Small Dev Tools](https://smalldev.tools/)
+- [TypeScript Playground](https://www.typescriptlang.org/)
+- [Web Page Test](https://www.webpagetest.org/)
+
+
+## CSS Websites for Developers
+
+- [Animation pausing](https://waitanimate.wstone.uk/)
+- [Color Palette Generator](https://mybrandnewlogo.com/color-palette-generator)
+- [CSS Generator](https://html-css-js.com/css/generator/box-shadow/)
+- [Cubic Bezier Generator](https://cubic-bezier.com/#.17,.67,.83,.67)
+- [Gradient Generator](https://cssgradient.io/)
+- [Grid Generator](https://cssgrid-generator.netlify.app/)
+- [Hamburgers](https://jonsuh.com/hamburgers/)
+- [Layout Generator](https://layout.bradwoods.io/)
+- [Layout Patterns](https://web.dev/patterns/layout/)
+- [Responsively](https://responsively.app/)
+- [SchemeColor](https://www.schemecolor.com/)
+- [SVG Generator](https://haikei.app/)
+- [Transition Animation Generator](https://www.transition.style/)
+
+### [Animista](https://animista.net/)
+
+CSS Animation can get tedious to work with. 
+
+By using Animista, we are able to work interactively with animations.
+
+### [Clip Path Generator](https://bennettfeely.com/clippy/)
+
+```css
+  clip-path: polygon(25% 0%, 75% 0%, 100% 53%, 25% 100%, 0% 50%);
+```
+
+### [Responsive Font Calculator](https://websemantics.uk/tools/responsive-font-calculator/)
+
+We can easily create a fluid Typography experience which has wider support and can be implemented with a few CSS lines. This experience is just created by using the viewport width, and or height to smoothly scale the root font size. 
+
+We can avoid the jumps that are created by just using media queries.
+
+This web tool will make it for you to fine-tune and design a fluid experience for your users.0
+
+All we have to do is configure the options and you will get a CSS output that you can paste to your side.
+
+```css
+  :root {
+    font-size: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.6944)), 1.5rem);
+    min-height: 0vw;
+  }
+```
+
+### [Type Scale](https://type-scale.com/)
+
+The fonts are a key aspect of any website, so we have another useful web app to help with fonts. 
+
+When designing a website is it important to see how the different font sizes play together. Using this web app, it is simple to create a consistent font scale.
+
+We can choose between 8 different predetermined scales or build our custom one. We just have to define a growth factor and the tool takes care of the rest.
+
+This will generate fonts using the rem unit it is also handy to see how different base size fonts will look. The default is 16px which matches any browser's default root font.
+
+Once we have everything looking good, we can copy the generated CSS or view the results in a codepen instance. 
+
+
+
+## JetBrains Plugins
+
+### GitLive
+
+[GitLive](https://plugins.jetbrains.com/plugin/11955-gitlive) makes it easier to see the changes that teammates are making.
+
+The plugin works offline with any Git repository and just uses the data from your local clone. 
+
+There is also an online mode that requires you to sign in with GitHub, GitLab, Bitbucket or Azure Dev Ops. Then you can see who else from your team is online, what issue and branch they are working on, and even take a peek at their uncommitted changes — all updated in real time instead of on push/pull.
+
+### Code Time
+
+[Code Time](https://plugins.jetbrains.com/plugin/10687-code-time) is an open source plugin for automatic programming metrics and time tracking. Its advanced features can provide you with detailed feedback on how productive you are at work (a big plus for a slick design!).
+
+### Git Machete
+
+Producing small PRs is definitely a good practice, but it’s easy to get lost in multiple branches and stacked PRs. Git Machete is a useful plugin that helps you keep track of all the branches, their relationship with each other and with the remote repository.
+
+Git Machete also aims at the automation of git actions and makes rebase/push/pull hassle-free (just a click on the button!), especially in the situation where there are a lot of branches and PRs.
+
+The plugin automatically discovers branch layout and creates a tree-shaped graph of branches (in case of any changes or inaccuracies you can also modify it manually in .git/machete text file). The graph provides useful information about the branches: sync to parent status, sync to remote status, and custom annotation. There is also an option to toggle the unique commits for branches.
+
+After right-clicking on a chosen branch in the graph, you can perform git actions like rebase/push/pull on that branch without a need to switch from your current branch, which is very handy!
+
+### Smart Search
+
+The Smart Search plugin is handy when you need to google something when coding. 
+
+The JetBrains IDEs have a built-in Search with Google action, but Smart Search gives you more useful options such as Stack Overflow, GitHub, or Google Translate.
+
+
+### Stepsize
+
+Stepsize is an example of a tool that can save you time spent on tracking and addressing potential problems. 
+
+Stepsize is an issue tracker inside your editor for managing technical debt and maintenance issues.
+
+
+
 ## Linux Utilities
 
 - awk
-- tmux
+- fkill
+- hstr
+- httpie
+- rich
+- ripgrep
 - screen
+- tmux
 
 ### awk
 
@@ -282,6 +445,24 @@ Lucidchart is a diagraming tool that also has shared space for collaboration and
 
 Screen is a GNU linux utility that lets you launch and use multiple shell sessions from a single ssh session. The process started with screen can be detached from session and then reattached at a later time. So your experiments can be run in the background, without the need to worry about session closing, or terminal crashing.
 
+### httpie
+
+HTTPie is a command-line HTTP client. Its goal is to make CLI interaction with web services as human-friendly as possible. HTTPie is designed for testing, debugging, and generally interacting with APIs & HTTP servers. 
+
+The http and https commands allow for creating and sending arbitrary HTTP requests using a simple and natural syntax and provide formatted and colourized output.
+
+## Multipass
+
+[Multipass](https://multipass.run) is a VM platform (perhaps better than VirtualBox and VMWare).
+
+Multipass can be used on Ubuntu, Windows 10, and macOS (including Apple M1) with exactly the same command set.
+
+[Use Linux Virtual Machines with Multipass](https://medium.com/codex/use-linux-virtual-machines-with-multipass-4e2b620cc6)
+
+### rich
+
+rich makes it easy to add colour and style to terminal output. It can also render pretty tables, progress bars, markdown, syntax highlighted source code, tracebacks, and more — out of the box.
+
 ### tmux
 
 tmux is a terminal multiplexer that allows you to access a tmux terminal using multiple virtual terminals.
@@ -294,16 +475,6 @@ tmux takes advantage of a client-server model which allows you to attach termina
 
 tmux also includes a window-pane mentality which means you can run more than one terminal on a single screen.
 
-### httpie
-
-HTTPie is a command-line HTTP client. Its goal is to make CLI interaction with web services as human-friendly as possible. HTTPie is designed for testing, debugging, and generally interacting with APIs & HTTP servers. 
-
-The http and https commands allow for creating and sending arbitrary HTTP requests using a simple and natural syntax and provide formatted and colourized output.
-
-### rich
-
-rich makes it easy to add colour and style to terminal output. It can also render pretty tables, progress bars, markdown, syntax highlighted source code, tracebacks, and more — out of the box.
-
 ### Tutorials
 
 [How To Install And Use tmux On Ubuntu 12.10](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-tmux-on-ubuntu-12-10--2)
@@ -312,21 +483,6 @@ rich makes it easy to add colour and style to terminal output. It can also rende
 
 [Display Rich Text In The Console Using rich](https://towardsdatascience.com/get-rich-using-python-af66176ece8f?source=linkShare-d5796c2c39d5-1641842633)
 
-
-
-## Time Series
-
-- statsmodels
-- stumpy
-- AutoTS
-- Darts
-- TsFresh
-
-
-
-## Audio
-
-[AssemblyAI](https://www.assemblyai.com/)
 
 
 
@@ -340,7 +496,11 @@ rich makes it easy to add colour and style to terminal output. It can also rende
 
 [4 Amazing Python Libraries That You Should Try Right Now](https://towardsdatascience.com/4-amazing-python-libraries-that-you-should-try-right-now-872df6f1c93)
 
-[Colaboratory FAQ](https://research.google.com/colaboratory/faq.html#resource-limits)
 
 [Tools for Efficient Deep Learning](https://towardsdatascience.com/tools-for-efficient-deep-learning-c9585122ded0)
+
+[4 Time-Saving Linux Tools To Improve Your Workflow](https://betterprogramming.pub/4-time-saving-linux-tools-to-improve-your-workflow-54604d574d53)
+
+[5 JetBrains Plugins To Boost Your Productivity](https://betterprogramming.pub/5-jetbrains-plugins-to-boost-your-productivity-ecf5461ad642)
+
 
