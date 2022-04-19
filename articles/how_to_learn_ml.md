@@ -82,6 +82,7 @@ If you have an .edu email account you can get free access to oreilly.com which h
 P. D. Smith, Hands-On Artificial Intelligence for Beginners, Birmingham, U.K.: Packt Pub. Ltd., 2018.
 
 J. Eckroth, Python Artificial Intelligence Projects for Beginners, Birmingham, U.K.: Packt Pub. Ltd., 2018.
+
 C. Y. Laporte, "Not Teaching Software Engineering Standards to Future Software Engineers - Malpractice?", IEEE Computer, May 2021.
 
 ## Books for Developers
