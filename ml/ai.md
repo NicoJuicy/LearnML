@@ -76,14 +76,14 @@ TODO: Add notes
 
 [4 Reasons Why You Shouldn’t Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11?source=rss----7f60cf5620c9---4&gi=204e8d695029) 
 
-Technically, AI/ML is a graduate level topic which has several undergraduate prerequisites in math and CS which is probably why 80% or more of AI projects fail. 
+Technically, AI/ML is a graduate level topic which has several undergraduate prerequisites in math and CS which is probably why 80% or more of AI projects fail [4][5]. 
 
 
 ## Disinformation in AI Research
 
 Disinformation can also be found in scientific research publications, not just social media and online. Occurrences in research are more apparent when research or study data are irreproducible. In fact, a Harvard researcher resigned after a fraud discovery occurred.
 
-> One study found that 33.7% of scientists surveyed admitted to questionable research practices at least once in their career - IEEE Computer, 12/2021
+> One study found that 33.7% of scientists surveyed admitted to questionable research practices at least once in their career [6]. 
 
 Source data validation is necessary for research — especially funded research. The cost of source data validation is estimated to be between 20% and 30% of an overall clinical trial budget. 
 
@@ -358,10 +358,31 @@ After being exposed to a certain portion of the dataset, the model is not allowe
 
 ## References
 
-[Do you know how to choose the right machine learning algorithm among 7 different types?](https://towardsdatascience.com/do-you-know-how-to-choose-the-right-machine-learning-algorithm-among-7-different-types-295d0b0c7f60)
-
-[1] aima-python: Python code for Artificial Intelligence: A Modern Approach. Accessed: June 14, 2020. [Online]. Available: https://github.com/aimacode/aima-python, 0.17.3. 2020.
+[1] E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.
 
 [2] S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 3rd ed. Upper Saddle River, NJ, USA: Prentice Hall, 2010.
 
+[3] aima-python: Python code for Artificial Intelligence: A Modern Approach. Accessed: June 14, 2020. [Online]. Available: https://github.com/aimacode/aima-python, 0.17.3. 2020.
+
+[4] Y. Kosarenko, [The majority of business analytics and AI projects are still failing](https://medium.com/r/?url=https%3A%2F%2Fwww.datadriveninvestor.com%2F2020%2F04%2F30%2Fthe-majority-of-business-analytics-and-ai-projects-are-still-failing%2F), Data Driven Investor, April 30, 2020.
+
+[5] A. DeNisco Rayome, [Why 85% of AI projects fail](https://medium.com/r/?url=https%3A%2F%2Fwww.techrepublic.com%2Farticle%2Fwhy-85-of-ai-projects-fail%2F), TechRepublic, June 20, 2019.
+
+[6] J. F. DeFranco and J. Voas, "Reproducibility, Fabrication, and Falsification", IEEE Computer, vol. 54 no. 12, 2021.
+
+
+T. Shin, [4 Reasons Why You Shouldn't Use Machine Learning](https://towardsdatascience.com/4-reasons-why-you-shouldnt-use-machine-learning-639d1d99fe11), Towards Data Science, Oct 
+5, 2021.
+
+
+[Do you know how to choose the right machine learning algorithm among 7 different types?](https://towardsdatascience.com/do-you-know-how-to-choose-the-right-machine-learning-algorithm-among-7-different-types-295d0b0c7f60)
+
+[10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
+
+[5 Steps to follow for Successful Machine Learning Project](https://addiai.com/successful-machine-learning-project/)
+
+
+[OpenAI Is Disbanding Its Robotics Research Team](https://lastfuturist.com/openai-is-disbanding-its-robotics-research-team/)
+
+[Microsoft invests $1 billion in OpenAI to pursue holy grail of artificial intelligence](https://www.theverge.com/2019/7/22/20703578/microsoft-openai-investment-partnership-1-billion-azure-artificial-general-intelligence-agi)
 
