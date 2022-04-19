@@ -48,13 +48,6 @@ Asynchronous vs Event-Driven Architecture
 
 
 
-## Code Snippets
-
-[PyTorch DataLoader Code Snippets](https://gist.github.com/codecypher/3c58bc55969bf896e109954fff1b4599)
-
-[Python Code Snippets](https://gist.github.com/codecypher/4ce1681ee35183c23ab7f4bee8e58bff)
-
-
 ## Resources
 
 [Machine Learning Cheatsheet](https://ml-cheatsheet.readthedocs.io/en/latest/index.html)
