@@ -1,5 +1,9 @@
 # Confusion Matrix
 
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
 <!-- MarkdownTOC -->
 
 - Terminology
@@ -11,13 +15,17 @@
 A _confusion matrix_ is a table that is often used to describe the performance of a classification model (or classifier) on a set of test data for which the true values are known. 
 
 <div class="image-preview">
-  <div><img width="600" alt="Confusion Matrix" src="https://user-images.githubusercontent.com/2695661/151418339-8ef5f171-8f14-4974-ae24-7f6b33202c5b.jpeg" /></div>
-  <caption>Figure: Confusion Matrix</caption>
+  <div>
+    <img width="600" alt="Confusion Matrix" src="https://user-images.githubusercontent.com/2695661/151418339-8ef5f171-8f14-4974-ae24-7f6b33202c5b.jpeg" />
+    </div>
+  <div class="caption">Figure 1: Confusion Matrix<div class="caption">
 </div>
 
 <div class="image-preview">
-    <div><img width="600" alt="Confusion Matrix" src="https://user-images.githubusercontent.com/2695661/151418583-57ef8547-c9f9-4f42-9424-24d134ba60b2.jpeg" /></div>
-  <caption>Figure: Confusion Matrix Sample [1]</caption>
+    <div>
+      <img width="600" alt="Confusion Matrix" src="https://user-images.githubusercontent.com/2695661/151418583-57ef8547-c9f9-4f42-9424-24d134ba60b2.jpeg" />
+    </div>
+  <div class="caption">Figure 2: Confusion Matrix Sample [1]</div>
 </div>
 
 
@@ -53,8 +61,10 @@ ROC Curve is a commonly used graph that summarizes the performance of a classifi
 
 
 <div class="image-preview">
-  <div><img width="600" alt="ROC Curve" src="https://user-images.githubusercontent.com/2695661/151420109-9b05b6dc-c1d3-45af-a68d-298f372c6a18.jpeg" /></div>
-  <caption>Figure: ROC Curve in Week 2 Notebook</caption>
+  <div>
+    <img width="600" alt="ROC Curve" src="https://user-images.githubusercontent.com/2695661/151420109-9b05b6dc-c1d3-45af-a68d-298f372c6a18.jpeg" />
+  </div>
+  <div class="caption">Figure 3: ROC Curve in Week 2 Notebook</div>
 </div>
 
 
