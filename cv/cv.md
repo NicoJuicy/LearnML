@@ -45,6 +45,9 @@ Many popular computer vision applications involve trying to recognize things in 
 - **Object Recognition:** What objects are in this photograph and where are they?
 
 
+- Facial Recognition
+
+
 ## What is Image Recognition?
 
 Image recognition or image classification is the task of recognizing images and classifying them in one of the several predefined individual classes.
