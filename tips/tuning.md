@@ -114,6 +114,7 @@ Thus, Bayesian search can be beneficial when you have a large amount of data and
 
 ### Visualization of parameter search (learning rate)
 
+
 ### Visualization of mean score for each iteration
 
 
@@ -144,11 +145,6 @@ Optuna is framework agnostic, so you can use it with any machine learning or dee
 
 ## Improve Model Performance
 
-[Profiling Neural Networks to improve model training and inference speed](https://pub.towardsai.net/profiling-neural-networks-to-improve-model-training-and-inference-speed-22be473492bf)
-
-[How to Speed Up XGBoost Model Training](https://towardsdatascience.com/how-to-speed-up-xgboost-model-training-fcf4dc5dbe5f?source=rss----7f60cf5620c9---4)
-
-
 Here we discuss some ways to improve the accuracy of machine learning models. 
 
 1. Handling Missing Values and Outliers
@@ -167,6 +163,7 @@ There are a number of ways that you can handle missing values and outliers:
 
 - Use a technique like bootstrapping to remove the influence of the outlier data
 
+
 2. Feature Engineering
 
 Feature engineering is the art of creating new features from your existing ones.
@@ -183,6 +180,7 @@ There are many different ways to engineer features, and the best way to do it of
 
 - Make use of data pre-processing techniques like feature extraction and selection to help you find the most important features in your dataset.
 
+
 3. Feature Selection
 
 Feature selection is a process that helps you identify the most useful features in your dataset.
@@ -198,6 +196,7 @@ Some common techniques for feature selection include:
 - Filtering features based on their importance scores, which are usually calculated using a technique like gradient descent or random forests.
 
 - Selecting a subset of features that have a high correlation with the target variable but low correlations among themselves (i.e., they are uncorrelated or independent of each other).
+
 
 4. Try Multiple Algorithms
 
@@ -221,6 +220,7 @@ If you are using scikit-learn, it has a nice list of common machine learning mod
 Another approach is to use an ensemble method, which combines two or more algorithms together into one model. Ensembles are often more accurate than any individual algorithm because they leverage the strengths of each and compensate for their weaknesses.
 
 Thus, you can combine multiple weak learners (models that perform poorly on their own) into one ensemble to get a stronger learner (a model that performs well as an individual).
+
 
 5. Adjusting Hyperparameters
 
@@ -250,6 +250,12 @@ Tensorflow provides Model Optimization Toolkit for pruning and other post-traini
 [1] [5 Effective Ways to Improve the Accuracy of Your Machine Learning Models](https://towardsdatascience.com/5-effective-ways-to-improve-the-accuracy-of-your-machine-learning-models-f1ea1f2b5d65)
 
 [2] [Are You Sure That You Can Implement Image Classification Networks?](https://pub.towardsai.net/are-you-sure-that-you-can-implement-image-classification-networks-d5f0bffb242d)
+
+[3] [Profiling Neural Networks to improve model training and inference speed](https://pub.towardsai.net/profiling-neural-networks-to-improve-model-training-and-inference-speed-22be473492bf)
+
+[4] [How to Speed up Scikit-Learn Model Training](https://medium.com/distributed-computing-with-ray/how-to-speed-up-scikit-learn-model-training-aaf17e2d1e1)
+
+[5] [How to Speed Up XGBoost Model Training](https://towardsdatascience.com/how-to-speed-up-xgboost-model-training-fcf4dc5dbe5f?source=rss----7f60cf5620c9---4)
 
 
 [A Practical Introduction to Grid Search, Random Search, and Bayes Search](https://towardsdatascience.com/a-practical-introduction-to-grid-search-random-search-and-bayes-search-d5580b1d941d)
