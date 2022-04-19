@@ -1,5 +1,36 @@
 # Software Engineering
 
+<!-- MarkdownTOC -->
+
+- Project Quickstart
+- SOLID Design Principles
+- The Single-responsibility Principle
+- SOLID Coding in Python
+- Software Engineering Principles
+- Changing Software Requirements
+- References
+
+<!-- /MarkdownTOC -->
+
+## Project Quickstart
+
+1. Who is the user?
+
+  Once you identify the core user, you can identify their core needs.
+
+  If the software does not solve a problem, it doesn’t merit being adopted.
+
+2. How many people will use it?
+
+  Most projects must reach a critical number of users in order to be successful, pay the bills, and get off the ground.
+
+  Choosing the feature that will carry the most impact is essential to making sure the time of the entire team goes into the work with the biggest pay-off.
+
+3. Is it the easiest possible solution?
+
+
+
+## SOLID Design Principles
 
 SOLID is an acronym for five software design principles that help make software robust and maintainable. Understanding and applying the five principle is the hallmark for good software engineering. Thus, it is any aspiring software engineer should be acquainted with them.
 
@@ -19,10 +50,84 @@ A class should only have a single purpose.
 
 If the functionality of the class needs to be changed there should only be one reason to do so.
 
+## SOLID Coding in Python
+
+
+
+## Software Engineering Principles
+
+- Key Principles of Functional Programming for Data Engineering
+- Myths Programmers Believe about CPU Caches
+- Hints to Avoid Over-complexity in Software Projects
+- Understand Temporal Coupling in Code
+- Understand Load vs Stress Tests
+
+- Code Smell — When to Refactor
+- Design for Services, Not Microservices
+
+- Systems Design Crash Course for ML Engineers
+- A Primer on Architectural Patterns
+- Speed, Security, and Scalability: Choose 2
+
+
+- An Introduction to Event-Driven Architecture
+- Comparison of the Modes of Event-Driven Architecture
+
+
+
+## Changing Software Requirements
+
+When the requirments change, here are a few of the software changes required:
+
+- Code needs to be updated — potentially breaking dependant code
+- Integrations updated
+- Data updated
+- Deployment/DevOps updated
+- Data migration updated
+- Testing updated
+- Documentation updated
+- Training updated
+
+A new release through the software lifecycle
+The most significant change is extending deadlines and the plan being updated to incorporate all the work needed to make the changes above. When plans change, emotions rise and pressure increases.
+
 
 
 ## References
 
+[The 3 Questions You Must Ask Before Building a Product](https://medium.com/geekculture/the-3-questions-you-must-ask-before-building-a-product-b2ba104e52f9)
+
+
 [The Single Responsibility Principle Explained in Python](https://betterprogramming.pub/the-single-responsibility-principle-explained-in-python-622e2d996d86)
+
+[SOLID Coding in Python](https://towardsdatascience.com/solid-coding-in-python-1281392a6a94)
+
+[Code Smell — When to Refactor](https://betterprogramming.pub/code-smell-when-to-refactor-e18f1dca2f01)
+
+[Design for Services; Not Microservices](https://betterprogramming.pub/design-for-services-not-microservices-e339883946d7)
+
+
+[3 Key Principles of Functional Programming for Data Engineering](https://towardsdatascience.com/3-key-principles-of-functional-programming-for-data-engineering-67d2b82c7483)
+
+[Myths Programmers Believe about CPU Caches](https://software.rajivprab.com/2018/04/29/myths-programmers-believe-about-cpu-caches/)
+
+[10 Hints to Avoid Over-complexity in Software Projects](https://betterprogramming.pub/10-hints-to-avoid-over-complexity-in-software-projects-51a25bf51853)
+
+[Understand Temporal Coupling in Code](https://betterprogramming.pub/temporal-coupling-in-code-e74899f7a48f)
+
+[Understanding Load vs Stress Tests](https://betterprogramming.pub/load-vs-stress-tests-ee49ae110b1d)
+
+
+[Systems Design Crash Course for ML Engineers](https://towardsdatascience.com/systems-design-crash-course-for-ml-engineers-aafae1cf1890)
+
+[A Primer on Architectural Patterns](https://towardsdatascience.com/a-primer-on-architectural-patterns-fd1b22a4389d)
+
+[Speed, Security, and Scalability: Pick Only 2!](https://betterprogramming.pub/speed-security-and-scalability-pick-only-2-5e61c637b08e)
+
+
+[An Introduction to Event-Driven Architecture](https://aws.plainenglish.io/event-driven-architecture-2436055f64b1?gi=62c6bfcf207)
+
+[The Comparison of the Modes of Event-Driven Architecture](https://medium.com/geekculture/the-comparison-of-the-modes-of-event-driven-architecture-1742711d79bb)
+
 
 
