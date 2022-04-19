@@ -6,6 +6,7 @@
     - Statistical Distribution
     - Anomalies
 - Exploratory Data Analysis
+    - Visualize the Data
 - Essential Code Blocks
     - Distribution
     - Summary statistics of numerical features
@@ -99,53 +100,50 @@ These are obvious indications that there are issues in the data and need further
 
 Exploratory Data Analysis (EDA) is one of the first steps of the data science process which involves learning as much as possible about the data without spending too much time. 
 
+The basic steps are the following (see [Data Preparation](./data_prep.md)):
+
+1. Basic Exploration
+2. Check Data Types
+3. Handle Missing Values
+4. Handle Duplicate Values
+5. Handle Outliers
+6. Visualize the Data
+
 We can get an instinctive as well as a high-level practical understanding of the data including a general idea of the structure of the data set, some cleaning ideas, the target variable and possible modeling techniques.
 
-We can the summary statistics and create histograms for the numeric variables of the dataset as presented in the code below.
+We can the summary statistics and create histograms for the numeric variables of the dataset as shown below.
 
-Things we can do:
-
-- Study the relationship between satisfaction and class category.
-- Investigate the relationship between total delay time, overall rating, and satisfaction. 
-- Check if age is affecting the satisfaction of customers. 
 
 ```py
     # check the shape of the dataframe
     df.shape
+    
+    # Print a concise summary of a DataFrame.
+    # print information about a DataFrame including the index dtype 
+    # and columns, non-null values, and memory usage.
+    df.info()
         
+    # summary statistics fir numeric data
+    df.describe()
+
+
+    # get categorical data
+    cat_data = df.select_dtypes(include=['object'])
+
+    # show counts values of each categorical variable
+    for colname in cat_data.columns:
+        print (colname)
+        print (cat_data[colname].value_counts(), '\n')
+    
+
     # check data types
     df.dtypes
 
     df.size
     
-    # summary statistics
-    df.describe()
-    
     # get column list
     df.columns.tolist()
-        
-    # number of missing values in each column
-    df.isna().sum()
     
-    # Find and verify missing values
-    np.where(pd.isnull(df))
-    df.iloc[296, 12]
-
-    # replace missing values
-    df.replace(np.nan, 0)
-    
-    # count of unique values
-    df.nunique()
-    
-    # check for duplicate values
-    df.duplicated()
-
-    # Remove duplicates
-    df.drop_duplicates(subset=['PersonId', 'RecordDate'], keep='last')
-
-    # Drop duplicate column
-    df_X.drop(['TEST1', 'TEST2'], axis=1)
-
     
     # check the distribution of categorical columns
     df["product_group"].value_counts()
@@ -158,32 +156,24 @@ Things we can do:
         avg_price = ("price","mean")
     )
     
-    # change null to 0 
-    df5.loc[df5['column1'].isnull(),   'column1'] = 0
     
-    # change nan to 0 
-    df['column1'] = df['column1'].fillna(0)
-
     # change column data type
     df[['age', 'weight']] = df[['age', 'weight']].astype(float)
+       
     
-    # drop rows where all columns are missing/ NaN
-    df.dropna(axis=0, how="any", inplace=True)
-        
-    
-    # Set New Column Value Based on Multiple Criteria
+    # Set new column value based on multiple criteria
     # Use bitwise operators instead of AND and OR
     df.loc[(df.AvgProduction> 1000000) & (df.Age > 5), 'Category'] = 'Priority 1'
     
     
-    # Check For Missing Timestamps or Rows
+    # Check for missing timestamps or rows
     time_range = pd.date_range(startdate , enddate, freq='1min')
     ts =   pd.DataFrame(time_range)
     ts.rename(columns = {ts.columns[0]:'timestamp'}, inplace = True)
     ## now complete a merge to join the sets together
     
     
-    # Filter Data Based on String Match
+    # Filter data based on string match
     df1 = df[df[‘Flag’].str.contains(“CHECK ME NOW”)]
     
     # Aggregate across columns
@@ -222,6 +212,38 @@ Things we can do:
     # top = dominant category
     # freq = count of dominant category
 ``` 
+
+### Visualize the Data
+
+We can use univariate plots or plots such as histograms and boxplots on single variables. Then, we can use bivariate (or multi-variate) plots across different variables. 
+
+- Univariate Plots
+- Multivariate Plots
+- Correlation Matrix or Heatmap
+- Pair Plots
+
+```py
+    plt.figure(figsize=(7,6))
+    sns.boxplot(x="y", y="duration", data=df, showfliers=True)
+
+    sns.histplot(x='age', data=df, bins=20, kde=True)
+```
+
+```py
+    # correlation matrix shows the correlation 
+    # between all the variables in the dataset.
+    corr = df.corr()
+    f, ax = plt.subplots(figsize=(12, 8))
+    sns.heatmap(corr, annot=True, square=False, ax=ax, linewidth = 1)
+    plt.title('Pearson Correlation of Features')
+```
+
+Pair Plots is to a correlation matrix, but gives a scatterplot for each of the X and Y pairs. 
+
+```py
+    g.fig.set_size_inches(12,12)
+    g=sns.pairplot(df, diag_kind = 'auto', hue="y")
+```
 
 
 
