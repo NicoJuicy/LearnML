@@ -7,7 +7,7 @@
 - Read Datasets
 - Generate Dummy Data
 - Structured Datasets
-    - huggingface
+    - HuggingFace
 - Computer Vision Datasets
     - Medical Image Datasets
 - NLP Datasets
@@ -38,6 +38,12 @@ Here is a collection of some resources for ML datasets.
 [Papers with Code](https://paperswithcode.com/)
 
 
+[The Complete Collection Of Data Repositories – Part 1](https://www.kdnuggets.com/2022/04/complete-collection-data-repositories-part-1.html)
+
+[The Complete Collection Of Data Repositories – Part 2](https://www.kdnuggets.com/2022/04/complete-collection-data-repositories-part-2.html)
+
+
+
 ## Dataset Cheatsheet
 
 [ML Cheatsheet Dataset List](https://ml-cheatsheet.readthedocs.io/en/latest/datasets.html)
@@ -63,7 +69,7 @@ How to generate fake data using the Faker library.
 
 ## Structured Datasets
 
-### [huggingface](https://github.com/huggingface/datasets)
+### [HuggingFace](https://github.com/huggingface/datasets)
 
 [Forget Complex Traditional Approaches to handle NLP Datasets, HuggingFace Dataset Library](https://medium.com/@arjunkumbakkara/forget-complex-traditional-approaches-to-handle-nlp-datasets-huggingface-dataset-library-is-your-f7445ea79267)
 
