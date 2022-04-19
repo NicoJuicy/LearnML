@@ -4,6 +4,7 @@
 
 - What is a Design Pattern?
 - How to Classify Design Patterns?
+- Design Pattern Cheatsheet
 - References
 
 <!-- /MarkdownTOC -->
@@ -60,9 +61,36 @@ Convert the interface of a class into another interface clients expect. Adapter 
 Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
 
 
-## References
 
-[Understand Machine Learning Through 7 Software Design Patterns](https://betterprogramming.pub/machine-learning-through-7-design-patterns-35a8d5844cf6)
+## Design Pattern Cheatsheet
+
+- Design Patterns for Machine Learning
+- More Design Patterns for Machine Learning
+- Data Mesh Observability Pattern
+
+- Design Patterns in Machine Learning for MLOps
+- How (not) to do MLOps
+
+- Common Patterns for Serving ML Models in Production
+
+
+## References
 
 Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. Design Patterns: Elements of Reusable Object-Oriented Software. ISBN: 978-0201633610. 1994.
 
+[Design Patterns for Machine Learning](https://towardsdatascience.com/design-patterns-for-machine-learning-410be845c0db)
+
+[Understand Machine Learning Through 7 Software Design Patterns](https://betterprogramming.pub/machine-learning-through-7-design-patterns-35a8d5844cf6)
+
+[Understand Machine Learning through More Design Patterns](https://towardsdatascience.com/understand-machine-learning-through-more-design-patterns-9c8430fd2ae8)
+
+[Data Mesh Observability Pattern](https://towardsdatascience.com/data-mesh-observability-pattern-467438627572)
+
+
+
+[Design Patterns in Machine Learning for MLOps](https://towardsdatascience.com/design-patterns-in-machine-learning-for-mlops-a3f63f745ce4)
+
+[How (not) to do MLOps](https://towardsdatascience.com/how-not-to-do-mlops-96244a21c35e)
+
+
+[Serving ML Models in Production: Common Patterns](https://www.kdnuggets.com/2021/10/serving-ml-models-production-common-patterns.html)
