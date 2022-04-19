@@ -1,5 +1,9 @@
 # Deep Learning
 
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
 <!-- MarkdownTOC -->
 
 - Challenge of Training Deep Learning Neural Networks
@@ -184,7 +188,9 @@ How to choose the method to be used?
 
 
 <div class="image-preview">
-    <img width="600" alt="Transfer learning quadrant" src="https://miro.medium.com/max/1722/1*ZSx3ZsBxs3kE87ybpY4NnA.png" />
+    <div>
+        <img width="600" alt="Transfer learning quadrant" src="https://miro.medium.com/max/1722/1*ZSx3ZsBxs3kE87ybpY4NnA.png" />
+    </div>
 </div>
 
 Figure: Transfer learning quadrant
