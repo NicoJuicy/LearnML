@@ -365,23 +365,23 @@ The result is a pyspark.sql.dataframe variable. At this point the data is not ac
 Data is only loaded when an action is called on the pyspark variable, an action that needs to return a computed value. If I ask for instance for a count of the number of products in the dataset, Spark is smart enough not to try and load the whole dataset to compute the value. 
 
 ```py
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import col
+    from pyspark.sql import SparkSession
+    from pyspark.sql.functions import col
 
-# create a spark session
-sc = SparkSession.builder.master("local").appName("Test").getOrCreate()
+    # create a spark session
+    sc = SparkSession.builder.master("local").appName("Test").getOrCreate()
 
-raw_data = sc.read.options(delimiter="\t",header=True).csv("en.openfoodfacts.org.products.csv")
+    raw_data = sc.read.options(delimiter="\t",header=True).csv("en.openfoodfacts.org.products.csv")
 
-raw_data.printSchema()
+    raw_data.printSchema()
 
-# compute number of products per country 
-BDD_countries = raw_data.groupBy("countries_tags").count().persist()
+    # compute number of products per country 
+    BDD_countries = raw_data.groupBy("countries_tags").count().persist()
 
-BDD_countries.printSchema()
+    BDD_countries.printSchema()
 
-# filter dataframe to only countries with at least 5000 products
-BDD_res = BDD_countries.filter(col("count") > 5000).orderBy("count",ascending = False).toPandas()
+    # filter dataframe to only countries with at least 5000 products
+    BDD_res = BDD_countries.filter(col("count") > 5000).orderBy("count",ascending = False).toPandas()
 ```
 
 Now we can for instance filter out all the products that are not available in France and perform the rest of the analysis on a smaller, easier to use dataset.
@@ -412,15 +412,16 @@ The time window can be fixed (hourly aggregation) or sliding (hourly aggregation
 
 Kafka was developed based on five core APIs for Java and Scala:
 
-1. Admin API: Used to manage topics, brokers and other Kafka objects
+1. **Admin API:** Used to manage topics, brokers and other Kafka objects
 
-2. Producer API: Used to write a stream of data to the Kafka topics
+2. **Producer API:** Used to write a stream of data to the Kafka topics
 
-3. Consumer API: Used to read streams of data from topics in the Kafka cluster
+3. **Consumer API:** Used to read streams of data from topics in the Kafka cluster
 
-4. Kafka Streams API: Used for stream processing applications and microservices
+4. **Kafka Streams API:** Used for stream processing applications and microservices
 
-5. Kafka Connect API: Used to build and run reusable data import/export connectors that consume or produce data streams from and to external applications in order to integrate with Kafka.
+5. **Kafka Connect API:** Used to build and run reusable data import/export connectors that consume or produce data streams from and to external applications in order to integrate with Kafka.
+
 
 ### Key Concepts
 
