@@ -157,6 +157,8 @@ A key ML skill needed is deployment. There are several options available but the
 
 [Comparison of Basic Deep Learning Cloud Platforms](https://aicoder.medium.com/comparison-of-basic-deep-learning-cloud-platforms-9a4b69f44a46)
 
+[Colaboratory FAQ](https://research.google.com/colaboratory/faq.html#resource-limits)
+
 
 
 ## Common Questions on Encoding
