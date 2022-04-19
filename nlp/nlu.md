@@ -1,10 +1,36 @@
 # Natural Language Understanding (NLU)
 
+<!-- MarkdownTOC -->
+
+- Overview
+- How does NLU services work?
+- Language Modeling
+- Steps to create an assistant
+- Language Modeling
+- Text Generation Examples
+- What is intent recognition?
+  - How intent recognition works
+  - Training data
+  - Creating training data
+  - Training your model
+  - Intent recognition use cases
+- Challenges of NLU
+- References
+
+<!-- /MarkdownTOC -->
+
+
+## Overview
+
 NLU is a subset of NLP and its purpose is to extract the _meaning_ from the text. 
 
-Examples: Extracting the sentiment from a sentence, the intention of the writer, or the semantics of the sentence. 
+NLU is a subset of NLP and its purpose is to extract the _meaning_ from the text. 
 
-There are many applications for these specific techniques such as text paraphrasing, summarization, question answering and more. 
+For example, extracting the _sentiment_ from a sentence, the intention of the writer, or the semantics of the sentence. 
+
+There are many applications for these specific techniques such as text paraphrasing, summarization, question answering, etc. 
+
+Examples: Extracting the sentiment from a sentence, the intention of the writer, or the semantics of the sentence. 
 
 
 ## How does NLU services work?
@@ -28,6 +54,16 @@ Each utterance will be mapped to an intent and each intent can have 0, 1, or mul
 It is possible to create our own NLU service or we can use existing systems such as Microsoft LUIS, Google Dialogflow, IBM Watson NLU, Amazon Lex, Rasa NLU and more.
 
 
+## Language Modeling
+
+**Language modeling (LM)** involves developing a statistical model for predicting the next word in a sentence or next letter in a word given whatever has come before. 
+
+LM is a pre-cursor task in applications such as speech recognition and machine translation.
+
+
+----------
+
+
 ## Steps to create an assistant
 
 When creating a conversational agent with a NLU service, you have to follow different steps.
@@ -35,7 +71,9 @@ When creating a conversational agent with a NLU service, you have to follow diff
 
 ## Language Modeling
 
-Language modeling (LM) or Text Generation involves developing a statistical model for predicting the next word in a sentence or next letter in a word given whatever has come before. 
+**Language modeling (LM)** or Text Generation involves developing a statistical model for predicting the next word in a sentence or next letter in a word given whatever has come before. 
+
+LM involves developing a statistical model for predicting the next word in a sentence or next letter in a word given whatever has come before. 
 
 LM is a pre-cursor task in applications such as speech recognition and machine translation.
 
@@ -59,39 +97,6 @@ LM is a pre-cursor task in applications such as speech recognition and machine t
 
 
 ----------
-
-
-## Challenges of NLU
-
-A|ll of the current solutions still use many traditional text mining algorithms to get meaning from unstructured text documents which is far from ideal.
-
-To better understand the shortcomings of these algorithms used for natural language understanding (NLU), we take a detailed look at the problems of old school approaches at each step of flexible natural language processing. 
-
-Thus, we get a better understanding of the need for an upper ontology to grasp the true meaning of a text. 
-
-Upper ontologies bring value in offering universal general categories for semantic interoperability. 
-
-They define concepts that are essential for understanding meaning.
-
-When we look at the steps a traditional algorithm follows, we could identify seven different tasks:
-
-1. Identify the language of the given text
-
-2. Tokenization or how to separate words
-
-3. Lemming or sentence breaking
-
-4. Grammatical tagging or the parts-of-speech
-
-5. Name Entity Extraction with chunking
-
-6. Parse the syntax to extract meaning
-
-7. Lexical chaining of sentences with sequences of related words
-
-
-----------
-
 
 
 ## What is intent recognition?
@@ -130,9 +135,9 @@ When it comes to intent recognition the process of creating training data looks 
 
   You will likely need many thousands of labeled data points in your training dataset for your model to become accurate enough to work in production.
 
-    The process of manually labeling training data is the most time-consuming and laborious aspect of utilising ML which why we developed our text intent recognition data program. 
+  The process of manually labeling training data is the most time-consuming and laborious aspect of utilising ML which why we developed our text intent recognition data program. 
     
-    You input your raw data and the data program breaks it apart into discrete tasks to produce a coherent labeled output automatically. 
+  You input your raw data and the data program breaks it apart into discrete tasks to produce a coherent labeled output automatically. 
     
 ### Training your model
 
@@ -145,6 +150,32 @@ More high quality training data makes for more finely tuned models
 ### Intent recognition use cases
 
 Intent recognition finds a comfortable home in any situation where there are a large number of requests or questions that are often quite similar (Chatbots, Customer support). 
+
+
+----------
+
+
+## Challenges of NLU
+
+A|ll of the current solutions still use many traditional text mining algorithms to get meaning from unstructured text documents which is far from ideal.
+
+To better understand the shortcomings of these algorithms used for natural language understanding (NLU), we take a detailed look at the problems of old school approaches at each step of flexible natural language processing. 
+
+Thus, we get a better understanding of the need for an upper ontology to grasp the true meaning of a text. 
+
+Upper ontologies bring value in offering universal general categories for semantic interoperability. 
+
+They define concepts that are essential for understanding meaning.
+
+When we look at the steps a traditional algorithm follows, we could identify seven different tasks:
+
+1. Identify the language of the given text
+2. Tokenization or how to separate words
+3. Lemming or sentence breaking
+4. Grammatical tagging or the parts-of-speech
+5. Name Entity Extraction with chunking
+6. Parse the syntax to extract meaning
+7. Lexical chaining of sentences with sequences of related words
 
 
 
