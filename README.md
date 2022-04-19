@@ -74,6 +74,7 @@ TODO: Add items
 
 [Applied Machine Learning Checklist](./checklist/applied_ml_checklist.md)
 
+
 ### ML Guides
 
 [Applied Machine Learning Process](./process/applied_ml.md)
@@ -81,23 +82,21 @@ TODO: Add items
 [Imbalanced Classification Framework](./process/imbalanced_class.md)
 
 
-### Code Samples
-
-TODO: Add items
-
 ### Background
 
 [Probability](./ml/probability.md)
 
 [Statistics](./ml/statistics.md)
 
+
 ### Machine Learning
+
 
 [Machine Learning Algorithms](./ml/ml_algorithms.md)
 
 [Anomaly Detection](./ml/anomaly_detection.md)
 
-[AutoML Tools](./ml/automl_tools.md)
+[AutoML](./ml/automl.md)
 
 [Bias-Variance Tradeoff](./ml/bias_variance.md)
 
@@ -110,6 +109,8 @@ TODO: Add items
 [Neural Network](./ml/neural_network.md)
 
 [Performance Metrics](./ml/performance_metrics.md)
+
+[Plots and Graphs](./ml/plots.md)
 
 [Classication and Regression](./ml/regression.md)
 
@@ -193,8 +194,6 @@ TODO: Add items
 
 [AI Tips and Tricks](./tips/ai_tips.md)
 
-[AutoML Tools](./tips/automl_tools.md)
-
 [Books and References](./tips/ai_books.md)
 
 [Common Mistakes](./tips/common_mistakes.md)
@@ -209,11 +208,14 @@ TODO: Add items
 
 [Memory Usage Tips](./tips/memory_usage.md)
 
-[Plots and Graphs](./tips/plots.md)
-
 [Project Ideas](./tips/ai_project_ideas.md)
 
 [Hypertuning](.tips/tuning.md)
+
+
+### Code Samples
+
+TODO: Add items
 
 
 
