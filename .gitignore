@@ -350,9 +350,10 @@ MigrationBackup/
 .ionide/
 
 
-# Added to file
-nlp/book
-
+# Add folders
 .idea/
-
 .spyproject/
+data/
+nlp/book
+orange/
+
